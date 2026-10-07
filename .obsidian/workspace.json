@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5c03ec52570a2fa5",
+        "id": "a46edbb0f82817ce",
         "type": "tabs",
         "children": [
           {
-            "id": "588cb62da06d974f",
+            "id": "227c13e2a8c78e04",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -164,7 +164,7 @@
             }
           },
           {
-            "id": "f18807eff7935f29",
+            "id": "8e461c78e8679321",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -192,6 +192,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "588cb62da06d974f",
-  "lastOpenFiles": []
+  "active": "b3241180b36739a1",
+  "lastOpenFiles": [
+    "Part IA/Groups/Problem Sheets/Groups - Introductory Sheet 2026.md",
+    "2026-10-07.md",
+    "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md",
+    "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets - Introductory Sheet 2026.md",
+    "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
+    "Concepts/Fibonacci Numbers.md",
+    "Part IA/Numbers and Sets/Problem Sheets",
+    "Part IA/Numbers and Sets",
+    "Part IA/Groups/Problem Sheets",
+    "Part IA/Groups",
+    "Concepts/Latin Squares.md",
+    "Concepts",
+    "Part II",
+    "新建文件夹",
+    "Part IB"
+  ]
 }
