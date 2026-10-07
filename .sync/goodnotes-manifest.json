@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "source_folder_id": "1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
+  "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
+  "repository": "JonahGao786/CambridgeMathematics",
+  "branch": "master",
+  "last_inventory_at": "2026-10-07T13:46:03.567171+00:00",
+  "inventory_complete": true,
+  "inventory_folder_count": 9,
+  "reading_method": "Authenticated Google Drive metadata and raw fetch (include_base64=false); sediment file reference materialized with download_file; original PDF rendered with PyMuPDF at 2x (144 dpi); every page inspected through view_image/model vision; enlarged 3x/4x PDF crops used for uncertain handwriting and diagram labels. Local PDF text extraction used alongside images for printed sheets only.",
+  "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
+  "duplicate_comparison": "All four sources were inspected page by page. The two printed sheets have 2 pages each; the corresponding handwritten files have 9 and 15 pages, contain distinct answer material, and have separate Markdown destinations. No sources share a source-note destination.",
+  "files": {
+    "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW": {
+      "drive_file_id": "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
+      "source_file_name": "groups_intro_2026.pdf",
+      "source_url": "https://drive.google.com/file/d/1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW/view",
+      "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+      "observed_source_modified_timestamp": "2026-10-07T12:37:00.526Z",
+      "processed_source_modified_timestamp": "2026-10-07T12:37:00.526Z",
+      "markdown_paths": [
+        "Part IA/Groups/Problem Sheets/Groups - Introductory Sheet 2026.md",
+        "Concepts/Latin Squares.md"
+      ],
+      "material_type": "problem sheet",
+      "course": "Part IA Groups",
+      "source_date": "Michaelmas 2026",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "unresolved_todos": [],
+      "total_page_count": 2,
+      "visually_inspected_pages": [
+        1,
+        2
+      ],
+      "original_pdf_path": "Attachments/Goodnotes/groups_intro_2026.pdf",
+      "source_sha256": "8f75846f2041d5cb92344e8b0dec3bdeff4bc98ad3cfc00c36ac9d9853804813",
+      "source_size_bytes": 180117,
+      "page_image_attachments": []
+    },
+    "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY": {
+      "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
+      "source_file_name": "Groups 1.pdf",
+      "source_url": "https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view",
+      "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+      "observed_source_modified_timestamp": "2026-10-07T10:17:24.716Z",
+      "processed_source_modified_timestamp": "2026-10-07T10:17:24.716Z",
+      "markdown_paths": [
+        "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+      ],
+      "material_type": "handwritten worked solutions and incomplete attempts",
+      "course": "Part IA Groups",
+      "source_date": null,
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "unresolved_todos": [
+        {
+          "location": "Manual review — page 1, question 1",
+          "detail": "The written identity and inverse formulas are one-sided, and “closure” has no accompanying formula. Preserve these as the student's abbreviated answer; they are not a complete quantified axiom statement.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 1, question 2(i), identity",
+          "detail": "The claimed identity is not two-sided for subtraction. The original check mark is retained.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 1, question 2(iv), inverse",
+          "detail": "The formula $a^{-1}=a-2i$ is written without a minus sign before $a$ and appears inconsistent with the supplied operation. It has not been repaired.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 2, question 2(v), associativity",
+          "detail": "The left-hand cross product has no parentheses. Its intended grouping is not specified; do not silently insert one.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 2, question 2(vi), subgroup examples",
+          "detail": "The scalar-matrix example explicitly allows $n=0$, and the rational-matrix example omits an invertibility condition. Preserve the original abbreviated examples.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 2, question 2(viii), identity reasoning",
+          "detail": "The two displayed products concern a single element and do not establish multiple identities for the whole set. The original assessment is retained.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Incomplete reasoning — page 5, question 4(c)",
+          "detail": "No calculation of $(CD)^n=C^nD^n$ for every $n\\in\\mathbb N$ is written. The missing argument has not been supplied.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 6, first paragraph",
+          "detail": "The set difference is visibly written in the order $\\{0\\}\\setminus\\mathbb R$. It appears reversed; the transcription preserves it. Conditions $a,b\\ne0$ and the isomorphism map are not written here.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 6, determinant argument",
+          "detail": "The reasoning assumes $A=CB^{-1}$ without discussing the identity of a group of singular matrices, and only explicitly treats $2\\times2$ matrices although the supplied general question has no such restriction. Preserve the argument without extending it.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 7, middle and scope",
+          "detail": "The divisibility relation $k\\mid m,n$ is written in that direction and appears reversed. The union criterion has no proof. The answer initially assumes $n>0$ and does not discuss the zero cases included in the question.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 8, question 7(b), bottom",
+          "detail": "No common set $S$ or admissible value of $x$ is specified for the sine/arcsine example. The written inequality should not be treated as an unconditional identity of functions $S\\to S$.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        }
+      ],
+      "total_page_count": 9,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "original_pdf_path": "Attachments/Goodnotes/Groups 1.pdf",
+      "source_sha256": "14a315ca5894dd6b2c13f7e09d3d7b8864db2c5419c72619503210c90aff9c6c",
+      "source_size_bytes": 1800894,
+      "page_image_attachments": []
+    },
+    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr": {
+      "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
+      "source_file_name": "ns_intro_2026.pdf",
+      "source_url": "https://drive.google.com/file/d/1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr/view",
+      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+      "observed_source_modified_timestamp": "2026-10-07T12:36:55.549Z",
+      "processed_source_modified_timestamp": "2026-10-07T12:36:55.549Z",
+      "markdown_paths": [
+        "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets - Introductory Sheet 2026.md",
+        "Concepts/Fibonacci Numbers.md"
+      ],
+      "material_type": "problem sheet",
+      "course": "Part IA Numbers and Sets",
+      "source_date": "Michaelmas 2026",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "unresolved_todos": [],
+      "total_page_count": 2,
+      "visually_inspected_pages": [
+        1,
+        2
+      ],
+      "original_pdf_path": "Attachments/Goodnotes/ns_intro_2026.pdf",
+      "source_sha256": "8c6d58c3e02857bd55506a1fe9553cefe441bd3b6304418abcc7ddd49b036e33",
+      "source_size_bytes": 201642,
+      "page_image_attachments": []
+    },
+    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn": {
+      "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+      "source_file_name": "Numbers - Sets 1.pdf",
+      "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view",
+      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+      "observed_source_modified_timestamp": "2026-10-07T10:17:10.864Z",
+      "processed_source_modified_timestamp": "2026-10-07T10:17:10.864Z",
+      "markdown_paths": [
+        "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+      ],
+      "material_type": "handwritten worked solutions and incomplete attempts",
+      "course": "Part IA Numbers and Sets",
+      "source_date": null,
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "unresolved_todos": [
+        {
+          "location": "Ambiguous handwriting — page 1, lower half",
+          "detail": "After viewing the full page and a enlarged crop, the bounds of the sums and the variable after the final minus sign in the factorised expression cannot all be confidently distinguished as $n$ or $r$. These are marked in the formulas. Confirm from the original PDF before using this derivation; do not assume a consistent variable substitution.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 5, question 3(i), first line",
+          "detail": "The subtracted sum is visibly $\\sum(2r)$, with no square, while the next line uses four times a sum of squares. The missing exponent is not silently inserted.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 5, question 3(iii), last line",
+          "detail": "The written equivalence omits the preceding divisibility statement as a premise. Preserve the chain without supplying a missing argument.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 7, middle",
+          "detail": "The source writes $F_4=2$; this conflicts with the supplied recurrence. The gcd claim and deduction of the prime-index condition lack a complete justification. They remain original claims, not established results.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Incomplete reasoning — page 7, bottom",
+          "detail": "Repetition and the forward recurrence establish eventual repetition. No backward argument or justification of periodicity from the beginning is written. No missing proof has been added.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 8, question 6(a)",
+          "detail": "The claim that $n=1$ does not work needs checking against the allowed squares. Sufficiency for every $n\\ge4$ is asserted without a construction or proof.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 8, question 6(b)",
+          "detail": "Lower bounds for the exponents are not written. The product equivalence and blanket conclusion for non-prime $n$ require review; the argument does not justify all exceptional cases. Preserve the claim rather than supplying a classification.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 9, question 7(a), right column",
+          "detail": "The logarithm argument does not state positivity of $p,q$ or $q\\ne0$ and asserts impossibility for integers in general. Preserve its abbreviated reasoning.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 11, first and last bullets",
+          "detail": "The first argument asserts the conclusion without showing how rationality of $r+\\alpha$ would imply rationality of $\\alpha$, and uses natural-number fractions despite the real domain. The last example does not prove irrationality of $e$ or $\\ln3$, as requested in the sheet. No external proof has been supplied.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Incomplete reasoning — page 12, questions 8(iii)–(iv) and final sentence",
+          "detail": "The ranges of the powers and the construction of the distinct differences are unspecified. The final simultaneous-counterexample claim is unproved. No missing reasoning is supplied.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Incomplete attempt — page 14",
+          "detail": "These are partial diagrams, not complete edge colourings of all pairs. No complete written case argument establishes the six-town conclusion. Undrawn edges must not be reconstructed.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+        }
+      ],
+      "total_page_count": 15,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "original_pdf_path": "Attachments/Goodnotes/Numbers - Sets 1.pdf",
+      "source_sha256": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
+      "source_size_bytes": 2888335,
+      "page_image_attachments": [
+        "Attachments/Goodnotes/Numbers and Sets 1 - page 14.png",
+        "Attachments/Goodnotes/Numbers and Sets 1 - page 15.png"
+      ]
+    }
+  }
+}
