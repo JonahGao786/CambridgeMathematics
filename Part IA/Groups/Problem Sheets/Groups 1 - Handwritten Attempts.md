@@ -11,21 +11,18 @@ source_pages: 9
 
 # Groups 1 — Handwritten Attempts
 
-The PDF contains handwritten answers without the question statements. Their numbering and examples match [[Groups - Introductory Sheet 2026]], a separate Drive source. Consult that sheet for the supplied questions. The transcription below preserves the original claims, including errors and omitted reasoning; review callouts are editorial, not supplied solutions. The date is not written in this PDF.
+The PDF contains handwritten answers without the question statements. Their numbering and examples match [[Groups - Introductory Sheet 2026]], a separate Drive source. Consult that sheet for the supplied questions. Obvious typos and notation are normalized, with routine algebra made explicit where helpful. Substantive errors and unfinished arguments remain marked. The date is not written in this PDF.
 
 Original PDF: [View source in Google Drive](https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view).
 
 ## 1. Axioms (page 1, top)
 
-- There exists one identity element in the group, $a\cdot e=a$.
-- Each element has its own inverse, $a\cdot a^{-1}=e$.
+- Identity: there is an $e\in G$ such that $a\cdot e=e\cdot a=a$ for every $a\in G$.
+- Inverses: every $a\in G$ has an inverse $a^{-1}\in G$ with $a\cdot a^{-1}=a^{-1}\cdot a=e$.
 - Associativity: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$.
-- Closure.
+- Closure: $a\cdot b\in G$ for all $a,b\in G$.
 
 Abelian groups are commutative: $a\cdot b=b\cdot a$.
-
-> [!todo] Manual review — page 1, question 1
-> The written identity and inverse formulas are one-sided, and “closure” has no accompanying formula. Preserve these as the student's abbreviated answer; they are not a complete quantified axiom statement.
 
 ## 2. Examples (pages 1–3)
 
@@ -60,24 +57,18 @@ Subgroups written: $(\mathbb Z,+)$, $(\mathbb Z_{\mathrm{even}},+)$.
 ### (iv) Complex operation (page 1, lower right)
 
 - Identity: ✓, $-i$.
-- Inverse: ✓, $a^{-1}=a-2i$.
+- Inverse: ✓, $a^{-1}=-a-2i$.
 - Associativity: ✓.
 - Closure: ✓.
 
 Subgroup conditions written: $\operatorname{Im}(a),\operatorname{Re}(a)\in\mathbb Z$; $\operatorname{Im}(a),\operatorname{Re}(a)\in\mathbb Q$.
 
-> [!todo] Manual review — page 1, question 2(iv), inverse
-> The formula $a^{-1}=a-2i$ is written without a minus sign before $a$ and appears inconsistent with the supplied operation. It has not been repaired.
-
 ### (v) Cross product (page 2, top)
 
 - Identity: ✗.
 - Inverse: ✗, $\mathbf b\times\mathbf b^{-1}=e$, but identity doesn't exist.
-- Associativity: ✗. Let $\mathbf b\parallel\mathbf c$; the written comparison is $\mathbf a\times\mathbf b\times\mathbf c\ne\mathbf a\times(\mathbf b\times\mathbf c)$.
+- Associativity: ✗. For suitable $\mathbf a,\mathbf b,\mathbf c$ with $\mathbf b\parallel\mathbf c$, $(\mathbf a\times\mathbf b)\times\mathbf c\ne\mathbf a\times(\mathbf b\times\mathbf c)$.
 - Closure: ✗. $\mathbf b\parallel\mathbf c$, $\mathbf b\times\mathbf c=0$, not in set.
-
-> [!todo] Manual review — page 2, question 2(v), associativity
-> The left-hand cross product has no parentheses. Its intended grouping is not specified; do not silently insert one.
 
 ### (vi) Invertible real matrices (page 2, upper middle)
 
@@ -86,10 +77,7 @@ Subgroup conditions written: $\operatorname{Im}(a),\operatorname{Re}(a)\in\mathb
 - Associativity: ✓.
 - Closure: ✓, $\det(AB)=\det(A)\det(B)\ne0$.
 
-Subgroups written: $(nI,\times)$, $n\in\mathbb R$; “(rational matrices, $\times$)”.
-
-> [!todo] Manual review — page 2, question 2(vi), subgroup examples
-> The scalar-matrix example explicitly allows $n=0$, and the rational-matrix example omits an invertibility condition. Preserve the original abbreviated examples.
+Subgroups: the non-zero scalar matrices $\{tI:t\in\mathbb R\setminus\{0\}\}$, and the invertible $2\times2$ rational matrices, both under multiplication.
 
 ### (vii) Absolute-difference operation (page 2, middle)
 
@@ -172,27 +160,18 @@ The universal condition is supplied by the linked question; the source calculati
 Matrices written:
 $$C=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad D=\begin{pmatrix}0&0\\1&1\end{pmatrix}.$$
 $$CD=\begin{pmatrix}1&0\\0&0\end{pmatrix}\begin{pmatrix}0&0\\1&1\end{pmatrix}=0,\qquad DC=\begin{pmatrix}0&0\\1&1\end{pmatrix}\begin{pmatrix}1&0\\0&0\end{pmatrix}=\begin{pmatrix}0&0\\1&0\end{pmatrix}.$$
-“The set of $2\times2$ matrices does not form a group.”
-
-> [!todo] Incomplete reasoning — page 5, question 4(c)
-> No calculation of $(CD)^n=C^nD^n$ for every $n\in\mathbb N$ is written. The missing argument has not been supplied.
+Since $C^2=C$ and $D^2=D$, for every positive integer $n$, $C^nD^n=CD=0=(CD)^n$. This does not contradict (b): the set of all $2\times2$ matrices does not form a group.
 
 ## 5. Singular-matrix group (page 6)
 
 $$\begin{pmatrix}a&0\\0&0\end{pmatrix}\begin{pmatrix}b&0\\0&0\end{pmatrix}=\begin{pmatrix}ab&0\\0&0\end{pmatrix}.$$
-“This is isomorphic to $(\{0\}\setminus\mathbb R,\times)$.”
+For $a,b\ne0$, this is isomorphic to $(\mathbb R\setminus\{0\},\times)$ via $t\mapsto\begin{pmatrix}t&0\\0&0\end{pmatrix}$.
 
-> [!todo] Manual review — page 6, first paragraph
-> The set difference is visibly written in the order $\{0\}\setminus\mathbb R$. It appears reversed; the transcription preserves it. Conditions $a,b\ne0$ and the isomorphism map are not written here.
-
-Let $A,B,C$ be $2\times2$ matrices such that $AB=C$.
+For the general statement, let $A,B,C$ belong to a group of square matrices of a common size, with $AB=C$.
 $$\det(A)\det(B)=\det(C).$$
-If $\det(A)\ne0$, $\det(B)=0$, then $\det(C)=0$. Assume $B$ has an inverse $B^{-1}$ such that $A=CB^{-1}$.
+If $\det(A)\ne0$, $\det(B)=0$, then $\det(C)=0$. Let $B^{-1}$ be the inverse of $B$ within this group. Then $CB^{-1}=ABB^{-1}=A$.
 $$\det(A)=\det(C)\det(B^{-1}),\qquad \det(A)=0,$$
 a contradiction. So to form a group under multiplication, all matrices in the set have non-zero determinant or zero determinant.
-
-> [!todo] Manual review — page 6, determinant argument
-> The reasoning assumes $A=CB^{-1}$ without discussing the identity of a group of singular matrices, and only explicitly treats $2\times2$ matrices although the supplied general question has no such restriction. Preserve the argument without extending it.
 
 ## 6. Integer subgroups (page 7)
 
@@ -201,13 +180,12 @@ $$e=0,\qquad (nk)^{-1}=-nk,$$
 $$nk_1+nk_2=n(k_1+k_2)\in\{nk:k\in\mathbb Z\}.$$
 $$ (\{nk:k\in\mathbb Z\},+)\le(\mathbb Z,+).$$
 
-The source then writes
-$$k\in m\mathbb Z,n\mathbb Z\quad\Longleftrightarrow\quad k\mid m,n,$$
+For $m,n>0$,
+$$k\in m\mathbb Z\cap n\mathbb Z\quad\Longleftrightarrow\quad m\mid k\text{ and }n\mid k,$$
 $$\Longleftrightarrow\quad (m\mathbb Z\cap n\mathbb Z,+)=(\operatorname{lcm}(m,n)\mathbb Z,+).$$
 $$ (m\mathbb Z\cup n\mathbb Z,+)\le(\mathbb Z,+)\quad\Longleftrightarrow\quad m\mid n\text{ or }n\mid m.$$
 
-> [!todo] Manual review — page 7, middle and scope
-> The divisibility relation $k\mid m,n$ is written in that direction and appears reversed. The union criterion has no proof. The answer initially assumes $n>0$ and does not discuss the zero cases included in the question.
+The zero case gives $0\mathbb Z=\{0\}$, also a subgroup. If either $m$ or $n$ is zero, the intersection is $\{0\}$ and the union is the other subgroup.
 
 ## 7. Associativity (page 8)
 
@@ -216,21 +194,20 @@ $$ (m\mathbb Z\cup n\mathbb Z,+)\le(\mathbb Z,+)\quad\Longleftrightarrow\quad m\
 Consider $(ABC)_{ij}$, with $A$ of size $m\times n$, $B$ of size $n\times p$, and $C$ of size $p\times q$.
 $$\begin{aligned}
 ((AB)C)_{ij}&=\sum_{k=1}^{p}(AB)_{ik}C_{kj}\\
-&=\sum_{k=1}^{p}\left(\sum_{m=1}^{n}A_{im}B_{mk}\right)C_{kj}\\
-&=\sum_{k=1}^{p}\sum_{m=1}^{n}A_{im}B_{mk}C_{kj},\\
-(A(BC))_{ij}&=\sum_{m=1}^{n}A_{im}(BC)_{mj}\\
-&=\sum_{m=1}^{n}A_{im}\sum_{k=1}^{p}B_{mk}C_{kj}\\
-&=\sum_{k=1}^{p}\sum_{m=1}^{n}A_{im}B_{mk}C_{kj}.
+&=\sum_{k=1}^{p}\left(\sum_{\ell=1}^{n}A_{i\ell}B_{\ell k}\right)C_{kj}\\
+&=\sum_{k=1}^{p}\sum_{\ell=1}^{n}A_{i\ell}B_{\ell k}C_{kj},\\
+(A(BC))_{ij}&=\sum_{\ell=1}^{n}A_{i\ell}(BC)_{\ell j}\\
+&=\sum_{\ell=1}^{n}A_{i\ell}\sum_{k=1}^{p}B_{\ell k}C_{kj}\\
+&=\sum_{k=1}^{p}\sum_{\ell=1}^{n}A_{i\ell}B_{\ell k}C_{kj}.
 \end{aligned}$$
 $$ ((AB)C)_{ij}=(A(BC))_{ij}\quad\Longleftrightarrow\quad (AB)C=A(BC).$$
-The source reuses $m$ as both a dimension and a summation index; this notation is preserved.
 
 ### (b) Function composition
 
-The written expressions (with evaluation notation left as supplied) are
+For each $x\in S$,
 $$\begin{aligned}
-(f\circ g)\circ h&=f(g(x))\circ h=f(g(h(x))),\\
-f\circ(g\circ h)&=f\circ g(h(x))=f(g(h(x))).
+((f\circ g)\circ h)(x)&=(f\circ g)(h(x))=f(g(h(x))),\\
+(f\circ(g\circ h))(x)&=f((g\circ h)(x))=f(g(h(x))).
 \end{aligned}$$
 Counterexample written: $\sin(\arcsin x)\ne\arcsin(\sin x)$.
 

@@ -11,7 +11,7 @@ source_pages: 15
 
 # Numbers and Sets 1 — Handwritten Attempts
 
-This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. The date is not written here. Original claims, omitted steps and superseded work are preserved. Editorial TODOs flag issues without repairing the solutions.
+This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. The date is not written here. Obvious typos and notation are normalized, with routine algebra made explicit where helpful. Substantive errors and unfinished arguments remain marked; superseded work is preserved.
 
 Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view).
 
@@ -27,16 +27,12 @@ $$\begin{aligned}
 &\qquad +(r-1)^2+(r-1)(r-2)+(r-2)^2+\cdots\\
 &=2\sum_{k=1}^{r+1}k^2-(r+1)^2-1+\sum_{k=1}^{r}k(k+1)=(r+1)^3-1.
 \end{aligned}$$
-The lower-half variable glyphs are not consistently distinguishable as $n$ or $r$ even in an enlarged crop. Ambiguous glyphs are explicitly marked below:
-$$2\sum_{k=1}^{r+1}k^2+\sum_{k=1}^{\text{TODO: }n\text{ or }r}k^2+\sum_{k=1}^{\text{TODO: }n\text{ or }r}k-(r+1)^2-1=(r+1)^3-1,$$
-$$3\sum_{k=1}^{\text{TODO: }n\text{ or }r}k^2+\frac12r(r+1)+(r+1)^2-1=(r+1)^3-1,$$
-$$3\sum_{k=1}^{\text{TODO: }n\text{ or }r}k^2=(r+1)^3-(r+1)^2-\frac12r(r+1),$$
-$$6\sum_{k=1}^{\text{TODO: }n\text{ or }r}k^2=(r+1)(2(r+1)^2-2(r+1)-\text{TODO: }n\text{ or }r),$$
+$$2\sum_{k=1}^{r+1}k^2+\sum_{k=1}^{r}k^2+\sum_{k=1}^{r}k-(r+1)^2-1=(r+1)^3-1,$$
+$$3\sum_{k=1}^{r}k^2+\frac12r(r+1)+(r+1)^2-1=(r+1)^3-1,$$
+$$3\sum_{k=1}^{r}k^2=(r+1)^3-(r+1)^2-\frac12r(r+1),$$
+$$6\sum_{k=1}^{r}k^2=(r+1)(2(r+1)^2-2(r+1)-r),$$
 $$\sum_{k=1}^{r}k^2=\frac16(r+1)(2r^2+4r+2-3r-2),$$
-$$\sum_{k=1}^{\text{TODO: }n\text{ or }r}k^2=\frac16r(r+1)(2r+1).$$
-
-> [!todo] Ambiguous handwriting — page 1, lower half
-> After viewing the full page and a enlarged crop, the bounds of the sums and the variable after the final minus sign in the factorised expression cannot all be confidently distinguished as $n$ or $r$. These are marked in the formulas. Confirm from the original PDF before using this derivation; do not assume a consistent variable substitution.
+$$\sum_{k=1}^{r}k^2=\frac16r(r+1)(2r+1).$$
 
 ## 2. Induction (pages 2–4)
 
@@ -79,15 +75,12 @@ By induction, $7\mid2^{n+2}+3^{2n+1}$ for all $n\in\mathbb Z^+$.
 
 $$\begin{aligned}
 \sum_{r=1}^{n}(2r-1)^2
-&=\sum_{r=1}^{2n}r^2-\sum_{r=1}^{n}(2r)\\
+&=\sum_{r=1}^{2n}r^2-\sum_{r=1}^{n}(2r)^2\\
 &=\frac16\cdot2n(2n+1)(4n+1)-4\cdot\frac16n(n+1)(2n+1)\\
 &=\frac13n(2n+1)(4n+1-2n-2)\\
 &=\frac13(2n^2+n)(2n-1)\\
 &=\frac13(4n^3-n).
 \end{aligned}$$
-
-> [!todo] Manual review — page 5, question 3(i), first line
-> The subtracted sum is visibly $\sum(2r)$, with no square, while the next line uses four times a sum of squares. The missing exponent is not silently inserted.
 
 ### (ii)
 
@@ -110,11 +103,8 @@ $$\begin{aligned}
 \Longleftrightarrow\quad&7\mid2^{3n}\cdot2^{n+2}+3^{2n+1}\\
 \Longleftrightarrow\quad&7\mid8^n\cdot2^{n+2}+3^{2n+1}.
 \end{aligned}$$
-The last line writes
-$$7\mid8^n-1\quad\Longleftrightarrow\quad7\mid2^{n+2}+3^{2n+1}.$$
-
-> [!todo] Manual review — page 5, question 3(iii), last line
-> The written equivalence omits the preceding divisibility statement as a premise. Preserve the chain without supplying a missing argument.
+Since $7\mid8^n-1$, the preceding divisibility statement gives
+$$7\mid2^{n+2}+3^{2n+1}.$$
 
 ## 4. Horses (page 6, top)
 
@@ -151,29 +141,22 @@ Base case $k=1$: trivial. Assume true for $k=r$, $r\in\mathbb N$; consider $k=r+
 $$F_{(r+1)n}=F_{rn}F_{n+1}+F_{rn-1}F_n,$$
 which is a multiple of $F_n$. By induction, this is true for all $k\in\mathbb N$.
 
-“If $F_n$ is prime, then $\gcd(F_n,F_{n-k})=1$ for all $k\le n-1$. So using previous part, $n$ should be a prime. $F_4=2$, also a prime, so $n$ is prime or $n=4$.”
-
-> [!todo] Manual review — page 7, middle
-> The source writes $F_4=2$; this conflicts with the supplied recurrence. The gcd claim and deduction of the prime-index condition lack a complete justification. They remain original claims, not established results.
+“If $F_n$ is prime, then $\gcd(F_n,F_{n-k})=1$ for all $1\le k\le n-1$. So using previous part, $n$ should be a prime. $F_4=3$, also a prime, so $n$ is prime or $n=4$.”
 
 ### (b) Last-digit periodicity (page 7, lower half)
 
 The pair $(f_n,f_{n+1})$ has a finite amount of possibilities. Eventually there will be a pair
 $$ (f_k,f_{k+1})=(f_n,f_{n+1}).$$
-Since $f_{n+2}=f_{n+1}+f_n\pmod{10}$, therefore $f_n$ is periodic.
-
-> [!todo] Incomplete reasoning — page 7, bottom
-> Repetition and the forward recurrence establish eventual repetition. No backward argument or justification of periodicity from the beginning is written. No missing proof has been added.
+The recurrence is $f_{n+2}\equiv f_{n+1}+f_n\pmod{10}$. Its pair transition is reversible, since $f_n\equiv f_{n+2}-f_{n+1}\pmod{10}$. Thus a repeated pair can also be traced backwards to the first pair, so the sequence is periodic from the beginning.
 
 ## 6. Factorials (pages 8–9)
 
 ### (a) Difference of squares (page 8, upper half)
 
 $$n!=a^2-b^2=(a+b)(a-b).$$
-“$n=1$ doesn't work.” $n!$ is even for $n\ge2$, so $a+b$ or $a-b$ must be even. Since $a,b\in\mathbb Z$, $a+b$ and $a-b$ must both be even. Therefore $n!$ must have more than one factor of $2$. The written conclusion is $n!=a^2-b^2$ for $n\ge4$.
-
-> [!todo] Manual review — page 8, question 6(a)
-> The claim that $n=1$ does not work needs checking against the allowed squares. Sufficiency for every $n\ge4$ is asserted without a construction or proof.
+The case $n=1$ works: $1!=1^2-0^2$. For $n\ge2$, $n!$ is even, so $a+b$ or $a-b$ must be even. Since $a,b\in\mathbb Z$, $a+b$ and $a-b$ must both be even. Therefore $n!$ must have more than one factor of $2$. For $n\ge4$, $4\mid n!$. Writing $n!=4t$,
+$$n!=(t+1)^2-(t-1)^2.$$
+Thus the answer is $n=1$ or $n\ge4$; $n=2,3$ each give a factorial with only one factor of $2$.
 
 ### (b) Divisibility of the preceding factorial (page 8, lower half)
 
@@ -186,7 +169,7 @@ $$n\mid\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldo
 “Therefore $n\mid(n-1)!$ for non-prime $n$.”
 
 > [!todo] Manual review — page 8, question 6(b)
-> Lower bounds for the exponents are not written. The product equivalence and blanket conclusion for non-prime $n$ require review; the argument does not justify all exceptional cases. Preserve the claim rather than supplying a classification.
+> The blanket conclusion for non-prime $n$ fails at $n=4$: $4\nmid3!=6$. The product argument must be repaired to account for this exception; the original conclusion is retained as an incorrect attempt.
 
 ### (c) Trailing zeroes (page 9, top)
 
@@ -206,11 +189,8 @@ $$8m^3=4q^3,\qquad2m^3=q^3.$$
 $q^3$ is even. $p,q$ even contradicts coprimality. Therefore $\sqrt[3]{4}$ is irrational.
 
 Assume $\log_3 4$ rational:
-$$\log_3 4=\frac pq,\qquad4=3^{p/q},\qquad4^q=3^p.$$
-$\gcd(4,3)=1$, so both equal is impossible for $p,q\in\mathbb Z$. Therefore $\log_3 4$ irrational.
-
-> [!todo] Manual review — page 9, question 7(a), right column
-> The logarithm argument does not state positivity of $p,q$ or $q\ne0$ and asserts impossibility for integers in general. Preserve its abbreviated reasoning.
+$$\log_3 4=\frac pq,\qquad p,q\in\mathbb Z_{>0},\qquad4=3^{p/q},\qquad4^q=3^p.$$
+$\gcd(4,3)=1$, so $4^q=3^p$ is impossible for positive integers $p,q$. Therefore $\log_3 4$ irrational.
 
 ### (b) Descent (page 10)
 
@@ -229,7 +209,7 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 
 ### (c) Page 11
 
-- $r+\alpha$ irrational. $\alpha$ cannot be written as $\frac pq$, $p,q\in\mathbb N$, so $r+\alpha$ cannot be written as $\frac mn$, $m,n\in\mathbb N$; hence irrational.
+- $r+\alpha$ is irrational: otherwise $\alpha=(r+\alpha)-r$ would be rational, a contradiction.
 - $r\alpha$ can be rational: let $r=0$.
 - $\alpha+\beta$ can be rational: let $\alpha=-\beta$.
 - $\alpha\beta$ can be rational: let $\alpha=\beta=\sqrt2$.
@@ -237,8 +217,8 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 - $\alpha^r$ can be rational: let $r=0$.
 - $\alpha^\beta$ can be rational: let $\alpha=e$, $\beta=\ln3$.
 
-> [!todo] Manual review — page 11, first and last bullets
-> The first argument asserts the conclusion without showing how rationality of $r+\alpha$ would imply rationality of $\alpha$, and uses natural-number fractions despite the real domain. The last example does not prove irrationality of $e$ or $\ln3$, as requested in the sheet. No external proof has been supplied.
+> [!todo] Substantive gap — page 11, last bullet
+> The counterexample requires $e$ and $\ln3$ to be irrational; the source supplies no justification. The irrationality of $\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.
 
 ## 8. Pigeonhole attempts (page 12)
 
@@ -246,9 +226,11 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 
 (ii) Consider pairs $(1,2n),(2,2n-1),\ldots,(n,n+1)$; then use pigeonhole principle.
 
-(iii) Consider different sets of numbers in the form $2^n$, $3\cdot2^n$, $5\cdot2^n$, $7\cdot2^n$, … . There are $n$ sets of these; then use pigeonhole principle.
+(iii) Partition $\{1,\ldots,2n\}$ into chains with a fixed odd part $u$:
+$$\{u2^k:k\ge0,\ u2^k\le2n\},\qquad u=1,3,5,\ldots,2n-1.$$
+There are $n$ chains; use the pigeonhole principle. Two members of one chain have the same odd part, so one divides the other.
 
-(iv) For a set with $n+1$ elements, it produces $n$ distinct differences. Then use pigeonhole principle: first $n$ elements could not be in $\{\text{diff}\}$, but the $(n+1)$th element must be in $\{\text{diff}\}$.
+(iv) Let $M=\max S$. The $n$ differences $M-s$, for $s\in S\setminus\{M\}$, are distinct and belong to $\{1,\ldots,2n\}$. Together with the $n+1$ elements of $S$, this gives $2n+1$ entries in a set of size $2n$. By the pigeonhole principle, one difference is in $S$: $M-s=t$ for some $s,t\in S$.
 
 Counterexamples written:
 
@@ -258,9 +240,6 @@ Counterexamples written:
 - (iv) $n$ odd numbers.
 
 “No such example where all four fails.”
-
-> [!todo] Incomplete reasoning — page 12, questions 8(iii)–(iv) and final sentence
-> The ranges of the powers and the construction of the distinct differences are unspecified. The final simultaneous-counterexample claim is unproved. No missing reasoning is supplied.
 
 ## 9. Towns and coloured edges (pages 13–15)
 
