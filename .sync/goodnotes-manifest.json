@@ -57,53 +57,13 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Manual review — page 1, question 1",
-          "detail": "The written identity and inverse formulas are one-sided, and “closure” has no accompanying formula. Preserve these as the student's abbreviated answer; they are not a complete quantified axiom statement.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
           "location": "Manual review — page 1, question 2(i), identity",
           "detail": "The claimed identity is not two-sided for subtraction. The original check mark is retained.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         },
         {
-          "location": "Manual review — page 1, question 2(iv), inverse",
-          "detail": "The formula $a^{-1}=a-2i$ is written without a minus sign before $a$ and appears inconsistent with the supplied operation. It has not been repaired.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 2, question 2(v), associativity",
-          "detail": "The left-hand cross product has no parentheses. Its intended grouping is not specified; do not silently insert one.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 2, question 2(vi), subgroup examples",
-          "detail": "The scalar-matrix example explicitly allows $n=0$, and the rational-matrix example omits an invertibility condition. Preserve the original abbreviated examples.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
           "location": "Manual review — page 2, question 2(viii), identity reasoning",
           "detail": "The two displayed products concern a single element and do not establish multiple identities for the whole set. The original assessment is retained.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Incomplete reasoning — page 5, question 4(c)",
-          "detail": "No calculation of $(CD)^n=C^nD^n$ for every $n\\in\\mathbb N$ is written. The missing argument has not been supplied.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 6, first paragraph",
-          "detail": "The set difference is visibly written in the order $\\{0\\}\\setminus\\mathbb R$. It appears reversed; the transcription preserves it. Conditions $a,b\\ne0$ and the isomorphism map are not written here.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 6, determinant argument",
-          "detail": "The reasoning assumes $A=CB^{-1}$ without discussing the identity of a group of singular matrices, and only explicitly treats $2\\times2$ matrices although the supplied general question has no such restriction. Preserve the argument without extending it.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 7, middle and scope",
-          "detail": "The divisibility relation $k\\mid m,n$ is written in that direction and appears reversed. The union criterion has no proof. The answer initially assumes $n>0$ and does not discuss the zero cases included in the question.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         },
         {
@@ -127,7 +87,13 @@
       "original_pdf_path": null,
       "source_sha256": "14a315ca5894dd6b2c13f7e09d3d7b8864db2c5419c72619503210c90aff9c6c",
       "source_size_bytes": 1800894,
-      "page_image_attachments": []
+      "page_image_attachments": [],
+      "normalizations": {
+        "pages_1_2": "Expanded standard axiom shorthand; corrected the missing minus sign in the complex inverse; restored cross-product grouping and implicit invertibility restrictions.",
+        "page_5": "Made the immediate idempotent-matrix power calculation explicit.",
+        "pages_6_7": "Corrected reversed set-difference and divisibility notation; clarified the group-inverse step and zero subgroup cases.",
+        "page_8": "Renamed the dummy index and normalized function evaluation notation."
+      }
     },
     "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr": {
       "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
@@ -175,53 +141,13 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Ambiguous handwriting — page 1, lower half",
-          "detail": "After viewing the full page and a enlarged crop, the bounds of the sums and the variable after the final minus sign in the factorised expression cannot all be confidently distinguished as $n$ or $r$. These are marked in the formulas. Confirm from the original PDF before using this derivation; do not assume a consistent variable substitution.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 5, question 3(i), first line",
-          "detail": "The subtracted sum is visibly $\\sum(2r)$, with no square, while the next line uses four times a sum of squares. The missing exponent is not silently inserted.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 5, question 3(iii), last line",
-          "detail": "The written equivalence omits the preceding divisibility statement as a premise. Preserve the chain without supplying a missing argument.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 7, middle",
-          "detail": "The source writes $F_4=2$; this conflicts with the supplied recurrence. The gcd claim and deduction of the prime-index condition lack a complete justification. They remain original claims, not established results.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Incomplete reasoning — page 7, bottom",
-          "detail": "Repetition and the forward recurrence establish eventual repetition. No backward argument or justification of periodicity from the beginning is written. No missing proof has been added.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 8, question 6(a)",
-          "detail": "The claim that $n=1$ does not work needs checking against the allowed squares. Sufficiency for every $n\\ge4$ is asserted without a construction or proof.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
           "location": "Manual review — page 8, question 6(b)",
-          "detail": "Lower bounds for the exponents are not written. The product equivalence and blanket conclusion for non-prime $n$ require review; the argument does not justify all exceptional cases. Preserve the claim rather than supplying a classification.",
+          "detail": "The blanket conclusion for non-prime $n$ fails at $n=4$: $4\\nmid3!=6$. The product argument must be repaired to account for this exception; the original conclusion is retained as an incorrect attempt.",
           "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
         },
         {
-          "location": "Manual review — page 9, question 7(a), right column",
-          "detail": "The logarithm argument does not state positivity of $p,q$ or $q\\ne0$ and asserts impossibility for integers in general. Preserve its abbreviated reasoning.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Manual review — page 11, first and last bullets",
-          "detail": "The first argument asserts the conclusion without showing how rationality of $r+\\alpha$ would imply rationality of $\\alpha$, and uses natural-number fractions despite the real domain. The last example does not prove irrationality of $e$ or $\\ln3$, as requested in the sheet. No external proof has been supplied.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
-        },
-        {
-          "location": "Incomplete reasoning — page 12, questions 8(iii)–(iv) and final sentence",
-          "detail": "The ranges of the powers and the construction of the distinct differences are unspecified. The final simultaneous-counterexample claim is unproved. No missing reasoning is supplied.",
+          "location": "Substantive gap — page 11, last bullet",
+          "detail": "The counterexample requires $e$ and $\\ln3$ to be irrational; the source supplies no justification. The irrationality of $\\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.",
           "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
         },
         {
@@ -251,8 +177,17 @@
       "original_pdf_path": null,
       "source_sha256": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
       "source_size_bytes": 2888335,
-      "page_image_attachments": []
+      "page_image_attachments": [],
+      "normalizations": {
+        "page_1": "Used r consistently throughout the sum-of-squares derivation; removed n/r TODO placeholders.",
+        "page_5": "Restored the square on the even terms and expressed the final divisibility implication in context.",
+        "page_7": "Corrected F_4=2 to F_4=3 and made the positive index range explicit. Made the immediately reversible last-digit recurrence explicit.",
+        "pages_9_11": "Normalized the positive rational representation for log_3(4) and the immediate rational-sum contradiction.",
+        "page_12": "Expanded the intended odd-part chains and the fixed-maximum differences used in the pigeonhole arguments.",
+        "page_8": "Included the immediate n=1 zero-square case and the elementary 4t difference-of-squares identity."
+      }
     }
   },
-  "attachment_policy": "Do not commit source PDFs, page images, or other binary attachments. Retain Drive source links and page references; represent diagrams faithfully in Markdown/LaTeX where possible, otherwise link the original source and mark limitations. Downloads and rendering are temporary processing artifacts outside the repository."
+  "attachment_policy": "Do not commit source PDFs, page images, or other binary attachments. Retain Drive source links and page references; represent diagrams faithfully in Markdown/LaTeX where possible, otherwise link the original source and mark limitations. Downloads and rendering are temporary processing artifacts outside the repository.",
+  "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags."
 }
