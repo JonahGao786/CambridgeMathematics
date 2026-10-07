@@ -1,6 +1,8 @@
 # Obsidian settings, plugins, workspace state, and caches are local to each vault.
 .obsidian/
 
+.claudian/
+
 # Operating-system metadata.
 .DS_Store
 Thumbs.db
@@ -8,3 +10,6 @@ desktop.ini
 
 # Goodnotes source downloads and rendered pages stay outside the vault repository.
 Attachments/
+
+/.obsidian/workspace.json
+/.obsidian/workspace.json
