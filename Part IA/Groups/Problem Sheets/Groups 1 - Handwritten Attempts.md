@@ -13,7 +13,7 @@ source_pages: 9
 
 The PDF contains handwritten answers without the question statements. Their numbering and examples match [[Groups - Introductory Sheet 2026]], a separate Drive source. Consult that sheet for the supplied questions. The transcription below preserves the original claims, including errors and omitted reasoning; review callouts are editorial, not supplied solutions. The date is not written in this PDF.
 
-Original PDF: [[Groups 1.pdf]].
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view).
 
 ## 1. Axioms (page 1, top)
 

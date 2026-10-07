@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Goodnotes source downloads and rendered pages stay outside the vault repository.
+Attachments/

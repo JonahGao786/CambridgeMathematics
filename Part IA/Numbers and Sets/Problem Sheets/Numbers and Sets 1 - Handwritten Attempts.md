@@ -13,7 +13,7 @@ source_pages: 15
 
 This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. The date is not written here. Original claims, omitted steps and superseded work are preserved. Editorial TODOs flag issues without repairing the solutions.
 
-Original PDF: [[Numbers - Sets 1.pdf]].
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view).
 
 ## 1. Sum of squares (page 1)
 
@@ -274,9 +274,9 @@ A line separates this from the annotation **“IGNORE ABOVE”**. This work is s
 
 ### Six-town diagrams (page 14)
 
-The original coloured diagrams are preserved below. The source does not identify which colour denotes train or bus. Arrow-shaped ends are reproduced by the image; no directed-graph interpretation is added.
+The coloured edges and labels are transcribed below. The source does not identify which colour denotes train or bus. Arrow-shaped ends appear in the source; no directed-graph interpretation is added. Consult the original PDF for the drawn layout.
 
-![[Numbers and Sets 1 - page 14.png]]
+[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 14.
 
 From top to bottom:
 
@@ -289,7 +289,7 @@ From top to bottom:
 
 ### Five-town diagrams (page 15)
 
-![[Numbers and Sets 1 - page 15.png]]
+[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 15.
 
 Upper-left diagram: red $AB,AC,AD,AE$; blue $BC,CD,DE$.
 

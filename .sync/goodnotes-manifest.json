@@ -34,7 +34,7 @@
         1,
         2
       ],
-      "original_pdf_path": "Attachments/Goodnotes/groups_intro_2026.pdf",
+      "original_pdf_path": null,
       "source_sha256": "8f75846f2041d5cb92344e8b0dec3bdeff4bc98ad3cfc00c36ac9d9853804813",
       "source_size_bytes": 180117,
       "page_image_attachments": []
@@ -124,7 +124,7 @@
         8,
         9
       ],
-      "original_pdf_path": "Attachments/Goodnotes/Groups 1.pdf",
+      "original_pdf_path": null,
       "source_sha256": "14a315ca5894dd6b2c13f7e09d3d7b8864db2c5419c72619503210c90aff9c6c",
       "source_size_bytes": 1800894,
       "page_image_attachments": []
@@ -152,7 +152,7 @@
         1,
         2
       ],
-      "original_pdf_path": "Attachments/Goodnotes/ns_intro_2026.pdf",
+      "original_pdf_path": null,
       "source_sha256": "8c6d58c3e02857bd55506a1fe9553cefe441bd3b6304418abcc7ddd49b036e33",
       "source_size_bytes": 201642,
       "page_image_attachments": []
@@ -248,13 +248,11 @@
         14,
         15
       ],
-      "original_pdf_path": "Attachments/Goodnotes/Numbers - Sets 1.pdf",
+      "original_pdf_path": null,
       "source_sha256": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
       "source_size_bytes": 2888335,
-      "page_image_attachments": [
-        "Attachments/Goodnotes/Numbers and Sets 1 - page 14.png",
-        "Attachments/Goodnotes/Numbers and Sets 1 - page 15.png"
-      ]
+      "page_image_attachments": []
     }
-  }
+  },
+  "attachment_policy": "Do not commit source PDFs, page images, or other binary attachments. Retain Drive source links and page references; represent diagrams faithfully in Markdown/LaTeX where possible, otherwise link the original source and mark limitations. Downloads and rendering are temporary processing artifacts outside the repository."
 }
