@@ -1,0 +1,7 @@
+# Obsidian settings, plugins, workspace state, and caches are local to each vault.
+.obsidian/
+
+# Operating-system metadata.
+.DS_Store
+Thumbs.db
+desktop.ini
