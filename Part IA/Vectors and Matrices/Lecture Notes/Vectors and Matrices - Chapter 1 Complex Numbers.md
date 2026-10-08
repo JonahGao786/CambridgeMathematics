@@ -143,59 +143,80 @@ Rearrange and interchange $z_1,z_2$ to obtain both bounds and hence the reverse 
 
 Represent $z=x+iy$ by the point $(x,y)$, or by its position vector from the origin. Horizontal axis: $\operatorname{Re}$; vertical axis: $\operatorname{Im}$.
 
-The source diagrams are reconstructed below as LaTeX schematics. Spacing is not a numerical scale; coloured arrows retain the mathematical relationships in the drawings.
+The diagrams are drawn directly in TikZ for the installed TikZJax plugin. Their coordinates set the layout of the qualitative source sketches, without asserting numerical values for the labelled variables.
 
-$$
-\begin{array}{rccccc}
- &\operatorname{Im}&&&&\\
- &\uparrow&&&&\\
-y&\cdot&\cdots&\cdots&\color{red}{\bullet\ z=x+iy}&\\
- &\vdots&&\color{red}{\nearrow\ r=|z|}&\vdots&\\
- &0&\longrightarrow&\longrightarrow&x&\longrightarrow\ \operatorname{Re}
-\end{array}
-$$
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.1,>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (Z) at (3,1.8);
+  \draw[->] (-0.35,0) -- (4.1,0) node[right] {$\mathrm{Re}$};
+  \draw[->] (0,-0.35) -- (0,2.7) node[above] {$\mathrm{Im}$};
+  \draw[densely dotted] (0,1.8) node[left] {$y$} -- (Z) -- (3,0) node[below] {$x$};
+  \draw[->,red,thick] (O) -- (Z) node[midway,above,sloped,text=black] {$r=|z|$};
+  \fill (Z) circle (1.3pt);
+  \node[above right] at (Z) {$z=x+iy$};
+  \node[below left] at (O) {$0$};
+\end{tikzpicture}
+\end{document}
+```
 
 ### 1.3.1 Addition and subtraction (page 7, lower part)
 
-- $z_1+z_2$: the parallelogram rule.
-- $z_1-z_2$: the displacement from $z_2$ to $z_1$.
-- $|z_1-z_2|$: the distance between the two points.
+- $z_1+z_2$: the parallelogram rule, shown in blue with dashed translated sides.
+- $z_1-z_2$: the displacement from $z_2$ to $z_1$, shown in red and also translated to start at the origin.
+- $|z_1-z_2|$: the distance between the two points, equal to the length of either red arrow.
 
-Addition: the top and right sides correspond to the dashed translated vectors in the source. The blue diagonal is the position vector of the sum.
-
-$$
-\begin{array}{ccccc}
-z_1&&\overset{z_2\ \text{(translated)}}{\color{blue}{\dashrightarrow}}&&\color{blue}{z_1+z_2}\\
-\uparrow\scriptstyle z_1&&\color{blue}{\nearrow\ (z_1+z_2)}&&\color{blue}{\uparrow}\scriptstyle z_1\ \text{(translated)}\\
-0&&\xrightarrow{\quad z_2\quad}&&z_2
-\end{array}
-$$
-
-Subtraction: both red arrows below have displacement $z_1-z_2$. The left arrow starts at the origin; the right starts at $z_2$ and ends at $z_1$.
-
-$$
-\begin{array}{ccccc}
-\color{red}{z_1-z_2}&&z_1&&\\
-&\color{red}{\nwarrow}&&\color{red}{\nwarrow}&\\
-&&0&\xrightarrow{\quad z_2\quad}&z_2
-\end{array}
-\qquad
-\text{each red arrow has length }|z_1-z_2|.
-$$
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.1,>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (Z1) at (1.2,2.1);
+  \coordinate (Z2) at (2.25,0.8);
+  \coordinate (Sum) at (3.45,2.9);
+  \coordinate (Difference) at (-1.05,1.3);
+  \draw[->] (-1.7,0) -- (4.2,0) node[right] {$\mathrm{Re}$};
+  \draw[->] (0,-0.35) -- (0,3.5) node[above] {$\mathrm{Im}$};
+  \draw[->,thick] (O) -- (Z1);
+  \draw[->,thick] (O) -- (Z2);
+  \draw[->,blue,thick] (O) -- (Sum);
+  \draw[->,blue,dashed] (Z1) -- (Sum);
+  \draw[->,blue,dashed] (Z2) -- (Sum);
+  \draw[->,red,thick] (Z2) -- (Z1);
+  \draw[->,red,thick] (O) -- (Difference);
+  \node[above left] at (Z1) {$z_1$};
+  \node[below right] at (Z2) {$z_2$};
+  \node[above right,blue] at (Sum) {$z_1+z_2$};
+  \node[above left,red] at (Difference) {$z_1-z_2$};
+  \node[below left] at (O) {$0$};
+\end{tikzpicture}
+\end{document}
+```
 
 ### 1.3.2 Complex conjugation (page 8, top)
 
-Conjugation reflects $x+iy$ across the real axis to $x-iy$. The dotted projection is shared by the two points.
+Conjugation reflects $x+iy$ across the real axis to $x-iy$. The dotted vertical line joins the two reflected points.
 
-$$
-\begin{array}{ccccc}
-\operatorname{Im}&&&\color{red}{\bullet\ (x+iy)}&\\
-\uparrow&&\color{red}{\nearrow}&\vdots&\\
-0&\longrightarrow&\longrightarrow&x&\longrightarrow\ \operatorname{Re}\\
-&&\color{blue}{\searrow}&\vdots&\\
-&&&\color{blue}{\bullet\ (x-iy)}&
-\end{array}
-$$
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.1,>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (Z) at (2.4,1.3);
+  \coordinate (Conjugate) at (2.4,-1.3);
+  \draw[->] (-0.35,0) -- (3.7,0) node[right] {$\mathrm{Re}$};
+  \draw[->] (0,-1.8) -- (0,2) node[above] {$\mathrm{Im}$};
+  \draw[densely dotted] (Z) -- (Conjugate);
+  \draw[->,red,thick] (O) -- (Z);
+  \draw[->,blue,thick] (O) -- (Conjugate);
+  \node[above right,red] at (Z) {$x+iy$};
+  \node[below right,blue] at (Conjugate) {$x-iy$};
+  \node[below left] at (O) {$0$};
+\end{tikzpicture}
+\end{document}
+```
 
 ## 1.4 De Moivre's theorem (pages 8–9)
 

@@ -244,7 +244,13 @@
         "source_sha256_verified": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
         "failure": null,
         "correction": "Removed BC and CD from the page-14 third blue edge list: neither edge is drawn in the original. Confirmed in the complete page image and a 4x crop. This repairs previous automated transcription, not the student proof.",
-        "render_validation": "All six Mermaid graphs rendered in Chromium, screenshots actually inspected, with source vertex labels and edge colours verified. Native Obsidian app was not launched."
+        "render_validation": "Exact fenced TikZ document code compiled successfully with pdfLaTeX using standard TikZ. Each of the nine one-page outputs was rendered with PyMuPDF at 3x and actually visually inspected against the original source pages. The user reports TikZJax installed; the user’s Obsidian app itself was not accessed.",
+        "representations": [
+          "TikZ embedded in fenced tikz Markdown blocks for TikZJax"
+        ],
+        "reconstructed_diagram_count": 6,
+        "layout": "Original circular arrangements of the six-town and five-town graphs; red and blue edges preserved, crossings are not vertices, missing edges remain undrawn.",
+        "updated_at": "2026-10-08T13:47:55.315202Z"
       },
       "last_attempt": {
         "date": "2026-10-08",
@@ -451,16 +457,21 @@
           7,
           8
         ],
-        "reconstructed_diagram_count": 4,
+        "reconstructed_diagram_count": 3,
         "representations": [
-          "MathJax-compatible LaTeX arrays with labelled coloured arrows and axes"
+          "TikZ embedded in fenced tikz Markdown blocks for the installed Obsidian TikZJax plugin"
         ],
-        "layout": "Schematic, without numerical scale. The source addition/subtraction drawing is split into two diagrams.",
-        "render_validation": "All four reconstructions compiled by MathJax 3, rendered in Chromium and actually viewed as screenshots; no rendering errors. Native Obsidian app was not launched."
+        "layout": "Argand axes and dotted projections, combined addition/subtraction parallelogram and translated difference, and conjugation reflection reproduce the source layouts. Qualitative sketch coordinates are layout choices rather than asserted numerical values.",
+        "render_validation": "Exact fenced TikZ document code compiled successfully with pdfLaTeX using standard TikZ. Each of the nine one-page outputs was rendered with PyMuPDF at 3x and actually visually inspected against the original source pages. The user reports TikZJax installed; the user’s Obsidian app itself was not accessed.",
+        "updated_at": "2026-10-08T13:47:55.315202Z",
+        "visually_reinspected_pages": [
+          7,
+          8
+        ]
       }
     }
   },
-  "attachment_policy": "Commit only Obsidian Markdown notes and required sync metadata. Original PDFs, rendered images, preview assets and other binaries remain temporary outside the repository. Meaningful diagrams are reconstructed visibly in Markdown/Mermaid or MathJax-compatible LaTeX; references supplement, rather than replace, the diagrams.",
+  "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
     "date": "2026-10-08",
@@ -545,13 +556,45 @@
     "updated_markdown_note_count": 3,
     "pending_source_count": 0,
     "blocker": null,
-    "diagram_rendering_method": "MathJax 3 and Mermaid in local Chromium preview; all ten diagrams rendered and screenshots visually checked. Source PDF page reading used PyMuPDF and view_image, not browser UI.",
+    "diagram_rendering_method": "Initial full sync checked ten MathJax/Mermaid reconstructions. Those drawings have since been replaced by nine TikZ reconstructions, including the combined source addition/subtraction drawing; see last_diagram_update for current rendering validation.",
     "published_branch": "master"
   },
-  "diagram_policy": "Reconstruct each meaningful graph/drawing visibly with Obsidian-supported Mermaid or MathJax-compatible LaTeX; no binaries. Re-read original relevant pages visually before upgrades, preserve incomplete/superseded work, record pending upgrades when source images cannot be accessed.",
+  "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 7,
   "source_annotation_conventions": {
     "qed": "The hollow square ◻ denotes QED/end of proof; transcribe as $\\square$. It records the source author’s end marker, not independent proof validation.",
     "crossed_out_proof": "A crossed-out proof, the crossed-out label Proof, or a crossed-out QED square marks the proof as wrong. Preserve the argument as an explicitly invalid proof/incorrect attempt. Ordinary algebra cancellation and axiom-assessment crosses have their own meanings."
+  },
+  "last_diagram_update": {
+    "date": "2026-10-08",
+    "updated_at": "2026-10-08T13:47:55.315202Z",
+    "status": "processed",
+    "updated_markdown_paths": [
+      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md",
+      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
+    ],
+    "representation": "TikZJax fenced tikz blocks",
+    "diagram_count": 9,
+    "visually_reinspected_sources": [
+      {
+        "drive_file_id": "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
+        "total_page_count": 9,
+        "visually_inspected_pages": [
+          7,
+          8
+        ]
+      },
+      {
+        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+        "total_page_count": 15,
+        "visually_inspected_pages": [
+          14,
+          15
+        ]
+      }
+    ],
+    "render_validation": "Exact fenced TikZ document code compiled successfully with pdfLaTeX using standard TikZ. Each of the nine one-page outputs was rendered with PyMuPDF at 3x and actually visually inspected against the original source pages. The user reports TikZJax installed; the user’s Obsidian app itself was not accessed.",
+    "pending_diagram_count": 0,
+    "blocker": null
   }
 }

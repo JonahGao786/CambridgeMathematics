@@ -253,7 +253,7 @@ A line separates this from the annotation **“IGNORE ABOVE”**. This work is s
 
 ### Six-town diagrams (page 14)
 
-The six diagrams are reconstructed as coloured, undirected Mermaid graphs. Layout is schematic: vertex positions carry no metric information. Red edges are solid; blue edges are dashed as an additional readable distinction. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
+The six diagrams are drawn in TikZ for TikZJax, preserving the original circular arrangements of labelled towns and the red/blue edges. Positions carry no metric information; crossings of edges are not additional vertices. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
 
 [Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 14.
 
@@ -265,68 +265,95 @@ From top to bottom:
 
 #### Page 14 — top: partial six-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    F((F))
-    A --- B
-    A --- C
-    A --- D
-    A --- E
-    A --- F
-    B --- C
-    C --- D
-    D --- E
-    E --- F
-    linkStyle 0,1,2,3,4 stroke:#dc2626,stroke-width:3px
-    linkStyle 5,6,7,8 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.35,1.8);
+  \coordinate (B) at (1.35,1.8);
+  \coordinate (C) at (2.4,0);
+  \coordinate (D) at (1.35,-1.8);
+  \coordinate (E) at (-1.35,-1.8);
+  \coordinate (F) at (-2.4,0);
+  \draw[red,thick] (A) -- (B);
+  \draw[red,thick] (A) -- (C);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (A) -- (E);
+  \draw[red,thick] (A) -- (F);
+  \draw[blue,thick] (B) -- (C);
+  \draw[blue,thick] (C) -- (D);
+  \draw[blue,thick] (D) -- (E);
+  \draw[blue,thick] (E) -- (F);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+  \node[vertex] at (F) {$F$};
+  \node[anchor=north west,text width=3cm,align=left] at (2.85,1.8) {$FD,EC,BD$ can be any colour.};
+\end{tikzpicture}
+\end{document}
 ```
 
 #### Page 14 — middle: partial six-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    F((F))
-    A --- C
-    A --- D
-    A --- E
-    A --- F
-    A --- B
-    C --- D
-    D --- E
-    E --- F
-    linkStyle 0,1,2,3 stroke:#dc2626,stroke-width:3px
-    linkStyle 4,5,6,7 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.35,1.8);
+  \coordinate (B) at (1.35,1.8);
+  \coordinate (C) at (2.4,0);
+  \coordinate (D) at (1.35,-1.8);
+  \coordinate (E) at (-1.35,-1.8);
+  \coordinate (F) at (-2.4,0);
+  \draw[red,thick] (A) -- (C);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (A) -- (E);
+  \draw[red,thick] (A) -- (F);
+  \draw[blue,thick] (A) -- (B);
+  \draw[blue,thick] (C) -- (D);
+  \draw[blue,thick] (D) -- (E);
+  \draw[blue,thick] (E) -- (F);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+  \node[vertex] at (F) {$F$};
+  \node[anchor=north west,text width=3cm,align=left] at (2.85,1.8) {$FD,EC$ can be any colour.};
+\end{tikzpicture}
+\end{document}
 ```
 
 #### Page 14 — bottom: partial six-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    F((F))
-    A --- D
-    A --- E
-    A --- F
-    A --- B
-    A --- C
-    D --- E
-    E --- F
-    linkStyle 0,1,2 stroke:#dc2626,stroke-width:3px
-    linkStyle 3,4,5,6 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.35,1.8);
+  \coordinate (B) at (1.35,1.8);
+  \coordinate (C) at (2.4,0);
+  \coordinate (D) at (1.35,-1.8);
+  \coordinate (E) at (-1.35,-1.8);
+  \coordinate (F) at (-2.4,0);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (A) -- (E);
+  \draw[red,thick] (A) -- (F);
+  \draw[blue,thick] (A) -- (B);
+  \draw[blue,thick] (A) -- (C);
+  \draw[blue,thick] (D) -- (E);
+  \draw[blue,thick] (E) -- (F);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+  \node[vertex] at (F) {$F$};
+  \node[anchor=north west,text width=3cm,align=left] at (2.85,1.8) {$FD$ can be any colour.};
+\end{tikzpicture}
+\end{document}
 ```
 
 > [!todo] Incomplete attempt — page 14
@@ -344,64 +371,85 @@ Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 
 #### Page 15 — upper left: partial five-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    A --- B
-    A --- C
-    A --- D
-    A --- E
-    B --- C
-    C --- D
-    D --- E
-    linkStyle 0,1,2,3 stroke:#dc2626,stroke-width:3px
-    linkStyle 4,5,6 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.2,1.7);
+  \coordinate (B) at (1.2,1.7);
+  \coordinate (C) at (2,-0.3);
+  \coordinate (D) at (0,-1.9);
+  \coordinate (E) at (-2,-0.3);
+  \draw[red,thick] (A) -- (B);
+  \draw[red,thick] (A) -- (C);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (A) -- (E);
+  \draw[blue,thick] (B) -- (C);
+  \draw[blue,thick] (C) -- (D);
+  \draw[blue,thick] (D) -- (E);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+\end{tikzpicture}
+\end{document}
 ```
 
 #### Page 15 — upper right: partial five-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    A --- C
-    A --- D
-    A --- E
-    A --- B
-    C --- D
-    D --- E
-    linkStyle 0,1,2 stroke:#dc2626,stroke-width:3px
-    linkStyle 3,4,5 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.2,1.7);
+  \coordinate (B) at (1.2,1.7);
+  \coordinate (C) at (2,-0.3);
+  \coordinate (D) at (0,-1.9);
+  \coordinate (E) at (-2,-0.3);
+  \draw[red,thick] (A) -- (C);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (A) -- (E);
+  \draw[blue,thick] (A) -- (B);
+  \draw[blue,thick] (C) -- (D);
+  \draw[blue,thick] (D) -- (E);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+\end{tikzpicture}
+\end{document}
 ```
 
 #### Page 15 — lower left: completed five-town graph
 
-```mermaid
-graph LR
-    A((A))
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    A --- E
-    A --- D
-    B --- E
-    B --- C
-    C --- D
-    A --- B
-    A --- C
-    B --- D
-    C --- E
-    D --- E
-    linkStyle 0,1,2,3,4 stroke:#dc2626,stroke-width:3px
-    linkStyle 5,6,7,8,9 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,vertex/.style={circle,fill=white,inner sep=3pt}]
+  \coordinate (A) at (-1.2,1.7);
+  \coordinate (B) at (1.2,1.7);
+  \coordinate (C) at (2,-0.3);
+  \coordinate (D) at (0,-1.9);
+  \coordinate (E) at (-2,-0.3);
+  \draw[red,thick] (A) -- (E);
+  \draw[red,thick] (A) -- (D);
+  \draw[red,thick] (B) -- (E);
+  \draw[red,thick] (B) -- (C);
+  \draw[red,thick] (C) -- (D);
+  \draw[blue,thick] (A) -- (B);
+  \draw[blue,thick] (A) -- (C);
+  \draw[blue,thick] (B) -- (D);
+  \draw[blue,thick] (C) -- (E);
+  \draw[blue,thick] (D) -- (E);
+  \node[vertex] at (A) {$A$};
+  \node[vertex] at (B) {$B$};
+  \node[vertex] at (C) {$C$};
+  \node[vertex] at (D) {$D$};
+  \node[vertex] at (E) {$E$};
+\end{tikzpicture}
+\end{document}
 ```
 
 Written conclusion: “Not true if only $5$ towns.” No further prose argument is supplied. No attempts at questions 10–12 appear in this PDF.
