@@ -230,22 +230,22 @@ If the group is abelian, its Cayley table is symmetric about the diagonal from t
 
 ### (b) The supplied five-element Latin square (page 9, bottom)
 
-Written answer: “It is; it has an identity, elements are self-inverse, and it's a non-abelian group.”
+**Incorrect answer:** “It is; it has an identity, elements are self-inverse, and it's a non-abelian group.”
 
 > [!todo] Manual review — page 9, question 8(b)
-> The claim that the supplied table is a group is false: associativity fails. In the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. The written positive answer is preserved above rather than promoted to a group example.
+> Associativity fails: in the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. Hence this table is not the Cayley table of a group.
 
 ### (c) Associative Latin-square operation (page 10)
 
 The separate question supplies a non-empty finite set $S$ with an associative, closed operation $*$ whose table is a Latin square.
 
-Written attempt:
+**Incomplete proof:**
 $$\text{Let }a,e\in S.$$
 “Because the binary operation is closed”,
 $$aS=S
 \quad\Longleftrightarrow\quad
 \exists a^{-1}\in S,\quad a*a^{-1}=e.$$
-The source then concludes that $(S,*)$ satisfies the four group axioms and is a group.
+**Claimed conclusion:** $(S,*)$ satisfies the four group axioms and is a group.
 
 > [!todo] Essential gap — page 10, question 8(c)
 > The existence of a common two-sided identity $e$ has been assumed rather than established, and only a right inverse is written. Closure alone gives $aS\subseteq S$, not $aS=S$; surjectivity here uses the Latin-square property. The attempt does not supply the essential identity and two-sided inverse arguments, so its final conclusion remains unproved in this source.

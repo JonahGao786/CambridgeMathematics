@@ -137,7 +137,7 @@ $$
 $$
 Take non-negative square roots. For the reverse inequality,
 $$|z_1|=|(z_1-z_2)+z_2|\le |z_1-z_2|+|z_2|.$$
-Rearrange and interchange $z_1,z_2$ to obtain both bounds and hence the reverse triangle inequality. $\square$
+Rearrange and interchange $z_1,z_2$ to obtain both bounds and hence the reverse triangle inequality.
 
 ## 1.3 Argand diagram (page 7)
 
@@ -256,7 +256,7 @@ $$
 &=\cos(-m\theta)+i\sin(-m\theta).
 \end{aligned}
 $$
-This proves the integer-power statement. $\square$
+This proves the integer-power statement.
 
 **Consequence.** For $z=r(\cos\theta+i\sin\theta)\ne0$ and $n\in\mathbb Z$,
 $$z^n=r^n\bigl(\cos(n\theta)+i\sin(n\theta)\bigr).$$

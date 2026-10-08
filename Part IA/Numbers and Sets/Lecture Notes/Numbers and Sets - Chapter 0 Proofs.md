@@ -60,13 +60,13 @@ These statements and historical remarks are retained as examples from the lectur
 $$
 n^3-n=n(n^2-1)=(n-1)n(n+1).
 $$
-One of the three consecutive integers $n-1,n,n+1$ is a multiple of $3$, so their product is a multiple of $3$. $\square$
+One of the three consecutive integers $n-1,n,n+1$ is a multiple of $3$, so their product is a multiple of $3$.
 
 ## A non-proof: proving the converse (page 4, middle)
 
 **Assertion.** For $n\in\mathbb Z_{>0}$, if $n^2$ is even, then $n$ is even.
 
-The source crosses out both “Proof” and the QED square $\square$, marking the following argument as a **wrong proof of the stated assertion**:
+**Wrong proof:**
 
 > Given an even integer $n$, write $n=2k$, where $k\in\mathbb Z_{>0}$. Then
 > $$n^2=(2k)^2=2(2k^2),$$
@@ -94,7 +94,7 @@ n^2&=(2k+1)^2\\
 &=4(k^2+k)+1,
 \end{aligned}
 $$
-which is odd, contradicting the assumption that $n^2$ is even. $\square$
+which is odd, contradicting the assumption that $n^2$ is even.
 
 To show “if $A$, then $B$”, this argument shows that there is no case in which $A$ is true and $B$ is false. Equivalently,
 $$

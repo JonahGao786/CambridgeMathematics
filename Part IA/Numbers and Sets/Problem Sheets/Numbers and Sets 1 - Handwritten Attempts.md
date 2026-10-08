@@ -243,13 +243,12 @@ Counterexamples written:
 
 ## 9. Towns and coloured edges (pages 13–15)
 
-### Superseded attempt (page 13)
+### Superseded, incomplete attempt (page 13)
 
-The source lists:
 $$A:B\text{ through }F\ (5),\quad B:C\text{ through }F\ (4),\quad C:D\text{ through }F\ (3),\quad D:E\text{ through }F\ (2),\quad E:F\ (1).$$
 $15$ edges. At least $8$ edges are the same transport. Try to place the $8$ edges without forming a triangle. Assume $AB,CD,EF$ are edges that don't meet each other. Then list $AC,AD,AE,AF$.
 
-A line separates this from the annotation **“IGNORE ABOVE”**. This work is superseded and incomplete, not an established proof.
+This incomplete attempt does not establish the claim.
 
 ### Six-town diagrams (page 14)
 

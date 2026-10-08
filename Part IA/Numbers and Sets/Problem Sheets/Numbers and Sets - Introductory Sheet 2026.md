@@ -53,7 +53,7 @@ Give alternative solutions to question $2$, as follows:
 
 **Supplied proof.** We will use induction to show that, for each $n$, any $n$ horses are the same colour. The base case, $n=1$, is easy: any one horse is the same colour as itself. Now suppose the result is true for any set of $n$ horses, and that we have $n+1$ horses. Call them $h_1,\ldots,h_{n+1}$.
 
-By induction, we know horses $h_1,\ldots,h_n$ are the same colour (because there are $n$ of them), and that horses $h_2,\ldots,h_{n+1}$ are the same colour (because there are $n$ of them). So we deduce that horses $h_1,\ldots,h_{n+1}$ are the same colour. Hence, by induction, all horses are the same colour. $\square$
+By induction, we know horses $h_1,\ldots,h_n$ are the same colour (because there are $n$ of them), and that horses $h_2,\ldots,h_{n+1}$ are the same colour (because there are $n$ of them). So we deduce that horses $h_1,\ldots,h_{n+1}$ are the same colour. Hence, by induction, all horses are the same colour.
 
 However, not all horses are the same colour. So where is the mistake?
 
