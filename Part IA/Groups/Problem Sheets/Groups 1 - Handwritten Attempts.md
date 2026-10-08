@@ -6,7 +6,7 @@ date: null
 source_file: Groups 1.pdf
 drive_file_id: 17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY
 source_url: https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view
-source_pages: 9
+source_pages: 11
 ---
 
 # Groups 1 — Handwritten Attempts
@@ -214,6 +214,42 @@ Counterexample written: $\sin(\arcsin x)\ne\arcsin(\sin x)$.
 > [!todo] Manual review — page 8, question 7(b), bottom
 > No common set $S$ or admissible value of $x$ is specified for the sine/arcsine example. The written inequality should not be treated as an unconditional identity of functions $S\to S$.
 
-## 8. Unfinished (page 9)
+## 8. Cayley tables and Latin squares (pages 9–10)
 
-The page contains only the heading “8)”; the rest is blank. No answer to question 8 is present. Questions 9–12 have no written attempts in this PDF.
+### (a) A finite group's Cayley table (page 9)
+
+Each row and column is a translate of the group: $aG=G$ and $Ga=G$.
+
+For a fixed $a$, suppose two entries in its row coincide:
+$$ab=ac=d\quad\Longrightarrow\quad b=c=a^{-1}d.$$
+Thus distinct column labels cannot give a repeated row entry. The analogous cancellation on the right excludes repeated entries within a column. Hence the Cayley table of a finite group forms a [[Latin Squares|Latin square]].
+
+To find the identity, find the row and column that preserve the order of the table's element labels. Two elements whose product gives the identity are inverses of each other.
+
+If the group is abelian, its Cayley table is symmetric about the diagonal from top left to bottom right.
+
+### (b) The supplied five-element Latin square (page 9, bottom)
+
+Written answer: “It is; it has an identity, elements are self-inverse, and it's a non-abelian group.”
+
+> [!todo] Manual review — page 9, question 8(b)
+> The claim that the supplied table is a group is false: associativity fails. In the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. The written positive answer is preserved above rather than promoted to a group example.
+
+### (c) Associative Latin-square operation (page 10)
+
+The separate question supplies a non-empty finite set $S$ with an associative, closed operation $*$ whose table is a Latin square.
+
+Written attempt:
+$$\text{Let }a,e\in S.$$
+“Because the binary operation is closed”,
+$$aS=S
+\quad\Longleftrightarrow\quad
+\exists a^{-1}\in S,\quad a*a^{-1}=e.$$
+The source then concludes that $(S,*)$ satisfies the four group axioms and is a group.
+
+> [!todo] Essential gap — page 10, question 8(c)
+> The existence of a common two-sided identity $e$ has been assumed rather than established, and only a right inverse is written. Closure alone gives $aS\subseteq S$, not $aS=S$; surjectivity here uses the Latin-square property. The attempt does not supply the essential identity and two-sided inverse arguments, so its final conclusion remains unproved in this source.
+
+## 9. Unfinished (page 11)
+
+The page contains only the heading “9)”; the rest is blank. No answer to question 9 is present. Questions 10–12 have no written attempts in this PDF.

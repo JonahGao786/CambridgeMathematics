@@ -253,7 +253,7 @@ A line separates this from the annotation **“IGNORE ABOVE”**. This work is s
 
 ### Six-town diagrams (page 14)
 
-The coloured edges and labels are transcribed below. The source does not identify which colour denotes train or bus. Arrow-shaped ends appear in the source; no directed-graph interpretation is added. Consult the original PDF for the drawn layout.
+The six diagrams are reconstructed as coloured, undirected Mermaid graphs. Layout is schematic: vertex positions carry no metric information. Red edges are solid; blue edges are dashed as an additional readable distinction. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
 
 [Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 14.
 
@@ -261,7 +261,73 @@ From top to bottom:
 
 1. Red edges drawn: $AB,AC,AD,AE,AF$. Blue edges drawn: $BC,CD,DE,EF$. Annotation: “$FD,EC,BD$ can be any colour.”
 2. Red: $AC,AD,AE,AF$. Blue: $AB,CD,DE,EF$. Annotation: “$FD,EC$ can be any colour.”
-3. Red: $AD,AE,AF$. Blue: $AB,AC,BC,CD,DE,EF$. Annotation: “$FD$ can be any colour.”
+3. Red: $AD,AE,AF$. Blue: $AB,AC,DE,EF$. Annotation: “$FD$ can be any colour.”
+
+#### Page 14 — top: partial six-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    F((F))
+    A --- B
+    A --- C
+    A --- D
+    A --- E
+    A --- F
+    B --- C
+    C --- D
+    D --- E
+    E --- F
+    linkStyle 0,1,2,3,4 stroke:#dc2626,stroke-width:3px
+    linkStyle 5,6,7,8 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
+
+#### Page 14 — middle: partial six-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    F((F))
+    A --- C
+    A --- D
+    A --- E
+    A --- F
+    A --- B
+    C --- D
+    D --- E
+    E --- F
+    linkStyle 0,1,2,3 stroke:#dc2626,stroke-width:3px
+    linkStyle 4,5,6,7 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
+
+#### Page 14 — bottom: partial six-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    F((F))
+    A --- D
+    A --- E
+    A --- F
+    A --- B
+    A --- C
+    D --- E
+    E --- F
+    linkStyle 0,1,2 stroke:#dc2626,stroke-width:3px
+    linkStyle 3,4,5,6 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
 
 > [!todo] Incomplete attempt — page 14
 > These are partial diagrams, not complete edge colourings of all pairs. No complete written case argument establishes the six-town conclusion. Undrawn edges must not be reconstructed.
@@ -275,5 +341,67 @@ Upper-left diagram: red $AB,AC,AD,AE$; blue $BC,CD,DE$.
 Upper-right diagram: red $AC,AD,AE$; blue $AB,CD,DE$.
 
 Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
+
+#### Page 15 — upper left: partial five-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    A --- B
+    A --- C
+    A --- D
+    A --- E
+    B --- C
+    C --- D
+    D --- E
+    linkStyle 0,1,2,3 stroke:#dc2626,stroke-width:3px
+    linkStyle 4,5,6 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
+
+#### Page 15 — upper right: partial five-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    A --- C
+    A --- D
+    A --- E
+    A --- B
+    C --- D
+    D --- E
+    linkStyle 0,1,2 stroke:#dc2626,stroke-width:3px
+    linkStyle 3,4,5 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
+
+#### Page 15 — lower left: completed five-town graph
+
+```mermaid
+graph LR
+    A((A))
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    A --- E
+    A --- D
+    B --- E
+    B --- C
+    C --- D
+    A --- B
+    A --- C
+    B --- D
+    C --- E
+    D --- E
+    linkStyle 0,1,2,3,4 stroke:#dc2626,stroke-width:3px
+    linkStyle 5,6,7,8,9 stroke:#2563eb,stroke-width:3px,stroke-dasharray:6 3
+```
 
 Written conclusion: “Not true if only $5$ towns.” No further prose argument is supplied. No attempts at questions 10–12 appear in this PDF.

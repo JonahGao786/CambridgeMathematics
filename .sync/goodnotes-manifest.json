@@ -4,12 +4,12 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-08T13:18:00Z",
+  "last_inventory_at": "2026-10-08T13:33:42.140641Z",
   "inventory_complete": true,
   "inventory_folder_count": 9,
-  "reading_method": "Authenticated Google Drive metadata and raw fetch (include_base64=false); sediment file reference materialized with download_file; original PDF rendered with PyMuPDF at 2x (144 dpi); every page inspected through view_image/model vision; enlarged 3x/4x PDF crops used for uncertain handwriting and diagram labels. Local PDF text extraction used alongside images for printed sheets only.",
+  "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading. Previously processed unchanged sources retain their earlier per-file complete-reading coverage. This run reinspected only pages 14–15 of the unchanged 15-page Numbers - Sets 1.pdf for diagram upgrades.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
-  "duplicate_comparison": "All four sources were inspected page by page. The two printed sheets have 2 pages each; the corresponding handwritten files have 9 and 15 pages, contain distinct answer material, and have separate Markdown destinations. No sources share a source-note destination.",
+  "duplicate_comparison": "Ch.0 Proofs.pdf and Untitled Notebook.pdf were separately read on all five pages and compared page by page: all rendered pixels identical. They share one source note with both Drive links and separate per-file manifest records. Other sources retain separate source-note destinations; the modified Groups 1.pdf now has 11 pages.",
   "files": {
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW": {
       "drive_file_id": "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
@@ -45,14 +45,15 @@
       "source_url": "https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view",
       "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
       "observed_source_modified_timestamp": "2026-10-08T13:16:05.236Z",
-      "processed_source_modified_timestamp": "2026-10-07T10:17:24.716Z",
+      "processed_source_modified_timestamp": "2026-10-08T13:16:05.236Z",
       "markdown_paths": [
-        "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
+        "Concepts/Latin Squares.md"
       ],
       "material_type": "handwritten worked solutions and incomplete attempts",
       "course": "Part IA Groups",
       "source_date": null,
-      "status": "pending",
+      "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [
@@ -70,9 +71,19 @@
           "location": "Manual review — page 8, question 7(b), bottom",
           "detail": "No common set $S$ or admissible value of $x$ is specified for the sine/arcsine example. The written inequality should not be treated as an unconditional identity of functions $S\\to S$.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 9, question 8(b)",
+          "detail": "The claim that the supplied table is a group is false: associativity fails. In the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. The written positive answer is preserved above rather than promoted to a group example.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Essential gap — page 10, question 8(c)",
+          "detail": "The existence of a common two-sided identity $e$ has been assumed rather than established, and only a right inverse is written. Closure alone gives $aS\\subseteq S$, not $aS=S$; surjectivity here uses the Latin-square property. The attempt does not supply the essential identity and two-sided inverse arguments, so its final conclusion remains unproved in this source.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         }
       ],
-      "total_page_count": 9,
+      "total_page_count": 11,
       "visually_inspected_pages": [
         1,
         2,
@@ -82,26 +93,43 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11
       ],
       "original_pdf_path": null,
-      "source_sha256": "14a315ca5894dd6b2c13f7e09d3d7b8864db2c5419c72619503210c90aff9c6c",
-      "source_size_bytes": 1800894,
+      "source_sha256": "79fb19c6df1d48554b43814f4d273e4900d484c0a0a64503c2d52ac1bce0413a",
+      "source_size_bytes": 2180623,
       "page_image_attachments": [],
       "normalizations": {
         "pages_1_2": "Expanded standard axiom shorthand; corrected the missing minus sign in the complex inverse; restored cross-product grouping and implicit invertibility restrictions.",
         "page_5": "Made the immediate idempotent-matrix power calculation explicit.",
         "pages_6_7": "Corrected reversed set-difference and divisibility notation; clarified the group-inverse step and zero subgroup cases.",
-        "page_8": "Renamed the dummy index and normalized function evaluation notation."
+        "page_8": "Renamed the dummy index and normalized function evaluation notation.",
+        "pages_9_10": "Transcribed new question-8 work; made the immediate row/column cancellation explicit. Preserved the false 8(b) assessment and incomplete 8(c) attempt with substantive review flags; did not supply the missing proof."
       },
       "last_attempt": {
         "date": "2026-10-08",
-        "status": "blocked",
+        "status": "processed",
         "source_modified_timestamp": "2026-10-08T13:16:05.236Z",
-        "total_page_count": null,
-        "visually_inspected_pages": [],
-        "failure": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
-      }
+        "total_page_count": 11,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "failure": null
+      },
+      "last_successful_processing_at": "2026-10-08T13:33:42.140641Z",
+      "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading."
     },
     "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr": {
       "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
@@ -192,23 +220,43 @@
         "page_7": "Corrected F_4=2 to F_4=3 and made the positive index range explicit. Made the immediately reversible last-digit recurrence explicit.",
         "pages_9_11": "Normalized the positive rational representation for log_3(4) and the immediate rational-sum contradiction.",
         "page_12": "Expanded the intended odd-part chains and the fixed-maximum differences used in the pigeonhole arguments.",
-        "page_8": "Included the immediate n=1 zero-square case and the elementary 4t difference-of-squares identity."
+        "page_8": "Included the immediate n=1 zero-square case and the elementary 4t difference-of-squares identity.",
+        "page_14_diagram_3": "Corrected the previous automated edge list to include only blue AB, AC, DE, EF, as visibly drawn; undrawn BC and CD are excluded."
       },
       "diagram_upgrades": {
-        "status": "pending",
+        "status": "processed",
         "note_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md",
         "locations": [
           {
             "page": 14,
-            "description": "Three partial six-town coloured-edge diagrams currently represented only by prose/edge lists."
+            "description": "Three partial six-town graphs reconstructed as coloured Mermaid diagrams."
           },
           {
             "page": 15,
-            "description": "Three five-town coloured-edge diagrams currently represented only by prose/edge lists."
+            "description": "Two partial and one complete five-town graphs reconstructed as coloured Mermaid diagrams."
           }
         ],
-        "visually_reinspected_pages": [],
-        "failure": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
+        "visually_reinspected_pages": [
+          14,
+          15
+        ],
+        "completed_at": "2026-10-08T13:33:42.140641Z",
+        "source_sha256_verified": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
+        "failure": null,
+        "correction": "Removed BC and CD from the page-14 third blue edge list: neither edge is drawn in the original. Confirmed in the complete page image and a 4x crop. This repairs previous automated transcription, not the student proof.",
+        "render_validation": "All six Mermaid graphs rendered in Chromium, screenshots actually inspected, with source vertex labels and edge colours verified. Native Obsidian app was not launched."
+      },
+      "last_attempt": {
+        "date": "2026-10-08",
+        "status": "processed",
+        "scope": "diagram_upgrade_only",
+        "source_modified_timestamp": "2026-10-07T10:17:10.864Z",
+        "total_page_count": 15,
+        "visually_inspected_pages": [
+          14,
+          15
+        ],
+        "failure": null
       }
     },
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F": {
@@ -216,25 +264,61 @@
       "source_file_name": "Ch.0 Proofs.pdf",
       "source_url": "https://drive.google.com/file/d/1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "processed_source_modified_timestamp": null,
-      "markdown_paths": [],
-      "material_type": null,
+      "processed_source_modified_timestamp": "2026-10-08T13:16:58.976Z",
+      "markdown_paths": [
+        "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md",
+        "Concepts/Proof by Contradiction and Contraposition.md",
+        "Concepts/Fundamental Theorem of Algebra.md"
+      ],
+      "material_type": "handwritten lecture notes",
       "course": "Part IA Numbers and Sets",
-      "source_date": null,
-      "classification": "unverified",
+      "source_date": "2026–27",
+      "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [],
-      "total_page_count": null,
-      "visually_inspected_pages": [],
+      "total_page_count": 5,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "observed_source_modified_timestamp": "2026-10-08T13:16:58.976Z",
-      "status": "pending",
+      "status": "processed",
       "last_attempt": {
         "date": "2026-10-08",
-        "status": "blocked",
+        "status": "processed",
         "source_modified_timestamp": "2026-10-08T13:16:58.976Z",
-        "total_page_count": null,
-        "visually_inspected_pages": [],
-        "failure": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
+        "total_page_count": 5,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "failure": null
+      },
+      "source_sha256": "ee8aeec20468f69a1262d5dc1ef7eb9d248db767ec7aa41679245a841f371a4a",
+      "source_size_bytes": 1093470,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-08T13:33:42.140641Z",
+      "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading.",
+      "duplicate_comparison": {
+        "other_drive_file_id": "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn",
+        "pages_compared": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "result": "All five pages visually inspected in both PDFs and compared; rendered dimensions and pixels identical on every page. PDF byte hashes differ. Shared faithful source note records both source links."
+      },
+      "normalizations": {
+        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results."
       }
     },
     "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn": {
@@ -242,25 +326,61 @@
       "source_file_name": "Untitled Notebook.pdf",
       "source_url": "https://drive.google.com/file/d/1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "processed_source_modified_timestamp": null,
-      "markdown_paths": [],
-      "material_type": null,
+      "processed_source_modified_timestamp": "2026-10-08T13:16:15.812Z",
+      "markdown_paths": [
+        "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md",
+        "Concepts/Proof by Contradiction and Contraposition.md",
+        "Concepts/Fundamental Theorem of Algebra.md"
+      ],
+      "material_type": "handwritten lecture notes",
       "course": "Part IA Numbers and Sets",
-      "source_date": null,
-      "classification": "unverified",
+      "source_date": "2026–27",
+      "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [],
-      "total_page_count": null,
-      "visually_inspected_pages": [],
+      "total_page_count": 5,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "observed_source_modified_timestamp": "2026-10-08T13:16:15.812Z",
-      "status": "pending",
+      "status": "processed",
       "last_attempt": {
         "date": "2026-10-08",
-        "status": "blocked",
+        "status": "processed",
         "source_modified_timestamp": "2026-10-08T13:16:15.812Z",
-        "total_page_count": null,
-        "visually_inspected_pages": [],
-        "failure": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
+        "total_page_count": 5,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "failure": null
+      },
+      "source_sha256": "1f8a38013d27b347269dd3ce2dd810e5d761764dadc1f5bb3d96ca8e31b4d394",
+      "source_size_bytes": 1093470,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-08T13:33:42.140641Z",
+      "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading.",
+      "duplicate_comparison": {
+        "other_drive_file_id": "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
+        "pages_compared": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "result": "All five pages visually inspected in both PDFs and compared; rendered dimensions and pixels identical on every page. PDF byte hashes differ. Shared faithful source note records both source links."
+      },
+      "normalizations": {
+        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results."
       }
     },
     "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh": {
@@ -268,39 +388,164 @@
       "source_file_name": "Ch.1 Complex Numbers.pdf",
       "source_url": "https://drive.google.com/file/d/1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "processed_source_modified_timestamp": null,
-      "markdown_paths": [],
-      "material_type": null,
+      "processed_source_modified_timestamp": "2026-10-08T13:16:49.360Z",
+      "markdown_paths": [
+        "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md",
+        "Concepts/Complex Numbers.md",
+        "Concepts/De Moivre's Theorem.md",
+        "Concepts/Fundamental Theorem of Algebra.md",
+        "Concepts/Triangle Inequality for Complex Numbers.md"
+      ],
+      "material_type": "handwritten lecture notes",
       "course": "Part IA Vectors and Matrices",
       "source_date": null,
-      "classification": "unverified",
+      "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [],
-      "total_page_count": null,
-      "visually_inspected_pages": [],
+      "total_page_count": 9,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "observed_source_modified_timestamp": "2026-10-08T13:16:49.360Z",
-      "status": "pending",
+      "status": "processed",
       "last_attempt": {
         "date": "2026-10-08",
-        "status": "blocked",
+        "status": "processed",
         "source_modified_timestamp": "2026-10-08T13:16:49.360Z",
-        "total_page_count": null,
-        "visually_inspected_pages": [],
-        "failure": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
+        "total_page_count": 9,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "failure": null
+      },
+      "source_sha256": "fb9021bf42871b565f5fd9fddea68961db20d5dd775deb63744cd13e05562e14",
+      "source_size_bytes": 1809833,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-08T13:33:42.140641Z",
+      "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading.",
+      "normalizations": {
+        "pages_2_5": "Normalized harmless notation and spelled out component definitions; no new source examples introduced.",
+        "pages_6_9": "Made the non-negative square-root, induction and negative-power steps explicit within the source argument."
+      },
+      "diagrams": {
+        "source_pages": [
+          7,
+          8
+        ],
+        "reconstructed_diagram_count": 4,
+        "representations": [
+          "MathJax-compatible LaTeX arrays with labelled coloured arrows and axes"
+        ],
+        "layout": "Schematic, without numerical scale. The source addition/subtraction drawing is split into two diagrams.",
+        "render_validation": "All four reconstructions compiled by MathJax 3, rendered in Chromium and actually viewed as screenshots; no rendering errors. Native Obsidian app was not launched."
       }
     }
   },
-  "attachment_policy": "Do not commit source PDFs, page images, or other binary attachments. Retain Drive source links and page references; represent diagrams faithfully in Markdown/LaTeX where possible, otherwise link the original source and mark limitations. Downloads and rendering are temporary processing artifacts outside the repository.",
+  "attachment_policy": "Commit only Obsidian Markdown notes and required sync metadata. Original PDFs, rendered images, preview assets and other binaries remain temporary outside the repository. Meaningful diagrams are reconstructed visibly in Markdown/Mermaid or MathJax-compatible LaTeX; references supplement, rather than replace, the diagrams.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
     "date": "2026-10-08",
+    "completed_at": "2026-10-08T13:33:42.140641Z",
     "new_source_count": 3,
     "modified_source_count": 1,
-    "processed_source_count": 0,
-    "status": "blocked",
-    "reading_method": "Authenticated Drive recursive folder listings and metadata; GitHub source-note/manifest audit; original PDF raw fetch returned file reference. PDF rendering and vision not performed.",
-    "visually_inspected_page_count": 0,
-    "blocker": "PDF workspace materialization/rendering unavailable: exec_command failed twice at sandbox provisioning with helper_sandbox_lock_failed (lock sandbox bin dir C:\\Users\\GMZ07\\.codex\\.sandbox-bin failed: open directory). Drive raw fetch of Ch.0 Proofs.pdf returned an authenticated file reference, but no dedicated download_file/native PDF visual reader is exposed and shell download/rendering cannot start. Zero pages visually inspected in this run."
+    "processed_source_count": 4,
+    "diagram_upgrade_source_count": 1,
+    "status": "processed",
+    "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading.",
+    "visually_inspected_page_count": 32,
+    "coverage_by_source": [
+      {
+        "drive_file_id": "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
+        "total_page_count": 5,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scope": "complete_new_or_modified_source"
+      },
+      {
+        "drive_file_id": "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn",
+        "total_page_count": 5,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scope": "complete_new_or_modified_source"
+      },
+      {
+        "drive_file_id": "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
+        "total_page_count": 9,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "scope": "complete_new_or_modified_source"
+      },
+      {
+        "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
+        "total_page_count": 11,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "scope": "complete_new_or_modified_source"
+      },
+      {
+        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+        "total_page_count": 15,
+        "visually_inspected_pages": [
+          14,
+          15
+        ],
+        "scope": "diagram_upgrade_of_previously_processed_source"
+      }
+    ],
+    "created_markdown_note_count": 7,
+    "updated_markdown_note_count": 3,
+    "pending_source_count": 0,
+    "blocker": null,
+    "diagram_rendering_method": "MathJax 3 and Mermaid in local Chromium preview; all ten diagrams rendered and screenshots visually checked. Source PDF page reading used PyMuPDF and view_image, not browser UI.",
+    "published_branch": "master"
   },
-  "diagram_policy": "Reconstruct each meaningful graph/drawing visibly with Obsidian-supported Mermaid or MathJax-compatible LaTeX; no binaries. Re-read original relevant pages visually before upgrades, preserve incomplete/superseded work, record pending upgrades when source images cannot be accessed."
+  "diagram_policy": "Reconstruct each meaningful graph/drawing visibly with Obsidian-supported Mermaid or MathJax-compatible LaTeX; no binaries. Re-read original relevant pages visually before upgrades, preserve incomplete/superseded work, record pending upgrades when source images cannot be accessed.",
+  "inventory_file_count": 7
 }
