@@ -30,13 +30,10 @@ The check marks and crosses below reproduce the handwritten assessments. Unwritt
 
 ### (i) Integers under subtraction (page 1, left)
 
-- Identity: ✓, $0$.
-- Inverse: ✓, self-inverse.
+- Identity: ✗, no two-sided identity.
+- Inverse assessment: ✓, “self-inverse”, since $a-a=0$. Without a two-sided identity, this is not a group inverse.
 - Associativity: ✗, $(a-b)-c\ne a-(b-c)$.
 - Closure: ✓, $-:\mathbb Z\times\mathbb Z\to\mathbb Z$.
-
-> [!todo] Manual review — page 1, question 2(i), identity
-> The claimed identity is not two-sided for subtraction. The original check mark is retained.
 
 ### (ii) Rationals under addition (page 1, lower left)
 
@@ -209,10 +206,10 @@ $$\begin{aligned}
 ((f\circ g)\circ h)(x)&=(f\circ g)(h(x))=f(g(h(x))),\\
 (f\circ(g\circ h))(x)&=f((g\circ h)(x))=f(g(h(x))).
 \end{aligned}$$
-Counterexample written: $\sin(\arcsin x)\ne\arcsin(\sin x)$.
+Proposed example: $\sin(\arcsin x)$ and $\arcsin(\sin x)$, with the caveat that the domains of the functions have changed.
 
 > [!todo] Manual review — page 8, question 7(b), bottom
-> No common set $S$ or admissible value of $x$ is specified for the sine/arcsine example. The written inequality should not be treated as an unconditional identity of functions $S\to S$.
+> The domain caveat is acknowledged, but no common set $S$ is supplied on which both sine and the usual real arcsine are functions $S\to S$ giving a non-commuting example. This does not yet answer the counterexample part of the question as stated.
 
 ## 8. Cayley tables and Latin squares (pages 9–10)
 
@@ -240,16 +237,53 @@ If the group is abelian, its Cayley table is symmetric about the diagonal from t
 The separate question supplies a non-empty finite set $S$ with an associative, closed operation $*$ whose table is a Latin square.
 
 **Incomplete proof:**
-$$\text{Let }a,e\in S.$$
-“Because the binary operation is closed”,
-$$aS=S
-\quad\Longleftrightarrow\quad
-\exists a^{-1}\in S,\quad a*a^{-1}=e.$$
-**Claimed conclusion:** $(S,*)$ satisfies the four group axioms and is a group.
+Let $a\in S$. Since the multiplication table is a Latin square, $aS$ is a rearrangement of the elements of $S$. Hence there is an $e\in S$ such that $a*e=a$.
+
+For every $b\in S$,
+$$ (a*e)*b=a*b,$$
+and associativity gives
+$$ a*(e*b)=a*b.$$
+Cancellation in the row labelled $a$ gives $e*b=b$.
+
+**Claimed next steps:** $e$ is a two-sided identity, and there is an $a^{-1}\in S$ with $a*a^{-1}=e$. The four group axioms are therefore satisfied, so $(S,*)$ is a group.
 
 > [!todo] Essential gap — page 10, question 8(c)
-> The existence of a common two-sided identity $e$ has been assumed rather than established, and only a right inverse is written. Closure alone gives $aS\subseteq S$, not $aS=S$; surjectivity here uses the Latin-square property. The attempt does not supply the essential identity and two-sided inverse arguments, so its final conclusion remains unproved in this source.
+> The argument establishes a common left identity $e*b=b$ and $a*e=a$ for the initially chosen $a$. It does not show $b*e=b$ for every $b\in S$, or that the right inverses are also left inverses. These two-sided steps are needed for the claimed group conclusion and remain unwritten.
 
-## 9. Unfinished (page 11)
+## 9. Two operations and the interchange law (page 11)
 
-The page contains only the heading “9)”; the rest is blank. No answer to question 9 is present. Questions 10–12 have no written attempts in this PDF.
+The hypotheses in [[Groups - Introductory Sheet 2026]], question 9, give two binary operations $\circ$ and $*$ on $S$, with two-sided identities $e_1$ and $e_2$ respectively, and
+$$ (a\circ b)*(c\circ d)=(a*c)\circ(b*d)\qquad(a,b,c,d\in S).$$
+
+### Common identity and operation (page 11, upper half)
+
+$$\begin{aligned}
+(a\circ b)*(e_2\circ e_1)&=(a*e_2)\circ(b*e_1),\\
+a\circ b&=a\circ(b*e_1).
+\end{aligned}$$
+Taking $a=e_1$ gives $b=b*e_1$ for every $b\in S$. Taking $b=e_2$ then gives $e_2=e_1$. Write their common value as $e$.
+
+$$\begin{aligned}
+(a\circ e)*(e\circ b)&=(a*e)\circ(e*b),\\
+a*b&=a\circ b.
+\end{aligned}$$
+Thus $*=\circ$.
+
+### Associativity and commutativity attempt (page 11, lower half)
+
+**Wrong proof:**
+$$ (a\circ b)\circ(c\circ e)=(a\circ c)\circ(b\circ e),$$
+so
+$$ (a\circ b)\circ c=(a\circ c)\circ b\quad\text{claimed to show associativity}.$$
+
+Next,
+$$\begin{aligned}
+(a\circ b)\circ(e\circ a)&=a\circ(b\circ a),\\
+a\circ(a\circ b)&=a\circ(b\circ a),\\
+a\circ b&=b\circ a\quad\text{claimed to show commutativity}.
+\end{aligned}$$
+
+> [!todo] Manual review — page 11, question 9, lower half
+> The first displayed identity exchanges $b$ and $c$; it is not associativity, which requires $(a\circ b)\circ c=a\circ(b\circ c)$. The final cancellation of the leading $a$ is unjustified: the hypotheses do not give cancellation. The intermediate rearrangement also uses properties not yet established. These steps do not prove the two remaining conclusions.
+
+Questions 10–12 have no written attempts in this PDF.

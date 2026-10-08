@@ -14,4 +14,4 @@ For a fixed group element $a$, if $ab=ac$, cancellation gives $b=c$. Likewise, $
 
 The identity is found in the row and column that leave the ordered labels unchanged. A product equal to the identity identifies an inverse pair. For an abelian group, the table is symmetric about its main diagonal.
 
-Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 1 - Handwritten Attempts]], page 9, question 8(a). The separate handwritten attempts at 8(b) and 8(c), on pages 9–10, contain a false group assessment and an essential proof gap; they are preserved with review flags in the source note.
+Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 1 - Handwritten Attempts]], page 9, question 8(a). The attempt at 8(b) incorrectly identifies a non-associative Latin square as a group table. The revised attempt at 8(c), on page 10, derives a common left identity by row cancellation but leaves the right-identity and two-sided-inverse steps unwritten. Both retain review flags in the source note.

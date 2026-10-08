@@ -4,10 +4,10 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-08T13:33:42.140641Z",
+  "last_inventory_at": "2026-10-08T14:26:25.422519Z",
   "inventory_complete": true,
   "inventory_folder_count": 9,
-  "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading. Previously processed unchanged sources retain their earlier per-file complete-reading coverage. This run reinspected only pages 14–15 of the unchanged 15-page Numbers - Sets 1.pdf for diagram upgrades.",
+  "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
   "duplicate_comparison": "Ch.0 Proofs.pdf and Untitled Notebook.pdf were separately read on all five pages and compared page by page: all rendered pixels identical. They share one source note with both Drive links and separate per-file manifest records. Other sources retain separate source-note destinations; the modified Groups 1.pdf now has 11 pages.",
   "files": {
@@ -44,8 +44,8 @@
       "source_file_name": "Groups 1.pdf",
       "source_url": "https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view",
       "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
-      "observed_source_modified_timestamp": "2026-10-08T13:16:05.236Z",
-      "processed_source_modified_timestamp": "2026-10-08T13:16:05.236Z",
+      "observed_source_modified_timestamp": "2026-10-08T14:16:40.540Z",
+      "processed_source_modified_timestamp": "2026-10-08T14:16:40.540Z",
       "markdown_paths": [
         "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
         "Concepts/Latin Squares.md"
@@ -58,18 +58,13 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Manual review — page 1, question 2(i), identity",
-          "detail": "The claimed identity is not two-sided for subtraction. The original check mark is retained.",
-          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
-        },
-        {
           "location": "Manual review — page 2, question 2(viii), identity reasoning",
           "detail": "The two displayed products concern a single element and do not establish multiple identities for the whole set. The original assessment is retained.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         },
         {
           "location": "Manual review — page 8, question 7(b), bottom",
-          "detail": "No common set $S$ or admissible value of $x$ is specified for the sine/arcsine example. The written inequality should not be treated as an unconditional identity of functions $S\\to S$.",
+          "detail": "The domain caveat is acknowledged, but no common set $S$ is supplied on which both sine and the usual real arcsine are functions $S\\to S$ giving a non-commuting example. This does not yet answer the counterexample part of the question as stated.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         },
         {
@@ -79,7 +74,12 @@
         },
         {
           "location": "Essential gap — page 10, question 8(c)",
-          "detail": "The existence of a common two-sided identity $e$ has been assumed rather than established, and only a right inverse is written. Closure alone gives $aS\\subseteq S$, not $aS=S$; surjectivity here uses the Latin-square property. The attempt does not supply the essential identity and two-sided inverse arguments, so its final conclusion remains unproved in this source.",
+          "detail": "The argument establishes a common left identity $e*b=b$ and $a*e=a$ for the initially chosen $a$. It does not show $b*e=b$ for every $b\\in S$, or that the right inverses are also left inverses. These two-sided steps are needed for the claimed group conclusion and remain unwritten.",
+          "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Manual review — page 11, question 9, lower half",
+          "detail": "The first displayed identity exchanges $b$ and $c$; it is not associativity, which requires $(a\\circ b)\\circ c=a\\circ(b\\circ c)$. The final cancellation of the leading $a$ is unjustified: the hypotheses do not give cancellation. The intermediate rearrangement also uses properties not yet established. These steps do not prove the two remaining conclusions.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md"
         }
       ],
@@ -98,20 +98,22 @@
         11
       ],
       "original_pdf_path": null,
-      "source_sha256": "79fb19c6df1d48554b43814f4d273e4900d484c0a0a64503c2d52ac1bce0413a",
-      "source_size_bytes": 2180623,
+      "source_sha256": "f8a261cd488f9a435f4834cf876d048eee235fd2e65b6380b927db23cdafb34e",
+      "source_size_bytes": 2430752,
       "page_image_attachments": [],
       "normalizations": {
-        "pages_1_2": "Expanded standard axiom shorthand; corrected the missing minus sign in the complex inverse; restored cross-product grouping and implicit invertibility restrictions.",
+        "pages_1_2": "Recorded the revised rejection of a two-sided identity for subtraction; retained the self-inverse assessment with its a-a=0 calculation and distinguished this from a group inverse. The revised complex inverse is explicitly -a-2i. Other standard shorthand and invertibility restrictions retained.",
         "page_5": "Made the immediate idempotent-matrix power calculation explicit.",
         "pages_6_7": "Corrected reversed set-difference and divisibility notation; clarified the group-inverse step and zero subgroup cases.",
-        "page_8": "Renamed the dummy index and normalized function evaluation notation.",
-        "pages_9_10": "Transcribed new question-8 work; made the immediate row/column cancellation explicit. Preserved the false 8(b) assessment and incomplete 8(c) attempt with substantive review flags; did not supply the missing proof."
+        "page_8": "Renamed the matrix dummy index and normalized function evaluation notation. Recorded the new sine/arcsine domain caveat; the common-set counterexample remains unspecified.",
+        "pages_9_10": "Preserved the false 8(b) group assessment. Replaced the superseded 8(c) attempt with the revised Latin-square row-cancellation argument deriving a left identity; the missing right-identity and two-sided-inverse steps remain explicitly flagged. No missing proof supplied.",
+        "page_11": "Transcribed the new question-9 attempt. Made the immediate substitutions a=e_1 and b=e_2 explicit in the universally quantified common-identity calculation rather than silently assuming cancellation. Preserved the erroneous associativity and commutativity argument with a substantive review flag; did not supply a replacement proof."
       },
       "last_attempt": {
         "date": "2026-10-08",
+        "completed_at": "2026-10-08T14:26:25.422519Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-08T13:16:05.236Z",
+        "source_modified_timestamp": "2026-10-08T14:16:40.540Z",
         "total_page_count": 11,
         "visually_inspected_pages": [
           1,
@@ -128,8 +130,25 @@
         ],
         "failure": null
       },
-      "last_successful_processing_at": "2026-10-08T13:33:42.140641Z",
-      "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading."
+      "last_successful_processing_at": "2026-10-08T14:26:25.422519Z",
+      "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
+      "changes_from_previous_processed_version": {
+        "corrected_source_locations": [
+          "page 1, question 2(i), identity",
+          "page 1, question 2(iv), inverse"
+        ],
+        "revised_source_locations": [
+          "page 8, question 7(b), domain caveat",
+          "page 10, question 8(c), Latin-square proof attempt"
+        ],
+        "new_source_locations": [
+          "page 11, question 9, interchange-law attempt"
+        ],
+        "resolved_previous_todos": [
+          "page 1, question 2(i), identity"
+        ],
+        "new_diagrams": 0
+      }
     },
     "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr": {
       "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
@@ -475,55 +494,15 @@
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
     "date": "2026-10-08",
-    "completed_at": "2026-10-08T13:33:42.140641Z",
-    "new_source_count": 3,
+    "completed_at": "2026-10-08T14:26:25.422519Z",
+    "new_source_count": 0,
     "modified_source_count": 1,
-    "processed_source_count": 4,
-    "diagram_upgrade_source_count": 1,
+    "processed_source_count": 1,
+    "unchanged_current_source_count": 5,
     "status": "processed",
-    "reading_method": "Authenticated Google Drive original raw-file fetch (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF rendering at 2x (144 dpi), and actual view_image/model vision inspection of every page of each pending new/modified PDF; a 4x crop was inspected for the page-14 graph correction. No OCR was substituted for handwritten page reading.",
-    "visually_inspected_page_count": 32,
+    "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
+    "visually_inspected_page_count": 11,
     "coverage_by_source": [
-      {
-        "drive_file_id": "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
-        "total_page_count": 5,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn",
-        "total_page_count": 5,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
-        "total_page_count": 9,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "scope": "complete_new_or_modified_source"
-      },
       {
         "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
         "total_page_count": 11,
@@ -540,27 +519,22 @@
           10,
           11
         ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-        "total_page_count": 15,
-        "visually_inspected_pages": [
-          14,
-          15
-        ],
-        "scope": "diagram_upgrade_of_previously_processed_source"
+        "scope": "complete_modified_source"
       }
     ],
-    "created_markdown_note_count": 7,
-    "updated_markdown_note_count": 3,
+    "created_markdown_note_count": 0,
+    "updated_markdown_note_count": 2,
+    "updated_markdown_paths": [
+      "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
+      "Concepts/Latin Squares.md"
+    ],
     "pending_source_count": 0,
     "blocker": null,
-    "diagram_rendering_method": "Initial full sync checked ten MathJax/Mermaid reconstructions. Those drawings have since been replaced by nine TikZ reconstructions, including the combined source addition/subtraction drawing; see last_diagram_update for current rendering validation.",
-    "published_branch": "master"
+    "published_branch": "master",
+    "notes": "No new diagrams in the modified source. Existing TikZ diagrams were not changed. Historical records for sources absent from the current inventory are preserved."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
-  "inventory_file_count": 7,
+  "inventory_file_count": 6,
   "source_annotation_conventions": {
     "qed": "Recognize ◻ as the source end-of-proof marker when reading, but omit all QED squares and end-of-proof markers from organized Markdown.",
     "crossed_out_proof": "Crossed-out proofs or proof/QED labels mark a wrong proof. Label the argument directly as Wrong proof, Incorrect attempt or Incomplete proof as appropriate, preserving its mathematics and explaining the error. Do not narrate pen marks or editing actions in the notes. Ordinary algebraic cancellations and axiom-assessment crosses retain their separate mathematical meaning."
@@ -597,5 +571,21 @@
     "pending_diagram_count": 0,
     "blocker": null
   },
-  "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest."
+  "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
+  "current_inventory_drive_file_ids": [
+    "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
+    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
+    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
+    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+    "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
+    "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW"
+  ],
+  "previously_processed_files_not_in_current_inventory": [
+    {
+      "drive_file_id": "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn",
+      "source_file_name": "Untitled Notebook.pdf",
+      "observed_at": "2026-10-08T14:26:25.422519Z",
+      "reason": "Not returned by the complete recursive listing of the verified GoodNotes folder. Historical source record, successful processing timestamp and corresponding notes preserved; no deletion or loss-of-access claim."
+    }
+  ]
 }
