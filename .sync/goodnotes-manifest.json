@@ -318,7 +318,8 @@
         "result": "All five pages visually inspected in both PDFs and compared; rendered dimensions and pixels identical on every page. PDF byte hashes differ. Shared faithful source note records both source links."
       },
       "normalizations": {
-        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results."
+        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results.",
+        "page_4_crossed_out_proof": "User clarified that the crossed-out Proof label and crossed-out QED square mark this as a wrong proof. The source note now explicitly states that convention; the invalid converse argument remains preserved."
       }
     },
     "1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn": {
@@ -380,7 +381,8 @@
         "result": "All five pages visually inspected in both PDFs and compared; rendered dimensions and pixels identical on every page. PDF byte hashes differ. Shared faithful source note records both source links."
       },
       "normalizations": {
-        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results."
+        "page_3_statement_3": "Normalized the positive-integer endpoint slip to n >= 2 for the open interval (n,2n); n=1 has no prime in that interval. Other illustrative statements and dated lecture remarks retained as source remarks rather than independently verified results.",
+        "page_4_crossed_out_proof": "User clarified that the crossed-out Proof label and crossed-out QED square mark this as a wrong proof. The source note now explicitly states that convention; the invalid converse argument remains preserved."
       }
     },
     "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh": {
@@ -547,5 +549,9 @@
     "published_branch": "master"
   },
   "diagram_policy": "Reconstruct each meaningful graph/drawing visibly with Obsidian-supported Mermaid or MathJax-compatible LaTeX; no binaries. Re-read original relevant pages visually before upgrades, preserve incomplete/superseded work, record pending upgrades when source images cannot be accessed.",
-  "inventory_file_count": 7
+  "inventory_file_count": 7,
+  "source_annotation_conventions": {
+    "qed": "The hollow square ◻ denotes QED/end of proof; transcribe as $\\square$. It records the source author’s end marker, not independent proof validation.",
+    "crossed_out_proof": "A crossed-out proof, the crossed-out label Proof, or a crossed-out QED square marks the proof as wrong. Preserve the argument as an explicitly invalid proof/incorrect attempt. Ordinary algebra cancellation and axiom-assessment crosses have their own meanings."
+  }
 }

@@ -66,7 +66,7 @@ One of the three consecutive integers $n-1,n,n+1$ is a multiple of $3$, so their
 
 **Assertion.** For $n\in\mathbb Z_{>0}$, if $n^2$ is even, then $n$ is even.
 
-The source crosses out the label “Proof” and its end-of-proof square on the following attempt:
+The source crosses out both “Proof” and the QED square $\square$, marking the following argument as a **wrong proof of the stated assertion**:
 
 > Given an even integer $n$, write $n=2k$, where $k\in\mathbb Z_{>0}$. Then
 > $$n^2=(2k)^2=2(2k^2),$$
