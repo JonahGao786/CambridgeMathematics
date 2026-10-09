@@ -12,7 +12,7 @@ source_pages: 2
 
 # Numbers & Sets — Introductory Sheet
 
-Related handwritten work: [[Numbers and Sets 1 - Handwritten Attempts]]. This sheet supplies questions, not worked answers.
+Related handwritten work: [[Numbers and Sets 0 - Handwritten Attempts]]. This sheet supplies questions, not worked answers.
 
 Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr/view).
 

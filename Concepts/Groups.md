@@ -16,4 +16,4 @@ This is the right-sided definition used in the lecture. Proposition 1.5 states t
 
 The six symmetries of an equilateral triangle form a group under composition. The rotation/reflection examples show that a group need not be commutative.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–6, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 1 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–6, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].

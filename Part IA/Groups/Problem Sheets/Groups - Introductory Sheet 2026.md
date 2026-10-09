@@ -12,7 +12,7 @@ source_pages: 2
 
 # Groups — Introductory Sheet
 
-Related handwritten work: [[Groups 1 - Handwritten Attempts]]. Questions and answers are separate sources; no answers are supplied in this sheet.
+Related handwritten work: [[Groups 0 - Handwritten Attempts]]. Questions and answers are separate sources; no answers are supplied in this sheet.
 
 Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW/view).
 

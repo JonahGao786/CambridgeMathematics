@@ -18,4 +18,4 @@ The identity is found in the row and column that leave the ordered labels unchan
 
 If $S$ is a non-empty finite set and $*:S\times S\to S$ is associative with a Latin-square table, then $(S,*)$ is a [[Groups|group]]. The revised argument constructs an identity using row surjectivity and cancellation. Column cancellation makes the resulting left identities agree; the same cancellation shows that right inverses are also left inverses.
 
-Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 1 - Handwritten Attempts]], pages 9–10, questions 8(a) and 8(c). The attempt at 8(b) still incorrectly identifies a non-associative Latin square as a group table and retains its review flag.
+Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 0 - Handwritten Attempts]], pages 9–10, questions 8(a) and 8(c). The attempt at 8(b) still incorrectly identifies a non-associative Latin square as a group table and retains its review flag.
