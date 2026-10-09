@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-08T14:26:25.422519Z",
+  "last_inventory_at": "2026-10-09T12:04:58Z",
   "inventory_complete": true,
   "inventory_folder_count": 9,
   "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
@@ -41,10 +41,10 @@
     },
     "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY": {
       "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
-      "source_file_name": "Groups 1.pdf",
+      "source_file_name": "Groups 0.pdf",
       "source_url": "https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view",
       "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
-      "observed_source_modified_timestamp": "2026-10-08T14:16:40.540Z",
+      "observed_source_modified_timestamp": "2026-10-09T02:36:35.006Z",
       "processed_source_modified_timestamp": "2026-10-08T14:16:40.540Z",
       "markdown_paths": [
         "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
@@ -53,7 +53,7 @@
       "material_type": "handwritten worked solutions and incomplete attempts",
       "course": "Part IA Groups",
       "source_date": null,
-      "status": "processed",
+      "status": "pending",
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [
@@ -110,25 +110,12 @@
         "page_11": "Transcribed the new question-9 attempt. Made the immediate substitutions a=e_1 and b=e_2 explicit in the universally quantified common-identity calculation rather than silently assuming cancellation. Preserved the erroneous associativity and commutativity argument with a substantive review flag; did not supply a replacement proof."
       },
       "last_attempt": {
-        "date": "2026-10-08",
-        "completed_at": "2026-10-08T14:26:25.422519Z",
-        "status": "processed",
-        "source_modified_timestamp": "2026-10-08T14:16:40.540Z",
-        "total_page_count": 11,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        ],
-        "failure": null
+        "date": "2026-10-09",
+        "status": "blocked",
+        "source_modified_timestamp": "2026-10-09T02:36:35.006Z",
+        "total_page_count": null,
+        "visually_inspected_pages": [],
+        "failure": "Original PDF materialization failed: urllib.request.urlretrieve on the authenticated Google Drive raw-fetch file_uri.download_url returned HTTP 403 Forbidden before its expiry (download attempted about 2026-10-09T12:04Z; URL expiry 12:09Z). Working Linux shell and PyMuPDF verified. No download_file or native PDF visual-reading tool is exposed. Permission denial respected; no browser or alternate credential bypass attempted. Zero pages visually inspected."
       },
       "last_successful_processing_at": "2026-10-08T14:26:25.422519Z",
       "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
@@ -180,10 +167,10 @@
     },
     "1cAxWubfgZfijKE33WolS74BS9m1Sccpn": {
       "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-      "source_file_name": "Numbers - Sets 1.pdf",
+      "source_file_name": "Numbers - Sets 0.pdf",
       "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
-      "observed_source_modified_timestamp": "2026-10-07T10:17:10.864Z",
+      "observed_source_modified_timestamp": "2026-10-09T02:36:20.805Z",
       "processed_source_modified_timestamp": "2026-10-07T10:17:10.864Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md"
@@ -191,7 +178,7 @@
       "material_type": "handwritten worked solutions and incomplete attempts",
       "course": "Part IA Numbers and Sets",
       "source_date": null,
-      "status": "processed",
+      "status": "pending",
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [
@@ -272,16 +259,17 @@
         "updated_at": "2026-10-08T13:47:55.315202Z"
       },
       "last_attempt": {
-        "date": "2026-10-08",
-        "status": "processed",
-        "scope": "diagram_upgrade_only",
-        "source_modified_timestamp": "2026-10-07T10:17:10.864Z",
-        "total_page_count": 15,
-        "visually_inspected_pages": [
-          14,
-          15
-        ],
-        "failure": null
+        "date": "2026-10-09",
+        "status": "blocked",
+        "source_modified_timestamp": "2026-10-09T02:36:20.805Z",
+        "total_page_count": null,
+        "visually_inspected_pages": [],
+        "failure": "Original PDF materialization failed: urllib.request.urlretrieve on the authenticated Google Drive raw-fetch file_uri.download_url returned HTTP 403 Forbidden before its expiry (download attempted about 2026-10-09T12:04Z; URL expiry 12:09Z). Working Linux shell and PyMuPDF verified. No download_file or native PDF visual-reading tool is exposed. Permission denial respected; no browser or alternate credential bypass attempted. Zero pages visually inspected."
+      },
+      "current_version_diagram_review": {
+        "status": "pending",
+        "reason": "Changed source requires visual verification of existing and any new drawings.",
+        "visually_inspected_pages": []
       }
     },
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F": {
@@ -441,25 +429,15 @@
         8,
         9
       ],
-      "observed_source_modified_timestamp": "2026-10-08T13:16:49.360Z",
-      "status": "processed",
+      "observed_source_modified_timestamp": "2026-10-09T02:36:01.670Z",
+      "status": "pending",
       "last_attempt": {
-        "date": "2026-10-08",
-        "status": "processed",
-        "source_modified_timestamp": "2026-10-08T13:16:49.360Z",
-        "total_page_count": 9,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "failure": null
+        "date": "2026-10-09",
+        "status": "blocked",
+        "source_modified_timestamp": "2026-10-09T02:36:01.670Z",
+        "total_page_count": null,
+        "visually_inspected_pages": [],
+        "failure": "Original PDF materialization failed: urllib.request.urlretrieve on the authenticated Google Drive raw-fetch file_uri.download_url returned HTTP 403 Forbidden before its expiry (download attempted about 2026-10-09T12:04Z; URL expiry 12:09Z). Working Linux shell and PyMuPDF verified. No download_file or native PDF visual-reading tool is exposed. Permission denial respected; no browser or alternate credential bypass attempted. Zero pages visually inspected."
       },
       "source_sha256": "fb9021bf42871b565f5fd9fddea68961db20d5dd775deb63744cd13e05562e14",
       "source_size_bytes": 1809833,
@@ -487,51 +465,30 @@
           7,
           8
         ]
+      },
+      "current_version_diagram_review": {
+        "status": "pending",
+        "reason": "Changed source requires visual verification of existing and any new drawings.",
+        "visually_inspected_pages": []
       }
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-08",
-    "completed_at": "2026-10-08T14:26:25.422519Z",
+    "date": "2026-10-09",
+    "status": "blocked",
     "new_source_count": 0,
-    "modified_source_count": 1,
-    "processed_source_count": 1,
-    "unchanged_current_source_count": 5,
-    "status": "processed",
-    "reading_method": "Authenticated Google Drive raw-file fetch of the original stored PDF (include_base64=false), sediment download_file materialization outside the repository, PyMuPDF page-count verification and 2x (144 dpi) rendering, and actual view_image/model vision inspection of all 11 pages. Extracted text was available as an aid; handwritten mathematics was read from the original page images. No pages omitted, no capability blocker. Unchanged sources retain their earlier successful per-file reading coverage.",
-    "visually_inspected_page_count": 11,
-    "coverage_by_source": [
-      {
-        "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
-        "total_page_count": 11,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        ],
-        "scope": "complete_modified_source"
-      }
-    ],
+    "modified_source_count": 3,
+    "processed_source_count": 0,
+    "pending_source_count": 3,
     "created_markdown_note_count": 0,
-    "updated_markdown_note_count": 2,
-    "updated_markdown_paths": [
-      "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md",
-      "Concepts/Latin Squares.md"
-    ],
-    "pending_source_count": 0,
-    "blocker": null,
+    "updated_markdown_note_count": 0,
+    "visually_inspected_page_count": 0,
+    "reading_method": "Authenticated Drive recursive folder listings; metadata and original raw-file fetch; GitHub manifest and complete Markdown-note audit. PDF download failed with HTTP 403; no visual source reading.",
+    "blocker": "Original PDF materialization failed: urllib.request.urlretrieve on the authenticated Google Drive raw-fetch file_uri.download_url returned HTTP 403 Forbidden before its expiry (download attempted about 2026-10-09T12:04Z; URL expiry 12:09Z). Working Linux shell and PyMuPDF verified. No download_file or native PDF visual-reading tool is exposed. Permission denial respected; no browser or alternate credential bypass attempted. Zero pages visually inspected.",
     "published_branch": "master",
-    "notes": "No new diagrams in the modified source. Existing TikZ diagrams were not changed. Historical records for sources absent from the current inventory are preserved."
+    "notes": "Existing TikZ diagrams and proof-status conventions are present. Changed-source diagram review and any further cleanup deferred pending access to original page images. Prior successful timestamps and historical visual coverage preserved."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 6,
@@ -573,10 +530,10 @@
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [
-    "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
     "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
-    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
+    "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
     "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
     "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW"
   ],
