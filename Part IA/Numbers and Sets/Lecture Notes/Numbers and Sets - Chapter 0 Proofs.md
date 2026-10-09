@@ -13,7 +13,7 @@ source_pages: 5
 
 # Numbers and Sets — Chapter 0: Proofs
 
-Sources: [Ch.0 Proofs.pdf](https://drive.google.com/file/d/1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F/view) and [Untitled Notebook.pdf](https://drive.google.com/file/d/1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn/view). Both documents were visually read in full and compared page by page: all five rendered pages are identical. Their Drive records remain separate in the sync manifest.
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F/view). The handwritten date is not supplied.
 
 ## Course outline (page 1)
 
