@@ -14,4 +14,8 @@ For a fixed group element $a$, if $ab=ac$, cancellation gives $b=c$. Likewise, $
 
 The identity is found in the row and column that leave the ordered labels unchanged. A product equal to the identity identifies an inverse pair. For an abelian group, the table is symmetric about its main diagonal.
 
-Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 1 - Handwritten Attempts]], page 9, question 8(a). The attempt at 8(b) incorrectly identifies a non-associative Latin square as a group table. The revised attempt at 8(c), on page 10, derives a common left identity by row cancellation but leaves the right-identity and two-sided-inverse steps unwritten. Both retain review flags in the source note.
+## Associative Latin-square operations
+
+If $S$ is a non-empty finite set and $*:S\times S\to S$ is associative with a Latin-square table, then $(S,*)$ is a [[Groups|group]]. The revised argument constructs an identity using row surjectivity and cancellation. Column cancellation makes the resulting left identities agree; the same cancellation shows that right inverses are also left inverses.
+
+Sources: [[Groups - Introductory Sheet 2026]], page 2, question 8, and [[Groups 1 - Handwritten Attempts]], pages 9–10, questions 8(a) and 8(c). The attempt at 8(b) still incorrectly identifies a non-associative Latin square as a group table and retains its review flag.

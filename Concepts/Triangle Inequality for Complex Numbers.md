@@ -26,4 +26,4 @@ Next,
 $$|z_1|=|(z_1-z_2)+z_2|\le|z_1-z_2|+|z_2|.$$
 Rearrange to bound $|z_1|-|z_2|$, and interchange $z_1,z_2$ to bound its negative. This gives the absolute-value inequality.
 
-Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], page 6.
+Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 6–7.

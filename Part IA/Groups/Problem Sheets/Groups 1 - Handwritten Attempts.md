@@ -3,10 +3,10 @@ title: Groups 1 - Handwritten Attempts
 material_type: handwritten worked solutions and incomplete attempts
 course: Part IA Groups
 date: null
-source_file: Groups 1.pdf
+source_file: Groups 0.pdf
 drive_file_id: 17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY
 source_url: https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view
-source_pages: 11
+source_pages: 13
 ---
 
 # Groups 1 — Handwritten Attempts
@@ -236,19 +236,19 @@ If the group is abelian, its Cayley table is symmetric about the diagonal from t
 
 The separate question supplies a non-empty finite set $S$ with an associative, closed operation $*$ whose table is a Latin square.
 
-**Incomplete proof:**
-Let $a\in S$. Since the multiplication table is a Latin square, $aS$ is a rearrangement of the elements of $S$. Hence there is an $e\in S$ such that $a*e=a$.
+For every $a\in S$, the Latin-square property says that $aS$ is a rearrangement of the elements of $S$. Hence there is an $e_a\in S$ such that $a*e_a=a$.
 
 For every $b\in S$,
-$$ (a*e)*b=a*b,$$
+$$ (a*e_a)*b=a*b,$$
 and associativity gives
-$$ a*(e*b)=a*b.$$
-Cancellation in the row labelled $a$ gives $e*b=b$.
+$$ a*(e_a*b)=a*b.$$
+Cancellation in the row labelled $a$ gives $e_a*b=b$ for every $b\in S$.
 
-**Claimed next steps:** $e$ is a two-sided identity, and there is an $a^{-1}\in S$ with $a*a^{-1}=e$. The four group axioms are therefore satisfied, so $(S,*)$ is a group.
+These left identities are all the same: choose $b_0\in S$. Since $e_a*b_0=b_0=e_{a'}*b_0$, cancellation in column $b_0$ gives $e_a=e_{a'}$. Write this common element as $e$. Then $a*e=a$ and $e*a=a$ for every $a\in S$, so $e$ is a two-sided identity.
 
-> [!todo] Essential gap — page 10, question 8(c)
-> The argument establishes a common left identity $e*b=b$ and $a*e=a$ for the initially chosen $a$. It does not show $b*e=b$ for every $b\in S$, or that the right inverses are also left inverses. These two-sided steps are needed for the claimed group conclusion and remain unwritten.
+Similarly, each row contains $e$, so for every $a\in S$ there is an $a^{-1}\in S$ with $a*a^{-1}=e$. It is also a left inverse, by associativity and column cancellation:
+$$ (a^{-1}*a)*a^{-1}=a^{-1}*(a*a^{-1})=a^{-1}*e=a^{-1}=e*a^{-1}.$$
+Thus $a^{-1}*a=e$. The group axioms are satisfied, so $(S,*)$ is a [[Groups|group]].
 
 ## 9. Two operations and the interchange law (page 11)
 
@@ -269,14 +269,17 @@ a*b&=a\circ b.
 \end{aligned}$$
 Thus $*=\circ$.
 
-### Associativity and commutativity attempt (page 11, lower half)
+### Associativity (page 11, lower half)
+
+Apply the interchange law with the common operation:
+$$ (a\circ b)\circ(e\circ c)=(a\circ e)\circ(b\circ c).$$
+Using the common identity,
+$$ (a\circ b)\circ c=a\circ(b\circ c),$$
+so the operation is associative.
+
+### Commutativity attempt (page 11, bottom)
 
 **Wrong proof:**
-$$ (a\circ b)\circ(c\circ e)=(a\circ c)\circ(b\circ e),$$
-so
-$$ (a\circ b)\circ c=(a\circ c)\circ b\quad\text{claimed to show associativity}.$$
-
-Next,
 $$\begin{aligned}
 (a\circ b)\circ(e\circ a)&=a\circ(b\circ a),\\
 a\circ(a\circ b)&=a\circ(b\circ a),\\
@@ -284,6 +287,8 @@ a\circ b&=b\circ a\quad\text{claimed to show commutativity}.
 \end{aligned}$$
 
 > [!todo] Manual review — page 11, question 9, lower half
-> The first displayed identity exchanges $b$ and $c$; it is not associativity, which requires $(a\circ b)\circ c=a\circ(b\circ c)$. The final cancellation of the leading $a$ is unjustified: the hypotheses do not give cancellation. The intermediate rearrangement also uses properties not yet established. These steps do not prove the two remaining conclusions.
+> The final cancellation of the leading $a$ is unjustified: these hypotheses do not give cancellation. The intermediate rearrangement to $a\circ(a\circ b)$ also uses commutativity before it has been proved. The common identity, common operation and associativity are established above, but this argument does not prove commutativity.
 
-Questions 10–12 have no written attempts in this PDF.
+## 10–12. Unfinished
+
+Page 12 contains only the heading “10)”, and page 13 only “11)”; neither has a written answer. No attempt at question 12 is present.

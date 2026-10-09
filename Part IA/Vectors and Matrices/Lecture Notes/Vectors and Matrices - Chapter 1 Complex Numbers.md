@@ -6,7 +6,7 @@ date: null
 source_file: Ch.1 Complex Numbers.pdf
 drive_file_id: 1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh
 source_url: https://drive.google.com/file/d/1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh/view
-source_pages: 9
+source_pages: 10
 ---
 
 # Vectors and Matrices — Chapter 1: Complex Numbers
@@ -101,7 +101,7 @@ The principal argument satisfies $\arg(z)\in(-\pi,\pi]$. The set of all argument
 $$\operatorname{Arg}(z)=\{\arg(z)+2\pi n:n\in\mathbb Z\}.$$
 The argument of $0$ is undefined.
 
-### 1.2.4 Further properties (pages 5–6)
+### 1.2.4 Further properties (pages 5–7)
 
 **[[Fundamental Theorem of Algebra]]** (page 5, lower part). Every polynomial of degree $n\ge1$ with complex coefficients factors as
 $$p(z)=c_nz^n+\cdots+c_0=c_n(z-\alpha_1)\cdots(z-\alpha_n),$$
@@ -125,10 +125,12 @@ $$\left|\frac{z_1}{z_2}\,z_2\right|^2=
 \left|\frac{z_1}{z_2}\right|^2|z_2|^2=|z_1|^2,$$
 and divide by $|z_2|^2>0$ to obtain the quotient property.
 
-**Proof of the triangle inequality.** Use $\operatorname{Re}(z)\le |z|$. Then
+**Proof of the triangle inequality** (page 7). Write $z_j=x_j+iy_j$ with $x_j,y_j\in\mathbb R$. Use $\operatorname{Re}(z)\le |z|$. Then
 $$
 \begin{aligned}
 |z_1+z_2|^2
+&=(x_1+x_2)^2+(y_1+y_2)^2\\
+&=x_1^2+y_1^2+x_2^2+y_2^2+2x_1x_2+2y_1y_2\\
 &=|z_1|^2+|z_2|^2+2\operatorname{Re}(z_1\overline{z_2})\\
 &\le |z_1|^2+|z_2|^2+2|z_1|\,|\overline{z_2}|\\
 &=|z_1|^2+|z_2|^2+2|z_1|\,|z_2|\\
@@ -139,7 +141,7 @@ Take non-negative square roots. For the reverse inequality,
 $$|z_1|=|(z_1-z_2)+z_2|\le |z_1-z_2|+|z_2|.$$
 Rearrange and interchange $z_1,z_2$ to obtain both bounds and hence the reverse triangle inequality.
 
-## 1.3 Argand diagram (page 7)
+## 1.3 Argand diagram (page 8)
 
 Represent $z=x+iy$ by the point $(x,y)$, or by its position vector from the origin. Horizontal axis: $\operatorname{Re}$; vertical axis: $\operatorname{Im}$.
 
@@ -162,7 +164,7 @@ The diagrams are drawn directly in TikZ for the installed TikZJax plugin. Their 
 \end{document}
 ```
 
-### 1.3.1 Addition and subtraction (page 7, lower part)
+### 1.3.1 Addition and subtraction (page 8, lower part)
 
 - $z_1+z_2$: the parallelogram rule, shown in blue with dashed translated sides.
 - $z_1-z_2$: the displacement from $z_2$ to $z_1$, shown in red and also translated to start at the origin.
@@ -195,7 +197,7 @@ The diagrams are drawn directly in TikZ for the installed TikZJax plugin. Their 
 \end{document}
 ```
 
-### 1.3.2 Complex conjugation (page 8, top)
+### 1.3.2 Complex conjugation (page 9, top)
 
 Conjugation reflects $x+iy$ across the real axis to $x-iy$. The dotted vertical line joins the two reflected points.
 
@@ -218,9 +220,9 @@ Conjugation reflects $x+iy$ across the real axis to $x-iy$. The dotted vertical 
 \end{document}
 ```
 
-## 1.4 De Moivre's theorem (pages 8–9)
+## 1.4 De Moivre's theorem (pages 9–10)
 
-**Lemma** (page 8). For
+**Lemma** (page 9). For
 $$z_j=r_j(\cos\theta_j+i\sin\theta_j),\qquad j=1,2,$$
 we have
 $$z_1z_2=r_1r_2\bigl(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\bigr).$$
@@ -242,7 +244,7 @@ $$
 $$\arg(z_1z_2)\equiv\arg(z_1)+\arg(z_2)\pmod{2\pi}\qquad(z_1,z_2\ne0).$$
 For division, moduli divide and arguments subtract.
 
-**[[De Moivre's Theorem]]** (page 9). For $\theta\in\mathbb R$ and $n\in\mathbb Z$,
+**[[De Moivre's Theorem]]** (page 10). For $\theta\in\mathbb R$ and $n\in\mathbb Z$,
 $$ (\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta).$$
 
 **Proof.** For $n\ge0$, use induction. At $n=0$, both sides equal $1$. For the step from $n$ to $n+1$, multiply the inductive expression by $\cos\theta+i\sin\theta$ and apply the preceding lemma.

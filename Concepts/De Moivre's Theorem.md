@@ -32,4 +32,4 @@ Consequently, if $z=r(\cos\theta+i\sin\theta)\ne0$, then for every $n\in\mathbb 
 $$z^n=r^n\bigl(\cos(n\theta)+i\sin(n\theta)\bigr).$$
 Example: $(1+i)^4=(\sqrt2)^4(\cos\pi+i\sin\pi)=-4$.
 
-Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 8–9; the angle addition formulae are written out there.
+Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 9–10; the angle addition formulae are written out there.

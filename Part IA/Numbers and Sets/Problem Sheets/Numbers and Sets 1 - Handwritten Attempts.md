@@ -3,10 +3,10 @@ title: Numbers and Sets 1 - Handwritten Attempts
 material_type: handwritten worked solutions and incomplete attempts
 course: Part IA Numbers and Sets
 date: null
-source_file: Numbers - Sets 1.pdf
+source_file: Numbers - Sets 0.pdf
 drive_file_id: 1cAxWubfgZfijKE33WolS74BS9m1Sccpn
 source_url: https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view
-source_pages: 15
+source_pages: 18
 ---
 
 # Numbers and Sets 1 — Handwritten Attempts
@@ -252,15 +252,15 @@ This incomplete attempt does not establish the claim.
 
 ### Six-town diagrams (page 14)
 
-The six diagrams are drawn in TikZ for TikZJax, preserving the original circular arrangements of labelled towns and the red/blue edges. Positions carry no metric information; crossings of edges are not additional vertices. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
+The three six-town diagrams below and the three five-town diagrams on page 15 are drawn in TikZ for TikZJax, preserving the original circular arrangements of labelled towns and the red/blue edges. Positions carry no metric information; crossings of edges are not additional vertices. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
 
 [Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 14.
 
 From top to bottom:
 
-1. Red edges drawn: $AB,AC,AD,AE,AF$. Blue edges drawn: $BC,CD,DE,EF$. Annotation: “$FD,EC,BD$ can be any colour.”
-2. Red: $AC,AD,AE,AF$. Blue: $AB,CD,DE,EF$. Annotation: “$FD,EC$ can be any colour.”
-3. Red: $AD,AE,AF$. Blue: $AB,AC,DE,EF$. Annotation: “$FD$ can be any colour.”
+1. Red edges drawn: $AB,AC,AD,AE,AF$. Blue edges drawn: $BC,CD,DE,EF$. Annotation: “$FD,EC,BD$ can be any colour to form a monochrome triangle.”
+2. Red: $AC,AD,AE,AF$. Blue: $AB,CD,DE,EF$. Annotation: “$FD,EC$ can be any colour to form a monochrome triangle.”
+3. Red: $AD,AE,AF$. Blue: $AB,AC,DE,EF$. Annotation: “$FD$ can be any colour to form a monochrome triangle.”
 
 #### Page 14 — top: partial six-town graph
 
@@ -356,7 +356,7 @@ From top to bottom:
 ```
 
 > [!todo] Incomplete attempt — page 14
-> These are partial diagrams, not complete edge colourings of all pairs. No complete written case argument establishes the six-town conclusion. Undrawn edges must not be reconstructed.
+> The annotations claim that the listed remaining edges can have any colour and still give a monochrome triangle. The missing step is explaining why an arbitrary two-colouring can be reduced to one of these three patterns. Partial diagrams can suffice for a proof; a complete edge colouring is not required. Undrawn edges remain undrawn.
 
 ### Five-town diagrams (page 15)
 
@@ -451,4 +451,43 @@ Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 \end{document}
 ```
 
-Written conclusion: “Not true if only $5$ towns.” No further prose argument is supplied. No attempts at questions 10–12 appear in this PDF.
+Written conclusions: “No monochrome triangle in this case” and “Not true if only $5$ towns.” No further prose argument is supplied.
+
+## 10. Lunar-rover fuel depots (page 16)
+
+The question in [[Numbers and Sets - Introductory Sheet 2026]] asks for a starting depot from which the rover can complete one circuit, collecting fuel along the way. Total fuel permits exactly one circuit.
+
+The source diagram marks a starting depot $A$, a later depot $B$, and two possible new depots along the arc between them. Their positions are schematic; the circle represents the moon.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (0,0) circle (1.8);
+  \foreach \ang/\lab in {90/{A\;\mathrm{(start)}},60/{\mathrm{new}_2},30/{\mathrm{new}_1},-10/B} {
+    \draw (\ang:1.68)--(\ang:1.92);
+    \node at (\ang:2.5) {$\lab$};
+  }
+\end{tikzpicture}
+\end{document}
+```
+
+**Incomplete proof:** Let $n\in\mathbb Z^+$ be the number of depots. The case $n=1$ is trivial.
+
+For $n=2$, let the shortest distance between depots be $d$, total fuel be $F$, and fuel in one depot be $f$. Fuel is measured by the distance it permits the rover to travel. If $f\le d$, then $F-f\ge d$. The claimed conclusion is that there is always one depot that can be the starting depot.
+
+Assume the result for $n=k$, with $k\ge2$, and consider $n=k+1$. Let the starting depot in the $k$-depot configuration be $A$, with fuel $f_A$, and let the next depot be $B$, with
+$$f_A\ge d_{AB}.$$
+Place a new depot $C$ between $A$ and $B$, and move fuel $f_C$ from $A$ to $C$.
+
+- If $f_A-f_C\ge d_{AC}$, the proposed starting depot is still $A$.
+- Otherwise, if $f_A-f_C<d_{AC}$, then $f_C>d_{CB}$, and the proposed starting depot is $C$.
+
+**Claimed conclusion:** By induction, there is always a starting depot for any number of depots.
+
+> [!todo] Essential gap — page 16, question 10, induction step
+> The construction inserts the new depot after a starting depot already chosen in the smaller configuration. It does not establish that every arbitrary configuration of $k+1$ depots arises in this way. A reduction to a suitable $k$-depot configuration, with a justified relation between its starting depot and the removed depot, is missing. Reaching the next depot alone also does not justify completing the whole circuit from the proposed new start.
+
+## 11–12. Unfinished (pages 17–18)
+
+Page 17 contains only “11)”, and page 18 only “12)”; neither has a written answer.
