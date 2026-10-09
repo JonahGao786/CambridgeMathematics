@@ -656,7 +656,22 @@
           3,
           4
         ],
-        "render_validation": "Exact fenced TikZ documents compiled using pdfLaTeX outside the repository, rendered with PyMuPDF, and every resulting page actually inspected with view_image. Obsidian application itself was not accessed."
+        "render_validation": "Exact fenced TikZ documents compiled using pdfLaTeX outside the repository, rendered with PyMuPDF, and every resulting page actually inspected with view_image. Obsidian application itself was not accessed.",
+        "corrections": [
+          {
+            "updated_at": "2026-10-09T15:36:34.384127Z",
+            "status": "processed",
+            "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+            "source_page": 3,
+            "source_total_page_count": 6,
+            "visually_reinspected_pages": [
+              3
+            ],
+            "reason": "Previous automated rendering placed arrows through the grouping parentheses. Increased triangle spacing, positioned arrows inside or outside the groups as appropriate, and drew explicit curved parentheses to match the source grouping. No mathematical content changed.",
+            "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
+            "failure": null
+          }
+        ]
       }
     },
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs": {
@@ -893,7 +908,20 @@
     "render_validation": "All eight new exact fenced documents compiled with pdfLaTeX; all eight resulting one-page PDFs rendered and actually visually inspected. Original PDFs and preview files remain outside the repository.",
     "pending_diagram_count": 0,
     "blocker": null,
-    "notes": "Existing nine TikZ blocks retained; their geometry was checked while visually reading all pages of the modified sources. The original sources and new teaching diagram are distinguished in counts."
+    "notes": "Existing nine TikZ blocks retained; their geometry was checked while visually reading all pages of the modified sources. The original sources and new teaching diagram are distinguished in counts.",
+    "latest_correction": {
+      "updated_at": "2026-10-09T15:36:34.384127Z",
+      "status": "processed",
+      "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+      "source_page": 3,
+      "source_total_page_count": 6,
+      "visually_reinspected_pages": [
+        3
+      ],
+      "reason": "Previous automated rendering placed arrows through the grouping parentheses. Increased triangle spacing, positioned arrows inside or outside the groups as appropriate, and drew explicit curved parentheses to match the source grouping. No mathematical content changed.",
+      "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
+      "failure": null
+    }
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [

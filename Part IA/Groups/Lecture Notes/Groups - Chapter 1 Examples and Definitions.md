@@ -101,19 +101,23 @@ The inverse examples compare the clockwise and anticlockwise rotation diagrams a
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[>=latex]
-  \foreach \x in {0,3,6} {
+  \foreach \x in {0,4,8} {
     \draw (\x,0.7)--(\x-0.65,-0.5)--(\x+0.65,-0.5)--cycle;
     \draw (\x,-2.3)--(\x-0.65,-3.5)--(\x+0.65,-3.5)--cycle;
   }
-  \draw[->] (0.9,0)--(2.1,0);
-  \draw[->] (3.9,0)--(5.1,0);
-  \draw[->] (0.9,-3)--(2.1,-3);
-  \draw[->] (3.9,-3)--(5.1,-3);
-  \draw (-1,0.95) to[bend right=20] (-1,-0.7);
-  \draw (4,0.95) to[bend left=20] (4,-0.7);
-  \draw (2,-2.05) to[bend right=20] (2,-3.7);
-  \draw (7,-2.05) to[bend left=20] (7,-3.7);
-  \node at (3,-1.45) {$=$};
+  \draw[->] (0.9,0)--(3.1,0);
+  \draw[->] (5.55,0)--(7.1,0);
+  \draw[->] (0.9,-3)--(2.45,-3);
+  \draw[->] (4.9,-3)--(7.1,-3);
+  \draw (-1.05,0.95)
+    .. controls (-1.38,0.5) and (-1.38,-0.25) .. (-1.05,-0.7);
+  \draw (5.05,0.95)
+    .. controls (5.38,0.5) and (5.38,-0.25) .. (5.05,-0.7);
+  \draw (2.95,-2.05)
+    .. controls (2.62,-2.5) and (2.62,-3.25) .. (2.95,-3.7);
+  \draw (9.05,-2.05)
+    .. controls (9.38,-2.5) and (9.38,-3.25) .. (9.05,-3.7);
+  \node at (4,-1.45) {$=$};
 \end{tikzpicture}
 \end{document}
 ```
