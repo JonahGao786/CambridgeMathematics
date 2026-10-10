@@ -476,7 +476,7 @@ Written conclusions: “No monochrome triangle in this case” and “Not true i
 
 The question in [[Numbers and Sets - Introductory Sheet 2026]] asks for a starting depot from which the rover can complete one circuit, collecting fuel along the way. Total fuel permits exactly one circuit.
 
-The source diagram marks a starting depot $A$, a later depot $B$, and two possible new depots along the arc between them. Their positions are schematic; the circle represents the moon.
+The diagram shows the special case in which $A$ is the starting depot, with two possible inserted depots on the arc to $B$. The revised calculation below allows arrival at $A$ with carried fuel $f$. Positions are schematic; the circle represents the moon.
 
 ```tikz
 \usepackage{tikz}
@@ -491,6 +491,57 @@ The source diagram marks a starting depot $A$, a later depot $B$, and two possib
 \end{document}
 ```
 
+### Revised induction argument
+
+Let $n\in\mathbb Z^+$ be the number of depots, and measure fuel by the distance it permits the rover to travel. Write $F$ for the circumference, equal to the total fuel.
+
+For $n=1$, the single depot supplies the whole circuit. For $n=2$, let $d$ be the shorter distance between the depots and let their fuel amounts be $g$ and $F-g$. Since $d\le F/2$, at least one depot has enough fuel to travel the shorter arc to the other: if $g\le d$, then $F-g\ge d$. Starting from a depot with at least $d$ fuel, reaching the other and collecting its fuel leaves $F-d$, exactly the fuel needed for the remaining arc.
+
+Assume the result for $n=k$, with $k\ge2$. Along a valid circuit, insert a new depot $C$ between consecutive depots $A,B$. Transfer some of the fuel from $A$ to $C$, leaving amounts $f_A$ and $f_C$ respectively. Let $f$ be the fuel with which the original rover arrives at $A$. Since the original route can reach $B$,
+$$f+f_A+f_C\ge d_{AB},\qquad d_{AB}=d_{AC}+d_{CB}.$$
+
+- If $f+f_A\ge d_{AC}$, the original starting depot still works. The rover reaches $C$, collects $f_C$, and arrives at $B$ with the same fuel as before.
+- If $f+f_A<d_{AC}$, then
+  $$f_C>d_{CB},$$
+  and
+  $$
+  f+f_A<d_{AB}-d_{CB}
+  \quad\Longleftrightarrow\quad
+  f+f_A+f_C-d_{AB}<f_C-d_{CB}.
+  $$
+  Starting at $C$ therefore reaches $B$ with more fuel than the original rover had there. The proposed new starting depot is $C$.
+
+The claimed conclusion is that, for every number of depots, there exists a starting depot from which a full circuit is possible.
+
+### Explanation of the reduction and the full circuit
+
+The following makes the induction and fuel comparison explicit.
+
+Fix a direction around the circle, and use forward arc distances in that direction. The two-depot base case also works in any fixed direction: if the fuel $g$ at $A$ is smaller than $d_{AB}$, then the fuel $F-g$ at $B$ is larger than $F-d_{AB}=d_{BA}$, so start at $B$. Otherwise start at $A$. In either case the total fuel covers the return arc exactly.
+
+For an **arbitrary** configuration of $k+1$ depots, remove a depot $C$ and move its fuel to its preceding depot $A$. The reduced configuration has $k$ depots and unchanged total fuel. Apply the induction hypothesis to this configuration in the fixed direction. Reinsert $C$ and transfer its fuel back from $A$ to $C$; this is precisely the split analysed above. Thus the argument applies to every configuration, rather than only to one constructed example.
+
+Let $S$ be the reduced configuration's valid starting depot. In the second case, set
+$$\Delta=d_{AC}-(f+f_A)>0.$$
+The new route starting at $C$ reaches $B$ with fuel
+$$
+\begin{aligned}
+f_C-d_{CB}
+&=\bigl(f+f_A+f_C-d_{AB}\bigr)+\Delta.
+\end{aligned}
+$$
+From $B$ to the return to $S$, it follows the reduced route with an extra $\Delta$ fuel, so cannot run out. The reduced route would return to $S$ empty, because its total fuel is exactly one circumference. The new route reaches $S$ with $\Delta$ fuel and then follows the reduced route's initial segment from $S$ to $A$, collecting the fuel at each depot before $A$ on that segment for the first time.
+
+It consequently arrives at $A$ with $f+\Delta$ fuel. After collecting the actual $f_A$ there,
+$$f+\Delta+f_A=d_{AC}.$$
+It can travel the final arc from $A$ to $C$ and complete the circuit. This also covers the case $B=S$, when the segment from $B$ to $S$ has length zero, and $A=S$, when the initial segment from $S$ to $A$ has length zero.
+
+With the reduction and this final fuel calculation made explicit, the revised argument establishes the claim.
+
+See [[Natural Numbers and Mathematical Induction]] for the quantifiers in the induction step.
+
+### Superseded, incomplete attempt (previous version, page 16)
+
 **Incomplete proof:** Let $n\in\mathbb Z^+$ be the number of depots. The case $n=1$ is trivial.
 
 For $n=2$, let the shortest distance between depots be $d$, total fuel be $F$, and fuel in one depot be $f$. Fuel is measured by the distance it permits the rover to travel. If $f\le d$, then $F-f\ge d$. The claimed conclusion is that there is always one depot that can be the starting depot.
@@ -504,8 +555,7 @@ Place a new depot $C$ between $A$ and $B$, and move fuel $f_C$ from $A$ to $C$.
 
 **Claimed conclusion:** By induction, there is always a starting depot for any number of depots.
 
-> [!todo] Essential gap — page 16, question 10, induction step
-> The construction inserts the new depot after a starting depot already chosen in the smaller configuration. It does not establish that every arbitrary configuration of $k+1$ depots arises in this way. A reduction to a suitable $k$-depot configuration, with a justified relation between its starting depot and the removed depot, is missing. Reaching the next depot alone also does not justify completing the whole circuit from the proposed new start.
+This earlier argument restricted $A$ to an already chosen starting depot and did not justify the reduction from an arbitrary configuration or the remainder of the circuit. It is retained as a superseded attempt; the revised argument and explanation above resolve these points.
 
 ## 11–12. Unfinished (pages 17–18)
 
