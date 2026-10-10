@@ -4,10 +4,10 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-10T18:27:32.845104Z",
+  "last_inventory_at": "2026-10-10T19:41:26.606718Z",
   "inventory_complete": true,
   "inventory_folder_count": 10,
-  "reading_method": "Authenticated Google Drive connector metadata and raw-file fetch of original stored PDFs (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) page rendering, and actual view_image/model vision inspection of all 33 pages of the four new/modified sources. Handwritten mathematics and diagrams read from original page images; extracted text was not substituted for visual reading. Unchanged sources retain their previous verified coverage.",
+  "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF verification of 18 pages and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages also compared with the previous processed source: only page 8 differs; pages 1–7 and 9–18 have identical rendered pixels. No OCR substituted for visual reading.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
   "duplicate_comparison": "Historical five-page Ch.0 Proofs.pdf and Untitled Notebook.pdf versions were previously separately read and compared with identical rendered pixels. Current Ch.0 Proofs.pdf has nine pages, fully read this run; its new material is not attributed to the absent historical notebook. Preserve the separate historical record and shared existing note without claiming full current equivalence. Other source destinations remain separate.",
   "files": {
@@ -184,10 +184,10 @@
     "1cAxWubfgZfijKE33WolS74BS9m1Sccpn": {
       "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
       "source_file_name": "Numbers - Sets 0.pdf",
-      "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view",
+      "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
-      "observed_source_modified_timestamp": "2026-10-09T02:36:20.805Z",
-      "processed_source_modified_timestamp": "2026-10-09T02:36:20.805Z",
+      "observed_source_modified_timestamp": "2026-10-10T19:38:37.410Z",
+      "processed_source_modified_timestamp": "2026-10-10T19:38:37.410Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
       ],
@@ -198,11 +198,6 @@
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [
-        {
-          "location": "Manual review — page 8, question 6(b)",
-          "detail": "The blanket conclusion for non-prime $n$ fails at $n=4$: $4\\nmid3!=6$. The product argument must be repaired to account for this exception; the original conclusion is retained as an incorrect attempt.",
-          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-        },
         {
           "location": "Substantive gap — page 11, last bullet",
           "detail": "The counterexample requires $e$ and $\\ln3$ to be irrational; the source supplies no justification. The irrationality of $\\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.",
@@ -241,8 +236,8 @@
         18
       ],
       "original_pdf_path": null,
-      "source_sha256": "35162355873cffde60539b93a0e829dc5bcd0ff3f927bda55abaf7182747a7df",
-      "source_size_bytes": 3422527,
+      "source_sha256": "ddbece02f21d5b200ba0565cb76bf2671739ebcf6d636d35820bdb8a55cbafb0",
+      "source_size_bytes": 3482264,
       "page_image_attachments": [],
       "normalizations": {
         "page_1": "Used r consistently throughout the sum-of-squares derivation; removed n/r TODO placeholders.",
@@ -254,7 +249,8 @@
         "page_14_diagram_3": "Corrected the previous automated edge list to include only blue AB, AC, DE, EF, as visibly drawn; undrawn BC and CD are excluded.",
         "pages_14_15": "Existing six TikZ graph edge sets and layouts rechecked against current original images. Added new monochrome-triangle annotations and explicit five-town conclusion. Corrected the previous review explanation: a complete colouring is not needed; the missing reduction to the drawn cases is the substantive issue.",
         "page_16": "Transcribed new lunar-rover induction attempt and reconstructed its actual circle/depot sketch in TikZ. Preserved the unproved induction conclusion and marked the arbitrary-configuration reduction/full-circuit gap; no solution supplied.",
-        "pages_17_18": "Recorded heading-only questions 11 and 12."
+        "pages_17_18": "Recorded heading-only questions 11 and 12.",
+        "page_8_question_6b_revision": "Transcribed the revised prime/composite and prime-square argument, including the n=4 exception. Made the distinct-factor requirement and case split explicit by choosing a prime divisor p with factors p and n/p. Explained why separate divisibility statements alone do not imply product divisibility. Added immediate boundary case 1 divides 0!=1. Preserved the previous product-of-proper-divisors attempt as superseded; its n=4 review flag is resolved."
       },
       "diagram_upgrades": {
         "status": "processed",
@@ -296,10 +292,10 @@
         ]
       },
       "last_attempt": {
-        "date": "2026-10-09",
-        "completed_at": "2026-10-09T15:24:56.661031Z",
+        "date": "2026-10-10",
+        "completed_at": "2026-10-10T19:41:26.606718Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-09T02:36:20.805Z",
+        "source_modified_timestamp": "2026-10-10T19:38:37.410Z",
         "total_page_count": 18,
         "visually_inspected_pages": [
           1,
@@ -348,18 +344,72 @@
         "reason": "All pages of the changed source visually checked. Existing diagram geometry and colours agree with the current source; page references and new annotations updated.",
         "completed_at": "2026-10-09T15:24:56.661031Z"
       },
-      "last_successful_processing_at": "2026-10-09T15:24:56.661031Z",
-      "reading_method": "Authenticated Google Drive connector raw-file fetch of each original stored PDF (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF verified page counts and 2x (144 dpi) page rendering, and actual view_image/model vision inspection of every page. All 55 pages of the five new/modified sources were visually read; extracted text was only an optional aid, not a substitute for reading handwriting or diagrams. Unchanged sources retain prior successful coverage.",
+      "last_successful_processing_at": "2026-10-10T19:41:26.606718Z",
+      "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF verification of 18 pages and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages also compared with the previous processed source: only page 8 differs; pages 1–7 and 9–18 have identical rendered pixels. No OCR substituted for visual reading.",
       "changes_from_previous_processed_version": {
-        "renamed_source": "Numbers - Sets 1.pdf -> Numbers - Sets 0.pdf; Drive ID and existing Markdown destination retained.",
+        "previous_source_modified_timestamp": "2026-10-09T02:36:20.805Z",
+        "previous_page_count": 18,
+        "current_page_count": 18,
         "revised_locations": [
-          "pages 14–15, graph annotations"
+          "page 8, question 6(b)"
         ],
-        "added_pages": [
-          16,
-          17,
-          18
-        ]
+        "rendered_page_comparison": {
+          "compared_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "changed_pages": [
+            8
+          ],
+          "identical_pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "resolved_previous_todos": [
+          {
+            "location": "Manual review — page 8, question 6(b)",
+            "detail": "The blanket conclusion for non-prime $n$ fails at $n=4$: $4\\nmid3!=6$. The product argument must be repaired to account for this exception; the original conclusion is retained as an incorrect attempt.",
+            "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+          }
+        ],
+        "remaining_review_locations": [
+          "Substantive gap — page 11, last bullet",
+          "Incomplete attempt — page 14",
+          "Essential gap — page 16, question 10, induction step"
+        ],
+        "historical_work_preserved": "The previous processed version’s proper-divisor product argument is retained under Superseded, incorrect attempt with its former conclusion and mathematical error explanation."
       }
     },
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F": {
@@ -912,47 +962,20 @@
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
     "date": "2026-10-10",
-    "completed_at": "2026-10-10T18:29:41.778910Z",
+    "completed_at": "2026-10-10T19:41:26.606718Z",
     "status": "processed",
-    "new_source_count": 2,
-    "modified_source_count": 2,
-    "processed_source_count": 4,
-    "unchanged_current_source_count": 6,
+    "new_source_count": 0,
+    "modified_source_count": 1,
+    "processed_source_count": 1,
+    "unchanged_current_source_count": 9,
     "pending_source_count": 0,
-    "reading_method": "Authenticated Google Drive connector metadata and raw-file fetch of original stored PDFs (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) page rendering, and actual view_image/model vision inspection of all 33 pages of the four new/modified sources. Handwritten mathematics and diagrams read from original page images; extracted text was not substituted for visual reading. Unchanged sources retain their previous verified coverage.",
-    "visually_inspected_page_count": 33,
+    "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF verification of 18 pages and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages also compared with the previous processed source: only page 8 differs; pages 1–7 and 9–18 have identical rendered pixels. No OCR substituted for visual reading.",
+    "visually_inspected_page_count": 18,
     "coverage_by_source": [
       {
-        "drive_file_id": "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
-        "source_file_name": "Ch.1 Elementary Number Theory.pdf",
-        "total_page_count": 2,
-        "visually_inspected_pages": [
-          1,
-          2
-        ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
-        "source_file_name": "Ch.0 Proofs.pdf",
-        "total_page_count": 9,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
-        "source_file_name": "Ch.1 Complex Numbers.pdf",
-        "total_page_count": 21,
+        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+        "source_file_name": "Numbers - Sets 0.pdf",
+        "total_page_count": 18,
         "visually_inspected_pages": [
           1,
           2,
@@ -971,53 +994,32 @@
           15,
           16,
           17,
-          18,
-          19,
-          20,
-          21
+          18
         ],
-        "scope": "complete_new_or_modified_source"
-      },
-      {
-        "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
-        "source_file_name": "Examples Sheet 1.pdf",
-        "total_page_count": 1,
-        "visually_inspected_pages": [
-          1
-        ],
-        "scope": "complete_new_or_modified_source"
+        "scope": "complete_modified_source"
       }
     ],
-    "created_markdown_note_count": 7,
-    "created_markdown_paths": [
-      "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
-      "Concepts/Natural Numbers and Mathematical Induction.md",
-      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
-      "Concepts/Logical Connectives and Quantifiers.md",
-      "Concepts/Complex Exponential and Trigonometric Functions.md",
-      "Concepts/Complex Logarithms and Powers.md",
-      "Concepts/Roots of Unity.md"
-    ],
-    "updated_markdown_note_count": 4,
+    "created_markdown_note_count": 0,
+    "created_markdown_paths": [],
+    "updated_markdown_note_count": 1,
     "updated_markdown_paths": [
-      "Concepts/Complex Numbers.md",
-      "Concepts/Proof by Contradiction and Contraposition.md",
-      "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md",
-      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md"
+      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
     ],
-    "new_tikz_block_count": 2,
+    "new_tikz_block_count": 0,
     "new_tikz_block_breakdown": {
-      "source_material": 2,
+      "source_material": 0,
       "user_requested_supplement": 0
     },
-    "tikz_render_validation": "Both exact new fenced TikZ documents compiled successfully with pdfLaTeX, rendered as one-page PDFs using PyMuPDF at 3x (216 dpi), and actually visually inspected. Existing three diagrams unchanged. User Obsidian app not accessed.",
+    "tikz_render_validation": "No diagram code changed. All seven existing TikZ blocks retained; original source diagram pages 14–16 visually reinspected and their rendered pixels match the previous processed source. No new render or Obsidian app test claimed.",
     "blocker": null,
     "published_branch": "master",
-    "manifest_destination_reconciliation": {
-      "Part IA/Groups/Problem Sheets/Groups 1 - Handwritten Attempts.md": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md",
-      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-    },
-    "notes": "Preserved remote manual edits and note renames from the two vault backups. Updated current per-file Markdown/TODO paths to their existing renamed destinations without advancing their successful source timestamps. Added user-authorized teaching explanations separately from faithful source claims; no replacement solutions supplied for old unfinished attempts."
+    "resolved_review_points": [
+      {
+        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+        "location": "page 8, question 6(b), n=4 exception"
+      }
+    ],
+    "notes": "Same-day rerun after one PDF revision. Entire 18-page current source visually read and all pages compared. Updated only the revised factorial proof and its per-file manifest record; preserved the superseded mathematical attempt and all manual content. Prior full runs remain available through repository history."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,

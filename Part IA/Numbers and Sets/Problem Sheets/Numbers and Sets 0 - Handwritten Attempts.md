@@ -160,6 +160,26 @@ Thus the answer is $n=1$ or $n\ge4$; $n=2,3$ each give a factorial with only one
 
 ### (b) Divisibility of the preceding factorial (page 8, lower half)
 
+If $n$ is prime, then $n\nmid(n-1)!$: none of the factors $1,\ldots,n-1$ is divisible by $n$.
+
+For a composite $n$ with a factorization
+$$n=ab,\qquad1<a,b<n,\qquad a\ne b,$$
+both $a$ and $b$ appear as **distinct factors** of $(n-1)!$. Hence their product $ab=n$ divides $(n-1)!$.
+
+**Explanation of the case split.** Choose a prime divisor $p$ of $n$ and take $a=p$, $b=n/p$. These are distinct unless $n=p^2$. The product argument uses two distinct entries in the factorial; knowing only that $a$ and $b$ separately divide the factorial would not suffice in general.
+
+If $n=p^2$ for a prime $p$, consider the two factors $p$ and $2p$. When $p>2$,
+$$1<p<2p<p^2=n.$$
+Thus $p(2p)=2p^2$ divides $(n-1)!$, and in particular $n=p^2$ divides $(n-1)!$.
+
+For $n=4$, $p=2$ and $2p=n$, so this argument fails; indeed $4\nmid3!=6$.
+
+Therefore $n\mid(n-1)!$ for every composite $n\ne4$. The boundary case $n=1$ also works, since $0!=1$. The positive integers satisfying the condition are exactly
+$$n=1\quad\text{or}\quad n\text{ composite with }n\ne4.$$
+
+#### Superseded, incorrect attempt (previous version, page 8)
+
+The earlier processed version used a product of proper divisors:
 $$n=p_1^{a_1}p_2^{a_2}p_3^{a_3}\cdots,$$
 where $p_n$ is prime and $a_n\in\mathbb Z$, $a_n\ge0$.
 
@@ -168,8 +188,7 @@ $$\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldots)}}
 $$n\mid\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldots)}}p_1^ip_2^j\cdots\quad\Longleftrightarrow\quad n\mid(n-1)!.$$
 “Therefore $n\mid(n-1)!$ for non-prime $n$.”
 
-> [!todo] Manual review — page 8, question 6(b)
-> The blanket conclusion for non-prime $n$ fails at $n=4$: $4\nmid3!=6$. The product argument must be repaired to account for this exception; the original conclusion is retained as an incorrect attempt.
+This blanket conclusion fails at $n=4$. The revised proof above handles the exception; the earlier argument is retained as superseded, rather than as a current proof.
 
 ### (c) Trailing zeroes (page 9, top)
 
