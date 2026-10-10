@@ -8,7 +8,8 @@ drive_file_id: 1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F
 source_url: https://drive.google.com/file/d/1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F/view
 duplicate_source_file: Untitled Notebook.pdf
 duplicate_drive_file_id: 1uBB2lbhifeSfjmU7LYXEj-ldQJdKCzdn
-source_pages: 5
+duplicate_comparison_scope: historical five-page version only
+source_pages: 9
 ---
 
 # Numbers and Sets — Chapter 0: Proofs
@@ -51,6 +52,9 @@ The accompanying remarks below are remarks recorded in the lecture, rather than 
 | 7 | $1+1=2$. | “Does it need proving?” |
 
 These statements and historical remarks are retained as examples from the lecture, without an independent claim of verification.
+
+> [!todo] Reference needed — page 3, remark 2
+> The dated claim “proved in Aug. 2026” has no accompanying citation. Its precise intended result and reference remain unverified.
 
 ## A direct proof (page 4, top)
 
@@ -102,3 +106,76 @@ $$
 \quad\Longleftrightarrow\quad
 \neg B\Rightarrow\neg A.
 $$
+
+## Proving both directions (page 6)
+
+**Assertion.** The solutions of $x^2-5x+6=0$ are exactly $x=2$ and $x=3$.
+
+This contains two assertions: these two values are solutions, and there are no others.
+
+**Proof.** If $x=2$ or $x=3$, then $x-2=0$ or $x-3=0$. Thus $(x-2)(x-3)=0$, giving $x^2-5x+6=0$.
+
+Conversely, if $x^2-5x+6=0$, then $(x-2)(x-3)=0$. Hence $x-2=0$ or $x-3=0$, so $x=2$ or $x=3$.
+
+Equivalently, over $\mathbb R$ or $\mathbb C$,
+$$
+\begin{aligned}
+x=2\ \text{or}\ x=3
+&\Longleftrightarrow x-2=0\ \text{or}\ x-3=0\\
+&\Longleftrightarrow(x-2)(x-3)=0\\
+&\Longleftrightarrow x^2-5x+6=0.
+\end{aligned}
+$$
+Here $\Longleftrightarrow$ means “if and only if”, or “$A$ implies $B$ and $B$ implies $A$”. It is vital that **every step is an equivalence**.
+
+**Explanation.** The middle step uses the fact that a product of real or complex numbers is zero only when at least one factor is zero. A chain of one-way implications alone may prove that every solution is among the candidates without proving that the candidates work, or vice versa.
+
+## An unjustified existence assumption (page 7)
+
+**False claim.** Every positive real number is at least $1$.
+
+**Wrong proof.** Let $r$ be the least positive real number. Either $r=1$, $r<1$, or $r>1$.
+
+- If $r<1$, then $0<r^2<r$, contradicting minimality.
+- If $r>1$, then $0<1<r$, again contradicting minimality.
+
+Thus $r=1$, and the claimed conclusion would follow.
+
+The existence of a least positive real was never justified. **Every claim must be justified.**
+
+**Explanation.** For any $r>0$, the number $r/2$ is positive and smaller than $r$, so there is no least positive real. For instance, $1/2$ also directly disproves the original claim. This supplementary observation explains the failure; it does not turn the rejected argument into a proof.
+
+## Combining claims and truth tables (page 8)
+
+For assertions $A,B$, write $A\land B$ for “$A$ and $B$”, $A\cup B$ for “$A$ or $B$” in the lecture's notation, and $\neg A$ for “not $A$”. Here “or” is inclusive. The conventional logical notation for this use of $\cup$ is $\lor$.
+
+| $A$ | $B$ | $A\land B$ | $A\cup B$ | $\neg A$ | $\neg B$ |
+| --- | --- | --- | --- | --- | --- |
+| F | F | F | F | T | T |
+| T | F | F | T | F | T |
+| F | T | F | T | T | F |
+| T | T | T | T | F | F |
+
+Comparing truth tables gives
+$$\neg(A\land B)\Longleftrightarrow(\neg A)\cup(\neg B).$$
+Moreover,
+$$
+A\Rightarrow B
+\Longleftrightarrow(\neg A)\cup B
+\Longleftrightarrow B\cup(\neg A)
+\Longleftrightarrow(\neg B)\Rightarrow(\neg A).
+$$
+
+Assertions may involve quantifiers: $\forall a$ means “for all $a$”, and $\exists b$ means “there exists $b$”.
+
+## Negating quantifiers (page 9)
+
+$$
+\begin{aligned}
+\neg\bigl(\forall x,\ A(x)\bigr)
+&\Longleftrightarrow\exists x,\ \neg A(x),\\
+\neg\bigl(\exists x,\ B(x)\bigr)
+&\Longleftrightarrow\forall x,\ \neg B(x).
+\end{aligned}
+$$
+In each formula the domain of $x$ stays the same on both sides. See [[Logical Connectives and Quantifiers]] for a supplementary explanation of quantifier order and [[Natural Numbers and Mathematical Induction]] for their use in induction.

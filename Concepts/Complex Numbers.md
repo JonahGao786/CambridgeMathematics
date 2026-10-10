@@ -22,3 +22,5 @@ with $x=r\cos\theta$ and $y=r\sin\theta$. The principal argument is in $(-\pi,\p
 Moduli multiply and, for non-zero numbers, arguments add modulo $2\pi$. See [[De Moivre's Theorem]] for integer powers and [[Triangle Inequality for Complex Numbers]] for modulus bounds.
 
 Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 2–9, including arithmetic, conjugation properties, their geometric diagrams and proofs of modulus properties.
+
+The later lecture material develops [[Complex Exponential and Trigonometric Functions]], [[Roots of Unity]] and [[Complex Logarithms and Powers]]. Lines, circles and geometric transformations are in the same lecture note, pages 19–21.

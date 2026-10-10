@@ -17,3 +17,5 @@ which is odd, a contradiction. Hence $n^2$ even implies $n$ even.
 One counterexample with $A$ true and $B$ false disproves a proposed implication. For instance, $n=3$ disproves $9\mid n^2\Rightarrow9\mid n$.
 
 Source: [[Numbers and Sets - Chapter 0 Proofs]], pages 4–5. The invalid converse attempt is preserved there.
+
+An “if and only if” assertion requires both directions; the quadratic example on page 6 illustrates this. Pages 8–9 derive contraposition using truth tables and explain negation of quantifiers; see [[Logical Connectives and Quantifiers]].
