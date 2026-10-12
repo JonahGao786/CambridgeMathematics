@@ -1,6 +1,6 @@
 ---
 title: Groups
-material_type: source-backed definition and proposition statements
+material_type: source-backed definitions, propositions and examples
 course: Part IA Groups
 ---
 
@@ -12,8 +12,27 @@ A group is a triple $(G,\cdot,e)$ with a binary operation $\cdot:G\times G\to G$
 - $a\cdot e=a$ for every $a\in G$.
 - For every $a\in G$, there is a $b\in G$ with $a\cdot b=e$.
 
-This is the right-sided definition used in the lecture. Proposition 1.5 states that $e\cdot a=a$ and $b\cdot a=e$ also hold, and that the identity and inverses are unique. Its proof is not included in the source.
+This is the right-sided definition used in the lecture. Proposition 1.5 proves that $e\cdot a=a$ and $b\cdot a=e$ also hold, and that the identity and inverses are unique. The complete proofs appear in [[Groups - Chapter 1 Examples and Definitions]], pages 7–9.
 
 The six symmetries of an equilateral triangle form a group under composition. The rotation/reflection examples show that a group need not be commutative.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–6, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+## Inverses and powers
+
+Write $a^{-1}$ for the unique inverse of $a$. The **sock and shoe lemma** is
+$$(ab)^{-1}=b^{-1}a^{-1}.$$
+Its proof verifies $ab(b^{-1}a^{-1})=e$ by associativity and uses uniqueness of inverses.
+
+Integer powers are defined by
+$$a^0=e,\qquad a^n=aa^{n-1}\ (n>0),\qquad
+a^n=(a^{-1})^{-n}\ (n<0).$$
+The lecture asks as an exercise to prove $a^ma^n=a^{m+n}$ and $(a^m)^n=a^{mn}$ for $m,n\in\mathbb Z$.
+
+## Abelian and finite groups
+
+A group is **abelian** if $ab=ba$ for all $a,b\in G$. The one-element group $\{e\}$ is the **trivial group**. The **order** is $|G|$, and a group is finite if $|G|<\infty$.
+
+The additive groups of $\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$ are abelian, with inverse $-x$. The non-zero elements of $\mathbb Q,\mathbb R,\mathbb C$ form abelian groups under multiplication. All of $\mathbb R$ does not form a multiplicative group, since $0$ has no inverse.
+
+The source also gives exercises on the multiplicative group $C_n=\{z\in\mathbb C:z^n=1\}$ of [[Roots of Unity|roots of unity]] and addition modulo $n$ on $\mathbb Z_n=\{0,\ldots,n-1\}$. The exercise proofs are not supplied. [[Bijections and Permutations]] introduces the set-theoretic inverse of a function.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–13, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].

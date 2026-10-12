@@ -1,17 +1,17 @@
 ---
-title: Numbers and Sets 1 - Handwritten Attempts
+title: Numbers and Sets 0 - Handwritten Attempts
 material_type: handwritten worked solutions and incomplete attempts
 course: Part IA Numbers and Sets
 date: null
 source_file: Numbers - Sets 0.pdf
 drive_file_id: 1cAxWubfgZfijKE33WolS74BS9m1Sccpn
 source_url: https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view
-source_pages: 18
+source_pages: 19
 ---
 
-# Numbers and Sets 1 — Handwritten Attempts
+# Numbers and Sets 0 — Handwritten Attempts
 
-This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. The date is not written here. Obvious typos and notation are normalized, with routine algebra made explicit where helpful. Substantive errors and unfinished arguments remain marked; superseded work is preserved.
+This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. No date is supplied. Substantive errors and unfinished arguments are marked; superseded attempts are retained.
 
 Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view).
 
@@ -154,7 +154,9 @@ The recurrence is $f_{n+2}\equiv f_{n+1}+f_n\pmod{10}$. Its pair transition is r
 ### (a) Difference of squares (page 8, upper half)
 
 $$n!=a^2-b^2=(a+b)(a-b).$$
-The case $n=1$ works: $1!=1^2-0^2$. For $n\ge2$, $n!$ is even, so $a+b$ or $a-b$ must be even. Since $a,b\in\mathbb Z$, $a+b$ and $a-b$ must both be even. Therefore $n!$ must have more than one factor of $2$. For $n\ge4$, $4\mid n!$. Writing $n!=4t$,
+**Incorrect boundary assessment:** the attempt says $n=1$ does not work. However, $1!=1^2-0^2$; the supplied question does not require the square bases to be positive. Thus $n=1$ works.
+
+For $n\ge2$, $n!$ is even, so $a+b$ or $a-b$ must be even. Since $a,b\in\mathbb Z$, $a+b$ and $a-b$ must both be even. Therefore $n!$ must have more than one factor of $2$. For $n\ge4$, $4\mid n!$. Writing $n!=4t$,
 $$n!=(t+1)^2-(t-1)^2.$$
 Thus the answer is $n=1$ or $n\ge4$; $n=2,3$ each give a factorial with only one factor of $2$.
 
@@ -190,15 +192,38 @@ $$n\mid\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldo
 
 This blanket conclusion fails at $n=4$. The revised proof above handles the exception; the earlier argument is retained as superseded, rather than as a current proof.
 
-### (c) Trailing zeroes (page 9, top)
+### (c) Trailing zeroes (page 9)
 
 Need $2026$ factors of $10$. More factors of $2$ than $5$, so count factors of $5$:
 $$\left\lfloor\frac n5\right\rfloor+\left\lfloor\frac n{25}\right\rfloor+\left\lfloor\frac n{125}\right\rfloor+\left\lfloor\frac n{625}\right\rfloor+\cdots.$$
-“I wrote a Python script and gets $n=8120$.” The script is not present in the source.
+Write the number of factors of $5$ as
+$$v_5(n!)=\sum_{m=1}^{\infty}\left\lfloor\frac{n}{5^m}\right\rfloor.$$
+The source bounds it using
+$$\frac n4=\sum_{m=1}^{\infty}\frac{n}{5^m}
+>\sum_{m=1}^{\infty}\left\lfloor\frac{n}{5^m}\right\rfloor\ge2026,$$
+so $n>8104$.
 
-## 7. Irrationality (pages 9–11)
+At the boundary,
+$$\begin{aligned}
+v_5(8104!)
+&=\left\lfloor\frac{8104}{5}\right\rfloor
++\left\lfloor\frac{8104}{25}\right\rfloor
++\left\lfloor\frac{8104}{125}\right\rfloor
++\left\lfloor\frac{8104}{625}\right\rfloor
++\left\lfloor\frac{8104}{3125}\right\rfloor\\
+&=1620+324+64+12+2=2022.
+\end{aligned}$$
+Four more multiples of $5$ are needed: $8105,8110,8115,8120$. Thus the stated answer is $n=8120$.
 
-### (a) Page 9
+The immediate endpoint counts confirm minimality:
+$$v_5(8119!)=1623+324+64+12+2=2025,$$
+$$v_5(8120!)=1624+324+64+12+2=2026.$$
+
+**Earlier calculation:** the previous processed version reported using a Python script to obtain $n=8120$, without supplying the script. The revised source now gives the arithmetic above.
+
+## 7. Irrationality (pages 10–12)
+
+### (a) Page 10
 
 Assume $\sqrt[3]{4}$ is rational:
 $$\sqrt[3]{4}=\frac pq,\qquad p,q\in\mathbb N,\quad p,q\text{ coprime}.$$
@@ -211,7 +236,7 @@ Assume $\log_3 4$ rational:
 $$\log_3 4=\frac pq,\qquad p,q\in\mathbb Z_{>0},\qquad4=3^{p/q},\qquad4^q=3^p.$$
 $\gcd(4,3)=1$, so $4^q=3^p$ is impossible for positive integers $p,q$. Therefore $\log_3 4$ irrational.
 
-### (b) Descent (page 10)
+### (b) Descent (page 11)
 
 $$\begin{aligned}
 11n-3m&=\sqrt{11}\,m-3\sqrt{11}\,n\\
@@ -226,7 +251,7 @@ For $\sqrt{111}$, $10<\sqrt{111}<11$:
 $$\text{if }\frac mn=\sqrt{111},\qquad\frac{111n-10m}{m-10n}=\sqrt{111}.$$
 For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is smaller than the original denominator; therefore method fails.
 
-### (c) Page 11
+### (c) Page 12
 
 - $r+\alpha$ is irrational: otherwise $\alpha=(r+\alpha)-r$ would be rational, a contradiction.
 - $r\alpha$ can be rational: let $r=0$.
@@ -236,10 +261,10 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 - $\alpha^r$ can be rational: let $r=0$.
 - $\alpha^\beta$ can be rational: let $\alpha=e$, $\beta=\ln3$.
 
-> [!todo] Substantive gap — page 11, last bullet
+> [!todo] Substantive gap — page 12, last bullet
 > The counterexample requires $e$ and $\ln3$ to be irrational; the source supplies no justification. The irrationality of $\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.
 
-## 8. Pigeonhole attempts (page 12)
+## 8. Pigeonhole attempts (page 13)
 
 (i) Consider pairs $(1,2),(3,4),\ldots,(2n-1,2n)$. Two consecutive integers are coprime. Statement proved by pigeonhole principle.
 
@@ -260,20 +285,20 @@ Counterexamples written:
 
 “No such example where all four fails.”
 
-## 9. Towns and coloured edges (pages 13–15)
+## 9. Towns and coloured edges (pages 14–16)
 
-### Superseded, incomplete attempt (page 13)
+### Superseded, incomplete attempt (page 14)
 
 $$A:B\text{ through }F\ (5),\quad B:C\text{ through }F\ (4),\quad C:D\text{ through }F\ (3),\quad D:E\text{ through }F\ (2),\quad E:F\ (1).$$
 $15$ edges. At least $8$ edges are the same transport. Try to place the $8$ edges without forming a triangle. Assume $AB,CD,EF$ are edges that don't meet each other. Then list $AC,AD,AE,AF$.
 
 This incomplete attempt does not establish the claim.
 
-### Six-town diagrams (page 14)
+### Six-town diagrams (page 15)
 
-The three six-town diagrams below and the three five-town diagrams on page 15 are drawn in TikZ for TikZJax, preserving the original circular arrangements of labelled towns and the red/blue edges. Positions carry no metric information; crossings of edges are not additional vertices. The source does not identify which colour denotes train or bus. Occasional arrow-shaped pen strokes are not interpreted as directed transport routes. Only edges actually drawn are included; annotations about undrawn edges remain annotations.
+The three six-town diagrams below and the three five-town diagrams on page 16 use the original circular arrangements of labelled towns. Red and blue represent the two modes of transport, without assigning a particular colour to train or bus. Positions carry no metric information, and crossings are not additional vertices. The graphs are undirected; undrawn edges remain unspecified.
 
-[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 14.
+[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 15.
 
 From top to bottom:
 
@@ -281,7 +306,7 @@ From top to bottom:
 2. Red: $AC,AD,AE,AF$. Blue: $AB,CD,DE,EF$. Annotation: “$FD,EC$ can be any colour to form a monochrome triangle.”
 3. Red: $AD,AE,AF$. Blue: $AB,AC,DE,EF$. Annotation: “$FD$ can be any colour to form a monochrome triangle.”
 
-#### Page 14 — top: partial six-town graph
+#### Page 15 — top: partial six-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -313,7 +338,7 @@ From top to bottom:
 \end{document}
 ```
 
-#### Page 14 — middle: partial six-town graph
+#### Page 15 — middle: partial six-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -344,7 +369,7 @@ From top to bottom:
 \end{document}
 ```
 
-#### Page 14 — bottom: partial six-town graph
+#### Page 15 — bottom: partial six-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -374,12 +399,12 @@ From top to bottom:
 \end{document}
 ```
 
-> [!todo] Incomplete attempt — page 14
+> [!todo] Incomplete attempt — page 15
 > The annotations claim that the listed remaining edges can have any colour and still give a monochrome triangle. The missing step is explaining why an arbitrary two-colouring can be reduced to one of these three patterns. Partial diagrams can suffice for a proof; a complete edge colouring is not required. Undrawn edges remain undrawn.
 
-### Five-town diagrams (page 15)
+### Five-town diagrams (page 16)
 
-[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 15.
+[Original diagrams in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view) — page 16.
 
 Upper-left diagram: red $AB,AC,AD,AE$; blue $BC,CD,DE$.
 
@@ -387,7 +412,7 @@ Upper-right diagram: red $AC,AD,AE$; blue $AB,CD,DE$.
 
 Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 
-#### Page 15 — upper left: partial five-town graph
+#### Page 16 — upper left: partial five-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -414,7 +439,7 @@ Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 \end{document}
 ```
 
-#### Page 15 — upper right: partial five-town graph
+#### Page 16 — upper right: partial five-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -440,7 +465,7 @@ Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 \end{document}
 ```
 
-#### Page 15 — lower left: completed five-town graph
+#### Page 16 — lower left: completed five-town graph
 
 ```tikz
 \usepackage{tikz}
@@ -472,18 +497,18 @@ Lower-left completed diagram: red $AE,AD,BE,BC,CD$; blue $AB,AC,BD,CE,DE$.
 
 Written conclusions: “No monochrome triangle in this case” and “Not true if only $5$ towns.” No further prose argument is supplied.
 
-## 10. Lunar-rover fuel depots (page 16)
+## 10. Lunar-rover fuel depots (page 17)
 
 The question in [[Numbers and Sets - Introductory Sheet 2026]] asks for a starting depot from which the rover can complete one circuit, collecting fuel along the way. Total fuel permits exactly one circuit.
 
-The diagram shows the special case in which $A$ is the starting depot, with two possible inserted depots on the arc to $B$. The revised calculation below allows arrival at $A$ with carried fuel $f$. Positions are schematic; the circle represents the moon.
+The diagram marks $A,B$ and two possible inserted depots on the arc between them. The calculation allows arrival at $A$ with carried fuel $f$. Positions are schematic; the circle represents the moon.
 
 ```tikz
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}
   \draw[thick] (0,0) circle (1.8);
-  \foreach \ang/\lab in {90/{A\;\mathrm{(start)}},60/{\mathrm{new}_2},30/{\mathrm{new}_1},-10/B} {
+  \foreach \ang/\lab in {90/A,60/{\mathrm{new}_2},30/{\mathrm{new}_1},-10/B} {
     \draw (\ang:1.68)--(\ang:1.92);
     \node at (\ang:2.5) {$\lab$};
   }
@@ -515,7 +540,7 @@ The claimed conclusion is that, for every number of depots, there exists a start
 
 ### Explanation of the reduction and the full circuit
 
-The following makes the induction and fuel comparison explicit.
+**Supplementary explanation retained from the existing note.** The following makes the induction and fuel comparison explicit.
 
 Fix a direction around the circle, and use forward arc distances in that direction. The two-depot base case also works in any fixed direction: if the fuel $g$ at $A$ is smaller than $d_{AB}$, then the fuel $F-g$ at $B$ is larger than $F-d_{AB}=d_{BA}$, so start at $B$. Otherwise start at $A$. In either case the total fuel covers the return arc exactly.
 
@@ -557,6 +582,6 @@ Place a new depot $C$ between $A$ and $B$, and move fuel $f_C$ from $A$ to $C$.
 
 This earlier argument restricted $A$ to an already chosen starting depot and did not justify the reduction from an arbitrary configuration or the remainder of the circuit. It is retained as a superseded attempt; the revised argument and explanation above resolve these points.
 
-## 11–12. Unfinished (pages 17–18)
+## 11–12. Unfinished (pages 18–19)
 
-Page 17 contains only “11)”, and page 18 only “12)”; neither has a written answer.
+Page 18 contains only “11)”, and page 19 only “12)”; neither has a written answer.

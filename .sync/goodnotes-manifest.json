@@ -4,12 +4,12 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-10T23:04:19.201291Z",
+  "last_inventory_at": "2026-10-12T13:02:44.807825Z",
   "inventory_complete": true,
-  "inventory_folder_count": 10,
-  "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages compared with the immediately previous processed source: only page 16 differs; pages 1–15 and 17–18 have identical rendered pixels. No OCR substituted for reading handwritten mathematics or diagrams.",
+  "inventory_folder_count": 9,
+  "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
-  "duplicate_comparison": "Historical five-page Ch.0 Proofs.pdf and Untitled Notebook.pdf versions were previously separately read and compared with identical rendered pixels. Current Ch.0 Proofs.pdf has nine pages, fully read this run; its new material is not attributed to the absent historical notebook. Preserve the separate historical record and shared existing note without claiming full current equivalence. Other source destinations remain separate.",
+  "duplicate_comparison": "Historical five-page Ch.0 Proofs.pdf and Untitled Notebook.pdf versions were separately read and found to have identical rendered pixels in prior runs. The current nine-page Ch.0 Proofs.pdf was fully read during its recorded previous successful processing; it was unchanged and not re-read this run. Historical notebook record and shared note preserved. This run separately compared every page of the eight-page Differential Equations introduction with the new thirteen-page differentiation source: pages 1–7 have identical rendered pixels; page 8 extends the old content, and pages 9–13 add material. Both Drive IDs are recorded independently and their source-specific content remains attributed in the shared existing note.",
   "files": {
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW": {
       "drive_file_id": "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
@@ -186,8 +186,8 @@
       "source_file_name": "Numbers - Sets 0.pdf",
       "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
-      "observed_source_modified_timestamp": "2026-10-10T22:59:16.930Z",
-      "processed_source_modified_timestamp": "2026-10-10T22:59:16.930Z",
+      "observed_source_modified_timestamp": "2026-10-12T12:33:27.502Z",
+      "processed_source_modified_timestamp": "2026-10-12T12:33:27.502Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
       ],
@@ -199,17 +199,27 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Substantive gap — page 11, last bullet",
-          "detail": "The counterexample requires $e$ and $\\ln3$ to be irrational; the source supplies no justification. The irrationality of $\\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.",
+          "location": "Substantive gap — page 12, question 7(c), last bullet",
+          "detail": "The e and ln(3) counterexample requires their irrationality; the source does not supply the required justifications. Previous review flag retained at the new page location.",
           "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
         },
         {
-          "location": "Incomplete attempt — page 14",
-          "detail": "The annotations claim that the listed remaining edges can have any colour and still give a monochrome triangle. The missing step is explaining why an arbitrary two-colouring can be reduced to one of these three patterns. Partial diagrams can suffice for a proof; a complete edge colouring is not required. Undrawn edges remain undrawn.",
+          "location": "Incomplete attempt — page 15, question 9, six-town diagrams",
+          "detail": "The missing step is explaining why an arbitrary two-colouring reduces to one of the three drawn patterns. The partial drawings and annotations are retained; undrawn edges remain undrawn.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Unfinished work — page 18, question 11",
+          "detail": "Only the question number is present; no answer supplied.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+        },
+        {
+          "location": "Unfinished work — page 19, question 12",
+          "detail": "Only the question number is present; no answer supplied.",
           "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
         }
       ],
-      "total_page_count": 18,
+      "total_page_count": 19,
       "visually_inspected_pages": [
         1,
         2,
@@ -228,71 +238,79 @@
         15,
         16,
         17,
-        18
+        18,
+        19
       ],
       "original_pdf_path": null,
-      "source_sha256": "ef438c150ce1feb38647cfb33521e02d7a6b68ff979b51f5577bd744a2b54f5f",
-      "source_size_bytes": 2644323,
+      "source_sha256": "7284f661cdecad49334e624744d9f553ed10636ac4eaba9b0a054bb4c522fe07",
+      "source_size_bytes": 2731612,
       "page_image_attachments": [],
       "normalizations": {
         "page_1": "Used r consistently throughout the sum-of-squares derivation; removed n/r TODO placeholders.",
         "page_5": "Restored the square on the even terms and expressed the final divisibility implication in context.",
         "page_7": "Corrected F_4=2 to F_4=3 and made the positive index range explicit. Made the immediately reversible last-digit recurrence explicit.",
-        "pages_9_11": "Normalized the positive rational representation for log_3(4) and the immediate rational-sum contradiction.",
-        "page_12": "Expanded the intended odd-part chains and the fixed-maximum differences used in the pigeonhole arguments.",
+        "pages_10_12": "Normalized the positive rational representation for log_3(4) and the immediate rational-sum contradiction.",
+        "page_13": "Expanded the intended odd-part chains and the fixed-maximum differences used in the pigeonhole arguments.",
         "page_8": "Included the immediate n=1 zero-square case and the elementary 4t difference-of-squares identity.",
-        "page_14_diagram_3": "Corrected the previous automated edge list to include only blue AB, AC, DE, EF, as visibly drawn; undrawn BC and CD are excluded.",
-        "pages_14_15": "Existing six TikZ graph edge sets and layouts rechecked against current original images. Added new monochrome-triangle annotations and explicit five-town conclusion. Corrected the previous review explanation: a complete colouring is not needed; the missing reduction to the drawn cases is the substantive issue.",
-        "page_16": "Transcribed the revised lunar-rover insertion argument, including arbitrary consecutive A,B, carried arrival fuel f, the two cases f+f_A >= d_AC and f+f_A < d_AC, and the comparison of fuel at B. Normalized the forward C-to-B arc label to d_CB. The separate explanatory section makes the arbitrary-configuration reduction, fixed-direction two-depot base case and final circuit bookkeeping explicit, with extra fuel Delta=d_AC-(f+f_A), including A=S and B=S boundary cases. These explanatory details are user-authorized additions, not claimed to be written in the source. Preserved the earlier restricted argument under Superseded, incomplete attempt; its induction/full-circuit review flag is resolved in the expanded note.",
-        "pages_17_18": "Recorded heading-only questions 11 and 12.",
+        "page_15_diagram_3": "Corrected the previous automated edge list to include only blue AB, AC, DE, EF, as visibly drawn; undrawn BC and CD are excluded.",
+        "pages_15_16": "Existing six TikZ graph edge sets and layouts rechecked against current original images. Added new monochrome-triangle annotations and explicit five-town conclusion. Corrected the previous review explanation: a complete colouring is not needed; the missing reduction to the drawn cases is the substantive issue.",
+        "page_17": "Transcribed the revised lunar-rover insertion argument, including arbitrary consecutive A,B, carried arrival fuel f, the two cases f+f_A >= d_AC and f+f_A < d_AC, and the comparison of fuel at B. Normalized the forward C-to-B arc label to d_CB. The separate explanatory section makes the arbitrary-configuration reduction, fixed-direction two-depot base case and final circuit bookkeeping explicit, with extra fuel Delta=d_AC-(f+f_A), including A=S and B=S boundary cases. These explanatory details are user-authorized additions, not claimed to be written in the source. Preserved the earlier restricted argument under Superseded, incomplete attempt; its induction/full-circuit review flag is resolved in the expanded note.",
+        "pages_18_19": "Recorded heading-only questions 11 and 12.",
         "page_8_question_6b_revision": "Transcribed the revised prime/composite and prime-square argument, including the n=4 exception. Made the distinct-factor requirement and case split explicit by choosing a prime divisor p with factors p and n/p. Explained why separate divisibility statements alone do not imply product divisibility. Added immediate boundary case 1 divides 0!=1. Preserved the previous product-of-proper-divisors attempt as superseded; its n=4 review flag is resolved.",
-        "page_16_previous_processed_version": "Transcribed new lunar-rover induction attempt and reconstructed its actual circle/depot sketch in TikZ. Preserved the unproved induction conclusion and marked the arbitrary-configuration reduction/full-circuit gap; no solution supplied."
+        "page_16_previous_processed_version": "Transcribed new lunar-rover induction attempt and reconstructed its actual circle/depot sketch in TikZ. Preserved the unproved induction conclusion and marked the arbitrary-configuration reduction/full-circuit gap; no solution supplied.",
+        "page_9_trailing_zeroes_revision": "Transcribed the new geometric-sum bound n>8104, v_5(8104!)=2022 and four subsequent multiples of five, yielding n=8120. Made the immediate n=8119 and n=8120 endpoint counts explicit to verify minimality. Retained the earlier report of a Python-script result as an earlier calculation.",
+        "page_references": "The expanded trailing-zero calculation occupies page 9, so later material moves forward one page: irrationality 10–12, pigeonhole 13, towns 14–16, rover 17 and heading-only questions 18–19. Current-source references and review locations updated; explicitly historical previous-version references retained.",
+        "page_17_diagram": "Removed the unsupported start label previously added to A in the depot sketch; the revised argument allows arriving at A with carried fuel. Original A, B, new_1 and new_2 labels and layout preserved.",
+        "metadata_and_style": "Aligned the title and heading with the existing Numbers and Sets 0 filename without renaming the note. Kept status labels, source traceability and meaningful earlier attempts; identified the retained user-authorized lunar-rover explanation separately from the source."
       },
       "diagram_upgrades": {
         "status": "processed",
-        "note_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 1 - Handwritten Attempts.md",
+        "note_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md",
         "locations": [
           {
-            "page": 14,
-            "description": "Three partial six-town graphs reconstructed as coloured TikZ diagrams."
-          },
-          {
             "page": 15,
-            "description": "Two partial and one complete five-town graphs reconstructed as coloured TikZ diagrams."
+            "description": "Three partial six-town coloured graphs visually rechecked; original edge sets and TikZ retained."
           },
           {
             "page": 16,
-            "description": "New lunar-rover circle and depot layout reconstructed as TikZ."
+            "description": "Two partial and one complete five-town coloured graphs visually rechecked; original edge sets and TikZ retained."
+          },
+          {
+            "page": 17,
+            "description": "Depot circle rechecked and the unsupported start label at A removed."
           }
         ],
         "visually_reinspected_pages": [
-          14,
-          15
+          15,
+          16,
+          17
         ],
-        "completed_at": "2026-10-08T13:33:42.140641Z",
-        "source_sha256_verified": "8876eadfe4dd465e1d2d17a5a6acda3ba3229415fd22bb59290cc26c0733f90a",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "source_sha256_verified": "7284f661cdecad49334e624744d9f553ed10636ac4eaba9b0a054bb4c522fe07",
         "failure": null,
-        "correction": "Removed BC and CD from the page-14 third blue edge list: neither edge is drawn in the original. Confirmed in the complete page image and a 4x crop. This repairs previous automated transcription, not the student proof.",
-        "render_validation": "Exact fenced TikZ document code compiled successfully with pdfLaTeX using standard TikZ. Each of the nine one-page outputs was rendered with PyMuPDF at 3x and actually visually inspected against the original source pages. The user reports TikZJax installed; the user’s Obsidian app itself was not accessed.",
+        "correction": "Historical automated correction in a previous source version: removed undrawn BC and CD from the third six-town blue edge list. The current version’s page-15 third diagram was re-read visually this run and confirms blue AB, AC, DE and EF only; the earlier correction is retained.",
+        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
         "representations": [
           "TikZ embedded in fenced tikz Markdown blocks for TikZJax"
         ],
         "reconstructed_diagram_count": 7,
         "layout": "Original circular arrangements of the six-town and five-town graphs; red and blue edges preserved, crossings are not vertices, missing edges remain undrawn.",
-        "updated_at": "2026-10-08T13:47:55.315202Z",
-        "current_source_modified_timestamp": "2026-10-09T02:36:20.805Z",
+        "updated_at": "2026-10-12T13:02:44.807825Z",
+        "current_source_modified_timestamp": "2026-10-12T12:33:27.502Z",
         "current_source_pages_checked": [
-          14,
           15,
-          16
-        ]
+          16,
+          17
+        ],
+        "previous_render_validation": "Exact fenced TikZ document code compiled successfully with pdfLaTeX using standard TikZ. Each of the nine one-page outputs was rendered with PyMuPDF at 3x and actually visually inspected against the original source pages. The user reports TikZJax installed; the user’s Obsidian app itself was not accessed.",
+        "pending_improvements": []
       },
       "last_attempt": {
-        "date": "2026-10-10",
-        "completed_at": "2026-10-10T23:04:19.201291Z",
+        "date": "2026-10-12",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-10T22:59:16.930Z",
-        "total_page_count": 18,
+        "source_modified_timestamp": "2026-10-12T12:33:27.502Z",
+        "total_page_count": 19,
         "visually_inspected_pages": [
           1,
           2,
@@ -311,89 +329,49 @@
           15,
           16,
           17,
-          18
+          18,
+          19
         ],
         "failure": null
       },
       "current_version_diagram_review": {
         "status": "processed",
-        "source_total_page_count": 18,
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "source_total_page_count": 19,
         "source_pages": [
-          14,
           15,
-          16
+          16,
+          17
         ],
         "tikz_blocks_retained": 7,
         "new_tikz_blocks": 0,
-        "completed_at": "2026-10-10T23:04:19.201291Z",
-        "validation": "All source diagram pages visually read. Pages 14–15 have identical rendered pixels to the previous source; page 16 relocates its circle sketch but retains the same geometric information and labels. Existing seven fenced TikZ documents remain unchanged. No new compile/render or Obsidian app test claimed."
+        "modified_tikz_blocks": 1,
+        "validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render."
       },
-      "last_successful_processing_at": "2026-10-10T23:04:19.201291Z",
-      "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages compared with the immediately previous processed source: only page 16 differs; pages 1–15 and 17–18 have identical rendered pixels. No OCR substituted for reading handwritten mathematics or diagrams.",
+      "last_successful_processing_at": "2026-10-12T13:02:44.807825Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
       "changes_from_previous_processed_version": {
-        "previous_source_modified_timestamp": "2026-10-10T19:38:37.410Z",
+        "previous_processed_source_modified_timestamp": "2026-10-10T22:59:16.930Z",
         "previous_page_count": 18,
-        "current_page_count": 18,
-        "revised_locations": [
-          "page 16, question 10, lunar-rover induction argument and diagram placement"
-        ],
-        "rendered_page_comparison": {
-          "compared_pages": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18
-          ],
-          "changed_pages": [
-            16
-          ],
-          "identical_pages": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            17,
-            18
-          ]
-        },
-        "resolved_previous_todos": [
-          {
-            "location": "Essential gap — page 16, question 10, induction step",
-            "detail": "The construction inserts the new depot after a starting depot already chosen in the smaller configuration. It does not establish that every arbitrary configuration of $k+1$ depots arises in this way. A reduction to a suitable $k$-depot configuration, with a justified relation between its starting depot and the removed depot, is missing. Reaching the next depot alone also does not justify completing the whole circuit from the proposed new start.",
-            "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-          }
-        ],
-        "remaining_review_locations": [
-          "Substantive gap — page 11, last bullet",
-          "Incomplete attempt — page 14"
-        ],
-        "historical_work_preserved": "Both earlier factorial and lunar-rover attempts remain in the source note with semantic superseded status labels. No mathematical content or manual additions deleted."
-      }
+        "current_page_count": 19,
+        "scope": "Complete current source visually inspected; existing notes, manual supplements and meaningful previous attempts preserved. Only source-supported additions and clearly identified immediate explanatory steps added."
+      },
+      "failure": null,
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true,
+        "pending_improvements": []
+      },
+      "review_findings": [
+        {
+          "location": "Page 8, question 6(a), n=1 boundary assessment",
+          "status": "source_error_preserved_and_explained",
+          "detail": "The source says n=1 does not work. Its rejection is retained under Incorrect boundary assessment, with the already-present immediate counterexample 1!=1^2-0^2. The supplied question imposes no positive-square-base restriction.",
+          "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+        }
+      ]
     },
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F": {
       "drive_file_id": "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
@@ -686,66 +664,84 @@
     "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB": {
       "markdown_paths": [
         "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
-        "Concepts/Groups.md"
+        "Concepts/Groups.md",
+        "Concepts/Bijections and Permutations.md"
       ],
       "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
       "source_file_name": "Ch.1 Introduction.pdf",
-      "source_url": "https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view",
+      "source_url": "https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-09T14:37:08.657Z",
-      "processed_source_modified_timestamp": "2026-10-09T14:37:08.657Z",
+      "observed_source_modified_timestamp": "2026-10-12T12:33:36.884Z",
+      "processed_source_modified_timestamp": "2026-10-12T12:33:36.884Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
       "material_type": "handwritten lecture notes",
       "course": "Part IA Groups",
       "source_date": null,
-      "total_page_count": 6,
+      "total_page_count": 13,
       "visually_inspected_pages": [
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
       ],
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "source_sha256": "c8a66d0b6fd40b41c96bd123f7eb4f23e981e4399b96cde2a8108c27f84d5d3e",
-      "source_size_bytes": 1068209,
-      "last_successful_processing_at": "2026-10-09T15:24:56.661031Z",
-      "reading_method": "Authenticated Google Drive connector raw-file fetch of each original stored PDF (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF verified page counts and 2x (144 dpi) page rendering, and actual view_image/model vision inspection of every page. All 55 pages of the five new/modified sources were visually read; extracted text was only an optional aid, not a substitute for reading handwriting or diagrams. Unchanged sources retain prior successful coverage.",
+      "source_sha256": "73c4d51f72653face2bcc37ac86927e178866001421cc2de590a6b72e01b0c44",
+      "source_size_bytes": 2041222,
+      "last_successful_processing_at": "2026-10-12T13:02:44.807825Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
       "unresolved_todos": [],
       "last_attempt": {
-        "date": "2026-10-09",
-        "completed_at": "2026-10-09T15:24:56.661031Z",
+        "date": "2026-10-12",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-09T14:37:08.657Z",
-        "total_page_count": 6,
+        "source_modified_timestamp": "2026-10-12T12:33:36.884Z",
+        "total_page_count": 13,
         "visually_inspected_pages": [
           1,
           2,
           3,
           4,
           5,
-          6
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
         ],
         "failure": null
       },
       "normalizations": {
         "pages_1_4": "Named diagram rotations/reflections for readable labels, preserved actual triangle layouts and labelled composite stages in TikZ; exercises remain unanswered.",
-        "pages_5_6": "Preserved the lecture's associative/right-identity/right-inverse definition rather than substituting a two-sided axiom list. Made the universally quantified identity-uniqueness condition explicit. Proposition 1.5 is a statement only; no proof invented."
+        "pages_5_6": "Preserved the right-sided group definition and universally quantified identity-uniqueness condition. Proposition 1.5 now has its source proofs on pages 7–9; the earlier statement-only limitation no longer applies to this expanded version.",
+        "pages_7_9": "Preserved all four proofs in dependency order, including the second right inverse c in part (i). Omitted the proof-ending square; normalized equation chains without deleting essential reasoning.",
+        "pages_10_13": "Preserved integer-power definitions, exercise status, inverse-of-product lemma and proof, abelian/trivial/finite definitions, arithmetic examples, roots-of-unity and modular-addition exercises, and inverse-function/permutation definitions. Normalized the harmless a=b commute slip to a and b commute. Unanswered exercises remain unanswered; no theorem about symmetric groups invented.",
+        "diagram_maintenance": "Reconstructed the page-3 inverse comparison previously represented only by a reference to other diagrams. Restored rotation directions in the page-2/page-4 composition stages, with gaps around vertex labels and spacing away from the composition arrows."
       },
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
-        "reconstructed_diagram_count": 3,
+        "reconstructed_diagram_count": 4,
         "source_pages": [
           1,
           2,
           3,
           4
         ],
-        "render_validation": "Exact fenced TikZ documents compiled using pdfLaTeX outside the repository, rendered with PyMuPDF, and every resulting page actually inspected with view_image. Obsidian application itself was not accessed.",
+        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
         "corrections": [
           {
             "updated_at": "2026-10-09T15:36:34.384127Z",
@@ -760,7 +756,50 @@
             "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
             "failure": null
           }
-        ]
+        ],
+        "new_tikz_blocks": 1,
+        "modified_tikz_blocks": 1,
+        "pending_improvements": []
+      },
+      "failure": null,
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": "2026-10-09T14:37:08.657Z",
+        "previous_page_count": 6,
+        "current_page_count": 13,
+        "scope": "Complete current source visually inspected; existing notes, manual supplements and meaningful previous attempts preserved. Only source-supported additions and clearly identified immediate explanatory steps added."
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true,
+        "pending_improvements": []
+      },
+      "diagram_upgrades": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "note_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+        "locations": [
+          {
+            "page": 3,
+            "description": "Added the explicit inverse rotation/reflection comparison as one TikZ block."
+          },
+          {
+            "pages": [
+              2,
+              4
+            ],
+            "description": "Restored blue rotation arrows in the existing composition block, preserving labels, directions, reflection axes and the two operation orders."
+          }
+        ],
+        "visually_reinspected_pages": [
+          2,
+          3,
+          4
+        ],
+        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": [],
+        "failure": null
       }
     },
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs": {
@@ -834,6 +873,60 @@
           5
         ],
         "render_validation": "Exact fenced TikZ documents compiled using pdfLaTeX outside the repository, rendered with PyMuPDF, and every resulting page actually inspected with view_image. Obsidian application itself was not accessed."
+      },
+      "source_overlap_review": {
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "compared_drive_file_id": "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
+        "total_page_count": 8,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "identical_rendered_pixel_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "different_overlap_pages": [
+          8
+        ],
+        "shared_markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+        "result": "Every original page visually re-read and compared with the expanded source. Pages 1–7 are identical; all old page-8 content is retained, with additional rules attributed to the expanded source. The existing successful source timestamp is unchanged."
+      },
+      "diagram_upgrades": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "note_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+        "visually_reinspected_pages": [
+          2,
+          4,
+          5
+        ],
+        "locations": [
+          {
+            "page": 2,
+            "description": "Replaced a previously invented quadratic plotting formula with a qualitative Bezier curve and the actual secant geometry; the source specifies no function formula."
+          }
+        ],
+        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": [],
+        "failure": null
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "description": "Removed narration about underlining little o; mathematical definitions and user-requested guide preserved.",
+        "pending_improvements": []
       }
     },
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW": {
@@ -939,26 +1032,209 @@
         "current_page_count": 1,
         "scope": "Complete current source visually inspected; existing note content and manual additions retained. New teaching explanations identified as supplementary or explanatory."
       }
+    },
+    "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr": {
+      "drive_file_id": "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
+      "source_file_name": "Ch.1 Differentiation.pdf",
+      "source_url": "https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view?usp=drivesdk",
+      "observed_source_modified_timestamp": "2026-10-12T12:33:33.759Z",
+      "processed_source_modified_timestamp": "2026-10-12T12:33:33.759Z",
+      "material_type": "handwritten lecture notes",
+      "source_date": null,
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 13,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_sha256": "5cc263a0535012a1ee910199b3791b5d58d3755d66085f9a30d9984be501d86a",
+      "source_size_bytes": 2543474,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-12T13:02:44.807825Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
+      "failure": null,
+      "last_attempt": {
+        "date": "2026-10-12",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-12T12:33:33.759Z",
+        "total_page_count": 13,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "failure": null
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": null,
+        "previous_page_count": null,
+        "current_page_count": 13,
+        "scope": "Complete current source visually inspected; existing notes, manual supplements and meaningful previous attempts preserved. Only source-supported additions and clearly identified immediate explanatory steps added."
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true,
+        "pending_improvements": []
+      },
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations",
+      "course": "Part IA Differential Equations",
+      "markdown_paths": [
+        "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+        "Concepts/Differentiation Rules.md",
+        "Concepts/Taylor Series and Taylor's Theorem.md",
+        "Concepts/L'Hôpital's Rule.md"
+      ],
+      "unresolved_todos": [],
+      "normalizations": {
+        "pages_1_7": "Retained the existing faithful transcription of the common introduction, limits and order notation, after visual reading and exact rendered-pixel comparison with the separate eight-page introduction PDF.",
+        "page_8": "Added chain-rule example, product and quotient rules. Made differentiability and non-zero denominator hypotheses explicit.",
+        "page_9": "Normalized f/F notation and derivative superscripts; preserved Pascal coefficients and general Leibniz formula with its differentiability hypothesis.",
+        "pages_10_11": "Corrected the obvious n-to-zero limit notation to h-to-zero in the fixed-degree remainder estimate. Named the intermediate remainder point xi_n to avoid confusing it with x_n data. Stated the two-sided segment convention and used |h|^(n+1/2) to express the source positive-h example on both sides. Kept fixed-degree local approximation distinct from n-to-infinity series convergence; supplied no theorem proof.",
+        "pages_12_13": "Kept the full theorem separate from the proof under stronger conditions. Interpreted vanishing first derivatives as f′(x_0)=g′(x_0)=0 and made repeated-rule hypotheses explicit. The third-derivative calculation confirms the example uses sin(3x). Immediate first-two-derivative zero values and the stated limit were checked symbolically."
+      },
+      "duplicate_comparison": {
+        "compared_drive_file_id": "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
+        "compared_total_page_count": 8,
+        "compared_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "visually_inspected_pages_in_both_sources": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "identical_rendered_pixel_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "different_overlap_pages": [
+          8
+        ],
+        "result": "New 13-page PDF extends the older eight-page introduction. Pages 1–7 are identical at 144 dpi; page 8 retains the complete old chain-rule content and adds an example and two rules. Pages 9–13 are additional. Shared existing Markdown note extended; the two Drive IDs remain separate manifest records and attribution identifies the added source."
+      },
+      "diagrams": {
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 3,
+        "source_pages": [
+          2,
+          4,
+          5
+        ],
+        "new_tikz_blocks": 0,
+        "modified_tikz_blocks": 1,
+        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": []
+      }
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-10",
-    "completed_at": "2026-10-10T23:04:19.201291Z",
+    "date": "2026-10-12",
+    "completed_at": "2026-10-12T13:02:44.807825Z",
     "status": "processed",
-    "new_source_count": 0,
-    "modified_source_count": 1,
-    "processed_source_count": 1,
-    "unchanged_current_source_count": 9,
+    "new_source_count": 1,
+    "modified_source_count": 2,
+    "processed_source_count": 3,
+    "unchanged_current_source_count": 8,
+    "unchanged_source_maintenance_count": 1,
+    "classified_non_study_source_count": 0,
     "pending_source_count": 0,
-    "reading_method": "Authenticated Google Drive connector metadata and original stored-PDF raw fetch (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) rendering, and actual view_image/model vision inspection of every page 1–18. All 18 rendered pages compared with the immediately previous processed source: only page 16 differs; pages 1–15 and 17–18 have identical rendered pixels. No OCR substituted for reading handwritten mathematics or diagrams.",
-    "visually_inspected_page_count": 18,
+    "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
+    "visually_inspected_page_count": 53,
+    "new_or_modified_visually_inspected_page_count": 45,
+    "comparison_and_maintenance_visually_inspected_page_count": 8,
     "coverage_by_source": [
+      {
+        "drive_file_id": "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
+        "source_file_name": "Ch.1 Differentiation.pdf",
+        "total_page_count": 13,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "scope": "complete_new_source"
+      },
+      {
+        "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+        "source_file_name": "Ch.1 Introduction.pdf",
+        "total_page_count": 13,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "scope": "complete_modified_source"
+      },
       {
         "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
         "source_file_name": "Numbers - Sets 0.pdf",
-        "total_page_count": 18,
+        "total_page_count": 19,
         "visually_inspected_pages": [
           1,
           2,
@@ -977,52 +1253,98 @@
           15,
           16,
           17,
-          18
+          18,
+          19
         ],
         "scope": "complete_modified_source"
+      },
+      {
+        "drive_file_id": "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
+        "source_file_name": "Ch.1 Introduction.pdf",
+        "total_page_count": 8,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "scope": "unchanged_source_overlap_comparison_and_diagram_style_maintenance"
       }
     ],
-    "created_markdown_note_count": 0,
-    "created_markdown_paths": [],
-    "updated_markdown_note_count": 1,
+    "created_markdown_note_count": 4,
+    "created_markdown_paths": [
+      "Concepts/Bijections and Permutations.md",
+      "Concepts/Differentiation Rules.md",
+      "Concepts/L'Hôpital's Rule.md",
+      "Concepts/Taylor Series and Taylor's Theorem.md"
+    ],
+    "updated_markdown_note_count": 4,
     "updated_markdown_paths": [
+      "Concepts/Groups.md",
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
       "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
     ],
-    "new_tikz_block_count": 0,
+    "new_tikz_block_count": 1,
+    "modified_tikz_block_count": 3,
     "new_tikz_block_breakdown": {
-      "source_material": 0,
+      "source_material": 1,
       "user_requested_supplement": 0
     },
-    "tikz_render_validation": "All source diagram pages visually read. Pages 14–15 have identical rendered pixels to the previous source; page 16 relocates its circle sketch but retains the same geometric information and labels. Existing seven fenced TikZ documents remain unchanged. No new compile/render or Obsidian app test claimed.",
+    "tikz_render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+    "compiled_and_visually_inspected_tikz_block_count": 4,
+    "pending_diagram_count": 0,
+    "unresolved_handwriting_count": 0,
     "blocker": null,
     "published_branch": "master",
-    "resolved_review_points": [
+    "review_locations": [
       {
-        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-        "location": "page 16, question 10, induction and full circuit",
-        "resolution": "Updated source calculation plus a separately identified explanation of the reduction, fixed-direction base case and final fuel comparison."
+        "location": "Substantive gap — page 12, question 7(c), last bullet",
+        "detail": "The e and ln(3) counterexample requires their irrationality; the source does not supply the required justifications. Previous review flag retained at the new page location.",
+        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+      },
+      {
+        "location": "Incomplete attempt — page 15, question 9, six-town diagrams",
+        "detail": "The missing step is explaining why an arbitrary two-colouring reduces to one of the three drawn patterns. The partial drawings and annotations are retained; undrawn edges remain undrawn.",
+        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+      },
+      {
+        "location": "Unfinished work — page 18, question 11",
+        "detail": "Only the question number is present; no answer supplied.",
+        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+      },
+      {
+        "location": "Unfinished work — page 19, question 12",
+        "detail": "Only the question number is present; no answer supplied.",
+        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
       }
     ],
-    "notes": "Only revised page-16 content and corresponding manifest state updated. Complete 18-page original source actually visually read and compared; earlier mathematical attempts, manual additions and all diagram code retained. Prior run details remain in repository history."
+    "notes": "Added four source-backed concept notes and extended four existing notes without renaming or deleting files. Existing manual supplements and useful rejected attempts retained. Per-file unresolved review flags in unchanged sources remain intact. Only Markdown notes and matching manifest are sync output; original PDFs, rendered pages and TeX outputs stay outside the repository. Locally prepared manifest state is tentative until the same atomic commit is verified on remote master."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
-  "inventory_file_count": 10,
+  "inventory_file_count": 11,
   "source_annotation_conventions": {
     "qed": "Recognize ◻ as the source end-of-proof marker when reading, but omit all QED squares and end-of-proof markers from organized Markdown.",
     "crossed_out_proof": "Crossed-out proofs or proof/QED labels mark a wrong proof. Label the argument directly as Wrong proof, Incorrect attempt or Incomplete proof as appropriate, preserving its mathematics and explaining the error. Do not narrate pen marks or editing actions in the notes. Ordinary algebraic cancellations and axiom-assessment crosses retain their separate mathematical meaning."
   },
   "last_diagram_update": {
-    "date": "2026-10-10",
-    "updated_at": "2026-10-10T18:27:32.845104Z",
+    "date": "2026-10-12",
+    "updated_at": "2026-10-12T13:02:44.807825Z",
     "status": "processed",
     "updated_markdown_paths": [
-      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md"
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
     ],
     "representation": "TikZJax fenced tikz blocks",
-    "new_diagram_block_count": 2,
-    "source_diagram_block_count": 2,
+    "new_diagram_block_count": 1,
+    "source_diagram_block_count": 1,
     "supplemental_diagram_block_count": 0,
-    "render_validation": "Both exact new fenced TikZ documents compiled successfully with pdfLaTeX, rendered as one-page PDFs using PyMuPDF at 3x (216 dpi), and actually visually inspected. Existing three diagrams unchanged. User Obsidian app not accessed.",
+    "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
     "pending_diagram_count": 0,
     "blocker": null,
     "previous_associativity_correction": {
@@ -1037,20 +1359,22 @@
       "reason": "Previous automated rendering placed arrows through the grouping parentheses. Increased triangle spacing, positioned arrows inside or outside the groups as appropriate, and drew explicit curved parentheses to match the source grouping. No mathematical content changed.",
       "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
       "failure": null
-    }
+    },
+    "modified_diagram_block_count": 3
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [
+    "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+    "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
+    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
-    "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+    "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
-    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
-    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
     "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
-    "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo"
+    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr"
   ],
   "previously_processed_files_not_in_current_inventory": [
     {
@@ -1059,5 +1383,6 @@
       "observed_at": "2026-10-08T14:26:25.422519Z",
       "reason": "Not returned by the complete recursive listing of the verified GoodNotes folder. Historical source record, successful processing timestamp and corresponding notes preserved; no deletion or loss-of-access claim."
     }
-  ]
+  ],
+  "inventory_method": "All 9 discovered folders recursively listed with top_k=1000, each containing fewer than the limit. Explicit paginated Drive document and folder searches over every parent corroborated all 11 PDFs and 8 descendant folders; neither returned a continuation token. No title-based or problem-sheet exclusions."
 }
