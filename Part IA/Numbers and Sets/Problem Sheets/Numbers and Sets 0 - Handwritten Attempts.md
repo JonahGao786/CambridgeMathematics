@@ -508,7 +508,7 @@ The diagram marks $A,B$ and two possible inserted depots on the arc between them
 \begin{document}
 \begin{tikzpicture}
   \draw[thick] (0,0) circle (1.8);
-  \foreach \ang/\lab in {90/A,60/{\mathrm{new}_2},30/{\mathrm{new}_1},-10/B} {
+  \foreach \ang/\lab in {90/{A},60/{\mathrm{new}_2},30/{\mathrm{new}_1},-10/B} {
     \draw (\ang:1.68)--(\ang:1.92);
     \node at (\ang:2.5) {$\lab$};
   }

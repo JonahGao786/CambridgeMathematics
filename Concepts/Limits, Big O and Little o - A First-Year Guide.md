@@ -177,11 +177,12 @@ For example, $x^2=o(x)$ as $x\to0$. Given $\varepsilon>0$, choose $\delta=\varep
 $$|x^2|=|x||x|<\varepsilon|x|.$$
 By contrast, $3x$ is not $o(x)$: its ratio to $x$ is always $3$, so the bound fails for $\varepsilon=1$ at every non-zero $x$.
 
-| Statement, as $x\to0$ | Formal requirement |
-| --- | --- |
-| $f(x)\to0$ | For every $\varepsilon>0$, eventually $|f(x)|<\varepsilon$. |
-| $f(x)=O(x)$ | For one fixed $C>0$, eventually $|f(x)|\le C|x|$. |
-| $f(x)=o(x)$ | For every $\varepsilon>0$, eventually $|f(x)|\le\varepsilon|x|$. |
+
+| Statement, as $x\to 0$ | Formal requirement |
+|---|---|
+| $f(x)\to 0$ | For every $\varepsilon>0$, eventually $\lvert f(x)\rvert<\varepsilon$. |
+| $f(x)=O(x)$ | For some fixed $C>0$, eventually $\lvert f(x)\rvert\le C\lvert x\rvert$. |
+| $f(x)=o(x)$ | For every $\varepsilon>0$, eventually $\lvert f(x)\rvert\le\varepsilon\lvert x\rvert$. |
 
 Both $O(x)$ and $o(x)$ imply $f(x)\to0$ here, but convergence to zero alone is weaker: $\sqrt{|x|}\to0$ while $\sqrt{|x|}$ is not $O(x)$.
 
