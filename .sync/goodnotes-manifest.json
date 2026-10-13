@@ -4,18 +4,18 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-12T13:02:44.807825Z",
+  "last_inventory_at": "2026-10-13T11:40:01.870231Z",
   "inventory_complete": true,
   "inventory_folder_count": 9,
-  "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
+  "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
-  "duplicate_comparison": "Historical five-page Ch.0 Proofs.pdf and Untitled Notebook.pdf versions were separately read and found to have identical rendered pixels in prior runs. The current nine-page Ch.0 Proofs.pdf was fully read during its recorded previous successful processing; it was unchanged and not re-read this run. Historical notebook record and shared note preserved. This run separately compared every page of the eight-page Differential Equations introduction with the new thirteen-page differentiation source: pages 1–7 have identical rendered pixels; page 8 extends the old content, and pages 9–13 add material. Both Drive IDs are recorded independently and their source-specific content remains attributed in the shared existing note.",
+  "duplicate_comparison": "Historical Proofs/Untitled Notebook and introduction/differentiation comparisons remain in their independent per-file records and repository history; those unchanged sources were not re-read this run. On 2026-10-13, the four pages of Examples Sheet 1 Q.pdf and A3a.pdf were completely visually read and compared, with identical rendered pixels and text on every page. Their PDF bytes differ. Both current Drive versions are recorded separately and share one attributed question note.",
   "files": {
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW": {
       "drive_file_id": "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
       "source_file_name": "groups_intro_2026.pdf",
       "source_url": "https://drive.google.com/file/d/1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW/view",
-      "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+      "drive_folder_path": "GoodNotes/Part IA/Groups/Example Sheets",
       "observed_source_modified_timestamp": "2026-10-07T12:37:00.526Z",
       "processed_source_modified_timestamp": "2026-10-07T12:37:00.526Z",
       "markdown_paths": [
@@ -43,7 +43,7 @@
       "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
       "source_file_name": "Groups 0.pdf",
       "source_url": "https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view",
-      "drive_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+      "drive_folder_path": "GoodNotes/Part IA/Groups/Example Sheets",
       "observed_source_modified_timestamp": "2026-10-09T02:36:35.006Z",
       "processed_source_modified_timestamp": "2026-10-09T02:36:35.006Z",
       "markdown_paths": [
@@ -157,7 +157,7 @@
       "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
       "source_file_name": "ns_intro_2026.pdf",
       "source_url": "https://drive.google.com/file/d/1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr/view",
-      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Example Sheets",
       "observed_source_modified_timestamp": "2026-10-07T12:36:55.549Z",
       "processed_source_modified_timestamp": "2026-10-07T12:36:55.549Z",
       "markdown_paths": [
@@ -185,7 +185,7 @@
       "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
       "source_file_name": "Numbers - Sets 0.pdf",
       "source_url": "https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view?usp=drivesdk",
-      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets/Example Sheets",
       "observed_source_modified_timestamp": "2026-10-12T12:33:27.502Z",
       "processed_source_modified_timestamp": "2026-10-12T12:33:27.502Z",
       "markdown_paths": [
@@ -934,11 +934,12 @@
       "source_file_name": "Ch.1 Elementary Number Theory.pdf",
       "source_url": "https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-10T18:11:24.687Z",
-      "processed_source_modified_timestamp": "2026-10-10T18:11:24.687Z",
+      "observed_source_modified_timestamp": "2026-10-13T11:13:07.583Z",
+      "processed_source_modified_timestamp": "2026-10-13T11:13:07.583Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
-        "Concepts/Natural Numbers and Mathematical Induction.md"
+        "Concepts/Natural Numbers and Mathematical Induction.md",
+        "Concepts/Divisibility and Prime Numbers.md"
       ],
       "material_type": "handwritten lecture notes",
       "course": "Part IA Numbers and Sets",
@@ -947,36 +948,57 @@
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [],
-      "total_page_count": 2,
+      "total_page_count": 7,
       "visually_inspected_pages": [
         1,
-        2
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
       ],
-      "source_sha256": "1d7b8562fc1469156def6c73ed477eb0f7367a60d446866dc4ea016aecb59b12",
-      "source_size_bytes": 399703,
+      "source_sha256": "2ed7a0d24b361fa56a1bd09d0aec9b9acc20f0ea58767976a5ad6ca023b790ff",
+      "source_size_bytes": 1383613,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-10T18:27:32.845104Z",
-      "reading_method": "Authenticated Google Drive connector metadata and raw-file fetch of original stored PDFs (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) page rendering, and actual view_image/model vision inspection of all 33 pages of the four new/modified sources. Handwritten mathematics and diagrams read from original page images; extracted text was not substituted for visual reading. Unchanged sources retain their previous verified coverage.",
+      "last_successful_processing_at": "2026-10-13T11:40:01.870231Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
       "normalizations": {
-        "pages_1_2": "Preserved positive-integer convention, successor axioms, induction quantifiers and recursive addition. Explained the base operation and successor recursion without claiming associativity or commutativity proved. Separate concept note labels supplementary explanation."
+        "pages_1_2": "Preserved positive-integer convention, successor axioms, induction quantifiers and recursive addition. Explained the base operation and successor recursion without claiming associativity or commutativity proved. Separate concept note labels supplementary explanation.",
+        "pages_2_3": "Preserved all arithmetic and order rules with natural-number domains and their check-without-proof status. Made the indicated induction on Q(n) immediate base and step explicit without inventing a converse well-ordering theorem.",
+        "page_4": "Normalized the dummy index Q(k) in the strong-induction proof and made its non-empty premise and final contradiction explicit. Omitted the proof-ending square.",
+        "pages_5_7": "Preserved integer identity/inverses, positive multiplier for order, rational denominator restrictions and equivalence relation, addition formula, inclusions, and divisibility/prime/composite definitions. No unprovided multiplication formula or theorem proof attributed to the source."
       },
       "last_attempt": {
-        "date": "2026-10-10",
-        "completed_at": "2026-10-10T18:27:32.845104Z",
+        "date": "2026-10-13",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-10T18:11:24.687Z",
-        "total_page_count": 2,
+        "source_modified_timestamp": "2026-10-13T11:13:07.583Z",
+        "total_page_count": 7,
         "visually_inspected_pages": [
           1,
-          2
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "failure": null
       },
       "changes_from_previous_processed_version": {
-        "previous_page_count": null,
-        "current_page_count": 2,
-        "scope": "Complete current source visually inspected; existing note content and manual additions retained. New teaching explanations identified as supplementary or explanatory."
+        "previous_processed_source_modified_timestamp": "2026-10-10T18:11:24.687Z",
+        "previous_page_count": 2,
+        "current_page_count": 7,
+        "scope": "Entire current source visually read. Existing content and manual supplements preserved; source additions and immediate mathematical normalizations recorded."
+      },
+      "failure": null,
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "description": "Clean mathematical Markdown, semantic proof-status labels, no proof-ending markers, preserved manual additions and unfinished work.",
+        "pending_improvements": []
       }
     },
     "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo": {
@@ -984,12 +1006,12 @@
       "source_file_name": "Examples Sheet 1.pdf",
       "source_url": "https://drive.google.com/file/d/13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Differential Equations/Examples Sheets",
-      "observed_source_modified_timestamp": "2026-10-10T02:38:24.519Z",
-      "processed_source_modified_timestamp": "2026-10-10T02:38:24.519Z",
+      "observed_source_modified_timestamp": "2026-10-13T07:20:53.188Z",
+      "processed_source_modified_timestamp": "2026-10-13T07:20:53.188Z",
       "markdown_paths": [
         "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
       ],
-      "material_type": "handwritten worked proofs",
+      "material_type": "handwritten worked solutions and incomplete attempts",
       "course": "Part IA Differential Equations",
       "source_date": null,
       "status": "processed",
@@ -997,40 +1019,129 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Missing question context — page 1, answers 1 and 2",
-          "detail": "Only handwritten answers are supplied; original question text and hypotheses are absent. The finite binomial proof covers positive integer n, and the product-rule proof requires u,v differentiable at x. These necessary assumptions are made explicit without reconstructing the missing questions.",
+          "location": "Page 1, question 1, n=0 case",
+          "detail": "Supplied question is for non-negative integer n; the handwritten calculation treats positive n and does not separately address the constant case.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        },
+        {
+          "location": "Page 2, question 3(ii)",
+          "detail": "The third derivative of (ln x)^2 is not answered in the source.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        },
+        {
+          "location": "Page 3, question 4(ii), infinite remainder",
+          "detail": "The limit is taken through an infinite sum without a remainder bound or another convergence justification. The attempt and its claimed conclusion are preserved; no replacement proof supplied.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        },
+        {
+          "location": "Page 6, question 6, N=1 boundary",
+          "detail": "The strict lower integral comparison fails at N=1, where both sides are zero. The handwritten calculation does not separately treat this boundary for the final bounds.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        },
+        {
+          "location": "Page 8, starred question 8",
+          "detail": "Heading only; no written answer.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        },
+        {
+          "location": "Page 9, starred question 9",
+          "detail": "Heading only; no written answer.",
           "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
         }
       ],
-      "total_page_count": 1,
+      "total_page_count": 9,
       "visually_inspected_pages": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
       ],
-      "source_sha256": "12c6f0665420cb4ffdf8ec20efab3bec773b56437876ceb08867be0c727c4e67",
-      "source_size_bytes": 217822,
+      "source_sha256": "5ff7520f6df3e8710f0e14b833aa9baa1f2edc4bef223ffc603da1aefd9ab082",
+      "source_size_bytes": 1065944,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-10T18:27:32.845104Z",
-      "reading_method": "Authenticated Google Drive connector metadata and raw-file fetch of original stored PDFs (include_base64=false), supported sediment download_file materialization outside the repository, PyMuPDF page-count verification and complete 2x (144 dpi) page rendering, and actual view_image/model vision inspection of all 33 pages of the four new/modified sources. Handwritten mathematics and diagrams read from original page images; extracted text was not substituted for visual reading. Unchanged sources retain their previous verified coverage.",
+      "last_successful_processing_at": "2026-10-13T11:40:01.870231Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
       "normalizations": {
         "page_1_question_1": "Preserved finite binomial proof, made its positive-integer scope and empty sum at n=1 explicit; no claim for arbitrary real powers.",
-        "page_1_question_2": "Preserved the add/subtract product calculation and correction term. Explained its vanishing and established existence of the product derivative, making the implicit continuity/finite-limit steps explicit. Stated required differentiability hypotheses; original question text remains missing."
+        "page_1_question_2": "Preserved the add/subtract product calculation and correction term, the existing explanation of its vanishing and derivative existence, and required differentiability hypotheses. Original question text is now supplied in the separately read and linked question note.",
+        "pages_2_3": "Preserved both repeated-derivative methods, Taylor formula about x=1 and log series. Clarified the fixed x and dummy substitution x/k, the eventual positivity of the logarithm argument, and grouping in ln((1+x/k)^k). The infinite-remainder limit gap remains marked; no new proof supplied.",
+        "pages_4_5": "Normalized the intended log-series coefficients and restored the inverse square on (x-a)^(-2). Made necessary a>0 for the real fractional-power expansion and a!=0 for the reciprocal-square expansion explicit. Preserved the original Taylor derivations; coefficients checked symbolically.",
+        "page_6": "Retained the strict integral comparisons, with exact antiderivative evaluations written as equalities. Corrected the obvious final exponent N+1 to N, as required by the immediately preceding logarithmic line and the printed question. Scoped the lower strict comparison to N>=2 and recorded the unaddressed N=1 boundary. Rebuilt the actual two-curve/dashed-step sketch.",
+        "page_7": "Interpreted F as an antiderivative of the explicitly defined f(t)=e^(-t^2), consistent with the printed integral; retained both derivatives and the differential-equation substitution.",
+        "pages_8_9": "Recorded heading-only starred questions 8 and 9 without supplying answers."
       },
       "last_attempt": {
-        "date": "2026-10-10",
-        "completed_at": "2026-10-10T18:27:32.845104Z",
+        "date": "2026-10-13",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-10T02:38:24.519Z",
-        "total_page_count": 1,
+        "source_modified_timestamp": "2026-10-13T07:20:53.188Z",
+        "total_page_count": 9,
         "visually_inspected_pages": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
         ],
         "failure": null
       },
       "changes_from_previous_processed_version": {
-        "previous_page_count": null,
-        "current_page_count": 1,
-        "scope": "Complete current source visually inspected; existing note content and manual additions retained. New teaching explanations identified as supplementary or explanatory."
+        "previous_processed_source_modified_timestamp": "2026-10-10T02:38:24.519Z",
+        "previous_page_count": 1,
+        "current_page_count": 9,
+        "scope": "Entire current source visually read. Existing content and manual supplements preserved; source additions and immediate mathematical normalizations recorded."
+      },
+      "failure": null,
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "description": "Clean mathematical Markdown, semantic proof-status labels, no proof-ending markers, preserved manual additions and unfinished work.",
+        "pending_improvements": []
+      },
+      "resolved_previous_todos": [
+        {
+          "location": "Missing question context — page 1, answers 1 and 2",
+          "detail": "Missing question context resolved by separately and completely reading Examples Sheet 1 Q.pdf and A3a.pdf; the non-negative exponent scope is now known.",
+          "resolved_at": "2026-10-13T11:40:01.870231Z",
+          "question_drive_file_ids": [
+            "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+            "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
+          ]
+        }
+      ],
+      "question_context": {
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
+        "question_drive_file_ids": [
+          "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+          "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
+        ],
+        "unanswered_questions_not_present": [
+          "3(ii)",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      },
+      "diagrams": {
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 1,
+        "source_pages": [
+          6
+        ],
+        "render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
+        "pending_improvements": []
       }
     },
     "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr": {
@@ -1169,98 +1280,40 @@
         "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
         "pending_improvements": []
       }
-    }
-  },
-  "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
-  "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
-  "last_run": {
-    "date": "2026-10-12",
-    "completed_at": "2026-10-12T13:02:44.807825Z",
-    "status": "processed",
-    "new_source_count": 1,
-    "modified_source_count": 2,
-    "processed_source_count": 3,
-    "unchanged_current_source_count": 8,
-    "unchanged_source_maintenance_count": 1,
-    "classified_non_study_source_count": 0,
-    "pending_source_count": 0,
-    "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
-    "visually_inspected_page_count": 53,
-    "new_or_modified_visually_inspected_page_count": 45,
-    "comparison_and_maintenance_visually_inspected_page_count": 8,
-    "coverage_by_source": [
-      {
-        "drive_file_id": "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
-        "source_file_name": "Ch.1 Differentiation.pdf",
-        "total_page_count": 13,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13
-        ],
-        "scope": "complete_new_source"
-      },
-      {
-        "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
-        "source_file_name": "Ch.1 Introduction.pdf",
-        "total_page_count": 13,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13
-        ],
-        "scope": "complete_modified_source"
-      },
-      {
-        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-        "source_file_name": "Numbers - Sets 0.pdf",
-        "total_page_count": 19,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16,
-          17,
-          18,
-          19
-        ],
-        "scope": "complete_modified_source"
-      },
-      {
-        "drive_file_id": "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
-        "source_file_name": "Ch.1 Introduction.pdf",
+    },
+    "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN": {
+      "drive_file_id": "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
+      "source_file_name": "Ch.2 Vectors.pdf",
+      "source_url": "https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
+      "observed_source_modified_timestamp": "2026-10-13T11:13:10.804Z",
+      "processed_source_modified_timestamp": "2026-10-13T11:13:10.804Z",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 8,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_sha256": "a16c0953aa4a9d508d7e93afa3fa73dcd6c806040a8886c514f705e6061aa148",
+      "source_size_bytes": 1406781,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-13T11:40:01.870231Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
+      "failure": null,
+      "last_attempt": {
+        "date": "2026-10-13",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-13T11:13:10.804Z",
         "total_page_count": 8,
         "visually_inspected_pages": [
           1,
@@ -1272,79 +1325,455 @@
           7,
           8
         ],
-        "scope": "unchanged_source_overlap_comparison_and_diagram_style_maintenance"
+        "failure": null
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "description": "Clean mathematical Markdown, semantic proof-status labels, no proof-ending markers, preserved manual additions and unfinished work.",
+        "pending_improvements": []
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": null,
+        "previous_page_count": null,
+        "current_page_count": 8,
+        "scope": "Entire current source visually read. Existing content and manual supplements preserved; source additions and immediate mathematical normalizations recorded."
+      },
+      "material_type": "handwritten lecture notes",
+      "course": "Part IA Vectors and Matrices",
+      "source_date": null,
+      "markdown_paths": [
+        "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+        "Concepts/Vectors and Linear Span.md",
+        "Concepts/Real Inner Products and Cauchy-Schwarz.md"
+      ],
+      "unresolved_todos": [],
+      "normalizations": {
+        "pages_1_4": "Used bold vector notation consistently. Qualified geometric direction and angle statements for non-zero vectors, retaining the source’s zero vector and operation laws. Normalized the positive-scalar direction case to lambda>0, consistent with the opposite-direction negative case and sketch.",
+        "page_5": "Restored the missing hat in b-(a_hat dot b)a_hat from the immediately preceding projection formula and orthogonality claim. Preserved projection denominator, signed component, cosine-rule vector identity and proof.",
+        "pages_6_8": "Used the abstract inner-product notation for the general induced norm. Restored the minus in both factors of the squared-norm expansion and missing norm squares in the intermediate Cauchy-Schwarz inequality, justified by the preceding discriminant and final square-root line. Made the immediate zero-vector case explicit. Kept the real-space scope and source equality statement; no additional equality proof invented."
+      },
+      "diagrams": {
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 6,
+        "source_pages": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
+        "pending_improvements": []
+      },
+      "diagram_upgrades": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "note_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+        "locations": [
+          {
+            "page": 1,
+            "description": "Directed AB and labelled parallelogram with extended red parallel lines and blue resultant."
+          },
+          {
+            "page": 2,
+            "description": "Associativity arrows and positive/negative scalar multiplication."
+          },
+          {
+            "page": 4,
+            "description": "Angle and red orthogonal projection."
+          },
+          {
+            "page": 5,
+            "description": "Cosine-rule triangle, labels, lengths and directions."
+          }
+        ],
+        "visually_reinspected_pages": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
+        "pending_improvements": [],
+        "failure": null
+      }
+    },
+    "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv": {
+      "drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+      "source_file_name": "Examples Sheet 1 Q.pdf",
+      "source_url": "https://drive.google.com/file/d/1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations/Examples Sheets",
+      "observed_source_modified_timestamp": "2026-10-13T07:20:51.313Z",
+      "processed_source_modified_timestamp": "2026-10-13T07:20:51.313Z",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 4,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_sha256": "4f332c59bd2b61946827d3651c7656ba9c505a187d087656e52987063c4b38a8",
+      "source_size_bytes": 104465,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-13T11:40:01.870231Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
+      "failure": null,
+      "last_attempt": {
+        "date": "2026-10-13",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-13T07:20:51.313Z",
+        "total_page_count": 4,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "failure": null
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "description": "Clean mathematical Markdown, semantic proof-status labels, no proof-ending markers, preserved manual additions and unfinished work.",
+        "pending_improvements": []
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": null,
+        "previous_page_count": null,
+        "current_page_count": 4,
+        "scope": "Entire current source visually read. Existing content and manual supplements preserved; source additions and immediate mathematical normalizations recorded."
+      },
+      "material_type": "problem sheet",
+      "course": "Part IA Differential Equations",
+      "source_date": "Michaelmas Term 2026",
+      "author": "Prof. Christopher Thomas",
+      "markdown_paths": [
+        "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+      ],
+      "unresolved_todos": [
+        {
+          "location": "Page 2, starred question 9, p=1 endpoint",
+          "detail": "The printed strict income-share comparison says all positive p, but theta(1)=1. The strict statement needs 0<p<1. Original printed wording is preserved with a localized review note.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+        }
+      ],
+      "normalizations": {
+        "printed_text": "Preserved all 14 questions, numbering and subparts, starred status, instructions, parameter conditions, limits, integrals, thermodynamic held-variable derivatives, hint, author/date, copyright notice and source contact. Extracted text was checked against every page; OCR-like arrow substitutions were not used as mathematics."
+      },
+      "duplicate_comparison": {
+        "compared_drive_file_id": "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG",
+        "compared_total_page_count": 4,
+        "compared_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "visually_inspected_pages_in_both_sources": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "identical_rendered_pixel_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "byte_identical": false,
+        "result": "All four rendered pages and extracted text match. PDF SHA-256 values differ; each Drive ID retains its own source version and coverage. One shared Markdown question note identifies both sources."
+      },
+      "diagrams": {
+        "representation": null,
+        "reconstructed_diagram_count": 0,
+        "description": "The printed sheet supplies no drawn diagrams. Requests to sketch graphs remain exercises; no answer diagrams invented.",
+        "pending_improvements": []
+      }
+    },
+    "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG": {
+      "drive_file_id": "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG",
+      "source_file_name": "A3a.pdf",
+      "source_url": "https://drive.google.com/file/d/1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations/Examples Sheets",
+      "observed_source_modified_timestamp": "2026-10-13T07:20:49.252Z",
+      "processed_source_modified_timestamp": "2026-10-13T07:20:49.252Z",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 4,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_sha256": "22da4e2acdd8313690c8f12b48b2ea19165ecbd2c031de30267f5a7fd764c14b",
+      "source_size_bytes": 104465,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-13T11:40:01.870231Z",
+      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
+      "failure": null,
+      "last_attempt": {
+        "date": "2026-10-13",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-13T07:20:49.252Z",
+        "total_page_count": 4,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "failure": null
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-13T11:40:01.870231Z",
+        "description": "Clean mathematical Markdown, semantic proof-status labels, no proof-ending markers, preserved manual additions and unfinished work.",
+        "pending_improvements": []
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": null,
+        "previous_page_count": null,
+        "current_page_count": 4,
+        "scope": "Entire current source visually read. Existing content and manual supplements preserved; source additions and immediate mathematical normalizations recorded."
+      },
+      "material_type": "problem sheet",
+      "course": "Part IA Differential Equations",
+      "source_date": "Michaelmas Term 2026",
+      "author": "Prof. Christopher Thomas",
+      "markdown_paths": [
+        "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+      ],
+      "unresolved_todos": [
+        {
+          "location": "Page 2, starred question 9, p=1 endpoint",
+          "detail": "The printed strict income-share comparison says all positive p, but theta(1)=1. The strict statement needs 0<p<1. Original printed wording is preserved with a localized review note.",
+          "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+        }
+      ],
+      "normalizations": {
+        "printed_text": "Preserved all 14 questions, numbering and subparts, starred status, instructions, parameter conditions, limits, integrals, thermodynamic held-variable derivatives, hint, author/date, copyright notice and source contact. Extracted text was checked against every page; OCR-like arrow substitutions were not used as mathematics."
+      },
+      "duplicate_comparison": {
+        "compared_drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+        "compared_total_page_count": 4,
+        "compared_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "visually_inspected_pages_in_both_sources": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "identical_rendered_pixel_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "byte_identical": false,
+        "result": "All four rendered pages and extracted text match. PDF SHA-256 values differ; each Drive ID retains its own source version and coverage. One shared Markdown question note identifies both sources."
+      },
+      "diagrams": {
+        "representation": null,
+        "reconstructed_diagram_count": 0,
+        "description": "The printed sheet supplies no drawn diagrams. Requests to sketch graphs remain exercises; no answer diagrams invented.",
+        "pending_improvements": []
+      }
+    }
+  },
+  "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
+  "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
+  "last_run": {
+    "date": "2026-10-13",
+    "completed_at": "2026-10-13T11:40:01.870231Z",
+    "status": "processed",
+    "new_source_count": 3,
+    "modified_source_count": 2,
+    "processed_source_count": 5,
+    "unchanged_current_source_count": 9,
+    "classified_non_study_source_count": 0,
+    "pending_source_count": 0,
+    "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
+    "visually_inspected_page_count": 32,
+    "coverage_by_source": [
+      {
+        "drive_file_id": "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
+        "source_file_name": "Ch.1 Elementary Number Theory.pdf",
+        "total_page_count": 7,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scope": "complete_modified_source"
+      },
+      {
+        "drive_file_id": "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
+        "source_file_name": "Ch.2 Vectors.pdf",
+        "total_page_count": 8,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "scope": "complete_new_source"
+      },
+      {
+        "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
+        "source_file_name": "Examples Sheet 1.pdf",
+        "total_page_count": 9,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "scope": "complete_modified_source"
+      },
+      {
+        "drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+        "source_file_name": "Examples Sheet 1 Q.pdf",
+        "total_page_count": 4,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scope": "complete_new_source"
+      },
+      {
+        "drive_file_id": "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG",
+        "source_file_name": "A3a.pdf",
+        "total_page_count": 4,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scope": "complete_new_source"
       }
     ],
-    "created_markdown_note_count": 4,
+    "created_markdown_note_count": 5,
     "created_markdown_paths": [
-      "Concepts/Bijections and Permutations.md",
-      "Concepts/Differentiation Rules.md",
-      "Concepts/L'Hôpital's Rule.md",
-      "Concepts/Taylor Series and Taylor's Theorem.md"
+      "Concepts/Divisibility and Prime Numbers.md",
+      "Concepts/Real Inner Products and Cauchy-Schwarz.md",
+      "Concepts/Vectors and Linear Span.md",
+      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
+      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md"
     ],
-    "updated_markdown_note_count": 4,
+    "updated_markdown_note_count": 3,
     "updated_markdown_paths": [
-      "Concepts/Groups.md",
-      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
-      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
-      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+      "Concepts/Natural Numbers and Mathematical Induction.md",
+      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
+      "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md"
     ],
-    "new_tikz_block_count": 1,
-    "modified_tikz_block_count": 3,
+    "new_tikz_block_count": 7,
+    "modified_tikz_block_count": 0,
     "new_tikz_block_breakdown": {
-      "source_material": 1,
+      "source_material": 7,
       "user_requested_supplement": 0
     },
-    "tikz_render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
-    "compiled_and_visually_inspected_tikz_block_count": 4,
+    "tikz_render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
+    "compiled_and_visually_inspected_tikz_block_count": 7,
     "pending_diagram_count": 0,
     "unresolved_handwriting_count": 0,
     "blocker": null,
     "published_branch": "master",
-    "review_locations": [
+    "resolved_review_points": [
       {
-        "location": "Substantive gap — page 12, question 7(c), last bullet",
-        "detail": "The e and ln(3) counterexample requires their irrationality; the source does not supply the required justifications. Previous review flag retained at the new page location.",
-        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-      },
-      {
-        "location": "Incomplete attempt — page 15, question 9, six-town diagrams",
-        "detail": "The missing step is explaining why an arbitrary two-colouring reduces to one of the three drawn patterns. The partial drawings and annotations are retained; undrawn edges remain undrawn.",
-        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-      },
-      {
-        "location": "Unfinished work — page 18, question 11",
-        "detail": "Only the question number is present; no answer supplied.",
-        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
-      },
-      {
-        "location": "Unfinished work — page 19, question 12",
-        "detail": "Only the question number is present; no answer supplied.",
-        "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+        "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
+        "location": "Page 1, missing question context",
+        "resolution": "Original question sheet now completely read and linked; handwriting remains a separate source."
       }
     ],
-    "notes": "Added four source-backed concept notes and extended four existing notes without renaming or deleting files. Existing manual supplements and useful rejected attempts retained. Per-file unresolved review flags in unchanged sources remain intact. Only Markdown notes and matching manifest are sync output; original PDFs, rendered pages and TeX outputs stay outside the repository. Locally prepared manifest state is tentative until the same atomic commit is verified on remote master."
+    "review_locations": [
+      {
+        "location": "Page 1, question 1, n=0 case",
+        "detail": "Supplied question is for non-negative integer n; the handwritten calculation treats positive n and does not separately address the constant case.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 2, question 3(ii)",
+        "detail": "The third derivative of (ln x)^2 is not answered in the source.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 3, question 4(ii), infinite remainder",
+        "detail": "The limit is taken through an infinite sum without a remainder bound or another convergence justification. The attempt and its claimed conclusion are preserved; no replacement proof supplied.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 6, question 6, N=1 boundary",
+        "detail": "The strict lower integral comparison fails at N=1, where both sides are zero. The handwritten calculation does not separately treat this boundary for the final bounds.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 8, starred question 8",
+        "detail": "Heading only; no written answer.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 9, starred question 9",
+        "detail": "Heading only; no written answer.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      },
+      {
+        "location": "Page 2, starred question 9, p=1 endpoint",
+        "detail": "The printed strict income-share comparison says all positive p, but theta(1)=1. The strict statement needs 0<p<1. Original printed wording is preserved with a localized review note.",
+        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+      }
+    ],
+    "notes": "Three new and two modified study sources processed completely. Five notes created and three existing notes updated; the two printed PDFs share one question note after full page-by-page comparison. Manual explanations and incomplete attempts preserved. Four renamed-folder metadata paths updated without renaming or deleting notes. Per-file review flags in unchanged sources remain intact. Only Markdown and the matching manifest are sync output. Local manifest state is tentative until the same atomic commit is verified on remote master."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
-  "inventory_file_count": 11,
+  "inventory_file_count": 14,
   "source_annotation_conventions": {
     "qed": "Recognize ◻ as the source end-of-proof marker when reading, but omit all QED squares and end-of-proof markers from organized Markdown.",
     "crossed_out_proof": "Crossed-out proofs or proof/QED labels mark a wrong proof. Label the argument directly as Wrong proof, Incorrect attempt or Incomplete proof as appropriate, preserving its mathematics and explaining the error. Do not narrate pen marks or editing actions in the notes. Ordinary algebraic cancellations and axiom-assessment crosses retain their separate mathematical meaning."
   },
   "last_diagram_update": {
-    "date": "2026-10-12",
-    "updated_at": "2026-10-12T13:02:44.807825Z",
+    "date": "2026-10-13",
+    "updated_at": "2026-10-13T11:40:01.870231Z",
     "status": "processed",
     "updated_markdown_paths": [
-      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
-      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
-      "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
     ],
     "representation": "TikZJax fenced tikz blocks",
-    "new_diagram_block_count": 1,
-    "source_diagram_block_count": 1,
+    "new_diagram_block_count": 7,
+    "source_diagram_block_count": 7,
     "supplemental_diagram_block_count": 0,
-    "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+    "render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
     "pending_diagram_count": 0,
     "blocker": null,
     "previous_associativity_correction": {
@@ -1360,21 +1789,24 @@
       "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
       "failure": null
     },
-    "modified_diagram_block_count": 3
+    "modified_diagram_block_count": 0
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [
-    "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
-    "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
-    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
-    "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
+    "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+    "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
+    "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
+    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
+    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
     "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
     "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
-    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr"
+    "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
+    "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+    "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
   ],
   "previously_processed_files_not_in_current_inventory": [
     {
@@ -1384,5 +1816,46 @@
       "reason": "Not returned by the complete recursive listing of the verified GoodNotes folder. Historical source record, successful processing timestamp and corresponding notes preserved; no deletion or loss-of-access claim."
     }
   ],
-  "inventory_method": "All 9 discovered folders recursively listed with top_k=1000, each containing fewer than the limit. Explicit paginated Drive document and folder searches over every parent corroborated all 11 PDFs and 8 descendant folders; neither returned a continuation token. No title-based or problem-sheet exclusions."
+  "inventory_method": "Every discovered folder recursively listed with top_k=1000, with fewer items than the limit in each. Paginated Drive document and folder searches over all nine parent IDs corroborated 14 PDFs and eight descendant folders, with no continuation tokens. All study types included without title-based exclusions.",
+  "source_folder_metadata_updates": {
+    "completed_at": "2026-10-13T11:40:01.870231Z",
+    "files": [
+      {
+        "drive_file_id": "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+        "previous_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+        "current_folder_path": "GoodNotes/Part IA/Numbers and Sets/Example Sheets",
+        "markdown_paths_retained": [
+          "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md"
+        ]
+      },
+      {
+        "drive_file_id": "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
+        "previous_folder_path": "GoodNotes/Part IA/Numbers and Sets/Problem Sheets",
+        "current_folder_path": "GoodNotes/Part IA/Numbers and Sets/Example Sheets",
+        "markdown_paths_retained": [
+          "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets - Introductory Sheet 2026.md",
+          "Concepts/Fibonacci Numbers.md"
+        ]
+      },
+      {
+        "drive_file_id": "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
+        "previous_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+        "current_folder_path": "GoodNotes/Part IA/Groups/Example Sheets",
+        "markdown_paths_retained": [
+          "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md",
+          "Concepts/Latin Squares.md"
+        ]
+      },
+      {
+        "drive_file_id": "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
+        "previous_folder_path": "GoodNotes/Part IA/Groups/Problem Sheets",
+        "current_folder_path": "GoodNotes/Part IA/Groups/Example Sheets",
+        "markdown_paths_retained": [
+          "Part IA/Groups/Problem Sheets/Groups - Introductory Sheet 2026.md",
+          "Concepts/Latin Squares.md"
+        ]
+      }
+    ],
+    "description": "Groups and Numbers and Sets source folders are now named Example Sheets. Existing Markdown destinations and successful source timestamps of unchanged files retained."
+  }
 }

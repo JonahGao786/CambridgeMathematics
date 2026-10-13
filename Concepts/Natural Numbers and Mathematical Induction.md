@@ -14,7 +14,7 @@ The convention in these notes is $\mathbb N=\{1,2,3,\ldots\}$. Write $S(n)=n+1$ 
 
 The source states injectivity in the equivalent contrapositive form $m\ne n\Rightarrow S(m)\ne S(n)$; see [[Proof by Contradiction and Contraposition]].
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 1–2.
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 1–4. The later sections below extend the source-backed content while retaining the supplementary explanation.
 
 ## Why all three matter — supplementary explanation
 
@@ -35,3 +35,32 @@ The induction hypothesis is local to the step. It does not assume the final univ
 For each fixed $n\in\mathbb N$, define
 $$n+1=S(n),\qquad n+(k+1)=S(n+k)\quad(k\in\mathbb N).$$
 Induction on $k$ makes addition by every natural number available. This does not itself assert that arbitrary regroupings of sums are valid; algebraic laws require their own proofs.
+
+## Strong induction
+
+The induction axiom above is **weak induction**. **Strong induction** replaces the step hypothesis $P(n)$ by all earlier cases:
+$$P(1),\qquad
+\forall n\in\mathbb N:\quad
+\bigl(\forall m\le n,\ P(m)\bigr)\Rightarrow P(n+1)
+\quad\Longrightarrow\quad\forall n\in\mathbb N,\ P(n).$$
+The quantified $m$ are natural numbers.
+
+The two principles are equivalent. Strong induction implies weak induction because it supplies $P(n)$. Conversely, apply weak induction to
+$$Q(n):\quad\forall m\le n,\ P(m).$$
+Its base case is $P(1)$; its step uses the strong-step hypothesis to add $P(n+1)$ to the preceding cases.
+
+## Well-ordering and least counterexamples
+
+Every non-empty subset of $\mathbb N$ has a least element: the **well-ordering principle**.
+
+The source proves that strong induction implies this principle. Suppose a non-empty set has no least element and let $Q(n)$ mean $n$ is not in the set. Then $Q(1)$ holds, or $1$ would be least. If all smaller natural numbers lie outside the set, $n$ must also lie outside it, or $n$ would be least. Strong induction gives $Q(n)$ for every $n$, contradicting non-emptiness.
+
+Thus, when a universal assertion is false, its counterexamples have a least element. A proof can begin with that least counterexample and seek a contradiction. The source does not supply the converse implication from well-ordering to induction.
+
+## Arithmetic and order
+
+The extended source states the commutative and associative laws for addition and multiplication, distributivity, and the order definition
+$$a<b\quad\Longleftrightarrow\quad a+c=b\text{ for some }c\in\mathbb N.$$
+It asks that these laws be checked rather than supplying their proofs. For the integer extension, $a<b\Rightarrow ac<bc$ requires $c>0$.
+
+The source proceeds to integers, rationals and [[Divisibility and Prime Numbers]]; see the complete source note for the definitions and quantifiers.
