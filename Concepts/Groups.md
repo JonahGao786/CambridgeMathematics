@@ -35,4 +35,10 @@ The additive groups of $\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$ are abelian, wi
 
 The source also gives exercises on the multiplicative group $C_n=\{z\in\mathbb C:z^n=1\}$ of [[Roots of Unity|roots of unity]] and addition modulo $n$ on $\mathbb Z_n=\{0,\ldots,n-1\}$. The exercise proofs are not supplied. [[Bijections and Permutations]] introduces the set-theoretic inverse of a function.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–13, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+## Symmetric groups and subgroups
+
+For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group. [[Bijections and Permutations]] records the composition and inverse lemmas used in the source proof.
+
+A subset $H\subseteq G$ is a subgroup if it contains $e_G$ and is closed under the operation and inverses. [[Subgroups and Generated Subgroups]] records the examples, the classification $H=n\mathbb Z$ for subgroups of the additive integers, and the intersection definition of $\langle X\rangle$.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–18, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].

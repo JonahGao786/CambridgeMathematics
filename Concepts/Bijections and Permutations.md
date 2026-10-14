@@ -1,11 +1,11 @@
 ---
 title: Bijections and Permutations
-material_type: source-backed definitions
+material_type: source-backed definitions, lemmas and proofs
 course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: [13]
+source_pages: [13, 14, 15]
 ---
 
 # Bijections and Permutations
@@ -17,4 +17,20 @@ $$(f\circ g)(y)=f(g(y)).$$
 
 A bijection $X\to X$ is a **permutation**.
 
-Source: Definition 1.9 in [[Groups - Chapter 1 Examples and Definitions]], page 13, under “Symmetric groups”. The source ends at the permutation definition; no symmetric-group theorem or exercise solution is supplied there. See [[Groups]] for inverses with respect to a group operation.
+## Composition and the symmetric group
+
+For a set $X$, $\operatorname{Sym}(X)$ is the set of permutations of $X$ (Definition 1.10).
+
+Composition is associative: for $f:W\to X$, $g:X\to Y$ and $h:Y\to Z$,
+$$(h\circ g)\circ f=h\circ(g\circ f),$$
+because both sides send $w$ to $h(g(f(w)))$ (Lemma 1.11).
+
+If $f,f'\in\operatorname{Sym}(X)$ have inverses $g,g'$, then
+$$(f\circ f')^{-1}=g'\circ g.$$
+Both compositions of $f\circ f'$ with $g'\circ g$ equal $\operatorname{id}_X$. Thus composition stays inside $\operatorname{Sym}(X)$ (Lemma 1.12).
+
+Consequently, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a [[Groups|group]]: composition is a binary operation, it is associative, and the identity and inverses are supplied by the definitions (Proposition 1.13).
+
+For $X=\{1,\ldots,n\}$, write $S_n=\operatorname{Sym}(X)$ (Definition 1.14). The lecture asks to calculate $|S_n|$; no answer is supplied.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 13–15, including the map diagram and full proofs. See [[Groups]] for inverses with respect to a group operation.

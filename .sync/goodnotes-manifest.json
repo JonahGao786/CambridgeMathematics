@@ -4,10 +4,10 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-13T11:40:01.870231Z",
+  "last_inventory_at": "2026-10-14T19:55:51.272213Z",
   "inventory_complete": true,
-  "inventory_folder_count": 9,
-  "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
+  "inventory_folder_count": 6,
+  "reading_method": "Authenticated Google Drive folder listings and paginated metadata-only searches within the authorized scope; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 27 pages of the three new/modified PDFs (2 + 18 + 7). Handwriting and drawings were read from original images, with 4x crops of Groups pages 15 and 17. Extracted text was only an aid for the printed question sheet and its damaged mathematical symbols were checked against both original pages. No excluded-folder content was listed, downloaded or read.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
   "duplicate_comparison": "Historical Proofs/Untitled Notebook and introduction/differentiation comparisons remain in their independent per-file records and repository history; those unchanged sources were not re-read this run. On 2026-10-13, the four pages of Examples Sheet 1 Q.pdf and A3a.pdf were completely visually read and compared, with identical rendered pixels and text on every page. Their PDF bytes differ. Both current Drive versions are recorded separately and share one attributed question note.",
   "files": {
@@ -665,21 +665,22 @@
       "markdown_paths": [
         "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
         "Concepts/Groups.md",
-        "Concepts/Bijections and Permutations.md"
+        "Concepts/Bijections and Permutations.md",
+        "Concepts/Subgroups and Generated Subgroups.md"
       ],
       "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
       "source_file_name": "Ch.1 Introduction.pdf",
       "source_url": "https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-12T12:33:36.884Z",
-      "processed_source_modified_timestamp": "2026-10-12T12:33:36.884Z",
+      "observed_source_modified_timestamp": "2026-10-14T19:38:54.572Z",
+      "processed_source_modified_timestamp": "2026-10-14T19:38:54.572Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
       "material_type": "handwritten lecture notes",
       "course": "Part IA Groups",
       "source_date": null,
-      "total_page_count": 13,
+      "total_page_count": 18,
       "visually_inspected_pages": [
         1,
         2,
@@ -693,21 +694,26 @@
         10,
         11,
         12,
-        13
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
       ],
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "source_sha256": "73c4d51f72653face2bcc37ac86927e178866001421cc2de590a6b72e01b0c44",
-      "source_size_bytes": 2041222,
-      "last_successful_processing_at": "2026-10-12T13:02:44.807825Z",
-      "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF verified page counts and complete 2x (144 dpi) rendering; actual view_image/model vision inspection of every page of the three new/modified PDFs (13 + 13 + 19 = 45 pages), plus all 8 pages of the unchanged Differential Equations introduction for overlap comparison and diagram/style maintenance (53 source pages total). The three new/modified PDFs have no extracted text; the older introduction has a text layer, which was not used for transcription. All handwriting and drawings were read from original page images. No OCR or extracted text substituted for visual reading.",
+      "source_sha256": "5efef15c5fdbb8e83a40b1fc48a8164f72b1a260d0f5e001a5ebe24b4598a878",
+      "source_size_bytes": 3004611,
+      "last_successful_processing_at": "2026-10-14T19:55:51.272213Z",
+      "reading_method": "Authenticated Google Drive folder listings and paginated metadata-only searches within the authorized scope; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 27 pages of the three new/modified PDFs (2 + 18 + 7). Handwriting and drawings were read from original images, with 4x crops of Groups pages 15 and 17. Extracted text was only an aid for the printed question sheet and its damaged mathematical symbols were checked against both original pages. No excluded-folder content was listed, downloaded or read.",
       "unresolved_todos": [],
       "last_attempt": {
-        "date": "2026-10-12",
-        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "date": "2026-10-14",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-12T12:33:36.884Z",
-        "total_page_count": 13,
+        "source_modified_timestamp": "2026-10-14T19:38:54.572Z",
+        "total_page_count": 18,
         "visually_inspected_pages": [
           1,
           2,
@@ -721,7 +727,12 @@
           10,
           11,
           12,
-          13
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
         ],
         "failure": null
       },
@@ -730,18 +741,22 @@
         "pages_5_6": "Preserved the right-sided group definition and universally quantified identity-uniqueness condition. Proposition 1.5 now has its source proofs on pages 7–9; the earlier statement-only limitation no longer applies to this expanded version.",
         "pages_7_9": "Preserved all four proofs in dependency order, including the second right inverse c in part (i). Omitted the proof-ending square; normalized equation chains without deleting essential reasoning.",
         "pages_10_13": "Preserved integer-power definitions, exercise status, inverse-of-product lemma and proof, abelian/trivial/finite definitions, arithmetic examples, roots-of-unity and modular-addition exercises, and inverse-function/permutation definitions. Normalized the harmless a=b commute slip to a and b commute. Unanswered exercises remain unanswered; no theorem about symmetric groups invented.",
-        "diagram_maintenance": "Reconstructed the page-3 inverse comparison previously represented only by a reference to other diagrams. Restored rotation directions in the page-2/page-4 composition stages, with gaps around vertex labels and spacing away from the composition arrows."
+        "diagram_maintenance": "Reconstructed the page-3 inverse comparison previously represented only by a reference to other diagrams. Restored rotation directions in the page-2/page-4 composition stages, with gaps around vertex labels and spacing away from the composition arrows.",
+        "pages_14_15": "Preserved associativity of function composition, the inverse of a composite, and the symmetric-group proof. Normalized the obvious S_3 example wording to rearranging three positions. Retained S_52, the unanswered order exercise and group-operation notation. Omitted proof-ending squares.",
+        "page_17": "Included n=0 in the subgroup classification because the source proof explicitly treats S={0}=0Z; this corrects the positive-only notation slip in its statement. Made the immediate positive-element and integer-multiple steps explicit, preserving the least-positive-element and remainder proof.",
+        "page_18": "Normalized the intersection membership quantifier to every index i in I; preserved the generated-subgroup definition and exercise reference. The root-level printed sheet now supplies the referenced question."
       },
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
-        "reconstructed_diagram_count": 4,
+        "reconstructed_diagram_count": 5,
         "source_pages": [
           1,
           2,
           3,
-          4
+          4,
+          14
         ],
-        "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "render_validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
         "corrections": [
           {
             "updated_at": "2026-10-09T15:36:34.384127Z",
@@ -758,22 +773,23 @@
           }
         ],
         "new_tikz_blocks": 1,
-        "modified_tikz_blocks": 1,
+        "modified_tikz_blocks": 0,
         "pending_improvements": []
       },
       "failure": null,
       "changes_from_previous_processed_version": {
-        "previous_processed_source_modified_timestamp": "2026-10-09T14:37:08.657Z",
-        "previous_page_count": 6,
-        "current_page_count": 13,
-        "scope": "Complete current source visually inspected; existing notes, manual supplements and meaningful previous attempts preserved. Only source-supported additions and clearly identified immediate explanatory steps added."
+        "previous_processed_source_modified_timestamp": "2026-10-12T12:33:36.884Z",
+        "previous_page_count": 13,
+        "current_page_count": 18,
+        "scope": "All 18 pages visually read. Retained existing pages 1–13 and their four TikZ blocks; added definitions, lemmas, proofs, examples and map diagram on pages 14–18 conservatively. No lecture exercises were solved and manual additions were preserved."
       },
       "organized_style_review": {
         "status": "processed",
-        "completed_at": "2026-10-12T13:02:44.807825Z",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "description": "Clean mathematical Markdown with source-supported assumptions, semantic proof-scope labels, no proof-ending markers, preserved manual additions and unanswered exercises.",
+        "pending_improvements": [],
         "proof_ending_markers_omitted": true,
-        "editing_annotations_rendered_as_semantic_status": true,
-        "pending_improvements": []
+        "editing_annotations_rendered_as_semantic_status": true
       },
       "diagram_upgrades": {
         "status": "processed",
@@ -800,7 +816,29 @@
         "render_validation": "Four exact new/changed fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and actual view_image inspection compared them with original source images. The Groups composition spacing was corrected after preview inspection, then recompiled and visually checked. Existing unchanged drawing code was rechecked against the fully read source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
         "pending_improvements": [],
         "failure": null
-      }
+      },
+      "current_version_diagram_review": {
+        "status": "processed",
+        "source_total_page_count": 18,
+        "source_pages": [
+          1,
+          2,
+          3,
+          4,
+          14
+        ],
+        "existing_tikz_blocks_retained": 4,
+        "new_tikz_blocks": 1,
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": []
+      },
+      "source_terminology_notes": [
+        {
+          "location": "Page 16, proper subgroups",
+          "detail": "Source excludes both the whole group and the trivial subgroup from its proper-subgroup convention. That convention is preserved and explicitly distinguished from standard usage H != G."
+        }
+      ]
     },
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs": {
       "markdown_paths": [
@@ -1593,26 +1631,143 @@
         "description": "The printed sheet supplies no drawn diagrams. Requests to sketch graphs remain exercises; no answer diagrams invented.",
         "pending_improvements": []
       }
-    }
-  },
-  "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
-  "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
-  "last_run": {
-    "date": "2026-10-13",
-    "completed_at": "2026-10-13T11:40:01.870231Z",
-    "status": "processed",
-    "new_source_count": 3,
-    "modified_source_count": 2,
-    "processed_source_count": 5,
-    "unchanged_current_source_count": 9,
-    "classified_non_study_source_count": 0,
-    "pending_source_count": 0,
-    "reading_method": "Authenticated Google Drive metadata and original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 32 pages of the five new/modified PDFs. Handwritten mathematics and diagrams were read from original images. Extracted text from the two printed sheets was only an aid, checked against every original page.",
-    "visually_inspected_page_count": 32,
-    "coverage_by_source": [
-      {
-        "drive_file_id": "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
-        "source_file_name": "Ch.1 Elementary Number Theory.pdf",
+    },
+    "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-": {
+      "drive_file_id": "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-",
+      "source_file_name": "Groups 1 Q.pdf",
+      "source_url": "https://drive.google.com/file/d/1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes",
+      "observed_source_modified_timestamp": "2026-10-14T19:38:49.552Z",
+      "processed_source_modified_timestamp": "2026-10-14T19:38:49.552Z",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 2,
+      "visually_inspected_pages": [
+        1,
+        2
+      ],
+      "source_sha256": "42e5db67d0222fc53457ade6f397ab14737d0cd1ddd3e290bb6104a16fbb944f",
+      "source_size_bytes": 168972,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-14T19:55:51.272213Z",
+      "reading_method": "Authenticated Google Drive folder listings and paginated metadata-only searches within the authorized scope; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 27 pages of the three new/modified PDFs (2 + 18 + 7). Handwriting and drawings were read from original images, with 4x crops of Groups pages 15 and 17. Extracted text was only an aid for the printed question sheet and its damaged mathematical symbols were checked against both original pages. No excluded-folder content was listed, downloaded or read.",
+      "last_attempt": {
+        "date": "2026-10-14",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-14T19:38:49.552Z",
+        "total_page_count": 2,
+        "visually_inspected_pages": [
+          1,
+          2
+        ],
+        "failure": null
+      },
+      "failure": null,
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "description": "Clean mathematical Markdown with source-supported assumptions, semantic proof-scope labels, no proof-ending markers, preserved manual additions and unanswered exercises.",
+        "pending_improvements": []
+      },
+      "markdown_paths": [
+        "Part IA/Groups/Problem Sheets/Groups - Example Sheet 1 2025.md"
+      ],
+      "material_type": "printed example sheet, questions only",
+      "course": "Part IA Groups",
+      "source_date": "Michaelmas 2025",
+      "source_contact": "hjrw2@cam.ac.uk",
+      "unresolved_todos": [],
+      "question_coverage": {
+        "question_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "source_pages": {
+          "1": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "2": [
+            12,
+            13,
+            14
+          ]
+        },
+        "challenging_parts": [
+          6,
+          13,
+          14
+        ],
+        "answers_in_source": false
+      },
+      "normalizations": {
+        "all_pages": "Transcribed all 14 questions, subparts, conditions, hints, challenge stars and Michaelmas 2025 date from actual images. Replaced damaged text-layer math symbols with visually confirmed notation.",
+        "page_1_question_9": "Made the independent plus/minus choices explicit as epsilon_i in {-1,1}, with arbitrary non-negative word length and the source empty-product convention retained."
+      },
+      "diagrams": {
+        "representation": "No source diagrams",
+        "reconstructed_diagram_count": 0,
+        "source_pages": [],
+        "pending_improvements": [],
+        "reason": "Both pages contain printed questions only; no exercise answers or invented diagrams added."
+      },
+      "scope_note": "This source is in the GoodNotes root, outside the four excluded example-sheet folders; included under the user’s folder-based exclusion."
+    },
+    "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N": {
+      "drive_file_id": "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N",
+      "source_file_name": "Ch.2 Integration.pdf",
+      "source_url": "https://drive.google.com/file/d/1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations",
+      "observed_source_modified_timestamp": "2026-10-14T19:38:52.048Z",
+      "processed_source_modified_timestamp": "2026-10-14T19:38:52.048Z",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "total_page_count": 7,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_sha256": "998b715af7dce68bdea75cf0f7b4f5ae07dad47e16917f52ae0f1a72ed72c6d6",
+      "source_size_bytes": 1003270,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-14T19:55:51.272213Z",
+      "reading_method": "Authenticated Google Drive folder listings and paginated metadata-only searches within the authorized scope; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 27 pages of the three new/modified PDFs (2 + 18 + 7). Handwriting and drawings were read from original images, with 4x crops of Groups pages 15 and 17. Extracted text was only an aid for the printed question sheet and its damaged mathematical symbols were checked against both original pages. No excluded-folder content was listed, downloaded or read.",
+      "last_attempt": {
+        "date": "2026-10-14",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-14T19:38:52.048Z",
         "total_page_count": 7,
         "visually_inspected_pages": [
           1,
@@ -1623,28 +1778,113 @@
           6,
           7
         ],
-        "scope": "complete_modified_source"
+        "failure": null
       },
+      "failure": null,
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "description": "Clean mathematical Markdown with source-supported assumptions, semantic proof-scope labels, no proof-ending markers, preserved manual additions and unanswered exercises.",
+        "pending_improvements": []
+      },
+      "markdown_paths": [
+        "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+        "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
+        "Concepts/Integration by Substitution and by Parts.md"
+      ],
+      "material_type": "handwritten lecture notes",
+      "course": "Part IA Differential Equations",
+      "source_date": null,
+      "unresolved_todos": [
+        {
+          "location": "Pages 2–3, summed area-error estimate",
+          "detail": "The N O((Delta x)^2)=O(1/N) step needs an O-constant uniform over the partition. Pointwise differentiability alone does not establish it. Source argument retained with a localized TODO; no replacement proof supplied.",
+          "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+          "related_markdown_paths": [
+            "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md"
+          ]
+        }
+      ],
+      "proof_scope_notes": [
+        {
+          "location": "Page 3, fundamental-theorem proof",
+          "detail": "The O(h^2) proof uses differentiability at x, which is stronger than continuity in the theorem. Proof labelled with its stronger hypotheses; the general continuous-case proof is not supplied by the source.",
+          "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md"
+        }
+      ],
+      "normalizations": {
+        "pages_1_2": "Preserved the uniform left-endpoint Riemann sum, general partition/sample-point independence, mean-value strip formula and both sketches. Expressed all interval widths tending to zero as the standard maximum-width limit. No source function formula or numerical scale invented.",
+        "pages_2_3": "Preserved the full summed area argument with its uniformity gap explicitly flagged. No replacement area proof supplied.",
+        "pages_3_4": "Made the continuity/domain assumptions for the FTC and differentiability for the chain-rule corollary explicit. Kept the source mean-value/Taylor proof labelled as using the stronger differentiability hypothesis; no general continuous-case proof attributed to it.",
+        "pages_5_6": "Preserved both substitutions, all trigonometric/hyperbolic identities and the five-entry substitution table. Made the real domain 0<x<1 and non-negative cosine on the chosen inverse-sine branch explicit.",
+        "page_7": "Normalized the missing negative exponent in the final exponential boundary term to -e^{-x}, as established by the preceding antiderivative and final value 1. Interpreted infinite endpoints as limits. Checked both antiderivative derivatives and the improper integral symbolically."
+      },
+      "diagrams": {
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 2,
+        "source_pages": [
+          1,
+          2
+        ],
+        "new_tikz_blocks": 2,
+        "modified_tikz_blocks": 0,
+        "render_validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": []
+      },
+      "diagram_upgrades": {
+        "status": "processed",
+        "completed_at": "2026-10-14T19:55:51.272213Z",
+        "note_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+        "locations": [
+          {
+            "page": 1,
+            "description": "Red qualitative curve, seven left rectangles, a and b endpoints, blue Delta x and x_n."
+          },
+          {
+            "page": 2,
+            "description": "Single strip with x_n and x_(n+1), black Delta x, red f(x) and blue area hatching."
+          }
+        ],
+        "visually_reinspected_pages": [
+          1,
+          2
+        ],
+        "render_validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "pending_improvements": [],
+        "failure": null
+      }
+    }
+  },
+  "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
+  "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
+  "last_run": {
+    "date": "2026-10-14",
+    "completed_at": "2026-10-14T19:55:51.272213Z",
+    "status": "processed",
+    "scope": "All materials outside the four user-excluded example-sheet folders; exclusion applies only to this run.",
+    "new_source_count": 2,
+    "modified_source_count": 1,
+    "processed_source_count": 3,
+    "unchanged_current_source_count": 6,
+    "classified_non_study_source_count": 0,
+    "pending_source_count": 0,
+    "reading_method": "Authenticated Google Drive folder listings and paginated metadata-only searches within the authorized scope; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering; actual view_image/model vision reading of all 27 pages of the three new/modified PDFs (2 + 18 + 7). Handwriting and drawings were read from original images, with 4x crops of Groups pages 15 and 17. Extracted text was only an aid for the printed question sheet and its damaged mathematical symbols were checked against both original pages. No excluded-folder content was listed, downloaded or read.",
+    "visually_inspected_page_count": 27,
+    "coverage_by_source": [
       {
-        "drive_file_id": "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
-        "source_file_name": "Ch.2 Vectors.pdf",
-        "total_page_count": 8,
+        "drive_file_id": "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-",
+        "source_file_name": "Groups 1 Q.pdf",
+        "total_page_count": 2,
         "visually_inspected_pages": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8
+          2
         ],
         "scope": "complete_new_source"
       },
       {
-        "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
-        "source_file_name": "Examples Sheet 1.pdf",
-        "total_page_count": 9,
+        "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+        "source_file_name": "Ch.1 Introduction.pdf",
+        "total_page_count": 18,
         "visually_inspected_pages": [
           1,
           2,
@@ -1654,126 +1894,105 @@
           6,
           7,
           8,
-          9
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
         ],
         "scope": "complete_modified_source"
       },
       {
-        "drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
-        "source_file_name": "Examples Sheet 1 Q.pdf",
-        "total_page_count": 4,
+        "drive_file_id": "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N",
+        "source_file_name": "Ch.2 Integration.pdf",
+        "total_page_count": 7,
         "visually_inspected_pages": [
           1,
           2,
           3,
-          4
-        ],
-        "scope": "complete_new_source"
-      },
-      {
-        "drive_file_id": "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG",
-        "source_file_name": "A3a.pdf",
-        "total_page_count": 4,
-        "visually_inspected_pages": [
-          1,
-          2,
-          3,
-          4
+          4,
+          5,
+          6,
+          7
         ],
         "scope": "complete_new_source"
       }
     ],
     "created_markdown_note_count": 5,
     "created_markdown_paths": [
-      "Concepts/Divisibility and Prime Numbers.md",
-      "Concepts/Real Inner Products and Cauchy-Schwarz.md",
-      "Concepts/Vectors and Linear Span.md",
-      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
-      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md"
+      "Part IA/Groups/Problem Sheets/Groups - Example Sheet 1 2025.md",
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+      "Concepts/Subgroups and Generated Subgroups.md",
+      "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
+      "Concepts/Integration by Substitution and by Parts.md"
     ],
     "updated_markdown_note_count": 3,
     "updated_markdown_paths": [
-      "Concepts/Natural Numbers and Mathematical Induction.md",
-      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
-      "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md"
+      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+      "Concepts/Groups.md",
+      "Concepts/Bijections and Permutations.md"
     ],
-    "new_tikz_block_count": 7,
+    "new_tikz_block_count": 3,
     "modified_tikz_block_count": 0,
     "new_tikz_block_breakdown": {
-      "source_material": 7,
+      "source_material": 3,
       "user_requested_supplement": 0
     },
-    "tikz_render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
-    "compiled_and_visually_inspected_tikz_block_count": 7,
+    "tikz_render_validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+    "compiled_and_visually_inspected_tikz_block_count": 3,
     "pending_diagram_count": 0,
     "unresolved_handwriting_count": 0,
     "blocker": null,
     "published_branch": "master",
-    "resolved_review_points": [
-      {
-        "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
-        "location": "Page 1, missing question context",
-        "resolution": "Original question sheet now completely read and linked; handwriting remains a separate source."
-      }
-    ],
     "review_locations": [
       {
-        "location": "Page 1, question 1, n=0 case",
-        "detail": "Supplied question is for non-negative integer n; the handwritten calculation treats positive n and does not separately address the constant case.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+        "location": "Pages 2–3, summed area-error estimate",
+        "detail": "The N O((Delta x)^2)=O(1/N) step needs an O-constant uniform over the partition. Pointwise differentiability alone does not establish it. Source argument retained with a localized TODO; no replacement proof supplied.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+        "related_markdown_paths": [
+          "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md"
+        ]
       },
       {
-        "location": "Page 2, question 3(ii)",
-        "detail": "The third derivative of (ln x)^2 is not answered in the source.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
-      },
-      {
-        "location": "Page 3, question 4(ii), infinite remainder",
-        "detail": "The limit is taken through an infinite sum without a remainder bound or another convergence justification. The attempt and its claimed conclusion are preserved; no replacement proof supplied.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
-      },
-      {
-        "location": "Page 6, question 6, N=1 boundary",
-        "detail": "The strict lower integral comparison fails at N=1, where both sides are zero. The handwritten calculation does not separately treat this boundary for the final bounds.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
-      },
-      {
-        "location": "Page 8, starred question 8",
-        "detail": "Heading only; no written answer.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
-      },
-      {
-        "location": "Page 9, starred question 9",
-        "detail": "Heading only; no written answer.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
-      },
-      {
-        "location": "Page 2, starred question 9, p=1 endpoint",
-        "detail": "The printed strict income-share comparison says all positive p, but theta(1)=1. The strict statement needs 0<p<1. Original printed wording is preserved with a localized review note.",
-        "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md"
+        "location": "Page 3, fundamental-theorem proof",
+        "detail": "The O(h^2) proof uses differentiability at x, which is stronger than continuity in the theorem. Proof labelled with its stronger hypotheses; the general continuous-case proof is not supplied by the source.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md"
       }
     ],
-    "notes": "Three new and two modified study sources processed completely. Five notes created and three existing notes updated; the two printed PDFs share one question note after full page-by-page comparison. Manual explanations and incomplete attempts preserved. Four renamed-folder metadata paths updated without renaming or deleting notes. Per-file review flags in unchanged sources remain intact. Only Markdown and the matching manifest are sync output. Local manifest state is tentative until the same atomic commit is verified on remote master."
+    "retained_existing_review_locations": [
+      {
+        "location": "Reference needed — page 3, remark 2",
+        "detail": "The lecture remark that the stated prime-gap assertion was proved in August 2026 has no citation. The precise intended result and historical reference remain unverified.",
+        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
+      }
+    ],
+    "notes": "Two new and one modified source fully processed, including the question PDF located in the GoodNotes root. Five notes created and three updated. All 14 supplied questions remain unanswered; lecture exercises and substantive proof gaps are preserved. Four excluded folder contents and their seven known per-file records were left untouched. Only Markdown and this matching manifest are sync output. This local state is tentative until the same atomic commit is verified on remote master."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
-  "inventory_file_count": 14,
+  "inventory_file_count": 9,
   "source_annotation_conventions": {
     "qed": "Recognize ◻ as the source end-of-proof marker when reading, but omit all QED squares and end-of-proof markers from organized Markdown.",
     "crossed_out_proof": "Crossed-out proofs or proof/QED labels mark a wrong proof. Label the argument directly as Wrong proof, Incorrect attempt or Incomplete proof as appropriate, preserving its mathematics and explaining the error. Do not narrate pen marks or editing actions in the notes. Ordinary algebraic cancellations and axiom-assessment crosses retain their separate mathematical meaning."
   },
   "last_diagram_update": {
-    "date": "2026-10-13",
-    "updated_at": "2026-10-13T11:40:01.870231Z",
+    "date": "2026-10-14",
+    "updated_at": "2026-10-14T19:55:51.272213Z",
     "status": "processed",
     "updated_markdown_paths": [
-      "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
-      "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md"
+      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md"
     ],
     "representation": "TikZJax fenced tikz blocks",
-    "new_diagram_block_count": 7,
-    "source_diagram_block_count": 7,
+    "new_diagram_block_count": 3,
+    "modified_diagram_block_count": 0,
+    "source_diagram_block_count": 3,
     "supplemental_diagram_block_count": 0,
-    "render_validation": "All seven exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. Six vector sketches preserve endpoints, labels, geometry and meaningful colours; the logarithmic-curve comparison preserves the two functions and dashed steps. Layout is schematic, with no numerical value assigned to N. The user’s Obsidian application was not accessed.",
+    "render_validation": "All three exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The map chain preserves W, X, Y, Z and f, g, h; the integration sketches preserve the qualitative red curves, left-endpoint rectangles, interval labels and blue markings or area hatching. No formula or numerical scale was attributed to the qualitative curves. Existing four Groups drawing blocks were retained and checked against the fully read current source pages. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
     "pending_diagram_count": 0,
     "blocker": null,
     "previous_associativity_correction": {
@@ -1788,25 +2007,19 @@
       "reason": "Previous automated rendering placed arrows through the grouping parentheses. Increased triangle spacing, positioned arrows inside or outside the groups as appropriate, and drew explicit curved parentheses to match the source grouping. No mathematical content changed.",
       "render_validation": "Exact corrected fenced TikZ block compiled successfully with pdfLaTeX, one-page PDF rendered using PyMuPDF at 3x (216 dpi), and resulting image actually inspected against original source page 3. Top group encloses the first two triangles; bottom group encloses the last two; arrows do not intersect parentheses. Obsidian app itself was not accessed.",
       "failure": null
-    },
-    "modified_diagram_block_count": 0
+    }
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [
+    "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-",
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
     "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+    "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N",
     "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs",
     "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
-    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh",
-    "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
-    "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
-    "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
-    "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
-    "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
-    "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
-    "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
+    "1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh"
   ],
   "previously_processed_files_not_in_current_inventory": [
     {
@@ -1816,7 +2029,7 @@
       "reason": "Not returned by the complete recursive listing of the verified GoodNotes folder. Historical source record, successful processing timestamp and corresponding notes preserved; no deletion or loss-of-access claim."
     }
   ],
-  "inventory_method": "Every discovered folder recursively listed with top_k=1000, with fewer items than the limit in each. Paginated Drive document and folder searches over all nine parent IDs corroborated 14 PDFs and eight descendant folders, with no continuation tokens. All study types included without title-based exclusions.",
+  "inventory_method": "All six included folders recursively listed with top_k=1000 and fewer items than the limit. Metadata-only document, folder and image searches over exactly these six parent IDs corroborated nine PDFs and all descendant folder metadata with no continuation tokens. The four Example/Examples Sheets child folders were recorded as one-run exclusions and never traversed. inventory_complete means complete within this explicit authorized scope; full_folder_inventory_complete is false.",
   "source_folder_metadata_updates": {
     "completed_at": "2026-10-13T11:40:01.870231Z",
     "files": [
@@ -1857,5 +2070,59 @@
       }
     ],
     "description": "Groups and Numbers and Sets source folders are now named Example Sheets. Existing Markdown destinations and successful source timestamps of unchanged files retained."
+  },
+  "full_folder_inventory_complete": false,
+  "inventory_scope": {
+    "kind": "GoodNotes except user-requested example-sheet folder exclusions",
+    "complete_within_authorized_scope": true,
+    "one_run_only": true,
+    "request_date": "2026-10-14",
+    "excluded_folders": [
+      {
+        "id": "1fmwhzJOIAMT1JWR5gTqWgMPO4fogNXB3",
+        "path": "Goodnotes/Part IA/Numbers and Sets/Example Sheets",
+        "url": "https://drive.google.com/drive/folders/1fmwhzJOIAMT1JWR5gTqWgMPO4fogNXB3",
+        "reason": "User requested exclusion for this run only."
+      },
+      {
+        "id": "1rQDS8nU9m4CO2ep0qeX7nESR6WPCgwZ5",
+        "path": "Goodnotes/Part IA/Groups/Example Sheets",
+        "url": "https://drive.google.com/drive/folders/1rQDS8nU9m4CO2ep0qeX7nESR6WPCgwZ5",
+        "reason": "User requested exclusion for this run only."
+      },
+      {
+        "id": "19Nw8seb1EMmYUCf01G6IDf0TrWNWO5Ye",
+        "path": "Goodnotes/Part IA/Differential Equations/Examples Sheets",
+        "url": "https://drive.google.com/drive/folders/19Nw8seb1EMmYUCf01G6IDf0TrWNWO5Ye",
+        "reason": "User requested exclusion for this run only."
+      },
+      {
+        "id": "15uB6Aw2oAQEauTT8SABve7L20l1YnheO",
+        "path": "Goodnotes/Part IA/Vectors and Matrices/Example Sheets",
+        "url": "https://drive.google.com/drive/folders/15uB6Aw2oAQEauTT8SABve7L20l1YnheO",
+        "reason": "User requested exclusion for this run only."
+      }
+    ],
+    "included_parent_folder_ids": [
+      "1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
+      "1pX-oeJ_D7MMUO7_7jrrVsXLU4xZE4xOb",
+      "1BuS8BDwlLCrTiwBFY9t7C96vng5dbmH1",
+      "1GYB4EgNsHqCItOCP71dURtASN7DMWfwj",
+      "11RYl_akdqudzTFZXH2JDPR_466aA3PR1",
+      "1unii7bzartT4nHihblGTvr4hD_f7WlSn"
+    ],
+    "previous_full_inventory_at": "2026-10-13T11:40:01.870231Z",
+    "excluded_folder_contents_checked": false,
+    "excluded_known_drive_file_ids": [
+      "1SVgFWyOJjYOvjF2kv40DSnBiV4xFY6JW",
+      "17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY",
+      "1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr",
+      "1cAxWubfgZfijKE33WolS74BS9m1Sccpn",
+      "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
+      "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
+      "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
+    ],
+    "excluded_records_preserved": true,
+    "absence_policy": "Excluded sources are not classified as missing, deleted, non-study, pending or newly processed. Historical previously-absent records are retained unchanged."
   }
 }

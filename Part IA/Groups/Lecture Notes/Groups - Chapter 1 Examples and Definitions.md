@@ -6,7 +6,7 @@ date: null
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: 13
+source_pages: 18
 ---
 
 # Groups — Chapter 1: Examples and Definitions
@@ -299,4 +299,121 @@ Here $\operatorname{id}_Y$ is the identity function on $Y$, and composition mean
 $$(f\circ g)(y)=f(g(y)).$$
 The function $g$ is the set-theoretic inverse of $f$.
 
-A bijection $X\to X$ is a **permutation**. See [[Bijections and Permutations]]. The source ends with this definition; no subsequent theorem about symmetric groups is supplied.
+A bijection $X\to X$ is a **permutation**. See [[Bijections and Permutations]].
+
+## Symmetric groups and composition (pages 14–15)
+
+**Definition 1.10 (page 14).** For a set $X$, $\operatorname{Sym}(X)$ is the set of permutations of $X$.
+
+**Lemma 1.11 — Associativity of composition (page 14).** Consider maps of sets:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \node (W) at (0,0) {$W$};
+  \node (X) at (2,0) {$X$};
+  \node (Y) at (4,0) {$Y$};
+  \node (Z) at (6,0) {$Z$};
+  \draw[->] (W)--(X) node[midway,above] {$f$};
+  \draw[->] (X)--(Y) node[midway,above] {$g$};
+  \draw[->] (Y)--(Z) node[midway,above] {$h$};
+\end{tikzpicture}
+\end{document}
+```
+
+Then
+$$(h\circ g)\circ f=h\circ(g\circ f).$$
+
+**Proof.** For every $w\in W$,
+$$\begin{aligned}
+((h\circ g)\circ f)(w)
+&=(h\circ g)(f(w))\\
+&=h(g(f(w)))\\
+&=h((g\circ f)(w))\\
+&=(h\circ(g\circ f))(w).
+\end{aligned}$$
+
+**Lemma 1.12 (pages 14–15).** If $f,f'\in\operatorname{Sym}(X)$, then $f\circ f'\in\operatorname{Sym}(X)$.
+
+**Proof.** Let $g$ and $g'$ be the set-theoretic inverses of $f$ and $f'$, respectively. By associativity,
+$$\begin{aligned}
+(f\circ f')\circ(g'\circ g)
+&=f\circ((f'\circ g')\circ g)\\
+&=f\circ(\operatorname{id}_X\circ g)\\
+&=f\circ g=\operatorname{id}_X.
+\end{aligned}$$
+Similarly,
+$$(g'\circ g)\circ(f\circ f')=\operatorname{id}_X.$$
+Thus $f\circ f'$ is a bijection, with inverse $g'\circ g$.
+
+**Proposition 1.13 (page 15).** For every set $X$,
+$$(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$$
+is a group.
+
+**Proof.** Composition is a binary operation on $\operatorname{Sym}(X)$ by Lemma 1.12. Associativity follows from Lemma 1.11. The identity axiom holds for $\operatorname{id}_X$, and inverses exist by the definition of a permutation.
+
+**Definition 1.14 (page 15).** If $X=\{1,2,\ldots,n\}$, write
+$$S_n=\operatorname{Sym}(X).$$
+
+Examples:
+
+- $S_3$ describes the ways of rearranging three positions in a row.
+- $S_{52}$ describes the ways of shuffling a standard deck of cards.
+
+**Exercise:** Calculate $|S_n|$. No answer is supplied.
+
+**Notation convention (page 15).** From now on, the lecture usually writes $G$ instead of $(G,\cdot,e)$. Where ambiguity is possible, for example when two groups occur, write $\circ_G$ for the group operation and $e_G$ for its identity.
+
+## Subgroups — Definition 1.15 (page 16)
+
+Sometimes we restrict attention to a smaller group, such as $\mathbb Z$ inside $\mathbb R$ under addition, or the rotations of a triangle inside all its symmetries.
+
+Let $G$ be a group and $H\subseteq G$. The subset $H$ is a **subgroup** of $G$, written $H\le G$, if:
+
+1. $e_G\in H$.
+2. $ab\in H$ for every $a,b\in H$.
+3. $a^{-1}\in H$ for every $a\in H$.
+
+Then $H$ is also a group, with the same operation and identity as $G$. See [[Subgroups and Generated Subgroups]].
+
+Examples (pages 16–17):
+
+1. Every group $G$ is a subgroup of itself.
+2. $I_G=\{e_G\}$ is a subgroup, called the **trivial subgroup**.
+3. With addition and identity $0$,
+   $$\mathbb Z\le\mathbb Q\le\mathbb R\le\mathbb C.$$
+4. If $n\mid m$, then $C_n\le C_m$, where these are the groups of roots of unity.
+5. The triangle rotations through $0$, $2\pi/3$ and $4\pi/3$ form a subgroup of its symmetry group.
+
+**Source terminology (page 16).** The lecture calls subgroups other than both $G$ and $I_G$ “proper subgroups”. In standard usage, “proper” means $H\ne G$ and may include the trivial subgroup; the lecture's narrower convention is retained here.
+
+## Proposition 1.16 — Subgroups of the integers (page 17)
+
+The subgroups of $(\mathbb Z,+,0)$ are precisely
+$$n\mathbb Z=\{nk:k\in\mathbb Z\},\qquad n\in\mathbb Z_{\ge0}.$$
+Here $0\mathbb Z=\{0\}$.
+
+**Proof that $n\mathbb Z$ is a subgroup.** We have $0\in n\mathbb Z$. If $x=nk$ and $y=n\ell$, then
+$$x+y=n(k+\ell)\in n\mathbb Z.$$
+If $x=nk$, then $-x=n(-k)\in n\mathbb Z$.
+
+**Proof that there are no other subgroups.** Let $S\le\mathbb Z$. If $S=\{0\}$, then $S=0\mathbb Z$. Otherwise $S$ contains a positive integer: a non-zero element or its additive inverse is positive. Let $n$ be the smallest positive integer in $S$.
+
+**Claim:** $S=n\mathbb Z$. Since $n\in S$, repeated addition and additive inverses give $nk\in S$ for every $k\in\mathbb Z$. Thus $n\mathbb Z\subseteq S$.
+
+If $n\mathbb Z\ne S$, choose $x\in S\setminus n\mathbb Z$. Divide by $n$:
+$$x=nq+r,\qquad q\in\mathbb Z,\qquad 0<r<n.$$
+But $r=x-nq\in S$, contradicting the minimality of $n$.
+
+## Intersections and generated subgroups (page 18)
+
+If $H,K\le G$, then $H\cap K\le G$. The lecture refers to Example Sheet 1, question 2; see [[Groups - Example Sheet 1 2025]]. No exercise proof is supplied in these lecture notes.
+
+More generally, for a family $H_i\le G$ indexed by $i\in I$,
+$$\bigcap_{i\in I}H_i
+=\{a\in G:a\in H_i\text{ for every }i\in I\}\le G.$$
+
+**Definition 1.17.** For a subset $X$ of a group $G$, the **subgroup generated by $X$** is
+$$\langle X\rangle=\bigcap_{X\subseteq H\le G}H,$$
+the intersection of all subgroups of $G$ containing $X$.
