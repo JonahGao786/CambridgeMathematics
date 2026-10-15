@@ -6,12 +6,12 @@ date: null
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: 8
+source_pages: 13
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view). No date is supplied. The six drawings below preserve the labelled geometry and meaningful colours; their layout coordinates are schematic.
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view). No date is supplied. The ten drawings below preserve the labelled geometry and meaningful colours; their layout coordinates are schematic. Drawings of three-dimensional geometry are shown in projection.
 
 ## 2.1 Vectors (page 1)
 
@@ -266,3 +266,229 @@ $$\begin{aligned}
 Taking non-negative square roots gives the stated inequality.
 
 See [[Real Inner Products and Cauchy-Schwarz]] and the related [[Triangle Inequality for Complex Numbers]].
+
+## 2.3 Orthonormal bases (pages 9–10)
+
+In $\mathbb R^3$, let $\mathbf e_1,\mathbf e_2,\mathbf e_3$ be **orthonormal**: each has length $1$, and distinct vectors are perpendicular. Equivalently,
+$$\mathbf e_i\cdot\mathbf e_j=\delta_{ij}
+=\begin{cases}1,&i=j,\\0,&i\ne j.\end{cases}$$
+This corresponds to choosing Cartesian axes in these directions. The set $\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$ is a basis of $\mathbb R^3$.
+
+Every $\mathbf a\in\mathbb R^3$ has a unique expansion
+$$\mathbf a=a_1\mathbf e_1+a_2\mathbf e_2+a_3\mathbf e_3,
+\qquad a_i=\mathbf e_i\cdot\mathbf a.$$
+Write either a row or column of coordinates:
+$$\mathbf a=(a_1,a_2,a_3),\qquad
+\mathbf a=\begin{pmatrix}a_1\\a_2\\a_3\end{pmatrix}.$$
+Similarly,
+$$\mathbf b=b_1\mathbf e_1+b_2\mathbf e_2+b_3\mathbf e_3,
+\qquad b_i=\mathbf e_i\cdot\mathbf b.$$
+
+Expanding the dot product gives
+$$\begin{aligned}
+\mathbf a\cdot\mathbf b
+&=(a_1\mathbf e_1+a_2\mathbf e_2+a_3\mathbf e_3)
+\cdot(b_1\mathbf e_1+b_2\mathbf e_2+b_3\mathbf e_3)\\
+&=a_1b_1+a_2b_2+a_3b_3.
+\end{aligned}$$
+The six mixed terms vanish because $\mathbf e_i\cdot\mathbf e_j=0$ when $i\ne j$. Taking $\mathbf b=\mathbf a$,
+$$|\mathbf a|^2=\mathbf a\cdot\mathbf a=a_1^2+a_2^2+a_3^2.$$
+
+The standard basis is
+$$\mathbf e_1=(1,0,0),\qquad\mathbf e_2=(0,1,0),\qquad\mathbf e_3=(0,0,1),$$
+also written $\widehat{\mathbf i},\widehat{\mathbf j},\widehat{\mathbf k}$. See [[Orthonormal Bases and Vector Coordinates]].
+
+## 2.4 Vector or cross product (pages 10–12)
+
+For vectors $\mathbf a,\mathbf b\in\mathbb R^3$, write the **vector product** as $\mathbf a\times\mathbf b$ or $\mathbf a\wedge\mathbf b$.
+
+For non-zero, non-parallel vectors, it is
+$$\mathbf a\times\mathbf b=|\mathbf a|\,|\mathbf b|\sin\theta\,\widehat{\mathbf n},$$
+where $\theta$ is the angle between them and $\widehat{\mathbf n}$ is the unit normal perpendicular to both, chosen by the right-hand rule. The cross product is zero if the vectors are parallel or either is zero.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (0,0);
+  \draw[thick,->] (O)--(2.8,1) node[above right] {$\mathbf a$};
+  \draw[thick,->] (O)--(2.5,-0.95) node[below right] {$\mathbf b$};
+  \draw[red,thick,->] (O)--(0,2) node[above] {$\mathbf a\times\mathbf b$};
+  \draw (19.654:0.8) arc (19.654:-20.807:0.8);
+  \node at (1.05,-0.03) {$\theta$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}
+\end{document}
+```
+
+For non-parallel vectors, taking the opposite route from $\mathbf a$ to $\mathbf b$ gives the oriented angle $2\pi-\theta$ and the opposite normal. Since
+$$\sin(2\pi-\theta)=-\sin\theta,$$
+the two sign changes leave the cross product unchanged.
+
+### Properties (page 11)
+
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$ and $\lambda\in\mathbb R$:
+
+- $\mathbf a\times\mathbf b=-\mathbf b\times\mathbf a$.
+- $\mathbf a\times\mathbf a=\mathbf0$.
+- $\mathbf a\times\mathbf b=\mathbf0$ iff $\mathbf a=\lambda\mathbf b$ for some $\lambda\in\mathbb R$, or $\mathbf b=\mathbf0$.
+- $(\lambda\mathbf a)\times\mathbf b=\lambda(\mathbf a\times\mathbf b)=\mathbf a\times(\lambda\mathbf b)$.
+- $\mathbf a\times(\mathbf b+\mathbf c)=\mathbf a\times\mathbf b+\mathbf a\times\mathbf c$.
+- $\mathbf a\cdot(\mathbf a\times\mathbf b)=\mathbf b\cdot(\mathbf a\times\mathbf b)=0$.
+
+### Vector area (page 11)
+
+The vector $\mathbf a\times\mathbf b$ is the **vector area** of the parallelogram spanned by $\mathbf a,\mathbf b$. Its magnitude is the ordinary scalar area.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (2.8,0);
+  \coordinate (B) at (1.4,1.6);
+  \coordinate (D) at (4.2,1.6);
+  \begin{scope}
+    \clip (O)--(A)--(D)--(B)--cycle;
+    \foreach \x in {-0.5,-0.1,...,4.3} {
+      \draw[blue] (\x,0)--(\x+0.65,1.6);
+    }
+  \end{scope}
+  \draw[thick,->] (O)--(A) node[below right] {$\mathbf a$};
+  \draw[thick,->] (O)--(B) node[above] {$\mathbf b$};
+  \draw[red,thick,->] (B)--(D) node[midway,above] {$\mathbf a$};
+  \draw[red,thick,->] (A)--(D) node[midway,below right] {$\mathbf b$};
+  \draw (0.5,0) arc (0:48.814:0.5);
+  \node at (0.65,0.25) {$\theta$};
+  \node[below] at (1.4,-0.08) {$|\mathbf a|$};
+  \node[above left] at (0.65,0.85) {$|\mathbf b|$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}
+\end{document}
+```
+
+For $0\le\theta\le\pi$, the base has length $|\mathbf a|$ and the height is $h=|\mathbf b|\sin\theta$. Therefore
+$$\text{area}=|\mathbf a|\,|\mathbf b|\sin\theta=|\mathbf a\times\mathbf b|.$$
+For non-parallel vectors, the normal direction records orientation. Interchanging $\mathbf a$ and $\mathbf b$ reverses that direction while preserving the scalar area.
+
+For the triangle $OBA$,
+$$S_{OBA}=\frac12\left|\overrightarrow{OA}\times\overrightarrow{OB}\right|.$$
+
+### Scaling and rotation (page 12)
+
+Fix $\mathbf a\ne\mathbf0$, and let $\mathbf x$ lie in the plane perpendicular to $\mathbf a$. The map
+$$\mathbf x\longmapsto\mathbf a\times\mathbf x$$
+takes the plane to itself, since $\mathbf a\times\mathbf x$ is perpendicular to $\mathbf a$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (0,0);
+  \draw[thick] (-1.4,-0.9)--(0.8,-0.9)--(1.8,0.9)--(-0.4,0.9)--cycle;
+  \draw[red,thick,->] (O)--(0,1.7) node[above] {$\mathbf a$};
+  \draw[blue,thick,->] (O)--(-0.45,-0.8) node[below] {$\mathbf x$};
+  \draw[orange!85!yellow,thick,->] (O)--(1.3,0)
+    node[above] {$\mathbf a\times\mathbf x$};
+\end{tikzpicture}
+\end{document}
+```
+
+Here
+$$|\mathbf a\times\mathbf x|=|\mathbf a|\,|\mathbf x|,
+\qquad\mathbf x\cdot(\mathbf a\times\mathbf x)=0.$$
+For $\mathbf x\ne\mathbf0$, the map scales length by $|\mathbf a|$ and rotates through $\pi/2$ in the right-hand sense about the axis in the direction of $\mathbf a$. If $\mathbf a$ is a unit vector, it is a quarter-turn with no change of length.
+
+### Coordinates in the standard basis (page 12)
+
+For the standard right-handed orthonormal basis,
+$$\begin{aligned}
+\mathbf e_1\times\mathbf e_2&=\mathbf e_3=-(\mathbf e_2\times\mathbf e_1),\\
+\mathbf e_2\times\mathbf e_3&=\mathbf e_1=-(\mathbf e_3\times\mathbf e_2),\\
+\mathbf e_3\times\mathbf e_1&=\mathbf e_2=-(\mathbf e_1\times\mathbf e_3).
+\end{aligned}$$
+Thus, for $\mathbf a=(a_1,a_2,a_3)$ and $\mathbf b=(b_1,b_2,b_3)$,
+$$\begin{aligned}
+\mathbf a\times\mathbf b
+&=(a_1\mathbf e_1+a_2\mathbf e_2+a_3\mathbf e_3)
+\times(b_1\mathbf e_1+b_2\mathbf e_2+b_3\mathbf e_3)\\
+&=(a_2b_3-a_3b_2)\mathbf e_1
++(a_3b_1-a_1b_3)\mathbf e_2
++(a_1b_2-a_2b_1)\mathbf e_3.
+\end{aligned}$$
+This is commonly written using the determinant mnemonic
+$$\mathbf a\times\mathbf b=
+\begin{vmatrix}
+\mathbf e_1&\mathbf e_2&\mathbf e_3\\
+a_1&a_2&a_3\\
+b_1&b_2&b_3
+\end{vmatrix}.$$
+
+## 2.5 Triple products (page 13)
+
+### 2.5.1 Scalar triple product
+
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$, define
+$$[\mathbf a,\mathbf b,\mathbf c]=\mathbf a\cdot(\mathbf b\times\mathbf c).$$
+Order matters. A cyclic permutation does not change the value:
+$$\begin{aligned}
+\mathbf a\cdot(\mathbf b\times\mathbf c)
+&=\mathbf b\cdot(\mathbf c\times\mathbf a)
+=\mathbf c\cdot(\mathbf a\times\mathbf b)\\
+&=-\mathbf a\cdot(\mathbf c\times\mathbf b)
+=-\mathbf b\cdot(\mathbf a\times\mathbf c)
+=-\mathbf c\cdot(\mathbf b\times\mathbf a).
+\end{aligned}$$
+In particular, the scalar triple product is zero if two vectors are equal.
+
+In a right-handed orthonormal basis,
+$$[\mathbf a,\mathbf b,\mathbf c]=
+\begin{vmatrix}
+a_1&a_2&a_3\\
+b_1&b_2&b_3\\
+c_1&c_2&c_3
+\end{vmatrix}.$$
+
+### Geometric interpretation: volume
+
+For $\mathbf a\nparallel\mathbf b$, their parallelogram is a base for the parallelepiped spanned by $\mathbf a,\mathbf b,\mathbf c$. The sketch shows the base, its normal, $\mathbf c$ and the perpendicular height.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (2.4,-0.6);
+  \coordinate (B) at (2.7,1.05);
+  \coordinate (D) at (5.1,0.45);
+  \coordinate (C) at (2,2.3);
+  \coordinate (H) at (2,-0.05);
+  \draw[thick,->] (O)--(A) node[midway,below] {$\mathbf a$};
+  \draw[thick,->] (O)--(B) node[midway,below] {$\mathbf b$};
+  \draw[red,thick] (A)--(D)--(B);
+  \draw[thick,->] (O)--(C) node[midway,above left] {$\mathbf c$};
+  \draw[red,thick,->] (O)--(0,2.6) node[above] {$\mathbf a\times\mathbf b$};
+  \draw[blue] (C)--(H) node[midway,right] {$h$};
+  \draw[blue] (1.94,-0.11)--(2.06,0.01);
+  \draw[blue] (1.94,0.01)--(2.06,-0.11);
+  \node[below left] at (O) {$O$};
+  \node[below right] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[above] at (C) {$C$};
+\end{tikzpicture}
+\end{document}
+```
+
+With
+$$\widehat{\mathbf n}=\frac{\mathbf a\times\mathbf b}{|\mathbf a\times\mathbf b|},$$
+the height is
+$$h=\left|\mathbf c\cdot\frac{\mathbf a\times\mathbf b}{|\mathbf a\times\mathbf b|}\right|
+=|\widehat{\mathbf n}\cdot\mathbf c|.$$
+Hence
+$$\begin{aligned}
+V&=\text{base area}\times\text{height}\\
+&=|\mathbf a\times\mathbf b|\,h\\
+&=|\mathbf c\cdot(\mathbf a\times\mathbf b)|.
+\end{aligned}$$
+
+See [[Cross Products and Scalar Triple Products]] for these definitions, properties and interpretations together.
