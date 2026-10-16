@@ -49,4 +49,8 @@ $$\begin{aligned}
 \end{aligned}$$
 The boundary terms use $xe^{-x}\to0$ and $e^{-x}\to0$ as $x\to\infty$.
 
+For $x>0$, the other worked example uses $u=\log x$, $dv=dx$, hence $du=dx/x$ and $v=x$:
+$$\int\log x\,dx=x\log x-\int dx=x(\log x-1)+C.$$
+The source also notes applications to inverse trigonometric and hyperbolic functions, without further examples.
+
 Source: [[Differential Equations - Chapter 2 Integration]], pages 5–7, which retains all substitution steps, the inverse-sine branch and the trigonometric/hyperbolic identities. Related: [[Riemann Integration and the Fundamental Theorem of Calculus]].

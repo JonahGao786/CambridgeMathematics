@@ -196,3 +196,12 @@ I=\int_0^\infty xe^{-x}\,dx
 &=[-e^{-x}]_0^\infty=1.
 \end{aligned}$$
 The improper upper endpoints are limits; $xe^{-x}\to0$ and $e^{-x}\to0$ as $x\to\infty$.
+
+
+**Example.** For $x>0$, let $u=\log x$ and $dv=dx$, so $du=dx/x$ and $v=x$. Then
+$$\begin{aligned}
+I=\int\log x\,dx
+&=x\log x-\int dx\\
+&=x(\log x-1)+C.
+\end{aligned}$$
+The source notes that integration by parts also works for inverse trigonometric and inverse hyperbolic functions; no further examples are supplied.

@@ -41,4 +41,8 @@ For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a grou
 
 A subset $H\subseteq G$ is a subgroup if it contains $e_G$ and is closed under the operation and inverses. [[Subgroups and Generated Subgroups]] records the examples, the classification $H=n\mathbb Z$ for subgroups of the additive integers, and the intersection definition of $\langle X\rangle$.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–18, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+## Geometric groups
+
+For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the unfinished classification proof on page 23.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–23, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
