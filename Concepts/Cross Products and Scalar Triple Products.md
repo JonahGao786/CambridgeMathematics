@@ -5,7 +5,7 @@ course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: [10, 11, 12, 13]
+source_pages: [10, 11, 12, 13, 14]
 ---
 
 # Cross Products and Scalar Triple Products
@@ -82,4 +82,16 @@ For non-parallel $\mathbf a,\mathbf b$, the normal to their parallelogram is $\w
 $$V=|\mathbf a\times\mathbf b|h
 =|\mathbf c\cdot(\mathbf a\times\mathbf b)|.$$
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–13, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].
+The scalar triple product is a signed volume: its sign records the component of $\mathbf c$ along $\mathbf a\times\mathbf b$. It is zero exactly when the three vectors are coplanar, equivalently one is a linear combination of the other two.
+
+## Vector triple product
+
+For vectors in $\mathbb R^3$,
+$$\mathbf a\times(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf c,$$
+whereas
+$$(\mathbf a\times\mathbf b)\times\mathbf c
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
+Thus the cross product is not associative. These identities are stated without proof on page 14 and are applied to [[Lines, Planes and Vector Equations|line–plane intersections]] on page 16.
+
+Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–14, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].

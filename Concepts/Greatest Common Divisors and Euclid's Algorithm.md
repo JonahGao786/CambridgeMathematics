@@ -5,7 +5,7 @@ course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: [8, 9, 10, 11]
+source_pages: [8, 9, 10, 11, 12, 13]
 ---
 
 # Greatest Common Divisors and Euclid's Algorithm
@@ -55,4 +55,10 @@ $$\begin{aligned}
 \end{aligned}$$
 Hence $\gcd(87,52)=1$.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–11, including the full algorithm table and proofs. Related: [[Divisibility and Prime Numbers]] and [[Natural Numbers and Mathematical Induction]].
+## Coprimality and integer linear combinations
+
+Numbers $a,b$ are **coprime** when $\gcd(a,b)=1$. Reversing the second example gives
+$$1=35-2\cdot17=-5\cdot52+3\cdot87.$$
+More generally, Theorem 7 gives $\gcd(a,b)=xa+yb$ for integers $x,y$. [[Bezout's Identity and Linear Diophantine Equations]] records both proofs, the coefficient-finding method, and the criterion $\gcd(a,b)\mid c$ for solvability of $ax+by=c$.
+
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13, including the full algorithm table and proofs. Related: [[Divisibility and Prime Numbers]] and [[Natural Numbers and Mathematical Induction]].

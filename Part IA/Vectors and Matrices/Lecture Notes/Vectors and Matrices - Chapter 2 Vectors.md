@@ -6,12 +6,12 @@ date: null
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: 13
+source_pages: 18
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view). No date is supplied. The ten drawings below preserve the labelled geometry and meaningful colours; their layout coordinates are schematic. Drawings of three-dimensional geometry are shown in projection.
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view). No date is supplied. The TikZ drawings below preserve the labelled geometry and meaningful colours; their layout coordinates are schematic. Drawings of three-dimensional geometry are shown in projection.
 
 ## 2.1 Vectors (page 1)
 
@@ -492,3 +492,217 @@ V&=\text{base area}\times\text{height}\\
 \end{aligned}$$
 
 See [[Cross Products and Scalar Triple Products]] for these definitions, properties and interpretations together.
+
+
+### Signed volume and coplanarity (page 14)
+
+The scalar triple product is the **signed volume** of the parallelepiped spanned by $\mathbf a,\mathbf b,\mathbf c$; its absolute value is the ordinary volume.
+
+- If $[\mathbf a,\mathbf b,\mathbf c]>0$, then $\mathbf c$ has a positive component in the direction $\mathbf a\times\mathbf b$.
+- If it is negative, that component is negative.
+- $[\mathbf a,\mathbf b,\mathbf c]=0$ if and only if the vectors are coplanar, equivalently one is a linear combination of the other two.
+
+### 2.5.2 Vector triple product (page 14)
+
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$, the **vector triple product** is $\mathbf a\times(\mathbf b\times\mathbf c)$. The source states the identity
+$$\mathbf a\times(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf c.$$
+The cross product is not associative:
+$$(\mathbf a\times\mathbf b)\times\mathbf c
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
+No proof of these identities is supplied here.
+
+## 2.6 Lines, planes and vector equations (pages 14–17)
+
+All vectors in this section lie in $\mathbb R^3$. See [[Lines, Planes and Vector Equations]].
+
+### 2.6.1 Lines (page 14)
+
+A line through the point with position vector $\mathbf a$ and with non-zero direction $\mathbf u$ has parametric form
+$$\mathbf r=\mathbf a+\lambda\mathbf u,\qquad\lambda\in\mathbb R.$$
+The source first recalls the position vector $\overrightarrow{OA}=\mathbf a$, then draws the line, $\lambda\mathbf u$ and $\mathbf r$. Both sketches are reproduced below; coordinates are schematic.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \begin{scope}[shift={(5,1.4)}]
+    \draw[thick,->] (0,0)--(1.1,1.2) node[midway,above left] {$\mathbf a$};
+    \node[below left] at (0,0) {$O$};
+    \node[above right] at (1.1,1.2) {$A$};
+  \end{scope}
+  \coordinate (O) at (0,-2);
+  \coordinate (A) at (1,-0.5);
+  \coordinate (R) at (3,-0.4);
+  \draw[red,thick] (0.2,-0.54)--(4,-0.35);
+  \draw[thick,->] (O)--(A) node[midway,left] {$\mathbf a$};
+  \draw[blue,thick,->] (O)--(R) node[midway,below right] {$\mathbf r$};
+  \draw[red,thick,->] (A)--(R) node[midway,above] {$\lambda\mathbf u$};
+  \draw[red,thick,->] (R)--(3.8,-0.36) node[midway,above] {$\mathbf u$};
+  \node[below left] at (O) {$O$};
+  \node[above left] at (A) {$A$};
+\end{tikzpicture}
+\end{document}
+```
+
+Equivalently,
+$$\mathbf u\times(\mathbf r-\mathbf a)=\mathbf0,$$
+or
+$$\mathbf u\times\mathbf r=\mathbf b,\qquad
+\mathbf b=\mathbf u\times\mathbf a.$$
+
+### 2.6.2 Planes (page 15)
+
+A plane through $\mathbf a$ with non-parallel directions $\mathbf u,\mathbf v$ has parametric form
+$$\mathbf r=\mathbf a+\lambda\mathbf u+\mu\mathbf v,
+\qquad\lambda,\mu\in\mathbb R.$$
+Its normal is $\mathbf n=\mathbf u\times\mathbf v\ne\mathbf0$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (-0.2,-0.95);
+  \coordinate (A) at (0,0);
+  \coordinate (R) at (1.6,0.75);
+  \draw[thick] (2.4,-0.6)--(-1.4,-0.6)--(-0.2,1.6)--(2.8,1.6);
+  \draw[red,thick,->] (O)--(A) node[midway,left] {$\mathbf a$};
+  \draw[blue,thick,->] (O)--(R) node[above right] {$\mathbf r$};
+  \draw[thick,->] (A)--(0.7,1) node[above] {$\mathbf u$};
+  \draw[thick,->] (A)--(1.1,0) node[right] {$\mathbf v$};
+  \draw[orange!85!yellow,dashed] (0,-1.15)--(A);
+  \draw[orange!85!yellow,thick,->] (A)--(0,1.3);
+  \node[orange!85!yellow,above right] at (0,1.85) {$\mathbf n=\mathbf u\times\mathbf v$};
+  \node[red,below] at (O) {$O$};
+  \node[red,left] at (A) {$A$};
+\end{tikzpicture}
+\end{document}
+```
+
+The plane is equivalently
+$$(\mathbf r-\mathbf a)\cdot\mathbf n=0,$$
+or
+$$\mathbf n\cdot\mathbf r=k,\qquad k=\mathbf n\cdot\mathbf a.$$
+Its perpendicular distance from the origin is $|k|/|\mathbf n|$, since, with $\widehat{\mathbf n}=\mathbf n/|\mathbf n|$,
+$$\widehat{\mathbf n}\cdot\mathbf r
+=\frac{\mathbf n\cdot\mathbf r}{|\mathbf n|}
+=\frac{k}{|\mathbf n|}.$$
+
+If $A,B,C$ are three non-collinear points with position vectors $\mathbf a,\mathbf b,\mathbf c$, the plane through them is
+$$(\mathbf r-\mathbf a)\cdot
+[(\mathbf b-\mathbf a)\times(\mathbf c-\mathbf a)]=0.$$
+Here $\mathbf u=\mathbf b-\mathbf a$, $\mathbf v=\mathbf c-\mathbf a$ and $\mathbf n=\mathbf u\times\mathbf v$. The position vectors and displacement vectors are distinct in the sketch:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0.2,1.6);
+  \coordinate (B) at (1.9,3.1);
+  \coordinate (C) at (2.9,1.5);
+  \draw[thick,->] (O)--(A) node[midway,left] {$\mathbf a$};
+  \draw[thick,->] (O)--(B) node[pos=0.35,right] {$\mathbf b$};
+  \draw[thick,->] (O)--(C) node[midway,below right] {$\mathbf c$};
+  \draw[red,thick,->] (A)--(B) node[midway,above left] {$\mathbf u=\mathbf b-\mathbf a$};
+  \draw[red,thick,->] (A)--(C) node[midway,above] {$\mathbf v=\mathbf c-\mathbf a$};
+  \node[below left] at (O) {$O$};
+  \node[left] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}
+\end{document}
+```
+
+### 2.6.3 Intersection of a line and a plane (page 16)
+
+Write the line as $\mathbf u\times\mathbf r=\mathbf u\times\mathbf a$ and the plane as $\mathbf n\cdot\mathbf r=\mathbf n\cdot\mathbf b$, where $\mathbf u,\mathbf n\ne\mathbf0$.
+
+Equivalently, $\mathbf r\times\mathbf u=\mathbf a\times\mathbf u$. Taking the cross product with $\mathbf n$ and using the vector triple-product identity gives
+$$\begin{aligned}
+(\mathbf r\times\mathbf u)\times\mathbf n
+&=(\mathbf a\times\mathbf u)\times\mathbf n,\\
+(\mathbf n\cdot\mathbf r)\mathbf u-(\mathbf n\cdot\mathbf u)\mathbf r
+&=(\mathbf a\times\mathbf u)\times\mathbf n.
+\end{aligned}$$
+Substitute the plane equation:
+$$(\mathbf n\cdot\mathbf b)\mathbf u-(\mathbf u\cdot\mathbf n)\mathbf r
+=(\mathbf a\times\mathbf u)\times\mathbf n.$$
+
+- If $\mathbf u\cdot\mathbf n\ne0$, there is a unique intersection point,
+  $$\mathbf r=
+  \frac{(\mathbf n\cdot\mathbf b)\mathbf u-(\mathbf a\times\mathbf u)\times\mathbf n}
+  {\mathbf u\cdot\mathbf n}.$$
+- If $\mathbf u\cdot\mathbf n=0$, the line is parallel to the plane. Substitute $\mathbf a$ into the plane equation: if $\mathbf n\cdot\mathbf a=\mathbf n\cdot\mathbf b$, the entire line lies in the plane; otherwise there is no intersection.
+
+### 2.6.4 Shortest distance between two lines (page 17)
+
+Consider lines
+$$\ell_1:\ \mathbf u_1\times(\mathbf r-\mathbf a_1)=\mathbf0,
+\qquad
+\ell_2:\ \mathbf u_2\times(\mathbf r-\mathbf a_2)=\mathbf0.$$
+For the non-parallel case $\mathbf u_1\times\mathbf u_2\ne\mathbf0$, the shortest connecting segment is perpendicular to both directions. Set
+$$\widehat{\mathbf n}=
+\frac{\mathbf u_1\times\mathbf u_2}{|\mathbf u_1\times\mathbf u_2|}.$$
+The shortest distance is
+$$s=\left|(\mathbf a_1-\mathbf a_2)\cdot\widehat{\mathbf n}\right|
+=\left|(\mathbf a_1-\mathbf a_2)\cdot
+\frac{\mathbf u_1\times\mathbf u_2}{|\mathbf u_1\times\mathbf u_2|}\right|.$$
+
+The source drawing shows arbitrary points $P,Q$ on the two lines, red position vectors of $A_1,A_2$, blue position vectors $\mathbf p,\mathbf q$, and green direction arrows.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \coordinate (O) at (3,1);
+  \coordinate (P) at (1.6,1.9);
+  \coordinate (Q) at (1.9,-0.1);
+  \coordinate (A1) at (2.6,2.2);
+  \coordinate (A2) at (2.7,-0.1);
+  \draw[thick] (0.1,1.45)--(3.2,2.38) node[right] {$\ell_1$};
+  \draw[thick] (0.1,-0.1)--(3.5,-0.1) node[right] {$\ell_2$};
+  \draw[green!55!black,thick,->] (0.4,1.54)--(1,1.72) node[midway,above] {$\mathbf u_1$};
+  \draw[green!55!black,thick,->] (0.4,-0.1)--(1,-0.1) node[midway,below] {$\mathbf u_2$};
+  \draw[red,thick,->] (O)--(A1) node[midway,right] {$\mathbf a_1$};
+  \draw[red,thick,->] (O)--(A2) node[midway,right] {$\mathbf a_2$};
+  \draw[blue,thick,->] (O)--(P) node[midway,above] {$\mathbf p$};
+  \draw[blue,thick,->] (O)--(Q) node[midway,left] {$\mathbf q$};
+  \fill (P) circle (1.2pt);
+  \fill (Q) circle (1.2pt);
+  \node[above left] at (P) {$P$};
+  \node[below] at (Q) {$Q$};
+  \node[red,above] at (A1) {$A_1$};
+  \node[red,below] at (A2) {$A_2$};
+  \node[right] at (O) {$O$};
+\end{tikzpicture}
+\end{document}
+```
+
+**Proof of the bound.** For arbitrary points on the lines, write
+$$\mathbf p=\mathbf a_1+\lambda\mathbf u_1,\qquad
+\mathbf q=\mathbf a_2+\mu\mathbf u_2,\qquad\lambda,\mu\in\mathbb R.$$
+Since $\widehat{\mathbf n}$ is perpendicular to both directions,
+$$(\mathbf p-\mathbf q)\cdot\widehat{\mathbf n}
+=(\mathbf a_1-\mathbf a_2)\cdot\widehat{\mathbf n}.$$
+Cauchy–Schwarz gives
+$$\left|(\mathbf a_1-\mathbf a_2)\cdot\widehat{\mathbf n}\right|
+\le|\mathbf p-\mathbf q|$$
+for every $\mathbf p\in\ell_1$, $\mathbf q\in\ell_2$.
+
+**The bound is attained.** The non-parallel directions and their unit normal form a basis, so write
+$$\mathbf a_1-\mathbf a_2=\alpha\mathbf u_1+\beta\mathbf u_2+\gamma\widehat{\mathbf n},
+\qquad\gamma=(\mathbf a_1-\mathbf a_2)\cdot\widehat{\mathbf n}.$$
+Then
+$$\mathbf p-\mathbf q=(\alpha+\lambda)\mathbf u_1+(\beta-\mu)\mathbf u_2+\gamma\widehat{\mathbf n}.$$
+Choosing $\lambda=-\alpha$ and $\mu=\beta$ gives $\mathbf p-\mathbf q=\gamma\widehat{\mathbf n}$, hence
+$$|\mathbf p-\mathbf q|=|\gamma|=s.$$
+The source does not treat the parallel-lines case.
+
+## 2.7 Vector equations (page 18)
+
+**Unfinished problem.** Solve
+$$\mathbf r+\mathbf a\times(\mathbf b\times\mathbf r)=\mathbf c.$$
+
+> [!todo] Vector equation — page 18
+> The PDF ends after this equation. No attempt or solution is supplied, so the problem remains unanswered.

@@ -32,3 +32,5 @@ $\mathbb R^n$ with componentwise operations is a vector space. A line such as $x
 Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 1–4, including the actual geometric sketches in TikZ. [[Real Inner Products and Cauchy-Schwarz]] introduces orthogonality, length and projection.
 
 [[Orthonormal Bases and Vector Coordinates]] gives coordinate descriptions in $\mathbb R^3$. [[Cross Products and Scalar Triple Products]] treats oriented area, rotation and volume there.
+
+[[Lines, Planes and Vector Equations]] applies these directions and spans to affine lines, planes, intersections and distances.
