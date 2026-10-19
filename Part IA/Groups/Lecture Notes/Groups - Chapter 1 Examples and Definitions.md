@@ -6,7 +6,7 @@ date: null
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: 23
+source_pages: 29
 ---
 
 # Groups — Chapter 1: Examples and Definitions
@@ -623,8 +623,156 @@ using the fixed-point hypotheses and distance preservation. Applying the kite le
 The source states
 $$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}=\operatorname{Isom}(X_n).$$
 
-**Incomplete proof.** Lemma 1.22 proves
+**Source argument (pages 23–24).** Lemma 1.22 proves
 $$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
+For the reverse inclusion, take $f\in D_{2n}$.
 
-> [!todo] Reverse inclusion — page 23
-> The PDF ends after the inclusion supplied by Lemma 1.22. The argument that every isometry of $X_n$ is one of these rotations or reflections is unfinished; no completion is supplied here.
+**Claim (assigned exercise, page 23).** An isometry sends the corners, the $n$th roots of unity, to corners.
+
+The source suggests using diagonals or skew diagonals that maximize distances between points. Its square, pentagon and hexagon sketches are schematic:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (-0.8,0.8)--(0.8,0.8)--(0.8,-0.8)--(-0.8,-0.8)--cycle;
+  \draw[dashed] (-0.8,0.8)--(0.8,-0.8);
+  \begin{scope}[shift={(3.3,0)}]
+    \draw[thick] (90:1)--(162:1)--(234:1)--(306:1)--(18:1)--cycle;
+    \draw[dashed] (162:1)--(18:1);
+    \draw[dashed] (162:1)--(306:1);
+  \end{scope}
+  \begin{scope}[shift={(6.6,0)}]
+    \draw[thick] (120:1)--(60:1)--(0:1)--(300:1)--(240:1)--(180:1)--cycle;
+    \draw[dashed] (120:1)--(300:1);
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
+
+> [!todo] Corner-preservation claim — page 23
+> The claim is left as an exercise, with the distance-maximizing idea and sketches above. A complete proof of that step is not supplied. The remaining classification argument below uses this claim.
+
+Write $\zeta=e^{2\pi i/n}$. The claim gives $f(1)=\zeta^m$ for some $m\in\{0,\ldots,n-1\}$. Distance preservation then gives
+$$f(\{\zeta,\zeta^{-1}\})=\{\zeta^{m-1},\zeta^{m+1}\},$$
+because these are the two corners adjacent to $f(1)$. If their order is preserved, $f$ agrees with $r_m$ on $1,\zeta,\zeta^{-1}$; if their order is swapped, it agrees with $s_m$ there. These three vertices are non-collinear. Composing with the inverse of the matching isometry and applying the three point lemma gives $f=r_m$ or $f=s_m$.
+
+## Generators and a dihedral relation (page 24)
+
+Write $r=r_1$ and $s=s_0$. Since
+$$r_k=r^k,\qquad s_\ell=r^\ell s,$$
+the pair $\{r,s\}$ generates $D_{2n}$.
+
+**Lemma 1.26.** $sr=r^{-1}s$.
+
+**Proof by composition.** The two routes have the same final value:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \node (z1) at (0,0) {$z$};
+  \node (r) at (3,0) {$e^{2\pi i/n}z$};
+  \node (sr) at (8,0) {$\overline{e^{2\pi i/n}z}=e^{-2\pi i/n}\overline z$};
+  \draw[->] (z1)--(r) node[midway,above] {$r$};
+  \draw[->] (r)--(sr) node[midway,above] {$s$};
+  \node (z2) at (0,-1.5) {$z$};
+  \node (s) at (3,-1.5) {$\overline z$};
+  \node (rs) at (8,-1.5) {$e^{-2\pi i/n}\overline z$};
+  \draw[->] (z2)--(s) node[midway,above] {$s$};
+  \draw[->] (s)--(rs) node[midway,above] {$r^{-1}$};
+\end{tikzpicture}
+\end{document}
+```
+
+## Products of groups — Proposition 1.27 (page 25)
+
+If $G,H$ are groups, their Cartesian product $G\times H$ is a group under
+$$(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2),$$
+with identity $(e_G,e_H)$. The proof is assigned as an exercise; no proof is supplied.
+
+## Homomorphisms — Definition 1.28 (page 25)
+
+Groups may have the same structure without being literally the same objects: the source compares permutations of a deck of $52$ cards with permutations of a bag of $52$ apples.
+
+A function $\varphi:G\to H$ is a **homomorphism** if it respects the group operations:
+$$\varphi(gg')=\varphi(g)\varphi(g')\qquad(g,g'\in G).$$
+See [[Homomorphisms and Isomorphisms]].
+
+Examples:
+
+1. For any groups $G,H$, the map $g\mapsto e_H$ is the **trivial homomorphism**.
+2. If $H\le G$, the inclusion $i:H\to G$, $h\mapsto h$, is a homomorphism.
+3. **Exercise (page 26).** If $n\mid m$, the map
+   $$\varphi:C_m\to C_n,\qquad z\mapsto z^{m/n}$$
+   is a homomorphism. No proof is supplied.
+
+## Lemma 1.29 — Identities and inverses (page 26)
+
+If $\varphi:G\to H$ is a homomorphism, then
+$$\varphi(e_G)=e_H,\qquad
+\varphi(g^{-1})=\varphi(g)^{-1}\quad(g\in G).$$
+
+**Proof.** We have
+$$\varphi(e_G)\varphi(e_G)=\varphi(e_Ge_G)=\varphi(e_G).$$
+Multiplying by the inverse of $\varphi(e_G)$ gives $\varphi(e_G)=e_H$. Also,
+$$\varphi(g)\varphi(g^{-1})=\varphi(gg^{-1})=\varphi(e_G)=e_H,$$
+so $\varphi(g^{-1})$ is the inverse of $\varphi(g)$.
+
+## Isomorphisms — Definition 1.30 (pages 26–27)
+
+A bijective homomorphism $\varphi:G\to H$ is an **isomorphism**. The groups are **isomorphic**, written $G\cong H$.
+
+### Example: addition modulo $n$ and roots of unity (page 27)
+
+Recall $C_n=\{z\in\mathbb C:z^n=1\}$ under multiplication, and $\mathbb Z_n=\{0,\ldots,n-1\}$ under $+_n$. Define
+$$\varphi:\mathbb Z_n\to C_n,\qquad k\mapsto e^{2\pi ik/n}.$$
+The source asserts that the map is well-defined and bijective, and supplies the operation-preservation calculation. For $k,\ell\in\mathbb Z_n$, write
+$$k+\ell=(k+_n\ell)+np,\qquad p\in\mathbb Z.$$
+Then
+$$\begin{aligned}
+\varphi(k+_n\ell)
+&=\exp\!\left(\frac{2\pi i(k+_n\ell)}n\right)\\
+&=\exp\!\left(\frac{2\pi i(k+\ell)}n\right)\\
+&=e^{2\pi ik/n}e^{2\pi i\ell/n}
+=\varphi(k)\varphi(\ell).
+\end{aligned}$$
+Thus $\mathbb Z_n\cong C_n$.
+
+### Example: the real exponential (page 27)
+
+The exponential is an isomorphism
+$$\exp:(\mathbb R,+,0)\to(\mathbb R_{>0},\times,1),\qquad x\mapsto e^x.$$
+It respects the operations because $\exp(x+y)=\exp(x)\exp(y)$, and it is bijective because $\log$ is its set-theoretic inverse.
+
+## Lemma 1.31 — Composition, inverses and equivalence (page 28)
+
+1. If $\varphi:G\to H$ and $\psi:H\to K$ are homomorphisms, then $\psi\circ\varphi:G\to K$ is a homomorphism:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \node (G) at (0,0) {$G$};
+  \node (H) at (2.5,0) {$H$};
+  \node (K) at (5,0) {$K$};
+  \draw[->] (G)--(H) node[midway,above] {$\varphi$};
+  \draw[->] (H)--(K) node[midway,above] {$\psi$};
+\end{tikzpicture}
+\end{document}
+```
+
+2. If $\varphi:G\to H$ is an isomorphism, its set-theoretic inverse $\varphi^{-1}:H\to G$ is also an isomorphism.
+3. Isomorphism is an equivalence relation: $G\cong G$; $G\cong H$ implies $H\cong G$; and $G\cong H$, $H\cong K$ imply $G\cong K$.
+
+All three proofs are assigned as an exercise.
+
+## Image and kernel — Definition 1.32 and Proposition 1.33 (page 28)
+
+For a homomorphism $\varphi:G\to H$,
+$$\operatorname{Im}(\varphi)=\{h\in H:\text{there is a }g\in G\text{ with }\varphi(g)=h\},$$
+$$\ker(\varphi)=\{g\in G:\varphi(g)=e_H\}.$$
+
+**Proposition 1.33 (statement only).**
+$$\operatorname{Im}(\varphi)\le H,\qquad\ker(\varphi)\le G.$$
+No proof is supplied in this PDF. Page 29 is blank.

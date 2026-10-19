@@ -5,7 +5,7 @@ course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: [19, 20, 21, 22, 23]
+source_pages: [19, 20, 21, 22, 23, 24]
 ---
 
 # Isometries and Dihedral Groups
@@ -14,7 +14,7 @@ For $X\subseteq\mathbb C$, an **isometry** is a bijection $f:X\to X$ such that
 $$|f(x)-f(y)|=|x-y|\qquad(x,y\in X).$$
 The identity, composites and inverses preserve distances, so
 $$\operatorname{Isom}(X)\le\operatorname{Sym}(X).$$
-The proof and diagrams are in [[Groups - Chapter 1 Examples and Definitions]], pages 19–23. The source note also flags an incorrect coordinate-distance formula on page 19.
+The proof and diagrams are in [[Groups - Chapter 1 Examples and Definitions]], pages 19–24. The source note also flags an incorrect coordinate-distance formula on page 19.
 
 ## Dihedral group
 
@@ -27,7 +27,9 @@ Here $r_0$ is the identity, the $r_k$ are pairwise distinct rotations, and $s_\e
 
 Proposition 1.25 states
 $$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}.$$
-**Incomplete proof:** the source proves the inclusion of the displayed rotations and reflections in $\operatorname{Isom}(X_n)$, then ends. The reverse inclusion remains a TODO on page 23 of the source note.
+The reverse-inclusion argument on pages 23–24 assumes the corner-preservation claim, which is left as an exercise with a distance-maximizing-diagonal idea. If $f(1)=\zeta^m$, where $\zeta=e^{2\pi i/n}$, it sends the adjacent vertices $\zeta,\zeta^{-1}$ to $\zeta^{m-1},\zeta^{m+1}$ in either order. It therefore agrees with $r_m$ or $s_m$ on three non-collinear vertices; the three point lemma gives equality on $X_n$. The localized TODO now concerns the unproved corner-preservation claim, rather than the formerly missing continuation.
+
+Writing $r=r_1$, $s=s_0$, the identities $r_k=r^k$ and $s_\ell=r^\ell s$ show that $\{r,s\}$ generates $D_{2n}$. Lemma 1.26 proves $sr=r^{-1}s$ by evaluating the two composites at $z$; both give $e^{-2\pi i/n}\overline z$.
 
 ## Geometric lemmas
 
