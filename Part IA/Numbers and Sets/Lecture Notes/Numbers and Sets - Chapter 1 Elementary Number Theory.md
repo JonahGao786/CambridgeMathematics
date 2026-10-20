@@ -6,12 +6,12 @@ date: null
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: 14
+source_pages: 19
 ---
 
 # Numbers and Sets — Chapter 1: Elementary Number Theory
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view), fourteen pages. No date is supplied.
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view), nineteen pages. No date is supplied.
 
 ## The natural numbers and Peano axioms (page 1)
 
@@ -328,3 +328,135 @@ where all factors are prime. We want to show $k=\ell$ and, after reordering, $p_
 Since $p_1\mid n=q_1\cdots q_\ell$, the preceding extension of Euclid's lemma gives $p_1\mid q_i$ for some $i$. Relabel so that $p_1\mid q_1$. Since $q_1$ is prime, $p_1=q_1$. Cancel them:
 $$\frac n{p_1}=p_2\cdots p_k=q_2\cdots q_\ell<n.$$
 If the quotient is $1$, both remaining products are empty. Otherwise the induction hypothesis makes the remaining prime factors agree after reordering. In either case $k=\ell$, and the original factorizations agree up to order.
+
+## Factorization in other arithmetic systems (page 15)
+
+There are systems with addition and multiplication in which factorization is not unique. The example is
+$$\mathbb Z[\sqrt{-3}]
+=\{x+y\sqrt{-3}:x,y\in\mathbb Z\},\qquad \sqrt{-3}=i\sqrt3.$$
+Adding or multiplying two elements gives another element of this set. For example,
+$$(1+\sqrt{-3})+(1-\sqrt{-3})=2,$$
+$$(1+\sqrt{-3})(1-\sqrt{-3})=4=2\cdot2.$$
+The source calls $1\pm\sqrt{-3}$ “prime in this sense” and uses these factorizations to illustrate failure of uniqueness.
+
+> [!todo] Prime versus irreducible — page 15
+> Under the usual definition of a prime element, $1\pm\sqrt{-3}$ are not prime. For example, $1+\sqrt{-3}$ divides $2\cdot2$ but does not divide $2$, since $2/(1+\sqrt{-3})=(1-\sqrt{-3})/2$ is outside this ring. The intended example is non-unique factorization into **irreducibles**, a different notion outside the integers. The source does not define this distinction or prove irreducibility; its use of “prime” requires this qualification.
+
+## Consequences of unique prime factorization (pages 15–16)
+
+### (1) Positive divisors (page 15)
+
+The positive divisors of
+$$n=2^3\,3^7\,11$$
+are exactly
+$$2^a3^b11^c,\qquad
+0\le a\le3,\quad0\le b\le7,\quad0\le c\le1,$$
+with integer exponents. There are no other prime factors: if, for example, $7\mid n$, factoring $n$ through this divisor would contradict uniqueness.
+
+In general, for distinct primes $p_1,\ldots,p_k$ and positive integers $a_i$, the positive divisors of
+$$n=p_1^{a_1}\cdots p_k^{a_k}$$
+are exactly
+$$p_1^{b_1}\cdots p_k^{b_k},\qquad
+0\le b_i\le a_i\quad(1\le i\le k).$$
+
+### (2) Common divisors and the gcd (page 16)
+
+Consider
+$$x=2^3\,3^7\,5\,11^3,\qquad
+y=2^4\,3^2\,11\,13.$$
+Their common positive divisors are exactly
+$$2^a3^b11^c,\qquad0\le a\le3,\quad0\le b\le2,\quad0\le c\le1.$$
+Thus
+$$\gcd(x,y)=2^3\,3^2\,11.$$
+
+More generally, using the same list of distinct primes and allowing zero exponents,
+$$x=\prod_{i=1}^k p_i^{a_i},\qquad
+y=\prod_{i=1}^k p_i^{b_i},\qquad a_i,b_i\ge0,$$
+gives
+$$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)}.$$
+
+### (3) Common multiples and the lcm (page 16)
+
+The common integer multiples of the same $x,y$ are the integer multiples of
+$$L=2^4\,3^7\,5\,11^3\,13.$$
+Equivalently, they have the source's form
+$$2^a3^b5^c11^d13^e\,t,\qquad
+a\ge4,\quad b\ge7,\quad c\ge1,\quad d\ge3,\quad e\ge1,\quad t\in\mathbb Z.$$
+The number $L$ is their **least common multiple**. In general,
+$$\operatorname{lcm}(x,y)=\prod_{i=1}^k p_i^{\max(a_i,b_i)}.$$
+Since $\min(a_i,b_i)+\max(a_i,b_i)=a_i+b_i$,
+$$\gcd(x,y)\operatorname{lcm}(x,y)=xy\qquad(x,y\in\mathbb N).$$
+
+See [[Greatest Common Divisors and Euclid's Algorithm]].
+
+### (4) Another proof of infinitely many primes (page 17)
+
+The source attributes this counting proof to Erdős (1930).
+
+Suppose $p_1,\ldots,p_k$ are all the primes. Unique factorization writes every positive integer as
+$$p_1^{j_1}\cdots p_k^{j_k}
+=m^2p_1^{i_1}\cdots p_k^{i_k},\qquad i_\nu\in\{0,1\},$$
+by splitting each exponent into its even part and its remainder modulo $2$.
+
+If such a number is at most $N$, then $m\le\sqrt N$. There are at most $\lfloor\sqrt N\rfloor$ choices for $m$ and $2^k$ choices of the exponents $i_1,\ldots,i_k$, so at most $\sqrt N\,2^k$ such numbers at most $N$.
+
+Choose a natural number $N>4^k$. Then $N>\sqrt N\,2^k$, so some integer at most $N$ cannot have this form. It must have a prime factor outside the supposed complete list, a contradiction.
+
+**Further statements.** Writing $p_k$ for the $k$th prime, the source records the bounds
+$$p_k<2^{2^k},\qquad p_k<4^k,$$
+alongside the first and second proofs respectively. It gives no separate derivations of these quantitative bounds. It also states the prime number theorem in the form
+$$p_k\sim k\log k,$$
+without proof here.
+
+## Modular arithmetic (pages 18–19)
+
+Let $n\ge2$ be a natural number. In the **integers modulo $n$**, written $\mathbb Z_n$ or $\mathbb Z/n\mathbb Z$, integers are regarded as the same if they differ by a multiple of $n$.
+
+Write
+$$x\equiv y\pmod n
+\quad\Longleftrightarrow\quad n\mid(x-y)
+\quad\Longleftrightarrow\quad x=y+kn\text{ for some }k\in\mathbb Z.$$
+For example, $2\equiv16\pmod7$. Equality of the corresponding elements of $\mathbb Z_n$ is also written $x=y$ in $\mathbb Z_n$.
+
+The cyclic diagram places $0=n$ at the top and the succeeding residues clockwise. Tick positions are schematic; no numerical value of $n$ is specified.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (0,0) circle (1.35);
+  \foreach \a in {90,50,8,-42,-92,-130,-164,155,120} {
+    \draw[thick] (\a:1.27)--(\a:1.43);
+  }
+  \node[above] at (90:1.48) {$0=n$};
+  \node[above right] at (50:1.48) {$1$};
+  \node[right] at (8:1.48) {$2$};
+  \node[below right] at (-42:1.48) {$3$};
+  \node[below] at (-92:1.48) {$4$};
+  \node[left] at (155:1.48) {$n-2$};
+  \node[above left] at (120:1.48) {$n-1$};
+\end{tikzpicture}
+\end{document}
+```
+
+### Arithmetic is independent of representatives (page 18)
+
+Suppose $a\equiv a'\pmod n$ and $b\equiv b'\pmod n$. Then
+$$n\mid(a-a')+(b-b')=(a+b)-(a'+b'),$$
+so $a+b\equiv a'+b'\pmod n$. Similarly,
+$$n\mid(a-a')b+a'(b-b')=ab-a'b',$$
+so $ab\equiv a'b'\pmod n$.
+
+Thus addition and multiplication are well-defined modulo $n$ and inherit the usual arithmetic rules from $\mathbb Z$.
+
+### An integer equation with no solution (page 19)
+
+Does
+$$2a^2+3b^2=1,\qquad a,b\in\mathbb Z,$$
+have a solution?
+
+Any solution would give $2a^2\equiv1\pmod3$. But the possible residues of $a$ are $0,1,2$, and
+$$2\cdot0^2\equiv0,\qquad
+2\cdot1^2\equiv2,\qquad
+2\cdot2^2\equiv2\pmod3.$$
+None is $1$, so there is no integer solution. See [[Modular Arithmetic]].

@@ -5,7 +5,7 @@ course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: [8, 9, 10, 11, 12, 13]
+source_pages: [8, 9, 10, 11, 12, 13, 15, 16]
 ---
 
 # Greatest Common Divisors and Euclid's Algorithm
@@ -61,4 +61,21 @@ Numbers $a,b$ are **coprime** when $\gcd(a,b)=1$. Reversing the second example g
 $$1=35-2\cdot17=-5\cdot52+3\cdot87.$$
 More generally, Theorem 7 gives $\gcd(a,b)=xa+yb$ for integers $x,y$. [[Bezout's Identity and Linear Diophantine Equations]] records both proofs, the coefficient-finding method, and the criterion $\gcd(a,b)\mid c$ for solvability of $ax+by=c$.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13, including the full algorithm table and proofs. Related: [[Divisibility and Prime Numbers]] and [[Natural Numbers and Mathematical Induction]].
+## Prime-exponent formulas and least common multiples
+
+For positive integers $x,y$, use the same list of distinct primes, allowing exponent zero:
+$$x=\prod_{i=1}^k p_i^{a_i},\qquad
+y=\prod_{i=1}^k p_i^{b_i},\qquad a_i,b_i\ge0.$$
+A common divisor can use at most $\min(a_i,b_i)$ copies of each prime. A common positive multiple needs at least $\max(a_i,b_i)$ copies. Consequently,
+$$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)},$$
+$$\operatorname{lcm}(x,y)=\prod_{i=1}^k p_i^{\max(a_i,b_i)}.$$
+The **least common multiple** is positive, and every common integer multiple is an integer multiple of it.
+
+For the source example,
+$$x=2^3\,3^7\,5\,11^3,\qquad y=2^4\,3^2\,11\,13,$$
+$$\gcd(x,y)=2^3\,3^2\,11,\qquad
+\operatorname{lcm}(x,y)=2^4\,3^7\,5\,11^3\,13.$$
+The exponent identity $\min(a_i,b_i)+\max(a_i,b_i)=a_i+b_i$ gives
+$$\gcd(x,y)\operatorname{lcm}(x,y)=xy.$$
+
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13 and 15–16, including the full algorithm table, proofs and common-divisor/multiple examples. Related: [[Divisibility and Prime Numbers]], [[Modular Arithmetic]] and [[Natural Numbers and Mathematical Induction]].

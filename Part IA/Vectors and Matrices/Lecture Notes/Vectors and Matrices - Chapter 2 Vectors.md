@@ -6,7 +6,7 @@ date: null
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: 18
+source_pages: 23
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
@@ -510,9 +510,9 @@ $$\mathbf a\times(\mathbf b\times\mathbf c)
 The cross product is not associative:
 $$(\mathbf a\times\mathbf b)\times\mathbf c
 =(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
-No proof of these identities is supplied here.
+These identities are stated here. A component proof of the first identity appears on page 22; no separate proof of the second is supplied.
 
-## 2.6 Lines, planes and vector equations (pages 14–17)
+## 2.6 Lines, planes and vector equations (pages 14–19)
 
 All vectors in this section lie in $\mathbb R^3$. See [[Lines, Planes and Vector Equations]].
 
@@ -699,10 +699,150 @@ Choosing $\lambda=-\alpha$ and $\mu=\beta$ gives $\mathbf p-\mathbf q=\gamma\wid
 $$|\mathbf p-\mathbf q|=|\gamma|=s.$$
 The source does not treat the parallel-lines case.
 
-## 2.7 Vector equations (page 18)
+### 2.6.5 Vector equations (pages 18–19)
 
-**Unfinished problem.** Solve
+Solve
 $$\mathbf r+\mathbf a\times(\mathbf b\times\mathbf r)=\mathbf c.$$
 
-> [!todo] Vector equation — page 18
-> The PDF ends after this equation. No attempt or solution is supplied, so the problem remains unanswered.
+Expanding the vector triple product gives
+$$\mathbf r+(\mathbf a\cdot\mathbf r)\mathbf b
+-(\mathbf a\cdot\mathbf b)\mathbf r=\mathbf c. \tag{*}$$
+Taking the dot product with $\mathbf a$,
+$$\mathbf a\cdot\mathbf r
++(\mathbf a\cdot\mathbf r)(\mathbf b\cdot\mathbf a)
+-(\mathbf a\cdot\mathbf b)(\mathbf a\cdot\mathbf r)
+=\mathbf c\cdot\mathbf a,$$
+so
+$$\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c. \tag{**}$$
+Substitution in $(*)$ yields
+$$(1-\mathbf a\cdot\mathbf b)\mathbf r
+=\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b.$$
+
+1. If $\mathbf a\cdot\mathbf b\ne1$, there is a unique solution,
+   $$\mathbf r=
+   \frac{\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b}
+   {1-\mathbf a\cdot\mathbf b}.$$
+2. If $\mathbf a\cdot\mathbf b=1$ and $\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b\ne\mathbf0$, the equation would equate $\mathbf0$ to a non-zero vector. There is no solution.
+3. If $\mathbf a\cdot\mathbf b=1$ and $\mathbf c=(\mathbf a\cdot\mathbf c)\mathbf b$, equation $(*)$ reduces to
+   $$(\mathbf a\cdot\mathbf r-\mathbf a\cdot\mathbf c)\mathbf b=\mathbf0.$$
+   Here $\mathbf a,\mathbf b\ne\mathbf0$, because their dot product is $1$. The solutions form the plane
+   $$\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c.$$
+
+## 2.7 Index notation and summation convention (pages 19–21)
+
+Take an orthonormal right-handed basis $\{\mathbf e_1,\mathbf e_2,\mathbf e_3\}$, with indices $i,j,k$ ranging over $1,2,3$.
+
+### Kronecker delta (page 19)
+
+The **Kronecker delta** is
+$$\delta_{ij}=
+\begin{cases}
+1,&i=j,\\
+0,&i\ne j.
+\end{cases}$$
+It satisfies
+$$\mathbf e_i\cdot\mathbf e_j=\delta_{ij},
+\qquad\delta_{ij}=\delta_{ji}.$$
+For $\mathbf a=a_1\mathbf e_1+a_2\mathbf e_2+a_3\mathbf e_3$ and similarly $\mathbf b$,
+$$\mathbf a\cdot\mathbf b
+=\sum_{i=1}^3\sum_{j=1}^3\delta_{ij}a_ib_j
+=\sum_{i=1}^3 a_ib_i.$$
+
+### Levi-Civita symbol (page 20)
+
+The **Levi-Civita symbol** is
+$$\varepsilon_{ijk}=
+\begin{cases}
+1,&(i,j,k)\text{ is an even permutation of }(1,2,3),\\
+-1,&(i,j,k)\text{ is an odd permutation of }(1,2,3),\\
+0,&\text{otherwise}.
+\end{cases}$$
+In particular,
+$$\varepsilon_{123}=\varepsilon_{231}=\varepsilon_{312}=1,$$
+$$\varepsilon_{132}=\varepsilon_{213}=\varepsilon_{321}=-1.$$
+It is **antisymmetric**: interchanging any two index positions reverses the sign. If any two indices coincide, it is zero, for example $\varepsilon_{112}=0$.
+
+The standard-basis cross products become
+$$\mathbf e_i\times\mathbf e_j
+=\sum_{k=1}^3\varepsilon_{ijk}\mathbf e_k.$$
+For example, $\mathbf e_1\times\mathbf e_2=\mathbf e_3$ and $\mathbf e_3\times\mathbf e_1=\mathbf e_2$. Expanding bilinearly,
+$$\mathbf a\times\mathbf b
+=\sum_{i=1}^3\sum_{j=1}^3\sum_{k=1}^3
+\varepsilon_{ijk}a_ib_j\mathbf e_k.$$
+
+### Einstein's summation convention (page 21)
+
+**An index appearing twice in a term is summed over its range.** The summation signs are omitted. An index appearing once is a **free index**, held fixed during those sums. No index may appear more than twice in one term under this convention.
+
+Examples are
+$$a_i\delta_{ij}=\sum_{i=1}^3a_i\delta_{ij}=a_j,$$
+$$\mathbf a\cdot\mathbf b=\delta_{ij}a_ib_j=a_jb_j,$$
+$$\mathbf a\times\mathbf b=\varepsilon_{pqk}a_pb_q\mathbf e_k,
+\qquad(\mathbf a\times\mathbf b)_i=\varepsilon_{ijk}a_jb_k.$$
+In the vector expression, $p,q,k$ are dummy indices. In its component expression, $i$ is free and $j,k$ are summed. The distinct dummy labels avoid conflating the component index with a summation index.
+
+Further examples:
+$$\mathbf a\cdot(\mathbf b\times\mathbf c)
+=\varepsilon_{ijk}a_ib_jc_k,$$
+$$\delta_{ii}=\delta_{11}+\delta_{22}+\delta_{33}=3.$$
+
+For explicit sum expansions, numerical examples, index bookkeeping and explanations of all three ideas together, see [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]]. That guide's additional teaching examples are supplementary.
+
+### 2.7.1 Epsilon identities and contraction (page 22)
+
+**Proposition — Epsilon identities.**
+$$\begin{aligned}
+\varepsilon_{ijk}\varepsilon_{pqr}
+={}&\delta_{ip}\delta_{jq}\delta_{kr}
+-\delta_{ip}\delta_{jr}\delta_{kq}\\
+&+\delta_{iq}\delta_{jr}\delta_{kp}
+-\delta_{iq}\delta_{jp}\delta_{kr}\\
+&+\delta_{ir}\delta_{jp}\delta_{kq}
+-\delta_{ir}\delta_{jq}\delta_{kp}\\
+={}&\begin{vmatrix}
+\delta_{ip}&\delta_{iq}&\delta_{ir}\\
+\delta_{jp}&\delta_{jq}&\delta_{jr}\\
+\delta_{kp}&\delta_{kq}&\delta_{kr}
+\end{vmatrix}.
+\end{aligned}$$
+The contracted identities are
+$$\varepsilon_{ijk}\varepsilon_{pqk}
+=\delta_{ip}\delta_{jq}-\delta_{iq}\delta_{jp},$$
+$$\varepsilon_{ijk}\varepsilon_{pjk}=2\delta_{ip},$$
+$$\varepsilon_{ijk}\varepsilon_{ijk}=6.$$
+These identities are stated without proof here. The repeated indices indicate one, two and three summations respectively in the last three lines.
+
+### 2.7.2 Vector triple-product identity (page 22)
+
+$$\mathbf a\times(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf c.$$
+
+**Proof.** Calculate the $i$th component, leaving $i$ free:
+$$\begin{aligned}
+[\mathbf a\times(\mathbf b\times\mathbf c)]_i
+&=\varepsilon_{ijk}a_j(\mathbf b\times\mathbf c)_k\\
+&=\varepsilon_{ijk}\varepsilon_{kpq}a_jb_pc_q\\
+&=(\delta_{ip}\delta_{jq}-\delta_{iq}\delta_{jp})a_jb_pc_q\\
+&=a_jb_ic_j-a_jb_jc_i\\
+&=(\mathbf a\cdot\mathbf c)b_i-(\mathbf a\cdot\mathbf b)c_i.
+\end{aligned}$$
+The contraction step uses the cyclic equality $\varepsilon_{kpq}=\varepsilon_{pqk}$. Equality of all three components proves the vector identity.
+
+### 2.7.3 Lagrange's identity (page 23)
+
+$$
+(\mathbf a\times\mathbf b)\cdot(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf b)(\mathbf b\cdot\mathbf c)
+-(\mathbf a\cdot\mathbf c)|\mathbf b|^2.
+$$
+
+**Proof.**
+$$\begin{aligned}
+(\mathbf a\times\mathbf b)\cdot(\mathbf b\times\mathbf c)
+&=\varepsilon_{ijk}\varepsilon_{ipq}a_jb_kb_pc_q\\
+&=(\delta_{jp}\delta_{kq}-\delta_{jq}\delta_{kp})a_jb_kb_pc_q\\
+&=a_jb_jb_kc_k-a_jc_jb_kb_k\\
+&=(\mathbf a\cdot\mathbf b)(\mathbf b\cdot\mathbf c)
+-(\mathbf a\cdot\mathbf c)|\mathbf b|^2.
+\end{aligned}$$
+Here cyclically rewriting both epsilon symbols as $\varepsilon_{jki}$ and $\varepsilon_{pqi}$ aligns the repeated index $i$ for the stated contraction identity.

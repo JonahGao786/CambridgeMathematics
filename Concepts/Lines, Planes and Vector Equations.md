@@ -5,7 +5,7 @@ course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: [14, 15, 16, 17, 18]
+source_pages: [14, 15, 16, 17, 18, 19]
 ---
 
 # Lines, Planes and Vector Equations
@@ -42,6 +42,19 @@ $$s=\left|(\mathbf a_1-\mathbf a_2)\cdot
 \frac{\mathbf u_1\times\mathbf u_2}{|\mathbf u_1\times\mathbf u_2|}\right|.$$
 The projection of every connecting vector onto the common unit normal is fixed, so Cauchy–Schwarz bounds its length below by $s$. Writing $\mathbf a_1-\mathbf a_2$ as a combination of $\mathbf u_1,\mathbf u_2$ and the normal lets one cancel the two directional components, attaining the bound. The source does not cover parallel lines.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 14–17, which retains the full derivations and all geometric sketches as TikZ. Page 18 starts the problem $\mathbf r+\mathbf a\times(\mathbf b\times\mathbf r)=\mathbf c$ but supplies no attempt or solution; a localized TODO preserves its unfinished status.
+## A vector equation with three solution cases
+
+For
+$$\mathbf r+\mathbf a\times(\mathbf b\times\mathbf r)=\mathbf c,$$
+expand the triple product and take the dot product with $\mathbf a$. This gives $\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c$ and hence
+$$(1-\mathbf a\cdot\mathbf b)\mathbf r
+=\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b.$$
+
+- If $\mathbf a\cdot\mathbf b\ne1$, the unique solution is
+  $$\mathbf r=\frac{\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b}{1-\mathbf a\cdot\mathbf b}.$$
+- If $\mathbf a\cdot\mathbf b=1$ and the right side is non-zero, there is no solution.
+- If $\mathbf a\cdot\mathbf b=1$ and the right side is zero, the solutions form the plane $\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c$.
+
+Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 14–19, which retains the full derivations and all geometric sketches as TikZ. The current source supplies the complete vector-equation solution on pages 18–19.
 
 Related: [[Vectors and Linear Span]], [[Orthonormal Bases and Vector Coordinates]], [[Real Inner Products and Cauchy-Schwarz]].

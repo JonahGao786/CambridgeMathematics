@@ -5,7 +5,7 @@ course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: [7, 8, 13, 14]
+source_pages: [7, 8, 13, 14, 15, 17]
 ---
 
 # Divisibility and Prime Numbers
@@ -52,4 +52,20 @@ Existence follows from Proposition 2. For uniqueness, induct on $n$. If
 $$n=p_1\cdots p_k=q_1\cdots q_\ell,$$
 Euclid's lemma makes $p_1$ divide some $q_i$. Since $q_i$ is prime, $p_1=q_i$. Relabel that factor as $q_1$ and cancel it. The quotient is smaller than $n$, so induction matches the remaining factors; if it is $1$, both remaining products are empty. Thus $k=\ell$ and the factors agree after reordering.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8 and 13–14. The complete uniqueness proof and unanswered product-comparison question are retained there. [[Greatest Common Divisors and Euclid's Algorithm]] supplies the gcd material on pages 8–13. The natural-number convention appears in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
+## Positive divisors from prime exponents
+
+If $n=p_1^{a_1}\cdots p_k^{a_k}$ with distinct primes and positive exponents, its positive divisors are exactly
+$$p_1^{b_1}\cdots p_k^{b_k},\qquad0\le b_i\le a_i.$$
+For example, $2^3\,3^7\,11$ has precisely the positive divisors $2^a3^b11^c$ with $0\le a\le3$, $0\le b\le7$, $0\le c\le1$. An extra prime factor would contradict unique factorization.
+
+The page-15 example $4=2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ concerns the different system $\mathbb Z[\sqrt{-3}]$. Its use of “prime” is flagged in the source note: these factors are irreducible rather than prime elements under the usual ring terminology. The integer form of Euclid's lemma cannot be transferred to that example without qualification.
+
+## Erdős's counting proof of infinitely many primes
+
+Suppose $p_1,\ldots,p_k$ list all primes. Splitting prime exponents into even parts and remainders writes each positive integer as
+$$m^2p_1^{i_1}\cdots p_k^{i_k},\qquad i_\nu\in\{0,1\}.$$
+Among numbers at most $N$, there are at most $\sqrt N$ choices of $m$ and $2^k$ choices of the binary exponents. If $N>4^k$, this accounts for fewer than $N$ integers, a contradiction. The lecture attributes this proof to Erdős (1930).
+
+The source also states bounds for the $k$th prime, $p_k<2^{2^k}$ and $p_k<4^k$, without separate derivations, and states $p_k\sim k\log k$ without proving the prime number theorem.
+
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, 13–15 and 17. The complete uniqueness proof, terminology review on page 15 and unanswered product-comparison question on page 8 are retained there. [[Greatest Common Divisors and Euclid's Algorithm]] supplies the gcd/lcm material; [[Modular Arithmetic]] gives the new congruence calculations. The natural-number convention appears in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
