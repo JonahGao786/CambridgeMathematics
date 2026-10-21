@@ -1,6 +1,6 @@
 ---
 title: L'Hôpital's Rule
-material_type: course-level definitions, formulas and explanations
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.1 Differentiation.pdf
 drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
@@ -27,7 +27,7 @@ $$\lim_{x\to x_0}\frac{f(x)}{g(x)}
 $$\frac{f(x_0+h)}{g(x_0+h)}
 =\frac{hf'(x_0)+o(h)}{hg'(x_0)+o(h)}
 =\frac{f'(x_0)+o(h)/h}{g'(x_0)+o(h)/h}.$$
-Since $o(h)/h\to0$ and $g'(x_0)\ne0$, the result follows. This is the special case proved in `topic1.pdf`, pages 12–13; more general versions are outside this proof.
+Since $o(h)/h\to0$ and $g'(x_0)\ne0$, the result follows.
 
 ## When several derivatives vanish
 

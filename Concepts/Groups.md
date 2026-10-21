@@ -1,6 +1,6 @@
 ---
 title: Groups
-material_type: source-backed definitions, propositions and examples with supplementary explanation
+material_type: concept note
 course: Part IA Groups
 ---
 
@@ -33,29 +33,29 @@ A group is **abelian** if $ab=ba$ for all $a,b\in G$. The one-element group $\{e
 
 The additive groups of $\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$ are abelian, with inverse $-x$. The non-zero elements of $\mathbb Q,\mathbb R,\mathbb C$ form abelian groups under multiplication. All of $\mathbb R$ does not form a multiplicative group, since $0$ has no inverse.
 
-The source also gives exercises on the multiplicative group $C_n=\{z\in\mathbb C:z^n=1\}$ of [[Roots of Unity|roots of unity]] and addition modulo $n$ on $\mathbb Z_n=\{0,\ldots,n-1\}$. The exercise proofs are not supplied. [[Bijections and Permutations]] introduces the set-theoretic inverse of a function.
+**Exercise.** Verify the group axioms for the multiplicative group $C_n=\{z\in\mathbb C:z^n=1\}$ of [[Roots of Unity|roots of unity]] and addition modulo $n$ on $\mathbb Z_n=\{0,\ldots,n-1\}$. [[Bijections and Permutations]] introduces the set-theoretic inverse of a function.
 
 ## Symmetric groups and subgroups
 
-For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group. [[Bijections and Permutations]] records the composition and inverse lemmas used in the source proof.
+For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group. [[Bijections and Permutations]] records the composition and inverse lemmas used in the proof.
 
 A subset $H\subseteq G$ is a subgroup if it contains $e_G$ and is closed under the operation and inverses. [[Subgroups and Generated Subgroups]] records the examples, the classification $H=n\mathbb Z$ for subgroups of the additive integers, and the intersection definition of $\langle X\rangle$.
 
 ## Geometric groups
 
-For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the classification argument on pages 23–24, now completed by supplementary proofs of corner and adjacency preservation.
+For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the classification using preservation of corners and adjacency.
 
 ## Products and structure-preserving maps
 
-The direct product $G\times H$ has componentwise operation $(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2)$ and identity $(e_G,e_H)$; the source assigns the group-axiom proof as an exercise. [[Homomorphisms and Isomorphisms]] records maps preserving the operation, bijective such maps, the examples $\mathbb Z_n\cong C_n$ and $(\mathbb R,+)\cong(\mathbb R_{>0},\times)$, the image/kernel subgroup proofs, and the criterion that injectivity is equivalent to a trivial kernel.
+The direct product $G\times H$ has componentwise operation $(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2)$ and identity $(e_G,e_H)$; verifying the group axioms is an exercise. [[Homomorphisms and Isomorphisms]] records maps preserving the operation, bijective such maps, the examples $\mathbb Z_n\cong C_n$ and $(\mathbb R,+)\cong(\mathbb R_{>0},\times)$, the image/kernel subgroup proofs, and the criterion that injectivity is equivalent to a trivial kernel.
 
 ## Cyclic groups and element orders
 
-A group is cyclic if $G=\{g^k:k\in\mathbb Z\}$ for some generator $g$. [[Cyclic Groups and Element Orders]] gives the full source classification: $G\cong C_n$ for some positive integer $n$, or $G\cong\mathbb Z$. For any element $g$ of any group, $o(g)=|\langle g\rangle|$ is its order; if finite, it is the least positive exponent with $g^n=e_G$.
+A group is cyclic if $G=\{g^k:k\in\mathbb Z\}$ for some generator $g$. [[Cyclic Groups and Element Orders]] gives the classification: $G\cong C_n$ for some positive integer $n$, or $G\cong\mathbb Z$. For any element $g$ of any group, $o(g)=|\langle g\rangle|$ is its order; if finite, it is the least positive exponent with $g^n=e_G$.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–33, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+See [[Groups - Chapter 1 Examples and Definitions]], pages 5–33, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
 
-## Cancellation and the chosen operation — supplementary explanation
+## Cancellation and the chosen operation
 
 If $ab=ac$, multiply on the left by $a^{-1}$ to obtain $b=c$; if $ba=ca$, multiply on the right. Associativity and inverses justify cancellation. Closure or the existence of an identity alone does not. This is the step used in [[Latin Squares]] and in many subgroup arguments.
 

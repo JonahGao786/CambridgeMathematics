@@ -11,13 +11,11 @@ source_pages: 9
 
 # Differential Equations — Examples Sheet 1: Handwritten Proofs
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo/view).
-
-The supplied questions are now available in [[Differential Equations - Examples Sheet 1 2026]], separately read from two matching question PDFs. This nine-page document contains handwritten answers and attempts; its date is not supplied. The earlier explanations below are retained.
+Questions: [[Differential Equations - Examples Sheet 1 2026]].
 
 ## 1. Differentiating $x^n$ (page 1, upper half)
 
-The supplied calculation uses the finite binomial expansion. For a positive integer $n$,
+Use the finite binomial expansion. For a positive integer $n$,
 $$
 \begin{aligned}
 \frac{d}{dx}(x^n)
@@ -39,7 +37,7 @@ The sum from $k=2$ to $n$ is empty when $n=1$.
 
 ## 2. Product rule (page 1, lower half)
 
-Assume $u$ and $v$ are differentiable at the real point $x$, and defined in a neighbourhood of $x$. The supplied argument starts with
+Assume $u$ and $v$ are differentiable at the real point $x$, and defined in a neighbourhood of $x$. Start with
 $$
 u(x)v'(x)+v(x)u'(x)
 =
@@ -60,12 +58,12 @@ u(x+h)v(x+h)-u(x)v(x)\\
 \bigl(v(x+h)-v(x)\bigr)\bigl(u(x+h)-u(x)\bigr).
 \end{aligned}
 $$
-After dividing by $h$ and taking limits, the source writes the last correction as $vu'-vu'$, giving
+After dividing by $h$ and taking limits, the last term becomes $vu'-vu'$, giving
 $$u(x)v'(x)+v(x)u'(x)=(uv)'(x).$$
 
-### Justifying the correction and existence of the derivative
+### Justifying the limit
 
-This explains the limiting step implicit in the source. Set
+To justify the limiting step, set
 $$D_u(h)=\frac{u(x+h)-u(x)}h,\qquad
 D_v(h)=\frac{v(x+h)-v(x)}h\qquad(h\ne0).$$
 Both have finite limits. Hence
@@ -88,7 +86,7 @@ See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]] for t
 
 ### (i)(a) Using Leibniz's rule
 
-The source calculates
+Calculate
 $$\begin{aligned}
 \frac{d^n}{dx^n}(xe^x)
 &=\sum_{m=0}^{n}\binom nm x^{(m)}(e^x)^{(n-m)}\\
@@ -107,7 +105,7 @@ $$\begin{aligned}
 \end{aligned}$$
 The last line iterates the same product-rule recurrence. See [[Differentiation Rules]].
 
-**(ii) Unanswered:** no calculation of $d^3(\ln x)^2/dx^3$ appears in the source.
+**(ii) Unanswered:** calculate $d^3(\ln x)^2/dx^3$.
 
 ## 4. Taylor series and the exponential limit (pages 2–3)
 
@@ -119,10 +117,10 @@ $$T_f(x)=\sum_{n=0}^{\infty}\frac{(x-1)^n}{n!}f^{(n)}(1)
 
 ### (ii) $\ln(1+x)$ about $0$ (pages 2–3)
 
-The source gives
+We have
 $$\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots
 =\sum_{n=1}^{\infty}(-1)^{n+1}\frac{x^n}{n}.$$
-The series is used near $x=0$; it is valid for $|x|<1$. The source supplies no convergence proof.
+The series is used near $x=0$; it is valid for $|x|<1$. Proof of convergence omitted.
 
 For fixed real $x$, the subsequent attempt substitutes $x/k$ into that series:
 $$\begin{aligned}
@@ -135,9 +133,9 @@ $$\begin{aligned}
 \end{aligned}$$
 
 > [!todo] Incomplete proof — page 3, infinite remainder
-> The attempt does not justify that the infinite remainder tends to zero. Limits of individual terms do not alone justify taking a limit through an infinite sum. A remainder estimate or an appropriate convergence argument is missing; no replacement proof is supplied here.
+> The attempt does not justify that the infinite remainder tends to zero. Limits of individual terms do not alone justify taking a limit through an infinite sum. A remainder estimate or an appropriate convergence argument is missing.
 
-The source then uses $k\ln(1+x/k)=\ln((1+x/k)^k)$ and continuity of the exponential to deduce
+Then use $k\ln(1+x/k)=\ln((1+x/k)^k)$ and continuity of the exponential to deduce
 $$\lim_{k\to\infty}\left(1+\frac{x}{k}\right)^k=e^x,$$
 conditional on the preceding logarithmic limit. For fixed $x$, the logarithm's argument is positive for all sufficiently large $k$.
 
@@ -159,7 +157,7 @@ $$\ln(\cos x)=\frac12\ln(1-\sin^2x)
 \qquad\left(0\le x<\frac\pi2\right).$$
 Expand $\frac12\ln(1-u)$ at $u=0$ and substitute $u=\sin^2x$:
 $$\ln(\cos x)=-\frac12\left(\sin^2x+\frac{\sin^4x}{2}+\frac{\sin^6x}{3}+\cdots\right).$$
-Using $\sin x=x-x^3/3!+x^5/5!-\cdots$, the source expands
+Using $\sin x=x-x^3/3!+x^5/5!-\cdots$, expand
 $$\begin{aligned}
 \ln(\cos x)
 &=-\frac12\left[
@@ -181,7 +179,7 @@ $$e^u=e^{-a^{-2}}\left[1+(u+a^{-2})+\frac{(u+a^{-2})^2}{2!}
 Put $u=-(x-a)^{-2}$ and use
 $$(x-a)^{-2}=a^{-2}\left(1-\frac xa\right)^{-2}
 =a^{-2}\left(1+\frac{2x}{a}+\frac{3x^2}{a^2}+\cdots\right).$$
-The resulting source calculation is
+The calculation gives
 $$\begin{aligned}
 e^{-(x-a)^{-2}}
 &=e^{-a^{-2}}\left[1-\frac1{a^2}\left(\frac{2x}{a}+\frac{3x^2}{a^2}+\cdots\right)
@@ -246,7 +244,7 @@ $$\frac{N!}{N+1}<\left(\frac{N+1}{e}\right)^N.$$
 
 ## 7. Integral solution (page 7)
 
-Write $f(t)=e^{-t^2}$ and take an antiderivative $F$ with $F'=f$. For the integral in the supplied question, the source uses
+Write $f(t)=e^{-t^2}$ and take an antiderivative $F$ with $F'=f$. For the integral in the question, use
 $$y(x)=\lim_{a\to\infty}(F(a)-F(x)).$$
 The derivative calculations are
 $$y'(x)=-f(x)=-e^{-x^2},\qquad y''(x)=2xe^{-x^2}.$$

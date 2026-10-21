@@ -1,6 +1,6 @@
 ---
 title: Complex Exponential and Trigonometric Functions
-material_type: source-backed definitions and proofs with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 ---
 
@@ -43,7 +43,7 @@ $$e^z=e^w\Longleftrightarrow z-w=2\pi in
 \quad\text{for some }n\in\mathbb Z.$$
 This explains the multiple values in [[Complex Logarithms and Powers]] and the construction of [[Roots of Unity]].
 
-## What absolute convergence permits — supplementary explanation
+## What absolute convergence permits
 
 A series $\sum a_n$ converges absolutely when the real series $\sum|a_n|$ converges. For the exponential, once $n$ is large enough that $|z|/(n+1)\le1/2$, each successive absolute term is at most half the previous one. The remaining tail is bounded by a convergent geometric series.
 
@@ -59,4 +59,4 @@ Consequently those terms can be regrouped by $j+k$ in the product proof. Absolut
 
 Euler's formula holds for complex inputs, but the unit-modulus conclusion requires a **real** angle. For example, $e^{i(i)}=e^{-1}$ has modulus $e^{-1}$, not $1$.
 
-Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 11–14. The explanations in this final section are additional teaching detail.
+See [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 11–14.

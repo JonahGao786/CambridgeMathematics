@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 1 Introduction and Basic Calculus
-material_type: source-backed notes with course-level explanations
+material_type: lecture notes
 course: Part IA Differential Equations
 date: null
 source_file: Ch.1 Introduction.pdf
@@ -18,11 +18,7 @@ additional_sources:
 
 # Differential Equations — Introduction and Basic Calculus
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs/view). No date is supplied.
-
-Expanded source: [Ch.1 Differentiation.pdf](https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view), 13 pages. Its pages 1–7 match the introduction PDF page by page; page 8 retains the chain rule and adds an example, the product rule and the quotient rule. Pages 9–13 supply the subsequent material below. Page references from the differentiation rules onward refer to this expanded source.
-
-For an expanded introduction requested alongside this transcription, see [[Limits, Big O and Little o - A First-Year Guide]]. The definitions and examples below follow the lecture source.
+For limits and error notation, see [[Limits, Big O and Little o - A First-Year Guide]].
 
 ## 0. Introduction (page 1)
 
@@ -131,7 +127,7 @@ $$x\ne O(x^2),\qquad x^2=O(x).$$
 For $x\to0^+$,
 $$x=O(\sqrt{x}).$$
 
-The source sketch compares $x^2$ (red), $x$ (black), and $\sqrt{x}$ (blue) on the positive side:
+The sketch compares $x^2$ (red), $x$ (black), and $\sqrt{x}$ (blue) on the positive side:
 
 ```tikz
 \usepackage{tikz}
@@ -238,7 +234,7 @@ f^{(n)}&=u^{(n)}v+nu^{(n-1)}v'
 +\frac{n(n-1)}{2!}u^{(n-2)}v''+\cdots\\
 &\quad+\frac{n!}{m!(n-m)!}u^{(n-m)}v^{(m)}+\cdots+uv^{(n)}.
 \end{aligned}$$
-No proofs of the chain, product, quotient or Leibniz rules are supplied here. See [[Differentiation Rules]] and the separately supplied product-rule proof in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
+See [[Differentiation Rules]] and the product-rule proof in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
 
 ### 1.3 Taylor series (pages 10–11)
 
@@ -264,7 +260,7 @@ $$E_n(h)=o(h^n)\qquad(h\to0).$$
 $$E_n(h)=\frac{f^{(n+1)}(\xi_n)}{(n+1)!}h^{n+1}.$$
 For fixed $n$, continuity makes this derivative bounded locally, giving
 $$E_n(h)=O(h^{n+1})\qquad(h\to0).$$
-For $h>0$, the interval is $x_0\le\xi_n\le x_0+h$; for $h<0$, its endpoints are reversed. The handwritten notes do not supply these proofs; `topic1.pdf`, page 19, gives a non-examinable sketch using integration by parts.
+For $h>0$, the interval is $x_0\le\xi_n\le x_0+h$; for $h<0$, its endpoints are reversed.
 
 **Comparison of errors (page 11).** $O(h^{n+1})$ is stronger than $o(h^n)$. For example,
 $$|h|^{n+1/2}=o(h^n),\qquad |h|^{n+1/2}\ne O(h^{n+1})\qquad(h\to0).$$
@@ -285,9 +281,9 @@ See [[Taylor Series and Taylor's Theorem]] and [[Limits, Big O and Little o - A 
 
 ### 1.4 L'Hôpital's rule (pages 12–13)
 
-The form $0/0$ does not determine a quotient's limit. The following is the special case presented in the professor's `topic1.pdf`, pages 12–13.
+The form $0/0$ does not determine a quotient's limit. The following version follows from first-order Taylor expansion.
 
-**Theorem — course version.** Suppose $f,g$ are differentiable near $x_0$, their first derivatives are continuous at $x_0$, and
+**L'Hôpital's rule.** Suppose $f,g$ are differentiable near $x_0$, their first derivatives are continuous at $x_0$, and
 $$f(x_0)=g(x_0)=0,\qquad g'(x_0)\ne0.$$
 Then
 $$\lim_{x\to x_0}\frac{f(x)}{g(x)}

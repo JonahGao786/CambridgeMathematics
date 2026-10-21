@@ -1,6 +1,6 @@
 ---
 title: Complex Logarithms and Powers
-material_type: source-backed definitions with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 ---
 
@@ -34,16 +34,16 @@ $$z^\alpha z^\beta=z^{\alpha+\beta},\qquad
 (z^\alpha)^\beta=z^{\alpha\beta}.$$
 They are not blanket rules for independently chosen values.
 
-The source examples give
+For example,
 $$
 i^i\in\{e^{-(\pi/2+2\pi n)}:n\in\mathbb Z\},\qquad
 (1+i)^{1/2}\in\{2^{1/4}e^{i\pi/8},-2^{1/4}e^{i\pi/8}\}.
 $$
 Their principal values are $e^{-\pi/2}$ and $2^{1/4}e^{i\pi/8}$.
 
-Source and complete worked examples: [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 16–18.
+See [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 16–18.
 
-## Why reduced fractions matter — supplementary explanation
+## Why reduced fractions matter
 
 Two choices indexed by $m,n\in\mathbb Z$ give the same value exactly when
 $$e^{2\pi i(n-m)\alpha}=1.$$
@@ -51,7 +51,7 @@ For $\alpha=p/q$ with $\gcd(p,q)=1$ and $q>0$, this is equivalent to $q\mid n-m$
 
 If $\alpha$ is not rational, equality for distinct $m,n$ would imply $(n-m)\alpha\in\mathbb Z$, hence $\alpha\in\mathbb Q$, a contradiction. Thus all indexed choices are distinct.
 
-## A principal-value trap — supplementary example
+## A principal-value trap
 
 Let $z=-1$, $\alpha=2$ and $\beta=1/2$. The principal logarithms satisfy $\log(-1)=i\pi$ and $\log1=0$. Therefore
 $$

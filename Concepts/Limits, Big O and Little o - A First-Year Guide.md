@@ -1,6 +1,6 @@
 ---
 title: Limits, Big O and Little o - A First-Year Guide
-material_type: explanatory supplement requested by the user
+material_type: concept note
 course: Part IA Differential Equations and Analysis I
 date: 2026-10-09
 related_source_note: Differential Equations - Chapter 1 Introduction and Basic Calculus
@@ -8,7 +8,7 @@ related_source_note: Differential Equations - Chapter 1 Introduction and Basic C
 
 # Limits, Big O and Little o — A First-Year Guide
 
-This is an explanatory supplement requested alongside the GoodNotes sync. It expands the definitions in [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], pages 2–7; the worked examples and explanatory proofs here are additional teaching material, separate from the faithful source note.
+Limits describe how functions behave near a point. Big O and little o compare the sizes of functions and approximation errors. See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], pages 2–7.
 
 ## 1. What a limit promises
 
@@ -176,7 +176,6 @@ This is a relative statement. At infinity, $x=o(x^2)$ even though $x\to+\infty$:
 For example, $x^2=o(x)$ as $x\to0$. Given $\varepsilon>0$, choose $\delta=\varepsilon$. Then, for $0<|x|<\delta$,
 $$|x^2|=|x||x|<\varepsilon|x|.$$
 By contrast, $3x$ is not $o(x)$: its ratio to $x$ is always $3$, so the bound fails for $\varepsilon=1$ at every non-zero $x$.
-
 
 | Statement, as $x\to 0$ | Formal requirement |
 |---|---|

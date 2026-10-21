@@ -1,6 +1,6 @@
 ---
 title: Logical Connectives and Quantifiers
-material_type: source-backed definitions with supplementary explanation
+material_type: concept note
 course: Part IA Numbers and Sets
 ---
 
@@ -31,9 +31,9 @@ $$
 $$
 Also, $\neg(A\land B)\Longleftrightarrow(\neg A)\lor(\neg B)$.
 
-Source: [[Numbers and Sets - Chapter 0 Proofs]], pages 6 and 8–9.
+See [[Numbers and Sets - Chapter 0 Proofs]], pages 6 and 8–9.
 
-## Quantifier order — supplementary explanation
+## Quantifier order
 
 In $\forall x\,\exists y\,P(x,y)$, the choice of $y$ may depend on $x$. In $\exists y\,\forall x\,P(x,y)$, one $y$ must work for every $x$.
 

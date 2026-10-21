@@ -1,6 +1,6 @@
 ---
 title: Partial Derivatives and the Multivariate Chain Rule
-material_type: course-level definitions, formulas and explanations
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
@@ -22,7 +22,7 @@ For $f=x^2+y^3+e^{xy^2}$,
 $$f_x=2x+y^2e^{xy^2},\qquad f_y=3y^2+2xye^{xy^2},$$
 $$f_{xx}=2+y^4e^{xy^2},\qquad
 f_{xy}=f_{yx}=2ye^{xy^2}+2xy^3e^{xy^2}.$$
-Following `topic1.pdf`, page 22, $f_{xy}=(f_x)_y$: differentiate first with respect to $x$, then $y$. **Schwarz's theorem** says that continuous second partial derivatives nearby guarantee equality of the mixed derivatives; its proof is not needed here.
+$f_{xy}=(f_x)_y$: differentiate first with respect to $x$, then $y$. **Schwarz's theorem** says that continuous second partial derivatives nearby guarantee equality of the mixed derivatives; its proof is not needed here.
 
 ## Small changes and the differential
 
@@ -47,4 +47,4 @@ Thus integrating $df$ gives the change between the endpoints.
 
 Applications: [[Implicit Differentiation]] and [[Differentiation Under the Integral Sign]]. For implicit derivatives, keep track of which variable is fixed and only divide by a non-zero partial derivative.
 
-See [[Differential Equations - Chapter 3 Partial Differentiation]], sections 3.1–3.4, and `topic1.pdf`, pages 20–27.
+See [[Differential Equations - Chapter 3 Partial Differentiation]], sections 3.1–3.4.

@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 2 Integration
-material_type: source-backed notes with course-level explanations
+material_type: lecture notes
 course: Part IA Differential Equations
 date: null
 source_file: Ch.2 Integration.pdf
@@ -13,9 +13,7 @@ source_pages: 7
 
 # Differential Equations — Chapter 2: Integration
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N/view). No date is supplied.
-
-The chapter reviews integration as “area under a curve” and as the “inverse of differentiation”. See [[Riemann Integration and the Fundamental Theorem of Calculus]] and [[Integration by Substitution and by Parts]].
+Integration describes signed area under a curve and reverses differentiation. See [[Riemann Integration and the Fundamental Theorem of Calculus]] and [[Integration by Substitution and by Parts]].
 
 ## 2.1 Integrals as Riemann sums (page 1)
 
@@ -25,7 +23,7 @@ $$\int_a^b f(x)\,dx
 where
 $$\Delta x=\frac{b-a}{N},\qquad x_n=a+n\Delta x.$$
 
-The source sketch shows an increasing curve and left-endpoint rectangles. Red is the curve; blue marks an interval width and a partition point. The geometry is schematic; no formula or numerical scale for $f$ is supplied.
+The sketch shows an increasing curve and left-endpoint rectangles. Red is the curve; blue marks an interval width and a partition point. The geometry is schematic.
 
 ```tikz
 \usepackage{tikz}
@@ -90,7 +88,7 @@ Blue hatching indicates this area; the black horizontal edge is the left-endpoin
 
 ### Why the rectangle sums give the area (pages 2–3)
 
-Follow the strip argument in `topic1.pdf`, pages 14–15. For this error estimate, assume $f$ is continuous on $[a,b]$, differentiable inside it, and $|f'|\le M$ for one fixed constant $M$ throughout the interval.
+For this error estimate, assume $f$ is continuous on $[a,b]$, differentiable inside it, and $|f'|\le M$ for one fixed constant $M$ throughout the interval.
 
 Since $A_n=\Delta x\,f(c_n)$ and $|c_n-x_n|\le\Delta x$, the mean value theorem gives
 $$|A_n-f(x_n)\Delta x|
@@ -114,7 +112,7 @@ $$\frac{F(x+h)-F(x)}h
 =\frac1h\int_x^{x+h}f(t)\,dt=f(c_h).$$
 As $h\to0$, also $c_h\to x$, so continuity gives $F'(x)=f(x)$. This works for either sign of $h$.
 
-This is the mean-value idea used in `topic1.pdf`, pages 15–16. Its $f(x)h+O(h^2)$ estimate is also valid when $f$ is differentiable at $x$; continuity alone suffices for the argument above.
+When $f$ is differentiable at $x$, the integral over the short interval is $f(x)h+O(h^2)$. Continuity alone suffices for the argument above.
 
 ### Corollaries and indefinite-integral notation (page 4)
 
@@ -153,7 +151,7 @@ Recall
 $$\cos^2\theta+\sin^2\theta=1,\qquad 1+\tan^2\theta=\sec^2\theta,$$
 $$\cosh^2u-\sinh^2u=1,\qquad 1-\tanh^2u=\operatorname{sech}^2u.$$
 
-The source lists these useful substitutions:
+Useful substitutions:
 
 | Integrand contains | Substitution |
 | --- | --- |
@@ -191,14 +189,13 @@ I=\int_0^\infty xe^{-x}\,dx
 \end{aligned}$$
 The improper upper endpoints are limits; $xe^{-x}\to0$ and $e^{-x}\to0$ as $x\to\infty$.
 
-
 **Example.** For $x>0$, let $u=\log x$ and $dv=dx$, so $du=dx/x$ and $v=x$. Then
 $$\begin{aligned}
 I=\int\log x\,dx
 &=x\log x-\int dx\\
 &=x(\log x-1)+C.
 \end{aligned}$$
-The source notes that integration by parts also works for inverse trigonometric and inverse hyperbolic functions; no further examples are supplied.
+Integration by parts also applies to inverse trigonometric and inverse hyperbolic functions.
 
 ## Related notes
 

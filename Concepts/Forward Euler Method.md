@@ -1,6 +1,6 @@
 ---
 title: Forward Euler Method
-material_type: source-backed finite-difference example and recurrence
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
@@ -23,6 +23,6 @@ $$y_{n+1}=\left(1+\frac{3h}{5}\right)y_n.$$
 Repeated substitution yields
 $$y_n=\left(1+\frac{3h}{5}\right)^ny_0.$$
 
-The exact ODE solution is $y(x)=y_0e^{3x/5}$; the recurrence is a numerical approximation. The source supplies no error estimate or convergence analysis.
+The exact ODE solution is $y(x)=y_0e^{3x/5}$; the recurrence is a numerical approximation.
 
-Source: [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], pages 4–5, including the grid, sampled points and blue secant diagram reconstructed as TikZ.
+See [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], pages 4–5.

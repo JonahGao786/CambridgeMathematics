@@ -1,6 +1,6 @@
 ---
 title: Vectors and Matrices - Chapter 1 Complex Numbers
-material_type: handwritten lecture notes
+material_type: lecture notes
 course: Part IA Vectors and Matrices
 date: null
 source_file: Ch.1 Complex Numbers.pdf
@@ -10,8 +10,6 @@ source_pages: 21
 ---
 
 # Vectors and Matrices — Chapter 1: Complex Numbers
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1E1KSgIxdchM_LG5KujUe6JeqPhS3FChh/view). The handwritten date is not supplied.
 
 ## Course contents (page 1)
 
@@ -105,7 +103,7 @@ The argument of $0$ is undefined.
 
 **[[Fundamental Theorem of Algebra]]** (page 5, lower part). Every polynomial of degree $n\ge1$ with complex coefficients factors as
 $$p(z)=c_nz^n+\cdots+c_0=c_n(z-\alpha_1)\cdots(z-\alpha_n),$$
-where $c_n\ne0$ and $\alpha_1,\ldots,\alpha_n\in\mathbb C$. It has exactly $n$ roots counted with multiplicity. No proof of this theorem is supplied in the source.
+where $c_n\ne0$ and $\alpha_1,\ldots,\alpha_n\in\mathbb C$. It has exactly $n$ roots counted with multiplicity. Proof omitted.
 
 **Modulus properties** (page 6). For $z_1,z_2\in\mathbb C$:
 $$
@@ -145,7 +143,7 @@ Rearrange and interchange $z_1,z_2$ to obtain both bounds and hence the reverse 
 
 Represent $z=x+iy$ by the point $(x,y)$, or by its position vector from the origin. Horizontal axis: $\operatorname{Re}$; vertical axis: $\operatorname{Im}$.
 
-The diagrams are drawn directly in TikZ for the installed TikZJax plugin. Their coordinates set the layout of the qualitative source sketches, without asserting numerical values for the labelled variables.
+The diagrams illustrate the geometry schematically.
 
 ```tikz
 \usepackage{tikz}
@@ -380,7 +378,7 @@ Write $z=re^{i\theta}$. Since
 $$z=e^{\log r}e^{i\theta}=e^{\log r+i\theta},$$
 all its logarithms are $\log r+i\theta$ for $\theta\in\operatorname{Arg}(z)$. Here $\log r$ is the real natural logarithm.
 
-Following the source's notation and argument interval $(-\pi,\pi]$, define
+With the argument interval $(-\pi,\pi]$, define
 $$
 \begin{aligned}
 \log z&=\log|z|+i\arg(z)
@@ -517,7 +515,7 @@ z_1+(1-i)&=2,&2z_1&=2+2i,&iz_1&=-1+i,\\
 \overline{z_1}&=1-i,&-z_1&=-1-i,&1/z_1&=(1-i)/2.
 \end{aligned}
 $$
-Blue arrows show $z_1$ and red arrows its image, as in the source. The translation panel also shows the displacement $1-i$; the rotation arc and reflection guide preserve their geometric information.
+Blue arrows show $z_1$ and red arrows its image. The translation panel also shows the displacement $1-i$.
 
 ```tikz
 \usepackage{tikz}

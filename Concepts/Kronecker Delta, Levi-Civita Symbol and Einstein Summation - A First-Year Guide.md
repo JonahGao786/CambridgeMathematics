@@ -1,6 +1,6 @@
 ---
 title: Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide
-material_type: supplementary explanation and worked examples grounded in lecture notes
+material_type: concept note
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -10,7 +10,7 @@ source_pages: [9, 19, 20, 21, 22, 23]
 
 # Kronecker Delta, Levi-Civita Symbol and Einstein Summation
 
-**Supplementary explanation.** The definitions and identities occur in [[Vectors and Matrices - Chapter 2 Vectors]], pages 9 and 19–23. The expanded explanations, numerical examples, contraction proof and practice below are additional teaching material.
+Index notation makes vector calculations compact. The Kronecker delta selects matching components, the Levi-Civita symbol keeps track of orientation, and Einstein summation abbreviates repeated sums. See [[Vectors and Matrices - Chapter 2 Vectors]], pages 9 and 19–23.
 
 Work in $\mathbb R^3$ with a **right-handed orthonormal basis** $\mathbf e_1,\mathbf e_2,\mathbf e_3$. Unless stated otherwise, every index ranges over $1,2,3$. These are Cartesian coordinates, with the lecture's convention of writing all indices downstairs.
 
@@ -215,7 +215,7 @@ Written out, its left side is
 $$\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{pqk}.$$
 The four indices $i,j,p,q$ are free; the identity holds for every fixed choice of them.
 
-### A supplementary proof by cases
+### Proof by cases
 
 If $i=j$, the first epsilon is always zero and the two terms on the right cancel.
 
@@ -292,13 +292,11 @@ This is the index explanation of $\mathbf a\times\mathbf a=\mathbf0$. It is canc
 
 ## 9. Practice with answers
 
-These are supplementary checks, independent of any unfinished source exercises.
-
 1. Simplify $\delta_{ij}b_j$ and $\delta_{ij}\delta_{ij}$.
 2. Evaluate $\varepsilon_{231}$, $\varepsilon_{213}$ and $\varepsilon_{122}$.
 3. Expand $\varepsilon_{2jk}a_jb_k$.
 4. Identify the free and summed indices in $\varepsilon_{ijk}\varepsilon_{pjk}v_p$ and simplify.
-5. With the numerical vectors above and $\mathbf c=(2,0,1)$, check the source's Lagrange identity.
+5. With the numerical vectors above and $\mathbf c=(2,0,1)$, check Lagrange's identity.
 
 **Answers.**
 

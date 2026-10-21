@@ -11,9 +11,7 @@ source_pages: 13
 
 # Groups 0 — Handwritten Attempts
 
-The PDF contains handwritten answers without the question statements. Their numbering and examples match [[Groups - Introductory Sheet 2026]], a separate Drive source. Consult that sheet for the supplied questions. Obvious typos and notation are normalized, with routine algebra made explicit where helpful. Substantive errors and unfinished arguments remain marked. The date is not written in this PDF.
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/view).
+Questions: [[Groups - Introductory Sheet 2026]].
 
 ## 1. Axioms (page 1, top)
 
@@ -90,8 +88,8 @@ Subgroups: the non-zero scalar matrices $\{tI:t\in\mathbb R\setminus\{0\}\}$, an
 - Associativity: ✓.
 - Closure: ✗, $2\times_6 3=0$.
 
-> [!todo] Manual review — page 2, question 2(viii), identity reasoning
-> The two displayed products concern a single element and do not establish multiple identities for the whole set. In fact, $1$ satisfies $a\times_6 1=1\times_6 a=a$ for every listed $a$; $4$ fails this test at $a=1$. The failure of closure still prevents this from being a group. The original assessment is retained.
+> [!todo] Incorrect identity argument — page 2, question 2(viii), identity reasoning
+> The two displayed products concern a single element and do not establish multiple identities for the whole set. In fact, $1$ satisfies $a\times_6 1=1\times_6 a=a$ for every listed $a$; $4$ fails this test at $a=1$. The failure of closure still prevents this from being a group.
 
 ### (ix) Multiplication modulo seven (page 3, top)
 
@@ -150,7 +148,7 @@ Converse calculation:
 $$abab=aabb,\qquad aba=aab,\qquad a^{-1}aba=a^{-1}aab,\qquad ba=ab.$$
 The final written equivalence is
 $$ (ab)^n=a^nb^n,\ n\in\mathbb N\quad\Longleftrightarrow\quad a,b\text{ commute}.$$
-The universal condition is supplied by the linked question; the source calculation uses the case $n=2$.
+The condition holds for every $n$; use $n=2$.
 
 ### (c) Page 5, lower half
 
@@ -208,7 +206,7 @@ $$\begin{aligned}
 \end{aligned}$$
 Proposed example: $\sin(\arcsin x)$ and $\arcsin(\sin x)$, with the caveat that the domains of the functions have changed.
 
-> [!todo] Manual review — page 8, question 7(b), bottom
+> [!todo] Incomplete counterexample — page 8, question 7(b), bottom
 > The domain caveat is acknowledged, but no common set $S$ is supplied on which both sine and the usual real arcsine are functions $S\to S$ giving a non-commuting example. This does not yet answer the counterexample part of the question as stated.
 
 ## 8. Cayley tables and Latin squares (pages 9–10)
@@ -229,7 +227,7 @@ If the group is abelian, its Cayley table is symmetric about the diagonal from t
 
 **Incorrect answer:** “It is; it has an identity, elements are self-inverse, and it's a non-abelian group.”
 
-> [!todo] Manual review — page 9, question 8(b)
+> [!todo] Failure of associativity — page 9, question 8(b)
 > Associativity fails: in the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. Hence this table is not the Cayley table of a group.
 
 ### (c) Associative Latin-square operation (page 10)
@@ -286,13 +284,13 @@ a\circ(a\circ b)&=a\circ(b\circ a),\\
 a\circ b&=b\circ a\quad\text{claimed to show commutativity}.
 \end{aligned}$$
 
-> [!todo] Manual review — page 11, question 9, lower half
+> [!todo] Unjustified cancellation — page 11, question 9, lower half
 > The final cancellation of the leading $a$ is unjustified: these hypotheses do not give cancellation. The intermediate rearrangement to $a\circ(a\circ b)$ also uses commutativity before it has been proved. The common identity, common operation and associativity are established above, but this argument does not prove commutativity.
 
 ## 10–12. Unfinished
 
 Page 12 contains only the heading “10)”, and page 13 only “11)”; neither has a written answer. No attempt at question 12 is present.
 
-## Reading the matrix example — supplementary clarification
+## Reading the matrix example
 
 In question 5 the identity of the singular-matrix group is $E=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, not the ambient matrix $I_2$. The group inverse of $\operatorname{diag}(t,0)$ is $\operatorname{diag}(1/t,0)$: their product is $E$. Thus “inverse in this group” does not mean “inverse as a linear map on $\mathbb R^2$”. This distinction explains why the example is consistent with the invertible-matrix group in question 2(vi).

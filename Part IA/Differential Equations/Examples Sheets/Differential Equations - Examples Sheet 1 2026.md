@@ -19,13 +19,13 @@ additional_sources:
 
 Mathematical Tripos Part IA, Michaelmas Term 2026. Prof. Christopher Thomas.
 
-Sources: [Examples Sheet 1 Q.pdf](https://drive.google.com/file/d/1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv/view) and [A3a.pdf](https://drive.google.com/file/d/1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG/view). Every page was visually read; the two four-page PDFs have identical rendered pages, though their file bytes differ. This note contains the supplied questions. Handwritten answers are separate in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
+Worked solutions and attempts: [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
 
 ## Instructions (page 1)
 
 The starred questions are intended as extras: do them if you have time, but not at the expense of unstarred questions on later sheets.
 
-The source notice is: “Copyright © 2025 University of Cambridge. Not to be quoted or reproduced without permission.”
+“Copyright © 2025 University of Cambridge. Not to be quoted or reproduced without permission.”
 
 ## 1. Power rule (page 1)
 
@@ -164,7 +164,7 @@ $$\int_0^\infty e^{-t^2}\,dt=\frac{\sqrt\pi}{2}.$$
 
 Comments and corrections may be sent to the source author at c.e.thomas@damtp.cam.ac.uk.
 
-## Conditions to check while solving — supplementary review
+## Conditions to check while solving
 
 The question statements above are preserved. The following qualifications prevent using formulas outside their domains.
 

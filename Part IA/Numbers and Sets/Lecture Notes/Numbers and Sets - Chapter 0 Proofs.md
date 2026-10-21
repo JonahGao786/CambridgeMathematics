@@ -1,6 +1,6 @@
 ---
 title: Numbers and Sets - Chapter 0 Proofs
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: lecture notes
 course: Part IA Numbers and Sets
 date: 2026–27
 source_file: Ch.0 Proofs.pdf
@@ -13,8 +13,6 @@ source_pages: 9
 ---
 
 # Numbers and Sets — Chapter 0: Proofs
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F/view). The handwritten date is not supplied.
 
 ## Course outline (page 1)
 
@@ -39,29 +37,28 @@ We want to prove things because:
 
 ## Examples of statements (page 3)
 
-The accompanying remarks below are remarks recorded in the lecture, rather than proofs supplied by these notes.
+The following statements illustrate different questions about proof: what is known, what remains open, and what requires a precise formulation.
 
 | No. | Statement | Recorded remark |
 | --- | --- | --- |
 | 1 | There are infinitely many primes $p$ such that $2p+1$ is also prime. | “No-one knows if it's true.” |
-| 2 | There are infinitely many primes $p$ such that at least one of $p+2,p+4,p+6,\ldots,p+240$ is also prime. | “Was proved in Aug. 2026.” A matching primary reference is supplied below. |
+| 2 | There are infinitely many primes $p$ such that at least one of $p+2,p+4,p+6,\ldots,p+240$ is also prime. | “Was proved in Aug. 2026.” |
 | 3 | For every integer $n\ge2$, there is a prime $p\in(n,2n)$. | “Not obvious but true.” |
 | 4 | There is no computer algorithm that will factor an $n$-digit integer in at most $n^3$ steps. | “Would be a disaster if false.” |
 | 5 | Every non-constant polynomial with complex coefficients has a root in the complex numbers. | The [[Fundamental Theorem of Algebra]]. |
 | 6 | For all $m,n\in\mathbb Z$, $mn=nm$. | “Worth thinking about…” |
 | 7 | $1+1=2$. | “Does it need proving?” |
 
-These are examples of statements to assess, not a list of theorems proved in this lecture. The recorded remarks remain attributed to the lecture.
+These are statements for discussion; the remarks are not proofs.
 
-### Reference and scope checks — supplementary review
+### Prime gaps and computational complexity
 
-**Statement 2: reference found.** Julia Stadlmann's [*Bounded gaps between primes*](https://arxiv.org/abs/2608.31126), submitted on **31 August 2026**, states the bound
+**Bounded prime gaps (statement 2).** Julia Stadlmann's [*Bounded gaps between primes*](https://arxiv.org/abs/2608.31126), submitted on **31 August 2026**, states the bound
 $$H_1=\liminf_{n\to\infty}(p_{n+1}-p_n)\le240.$$
-This matches the content and month of the lecture remark; it does not identify which announcement the lecturer had in mind. The paper's abstract and introduction were checked for this reference, not its full research proof.
 
 **Why this implies the displayed statement.** Prime gaps are integers, so the bound implies that infinitely many consecutive-prime gaps are at most $240$: otherwise the eventual gaps would be at least $241$. Beyond the prime $2$, both primes are odd, so these gaps belong to $\{2,4,\ldots,240\}$. Taking $p=p_n$ gives exactly statement 2. This does not mean every prime has another prime within $240$, nor does it prove the twin-prime conjecture.
 
-**Statement 4: computational model matters.** The absolute assertion about “no computer algorithm” is not an established lower-bound theorem in these notes. A precise complexity claim must specify the computation model, allowed error, elementary operations and asymptotic cost; “at most $n^3$” is also different from $O(n^3)$. [Shor's factoring paper](https://arxiv.org/abs/quant-ph/9508027) gives a randomized quantum algorithm polynomial in the input length. This establishes why the computational model cannot be omitted; it does not by itself assert the exact $n^3$ bound in the table.
+**Statement 4: computational model matters.** The absolute assertion about “no computer algorithm” requires a precise computational model. A precise complexity claim must specify the computation model, allowed error, elementary operations and asymptotic cost; “at most $n^3$” is also different from $O(n^3)$. [Shor's factoring paper](https://arxiv.org/abs/quant-ph/9508027) gives a randomized quantum algorithm polynomial in the input length. This establishes why the computational model cannot be omitted; it does not by itself assert the exact $n^3$ bound in the table.
 
 ## A direct proof (page 4, top)
 
@@ -150,7 +147,7 @@ Thus $r=1$, and the claimed conclusion would follow.
 
 The existence of a least positive real was never justified. **Every claim must be justified.**
 
-**Explanation.** For any $r>0$, the number $r/2$ is positive and smaller than $r$, so there is no least positive real. For instance, $1/2$ also directly disproves the original claim. This supplementary observation explains the failure; it does not turn the rejected argument into a proof.
+**Explanation.** For any $r>0$, the number $r/2$ is positive and smaller than $r$, so there is no least positive real. For instance, $1/2$ also directly disproves the original claim.
 
 ## Combining claims and truth tables (page 8)
 
@@ -185,4 +182,4 @@ $$
 &\Longleftrightarrow\forall x,\ \neg B(x).
 \end{aligned}
 $$
-In each formula the domain of $x$ stays the same on both sides. See [[Logical Connectives and Quantifiers]] for a supplementary explanation of quantifier order and [[Natural Numbers and Mathematical Induction]] for their use in induction.
+In each formula the domain of $x$ stays the same on both sides. See [[Logical Connectives and Quantifiers]] for quantifier order and [[Natural Numbers and Mathematical Induction]] for their use in induction.

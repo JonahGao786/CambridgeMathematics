@@ -1,6 +1,6 @@
 ---
 title: Bijections and Permutations
-material_type: source-backed definitions, lemmas and proofs with supplementary explanation
+material_type: concept note
 course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
@@ -31,11 +31,11 @@ Both compositions of $f\circ f'$ with $g'\circ g$ equal $\operatorname{id}_X$. T
 
 Consequently, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a [[Groups|group]]: composition is a binary operation, it is associative, and the identity and inverses are supplied by the definitions (Proposition 1.13).
 
-For $X=\{1,\ldots,n\}$, write $S_n=\operatorname{Sym}(X)$ (Definition 1.14). The lecture asks to calculate $|S_n|$; no answer is supplied.
+For $X=\{1,\ldots,n\}$, write $S_n=\operatorname{Sym}(X)$ (Definition 1.14). **Exercise:** calculate $|S_n|$.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 13–15, including the map diagram and full proofs. See [[Groups]] for inverses with respect to a group operation.
+See [[Groups - Chapter 1 Examples and Definitions]], pages 13–15. See [[Groups]] for inverses with respect to a group operation.
 
-## Injectivity and surjectivity — supplementary explanation
+## Injectivity and surjectivity
 
 A function $f:X\to Y$ is **injective** if $f(x)=f(x')$ implies $x=x'$. It is **surjective** if every $y\in Y$ equals $f(x)$ for some $x\in X$. A bijection is equivalently both.
 

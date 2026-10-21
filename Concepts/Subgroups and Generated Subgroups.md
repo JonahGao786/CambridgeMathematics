@@ -1,6 +1,6 @@
 ---
 title: Subgroups and Generated Subgroups
-material_type: source-backed definitions, proposition and proof with supplementary explanation
+material_type: concept note
 course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
@@ -18,7 +18,7 @@ For a [[Groups|group]] $G$, a subset $H\subseteq G$ is a **subgroup**, written $
 
 It is a group with the operation and identity inherited from $G$. Both $G$ and $I_G=\{e_G\}$ are subgroups; $I_G$ is the **trivial subgroup**.
 
-**Source terminology:** the lecture calls subgroups other than both $G$ and $I_G$ “proper”. Standard usage requires only $H\ne G$, so it may include $I_G$.
+**Terminology:** here “proper” excludes both $G$ and $I_G$. Standard usage requires only $H\ne G$, so it may include $I_G$.
 
 Examples include
 $$\mathbb Z\le\mathbb Q\le\mathbb R\le\mathbb C$$
@@ -44,7 +44,7 @@ Then $r=x-nq\in S$, contradicting the choice of $n$. Thus $S=n\mathbb Z$.
 For a family of subgroups $H_i\le G$ indexed by $i\in I$,
 $$\bigcap_{i\in I}H_i
 =\{a\in G:a\in H_i\text{ for every }i\in I\}\le G.$$
-The two-subgroup case is referenced to question 2 of [[Groups - Example Sheet 1 2025]]; its exercise proof is not supplied in the lecture.
+For the two-subgroup case, see question 2 of [[Groups - Example Sheet 1 2025]].
 
 For $X\subseteq G$, Definition 1.17 sets
 $$\langle X\rangle=\bigcap_{X\subseteq H\le G}H,$$
@@ -60,9 +60,9 @@ For $g\in G$, Definition 1.39 gives
 $$\langle g\rangle=\{g^k:k\in\mathbb Z\}\le G.$$
 It is cyclic. [[Cyclic Groups and Element Orders]] records the classification as $C_n$ or $\mathbb Z$ and the order $o(g)=|\langle g\rangle|$.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 16–18 and 32. Related: [[Bijections and Permutations]].
+See [[Groups - Chapter 1 Examples and Definitions]], pages 16–18 and 32. Related: [[Bijections and Permutations]].
 
-## Reading the dependencies — supplementary explanation
+## Reading the dependencies
 
 The least positive element in the integer-subgroup proof exists by [[Natural Numbers and Mathematical Induction|well-ordering]]. The division step uses [[Greatest Common Divisors and Euclid's Algorithm|division with remainder]]. Although that note states the theorem for positive dividends, it extends to any integer $x$: choose a sufficiently large integer $M$ with $x+Mn>0$, divide $x+Mn=qn+r$, then write $x=(q-M)n+r$.
 

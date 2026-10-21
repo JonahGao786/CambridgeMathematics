@@ -1,18 +1,18 @@
 ---
 title: Study Guide
-material_type: supplementary navigation and prerequisite guide
+material_type: study guide
 date: 2026-10-21
 ---
 
 # Study Guide
 
-This guide covers 55 study notes: the 44 reviewed on 2026-10-17 and checked again on 2026-10-21, plus 11 notes incorporated from the newer GitHub commits during publication checks. The expanded mathematical content and classroom review items were checked during reconciliation. Lecture notes retain source order and page references; concept notes explain reusable ideas; printed sheets and handwritten attempts remain separate. Sections labelled **supplementary** are additional mathematical explanation, not claims about what appeared in the original PDFs.
+Use this guide to follow the main ideas in each course and find the relevant lectures, concept notes and exercises.
 
-Use the concept sequence in each course for revision, then return to the linked lectures for full derivations and to the sheets for practice. **Wrong proof**, **Incomplete proof**, and **TODO** labels describe limitations of an argument; they do not by themselves determine whether the conclusion is true or false. The detailed review scope and remaining issues are in [[Note Review - 2026-10-21]]; [[Note Review - 2026-10-17]] preserves the earlier review.
+Use the concept sequence in each course for revision, then return to the linked lectures for full derivations and to the sheets for practice. **Wrong proof**, **Incomplete proof**, and **TODO** labels describe limitations of an argument; they do not by themselves determine whether the conclusion is true or false.
 
 ## Numbers and Sets
 
-Start with implication and quantifier order, then induction and well-ordering. Prime factorization existence uses strong induction; uniqueness uses Euclid’s lemma, now explained via Bézout’s identity. Fibonacci identities are exercise material: consult the attempt’s proof-status notes before treating a claim as established.
+Start with implication and quantifier order, then induction and well-ordering. Prime factorization existence uses strong induction; uniqueness uses Euclid’s lemma, which follows from Bézout’s identity. Fibonacci identities are exercise material: consult the attempt’s proof-status notes before treating a claim as established.
 
 ### Concept sequence
 
@@ -59,7 +59,7 @@ First learn complex arithmetic and polar form, then exponential notation, roots 
 
 ## Groups
 
-Start with the set, operation and axioms; then use inverses to justify cancellation. Bijections supply permutation examples, and closure under operations leads to subgroups and generators. Read complex polar form and roots of unity before the geometric isometry examples. The dihedral classification now has a complete supplementary proof. The printed 2025 sheet introduces later vocabulary; its supplementary prerequisite guide defines it.
+Start with the set, operation and axioms; then use inverses to justify cancellation. Bijections supply permutation examples, and closure under operations leads to subgroups and generators. Read complex polar form and roots of unity before the geometric isometry examples. The dihedral classification uses preservation of corners and adjacency. The 2025 example sheet includes a guide to its prerequisite vocabulary.
 
 ### Concept sequence
 
@@ -80,7 +80,7 @@ Start with the set, operation and axioms; then use inverses to justify cancellat
 
 ## Differential Equations
 
-Read limits and error notation before derivative rules. Taylor polynomials approximate locally; equality to an infinite Taylor series needs a separate remainder argument. Integration reverses differentiation under the fundamental theorem. For several variables, start with holding one variable fixed, then add the first-order changes to obtain the differential and chain rule. Follow the professor’s `topic1.pdf` for the level of detail: formulas, short derivations and examples, with deeper analysis deferred.
+Read limits and error notation before derivative rules. Taylor polynomials approximate locally; equality to an infinite Taylor series needs a separate remainder argument. Integration reverses differentiation under the fundamental theorem. For several variables, start with holding one variable fixed, then add the first-order changes to obtain the differential and chain rule.
 
 ### Concept sequence
 
@@ -114,8 +114,8 @@ Read limits and error notation before derivative rules. Taylor polynomials appro
 
 ## Conventions and coverage
 
-Here $\mathbb N=\{1,2,3,\ldots\}$ and $F_1=F_2=1$; $F_0$ has not been defined in the supplied Fibonacci convention. Function composition is right to left. The complex-number notes use $\log z$ for the principal value and $\operatorname{Log}z$ for the set of logarithms, with $\arg z\in(-\pi,\pi]$. Following the professor’s `topic1.pdf`, $f_{xy}=(f_x)_y=\partial_y(\partial_x f)$ means first $x$, then $y$; check the convention in other texts.
+Here $\mathbb N=\{1,2,3,\ldots\}$ and $F_1=F_2=1$; $F_0$ has not been defined in this convention. Function composition is right to left. The complex-number notes use $\log z$ for the principal value and $\operatorname{Log}z$ for the set of logarithms, with $\arg z\in(-\pi,\pi]$. $f_{xy}=(f_x)_y=\partial_y(\partial_x f)$ means first $x$, then $y$; check the convention in other texts.
 
 The lecture’s word “proper” for subgroups excludes both the whole group and the trivial subgroup, whereas standard usage excludes only the whole group. Its “proper factors” likewise means non-trivial factors. Inner-product axioms here are for real vector spaces; the cross product is used in $\mathbb R^3$ with a fixed orientation.
 
-This is the currently available part of the course material. The notes now include modular arithmetic, homomorphisms and cyclic groups, index notation, implicit differentiation, integral differentiation, and the opening first-order ODE material. A general matrix/eigenvalue theory and a full treatment of first-order ODE solution methods are not yet supplied. The general ODE solution-count result is stated with its conditions; its advanced proof is omitted from these introductory notes. Do not infer that all course prerequisites or all exercise solutions are present.
+These notes cover the introductory material in each course. General matrix and eigenvalue theory and a full treatment of first-order ODE solution methods are outside their current scope.

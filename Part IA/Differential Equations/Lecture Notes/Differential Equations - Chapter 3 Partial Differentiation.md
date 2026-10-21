@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 3 Partial Differentiation
-material_type: source-backed notes with course-level explanations
+material_type: lecture notes
 course: Part IA Differential Equations
 date: null
 source_file: Ch.3 Partial Differentiation.pdf
@@ -12,8 +12,6 @@ source_pages: 11
 ---
 
 # Differential Equations — Chapter 3: Partial Differentiation
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view). No date is supplied.
 
 ## 3.1 Functions of several variables (page 1)
 
@@ -86,12 +84,12 @@ Usually the fixed-variable bars are omitted: $\partial/\partial x$ implies that 
 $$f_x=\frac{\partial f}{\partial x},\qquad
 f_{xy}=(f_x)_y=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right)
 =\frac{\partial^2f}{\partial y\,\partial x}.$$
-Following `topic1.pdf`, page 22, the subscript $xy$ means **first $x$, then $y$**. In the fraction notation, the differentiation on the right acts first.
+The subscript $xy$ means **first $x$, then $y$**. In the fraction notation, the differentiation on the right acts first.
 
 **Schwarz's theorem (statement only).** If the second partial derivatives are continuous in a neighbourhood, then
 $$\frac{\partial^2f}{\partial x\,\partial y}
 =\frac{\partial^2f}{\partial y\,\partial x}.$$
-No proof is supplied.
+Proof omitted.
 
 For $f(x,y,z)$, $\partial f/\partial x$ means $\left.\partial f/\partial x\right|_{y,z}$. Holding only $y$ fixed need not specify the same derivative if $z$ is allowed to vary with $x$.
 
@@ -101,7 +99,7 @@ For a path $x(t),y(t)$ and a function $f(x,y)$, the question is how to find $df/
 
 ### Small changes and the differential (pages 3–4)
 
-The idea is to add the change caused by $x$ to the change caused by $y$. Following `topic1.pdf`, page 23, split the actual change into two coordinate steps:
+The idea is to add the change caused by $x$ to the change caused by $y$. Split the actual change into two coordinate steps:
 $$\begin{aligned}
 \delta f
 &=f(x+\delta x,y+\delta y)-f(x,y)\\
@@ -147,7 +145,6 @@ $$\begin{aligned}
 The integral is taken along the given path, with sufficient regularity to apply the one-variable fundamental theorem (for example, $f$ and the path continuously differentiable).
 
 Related: [[Partial Derivatives and the Multivariate Chain Rule]], [[Differentiation Rules]], [[Taylor Series and Taylor's Theorem]], [[Limits, Big O and Little o - A First-Year Guide]], [[Riemann Integration and the Fundamental Theorem of Calculus]].
-
 
 ## 3.4 Applications of the multivariate chain rule (pages 5–9)
 
@@ -297,13 +294,13 @@ but this need not equal $1/(\left.\partial x/\partial r\right|_\theta)$, since a
 
 For a family $f(x;c)$ depending on a parameter $c$, define
 $$I(c)=\int_{a(c)}^{b(c)}f(x;c)\,dx.$$
-The source states [[Differentiation Under the Integral Sign|Leibniz's integral rule]]:
+[[Differentiation Under the Integral Sign|Leibniz's integral rule]] gives:
 $$\frac{dI}{dc}
 =\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx
 +f(b(c);c)b'(c)-f(a(c);c)a'(c).$$
 A sufficient regularity setting is that $a,b$ are continuously differentiable and $f,f_c$ are continuous on a neighbourhood of the relevant integration intervals.
 
-**Source proof calculation (page 10).** Write $h=\delta c$. The difference quotient is
+**Proof.** Write $h=\delta c$. The difference quotient is
 $$\frac{1}{h}\left[
 \int_{a(c+h)}^{b(c+h)}f(x;c+h)\,dx
 -\int_{a(c)}^{b(c)}f(x;c)\,dx\right].$$
@@ -313,13 +310,13 @@ A_h&=\frac1h\int_{a(c)}^{b(c)}[f(x;c+h)-f(x;c)]\,dx,\\
 B_h&=\frac1h\int_{b(c)}^{b(c+h)}f(x;c+h)\,dx,\\
 C_h&=-\frac1h\int_{a(c)}^{a(c+h)}f(x;c+h)\,dx.
 \end{aligned}$$
-The source writes
+We have
 $$\lim_{h\to0}A_h
 =\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx.$$
 For the upper-endpoint term, the mean value theorem gives an intermediate $\xi_h$ between $b(c)$ and $b(c+h)$ with
 $$B_h=\frac{b(c+h)-b(c)}h\,f(\xi_h;c+h)
 \longrightarrow b'(c)f(b(c);c).$$
-The source says to use the same argument for the lower-endpoint term, yielding $-a'(c)f(a(c);c)$.
+The same argument for the lower-endpoint term yields $-a'(c)f(a(c);c)$.
 
 **Why the first term has this limit.** On the fixed finite interval, continuous $f_c$ makes the parameter difference quotient approach $f_c$ uniformly: its error can be made small by the same amount across the interval. The integral error is at most the interval length times that amount, so it tends to zero too. Together with the two endpoint terms, this proves the formula in the smooth setting used here. If an endpoint does not move, its term is zero.
 
@@ -343,7 +340,7 @@ $$J_n=\int_0^\infty x^n e^{-x}\,dx,\qquad n\in\mathbb Z_{\ge0},$$
 introduce the parameter integral
 $$I(\lambda)=\int_0^\infty e^{-\lambda x}\,dx
 =\frac1\lambda,\qquad\lambda>0.$$
-The source differentiates $n$ times:
+Differentiate $n$ times:
 $$\frac{d^nI}{d\lambda^n}
 =\int_0^\infty(-x)^n e^{-\lambda x}\,dx,$$
 while differentiation of the explicit expression gives

@@ -14,9 +14,7 @@ source_contact: hjrw2@cam.ac.uk
 
 **Michaelmas 2025.** Contact printed on the sheet: `hjrw2@cam.ac.uk`.
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-/view).
-
-Questions marked \* are more challenging. The source supplies questions only; no answers or worked solutions are included. Questions 1–11 are on page 1; questions 12–14 are on page 2.
+Questions marked \* are more challenging. Questions 1–11 are on page 1; questions 12–14 are on page 2.
 
 ## 1. Idempotent elements (page 1)
 
@@ -122,9 +120,9 @@ For which $n$ is there an $\operatorname{Isom}(Q)$ of order $n$?
 
 **Challenging part (\*):** Which groups can arise as $\operatorname{Isom}(Q)$, up to isomorphism?
 
-Related source-backed notes: [[Groups]], [[Bijections and Permutations]], [[Subgroups and Generated Subgroups]], [[Roots of Unity]] and [[Groups - Chapter 1 Examples and Definitions]]. These links provide lecture context; the questions above remain unanswered.
+Related notes: [[Groups]], [[Bijections and Permutations]], [[Subgroups and Generated Subgroups]], [[Roots of Unity]] and [[Groups - Chapter 1 Examples and Definitions]].
 
-## Prerequisite vocabulary — supplementary reading guide
+## Prerequisite vocabulary
 
 The current lecture ends before several terms used in this sheet are defined. The following definitions supply reading context, without solving the exercises.
 

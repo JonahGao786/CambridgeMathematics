@@ -1,6 +1,6 @@
 ---
 title: Orthonormal Bases and Vector Coordinates
-material_type: source-backed definitions and coordinate calculations with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -44,9 +44,9 @@ Here $i$ is free and $j$ is summed. A single entry $\delta_{11}=1$ differs from 
 
 [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] gives explicit sums, numerical examples, free/dummy-index rules and the connection to cross products.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 9–10, 19 and 21. Related: [[Vectors and Linear Span]], [[Real Inner Products and Cauchy-Schwarz]] and [[Cross Products and Scalar Triple Products]].
+See [[Vectors and Matrices - Chapter 2 Vectors]], pages 9–10, 19 and 21. Related: [[Vectors and Linear Span]], [[Real Inner Products and Cauchy-Schwarz]] and [[Cross Products and Scalar Triple Products]].
 
-## Why the coordinate formula works — supplementary explanation
+## Why the coordinate formula works
 
 Use the definition of a [[Vectors and Linear Span|basis]] to write $\mathbf a=\sum_j a_j\mathbf e_j$. Taking the dot product with $\mathbf e_i$ gives $\mathbf e_i\cdot\mathbf a=\sum_j a_j\delta_{ij}=a_i$. Conversely, orthonormal vectors are independent: taking these dot products in a zero linear combination forces every coefficient to vanish. Three independent vectors in $\mathbb R^3$ form a basis.
 

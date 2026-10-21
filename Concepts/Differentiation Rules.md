@@ -1,6 +1,6 @@
 ---
 title: Differentiation Rules
-material_type: source-backed theorem statements and examples
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.1 Differentiation.pdf
 drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
@@ -24,4 +24,4 @@ If $u,v$ are $n$ times differentiable, **Leibniz's rule** gives
 $$(uv)^{(n)}=\sum_{r=0}^{n}\binom nr u^{(n-r)}v^{(r)}.$$
 The first coefficient rows are $1,1$; $1,2,1$; and $1,3,3,1$, as in Pascal's triangle.
 
-Source: [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], expanded differentiation PDF, pages 8–9. These are statements and examples; proofs of these rules are not supplied there. A handwritten product-rule proof is separately transcribed in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]]. Repeated derivatives enter [[Taylor Series and Taylor's Theorem]].
+See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], pages 8–9. A product-rule proof appears in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]]. Repeated derivatives enter [[Taylor Series and Taylor's Theorem]].

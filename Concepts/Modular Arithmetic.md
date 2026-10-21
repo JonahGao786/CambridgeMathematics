@@ -1,6 +1,6 @@
 ---
 title: Modular Arithmetic
-material_type: source-backed definitions, well-definedness calculations and worked example
+material_type: concept note
 course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
@@ -31,4 +31,4 @@ These operations are independent of the representatives chosen and inherit the u
 
 Suppose $2a^2+3b^2=1$ for integers $a,b$. Modulo $3$, this requires $2a^2\equiv1$. But $a\equiv0,1,2$ gives $2a^2\equiv0,2,2$, respectively. None gives $1$, so the equation has no integer solution.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 18–19, including the cyclic residue diagram as TikZ. Related: [[Divisibility and Prime Numbers]], [[Greatest Common Divisors and Euclid's Algorithm]], and the additive groups $\mathbb Z_n$ in [[Groups]].
+See [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 18–19. Related: [[Divisibility and Prime Numbers]], [[Greatest Common Divisors and Euclid's Algorithm]], and the additive groups $\mathbb Z_n$ in [[Groups]].

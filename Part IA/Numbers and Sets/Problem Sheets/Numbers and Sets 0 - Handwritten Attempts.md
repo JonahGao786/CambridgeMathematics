@@ -11,9 +11,7 @@ source_pages: 19
 
 # Numbers and Sets 0 — Handwritten Attempts
 
-This PDF contains handwritten answers without supplied question statements. The numbering and expressions match [[Numbers and Sets - Introductory Sheet 2026]], a separately inspected source. Consult that sheet for the questions. No date is supplied. Substantive errors and unfinished arguments are marked; superseded attempts are retained.
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1cAxWubfgZfijKE33WolS74BS9m1Sccpn/view).
+Questions: [[Numbers and Sets - Introductory Sheet 2026]].
 
 ## 1. Sum of squares (page 1)
 
@@ -112,7 +110,7 @@ Induction step fails when $n=1$: no overlap between $h_1$ and $h_2$, so cannot d
 
 ## 5. Fibonacci numbers (pages 6–7)
 
-The sequence written is $1,1,2,3,5,\ldots$; see [[Fibonacci Numbers]] for the supplied definition.
+The sequence written is $1,1,2,3,5,\ldots$; see [[Fibonacci Numbers]] for the definition.
 
 ### (a) Addition formula (page 6)
 
@@ -185,18 +183,18 @@ For $n=4$, $p=2$ and $2p=n$, so this argument fails; indeed $4\nmid3!=6$.
 Therefore $n\mid(n-1)!$ for every composite $n\ne4$. The boundary case $n=1$ also works, since $0!=1$. The positive integers satisfying the condition are exactly
 $$n=1\quad\text{or}\quad n\text{ composite with }n\ne4.$$
 
-#### Superseded, incorrect attempt (previous version, page 8)
+#### Why the product-of-divisors argument fails
 
-The earlier processed version used a product of proper divisors:
+Consider the proposed argument using a product of proper divisors:
 $$n=p_1^{a_1}p_2^{a_2}p_3^{a_3}\cdots,$$
 where $p_n$ is prime and $a_n\in\mathbb Z$, $a_n\ge0$.
 
-The source writes a product over exponent tuples with $i\le a_1$, $j\le a_2$, … and $(i,j,\ldots)\ne(a_1,a_2,\ldots)$:
+Form a product over exponent tuples with $i\le a_1$, $j\le a_2$, … and $(i,j,\ldots)\ne(a_1,a_2,\ldots)$:
 $$\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldots)}}p_1^ip_2^j\cdots\ \mid\ (n-1)!,$$
 $$n\mid\prod_{\substack{i\le a_1,\ j\le a_2,\ldots\\(i,j,\ldots)\ne(a_1,a_2,\ldots)}}p_1^ip_2^j\cdots\quad\Longleftrightarrow\quad n\mid(n-1)!.$$
 “Therefore $n\mid(n-1)!$ for non-prime $n$.”
 
-This blanket conclusion fails at $n=4$. The revised proof above handles the exception; the earlier argument is retained as superseded, rather than as a current proof.
+This conclusion fails at $n=4$, the exceptional composite number in the proof above.
 
 ### (c) Trailing zeroes (page 9)
 
@@ -204,7 +202,7 @@ Need $2026$ factors of $10$. More factors of $2$ than $5$, so count factors of $
 $$\left\lfloor\frac n5\right\rfloor+\left\lfloor\frac n{25}\right\rfloor+\left\lfloor\frac n{125}\right\rfloor+\left\lfloor\frac n{625}\right\rfloor+\cdots.$$
 Write the number of factors of $5$ as
 $$v_5(n!)=\sum_{m=1}^{\infty}\left\lfloor\frac{n}{5^m}\right\rfloor.$$
-The source bounds it using
+Bound it using
 $$\frac n4=\sum_{m=1}^{\infty}\frac{n}{5^m}
 >\sum_{m=1}^{\infty}\left\lfloor\frac{n}{5^m}\right\rfloor\ge2026,$$
 so $n>8104$.
@@ -224,8 +222,6 @@ Four more multiples of $5$ are needed: $8105,8110,8115,8120$. Thus the stated an
 The immediate endpoint counts confirm minimality:
 $$v_5(8119!)=1623+324+64+12+2=2025,$$
 $$v_5(8120!)=1624+324+64+12+2=2026.$$
-
-**Earlier calculation:** the previous processed version reported using a Python script to obtain $n=8120$, without supplying the script. The revised source now gives the arithmetic above.
 
 ## 7. Irrationality (pages 10–12)
 
@@ -259,7 +255,7 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 
 ### (c) Page 12
 
-**Supplementary domain clarification.** The power expressions below are considered where they are real and defined. For an arbitrary irrational exponent, the usual real definition $a^b=e^{b\ln a}$ requires $a>0$. The examples using powers here have positive bases; they do not assign real values to every possible negative-base expression in the printed question.
+**Domain.** The power expressions below are considered where they are real and defined. For an arbitrary irrational exponent, the usual real definition $a^b=e^{b\ln a}$ requires $a>0$. The examples using powers here have positive bases; they do not assign real values to every possible negative-base expression in the printed question.
 
 - $r+\alpha$ is irrational: otherwise $\alpha=(r+\alpha)-r$ would be rational, a contradiction.
 - $r\alpha$ can be rational: let $r=0$.
@@ -270,7 +266,7 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 - $\alpha^\beta$ can be rational: let $\alpha=e$, $\beta=\ln3$.
 
 > [!todo] Substantive gap — page 12, last bullet
-> The counterexample requires $e$ and $\ln3$ to be irrational; the source supplies no justification. The irrationality of $\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.
+> The counterexample requires $e$ and $\ln3$ to be irrational; this attempt does not justify either fact. The irrationality of $\ln3$ is not an elementary consequence of the earlier arguments, so this prerequisite remains unresolved here.
 
 ## 8. Pigeonhole attempts (page 13)
 
@@ -298,7 +294,7 @@ Counterexamples written:
 
 ## 9. Towns and coloured edges (pages 14–16)
 
-### Superseded, incomplete attempt (page 14)
+### Incomplete edge-counting argument (page 14)
 
 $$A:B\text{ through }F\ (5),\quad B:C\text{ through }F\ (4),\quad C:D\text{ through }F\ (3),\quad D:E\text{ through }F\ (2),\quad E:F\ (1).$$
 $15$ edges. At least $8$ edges are the same transport. Try to place the $8$ edges without forming a triangle. Assume $AB,CD,EF$ are edges that don't meet each other. Then list $AC,AD,AE,AF$.
@@ -551,7 +547,7 @@ The claimed conclusion is that, for every number of depots, there exists a start
 
 ### Explanation of the reduction and the full circuit
 
-**Supplementary explanation retained from the existing note.** The following makes the induction and fuel comparison explicit.
+**Induction and fuel comparison.**
 
 Fix a direction around the circle, and use forward arc distances in that direction. The two-depot base case also works in any fixed direction: if the fuel $g$ at $A$ is smaller than $d_{AB}$, then the fuel $F-g$ at $B$ is larger than $F-d_{AB}=d_{BA}$, so start at $B$. Otherwise start at $A$. In either case the total fuel covers the return arc exactly.
 
@@ -576,7 +572,7 @@ With the reduction and this final fuel calculation made explicit, the revised ar
 
 See [[Natural Numbers and Mathematical Induction]] for the quantifiers in the induction step.
 
-### Superseded, incomplete attempt (previous version, page 16)
+### Incomplete depot-selection argument
 
 **Incomplete proof:** Let $n\in\mathbb Z^+$ be the number of depots. The case $n=1$ is trivial.
 
@@ -591,7 +587,7 @@ Place a new depot $C$ between $A$ and $B$, and move fuel $f_C$ from $A$ to $C$.
 
 **Claimed conclusion:** By induction, there is always a starting depot for any number of depots.
 
-This earlier argument restricted $A$ to an already chosen starting depot and did not justify the reduction from an arbitrary configuration or the remainder of the circuit. It is retained as a superseded attempt; the revised argument and explanation above resolve these points.
+This argument restricts $A$ to an already chosen starting depot. It does not justify the reduction from an arbitrary configuration or the rest of the circuit. The proof above supplies both steps.
 
 ## 11–12. Unfinished (pages 18–19)
 

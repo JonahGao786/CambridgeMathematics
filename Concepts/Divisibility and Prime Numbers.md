@@ -1,6 +1,6 @@
 ---
 title: Divisibility and Prime Numbers
-material_type: source-backed definitions, propositions and proofs with supplementary explanation
+material_type: concept note
 course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
@@ -40,11 +40,11 @@ The proof does not claim that $N$ itself is prime.
 $$b=xpb+yab.$$
 Both terms on the right are divisible by $p$, hence $p\mid b$.
 
-Iterating the lemma shows that if $p\mid a_1\cdots a_m$, then $p$ divides some factor. Primality is essential; the source supplies no counterexample for a composite divisor.
+Iterating the lemma shows that if $p\mid a_1\cdots a_m$, then $p$ divides some factor. Primality is essential.
 
 ## Fundamental theorem of arithmetic
 
-Existence of a prime factorization alone does not establish uniqueness. The earlier source questions use $21=3\cdot7$ and $295869=3\cdot7\cdot73\cdot193$.
+Existence of a prime factorization alone does not establish uniqueness. Examples include $21=3\cdot7$ and $295869=3\cdot7\cdot73\cdot193$.
 
 **Theorem 9 (page 14):** every integer $n\ge2$ is a product of primes, uniquely up to reordering.
 
@@ -58,7 +58,7 @@ If $n=p_1^{a_1}\cdots p_k^{a_k}$ with distinct primes and positive exponents, it
 $$p_1^{b_1}\cdots p_k^{b_k},\qquad0\le b_i\le a_i.$$
 For example, $2^3\,3^7\,11$ has precisely the positive divisors $2^a3^b11^c$ with $0\le a\le3$, $0\le b\le7$, $0\le c\le1$. An extra prime factor would contradict unique factorization.
 
-The page-15 example $4=2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ concerns the different system $\mathbb Z[\sqrt{-3}]$. The source note corrects “prime” to “irreducible” and proves irreducibility using the norm $x^2+3y^2$, as well as non-association and failure of primality. The integer form of Euclid's lemma cannot be transferred to that example without qualification.
+The page-15 example $4=2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ concerns the different system $\mathbb Z[\sqrt{-3}]$. The factors $2$ and $1\pm\sqrt{-3}$ are irreducible but not prime, and no two are associates. The norm $x^2+3y^2$ proves irreducibility; see the lecture for the argument. The integer form of Euclid's lemma cannot be transferred to that example without qualification.
 
 ## Erdős's counting proof of infinitely many primes
 
@@ -66,16 +66,16 @@ Suppose $p_1,\ldots,p_k$ list all primes. Splitting prime exponents into even pa
 $$m^2p_1^{i_1}\cdots p_k^{i_k},\qquad i_\nu\in\{0,1\}.$$
 Among numbers at most $N$, there are at most $\sqrt N$ choices of $m$ and $2^k$ choices of the binary exponents. If $N>4^k$, this accounts for fewer than $N$ integers, a contradiction. The lecture attributes this proof to Erdős (1930).
 
-The source also states bounds for the $k$th prime, $p_k<2^{2^k}$ and $p_k<4^k$, without separate derivations, and states $p_k\sim k\log k$ without proving the prime number theorem.
+Further results, stated without proof, are the bounds $p_k<2^{2^k}$ and $p_k<4^k$ for the $k$th prime, and the prime number theorem $p_k\sim k\log k$.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, 13–15 and 17. The complete uniqueness proof, terminology review on page 15 and unanswered product-comparison question on page 8 are retained there. [[Greatest Common Divisors and Euclid's Algorithm]] supplies the gcd/lcm material; [[Modular Arithmetic]] gives the new congruence calculations. The natural-number convention appears in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
+See [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, 13–15 and 17. [[Greatest Common Divisors and Euclid's Algorithm]] supplies the gcd/lcm material; [[Modular Arithmetic]] introduces congruences. The natural-number convention appears in [[Natural Numbers and Mathematical Induction]]. For factorial and Fibonacci exercises, see [[Numbers and Sets 0 - Handwritten Attempts]].
 
-## How uniqueness follows — supplementary proof
+## How uniqueness follows
 
-The bridge from existence to uniqueness is [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof|Bézout's identity and Euclid's lemma]]. If
+The bridge from existence to uniqueness is [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma|Bézout's identity and Euclid's lemma]]. If
 $$p_1\cdots p_r=q_1\cdots q_s$$
 are prime factorizations of the same positive integer, repeated application of Euclid's lemma shows that $p_1$ divides some $q_j$. Since $q_j$ is prime, $p_1=q_j$. Reorder the right-hand factors and cancel this common positive factor. Repeat with the remaining products. One side cannot run out of factors first, because a non-empty product of primes is at least $2$, whereas the empty product is $1$. Thus $r=s$ and the factors agree up to order.
 
-This supplementary argument closes the logical chain: strong induction gives existence; Euclid's algorithm gives Bézout's identity; Euclid's lemma gives uniqueness. The infinitude-of-primes proof above needs only existence, not uniqueness.
+The logical chain is: strong induction gives existence; Euclid's algorithm gives Bézout's identity; Euclid's lemma gives uniqueness. The infinitude-of-primes proof above needs only existence, not uniqueness.
 
-**Terminology:** “proper divisor” in other texts often includes $1$ and excludes only the number itself among positive divisors. The source uses it for non-trivial factors, excluding both $\pm1$ and $\pm n$.
+**Terminology:** “proper divisor” in other texts often includes $1$ and excludes only the number itself among positive divisors. Here it means non-trivial factors, excluding both $\pm1$ and $\pm n$.

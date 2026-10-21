@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 4 First-Order Linear Differential Equations
-material_type: handwritten lecture notes with brief scope clarifications
+material_type: lecture notes
 course: Part IA Differential Equations
 date: null
 source_file: Ch.4 First-order Linear Differential Equations.pdf
@@ -10,8 +10,6 @@ source_pages: 5
 ---
 
 # Differential Equations — Chapter 4: First-Order Linear Differential Equations
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view), five pages. No date is supplied.
 
 ## Terminology (page 1)
 
@@ -25,10 +23,10 @@ is a first-order linear ODE. The coefficient $x^2$ does not make it nonlinear in
 
 ## 1. Prelude: the exponential function (pages 1–2)
 
-The source defines the exponential by the infinite series
+Define the exponential by the infinite series
 $$\exp(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots
 =\sum_{n=0}^\infty\frac{x^n}{n!}.$$
-It also gives
+An equivalent limit representation is
 $$\exp(x)=\lim_{k\to\infty}\left(1+\frac{x}{k}\right)^k.$$
 The displayed binomial calculation is
 $$\left(1+\frac{x}{k}\right)^k
@@ -42,7 +40,7 @@ $$\frac{d}{dx}\exp(x)
 =\exp(x).$$
 The binomial-limit passage and termwise differentiation are presented as calculations; their convergence and interchange justifications are not supplied here.
 
-The source also describes $\exp$ as the solution of
+Equivalently, $\exp$ solves
 $$f'=f,\qquad f(0)=1.$$
 No existence or uniqueness proof is supplied.
 
@@ -50,7 +48,7 @@ No existence or uniqueness proof is supplied.
 
 The key property is
 $$\exp(x_1)\exp(x_2)=\exp(x_1+x_2).$$
-The source refers to lecture notes for the proof. Thus one writes $\exp(x)=e^x$, where
+Write $\exp(x)=e^x$, where
 $$e=\exp(1)=\lim_{k\to\infty}\left(1+\frac1k\right)^k
 \approx2.718\ldots.$$
 The logarithm is the inverse on positive real inputs:
@@ -72,9 +70,7 @@ so $e^{\lambda x}$ is an eigenfunction with eigenvalue $\lambda$.
 
 ## 2. First-order linear ODEs (page 3)
 
-The source states: “An $n$th-order linear ODE has $n$ linearly independent solutions.”
-
-**Scope of the statement.** For a homogeneous linear equation on an interval, with continuous coefficients and a leading coefficient that never vanishes, there are $n$ linearly independent solutions; every solution is a linear combination of them. For an inhomogeneous equation, add one particular solution to a general homogeneous solution. The general theorem is stated here without proof; the first-order example below illustrates the idea.
+For an $n$th-order homogeneous linear equation on an interval, with continuous coefficients and a leading coefficient that never vanishes, there are $n$ linearly independent solutions; every solution is a linear combination of them. For an inhomogeneous equation, add one particular solution to a general homogeneous solution. The general theorem is stated here without proof; the first-order example below illustrates the idea.
 
 ### Linear dependence and independence of functions (page 3)
 
@@ -92,7 +88,7 @@ For any linear homogeneous ODE, a constant multiple of a solution is also a solu
 
 ## 2.1 Homogeneous linear ODEs with constant coefficients (pages 3–4)
 
-With **constant coefficients**, the independent variable does not appear explicitly in the coefficients. The source says to look for exponential solutions $e^{\lambda x}$. It notes that solutions of higher-order equations may involve linear combinations and polynomial factors such as $x^2e^{\lambda x}$, including the case $\lambda=0$. No general higher-order method is developed here.
+With **constant coefficients**, the independent variable does not appear explicitly in the coefficients. Look for exponential solutions $e^{\lambda x}$. Solutions of higher-order equations may involve linear combinations and polynomial factors such as $x^2e^{\lambda x}$, including the case $\lambda=0$. No general higher-order method is developed here.
 
 ### Example (page 4)
 
@@ -102,7 +98,7 @@ Try $y=Ae^{\lambda x}$. Substitution gives
 $$5\lambda Ae^{\lambda x}-3Ae^{\lambda x}=0.$$
 For $A\ne0$, this gives the **characteristic equation**
 $$5\lambda-3=0.$$
-Thus $\lambda=3/5$, and the source identifies the general solution as
+Thus $\lambda=3/5$, and the general solution is
 $$y(x)=Ae^{3x/5},\qquad A\text{ constant}.$$
 The value $A=0$ includes the zero solution.
 
@@ -117,7 +113,7 @@ $$x_n=nh,\qquad x_0=0,\qquad h>0.$$
 For sampled values, the forward-difference approximation is
 $$\left.\frac{dy}{dx}\right|_{x_n}
 \approx\frac{y_{n+1}-y_n}{h}.$$
-The source writes $y_n=y(x_n)$. When the difference equation is used as a numerical scheme, $y_n$ denotes an approximation to that sampled value.
+Here $y_n$ denotes the numerical approximation to $y(x_n)$.
 
 The sketch shows sampled points, a blue secant between the samples at $x_1,x_2$, and the grid spacing $h$. The point at $x_3$ remains unjoined. This is a qualitative sketch, not an exact plot of a specified function.
 
@@ -159,4 +155,4 @@ y_n
 &=\left(1+\frac{3h}{5}\right)^2y_{n-2}\\
 &=\left(1+\frac{3h}{5}\right)^ny_0.
 \end{aligned}$$
-The PDF ends after this expression. It supplies no error or convergence analysis. See [[Forward Euler Method]].
+For more on the numerical method, see [[Forward Euler Method]].

@@ -1,6 +1,6 @@
 ---
 title: Integration by Substitution and by Parts
-material_type: source-backed techniques and worked examples with supplementary explanation
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.2 Integration.pdf
 drive_file_id: 1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N
@@ -12,12 +12,12 @@ source_pages: [5, 6, 7]
 
 ## Substitution
 
-A function of a function may suggest substituting for its inner function. The source example uses $u=x-x^2$:
+A function of a function may suggest substituting for its inner function. For example, use $u=x-x^2$:
 $$\int\frac{1-2x}{\sqrt{x-x^2}}\,dx
 =\int\frac{du}{\sqrt u}=2\sqrt{x-x^2}+C,$$
 on the real domain $0<x<1$.
 
-The source lists:
+Useful substitutions:
 
 | Integrand contains | Substitution |
 | --- | --- |
@@ -41,7 +41,7 @@ The original real domain is $0\le x\le2$, with the antiderivative calculation on
 Integrating the [[Differentiation Rules|product rule]] gives
 $$\int uv'\,dx=uv-\int u'v\,dx.$$
 
-For the supplied example, take $u=x$ and $v=-e^{-x}$:
+For example, take $u=x$ and $v=-e^{-x}$:
 $$\begin{aligned}
 \int_0^\infty xe^{-x}\,dx
 &=[-xe^{-x}]_0^\infty+\int_0^\infty e^{-x}\,dx\\
@@ -51,11 +51,11 @@ The boundary terms use $xe^{-x}\to0$ and $e^{-x}\to0$ as $x\to\infty$.
 
 For $x>0$, the other worked example uses $u=\log x$, $dv=dx$, hence $du=dx/x$ and $v=x$:
 $$\int\log x\,dx=x\log x-\int dx=x(\log x-1)+C.$$
-The source also notes applications to inverse trigonometric and hyperbolic functions, without further examples.
+Integration by parts also applies to inverse trigonometric and hyperbolic functions.
 
-Source: [[Differential Equations - Chapter 2 Integration]], pages 5–7, which retains all substitution steps, the inverse-sine branch and the trigonometric/hyperbolic identities. Related: [[Riemann Integration and the Fundamental Theorem of Calculus]].
+See [[Differential Equations - Chapter 2 Integration]], pages 5–7. Related: [[Riemann Integration and the Fundamental Theorem of Calculus]].
 
-## Domains and the fundamental theorem — supplementary explanation
+## Domains and the fundamental theorem
 
 These techniques reverse [[Differentiation Rules]] using [[Riemann Integration and the Fundamental Theorem of Calculus]]. For continuous $f$ and continuously differentiable $g$,
 $$\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)}f(u)\,du.$$

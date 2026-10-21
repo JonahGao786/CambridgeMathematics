@@ -1,6 +1,6 @@
 ---
 title: Riemann Integration and the Fundamental Theorem of Calculus
-material_type: course-level definitions, formulas and explanations
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.2 Integration.pdf
 drive_file_id: 1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N
@@ -44,4 +44,4 @@ $$\frac{d}{dx}\int_x^b f(t)\,dt=-f(x),$$
 $$\frac{d}{dx}\int_a^{g(x)}f(t)\,dt=f(g(x))g'(x).$$
 Here $g$ is differentiable and takes values in the integration domain.
 
-See [[Differential Equations - Chapter 2 Integration]], sections 2.1–2.2, and `topic1.pdf`, pages 13–16. [[Integration by Substitution and by Parts]] applies these ideas to evaluating integrals.
+See [[Differential Equations - Chapter 2 Integration]], sections 2.1–2.2. [[Integration by Substitution and by Parts]] applies these ideas to evaluating integrals.

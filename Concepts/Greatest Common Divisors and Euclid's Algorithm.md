@@ -1,6 +1,6 @@
 ---
 title: Greatest Common Divisors and Euclid's Algorithm
-material_type: source-backed definition, algorithm, theorems and proofs with supplementary explanation
+material_type: concept note
 course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
@@ -71,16 +71,16 @@ $$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)},$$
 $$\operatorname{lcm}(x,y)=\prod_{i=1}^k p_i^{\max(a_i,b_i)}.$$
 The **least common multiple** is positive, and every common integer multiple is an integer multiple of it.
 
-For the source example,
+For example,
 $$x=2^3\,3^7\,5\,11^3,\qquad y=2^4\,3^2\,11\,13,$$
 $$\gcd(x,y)=2^3\,3^2\,11,\qquad
 \operatorname{lcm}(x,y)=2^4\,3^7\,5\,11^3\,13.$$
 The exponent identity $\min(a_i,b_i)+\max(a_i,b_i)=a_i+b_i$ gives
 $$\gcd(x,y)\operatorname{lcm}(x,y)=xy.$$
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13 and 15–16, including the full algorithm table, proofs and common-divisor/multiple examples. Related: [[Divisibility and Prime Numbers]], [[Modular Arithmetic]] and [[Natural Numbers and Mathematical Induction]].
+See [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13 and 15–16. Related: [[Divisibility and Prime Numbers]], [[Modular Arithmetic]] and [[Natural Numbers and Mathematical Induction]].
 
-## From the algorithm to Euclid's lemma — supplementary proof
+## From the algorithm to Euclid's lemma
 
 Each remainder in Euclid's algorithm is an integer linear combination of $a,b$: this holds for $r_1=a-q_1b$, and is preserved when subtracting an integer multiple of one remainder from another. The last non-zero remainder therefore gives **Bézout's identity**
 $$\gcd(a,b)=ua+vb\qquad\text{for some }u,v\in\mathbb Z.$$
@@ -89,4 +89,4 @@ $$1=35-2\cdot17=3\cdot35-2\cdot52=3\cdot87-5\cdot52.$$
 
 For prime $p$ and positive $a$ with $p\nmid a$, the only positive common divisor is $1$. Choose $u,v\in\mathbb Z$ with $up+va=1$. If $p\mid ab$, multiplying by $b$ gives
 $$b=upb+vab,$$
-so $p\mid b$. If instead $p\mid a$, the other alternative already holds. For arbitrary integer $a,b$, zero cases are immediate and signs can be removed using absolute values. This proves [[Divisibility and Prime Numbers|Euclid's lemma]]. This algorithm-based explanation is supplementary. The updated lecture also supplies Bézout’s identity and the Euclid-lemma proof on pages 12–13; see [[Bezout's Identity and Linear Diophantine Equations]].
+so $p\mid b$. If instead $p\mid a$, the other alternative already holds. For arbitrary integer $a,b$, zero cases are immediate and signs can be removed using absolute values. This proves [[Divisibility and Prime Numbers|Euclid's lemma]]. See [[Bezout's Identity and Linear Diophantine Equations]].

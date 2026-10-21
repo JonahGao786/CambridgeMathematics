@@ -1,6 +1,6 @@
 ---
 title: Cross Products and Scalar Triple Products
-material_type: source-backed definitions, identities and geometric interpretations with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -14,7 +14,7 @@ For non-zero, non-parallel $\mathbf a,\mathbf b\in\mathbb R^3$,
 $$\mathbf a\times\mathbf b=|\mathbf a|\,|\mathbf b|\sin\theta\,\widehat{\mathbf n},$$
 where $\widehat{\mathbf n}$ is the unit normal selected by the right-hand rule. The cross product is also written $\mathbf a\wedge\mathbf b$. It is zero for parallel vectors or when either vector is zero.
 
-The source's opposite-route convention replaces $\theta$ by $2\pi-\theta$ and $\widehat{\mathbf n}$ by $-\widehat{\mathbf n}$; the two signs cancel.
+Taking the opposite angle replaces $\theta$ by $2\pi-\theta$ and $\widehat{\mathbf n}$ by $-\widehat{\mathbf n}$; the two signs cancel.
 
 ## Properties
 
@@ -54,7 +54,7 @@ $$\mathbf a\times\mathbf b=
 (a_2b_3-a_3b_2)\mathbf e_1
 +(a_3b_1-a_1b_3)\mathbf e_2
 +(a_1b_2-a_2b_1)\mathbf e_3.$$
-The source uses the determinant mnemonic
+The determinant mnemonic is
 $$\mathbf a\times\mathbf b=
 \begin{vmatrix}
 \mathbf e_1&\mathbf e_2&\mathbf e_3\\
@@ -92,7 +92,7 @@ $$\mathbf a\times(\mathbf b\times\mathbf c)
 whereas
 $$(\mathbf a\times\mathbf b)\times\mathbf c
 =(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
-Thus the cross product is not associative. These identities are stated on page 14 and applied to [[Lines, Planes and Vector Equations|line–plane intersections]] on page 16. Page 22 supplies a component proof of the first identity using epsilon contraction; no separate proof of the second is supplied.
+Thus the cross product is not associative. These identities are stated on page 14 and applied to [[Lines, Planes and Vector Equations|line–plane intersections]] on page 16. A component proof using epsilon contraction appears on page 22.
 
 ## Levi-Civita notation and contraction
 
@@ -112,11 +112,11 @@ Page 23 proves, using the same contraction,
 $$(\mathbf a\times\mathbf b)\cdot(\mathbf b\times\mathbf c)
 =(\mathbf a\cdot\mathbf b)(\mathbf b\cdot\mathbf c)
 -(\mathbf a\cdot\mathbf c)|\mathbf b|^2.$$
-The full source calculation is retained in the lecture note. [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] expands the notation, signs, contractions and a numerical check.
+For the full calculation, see [[Vectors and Matrices - Chapter 2 Vectors]]. [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] expands the notation, signs, contractions and a numerical check.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–14 and 20–23, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].
+See [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–14 and 20–23. Related: [[Real Inner Products and Cauchy-Schwarz]].
 
-## Zero volume and operation order — supplementary explanation
+## Zero volume and operation order
 
 The volume formula also holds when $\mathbf a,\mathbf b$ are parallel: both the cross product and the volume are zero, although dividing by $|\mathbf a\times\mathbf b|$ to define a normal is then invalid. More generally, $[\mathbf a,\mathbf b,\mathbf c]=0$ exactly when the three vectors are linearly dependent, equivalently their span has dimension at most two.
 

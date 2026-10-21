@@ -1,6 +1,6 @@
 ---
 title: Numbers and Sets - Chapter 1 Elementary Number Theory
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: lecture notes
 course: Part IA Numbers and Sets
 date: null
 source_file: Ch.1 Elementary Number Theory.pdf
@@ -10,8 +10,6 @@ source_pages: 19
 ---
 
 # Numbers and Sets — Chapter 1: Elementary Number Theory
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view), nineteen pages. No date is supplied.
 
 ## The natural numbers and Peano axioms (page 1)
 
@@ -41,7 +39,7 @@ The starting operation $n+1$ is the successor operation. The induction is on $k$
 
 **Explanation of the recursion.** Once the operation $n\mapsto n+k$ has been defined for every $n$, applying successor defines $n\mapsto n+(k+1)$. This defines addition by each natural number. The equation is a definition; the arithmetic laws below are stated for checking, without proofs.
 
-Multiplication and powers can similarly be defined recursively. The source does not give those recursions explicitly.
+Multiplication and powers can similarly be defined recursively.
 
 ## Arithmetic and order on the natural numbers (pages 2–3)
 
@@ -53,14 +51,14 @@ The usual arithmetic rules can be checked. For all $a,b,c\in\mathbb N$:
 4. **(iv) Associativity of multiplication:** $a(bc)=(ab)c$.
 5. **(v) Distributivity:** $a(b+c)=ab+ac$.
 
-Define $a<b$ if $a+c=b$ for some $c\in\mathbb N$. The source lists:
+Define $a<b$ if $a+c=b$ for some $c\in\mathbb N$. The following properties hold:
 
 6. **(vi)** $a<b\Rightarrow a+c<b+c$.
 7. **(vii)** $a<b\Rightarrow ac<bc$.
 8. **(viii)** $a<b$ and $b<c\Rightarrow a<c$.
 9. **(ix)** $\neg(a<a)$.
 
-Here $c\in\mathbb N$ is positive, as required in (vii). No proofs of (i)–(ix) are supplied.
+Here $c\in\mathbb N$ is positive, as required in (vii).
 
 ## Weak and strong induction (page 3)
 
@@ -76,7 +74,7 @@ then $P(n)$ holds for every $n\in\mathbb N$.
 
 WPI and SPI are equivalent. SPI implies WPI because the strong hypothesis includes $P(n)$. To see that WPI implies SPI, apply WPI to
 $$Q(n):\quad P(m)\text{ holds for every }m\le n.$$
-The base case is $Q(1)=P(1)$. If $Q(n)$ holds, the strong step gives $P(n+1)$, so $Q(n+1)$ holds. This makes the source's indicated argument explicit.
+The base case is $Q(1)=P(1)$. If $Q(n)$ holds, the strong step gives $P(n+1)$, so $Q(n+1)$ holds.
 
 ## Well-ordering and least counterexamples (pages 3–4)
 
@@ -111,7 +109,7 @@ $$ad=bc\qquad(b,d\ne0).$$
 
 Define addition by
 $$\frac ab+\frac cd=\frac{ad+bc}{bd}.$$
-Check that this is independent of the chosen representations of the two fractions. Multiplication can be defined similarly; no multiplication formula or proof of well-definedness is supplied here.
+Check that this is independent of the chosen representations of the two fractions. **Exercise:** define multiplication similarly and check that it is well-defined.
 
 For positive denominators $b,d>0$, define
 $$\frac ab<\frac cd\quad\Longleftrightarrow\quad ad<bc.$$
@@ -148,7 +146,7 @@ Thus none of the primes on the list divides $N$. But Proposition 2 says that $N\
 
 ### The uniqueness question and Proposition 4 (page 8)
 
-The existence proof does not establish uniqueness of a prime factorization. The source asks about
+The existence proof does not establish uniqueness of a prime factorization. Consider
 $$21=3\cdot7,\qquad 295869=3\cdot7\cdot73\cdot193,$$
 and asks why
 $$9049\cdot40099\ne6701\cdot54151.$$
@@ -156,7 +154,7 @@ The comparison question remains unanswered. Theorem 9 on page 14 supplies the un
 
 **Proposition 4 — Euclid's lemma.** If $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$.
 
-The proof of Proposition 4 appears on page 13, after Bézout’s identity. The prerequisite order is Euclid's algorithm → [[Bezout's Identity and Linear Diophantine Equations|Bézout's identity]] → Euclid's lemma → unique factorization. The supplementary derivations in [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof]] and [[Divisibility and Prime Numbers#How uniqueness follows — supplementary proof]] provide an alternative reading route.
+The proof of Proposition 4 appears on page 13, after Bézout’s identity. The prerequisite order is Euclid's algorithm → [[Bezout's Identity and Linear Diophantine Equations|Bézout's identity]] → Euclid's lemma → unique factorization. The derivations in [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma]] and [[Divisibility and Prime Numbers#How uniqueness follows]] provide an alternative reading route.
 
 ## Highest common factors (pages 8–9)
 
@@ -170,7 +168,7 @@ $$c=\operatorname{hcf}(a,b)=\gcd(a,b)=(a,b).$$
 
 For example, the positive factors of $12$ are $1,2,3,4,6,12$, and those of $18$ are $1,2,3,6,9,18$. Their common positive factors are $1,2,3,6$, so $\gcd(12,18)=6$.
 
-The source next establishes that the gcd always exists by [[Greatest Common Divisors and Euclid's Algorithm|Euclid's algorithm]].
+The existence of the gcd follows from [[Greatest Common Divisors and Euclid's Algorithm|Euclid's algorithm]].
 
 ## Proposition 5 — Division algorithm (page 9)
 
@@ -207,7 +205,7 @@ The output is the last non-zero remainder $r_n$. If the first remainder is alrea
 
 The positive remainders satisfy
 $$b>r_1>r_2>\cdots>r_n>0,$$
-so there are fewer than $b$ positive remainders. In the source's indexing $n<b$; one final division produces the zero remainder.
+so there are fewer than $b$ positive remainders. With this indexing $n<b$; one final division produces the zero remainder.
 
 The worked example is
 $$\begin{aligned}
@@ -239,7 +237,6 @@ $$\begin{aligned}
 17&=17\cdot1+0.
 \end{aligned}$$
 The last non-zero remainder is $1$, so $\gcd(87,52)=1$.
-
 
 ## Coprimality and Bézout's identity (pages 11–12)
 
@@ -315,7 +312,7 @@ Both terms on the left are multiples of $p$, so $b$ is a multiple of $p$.
 **Remarks (page 14).**
 
 1. If $p\mid a_1a_2\cdots a_m$, then $p\mid a_i$ for some $i\in\{1,\ldots,m\}$. Apply Proposition 4 to $a_1(a_2\cdots a_m)$ and iterate, or induct on the number of factors.
-2. The assumption that $p$ is prime is necessary. No counterexample is supplied here.
+2. The assumption that $p$ is prime is necessary. **Exercise:** find a composite counterexample.
 
 ## Theorem 9 — Fundamental theorem of arithmetic (page 14)
 
@@ -337,15 +334,15 @@ $$\mathbb Z[\sqrt{-3}]
 Adding or multiplying two elements gives another element of this set. For example,
 $$(1+\sqrt{-3})+(1-\sqrt{-3})=2,$$
 $$(1+\sqrt{-3})(1-\sqrt{-3})=4=2\cdot2.$$
-The source calls $1\pm\sqrt{-3}$ “prime in this sense” and uses these factorizations to illustrate failure of uniqueness.
+These factorizations illustrate failure of unique factorization into irreducible elements.
 
-**Correct terminology and proof — supplementary correction.** In this ring, a **unit** has a multiplicative inverse in the ring; an **irreducible** is a non-zero non-unit whose every factorization has a unit factor. A **prime element** is a non-zero non-unit $p$ such that $p\mid ab$ implies $p\mid a$ or $p\mid b$. These notions need not coincide outside the integers.
+**Irreducible and prime elements.** In this ring, a **unit** has a multiplicative inverse in the ring; an **irreducible** is a non-zero non-unit whose every factorization has a unit factor. A **prime element** is a non-zero non-unit $p$ such that $p\mid ab$ implies $p\mid a$ or $p\mid b$. These notions need not coincide outside the integers.
 
 The multiplicative norm
 $$N(x+y\sqrt{-3})=(x+y\sqrt{-3})(x-y\sqrt{-3})=x^2+3y^2$$
 is a non-negative integer, zero only at zero. A unit has norm $1$, and the only norm-$1$ elements are $\pm1$, both units. Each of $2,1+\sqrt{-3},1-\sqrt{-3}$ has norm $4$. If any factored into two non-units, their norms would both be $2$. But $x^2+3y^2=2$ has no integer solution: $y\ne0$ gives at least $3$, and $y=0$ would require $x^2=2$. Thus all three elements are irreducible.
 
-They are pairwise non-associate: multiplication by the only units $\pm1$ does not turn one into another. Hence $2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ gives distinct factorizations into irreducibles, even up to order and units. The elements $1\pm\sqrt{-3}$ are not prime: each divides $2\cdot2$ but not $2$, since the quotient is $(1\mp\sqrt{-3})/2$, outside the ring. Likewise $2$ divides the displayed product but neither factor. This corrects the source's use of “prime”.
+They are pairwise non-associate: multiplication by the only units $\pm1$ does not turn one into another. Hence $2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ gives distinct factorizations into irreducibles, even up to order and units. The elements $1\pm\sqrt{-3}$ are not prime: each divides $2\cdot2$ but not $2$, since the quotient is $(1\mp\sqrt{-3})/2$, outside the ring. Likewise $2$ divides the displayed product but neither factor.
 
 ## Consequences of unique prime factorization (pages 15–16)
 
@@ -384,7 +381,7 @@ $$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)}.$$
 
 The common integer multiples of the same $x,y$ are the integer multiples of
 $$L=2^4\,3^7\,5\,11^3\,13.$$
-Equivalently, they have the source's form
+Equivalently, they have the form
 $$2^a3^b5^c11^d13^e\,t,\qquad
 a\ge4,\quad b\ge7,\quad c\ge1,\quad d\ge3,\quad e\ge1,\quad t\in\mathbb Z.$$
 The number $L$ is their **least common multiple**. In general,
@@ -396,7 +393,7 @@ See [[Greatest Common Divisors and Euclid's Algorithm]].
 
 ### (4) Another proof of infinitely many primes (page 17)
 
-The source attributes this counting proof to Erdős (1930).
+This counting proof is attributed to Erdős (1930).
 
 Suppose $p_1,\ldots,p_k$ are all the primes. Unique factorization writes every positive integer as
 $$p_1^{j_1}\cdots p_k^{j_k}
@@ -407,7 +404,7 @@ If such a number is at most $N$, then $m\le\sqrt N$. There are at most $\lfloor\
 
 Choose a natural number $N>4^k$. Then $N>\sqrt N\,2^k$, so some integer at most $N$ cannot have this form. It must have a prime factor outside the supposed complete list, a contradiction.
 
-**Further statements.** Writing $p_k$ for the $k$th prime, the source records the bounds
+**Further statements.** Writing $p_k$ for the $k$th prime, we have the bounds
 $$p_k<2^{2^k},\qquad p_k<4^k,$$
 alongside the first and second proofs respectively. It gives no separate derivations of these quantitative bounds. It also states the prime number theorem in the form
 $$p_k\sim k\log k,$$

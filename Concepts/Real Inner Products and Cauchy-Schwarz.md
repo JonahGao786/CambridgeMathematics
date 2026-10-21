@@ -1,6 +1,6 @@
 ---
 title: Real Inner Products and Cauchy-Schwarz
-material_type: source-backed definitions, theorems and proofs with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -29,12 +29,12 @@ The difference between $\mathbf b$ and this projection is orthogonal to $\mathbf
 
 **Cauchy–Schwarz:**
 $$|\langle\mathbf x,\mathbf y\rangle|\le\|\mathbf x\|\,\|\mathbf y\|.$$
-The source proves the Euclidean version using the non-negativity of
+For the Euclidean version, use the non-negativity of
 $$|\mathbf x-\lambda\mathbf y|^2
 =|\mathbf y|^2\lambda^2-2(\mathbf x\cdot\mathbf y)\lambda+|\mathbf x|^2$$
-for every real $\lambda$. With $\mathbf y\ne0$, its discriminant is non-positive, giving the squared inequality; the zero case is immediate. The source also states the extension to every real inner product.
+for every real $\lambda$. With $\mathbf y\ne0$, its discriminant is non-positive, giving the squared inequality; the zero case is immediate. The same argument applies to every real inner product.
 
-Equality holds iff one vector is a real scalar multiple of the other, including the zero cases; no separate proof of this characterization is supplied.
+Equality holds iff one vector is a real scalar multiple of the other, including the zero cases.
 
 The Euclidean **triangle inequality** follows by expanding the squared norm and applying Cauchy–Schwarz:
 $$\begin{aligned}
@@ -44,9 +44,9 @@ $$\begin{aligned}
 \end{aligned}$$
 Taking non-negative square roots gives $|\mathbf x+\mathbf y|\le|\mathbf x|+|\mathbf y|$.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 4–8, which also retains the dot-product projection and cosine-rule diagrams. Related: [[Vectors and Linear Span]] and [[Triangle Inequality for Complex Numbers]].
+See [[Vectors and Matrices - Chapter 2 Vectors]], pages 4–8. Related: [[Vectors and Linear Span]] and [[Triangle Inequality for Complex Numbers]].
 
-## Connecting complex and vector geometry — supplementary explanation
+## Connecting complex and vector geometry
 
 Identify $z=x+iy$ with $(x,y)\in\mathbb R^2$. Then
 $$\langle z,w\rangle_{\mathbb R}=\operatorname{Re}(z\overline w),\qquad

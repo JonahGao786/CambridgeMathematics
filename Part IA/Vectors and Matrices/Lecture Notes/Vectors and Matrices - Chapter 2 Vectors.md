@@ -1,6 +1,6 @@
 ---
 title: Vectors and Matrices - Chapter 2 Vectors
-material_type: handwritten lecture notes
+material_type: lecture notes
 course: Part IA Vectors and Matrices
 date: null
 source_file: Ch.2 Vectors.pdf
@@ -10,8 +10,6 @@ source_pages: 23
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view). No date is supplied. The TikZ drawings below preserve the labelled geometry and meaningful colours; their layout coordinates are schematic. Drawings of three-dimensional geometry are shown in projection.
 
 ## 2.1 Vectors (page 1)
 
@@ -249,7 +247,7 @@ Equivalently, $(\mathbf x\cdot\mathbf y)^2\le|\mathbf y|^2|\mathbf x|^2$. Taking
 
 The inequality holds for any inner product on a real vector space:
 $$|\langle\mathbf x,\mathbf y\rangle|\le\|\mathbf x\|\,\|\mathbf y\|.$$
-The source states that equality holds iff $\mathbf x=\lambda\mathbf y$ or $\mathbf y=\lambda\mathbf x$ for some real $\lambda$; it supplies no separate equality-case proof.
+Equality holds iff $\mathbf x=\lambda\mathbf y$ or $\mathbf y=\lambda\mathbf x$ for some real $\lambda$.
 
 ## Triangle inequality (page 8)
 
@@ -493,7 +491,6 @@ V&=\text{base area}\times\text{height}\\
 
 See [[Cross Products and Scalar Triple Products]] for these definitions, properties and interpretations together.
 
-
 ### Signed volume and coplanarity (page 14)
 
 The scalar triple product is the **signed volume** of the parallelepiped spanned by $\mathbf a,\mathbf b,\mathbf c$; its absolute value is the ordinary volume.
@@ -504,13 +501,13 @@ The scalar triple product is the **signed volume** of the parallelepiped spanned
 
 ### 2.5.2 Vector triple product (page 14)
 
-For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$, the **vector triple product** is $\mathbf a\times(\mathbf b\times\mathbf c)$. The source states the identity
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$, the **vector triple product** is $\mathbf a\times(\mathbf b\times\mathbf c)$. The vector triple-product identity is
 $$\mathbf a\times(\mathbf b\times\mathbf c)
 =(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf c.$$
 The cross product is not associative:
 $$(\mathbf a\times\mathbf b)\times\mathbf c
 =(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
-These identities are stated here. A component proof of the first identity appears on page 22; no separate proof of the second is supplied.
+A component proof of the first identity appears on page 22.
 
 ## 2.6 Lines, planes and vector equations (pages 14–19)
 
@@ -520,7 +517,7 @@ All vectors in this section lie in $\mathbb R^3$. See [[Lines, Planes and Vector
 
 A line through the point with position vector $\mathbf a$ and with non-zero direction $\mathbf u$ has parametric form
 $$\mathbf r=\mathbf a+\lambda\mathbf u,\qquad\lambda\in\mathbb R.$$
-The source first recalls the position vector $\overrightarrow{OA}=\mathbf a$, then draws the line, $\lambda\mathbf u$ and $\mathbf r$. Both sketches are reproduced below; coordinates are schematic.
+The first sketch shows the position vector $\overrightarrow{OA}=\mathbf a$. The second shows how adding $\lambda\mathbf u$ moves along the line to $\mathbf r$.
 
 ```tikz
 \usepackage{tikz}
@@ -649,7 +646,7 @@ $$s=\left|(\mathbf a_1-\mathbf a_2)\cdot\widehat{\mathbf n}\right|
 =\left|(\mathbf a_1-\mathbf a_2)\cdot
 \frac{\mathbf u_1\times\mathbf u_2}{|\mathbf u_1\times\mathbf u_2|}\right|.$$
 
-The source drawing shows arbitrary points $P,Q$ on the two lines, red position vectors of $A_1,A_2$, blue position vectors $\mathbf p,\mathbf q$, and green direction arrows.
+The diagram shows arbitrary points $P,Q$ on the two lines, red position vectors of $A_1,A_2$, blue position vectors $\mathbf p,\mathbf q$, and green direction arrows.
 
 ```tikz
 \usepackage{tikz}
@@ -697,7 +694,7 @@ Then
 $$\mathbf p-\mathbf q=(\alpha+\lambda)\mathbf u_1+(\beta-\mu)\mathbf u_2+\gamma\widehat{\mathbf n}.$$
 Choosing $\lambda=-\alpha$ and $\mu=\beta$ gives $\mathbf p-\mathbf q=\gamma\widehat{\mathbf n}$, hence
 $$|\mathbf p-\mathbf q|=|\gamma|=s.$$
-The source does not treat the parallel-lines case.
+This formula assumes the lines are not parallel.
 
 ### 2.6.5 Vector equations (pages 18–19)
 
@@ -786,7 +783,7 @@ $$\mathbf a\cdot(\mathbf b\times\mathbf c)
 =\varepsilon_{ijk}a_ib_jc_k,$$
 $$\delta_{ii}=\delta_{11}+\delta_{22}+\delta_{33}=3.$$
 
-For explicit sum expansions, numerical examples, index bookkeeping and explanations of all three ideas together, see [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]]. That guide's additional teaching examples are supplementary.
+For explicit sum expansions, numerical examples, index bookkeeping and explanations of all three ideas together, see [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]].
 
 ### 2.7.1 Epsilon identities and contraction (page 22)
 

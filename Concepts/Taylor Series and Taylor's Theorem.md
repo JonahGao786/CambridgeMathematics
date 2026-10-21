@@ -1,6 +1,6 @@
 ---
 title: Taylor Series and Taylor's Theorem
-material_type: source-backed definitions, theorem statements and example
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.1 Differentiation.pdf
 drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
@@ -29,10 +29,10 @@ The latter error estimate is stronger: $|h|^{n+1/2}$ is $o(h^n)$ but not $O(h^{n
 
 For a fixed $x$, the Taylor series converges to $f(x)$ if $E_n(x-x_0)\to0$ as $n\to\infty$. This is a different limit from $h\to0$ with $n$ fixed.
 
-For $f(x)=e^x$, $x_0=0$ and $h>0$, the source gives
+For $f(x)=e^x$, $x_0=0$ and $h>0$, we have
 $$E_n(h)=\frac{h^{n+1}}{(n+1)!}e^{\xi_n},\qquad0\le\xi_n\le h,$$
 so the fractional error satisfies
 $$0\le\frac{E_n(h)}{e^h}\le\frac{h^{n+1}}{(n+1)!}.$$
 This determines a sufficient polynomial degree for a target accuracy at the chosen $h$.
 
-Source: [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], expanded differentiation PDF, pages 10–11. The theorem is stated without proof. Its first-order form is used in the special-case proof of [[L'Hôpital's Rule]].
+See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], pages 10–11. The theorem is stated without proof. Its first-order form is used in the special-case proof of [[L'Hôpital's Rule]].

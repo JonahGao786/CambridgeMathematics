@@ -1,6 +1,6 @@
 ---
 title: Implicit Differentiation
-material_type: source-backed formulas, derivation and example
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
@@ -32,4 +32,4 @@ $$f_r=f_x\cos\theta+f_y\sin\theta,\qquad
 f_\theta=-r\sin\theta\,f_x+r\cos\theta\,f_y,$$
 with $\theta$ fixed in $f_r$ and $r$ fixed in $f_\theta$.
 
-Source: [[Differential Equations - Chapter 3 Partial Differentiation]], pages 5–9, which retains all fixed-variable bars, derivations and source geometry as TikZ.
+See [[Differential Equations - Chapter 3 Partial Differentiation]], pages 5–9.

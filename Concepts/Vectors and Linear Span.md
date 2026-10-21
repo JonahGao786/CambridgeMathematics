@@ -1,6 +1,6 @@
 ---
 title: Vectors and Linear Span
-material_type: source-backed definitions and operation properties with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -29,13 +29,13 @@ Vectors are parallel if one is a real scalar multiple of the other. A non-zero v
 
 $\mathbb R^n$ with componentwise operations is a vector space. A line such as $x+y=1$ that misses the origin is not a vector space under those operations.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 1–4, including the actual geometric sketches in TikZ. [[Real Inner Products and Cauchy-Schwarz]] introduces orthogonality, length and projection.
+See [[Vectors and Matrices - Chapter 2 Vectors]], pages 1–4. [[Real Inner Products and Cauchy-Schwarz]] introduces orthogonality, length and projection.
 
 [[Orthonormal Bases and Vector Coordinates]] gives coordinate descriptions in $\mathbb R^3$. [[Cross Products and Scalar Triple Products]] treats oriented area, rotation and volume there.
 
 [[Lines, Planes and Vector Equations]] applies these directions and spans to affine lines, planes, intersections and distances.
 
-## From span to a basis — supplementary explanation
+## From span to a basis
 
 For finitely many vectors $\mathbf v_1,\ldots,\mathbf v_m$ in a real vector space, their span contains all sums $\sum_{i=1}^m a_i\mathbf v_i$ with $a_i\in\mathbb R$. For an infinite set, span still uses only **finite** sums. It contains zero and is closed under addition and real scalar multiplication, so it is a vector subspace.
 

@@ -1,6 +1,6 @@
 ---
 title: Roots of Unity
-material_type: source-backed theorem and proof with supplementary explanation
+material_type: concept note
 course: Part IA Vectors and Matrices
 ---
 
@@ -21,6 +21,6 @@ Here $R^{1/N}$ is the positive real root. The roots are equally spaced on a circ
 
 If $a=0$, only $z=0$ is a root, with multiplicity $N$.
 
-**Supplementary explanation.** Replacing the chosen argument $\theta$ by $\theta+2\pi m$ just relabels these $N$ roots. It does not change their set. The factor $e^{2\pi in/N}$ makes every root a rotation of any one chosen root.
+Replacing the chosen argument $\theta$ by $\theta+2\pi m$ just relabels these $N$ roots. It does not change their set. The factor $e^{2\pi in/N}$ makes every root a rotation of any one chosen root.
 
-Source: [[Vectors and Matrices - Chapter 1 Complex Numbers]], page 15. Related: [[De Moivre's Theorem]], [[Complex Exponential and Trigonometric Functions]], [[Complex Logarithms and Powers]].
+See [[Vectors and Matrices - Chapter 1 Complex Numbers]], page 15. Related: [[De Moivre's Theorem]], [[Complex Exponential and Trigonometric Functions]], [[Complex Logarithms and Powers]].

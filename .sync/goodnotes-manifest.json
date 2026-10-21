@@ -58,22 +58,22 @@
       "skip_reason": null,
       "unresolved_todos": [
         {
-          "location": "Manual review — page 2, question 2(viii), identity reasoning",
+          "location": "Incorrect identity argument — page 2, question 2(viii), identity reasoning",
           "detail": "The two displayed products concern a single element and do not establish multiple identities for the whole set. The original assessment is retained.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md"
         },
         {
-          "location": "Manual review — page 8, question 7(b), bottom",
+          "location": "Incomplete counterexample — page 8, question 7(b), bottom",
           "detail": "The domain caveat is acknowledged, but no common set $S$ is supplied on which both sine and the usual real arcsine are functions $S\\to S$ giving a non-commuting example. This does not yet answer the counterexample part of the question as stated.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md"
         },
         {
-          "location": "Manual review — page 9, question 8(b)",
+          "location": "Failure of associativity — page 9, question 8(b)",
           "detail": "Associativity fails: in the table in [[Groups - Introductory Sheet 2026]], $(a*a)*b=e*b=b$, whereas $a*(a*b)=a*c=d$. Hence this table is not the Cayley table of a group.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md"
         },
         {
-          "location": "Manual review — page 11, question 9, lower half",
+          "location": "Unjustified cancellation — page 11, question 9, lower half",
           "detail": "The final cancellation of the leading $a$ is unjustified: these hypotheses do not give cancellation. The intermediate rearrangement to $a\\circ(a\\circ b)$ also uses commutativity before it has been proved. The common identity, common operation and associativity are established above, but this argument does not prove commutativity.",
           "markdown_path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md"
         }
@@ -160,7 +160,7 @@
         "details": [
           "Aligned title with filename; clarified modulo-six identity and singular-matrix group identity."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md",
@@ -412,7 +412,7 @@
         "details": [
           "Flagged Fibonacci boundary/proof gaps and the unsupported simultaneous-failure claim; clarified real powers."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md",
@@ -530,7 +530,7 @@
             "detail": "The lecture remark that the stated prime-gap assertion was proved in August 2026 has no citation. The precise intended result and historical reference remain unverified.",
             "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
           },
-          "resolution_report": "Note Review - 2026-10-21.md",
+          "resolution_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
         },
         {
@@ -541,7 +541,7 @@
             "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
@@ -553,7 +553,7 @@
         "details": [
           "Resolved the dated reference and qualified the factoring discussion claim."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       }
     },
@@ -628,7 +628,7 @@
         "details": [
           "Resolved the dated reference and qualified the factoring discussion claim."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       }
     },
@@ -1068,7 +1068,7 @@
           "Restored the generating-set hypothesis; explained well-ordering, integer division, and empty generation.",
           "Added a kite-lemma verification that covers configurations outside the drawn case."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
@@ -1088,7 +1088,7 @@
               "Concepts/Isometries and Dihedral Groups.md"
             ]
           },
-          "resolution_report": "Note Review - 2026-10-21.md",
+          "resolution_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
         },
         {
@@ -1102,7 +1102,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
@@ -1118,7 +1118,7 @@
           "Updated the classification cross-reference to completed status.",
           "Synchronized the corrected distance, vertex-set model and complete classification."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       }
     },
@@ -1256,7 +1256,7 @@
         "details": [
           "Added a complete proof under the stated L’Hôpital hypotheses; clarified the acceleration example."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       },
       "pedagogical_revision_2026_10_21": {
@@ -1443,7 +1443,7 @@
           "Added a supplementary uniqueness proof and clarified divisor terminology.",
           "Added the algorithm-to-Bézout-to-Euclid chain as a supplementary proof."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": []
       },
       "repository_review_2026_10_21": {
@@ -1454,7 +1454,7 @@
         "details": [
           "Linked the supplementary proof chain in dependency order."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       },
       "resolved_repository_reviews": [
@@ -1469,7 +1469,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ]
@@ -1624,7 +1624,7 @@
         "details": [
           "Flagged exceptional parameters in the three-non-zero-term Taylor question."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
@@ -1795,7 +1795,7 @@
           "Added a complete proof under the stated L’Hôpital hypotheses; clarified the acceleration example.",
           "Added the proof under the stated hypotheses and synchronized the lecture reference."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       },
       "pedagogical_revision_2026_10_21": {
@@ -2080,7 +2080,7 @@
           "Explained coordinate extraction and orientation requirements.",
           "Explained degenerate volume, linear dependence and operation order."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": []
       }
     },
@@ -2189,7 +2189,7 @@
         "details": [
           "Qualified domains, inverse derivatives, antiderivative constants and improper limits separately from questions."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
@@ -2304,7 +2304,7 @@
         "details": [
           "Qualified domains, inverse derivatives, antiderivative constants and improper limits separately from questions."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
@@ -2426,7 +2426,7 @@
         "details": [
           "Added missing prerequisite definitions for element order, cyclic groups, homomorphisms and isomorphisms."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": []
       }
     },
@@ -2572,7 +2572,7 @@
           "Added separate continuity-based proofs, uniform error control and antiderivative evaluation.",
           "Added the definite formulas, branch restrictions and improper-integral interpretation."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
@@ -2597,7 +2597,7 @@
               "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md"
             ]
           },
-          "resolution_report": "Note Review - 2026-10-21.md",
+          "resolution_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
         },
         {
@@ -2611,7 +2611,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
@@ -2625,7 +2625,7 @@
           "Repaired uniform area estimates, proved the continuous-case fundamental theorem and derived antiderivative evaluation.",
           "Synchronized the uniform bound and continuity-based proofs; removed stale TODO status."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       },
       "pedagogical_revision_2026_10_21": {
@@ -2774,7 +2774,7 @@
           "Linked the rigorous differentiability and chain-rule explanation.",
           "Defined total differentiability, gave a partial-derivative counterexample and justified path remainders."
         ],
-        "report": "Note Review - 2026-10-17.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
         "current_markdown_todos": [
           {
             "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
@@ -2794,7 +2794,7 @@
               "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
             ]
           },
-          "resolution_report": "Note Review - 2026-10-21.md",
+          "resolution_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
         },
         {
@@ -2807,7 +2807,7 @@
               "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
             ]
           },
-          "resolution_report": "Note Review - 2026-10-21.md",
+          "resolution_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
         },
         {
@@ -2821,7 +2821,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         },
         {
@@ -2835,7 +2835,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         },
         {
@@ -2849,7 +2849,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         },
         {
@@ -2863,7 +2863,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
@@ -2877,7 +2877,7 @@
           "Repaired the increment derivation, differential definition and chain-rule proof.",
           "Synchronized the repaired differentiability and chain-rule proof status."
         ],
-        "report": "Note Review - 2026-10-21.md",
+        "report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
         "outstanding_classroom_review_items": []
       },
       "pedagogical_revision_2026_10_21": {
@@ -3016,7 +3016,7 @@
             ]
           },
           "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
-          "review_report": "Note Review - 2026-10-21.md",
+          "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
@@ -3382,7 +3382,7 @@
       "failure": null
     }
   },
-  "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
+  "organized_markdown_style": "Present coherent, correct, tidy mathematical notes directly at the course level. Do not label content reviewed, corrected or supplementary, narrate edits, or mention following a PDF in the learning prose. Keep source attribution in YAML metadata and concise mathematical references. Preserve theorem hypotheses and meaningful Wrong proof, Incorrect attempt or Incomplete proof labels. Keep change history in Git; do not create standalone Markdown review reports.",
   "current_inventory_drive_file_ids": [
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
@@ -3513,7 +3513,7 @@
     "reviewed_supporting_document_count": 3,
     "explicit_classroom_flags_resolved": 11,
     "source_versions_advanced": false,
-    "review_report": "Note Review - 2026-10-21.md",
+    "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
     "study_guide": "Study Guide.md",
     "notes": [
       {
@@ -3835,7 +3835,7 @@
       "reviewed_note_count": 44,
       "reading_method": "Complete reading of Markdown, mathematical derivation checks, and static inspection of existing TikZ code; no visual PDF reading or diagram rendering in this review",
       "source_versions_advanced": false,
-      "review_report": "Note Review - 2026-10-17.md",
+      "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-17.md",
       "study_guide": "Study Guide.md",
       "notes": [
         {
@@ -4076,7 +4076,7 @@
       "reviewed_supporting_document_count": 2,
       "explicit_classroom_flags_resolved": 6,
       "source_versions_advanced": false,
-      "review_report": "Note Review - 2026-10-21.md",
+      "review_report": "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md",
       "study_guide": "Study Guide.md",
       "notes": [
         {
@@ -4418,7 +4418,7 @@
     ],
     "supporting_documents": [
       "Study Guide.md",
-      "Note Review - 2026-10-21.md"
+      "https://github.com/JonahGao786/CambridgeMathematics/blob/b64b4e6ef4bda9bc408df75d5ff6ef54519be2a4/Note%20Review%20-%202026-10-21.md"
     ],
     "validation": {
       "result": "passed",

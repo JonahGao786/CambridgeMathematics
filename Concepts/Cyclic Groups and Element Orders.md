@@ -1,6 +1,6 @@
 ---
 title: Cyclic Groups and Element Orders
-material_type: source-backed definitions, classification theorem and proof
+material_type: concept note
 course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
@@ -39,4 +39,4 @@ is cyclic. The **order** of $g$ is
 $$o(g)=|\langle g\rangle|.$$
 If finite, it is the least positive integer $n$ with $g^n=e_G$, and $\langle g\rangle\cong C_n$. If no positive power is the identity, $o(g)=\infty$ and $\langle g\rangle\cong\mathbb Z$.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 30–32, retaining the full finite and infinite classification proofs. Related: [[Groups]], [[Roots of Unity]], [[Modular Arithmetic]].
+See [[Groups - Chapter 1 Examples and Definitions]], pages 30–32. Related: [[Groups]], [[Roots of Unity]], [[Modular Arithmetic]].

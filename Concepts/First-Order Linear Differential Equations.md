@@ -1,6 +1,6 @@
 ---
 title: First-Order Linear Differential Equations
-material_type: source-backed definitions, example and brief scope notes
+material_type: concept note
 course: Part IA Differential Equations
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
@@ -16,7 +16,7 @@ A linear ODE is **homogeneous** when it has no independent forcing term. The zer
 
 ## Exponentials and eigenfunctions
 
-The source gives the exponential series and limit
+The exponential has the series and limit representations
 $$e^x=\sum_{n=0}^\infty\frac{x^n}{n!}
 =\lim_{k\to\infty}\left(1+\frac{x}{k}\right)^k,$$
 and the characterization $f'=f$, $f(0)=1$. It presents the series/limit calculations without the analytic justifications, and refers elsewhere for the exponential addition-law proof.
@@ -37,10 +37,10 @@ For an $n$th-order homogeneous linear ODE on an interval, continuous coefficient
 
 For
 $$5y'-3y=0,$$
-substituting $y=Ae^{\lambda x}$ with $A\ne0$ gives $5\lambda-3=0$. The source identifies
+substituting $y=Ae^{\lambda x}$ with $A\ne0$ gives $5\lambda-3=0$. This gives
 $$y(x)=Ae^{3x/5}$$
 as the general solution, including $A=0$. The initial condition $y(0)=y_0$ fixes $A=y_0$.
 
-[[Forward Euler Method]] records the source's discrete approximation to this same initial-value problem.
+[[Forward Euler Method]] gives a discrete approximation to this same initial-value problem.
 
-Source: [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], pages 1–4. Related: [[Differentiation Rules]], [[Complex Exponential and Trigonometric Functions]].
+See [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], pages 1–4. Related: [[Differentiation Rules]], [[Complex Exponential and Trigonometric Functions]].

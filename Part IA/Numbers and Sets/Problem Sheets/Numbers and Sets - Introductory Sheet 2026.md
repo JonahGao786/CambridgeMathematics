@@ -14,8 +14,6 @@ source_pages: 2
 
 Related handwritten work: [[Numbers and Sets 0 - Handwritten Attempts]]. This sheet supplies questions, not worked answers.
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1mo2Nr9PicjKtfXPtp14krUd1wY0oi0Fr/view).
-
 ## Instructions (page 1)
 
 Please attempt questions $1$–$9$.

@@ -1,6 +1,6 @@
 ---
 title: Groups - Chapter 1 Examples and Definitions
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: lecture notes
 course: Part IA Groups
 date: null
 source_file: Ch.1 Introduction.pdf
@@ -10,8 +10,6 @@ source_pages: 33
 ---
 
 # Groups — Chapter 1: Examples and Definitions
-
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view). No date is supplied.
 
 ## Symmetry and algebra (pages 1–4)
 
@@ -57,7 +55,7 @@ The six symmetries are the identity, the two non-trivial rotations, and the thre
 \end{document}
 ```
 
-**Exercises** (page 2): How many symmetries does a square have? A regular pentagon? A regular $n$-gon? No answers are supplied.
+**Exercises** (page 2): How many symmetries does a square have? A regular pentagon? A regular $n$-gon?
 
 ### Composition and its order (pages 2 and 4)
 
@@ -94,7 +92,7 @@ The upper row applies $r$ then $s$ (page 2); the lower row applies $s$ then $r$ 
 \end{document}
 ```
 
-**Exercise** (page 2): Which of the six listed symmetries is the first composite? No answer is supplied.
+**Exercise** (page 2): Which of the six listed symmetries is the first composite?
 
 ### Identity, inverses and associativity (page 3)
 
@@ -156,7 +154,7 @@ The associativity sketch is:
 \end{document}
 ```
 
-**Question** (page 4): How can we encode the symmetries of a $77$-gon? No answer is supplied.
+**Question** (page 4): How can we encode the symmetries of a $77$-gon?
 
 ## Definitions 1.1–1.3 (page 4)
 
@@ -188,7 +186,7 @@ Closure is included in the requirement that $\cdot$ is a binary operation on $G$
 
 The symmetries of an equilateral triangle form a group under composition, satisfying (G1), (G2) and (G3).
 
-**Exercise:** Show that $(\mathbb Z,+,0)$ forms a group. No proof is supplied.
+**Exercise:** Show that $(\mathbb Z,+,0)$ forms a group.
 
 **Proposition 1.5.** Let $(G,\cdot,e)$ be a group.
 
@@ -237,7 +235,7 @@ a^n=(a^{-1})^{-n}\quad(n<0).$$
 
 **Exercise.** For $a\in G$ and $m,n\in\mathbb Z$, show
 $$a^m\cdot a^n=a^{m+n},\qquad(a^m)^n=a^{mn}.$$
-No proof is supplied.
+Proof omitted.
 
 Recall that $ab=ba$ need not hold, as the triangle symmetries show. Similarly, $a^{-1}b^{-1}$ need not equal $(ab)^{-1}$.
 
@@ -266,7 +264,7 @@ If $G=\{e\}$, the only possible binary operation is $e\cdot e=e$. This is the **
 ### Examples from arithmetic (pages 11–12)
 
 1. $(\mathbb Z,+,0)$, $(\mathbb Q,+,0)$, $(\mathbb R,+,0)$ and $(\mathbb C,+,0)$ are abelian groups. The inverse of $x$ is $-x$.
-2. $(\mathbb N,+,0)$ is not a group. **Exercise:** why not? No answer is supplied.
+2. $(\mathbb N,+,0)$ is not a group. **Exercise:** why not?
 3. $(\mathbb R,\times,1)$ is not a group: $0$ has no inverse. However,
    $$(\mathbb R\setminus\{0\},\times,1),\quad
    (\mathbb C\setminus\{0\},\times,1),\quad
@@ -283,13 +281,13 @@ For $n\in\mathbb N$, let
 $$C_n=\{z\in\mathbb C:z^n=1\},$$
 the set of [[Roots of Unity|$n$th roots of unity]].
 
-**Exercise:** $(C_n,\times,1)$ is an abelian group. No proof is supplied.
+**Exercise:** $(C_n,\times,1)$ is an abelian group.
 
 For $n\in\mathbb N$, let
 $$\mathbb Z_n=\{0,1,2,\ldots,n-1\}.$$
 For $a,b\in\mathbb Z_n$, define $a+_n b$ as the remainder when $a+b$ is divided by $n$.
 
-**Exercise (page 13):** $(\mathbb Z_n,+_n,0)$ is an abelian group. No proof is supplied.
+**Exercise (page 13):** $(\mathbb Z_n,+_n,0)$ is an abelian group.
 
 ## Symmetric groups — Definition 1.9 (page 13)
 
@@ -361,7 +359,7 @@ Examples:
 - $S_3$ describes the ways of rearranging three positions in a row.
 - $S_{52}$ describes the ways of shuffling a standard deck of cards.
 
-**Exercise:** Calculate $|S_n|$. No answer is supplied.
+**Exercise:** Calculate $|S_n|$.
 
 **Notation convention (page 15).** From now on, the lecture usually writes $G$ instead of $(G,\cdot,e)$. Where ambiguity is possible, for example when two groups occur, write $\circ_G$ for the group operation and $e_G$ for its identity.
 
@@ -386,7 +384,7 @@ Examples (pages 16–17):
 4. If $n\mid m$, then $C_n\le C_m$, where these are the groups of roots of unity.
 5. The triangle rotations through $0$, $2\pi/3$ and $4\pi/3$ form a subgroup of its symmetry group.
 
-**Source terminology (page 16).** The lecture calls subgroups other than both $G$ and $I_G$ “proper subgroups”. In standard usage, “proper” means $H\ne G$ and may include the trivial subgroup; the lecture's narrower convention is retained here.
+**Terminology (page 16).** Here “proper subgroup” excludes both $G$ and $I_G$. Standard usage excludes only $G$, so it may include the trivial subgroup.
 
 ## Proposition 1.16 — Subgroups of the integers (page 17)
 
@@ -408,7 +406,7 @@ But $r=x-nq\in S$, contradicting the minimality of $n$.
 
 ## Intersections and generated subgroups (page 18)
 
-If $H,K\le G$, then $H\cap K\le G$. The lecture refers to Example Sheet 1, question 2; see [[Groups - Example Sheet 1 2025]]. No exercise proof is supplied in these lecture notes.
+If $H,K\le G$, then $H\cap K\le G$. For a proof exercise, see question 2 of [[Groups - Example Sheet 1 2025]].
 
 More generally, for a family $H_i\le G$ indexed by $i\in I$,
 $$\bigcap_{i\in I}H_i
@@ -418,17 +416,16 @@ $$\bigcap_{i\in I}H_i
 $$\langle X\rangle=\bigcap_{X\subseteq H\le G}H,$$
 the intersection of all subgroups of $G$ containing $X$.
 
-
 Intuitively, $\langle X\rangle$ is the smallest subgroup of $G$ containing $X$. If $G=\langle X\rangle$, then $X$ is a **generating set** for $G$, or $X$ **generates** $G$.
 
 **Lemma 1.18 (page 18).** If $X$ generates $G$, every $g\in G$ can be written
 $$g=x_1^{\varepsilon_1}x_2^{\varepsilon_2}\cdots x_m^{\varepsilon_m},
 \qquad x_i\in X,\quad\varepsilon_i\in\{1,-1\},\quad m\in\mathbb Z_{\ge0}.$$
-The empty product is the identity. The proof is assigned as Example Sheet 1, question 9; no proof is supplied here.
+The empty product is the identity. The proof is assigned as Example Sheet 1, question 9.
 
 ## Geometric examples and isometries (pages 19–20)
 
-Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. The source draws a segment from $z$ to $w$ on unlabelled coordinate axes. This reconstruction is schematic.
+Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. The sketch shows the segment joining $z$ to $w$.
 
 ```tikz
 \usepackage{tikz}
@@ -445,9 +442,9 @@ Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. T
 \end{document}
 ```
 
-**Corrected distance formula (page 19).** For $z=x+iy$ and $w=u+iv$,
+**Distance formula.** For $z=x+iy$ and $w=u+iv$,
 $$d(z,w)=|z-w|=\sqrt{(x-u)^2+(y-v)^2}.$$
-This follows by taking the modulus of $(x-u)+i(y-v)$. The source's radical $\sqrt{(z+w)^2+(z-w)^2}$ was incorrect; for example, it need not vanish when $z=w$. The formula above is used throughout the isometry arguments.
+This follows by taking the modulus of $(x-u)+i(y-v)$.
 
 **Definition 1.19.** For any $X\subseteq\mathbb C$, an **isometry of $X$** is a bijection $f:X\to X$ preserving distances:
 $$|f(x)-f(y)|=|x-y|\qquad\text{for all }x,y\in X.$$
@@ -500,7 +497,7 @@ The examples show a triangle pointing right and a square with a vertex at the to
 
 **Question:** What are the elements of $D_{2n}$?
 
-For $n=4$, the source illustrates a quarter-turn and four reflection axes. The blue arrow is anticlockwise; the four dashed black lines are reflection axes.
+For $n=4$, the diagram illustrates a quarter-turn and four reflection axes. The blue arrow is anticlockwise; the four dashed black lines are reflection axes.
 
 ```tikz
 \usepackage{tikz}
@@ -547,14 +544,14 @@ The proposed elements are:
 
 **Exercise:** Check that $s_\ell$ is reflection in the line
 $$\{re^{\pi i\ell/n}:r\in\mathbb R\}.$$
-No proof is supplied. The source observes that the rotations $r_0,r_1,\ldots,r_{n-1}$ are pairwise distinct.
+Proof omitted. Note that the rotations $r_0,r_1,\ldots,r_{n-1}$ are pairwise distinct.
 
 **Lemma 1.22 (pages 21–22).** For every $k,\ell\in\{0,\ldots,n-1\}$,
 $$r_k,s_\ell\in\operatorname{Isom}(X_n).$$
 
 **Proof.** With $\zeta=e^{2\pi i/n}$, these maps send vertices as
 $$r_k(\zeta^j)=\zeta^{j+k},\qquad s_\ell(\zeta^j)=\zeta^{\ell-j},$$
-with indices modulo $n$, so they map $X_n$ bijectively onto itself. The source checks distance preservation:
+with indices modulo $n$, so they map $X_n$ bijectively onto itself. Distance preservation follows from:
 $$\begin{aligned}
 |r_k(z)-r_k(w)|&=|e^{2\pi ik/n}(z-w)|=|z-w|,\\
 |s_\ell(z)-s_\ell(w)|&=|e^{2\pi i\ell/n}(\overline z-\overline w)|\\
@@ -569,7 +566,7 @@ $$|w_1-z_1|=|w_2-z_1|,\qquad |w_1-z_2|=|w_2-z_2|,$$
 then
 $$(z_1-z_2)\perp(w_1-w_2).$$
 
-The blue double ticks mark the equal sides meeting at $z_1$; red single ticks mark those meeting at $z_2$. Both diagonals and the right-angle marker are present in the source. Coordinates are schematic and satisfy these constraints.
+The blue double ticks mark the equal sides meeting at $z_1$; red single ticks mark those meeting at $z_2$. The diagonals meet at a right angle in this diagram.
 
 ```tikz
 \usepackage{tikz}
@@ -608,7 +605,7 @@ The blue double ticks mark the equal sides meeting at $z_1$; red single ticks ma
 $$\angle z_1tw_1=\angle z_1tw_2.$$
 Since $w_1,t,w_2$ lie on a straight line, these angles sum to $\pi$, so each is $\pi/2$. If either difference vector is zero, orthogonality holds immediately in the dot-product sense.
 
-**Complete algebraic proof — supplementary correction.** The hypotheses do not ensure that the diagonal segments intersect, so the depicted angle argument is not a proof for every configuration. Regard complex numbers as vectors in $\mathbb R^2$. Squaring each distance equality and cancelling $\|z_i\|^2$ gives
+**Algebraic proof.** The hypotheses do not ensure that the diagonal segments intersect, so the depicted angle argument is not a proof for every configuration. Regard complex numbers as vectors in $\mathbb R^2$. Squaring each distance equality and cancelling $\|z_i\|^2$ gives
 $$2\langle z_i,w_1-w_2\rangle=\|w_1\|^2-\|w_2\|^2\qquad(i=1,2).$$
 Subtracting the two equations yields
 $$\langle z_1-z_2,w_1-w_2\rangle=0.$$
@@ -624,20 +621,20 @@ Then $f=\operatorname{id}_X$.
 $$|f(y)-z_i|=|f(y)-f(z_i)|=|y-z_i|,$$
 using the fixed-point hypotheses and distance preservation. Applying the kite lemma twice shows that $z_1-z_2$ and $z_2-z_3$ are both perpendicular to the non-zero vector $f(y)-y$. Hence $z_1,z_2,z_3$ are collinear, contradicting the hypothesis.
 
-**Remark.** This generalizes to an “$(n+1)$-point lemma” in $\mathbb R^n$; the source gives no further statement or proof.
+**Remark.** This generalizes to an “$(n+1)$-point lemma” in $\mathbb R^n$.
 
 ## Proposition 1.25 — Classification of dihedral isometries (page 23)
 
-The source states
+For $n\ge3$,
 $$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}=\operatorname{Isom}(X_n).$$
 
-**Source argument (pages 23–24).** Lemma 1.22 proves
+**Proof.** Lemma 1.22 proves
 $$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
 For the reverse inclusion, take $f\in D_{2n}$.
 
-**Source claim (assigned exercise, page 23; proved below).** An isometry sends the corners, the $n$th roots of unity, to corners.
+**Corner preservation.** An isometry sends the corners, the $n$th roots of unity, to corners.
 
-The source suggests using diagonals or skew diagonals that maximize distances between points. Its square, pentagon and hexagon sketches are schematic:
+Distance-preserving maps preserve the longest diagonals. Examples for the square, pentagon and hexagon are shown below:
 
 ```tikz
 \usepackage{tikz}
@@ -658,23 +655,23 @@ The source suggests using diagonals or skew diagonals that maximize distances be
 \end{document}
 ```
 
-**Corner preservation — supplementary proof.** In the vertex-set model $X_n=\{\zeta^j:0\le j<n\}$ used above, every point of the domain is already a vertex. The source's extra exercise matters when “polygon” denotes the boundary or the filled polygon. The same classification holds for either interpretation, as follows.
+**Corner preservation.** In the vertex-set model $X_n=\{\zeta^j:0\le j<n\}$ used above, every point of the domain is already a vertex. When “polygon” denotes the boundary or the filled polygon, corner preservation requires a proof. The same classification holds for either interpretation, as follows.
 
 Let $X$ be that boundary or filled polygon and $f:X\to X$ an isometry. Choose three non-collinear points $u_0,u_1,u_2\in X$ and write $v_i=f(u_i)$. The two vectors $u_i-u_0$ ($i=1,2$) are a basis of $\mathbb R^2$. Define a linear map $Q$ by $Q(u_i-u_0)=v_i-v_0$. Distance preservation and
 $$2\langle a,b\rangle=\|a\|^2+\|b\|^2-\|a-b\|^2$$
 show that these two pairs have identical dot products. By bilinearity $Q$ preserves all dot products, so it is invertible and orthogonal. The affine isometry $T(x)=v_0+Q(x-u_0)$ agrees with $f$ at the three chosen points. For any $x\in X$, the points $T(x)$ and $f(x)$ have equal distances to all three $v_i$. Subtracting their squared-distance equations shows that $T(x)-f(x)$ is perpendicular to both independent differences $v_1-v_0,v_2-v_0$, hence zero. Thus $f=T|_X$.
 
-Since $f$ is onto, $T(X)=X$. Affine maps preserve convex combinations, so $T$ maps the convex hull of $X$ (the filled polygon) onto itself. An invertible affine map preserves extreme points: a point that is not a non-trivial convex combination of two distinct polygon points has the same property after applying $T$ or $T^{-1}$. The extreme points of this polygon are exactly its vertices. A non-vertex boundary point lies inside an edge and an interior point lies inside a segment; neither is extreme. Each vertex is extreme because the polygon lies in the unit disk and a non-trivial convex combination of distinct disk points has norm strictly less than $1$ when it could equal a unit vertex. Therefore $f$ sends vertices to vertices. The source argument below now applies, and the next supplementary proof supplies its adjacency step and distinctness count.
+Since $f$ is onto, $T(X)=X$. Affine maps preserve convex combinations, so $T$ maps the convex hull of $X$ (the filled polygon) onto itself. An invertible affine map preserves extreme points: a point that is not a non-trivial convex combination of two distinct polygon points has the same property after applying $T$ or $T^{-1}$. The extreme points of this polygon are exactly its vertices. A non-vertex boundary point lies inside an edge and an interior point lies inside a segment; neither is extreme. Each vertex is extreme because the polygon lies in the unit disk and a non-trivial convex combination of distinct disk points has norm strictly less than $1$ when it could equal a unit vertex. Therefore $f$ sends vertices to vertices. It remains to classify the induced permutation of the vertices.
 
 Write $\zeta=e^{2\pi i/n}$. The claim gives $f(1)=\zeta^m$ for some $m\in\{0,\ldots,n-1\}$. Distance preservation then gives
 $$f(\{\zeta,\zeta^{-1}\})=\{\zeta^{m-1},\zeta^{m+1}\},$$
 because these are the two corners adjacent to $f(1)$. If their order is preserved, $f$ agrees with $r_m$ on $1,\zeta,\zeta^{-1}$; if their order is swapped, it agrees with $s_m$ there. These three vertices are non-collinear. Composing with the inverse of the matching isometry and applying the three point lemma gives $f=r_m$ or $f=s_m$.
 
-### Complete vertex-set proof — supplementary
+### Classification on the vertex set
 
 Lemma 1.22 proves
 $$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
-The following argument proves the reverse inclusion directly for the vertex-set model and justifies the adjacency step in the source continuation.
+To prove the reverse inclusion, first show that an isometry preserves adjacency.
 
 Put $\zeta=e^{2\pi i/n}$. Distances between vertices satisfy
 $$|\zeta^a-\zeta^b|=2\sin\left(\frac{\pi d}{n}\right),\qquad
@@ -690,9 +687,7 @@ The vertex $\zeta^2$ is a neighbour of $\zeta$. Its image under $h$ must be eith
 The $n$ rotations are distinct by their values at $1$, and the same is true for the $n$ reflections. A rotation and reflection with equal values at $1$ have the same index $k$, but their values at $\zeta$ are $\zeta^{k+1}$ and $\zeta^{k-1}$, which differ because $n\ge3$. Therefore the displayed list contains exactly $2n$ elements:
 $$|D_{2n}|=2n.$$
 
-## Review cross-reference — supplementary note
-
-The distance formula, the general kite lemma and the dihedral classification now have corrected or complete arguments above. [[Isometries and Dihedral Groups]] summarizes them. The original diagrams are unchanged; supplementary proof steps are labelled separately from the lecture source.
+See [[Isometries and Dihedral Groups]].
 
 ## Generators and a dihedral relation (page 24)
 
@@ -726,11 +721,11 @@ the pair $\{r,s\}$ generates $D_{2n}$.
 
 If $G,H$ are groups, their Cartesian product $G\times H$ is a group under
 $$(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2),$$
-with identity $(e_G,e_H)$. The proof is assigned as an exercise; no proof is supplied.
+with identity $(e_G,e_H)$. **Exercise:** verify the group axioms.
 
 ## Homomorphisms — Definition 1.28 (page 25)
 
-Groups may have the same structure without being literally the same objects: the source compares permutations of a deck of $52$ cards with permutations of a bag of $52$ apples.
+Groups may have the same structure without being literally the same objects: compare permutations of a deck of $52$ cards with permutations of a bag of $52$ apples.
 
 A function $\varphi:G\to H$ is a **homomorphism** if it respects the group operations:
 $$\varphi(gg')=\varphi(g)\varphi(g')\qquad(g,g'\in G).$$
@@ -742,7 +737,7 @@ Examples:
 2. If $H\le G$, the inclusion $i:H\to G$, $h\mapsto h$, is a homomorphism.
 3. **Exercise (page 26).** If $n\mid m$, the map
    $$\varphi:C_m\to C_n,\qquad z\mapsto z^{m/n}$$
-   is a homomorphism. No proof is supplied.
+   is a homomorphism. Proof omitted.
 
 ## Lemma 1.29 — Identities and inverses (page 26)
 
@@ -764,7 +759,7 @@ A bijective homomorphism $\varphi:G\to H$ is an **isomorphism**. The groups are 
 
 Recall $C_n=\{z\in\mathbb C:z^n=1\}$ under multiplication, and $\mathbb Z_n=\{0,\ldots,n-1\}$ under $+_n$. Define
 $$\varphi:\mathbb Z_n\to C_n,\qquad k\mapsto e^{2\pi ik/n}.$$
-The source asserts that the map is well-defined and bijective, and supplies the operation-preservation calculation. For $k,\ell\in\mathbb Z_n$, write
+The map is well-defined and bijective because the residues correspond exactly to the $n$th roots of unity. To check preservation of the operation, for $k,\ell\in\mathbb Z_n$, write
 $$k+\ell=(k+_n\ell)+np,\qquad p\in\mathbb Z.$$
 Then
 $$\begin{aligned}
@@ -844,7 +839,6 @@ A function $f:X\to Y$ is:
 $$f\text{ bijective}\quad\Longleftrightarrow\quad
 f\text{ injective}\quad\Longleftrightarrow\quad
 f\text{ surjective}.$$
-The source refers to Numbers and Sets for this finite-set observation; no proof is supplied here.
 
 ## Injectivity and the kernel — Lemma 1.35 (page 30)
 
@@ -861,7 +855,7 @@ Thus $g_1g_2^{-1}\in\ker(\varphi)=\{e_G\}$, so $g_1=g_2$. Hence $\varphi$ is inj
 **Corollary 1.36.** A homomorphism $\varphi:G\to H$ is an isomorphism if and only if
 $$\operatorname{Im}(\varphi)=H,\qquad
 \ker(\varphi)=\{e_G\}.$$
-The source states the corollary without a separate proof. See [[Homomorphisms and Isomorphisms]].
+See [[Homomorphisms and Isomorphisms]].
 
 ## Cyclic groups (pages 30–31)
 
@@ -929,7 +923,7 @@ Recall that $D_{2n}$ is generated by $r,s$, where
 $$r(z)=e^{2\pi i/n}z,\qquad s(z)=\overline z,$$
 and Lemma 1.26 gives $sr=r^{-1}s$. Then
 $$sr^2=r^{-1}sr=r^{-2}s.$$
-The source extends this by induction to
+Induction gives
 $$sr^k=r^{-k}s\qquad(k\in\mathbb Z).$$
 
 **Lemma 1.40 (statement only).** Suppose $G$ is a group and $a,b\in G$ satisfy
@@ -938,4 +932,4 @@ Then
 $$\varphi(r^k)=a^k,\qquad\varphi(r^ks)=a^kb$$
 defines a homomorphism $\varphi:D_{2n}\to G$.
 
-The PDF ends after this statement, without a proof of Lemma 1.40. No proof is supplied here. See [[Isometries and Dihedral Groups]].
+Proof omitted. See [[Isometries and Dihedral Groups]].
