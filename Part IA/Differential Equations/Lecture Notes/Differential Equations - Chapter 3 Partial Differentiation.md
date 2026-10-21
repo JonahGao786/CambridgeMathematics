@@ -6,7 +6,7 @@ date: null
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
 source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
-source_pages: 4
+source_pages: 11
 ---
 
 # Differential Equations — Chapter 3: Partial Differentiation
@@ -162,6 +162,220 @@ $$\begin{aligned}
 The integral is taken along the given path, with sufficient regularity to apply the one-variable fundamental theorem (for example, $f$ and the path continuously differentiable).
 
 Related: [[Partial Derivatives and the Multivariate Chain Rule]], [[Differentiation Rules]], [[Taylor Series and Taylor's Theorem]], [[Limits, Big O and Little o - A First-Year Guide]], [[Riemann Integration and the Fundamental Theorem of Calculus]].
+
+
+## 3.4 Applications of the multivariate chain rule (pages 5–9)
+
+### Change of variables: Cartesian and polar coordinates (page 5)
+
+It can help to rewrite a differential equation in another coordinate system before solving it. In polar coordinates,
+$$x=r\cos\theta,\qquad y=r\sin\theta,$$
+and $f(x,y)$ is viewed as $f(x(r,\theta),y(r,\theta))$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (-0.15,0)--(4,0) node[right] {$x$};
+  \draw[->] (0,-0.15)--(0,2.8) node[above] {$y$};
+  \draw[red,thick] (0,0)--(2.5,1.4) node[midway,above] {$r$};
+  \fill (2.5,1.4) circle (1.2pt) node[above right] {$(x,y)$};
+  \draw (0.6,0) arc (0:29.25:0.6);
+  \node at (0.9,0.23) {$\theta$};
+\end{tikzpicture}
+\end{document}
+```
+
+The chain rule, with the fixed variables shown, gives
+$$\begin{aligned}
+\left.\frac{\partial f}{\partial r}\right|_\theta
+&=\left.\frac{\partial f}{\partial x}\right|_y
+\left.\frac{\partial x}{\partial r}\right|_\theta
++\left.\frac{\partial f}{\partial y}\right|_x
+\left.\frac{\partial y}{\partial r}\right|_\theta\\
+&=f_x\cos\theta+f_y\sin\theta,\\
+\left.\frac{\partial f}{\partial\theta}\right|_r
+&=\left.\frac{\partial f}{\partial x}\right|_y
+\left.\frac{\partial x}{\partial\theta}\right|_r
++\left.\frac{\partial f}{\partial y}\right|_x
+\left.\frac{\partial y}{\partial\theta}\right|_r\\
+&=-r\sin\theta\,f_x+r\cos\theta\,f_y.
+\end{aligned}$$
+
+### Implicit differentiation (pages 6–8)
+
+For a function of three independent variables,
+$$df=\left.\frac{\partial f}{\partial x}\right|_{y,z}dx
++\left.\frac{\partial f}{\partial y}\right|_{x,z}dy
++\left.\frac{\partial f}{\partial z}\right|_{x,y}dz.$$
+A level equation $f(x,y,z)=c$ describes a surface in the depicted setting. Locally, where the corresponding implicit function is well-defined and differentiable, one variable can be treated as a function of the other two. An explicit formula may not be available. The spherical outline below is a qualitative level-surface sketch, without a specified equation or numerical radius.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (0,0)--(0,3.2) node[above] {$z$};
+  \draw[->] (0,0)--(3,-0.9) node[right] {$x$};
+  \draw[->] (0,0)--(2.9,1.4) node[right] {$y$};
+  \draw[blue,thick] (1.5,1.4) ellipse (0.85 and 1);
+  \draw[blue] (0.72,1.78) .. controls (1.1,1.5) and (1.9,1.5) .. (2.28,1.78);
+  \draw[blue] (0.65,1.4) .. controls (1.05,1.05) and (1.95,1.05) .. (2.35,1.4);
+  \draw[blue] (0.8,0.85) .. controls (1.2,0.65) and (1.9,0.65) .. (2.2,0.85);
+  \draw[blue] (1.18,2.33) .. controls (0.92,1.7) and (0.92,1) .. (1.18,0.47);
+  \draw[blue] (1.82,2.33) .. controls (2.08,1.7) and (2.08,1) .. (1.82,0.47);
+  \node[blue,right] (level) at (3.3,2.7) {$f(x,y,z)=\mathrm{constant}$};
+  \draw[blue,->] (level.west)--(2.05,2.13);
+\end{tikzpicture}
+\end{document}
+```
+
+**Example (pages 6–7).** The equation
+$$xy+y^2z+z^5=1\tag{*}$$
+is treated implicitly, with $z=z(x,y)$. Differentiate with respect to $x$ while holding $y$ fixed:
+$$y+y^2\left.\frac{\partial z}{\partial x}\right|_y
++5z^4\left.\frac{\partial z}{\partial x}\right|_y=0.$$
+Hence
+$$\left.\frac{\partial z}{\partial x}\right|_y=-\frac{y}{y^2+5z^4}.$$
+This derivative on the constraint differs from taking the derivative of the ambient expression while holding both $y$ and $z$ fixed.
+
+Along the level surface, $df=0$:
+$$0=\left.\frac{\partial f}{\partial x}\right|_{y,z}dx
++\left.\frac{\partial f}{\partial y}\right|_{x,z}dy
++\left.\frac{\partial f}{\partial z}\right|_{x,y}dz.$$
+The coordinates cannot all vary independently while staying on the surface. Page 8 contrasts a curve on $f=c$ with an ambient change holding both $y,z$ fixed; the red, blue and green curves are schematic.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (0,0)--(0,3.2) node[above] {$z$};
+  \draw[->] (0,0)--(3.5,-1.2) node[right] {$x$};
+  \draw[->] (0,0)--(3.5,1.55) node[above right] {$y$};
+  \draw[red,thick] (0.6,1.4)
+    .. controls (1.5,2.35) and (2.5,2.35) .. (3.2,1.7)
+    .. controls (2.65,1.5) and (2.2,0.9) .. (2.2,0.3)
+    .. controls (1.7,1.35) and (1,1.5) .. (0.6,1.4);
+  \draw[blue,thick] (1.05,1.58)
+    .. controls (1.5,1.62) and (1.85,1.45) .. (2,1.18);
+  \draw[green!60!black,thick] (1.05,1.58)--(2,1.18);
+  \draw[blue,dotted] (1.05,1.58)--(1.05,0.4)--(2,0)--(2,1.18);
+  \node[red] (level) at (2.2,3) {$f=c$};
+  \draw[red,->] (level.south) .. controls (1.9,2.7) and (1.9,2.4) .. (1.8,2.1);
+  \node[blue,right] (on) at (4,1.25) {on surface: $\left.\frac{\partial f}{\partial x}\right|_y=0$};
+  \draw[blue,->] (on.west) .. controls (3.5,1.9) and (2.7,1.8) .. (2.15,1.55);
+  \node[green!60!black,right] (off) at (3.8,-0.35) {ambient: $\left.\frac{\partial f}{\partial x}\right|_{y,z}\ne0$};
+  \draw[green!60!black,->] (3.05,-0.3)
+    .. controls (2.15,0.05) and (1.65,0.6) .. (1.65,1.2);
+\end{tikzpicture}
+\end{document}
+```
+
+With $y$ fixed and $z=z(x,y)$, the chain rule reads
+$$\begin{aligned}
+0&=\left.\frac{\partial}{\partial x}f(x,y,z(x,y))\right|_y\\
+&=\left.\frac{\partial f}{\partial x}\right|_{y,z}
+  \left.\frac{\partial x}{\partial x}\right|_y
+ +\left.\frac{\partial f}{\partial y}\right|_{x,z}
+  \left.\frac{\partial y}{\partial x}\right|_y
+ +\left.\frac{\partial f}{\partial z}\right|_{x,y}
+  \left.\frac{\partial z}{\partial x}\right|_y\\
+&=\left.\frac{\partial f}{\partial x}\right|_{y,z}
+ +\left.\frac{\partial f}{\partial z}\right|_{x,y}
+  \left.\frac{\partial z}{\partial x}\right|_y,
+\end{aligned}$$
+since the two coordinate derivatives in the middle line are $1$ and $0$. Thus, where the denominator is non-zero,
+$$\left.\frac{\partial z}{\partial x}\right|_y
+=-\frac{\left.\dfrac{\partial f}{\partial x}\right|_{y,z}}
+{\left.\dfrac{\partial f}{\partial z}\right|_{x,y}}.$$
+Similarly, the corresponding formulas for $\left.\partial x/\partial y\right|_z$ and $\left.\partial y/\partial z\right|_x$ give the **cyclic rule**, wherever all three ratios are defined:
+$$\left.\frac{\partial x}{\partial y}\right|_z
+\left.\frac{\partial y}{\partial z}\right|_x
+\left.\frac{\partial z}{\partial x}\right|_y=-1.$$
+
+### Reciprocal rule (page 9)
+
+When the same variable is held fixed, and the derivatives exist and are non-zero,
+$$\left.\frac{\partial z}{\partial x}\right|_y
+=\frac{1}{\left.\dfrac{\partial x}{\partial z}\right|_y}.$$
+The indicated proof first obtains
+$$\left.\frac{\partial x}{\partial z}\right|_y
+=-\frac{\left.\dfrac{\partial f}{\partial z}\right|_{x,y}}
+{\left.\dfrac{\partial f}{\partial x}\right|_{y,z}},$$
+which is reciprocal to the preceding ratio.
+
+The fixed-variable condition matters. For $(r,\theta)\mapsto(x,y)$,
+$$\left.\frac{\partial r}{\partial x}\right|_y
+=\frac{1}{\left.\dfrac{\partial x}{\partial r}\right|_y},$$
+but this need not equal $1/(\left.\partial x/\partial r\right|_\theta)$, since a different variable is being held fixed. See [[Implicit Differentiation]].
+
+## 3.5 Differentiating an integral with respect to a parameter (pages 9–11)
+
+For a family $f(x;c)$ depending on a parameter $c$, define
+$$I(c)=\int_{a(c)}^{b(c)}f(x;c)\,dx.$$
+The source states [[Differentiation Under the Integral Sign|Leibniz's integral rule]]:
+$$\frac{dI}{dc}
+=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx
++f(b(c);c)b'(c)-f(a(c);c)a'(c).$$
+A sufficient regularity setting is that $a,b$ are continuously differentiable and $f,f_c$ are continuous on a neighbourhood of the relevant integration intervals.
+
+**Source proof calculation (page 10).** Write $h=\delta c$. The difference quotient is
+$$\frac{1}{h}\left[
+\int_{a(c+h)}^{b(c+h)}f(x;c+h)\,dx
+-\int_{a(c)}^{b(c)}f(x;c)\,dx\right].$$
+Split its first integral at the old endpoints, giving three contributions:
+$$\begin{aligned}
+A_h&=\frac1h\int_{a(c)}^{b(c)}[f(x;c+h)-f(x;c)]\,dx,\\
+B_h&=\frac1h\int_{b(c)}^{b(c+h)}f(x;c+h)\,dx,\\
+C_h&=-\frac1h\int_{a(c)}^{a(c+h)}f(x;c+h)\,dx.
+\end{aligned}$$
+The source writes
+$$\lim_{h\to0}A_h
+=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx.$$
+For the upper-endpoint term, the mean value theorem gives an intermediate $\xi_h$ between $b(c)$ and $b(c+h)$ with
+$$B_h=\frac{b(c+h)-b(c)}h\,f(\xi_h;c+h)
+\longrightarrow b'(c)f(b(c);c).$$
+The source says to use the same argument for the lower-endpoint term, yielding $-a'(c)f(a(c);c)$.
+
+**Uniform interchange proof — supplementary correction.** Fix $c$ and a compact rectangle containing the old integration interval and all parameters $c+h$ sufficiently near $c$. Continuity of $f_c$ makes it uniformly continuous there. The one-variable mean value theorem, applied in the parameter for each $x$, gives
+$$\frac{f(x;c+h)-f(x;c)}h=f_c(x;c+\theta_{x,h}h),\qquad0<\theta_{x,h}<1.$$
+Consequently the difference between this quotient and $f_c(x;c)$ tends to zero **uniformly in $x$**. Its integral error is bounded by $|b(c)-a(c)|$ times that uniform error, so the displayed limit of $A_h$ follows. The endpoint terms above then prove Leibniz's rule under the stated continuous-partial hypothesis. If an endpoint does not move, its corresponding interval term is zero.
+
+### Example with a moving endpoint (page 11)
+
+Let
+$$I(\lambda)=\int_0^\lambda e^{-\lambda x^2}\,dx.$$
+Leibniz's rule gives
+$$\begin{aligned}
+I'(\lambda)
+&=\int_0^\lambda -x^2e^{-\lambda x^2}\,dx
++e^{-\lambda^3}\frac{d\lambda}{d\lambda}\\
+&=-\int_0^\lambda x^2e^{-\lambda x^2}\,dx+e^{-\lambda^3}.
+\end{aligned}$$
+The endpoint contribution evaluates the integrand at $x=\lambda$ and uses $d\lambda/d\lambda=1$.
+
+### Factorial integrals (page 11)
+
+To evaluate
+$$J_n=\int_0^\infty x^n e^{-x}\,dx,\qquad n\in\mathbb Z_{\ge0},$$
+introduce the parameter integral
+$$I(\lambda)=\int_0^\infty e^{-\lambda x}\,dx
+=\frac1\lambda,\qquad\lambda>0.$$
+The source differentiates $n$ times:
+$$\frac{d^nI}{d\lambda^n}
+=\int_0^\infty(-x)^n e^{-\lambda x}\,dx,$$
+while differentiation of the explicit expression gives
+$$\frac{d^n}{d\lambda^n}\frac1\lambda
+=(-1)^n\frac{n!}{\lambda^{n+1}}.$$
+Equating them and setting $\lambda=1$ yields
+$$(-1)^nJ_n=(-1)^nn!,\qquad J_n=n!.$$
+
+**Improper-integral justification — supplementary correction.** Fix $\lambda_0>0$ and restrict $\lambda$ to a neighbourhood where $\lambda\ge\lambda_0/2$. For every non-negative integer $m$,
+$$\left|\partial_\lambda^m e^{-\lambda x}\right|
+=x^m e^{-\lambda x}\le x^m e^{-\lambda_0x/2}\qquad(x\ge0).$$
+This bound is integrable without assuming the factorial-integral result: the exponential series gives
+$$x^m e^{-\lambda_0x/2}
+\le m!\left(\frac4{\lambda_0}\right)^m e^{-\lambda_0x/4}.$$
+To differentiate the integral of $\partial_\lambda^m e^{-\lambda x}$, its parameter difference quotient is bounded by $x^{m+1}e^{-\lambda_0x/2}$ by the mean value theorem (choose the increments inside this neighbourhood). On every finite interval the quotient converges uniformly to the next derivative. On the remaining tail, both the quotient and its limit are bounded by the same integrable exponential bound, whose tail integral tends to zero uniformly. Splitting at a large finite endpoint therefore justifies passing the limit through the improper integral. Repeat for $m=0,\ldots,n-1$ to justify all $n$ differentiations. For $n=0$, the explicit integral already gives the result.
 
 ## Supplementary learning route
 

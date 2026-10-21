@@ -43,9 +43,17 @@ A subset $H\subseteq G$ is a subgroup if it contains $e_G$ and is closed under t
 
 ## Geometric groups
 
-For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the classification proof completed with a labelled supplementary argument for the missing reverse inclusion.
+For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the classification argument on pages 23–24, now completed by supplementary proofs of corner and adjacency preservation.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–23, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+## Products and structure-preserving maps
+
+The direct product $G\times H$ has componentwise operation $(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2)$ and identity $(e_G,e_H)$; the source assigns the group-axiom proof as an exercise. [[Homomorphisms and Isomorphisms]] records maps preserving the operation, bijective such maps, the examples $\mathbb Z_n\cong C_n$ and $(\mathbb R,+)\cong(\mathbb R_{>0},\times)$, the image/kernel subgroup proofs, and the criterion that injectivity is equivalent to a trivial kernel.
+
+## Cyclic groups and element orders
+
+A group is cyclic if $G=\{g^k:k\in\mathbb Z\}$ for some generator $g$. [[Cyclic Groups and Element Orders]] gives the full source classification: $G\cong C_n$ for some positive integer $n$, or $G\cong\mathbb Z$. For any element $g$ of any group, $o(g)=|\langle g\rangle|$ is its order; if finite, it is the least positive exponent with $g^n=e_G$.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–33, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
 
 ## Cancellation and the chosen operation — supplementary explanation
 

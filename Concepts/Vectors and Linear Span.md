@@ -33,6 +33,8 @@ Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 1–4, including the
 
 [[Orthonormal Bases and Vector Coordinates]] gives coordinate descriptions in $\mathbb R^3$. [[Cross Products and Scalar Triple Products]] treats oriented area, rotation and volume there.
 
+[[Lines, Planes and Vector Equations]] applies these directions and spans to affine lines, planes, intersections and distances.
+
 ## From span to a basis — supplementary explanation
 
 For finitely many vectors $\mathbf v_1,\ldots,\mathbf v_m$ in a real vector space, their span contains all sums $\sum_{i=1}^m a_i\mathbf v_i$ with $a_i\in\mathbb R$. For an infinite set, span still uses only **finite** sums. It contains zero and is closed under addition and real scalar multiplication, so it is a vector subspace.

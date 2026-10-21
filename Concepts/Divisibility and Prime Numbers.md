@@ -5,7 +5,7 @@ course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: [7, 8]
+source_pages: [7, 8, 13, 14, 15, 17]
 ---
 
 # Divisibility and Prime Numbers
@@ -32,15 +32,43 @@ Suppose $p_1,\ldots,p_k$ list all primes, and let $N=p_1\cdots p_k+1$. No $p_i$ 
 
 The proof does not claim that $N$ itself is prime.
 
-## Uniqueness and Euclid's lemma
+## Euclid's lemma
 
-Existence of a prime factorization does not establish uniqueness. The source illustrates the uniqueness question with $21=3\cdot7$ and $295869=3\cdot7\cdot73\cdot193$; it does not yet give a uniqueness proof.
+**Proposition 4:** if $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$.
 
-**Proposition 4 — Euclid's lemma:** if $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$. The current source states this proposition without proof.
+**Proof (page 13).** If $p\nmid a$, primality gives $\gcd(p,a)=1$. By [[Bezout's Identity and Linear Diophantine Equations|Bézout's identity]], choose integers $x,y$ with $xp+ya=1$. Multiplying by $b$ yields
+$$b=xpb+yab.$$
+Both terms on the right are divisible by $p$, hence $p\mid b$.
 
-[[Greatest Common Divisors and Euclid's Algorithm]] records the subsequent gcd definition, division theorem and algorithm. Its final, explicitly supplementary section derives Euclid's lemma; that proof is not attributed to the source.
+Iterating the lemma shows that if $p\mid a_1\cdots a_m$, then $p$ divides some factor. Primality is essential; the source supplies no counterexample for a composite divisor.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, with gcd material on pages 8–11. The natural-number convention and induction principles appear in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
+## Fundamental theorem of arithmetic
+
+Existence of a prime factorization alone does not establish uniqueness. The earlier source questions use $21=3\cdot7$ and $295869=3\cdot7\cdot73\cdot193$.
+
+**Theorem 9 (page 14):** every integer $n\ge2$ is a product of primes, uniquely up to reordering.
+
+Existence follows from Proposition 2. For uniqueness, induct on $n$. If
+$$n=p_1\cdots p_k=q_1\cdots q_\ell,$$
+Euclid's lemma makes $p_1$ divide some $q_i$. Since $q_i$ is prime, $p_1=q_i$. Relabel that factor as $q_1$ and cancel it. The quotient is smaller than $n$, so induction matches the remaining factors; if it is $1$, both remaining products are empty. Thus $k=\ell$ and the factors agree after reordering.
+
+## Positive divisors from prime exponents
+
+If $n=p_1^{a_1}\cdots p_k^{a_k}$ with distinct primes and positive exponents, its positive divisors are exactly
+$$p_1^{b_1}\cdots p_k^{b_k},\qquad0\le b_i\le a_i.$$
+For example, $2^3\,3^7\,11$ has precisely the positive divisors $2^a3^b11^c$ with $0\le a\le3$, $0\le b\le7$, $0\le c\le1$. An extra prime factor would contradict unique factorization.
+
+The page-15 example $4=2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ concerns the different system $\mathbb Z[\sqrt{-3}]$. The source note corrects “prime” to “irreducible” and proves irreducibility using the norm $x^2+3y^2$, as well as non-association and failure of primality. The integer form of Euclid's lemma cannot be transferred to that example without qualification.
+
+## Erdős's counting proof of infinitely many primes
+
+Suppose $p_1,\ldots,p_k$ list all primes. Splitting prime exponents into even parts and remainders writes each positive integer as
+$$m^2p_1^{i_1}\cdots p_k^{i_k},\qquad i_\nu\in\{0,1\}.$$
+Among numbers at most $N$, there are at most $\sqrt N$ choices of $m$ and $2^k$ choices of the binary exponents. If $N>4^k$, this accounts for fewer than $N$ integers, a contradiction. The lecture attributes this proof to Erdős (1930).
+
+The source also states bounds for the $k$th prime, $p_k<2^{2^k}$ and $p_k<4^k$, without separate derivations, and states $p_k\sim k\log k$ without proving the prime number theorem.
+
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, 13–15 and 17. The complete uniqueness proof, terminology review on page 15 and unanswered product-comparison question on page 8 are retained there. [[Greatest Common Divisors and Euclid's Algorithm]] supplies the gcd/lcm material; [[Modular Arithmetic]] gives the new congruence calculations. The natural-number convention appears in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
 
 ## How uniqueness follows — supplementary proof
 

@@ -5,7 +5,7 @@ course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: [9, 10]
+source_pages: [9, 10, 19, 21]
 ---
 
 # Orthonormal Bases and Vector Coordinates
@@ -33,7 +33,18 @@ The standard basis is
 $$\mathbf e_1=(1,0,0),\qquad\mathbf e_2=(0,1,0),\qquad\mathbf e_3=(0,0,1),$$
 also denoted $\widehat{\mathbf i},\widehat{\mathbf j},\widehat{\mathbf k}$.
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 9–10. Related: [[Vectors and Linear Span]], [[Real Inner Products and Cauchy-Schwarz]] and [[Cross Products and Scalar Triple Products]].
+## Index notation
+
+In the lecture's Cartesian summation convention, an index appearing twice in a term is summed over $1,2,3$. Thus
+$$\mathbf a=a_i\mathbf e_i,\qquad
+\mathbf a\cdot\mathbf b=\delta_{ij}a_ib_j=a_ib_i.$$
+The delta selects a matching component:
+$$\delta_{ij}a_j=a_i.$$
+Here $i$ is free and $j$ is summed. A single entry $\delta_{11}=1$ differs from the summed trace $\delta_{ii}=3$.
+
+[[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] gives explicit sums, numerical examples, free/dummy-index rules and the connection to cross products.
+
+Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 9–10, 19 and 21. Related: [[Vectors and Linear Span]], [[Real Inner Products and Cauchy-Schwarz]] and [[Cross Products and Scalar Triple Products]].
 
 ## Why the coordinate formula works — supplementary explanation
 

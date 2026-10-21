@@ -5,7 +5,7 @@ course: Part IA Differential Equations
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
 source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
-source_pages: [1, 2, 3, 4]
+source_pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ---
 
 # Partial Derivatives and the Multivariate Chain Rule
@@ -32,6 +32,8 @@ $$f(x(t_1),y(t_1))-f(x(t_0),y(t_0))
 =\int_{t_0}^{t_1}(f_x\,x'(t)+f_y\,y'(t))\,dt.$$
 
 **Corrected proof:** [[Differential Equations - Chapter 3 Partial Differentiation]] now proves total differentiability under continuous first partial derivatives using coordinate increments and the mean value theorem, then proves the chain rule under total differentiability. The incorrect source definition $df=\lim\delta f$ has been replaced by the linear-map definition below. These repairs are labelled supplementary; the contour drawing is unchanged.
+
+Applications in [[Differential Equations - Chapter 3 Partial Differentiation]], pages 5–11, include the polar-coordinate chain rule, [[Implicit Differentiation|implicit differentiation with fixed-variable, cyclic and reciprocal rules]], and [[Differentiation Under the Integral Sign|Leibniz's integral rule with moving-endpoint and factorial-integral examples]]. The derivation flags on pages 3–4 and the limit/interchange flags on pages 10–11 remain.
 
 Related: [[Differentiation Rules]], [[Taylor Series and Taylor's Theorem]], [[Riemann Integration and the Fundamental Theorem of Calculus]].
 

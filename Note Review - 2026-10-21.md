@@ -8,11 +8,11 @@ date: 2026-10-21
 
 ## Scope and method
 
-This review continues the complete reading of all **44 study notes** recorded in [[Note Review - 2026-10-17]]. At the start, SHA-256 comparisons confirmed that all 44 notes exactly matched that reviewed state. Their definitions, proof dependencies and course connections were checked using that full reading; the classroom review items and affected derivations were reread and repaired in place. The study guide and earlier review record were also checked. The repository has 44 study notes and, after this update, three navigation/review documents.
+This review continues the complete reading of all **44 study notes** recorded in [[Note Review - 2026-10-17]]. At the start, SHA-256 comparisons confirmed that all 44 notes exactly matched that reviewed state. Their definitions, proof dependencies and course connections were checked using that full reading; the classroom review items and affected derivations were reread and repaired in place. The study guide and earlier review record were also checked. This initial stage contained 44 study notes and three navigation/review documents. Publication checks then found newer remote commits; the reconciliation below brings the current total to 55 study notes and 58 Markdown documents.
 
 The user's instruction specifically authorizes correcting classroom knowledge points and proofs marked for review. The repairs below are labelled mathematical corrections or supplementary proofs; they do not claim to transcribe new source content. Original PDFs and TikZ renderings were not visually reread, and Drive inventory/source timestamps were not advanced. All existing diagrams and exercise attempts are preserved.
 
-## Classroom review items resolved
+## Original classroom review items resolved
 
 | Location | Problem | Resolution |
 | --- | --- | --- |
@@ -41,15 +41,15 @@ For the dated remark, [Julia Stadlmann, *Bounded gaps between primes*, arXiv:260
 
 The three handwritten-attempt notes retain the proof-status flags and unfinished questions documented in the earlier review. This update does not recast those attempts as complete solutions. In particular, the Fibonacci prime-index argument, some pigeonhole and graph arguments, the group interchange-law attempt, and the infinite-remainder argument in the calculus exercises still require work. Printed questions remain questions. The request to repair classroom review items has been completed separately from these exercise records.
 
-## Validation
+## Initial validation before remote reconciliation
 
 Validation passed for all 47 Markdown documents: YAML metadata, code fences, mathematical delimiters/environments, 356 internal links (including six heading targets), and coverage of all 44 study notes in the guide and review table. All eight lecture notes were checked for the original review callouts; all six were resolved. Existing TikZ blocks, the seven exercise documents and source-version/visual-reading metadata are unchanged from the start of this pass.
 
-Symbolic checks confirmed the kite identity, coordinate-increment split, Cauchy mean-value auxiliary identity and uniform area-bound arithmetic. Exhaustive vertex permutations for regular polygons with $3\le n\le8$ gave exactly the listed $2n$ isometries; this is a finite consistency check supporting, not replacing, the general proof. `git diff --check` passed. Changes are saved locally; no commit or push was made in this pass.
+Symbolic checks confirmed the kite identity, coordinate-increment split, Cauchy mean-value auxiliary identity and uniform area-bound arithmetic. Exhaustive vertex permutations for regular polygons with $3\le n\le8$ gave exactly the listed $2n$ isometries; this is a finite consistency check supporting, not replacing, the general proof. `git diff --check` passed. At that stage the changes were saved only in the cloud workspace. The subsequent publication follow-up below records their reconciliation with the current remote branch.
 
-## Per-note coverage
+## Original per-note coverage
 
-The following table covers all 44 study notes. “Retained” means the prior full reading was carried forward after a matching-content check and no additional correction was required in this pass; existing exercise warnings still apply.
+The following table records the original 44-note review. Where remote commits later expanded a note, the reconciliation section below supersedes its earlier source/proof-status description. “Retained” means the prior full reading was carried forward after a matching-content check and no additional correction was required in this pass; existing exercise warnings still apply.
 
 | Note | This review |
 | --- | --- |
@@ -97,3 +97,41 @@ The following table covers all 44 study notes. “Retained” means the prior fu
 | [[Numbers and Sets 0 - Handwritten Attempts]] | Retained; no additional mathematical correction required in this pass. |
 | [[Vectors and Matrices - Chapter 1 Complex Numbers]] | Retained; no additional mathematical correction required in this pass. |
 | [[Vectors and Matrices - Chapter 2 Vectors]] | Retained; no additional mathematical correction required in this pass. |
+
+## Publication follow-up: reconciliation with current GitHub notes
+
+The user requested checking and pushing the cloud-workspace changes. The discovered default branch was `master`, whose head `0021c461439c86ab34778e2a7fcada4d2febb202` was four commits ahead of the review's original base. Those updates added 11 study notes and expanded several existing lectures and concepts. Their mathematical Markdown was read during reconciliation; the original PDFs were not reread. All remote source-version, inventory and visual-inspection records were preserved as records of those earlier sync runs. All remote TikZ blocks were preserved byte for byte.
+
+The newer Numbers and Sets lecture now includes source proofs of Bézout's identity, Euclid's lemma and unique factorization. The newer Groups lecture continues the dihedral argument on page 24 and proceeds through homomorphisms, cyclic groups and element orders. Old statements that these source proofs were missing were updated; the labelled supplementary arguments were retained as alternative learning routes. Navigation now includes all 55 study notes.
+
+Five further classroom review locations in the incoming material were repaired:
+
+| Note and location | Correction or completed proof |
+| --- | --- |
+| [[Groups - Chapter 1 Examples and Definitions]], page 23 | Proved corner preservation for boundary/filled polygons by extending an isometry to an affine plane isometry and preserving extreme points. Distinguished this from the vertex-set model and justified adjacency. |
+| [[Numbers and Sets - Chapter 1 Elementary Number Theory]], page 15 | Defined units, irreducibles and prime elements; used the multiplicative norm to prove the factors are non-associate irreducibles, and gave explicit failures of primality. |
+| [[Differential Equations - Chapter 3 Partial Differentiation]], page 10 | Uniform convergence of parameter difference quotients on a compact rectangle justifies the fixed-interval limit–integral interchange. |
+| [[Differential Equations - Chapter 3 Partial Differentiation]], page 11 | An integrable exponential bound controls every parameter derivative locally; compact-interval convergence and uniform tail bounds justify repeated improper-integral differentiation without circular use of the factorial formula. |
+| [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], page 3 | Stated the homogeneous dimension theorem with continuous coefficients and non-zero leading coefficient; supplied existence/uniqueness and the dimension proof via first-order systems. Distinguished the inhomogeneous affine family and initial conditions from arbitrary boundary conditions. |
+
+Together with the original six locations, this resolves 11 classroom review locations across the two source snapshots. The current nine lecture notes have no remaining TODO/warning callouts. Deliberately assigned exercises, statement-only results and unfinished problem-sheet attempts remain identified as such; the count does not claim that every theorem in the course has now been proved.
+
+### Additional note coverage
+
+| Incoming note | Reconciliation result |
+| --- | --- |
+| [[Bezout's Identity and Linear Diophantine Equations]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Cyclic Groups and Element Orders]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Differentiation Under the Integral Sign]] | Read; synchronized the two completed interchange justifications. |
+| [[First-Order Linear Differential Equations]] | Read; corrected the solution-space statement and synchronized its supplementary proof. |
+| [[Forward Euler Method]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Homomorphisms and Isomorphisms]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Implicit Differentiation]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Lines, Planes and Vector Equations]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Modular Arithmetic]] | Read; retained the incoming mathematical content and explicit proof scope. |
+| [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]] | Read; corrected the solution-space statement and synchronized its supplementary proof. |
+
+### Final publication checks
+
+Final validation passed for all 58 Markdown documents and 55 study notes: 454 internal links including six heading targets resolve, all nine lecture notes have no TODO/warning callouts, all 52 remote TikZ blocks are byte-identical, and the seven exercise documents match the earlier reviewed versions. Exact finite dihedral checks and symbolic kite, mean-value, epsilon-contraction, vector-product and ring-norm identities passed. Latest remote source/inventory metadata is unchanged, and `git diff --check` passed. Detailed results are recorded in the manifest. Notes, guide, review history and manifest are committed together; remote publication is confirmed by checking the pushed branch and its Git tree. No new Drive sync or PDF visual-reading claim is made by this publication follow-up.

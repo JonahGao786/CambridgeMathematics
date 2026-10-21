@@ -6,12 +6,12 @@ date: null
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: 11
+source_pages: 19
 ---
 
 # Numbers and Sets — Chapter 1: Elementary Number Theory
 
-Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view), eleven pages. No date is supplied.
+Original PDF: [View source in Google Drive](https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view), nineteen pages. No date is supplied.
 
 ## The natural numbers and Peano axioms (page 1)
 
@@ -152,11 +152,11 @@ The existence proof does not establish uniqueness of a prime factorization. The 
 $$21=3\cdot7,\qquad 295869=3\cdot7\cdot73\cdot193,$$
 and asks why
 $$9049\cdot40099\ne6701\cdot54151.$$
-No proof of uniqueness or answer to this comparison question is supplied.
+The comparison question remains unanswered. Theorem 9 on page 14 supplies the uniqueness proof.
 
 **Proposition 4 — Euclid's lemma.** If $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$.
 
-**Proof dependency.** The original lecture states this without proof. After establishing Euclid's algorithm below, [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof]] derives Bézout's identity and proves Proposition 4; [[Divisibility and Prime Numbers#How uniqueness follows — supplementary proof]] then proves uniqueness of prime factorization. These supplementary proofs complete the learning sequence without using Euclid's lemma to prove the algorithm itself.
+The proof of Proposition 4 appears on page 13, after Bézout’s identity. The prerequisite order is Euclid's algorithm → [[Bezout's Identity and Linear Diophantine Equations|Bézout's identity]] → Euclid's lemma → unique factorization. The supplementary derivations in [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof]] and [[Divisibility and Prime Numbers#How uniqueness follows — supplementary proof]] provide an alternative reading route.
 
 ## Highest common factors (pages 8–9)
 
@@ -239,3 +239,229 @@ $$\begin{aligned}
 17&=17\cdot1+0.
 \end{aligned}$$
 The last non-zero remainder is $1$, so $\gcd(87,52)=1$.
+
+
+## Coprimality and Bézout's identity (pages 11–12)
+
+When $\gcd(a,b)=1$, the integers $a,b$ are **coprime**. The preceding Euclidean algorithm can be reversed:
+$$\begin{aligned}
+1&=35-2\cdot17\\
+ &=35-2(52-35)\\
+ &=-2\cdot52+3\cdot35\\
+ &=-2\cdot52+3(87-52)\\
+ &=-5\cdot52+3\cdot87.
+\end{aligned}$$
+
+**Theorem 7 — Bézout's identity (page 11).** For all $a,b\in\mathbb N$, there are $x,y\in\mathbb Z$ such that
+$$xa+yb=\gcd(a,b).$$
+In other words, the gcd is an integer linear combination of $a$ and $b$. See [[Bezout's Identity and Linear Diophantine Equations]].
+
+### Proof 1: reverse Euclid's algorithm (page 11)
+
+Run Euclid's algorithm with input $a,b$ and last positive remainder $r_n$, writing $r_{-1}=a$ and $r_0=b$. For $n\ge2$, the division at stage $n$ writes
+$$r_n=r_{n-2}-q_nr_{n-1}.$$
+The preceding division expresses $r_{n-1}$ as an integer linear combination of $r_{n-2}$ and $r_{n-3}$. Substituting it expresses $r_n$ as an integer linear combination of those earlier remainders.
+
+Continue backwards: for each earlier pair of consecutive remainders, $r_n$ is an integer linear combination of that pair. The first two divisions,
+$$r_1=a-q_1b,\qquad r_2=b-q_2r_1,$$
+then give $r_n=xa+yb$ for some integers $x,y$. If there is only one positive remainder, $r_1=a-q_1b$ already gives the required combination. Theorem 6 identifies $r_n=\gcd(a,b)$. Immediate termination has $\gcd(a,b)=b=0a+1b$.
+
+**Remark (page 12).** This argument gives an algorithm to find the coefficients $x,y$, as well as proving that they exist.
+
+### Proof 2: least positive integer linear combination (page 12)
+
+Let $h$ be the least positive integer of the form $xa+yb$ with $x,y\in\mathbb Z$. Such positive combinations exist, since $a=1a+0b$; the [[Natural Numbers and Mathematical Induction|well-ordering principle]] supplies a least one. We show that $h=\gcd(a,b)$.
+
+First, if $d\mid a$ and $d\mid b$, then $d\mid(xa+yb)$ for every pair of integers $x,y$. In particular, $d\mid h$.
+
+Next, suppose $h\nmid a$. Division gives
+$$a=qh+r,\qquad q,r\in\mathbb Z,\quad0<r<h.$$
+If $h=xa+yb$, then
+$$r=a-qh=a-q(xa+yb)=(1-qx)a-qyb$$
+is a smaller positive integer linear combination of $a,b$, contradicting the choice of $h$. Hence $h\mid a$. The same argument shows $h\mid b$. These are exactly the two defining gcd properties, so $h=\gcd(a,b)$.
+
+**Remark.** The second proof establishes existence of the gcd and its integer linear-combination representation, but does not give a method for finding the gcd or the coefficients.
+
+## Integer linear equations — Corollary 8 (page 13)
+
+**Examples.** The equation
+$$160x+72y=33$$
+has no integer solution: its left side is even and its right side is odd. In contrast,
+$$87x+52y=33$$
+has an integer solution. If $87x'+52y'=1$, multiplying by $33$ gives $x=33x'$, $y=33y'$. The preceding back-substitution gives $x'=3$, $y'=-5$.
+
+**Corollary 8 — Bézout's theorem.** Let $a,b\in\mathbb N$ and $c\in\mathbb Z$. The equation
+$$ax+by=c$$
+has a solution $x,y\in\mathbb Z$ if and only if $\gcd(a,b)\mid c$.
+
+**Proof.** Put $h=\gcd(a,b)$.
+
+- If $ax+by=c$ for integers $x,y$, then $h\mid a$ and $h\mid b$ imply $h\mid c$.
+- Conversely, suppose $h\mid c$. Theorem 7 gives $h=ax_0+by_0$ for integers $x_0,y_0$. Since $c/h\in\mathbb Z$,
+  $$c=\frac{c}{h}h=\frac{c}{h}(ax_0+by_0)
+  =a\left(\frac{c}{h}x_0\right)+b\left(\frac{c}{h}y_0\right),$$
+  giving an integer solution.
+
+## Proof of Proposition 4 — Euclid's lemma (page 13)
+
+Suppose $p$ is prime, $p\mid ab$, and $p\nmid a$. We must prove $p\mid b$.
+
+Since $p$ is prime and does not divide $a$, $\gcd(p,a)=1$. By Theorem 7, there are integers $x,y$ with
+$$xp+ya=1.$$
+Multiplying by $b$ gives
+$$xpb+yab=b.$$
+Both terms on the left are multiples of $p$, so $b$ is a multiple of $p$.
+
+**Remarks (page 14).**
+
+1. If $p\mid a_1a_2\cdots a_m$, then $p\mid a_i$ for some $i\in\{1,\ldots,m\}$. Apply Proposition 4 to $a_1(a_2\cdots a_m)$ and iterate, or induct on the number of factors.
+2. The assumption that $p$ is prime is necessary. No counterexample is supplied here.
+
+## Theorem 9 — Fundamental theorem of arithmetic (page 14)
+
+Every natural number $n\ge2$ is expressible as a product of primes, uniquely up to reordering.
+
+**Proof.** Existence is Proposition 2. For uniqueness, use strong induction on $n$, with the base case $n=2$ immediate. Suppose
+$$n=p_1p_2\cdots p_k=q_1q_2\cdots q_\ell,$$
+where all factors are prime. We want to show $k=\ell$ and, after reordering, $p_i=q_i$ for every $i$.
+
+Since $p_1\mid n=q_1\cdots q_\ell$, the preceding extension of Euclid's lemma gives $p_1\mid q_i$ for some $i$. Relabel so that $p_1\mid q_1$. Since $q_1$ is prime, $p_1=q_1$. Cancel them:
+$$\frac n{p_1}=p_2\cdots p_k=q_2\cdots q_\ell<n.$$
+If the quotient is $1$, both remaining products are empty. Otherwise the induction hypothesis makes the remaining prime factors agree after reordering. In either case $k=\ell$, and the original factorizations agree up to order.
+
+## Factorization in other arithmetic systems (page 15)
+
+There are systems with addition and multiplication in which factorization is not unique. The example is
+$$\mathbb Z[\sqrt{-3}]
+=\{x+y\sqrt{-3}:x,y\in\mathbb Z\},\qquad \sqrt{-3}=i\sqrt3.$$
+Adding or multiplying two elements gives another element of this set. For example,
+$$(1+\sqrt{-3})+(1-\sqrt{-3})=2,$$
+$$(1+\sqrt{-3})(1-\sqrt{-3})=4=2\cdot2.$$
+The source calls $1\pm\sqrt{-3}$ “prime in this sense” and uses these factorizations to illustrate failure of uniqueness.
+
+**Correct terminology and proof — supplementary correction.** In this ring, a **unit** has a multiplicative inverse in the ring; an **irreducible** is a non-zero non-unit whose every factorization has a unit factor. A **prime element** is a non-zero non-unit $p$ such that $p\mid ab$ implies $p\mid a$ or $p\mid b$. These notions need not coincide outside the integers.
+
+The multiplicative norm
+$$N(x+y\sqrt{-3})=(x+y\sqrt{-3})(x-y\sqrt{-3})=x^2+3y^2$$
+is a non-negative integer, zero only at zero. A unit has norm $1$, and the only norm-$1$ elements are $\pm1$, both units. Each of $2,1+\sqrt{-3},1-\sqrt{-3}$ has norm $4$. If any factored into two non-units, their norms would both be $2$. But $x^2+3y^2=2$ has no integer solution: $y\ne0$ gives at least $3$, and $y=0$ would require $x^2=2$. Thus all three elements are irreducible.
+
+They are pairwise non-associate: multiplication by the only units $\pm1$ does not turn one into another. Hence $2\cdot2=(1+\sqrt{-3})(1-\sqrt{-3})$ gives distinct factorizations into irreducibles, even up to order and units. The elements $1\pm\sqrt{-3}$ are not prime: each divides $2\cdot2$ but not $2$, since the quotient is $(1\mp\sqrt{-3})/2$, outside the ring. Likewise $2$ divides the displayed product but neither factor. This corrects the source's use of “prime”.
+
+## Consequences of unique prime factorization (pages 15–16)
+
+### (1) Positive divisors (page 15)
+
+The positive divisors of
+$$n=2^3\,3^7\,11$$
+are exactly
+$$2^a3^b11^c,\qquad
+0\le a\le3,\quad0\le b\le7,\quad0\le c\le1,$$
+with integer exponents. There are no other prime factors: if, for example, $7\mid n$, factoring $n$ through this divisor would contradict uniqueness.
+
+In general, for distinct primes $p_1,\ldots,p_k$ and positive integers $a_i$, the positive divisors of
+$$n=p_1^{a_1}\cdots p_k^{a_k}$$
+are exactly
+$$p_1^{b_1}\cdots p_k^{b_k},\qquad
+0\le b_i\le a_i\quad(1\le i\le k).$$
+
+### (2) Common divisors and the gcd (page 16)
+
+Consider
+$$x=2^3\,3^7\,5\,11^3,\qquad
+y=2^4\,3^2\,11\,13.$$
+Their common positive divisors are exactly
+$$2^a3^b11^c,\qquad0\le a\le3,\quad0\le b\le2,\quad0\le c\le1.$$
+Thus
+$$\gcd(x,y)=2^3\,3^2\,11.$$
+
+More generally, using the same list of distinct primes and allowing zero exponents,
+$$x=\prod_{i=1}^k p_i^{a_i},\qquad
+y=\prod_{i=1}^k p_i^{b_i},\qquad a_i,b_i\ge0,$$
+gives
+$$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)}.$$
+
+### (3) Common multiples and the lcm (page 16)
+
+The common integer multiples of the same $x,y$ are the integer multiples of
+$$L=2^4\,3^7\,5\,11^3\,13.$$
+Equivalently, they have the source's form
+$$2^a3^b5^c11^d13^e\,t,\qquad
+a\ge4,\quad b\ge7,\quad c\ge1,\quad d\ge3,\quad e\ge1,\quad t\in\mathbb Z.$$
+The number $L$ is their **least common multiple**. In general,
+$$\operatorname{lcm}(x,y)=\prod_{i=1}^k p_i^{\max(a_i,b_i)}.$$
+Since $\min(a_i,b_i)+\max(a_i,b_i)=a_i+b_i$,
+$$\gcd(x,y)\operatorname{lcm}(x,y)=xy\qquad(x,y\in\mathbb N).$$
+
+See [[Greatest Common Divisors and Euclid's Algorithm]].
+
+### (4) Another proof of infinitely many primes (page 17)
+
+The source attributes this counting proof to Erdős (1930).
+
+Suppose $p_1,\ldots,p_k$ are all the primes. Unique factorization writes every positive integer as
+$$p_1^{j_1}\cdots p_k^{j_k}
+=m^2p_1^{i_1}\cdots p_k^{i_k},\qquad i_\nu\in\{0,1\},$$
+by splitting each exponent into its even part and its remainder modulo $2$.
+
+If such a number is at most $N$, then $m\le\sqrt N$. There are at most $\lfloor\sqrt N\rfloor$ choices for $m$ and $2^k$ choices of the exponents $i_1,\ldots,i_k$, so at most $\sqrt N\,2^k$ such numbers at most $N$.
+
+Choose a natural number $N>4^k$. Then $N>\sqrt N\,2^k$, so some integer at most $N$ cannot have this form. It must have a prime factor outside the supposed complete list, a contradiction.
+
+**Further statements.** Writing $p_k$ for the $k$th prime, the source records the bounds
+$$p_k<2^{2^k},\qquad p_k<4^k,$$
+alongside the first and second proofs respectively. It gives no separate derivations of these quantitative bounds. It also states the prime number theorem in the form
+$$p_k\sim k\log k,$$
+without proof here.
+
+## Modular arithmetic (pages 18–19)
+
+Let $n\ge2$ be a natural number. In the **integers modulo $n$**, written $\mathbb Z_n$ or $\mathbb Z/n\mathbb Z$, integers are regarded as the same if they differ by a multiple of $n$.
+
+Write
+$$x\equiv y\pmod n
+\quad\Longleftrightarrow\quad n\mid(x-y)
+\quad\Longleftrightarrow\quad x=y+kn\text{ for some }k\in\mathbb Z.$$
+For example, $2\equiv16\pmod7$. Equality of the corresponding elements of $\mathbb Z_n$ is also written $x=y$ in $\mathbb Z_n$.
+
+The cyclic diagram places $0=n$ at the top and the succeeding residues clockwise. Tick positions are schematic; no numerical value of $n$ is specified.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (0,0) circle (1.35);
+  \foreach \a in {90,50,8,-42,-92,-130,-164,155,120} {
+    \draw[thick] (\a:1.27)--(\a:1.43);
+  }
+  \node[above] at (90:1.48) {$0=n$};
+  \node[above right] at (50:1.48) {$1$};
+  \node[right] at (8:1.48) {$2$};
+  \node[below right] at (-42:1.48) {$3$};
+  \node[below] at (-92:1.48) {$4$};
+  \node[left] at (155:1.48) {$n-2$};
+  \node[above left] at (120:1.48) {$n-1$};
+\end{tikzpicture}
+\end{document}
+```
+
+### Arithmetic is independent of representatives (page 18)
+
+Suppose $a\equiv a'\pmod n$ and $b\equiv b'\pmod n$. Then
+$$n\mid(a-a')+(b-b')=(a+b)-(a'+b'),$$
+so $a+b\equiv a'+b'\pmod n$. Similarly,
+$$n\mid(a-a')b+a'(b-b')=ab-a'b',$$
+so $ab\equiv a'b'\pmod n$.
+
+Thus addition and multiplication are well-defined modulo $n$ and inherit the usual arithmetic rules from $\mathbb Z$.
+
+### An integer equation with no solution (page 19)
+
+Does
+$$2a^2+3b^2=1,\qquad a,b\in\mathbb Z,$$
+have a solution?
+
+Any solution would give $2a^2\equiv1\pmod3$. But the possible residues of $a$ are $0,1,2$, and
+$$2\cdot0^2\equiv0,\qquad
+2\cdot1^2\equiv2,\qquad
+2\cdot2^2\equiv2\pmod3.$$
+None is $1$, so there is no integer solution. See [[Modular Arithmetic]].

@@ -5,7 +5,7 @@ course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: [8, 9, 10, 11]
+source_pages: [8, 9, 10, 11, 12, 13, 15, 16]
 ---
 
 # Greatest Common Divisors and Euclid's Algorithm
@@ -55,7 +55,30 @@ $$\begin{aligned}
 \end{aligned}$$
 Hence $\gcd(87,52)=1$.
 
-Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–11, including the full algorithm table and proofs. Related: [[Divisibility and Prime Numbers]] and [[Natural Numbers and Mathematical Induction]].
+## Coprimality and integer linear combinations
+
+Numbers $a,b$ are **coprime** when $\gcd(a,b)=1$. Reversing the second example gives
+$$1=35-2\cdot17=-5\cdot52+3\cdot87.$$
+More generally, Theorem 7 gives $\gcd(a,b)=xa+yb$ for integers $x,y$. [[Bezout's Identity and Linear Diophantine Equations]] records both proofs, the coefficient-finding method, and the criterion $\gcd(a,b)\mid c$ for solvability of $ax+by=c$.
+
+## Prime-exponent formulas and least common multiples
+
+For positive integers $x,y$, use the same list of distinct primes, allowing exponent zero:
+$$x=\prod_{i=1}^k p_i^{a_i},\qquad
+y=\prod_{i=1}^k p_i^{b_i},\qquad a_i,b_i\ge0.$$
+A common divisor can use at most $\min(a_i,b_i)$ copies of each prime. A common positive multiple needs at least $\max(a_i,b_i)$ copies. Consequently,
+$$\gcd(x,y)=\prod_{i=1}^k p_i^{\min(a_i,b_i)},$$
+$$\operatorname{lcm}(x,y)=\prod_{i=1}^k p_i^{\max(a_i,b_i)}.$$
+The **least common multiple** is positive, and every common integer multiple is an integer multiple of it.
+
+For the source example,
+$$x=2^3\,3^7\,5\,11^3,\qquad y=2^4\,3^2\,11\,13,$$
+$$\gcd(x,y)=2^3\,3^2\,11,\qquad
+\operatorname{lcm}(x,y)=2^4\,3^7\,5\,11^3\,13.$$
+The exponent identity $\min(a_i,b_i)+\max(a_i,b_i)=a_i+b_i$ gives
+$$\gcd(x,y)\operatorname{lcm}(x,y)=xy.$$
+
+Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–13 and 15–16, including the full algorithm table, proofs and common-divisor/multiple examples. Related: [[Divisibility and Prime Numbers]], [[Modular Arithmetic]] and [[Natural Numbers and Mathematical Induction]].
 
 ## From the algorithm to Euclid's lemma — supplementary proof
 
@@ -66,4 +89,4 @@ $$1=35-2\cdot17=3\cdot35-2\cdot52=3\cdot87-5\cdot52.$$
 
 For prime $p$ and positive $a$ with $p\nmid a$, the only positive common divisor is $1$. Choose $u,v\in\mathbb Z$ with $up+va=1$. If $p\mid ab$, multiplying by $b$ gives
 $$b=upb+vab,$$
-so $p\mid b$. If instead $p\mid a$, the other alternative already holds. For arbitrary integer $a,b$, zero cases are immediate and signs can be removed using absolute values. This proves [[Divisibility and Prime Numbers|Euclid's lemma]]. It is supplementary; the source lecture states the lemma without proving it.
+so $p\mid b$. If instead $p\mid a$, the other alternative already holds. For arbitrary integer $a,b$, zero cases are immediate and signs can be removed using absolute values. This proves [[Divisibility and Prime Numbers|Euclid's lemma]]. This algorithm-based explanation is supplementary. The updated lecture also supplies Bézout’s identity and the Euclid-lemma proof on pages 12–13; see [[Bezout's Identity and Linear Diophantine Equations]].

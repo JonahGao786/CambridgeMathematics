@@ -4,10 +4,10 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-16T15:07:32.042601Z",
+  "last_inventory_at": "2026-10-21T12:04:11.839041Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
-  "reading_method": "Authenticated Google Drive recursive listings and paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 34 pages: Groups pages 1–23, Partial Differentiation pages 1–4 and Integration pages 1–7, with a 4x original-page crop of the Groups page-19 distance formula. Original handwritten mathematics and drawings were read visually; PDF text layers were only aids and never substitutes for visual reading. No excluded-folder contents were listed, downloaded or read.",
+  "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
   "sync_rule": "A file is current only if a remote per-file successful status (processed or skipped_non_study) matches its modified timestamp. Pending or absent records must be retried. Publish notes and this manifest in the same non-forced default-branch commit. Preserve manual edits.",
   "duplicate_comparison": "Historical Proofs/Untitled Notebook and introduction/differentiation comparisons remain in their independent per-file records and repository history; those unchanged sources were not re-read this run. On 2026-10-13, the four pages of Examples Sheet 1 Q.pdf and A3a.pdf were completely visually read and compared, with identical rendered pixels and text on every page. Their PDF bytes differ. Both current Drive versions are recorded separately and share one attributed question note.",
   "files": {
@@ -532,6 +532,17 @@
           },
           "resolution_report": "Note Review - 2026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Reference needed — page 3, remark 2",
+            "detail": "The lecture remark that the stated prime-gap assertion was proved in August 2026 has no citation. The precise intended result and historical reference remain unverified.",
+            "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
       "repository_review_2026_10_21": {
@@ -764,21 +775,23 @@
         "Concepts/Groups.md",
         "Concepts/Bijections and Permutations.md",
         "Concepts/Subgroups and Generated Subgroups.md",
-        "Concepts/Isometries and Dihedral Groups.md"
+        "Concepts/Isometries and Dihedral Groups.md",
+        "Concepts/Homomorphisms and Isomorphisms.md",
+        "Concepts/Cyclic Groups and Element Orders.md"
       ],
       "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
       "source_file_name": "Ch.1 Introduction.pdf",
       "source_url": "https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-16T14:54:34.112Z",
-      "processed_source_modified_timestamp": "2026-10-16T14:54:34.112Z",
+      "observed_source_modified_timestamp": "2026-10-21T11:45:52.041Z",
+      "processed_source_modified_timestamp": "2026-10-21T11:45:52.041Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
       "material_type": "handwritten lecture notes",
       "course": "Part IA Groups",
       "source_date": null,
-      "total_page_count": 23,
+      "total_page_count": 33,
       "visually_inspected_pages": [
         1,
         2,
@@ -802,21 +815,31 @@
         20,
         21,
         22,
-        23
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
       ],
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "source_sha256": "017ea17a39746fb6d60aa1646d29f167239fbdba342f7114dc11c81382746e4e",
-      "source_size_bytes": 4823519,
-      "last_successful_processing_at": "2026-10-16T15:07:32.042601Z",
-      "reading_method": "Authenticated Google Drive recursive listings and paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 34 pages: Groups pages 1–23, Partial Differentiation pages 1–4 and Integration pages 1–7, with a 4x original-page crop of the Groups page-19 distance formula. Original handwritten mathematics and drawings were read visually; PDF text layers were only aids and never substitutes for visual reading. No excluded-folder contents were listed, downloaded or read.",
+      "source_sha256": "65212fc4261374c5296bfb7ead203621ec0da8bfc93b287fdcf4dd49913e2f2f",
+      "source_size_bytes": 7076110,
+      "last_successful_processing_at": "2026-10-21T12:04:11.839041Z",
+      "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
       "unresolved_todos": [],
       "last_attempt": {
-        "date": "2026-10-16",
-        "completed_at": "2026-10-16T15:07:32.042601Z",
+        "date": "2026-10-21",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-16T14:54:34.112Z",
-        "total_page_count": 23,
+        "source_modified_timestamp": "2026-10-21T11:45:52.041Z",
+        "total_page_count": 33,
         "visually_inspected_pages": [
           1,
           2,
@@ -840,7 +863,17 @@
           20,
           21,
           22,
-          23
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
         ],
         "failure": null
       },
@@ -855,11 +888,19 @@
         "page_18": "Normalized the intersection membership quantifier to every index i in I; preserved the generated-subgroup definition and exercise reference. The root-level printed sheet now supplies the referenced question. Current addition: Added the smallest-subgroup interpretation, generating sets and Lemma 1.18. Normalized product length notation to m to avoid collision with polygon n; made the empty product explicit. Proof remains assigned to ES1 Q9.",
         "pages_19_20": "Preserved the full subgroup proof for isometries, polygon definition and diagrams. The substantive distance-formula error is retained and explicitly flagged in the source note.",
         "pages_21_22": "Preserved both isometry calculations, reflection exercise, pairwise-distinct rotations, kite hypotheses, geometric proof and coloured side ticks. Made the immediate vertex permutations and zero-vector convention explicit without adding a classification proof.",
-        "page_23": "Preserved the three point lemma and contradiction proof. Wrote the inclusion supplied by Lemma 1.22 explicitly as candidate rotations/reflections subset Isom to avoid ambiguous LHS/RHS notation. The missing reverse inclusion is a localized TODO; no new proof added."
+        "page_23": "Preserved the three point lemma and contradiction proof. Wrote the inclusion supplied by Lemma 1.22 explicitly as candidate rotations/reflections subset Isom to avoid ambiguous LHS/RHS notation. The missing reverse inclusion is a localized TODO; no new proof added. Current version: transcribed the newly supplied corner claim and diagonal sketches, then the page-24 continuation. The TODO now concerns the claim assigned as an exercise; the former lack of the entire continuation no longer applies.",
+        "page_24": "Preserved the images of 1 and its adjacent vertices, the two possible orders and the three point lemma conclusion. Made the immediate inverse-composition step explicit. Added r=r1, s=s0, generation and the full two-route sr=r^-1s calculation as TikZ.",
+        "pages_25_26": "Preserved componentwise direct-product operation and identity with exercise status, homomorphism definition and all three examples, identity/inverse preservation and the definition of isomorphism. Made the immediate inverse cancellation in phi(e)^2=phi(e) explicit; no assigned exercise was solved.",
+        "page_27": "Preserved the Zn-to-Cn map, the operation-preservation calculation and its modulo-n integer p, and the real-exponential/logarithm isomorphism. Distinguished asserted well-definedness/bijectivity from the supplied homomorphism calculation.",
+        "page_28": "Preserved Lemma 1.31 with its assigned-exercise proof status and the image/kernel definitions and subgroup statements. The current source now supplies Proposition 1.33 proofs on page 29; the former statement-only ending is superseded.",
+        "page_29": "The formerly blank final page now contains the complete image/kernel subgroup checks and injective/surjective definitions. Preserved the identity, closure and inverse reasoning independently for image and kernel, and both quantifier-based function definitions. No source proof substituted.",
+        "page_30": "Preserved the finite equal-cardinality observation with its reference-only status, both directions of the injective-if-and-only-if-trivial-kernel proof, Corollary 1.36 without a separate proof, and the cyclic-group/generator definition. Made the at-most-one kernel argument and its known identity element explicit. Preserved the warning that powers need not be distinct.",
+        "pages_31_32": "Preserved all cyclic examples and the complete infinite/finite classification proof: positive-period set, minimum or infinity, power-map homomorphism, surjectivity, kernel argument, integer division and minimality. Made the final use of Z_n isomorphic to C_n explicit. In the n=1 example the generator 1 is read modulo n. Preserved Definition 1.39 and the order as the generated cyclic subgroup’s cardinality, with finite order identified by the proved least positive period.",
+        "page_33": "Preserved sr^2 and the stated induction to sr^k=r^(-k)s for all integer k, all three hypotheses of Lemma 1.40, and both map formulas. The lemma remains a statement without a supplied proof; no relation-check proof invented."
       },
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
-        "reconstructed_diagram_count": 10,
+        "reconstructed_diagram_count": 13,
         "source_pages": [
           1,
           2,
@@ -869,9 +910,12 @@
           19,
           20,
           21,
-          22
+          22,
+          23,
+          24,
+          28
         ],
-        "render_validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "render_validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
         "corrections": [
           {
             "updated_at": "2026-10-09T15:36:34.384127Z",
@@ -887,21 +931,21 @@
             "failure": null
           }
         ],
-        "new_tikz_blocks": 5,
+        "new_tikz_blocks": 0,
         "modified_tikz_blocks": 0,
         "pending_improvements": []
       },
       "failure": null,
       "changes_from_previous_processed_version": {
-        "previous_processed_source_modified_timestamp": "2026-10-14T19:38:54.572Z",
-        "previous_page_count": 18,
-        "current_page_count": 23,
-        "scope": "Entire current original PDF visually read. Existing source and concept notes, diagrams and manual additions retained. Added only source-supported material, immediate implicit steps and clear notation normalizations; source exercises and unfinished proofs not solved."
+        "previous_processed_source_modified_timestamp": "2026-10-19T22:09:55.321Z",
+        "previous_page_count": 29,
+        "current_page_count": 33,
+        "scope": "Entire current original PDF visually read. Existing mathematics, diagrams and manual additions retained. Source continuations, definitions, proofs and examples transcribed; unresolved source gaps and statement-only results explicitly distinguished. No unfinished exercise or missing source proof solved."
       },
       "organized_style_review": {
         "status": "processed",
-        "completed_at": "2026-10-16T15:07:32.042601Z",
-        "description": "Complete visually read source retained in organized Markdown with explicit mathematical assumptions, semantic proof-status annotations, no proof-ending markers, faithful TikZ drawings, page traceability, preserved manual additions and unanswered exercises.",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "description": "Mathematics presented directly, with source/page traceability, explicit domains and proof status, no proof-ending markers or minor-edit narration, and preserved manual additions.",
         "pending_improvements": [],
         "proof_ending_markers_omitted": true,
         "editing_annotations_rendered_as_semantic_status": true
@@ -934,7 +978,7 @@
       },
       "current_version_diagram_review": {
         "status": "processed",
-        "source_total_page_count": 23,
+        "source_total_page_count": 33,
         "source_pages": [
           1,
           2,
@@ -944,13 +988,17 @@
           19,
           20,
           21,
-          22
+          22,
+          23,
+          24,
+          28
         ],
-        "existing_tikz_blocks_retained": 5,
-        "new_tikz_blocks": 5,
+        "existing_tikz_blocks_retained": 13,
+        "new_tikz_blocks": 0,
         "modified_tikz_blocks": 0,
-        "completed_at": "2026-10-16T15:07:32.042601Z",
-        "validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
+        "new_source_pages": [],
         "pending_improvements": []
       },
       "source_terminology_notes": [
@@ -967,6 +1015,41 @@
           "related_markdown_paths": [
             "Concepts/Isometries and Dihedral Groups.md"
           ]
+        }
+      ],
+      "proof_scope_notes": [
+        {
+          "location": "Pages 25–28, assigned exercises and statement-only results",
+          "detail": "Direct-product group axioms, the Cm-to-Cn power-map example and Lemma 1.31 proofs remain assigned exercises. The Zn-to-Cn example asserts well-definedness and bijectivity. The current source now proves Proposition 1.33 on page 29; its former statement-only status is resolved.",
+          "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+          "related_markdown_paths": [
+            "Concepts/Homomorphisms and Isomorphisms.md"
+          ]
+        },
+        {
+          "location": "Page 30, finite-set observation and Corollary 1.36",
+          "detail": "The equal-cardinality finite-set injective/surjective/bijective equivalence is referenced to Numbers and Sets without a proof here. The isomorphism criterion is stated without a separate proof. Lemma 1.35 itself is fully proved.",
+          "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+          "related_markdown_paths": [
+            "Concepts/Homomorphisms and Isomorphisms.md"
+          ]
+        },
+        {
+          "location": "Page 33, Lemma 1.40",
+          "detail": "The source ends after the dihedral homomorphism statement. All relations and image formulas are retained, with statement-only status; no proof supplied by the source or invented in the notes.",
+          "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+          "related_markdown_paths": [
+            "Concepts/Isometries and Dihedral Groups.md"
+          ]
+        }
+      ],
+      "resolved_previous_review_locations": [
+        {
+          "previous_location": "Page 28, Proposition 1.33 image/kernel subgroup membership stated without proof",
+          "resolved_by_source_pages": [
+            29
+          ],
+          "detail": "The current PDF fills the formerly blank page 29 with the complete image and kernel subgroup proofs. Source and homomorphism concept notes now retain those arguments."
         }
       ],
       "repository_review_2026_10_17": {
@@ -1007,6 +1090,20 @@
           },
           "resolution_report": "Note Review - 2026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 23, corner-preservation claim in Proposition 1.25",
+            "detail": "The current source continues the reverse inclusion on page 24, but leaves the claim that isometries send polygon corners to corners as an exercise. It supplies only a distance-maximizing-diagonal idea and sketches. Preserved the remaining argument and localized this unproved step rather than inventing its proof.",
+            "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+            "related_markdown_paths": [
+              "Concepts/Isometries and Dihedral Groups.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
       "repository_review_2026_10_21": {
@@ -1168,13 +1265,15 @@
       "source_file_name": "Ch.1 Elementary Number Theory.pdf",
       "source_url": "https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-15T13:05:36.787Z",
-      "processed_source_modified_timestamp": "2026-10-15T13:05:36.787Z",
+      "observed_source_modified_timestamp": "2026-10-20T14:33:21.353Z",
+      "processed_source_modified_timestamp": "2026-10-20T14:33:21.353Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
         "Concepts/Natural Numbers and Mathematical Induction.md",
         "Concepts/Divisibility and Prime Numbers.md",
-        "Concepts/Greatest Common Divisors and Euclid's Algorithm.md"
+        "Concepts/Greatest Common Divisors and Euclid's Algorithm.md",
+        "Concepts/Bezout's Identity and Linear Diophantine Equations.md",
+        "Concepts/Modular Arithmetic.md"
       ],
       "material_type": "handwritten lecture notes",
       "course": "Part IA Numbers and Sets",
@@ -1183,7 +1282,7 @@
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [],
-      "total_page_count": 11,
+      "total_page_count": 19,
       "visually_inspected_pages": [
         1,
         2,
@@ -1195,31 +1294,46 @@
         8,
         9,
         10,
-        11
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
       ],
-      "source_sha256": "cb8dc77f29095a856e7b36f58f27ed394e21675a29d59981536c60296ff870ee",
-      "source_size_bytes": 2265022,
+      "source_sha256": "a87978b9c78c52cc8c8ac84ad11ab0fc32da5413b473ff22e0c4393e3b84b0f2",
+      "source_size_bytes": 4960684,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-15T13:19:24.806747Z",
-      "reading_method": "Authenticated Google Drive recursive folder listings and paginated metadata-only searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 24 pages: Elementary Number Theory pages 1–11 and Vectors pages 1–13, with 4x original-page crops of Number Theory pages 8 and 11 and Vectors page 12. Handwritten mathematics and drawings were read from original images; sparse PDF text layers were not used as a substitute. No excluded-folder contents were listed, downloaded or read.",
+      "last_successful_processing_at": "2026-10-20T14:59:54.529738Z",
+      "reading_method": "Fresh authenticated recursive Google Drive listings and scoped, paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository. PyMuPDF verified page counts and rendered every original page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 42 original pages: Elementary Number Theory pages 1–19 and Vectors pages 1–23. Four-times crops of Number Theory pages 15, 17 and 18 and Vectors pages 21 and 22 clarified exponents, residue ticks and indices; a further page-17 crop confirmed the double-exponential bound. Handwriting, mathematics and source drawings were read from original images. Extracted text was only an aid and never a substitute. No excluded folder contents were listed, downloaded or read.",
       "normalizations": {
         "pages_1_2": "Preserved positive-integer convention, successor axioms, induction quantifiers and recursive addition. Explained the base operation and successor recursion without claiming associativity or commutativity proved. Separate concept note labels supplementary explanation.",
         "pages_2_3": "Preserved all arithmetic and order rules with natural-number domains and their check-without-proof status. Made the indicated induction on Q(n) immediate base and step explicit without inventing a converse well-ordering theorem.",
         "page_4": "Normalized the dummy index Q(k) in the strong-induction proof and made its non-empty premise and final contradiction explicit. Omitted the proof-ending square.",
         "pages_5_7": "Preserved integer identity/inverses, positive multiplier for order, rational denominator restrictions and equivalence relation, addition formula, inclusions, and divisibility/prime/composite definitions. No unprovided multiplication formula or theorem proof attributed to the source.",
         "page_7_prime_factorization": "Added Proposition 2 and its complete strong-induction proof, preserving the smaller-factor inequalities and concatenated prime products.",
-        "page_8": "Preserved the finite-prime-list contradiction, all example integers and factorization questions, and the statement-only status of Euclid’s lemma. Did not claim N is prime or add a uniqueness proof or answer to the comparison exercise. Checked the numerical source factorization for QA.",
+        "page_8": "Preserved the finite-prime-list contradiction, all example integers and factorization questions, and the statement-only status of Euclid’s lemma. Did not claim N is prime or add a uniqueness proof or answer to the comparison exercise. Checked the numerical source factorization for QA. Current version: the source now proves Euclid’s lemma on page 13 and uniqueness on page 14; the earlier limitation is superseded, and the notes link forward to those proofs.",
         "page_9": "Preserved both defining gcd properties and all divisor lists for 12 and 18. Made the immediate n=1 division-theorem base cases explicit. Kept the two induction cases and the strict remainder difference bound in the uniqueness proof.",
         "page_10": "Normalized the final quotient index to q_(n+1) to match its division stage. Made immediate termination when b divides a explicit. Distinguished n<b positive remainders from the final zero-remainder division. Retained both divisibility directions in the correctness proof.",
-        "page_11": "Recorded gcd(87,52)=1 from the last non-zero remainder in the complete displayed sequence. Normalized the final value consistently with that sequence and omitted terminal proof marks. Both worked gcd examples were independently checked."
+        "page_11": "Recorded gcd(87,52)=1 from the last non-zero remainder in the complete displayed sequence. Normalized the final value consistently with that sequence and omitted terminal proof marks. Both worked gcd examples were independently checked. Current addition: preserved coprimality, the complete reverse substitutions 1=-5*52+3*87, Theorem 7 and its constructive proof. Made the immediate one-remainder and zero-remainder termination cases explicit.",
+        "page_12": "Preserved the least-positive-combination proof and both divisibility directions, the remainder contradiction, and the existence-versus-algorithm remark. Normalized the coefficient-domain R slip to Z, as required by the theorem and the subsequent universally quantified integer combinations. Made non-emptiness and well-ordering explicit.",
+        "page_13": "Preserved both integer-equation examples, Corollary 8 with both directions, and the complete Euclid-lemma proof. Normalized the obvious gcd(a,b) slip in that proof to gcd(p,a), as established by p prime, p not dividing a and xp+ya=1. Made the parity obstruction, target c integer and scaling coefficients explicit. Checked the numerical identities.",
+        "page_14": "Preserved the iterated-prime-divisor remark, necessary primality assumption and complete uniqueness proof of the fundamental theorem of arithmetic. Made the immediate quotient-1/empty-product boundary explicit without adding an answer to the earlier comparison exercise. Omitted proof-ending markers.",
+        "page_15": "Preserved the Z[sqrt(-3)] example, its addition/product calculations and factorization terminology. Flagged the substantive prime-versus-irreducible distinction rather than silently changing its meaning. Preserved all bounded-exponent divisor formulas and example exponents; positive-divisor scope is explicit.",
+        "page_16": "Preserved both factorizations, complete common-divisor and common-multiple exponent ranges, gcd/min and lcm/max formulas and gcd*lcm=xy. Made the common integer multiple parameter explicit without excluding zero or negative multiples. Checked numerical prime-exponent examples.",
+        "page_17": "Preserved the source attribution, full square-times-squarefree counting argument and N>4^k contradiction. Made integer exponent parity and the floor(sqrt(N)) count explicit. Preserved the asserted p_k<2^(2^k), p_k<4^k and prime-number-theorem statements without inventing their derivations. A detailed crop confirmed the double exponent.",
+        "pages_18_19": "Preserved the n>=2 scope, all congruence equivalences, notation and 2=16 mod 7 example, both representative-independence divisibility calculations, inherited arithmetic rules and the complete modular obstruction for 2a^2+3b^2=1. Made the integer multiplier explicit. The cyclic diagram retains all nine ticks and both unlabelled ticks, with no inferred n."
       },
       "last_attempt": {
-        "date": "2026-10-15",
-        "completed_at": "2026-10-15T13:19:24.806747Z",
+        "date": "2026-10-20",
+        "completed_at": "2026-10-20T14:59:54.529738Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-15T13:05:36.787Z",
-        "total_page_count": 11,
+        "source_modified_timestamp": "2026-10-20T14:33:21.353Z",
+        "total_page_count": 19,
         "visually_inspected_pages": [
           1,
           2,
@@ -1231,27 +1345,45 @@
           8,
           9,
           10,
-          11
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
         ],
         "failure": null
       },
       "changes_from_previous_processed_version": {
-        "previous_processed_source_modified_timestamp": "2026-10-13T11:13:07.583Z",
-        "previous_page_count": 7,
-        "current_page_count": 11,
-        "scope": "Entire current original PDF visually read. Existing notes, manual supplements and source-supported content retained; only source additions, immediate explanatory steps and unambiguous mathematical normalizations added. Unanswered source questions remain unanswered."
+        "previous_processed_source_modified_timestamp": "2026-10-18T22:32:19.206Z",
+        "previous_page_count": 14,
+        "current_page_count": 19,
+        "scope": "Entire current original PDF visually read. Preserved existing mathematics, unchanged drawings and manual additions; transcribed new source content, made immediate implicit steps explicit and normalized unambiguous notation. The vector-equation TODO is resolved by the source continuation, not by an invented solution. Supplementary teaching material is labelled separately."
       },
       "failure": null,
       "organized_style_review": {
         "status": "processed",
-        "completed_at": "2026-10-15T13:19:24.806747Z",
-        "description": "Clean mathematical Markdown with explicit proof status, omitted proof-ending markers, preserved source questions, practical page traceability and manual additions.",
-        "pending_improvements": []
+        "completed_at": "2026-10-20T14:59:54.529738Z",
+        "description": "Organized mathematical Markdown with precise source pages and proof status, no proof-ending markers, preserved unanswered source questions and manual additions. Supplementary explanation is separated from source attribution.",
+        "pending_improvements": [],
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true
       },
       "proof_scope_notes": [
         {
-          "location": "Page 8, Proposition 4 and uniqueness questions",
-          "detail": "Euclid’s lemma is stated without proof. Prime-factorization uniqueness and the large-product comparison remain unanswered source questions. Their status is explicit; no proof or answer was added.",
+          "location": "Page 8, large-product comparison question",
+          "detail": "The comparison 9049*40099 != 6701*54151 remains an unanswered source question. The current expanded PDF now supplies full proofs of Euclid’s lemma on page 13 and prime-factorization uniqueness on page 14, so the previous statement-only and missing-uniqueness limitations are resolved.",
+          "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+          "related_markdown_paths": [
+            "Concepts/Divisibility and Prime Numbers.md"
+          ]
+        },
+        {
+          "location": "Page 17, quantitative prime bounds and prime number theorem",
+          "detail": "The source states p_k<2^(2^k) and p_k<4^k alongside the two proofs, without separate bound derivations, and states p_k~k log k without proving the prime number theorem. Their statement-only status is explicit.",
           "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
           "related_markdown_paths": [
             "Concepts/Divisibility and Prime Numbers.md"
@@ -1259,11 +1391,38 @@
         }
       ],
       "diagrams": {
-        "representation": "No geometric source diagrams",
-        "reconstructed_diagram_count": 0,
-        "source_pages": [],
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 1,
+        "source_pages": [
+          18
+        ],
+        "render_validation": "The exact new embedded Number Theory page-18 TikZ block was compiled successfully with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and its final preview actually inspected with view_image against the original page and detailed crop. The final reconstruction preserves all nine source ticks, including both unlabelled ticks, the clockwise residue order, the top 0=n and the n-1/n-2 labels; no numerical value of n is inferred. All 14 existing vector TikZ blocks are byte-for-byte unchanged and were compared against the completely read current source. No vector drawing is newly compiled in this run. The user’s Obsidian application was not accessed; local compilation does not establish rendering in Obsidian.",
         "pending_improvements": [],
-        "reason": "The Euclidean algorithm layout is transcribed as a Markdown table with equations, input, remainder conditions and output; it carries algorithm structure rather than geometric information."
+        "new_tikz_blocks": 1,
+        "modified_tikz_blocks": 0
+      },
+      "resolved_previous_review_locations": [
+        {
+          "previous_location": "Page 8, Proposition 4 and prime-factorization uniqueness",
+          "resolved_by_source_pages": [
+            13,
+            14
+          ],
+          "detail": "The newly read expanded version provides the Euclid-lemma proof using Bezout and the fundamental-theorem-of-arithmetic proof using induction and prime cancellation. The separate comparison question remains unanswered."
+        }
+      ],
+      "current_version_diagram_review": {
+        "status": "processed",
+        "completed_at": "2026-10-20T14:59:54.529738Z",
+        "source_total_page_count": 19,
+        "source_pages": [
+          18
+        ],
+        "existing_tikz_blocks_retained": 0,
+        "new_tikz_blocks": 1,
+        "modified_tikz_blocks": 0,
+        "validation": "The exact new embedded Number Theory page-18 TikZ block was compiled successfully with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and its final preview actually inspected with view_image against the original page and detailed crop. The final reconstruction preserves all nine source ticks, including both unlabelled ticks, the clockwise residue order, the top 0=n and the n-1/n-2 labels; no numerical value of n is inferred. All 14 existing vector TikZ blocks are byte-for-byte unchanged and were compared against the completely read current source. No vector drawing is newly compiled in this run. The user’s Obsidian application was not accessed; local compilation does not establish rendering in Obsidian.",
+        "pending_improvements": []
       },
       "repository_review_2026_10_17": {
         "scope": "Markdown mathematical review only; historical source-processing and visual coverage unchanged",
@@ -1288,7 +1447,23 @@
         ],
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
-      }
+      },
+      "resolved_repository_reviews": [
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 15, factorization in Z[sqrt(-3)]",
+            "detail": "The source calls 1+sqrt(-3) and 1-sqrt(-3) prime in its non-unique-factorization example. Under the standard prime-element definition they are not prime: each divides 2*2 without dividing 2. The intended factors are irreducibles. Preserved the example and the source terminology, with a localized TODO explaining the distinction and an explicit non-divisibility witness; the source provides no definition/proof of irreducibility.",
+            "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+            "related_markdown_paths": [
+              "Concepts/Divisibility and Prime Numbers.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
+        }
+      ]
     },
     "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo": {
       "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
@@ -1620,12 +1795,12 @@
       "source_file_name": "Ch.2 Vectors.pdf",
       "source_url": "https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-15T13:05:39.732Z",
-      "processed_source_modified_timestamp": "2026-10-15T13:05:39.732Z",
+      "observed_source_modified_timestamp": "2026-10-20T14:33:51.848Z",
+      "processed_source_modified_timestamp": "2026-10-20T14:33:51.848Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
-      "total_page_count": 13,
+      "total_page_count": 23,
       "visually_inspected_pages": [
         1,
         2,
@@ -1639,21 +1814,31 @@
         10,
         11,
         12,
-        13
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
       ],
-      "source_sha256": "2dba092405d144b17c304987756312704bd291b4393113336a2323ec8dca5893",
-      "source_size_bytes": 2485644,
+      "source_sha256": "0234fae43c4ec3b0189e1901d2ce5684f8568805bfab1cae212edd723d17fd17",
+      "source_size_bytes": 4811044,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-15T13:19:24.806747Z",
-      "reading_method": "Authenticated Google Drive recursive folder listings and paginated metadata-only searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false; supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 24 pages: Elementary Number Theory pages 1–11 and Vectors pages 1–13, with 4x original-page crops of Number Theory pages 8 and 11 and Vectors page 12. Handwritten mathematics and drawings were read from original images; sparse PDF text layers were not used as a substitute. No excluded-folder contents were listed, downloaded or read.",
+      "last_successful_processing_at": "2026-10-20T14:59:54.529738Z",
+      "reading_method": "Fresh authenticated recursive Google Drive listings and scoped, paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository. PyMuPDF verified page counts and rendered every original page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 42 original pages: Elementary Number Theory pages 1–19 and Vectors pages 1–23. Four-times crops of Number Theory pages 15, 17 and 18 and Vectors pages 21 and 22 clarified exponents, residue ticks and indices; a further page-17 crop confirmed the double-exponential bound. Handwriting, mathematics and source drawings were read from original images. Extracted text was only an aid and never a substitute. No excluded folder contents were listed, downloaded or read.",
       "failure": null,
       "last_attempt": {
-        "date": "2026-10-15",
-        "completed_at": "2026-10-15T13:19:24.806747Z",
+        "date": "2026-10-20",
+        "completed_at": "2026-10-20T14:59:54.529738Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-15T13:05:39.732Z",
-        "total_page_count": 13,
+        "source_modified_timestamp": "2026-10-20T14:33:51.848Z",
+        "total_page_count": 23,
         "visually_inspected_pages": [
           1,
           2,
@@ -1667,21 +1852,33 @@
           10,
           11,
           12,
-          13
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
         ],
         "failure": null
       },
       "organized_style_review": {
         "status": "processed",
-        "completed_at": "2026-10-15T13:19:24.806747Z",
-        "description": "Clean mathematical Markdown with explicit proof status, omitted proof-ending markers, preserved source questions, practical page traceability and manual additions.",
-        "pending_improvements": []
+        "completed_at": "2026-10-20T14:59:54.529738Z",
+        "description": "Organized mathematical Markdown with precise source pages and proof status, no proof-ending markers, preserved unanswered source questions and manual additions. Supplementary explanation is separated from source attribution.",
+        "pending_improvements": [],
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true
       },
       "changes_from_previous_processed_version": {
-        "previous_processed_source_modified_timestamp": "2026-10-13T11:13:10.804Z",
-        "previous_page_count": 8,
-        "current_page_count": 13,
-        "scope": "Entire current original PDF visually read. Existing notes, manual supplements and source-supported content retained; only source additions, immediate explanatory steps and unambiguous mathematical normalizations added. Unanswered source questions remain unanswered."
+        "previous_processed_source_modified_timestamp": "2026-10-18T22:32:43.478Z",
+        "previous_page_count": 18,
+        "current_page_count": 23,
+        "scope": "Entire current original PDF visually read. Preserved existing mathematics, unchanged drawings and manual additions; transcribed new source content, made immediate implicit steps explicit and normalized unambiguous notation. The vector-equation TODO is resolved by the source continuation, not by an invented solution. Supplementary teaching material is labelled separately."
       },
       "material_type": "handwritten lecture notes",
       "course": "Part IA Vectors and Matrices",
@@ -1691,7 +1888,9 @@
         "Concepts/Vectors and Linear Span.md",
         "Concepts/Real Inner Products and Cauchy-Schwarz.md",
         "Concepts/Orthonormal Bases and Vector Coordinates.md",
-        "Concepts/Cross Products and Scalar Triple Products.md"
+        "Concepts/Cross Products and Scalar Triple Products.md",
+        "Concepts/Lines, Planes and Vector Equations.md",
+        "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md"
       ],
       "unresolved_todos": [],
       "normalizations": {
@@ -1701,11 +1900,21 @@
         "pages_9_10": "Preserved the R3 orthonormal-basis scope, Kronecker delta, unique expansion, component projections, row/column coordinates, six vanishing mixed dot-product terms, norm squares and the standard i/j/k notation.",
         "pages_10_11": "Made the hatted normal explicitly unit length and the non-zero/non-parallel geometric case explicit. Preserved the right-hand rule, opposite oriented angle, all six properties, vector-area orientation and triangle area.",
         "page_12": "Preserved the perpendicular-plane scaling/quarter-turn interpretation. Corrected the obvious reverse-index slips in the first two signed standard-basis identities using the preceding antisymmetry property and the source coordinate formula. Kept the determinant notation as a mnemonic; the coefficients and orthogonality identities were checked symbolically.",
-        "page_13": "Preserved all cyclic and sign-reversing scalar-triple-product identities, repeated-vector zero case, right-handed determinant and absolute height/volume derivation. Kept the non-parallel base hypothesis. Reconstructed only the source base, c, normal and height geometry."
+        "page_13": "Preserved all cyclic and sign-reversing scalar-triple-product identities, repeated-vector zero case, right-handed determinant and absolute height/volume derivation. Kept the non-parallel base hypothesis. Reconstructed only the source base, c, normal and height geometry.",
+        "page_14": "Preserved signed volume, coplanarity equivalence, both vector triple-product identities and non-associativity, and the line equations with non-zero direction. These identities are stated on page 14; the current source now proves the first on page 22, while no separate proof of the second is supplied. Reconstructed both the isolated position-vector sketch and affine-line geometry in one fenced block.",
+        "page_15": "Preserved all plane equations, the origin-distance calculation and the three-point equation. Normalized the duplicate u label on the second red displacement to v=c-a, consistent with u=b-a and the source normal (b-a) cross (c-a). Retained the open right side of the plane sketch, all vector incidence and meaningful colours.",
+        "page_16": "Preserved every triple-product step and the three intersection cases. Made the equivalent sign reversal from u cross r = u cross a to r cross u = a cross u explicit before crossing with n. Checked the formula symbolically against both the line and plane equations and its parametric equivalent.",
+        "page_17": "Made the source formula’s required non-parallel, non-zero-direction scope explicit. Preserved the fixed normal projection, Cauchy-Schwarz lower bound, full attainment decomposition and chosen parameters. Made the immediate basis fact explicit; no parallel-case formula or undrawn common perpendicular added.",
+        "page_18": "The current version now supplies the vector-equation solution on pages 18–19, superseding the earlier unfinished ending. Preserved the full expansion, dot-product cancellation, substitution and three solution cases; no external solution substituted.",
+        "pages_18_19": "Preserved all three vector-equation cases, the consistency condition and the plane of solutions. Made b nonzero in the dot-product-1 case explicit. Corrected the prior automated heading from 2.7 to source section 2.6.5, reserving 2.7 for index notation.",
+        "pages_19_20": "Preserved Kronecker delta symmetry, the double-sum dot product, all six nonzero Levi-Civita permutations, antisymmetry, repeated-index zeros and the explicit basis/vector cross-product sums.",
+        "page_21": "Preserved all summation examples, the scalar triple product, delta trace and free/contracted-index rules. Renamed dummy indices in the intermediate whole-vector expression to avoid collision with the free component index i. This unambiguous normalization is established by the source’s final component formula.",
+        "page_22": "Preserved the full six-term epsilon product and determinant, all three contraction identities with statement-only status, and every vector triple-product proof step. Made the cyclic epsilon rotation and equality-of-components conclusion explicit. Exhaustively checked all fixed-index epsilon identities and symbolically checked the vector identity.",
+        "page_23": "Preserved the complete Lagrange-identity contraction proof. Made the cyclic rotations aligning the contracted first positions explicit. Checked the identity symbolically and with the supplementary numerical example."
       },
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
-        "reconstructed_diagram_count": 10,
+        "reconstructed_diagram_count": 14,
         "source_pages": [
           1,
           2,
@@ -1714,11 +1923,14 @@
           10,
           11,
           12,
-          13
+          13,
+          14,
+          15,
+          17
         ],
-        "render_validation": "All four exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The volume diagram label B was moved clear of its edge, then the exact final block was recompiled and visually rechecked. Drawings preserve the projected cross-product normal and angle, blue-hatched vector area with translated red edges, rotation/scaling plane with red normal, blue x and gold a-cross-x, and the base with c and its blue perpendicular height. Existing six vector blocks were retained and checked against the fully read current source. Coordinates are schematic drawing choices. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "render_validation": "The exact new embedded Number Theory page-18 TikZ block was compiled successfully with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and its final preview actually inspected with view_image against the original page and detailed crop. The final reconstruction preserves all nine source ticks, including both unlabelled ticks, the clockwise residue order, the top 0=n and the n-1/n-2 labels; no numerical value of n is inferred. All 14 existing vector TikZ blocks are byte-for-byte unchanged and were compared against the completely read current source. No vector drawing is newly compiled in this run. The user’s Obsidian application was not accessed; local compilation does not establish rendering in Obsidian.",
         "pending_improvements": [],
-        "new_tikz_blocks": 4,
+        "new_tikz_blocks": 0,
         "modified_tikz_blocks": 0
       },
       "diagram_upgrades": {
@@ -1755,7 +1967,8 @@
       },
       "current_version_diagram_review": {
         "status": "processed",
-        "source_total_page_count": 13,
+        "completed_at": "2026-10-20T14:59:54.529738Z",
+        "source_total_page_count": 23,
         "source_pages": [
           1,
           2,
@@ -1764,31 +1977,75 @@
           10,
           11,
           12,
-          13
+          13,
+          14,
+          15,
+          17
         ],
-        "existing_tikz_blocks_retained": 6,
-        "new_tikz_blocks": 4,
-        "completed_at": "2026-10-15T13:19:24.806747Z",
-        "validation": "All four exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original source. The volume diagram label B was moved clear of its edge, then the exact final block was recompiled and visually rechecked. Drawings preserve the projected cross-product normal and angle, blue-hatched vector area with translated red edges, rotation/scaling plane with red normal, blue x and gold a-cross-x, and the base with c and its blue perpendicular height. Existing six vector blocks were retained and checked against the fully read current source. Coordinates are schematic drawing choices. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
-        "pending_improvements": [],
-        "new_diagram_locations": [
-          {
-            "page": 10,
-            "description": "Cross product, angle and red normal."
-          },
-          {
-            "page": 11,
-            "description": "Blue-hatched vector area with black original and red translated edges."
-          },
-          {
-            "page": 12,
-            "description": "Perpendicular-plane scaling and rotation with three meaningful arrow colours."
-          },
-          {
-            "page": 13,
-            "description": "Parallelogram base, normal, c and blue perpendicular height."
-          }
-        ]
+        "existing_tikz_blocks_retained": 14,
+        "new_tikz_blocks": 0,
+        "modified_tikz_blocks": 0,
+        "validation": "The exact new embedded Number Theory page-18 TikZ block was compiled successfully with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and its final preview actually inspected with view_image against the original page and detailed crop. The final reconstruction preserves all nine source ticks, including both unlabelled ticks, the clockwise residue order, the top 0=n and the n-1/n-2 labels; no numerical value of n is inferred. All 14 existing vector TikZ blocks are byte-for-byte unchanged and were compared against the completely read current source. No vector drawing is newly compiled in this run. The user’s Obsidian application was not accessed; local compilation does not establish rendering in Obsidian.",
+        "pending_improvements": []
+      },
+      "proof_scope_notes": [
+        {
+          "location": "Page 14, vector triple-product identities",
+          "detail": "Page 14 states both vector triple-product identities. The current source proves the first on page 22 using epsilon contraction; no separate proof of the second is supplied. Both were checked symbolically.",
+          "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+          "related_markdown_paths": [
+            "Concepts/Cross Products and Scalar Triple Products.md"
+          ]
+        },
+        {
+          "location": "Page 17, shortest distance between two lines",
+          "detail": "The formula and attainment proof require non-parallel directions, as their cross product is divided by its length. This scope is explicit. The parallel-lines case is not supplied by the source.",
+          "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+          "related_markdown_paths": [
+            "Concepts/Lines, Planes and Vector Equations.md"
+          ]
+        },
+        {
+          "location": "Page 22, epsilon identities proposition",
+          "detail": "The six-term determinant identity and one-, two- and three-index contractions are stated without source proofs. The separately labelled supplementary guide proves the one-index contraction by cases and explains the other two by counting nonzero entries. No supplementary proof is attributed to the lecture.",
+          "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+          "related_markdown_paths": [
+            "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md"
+          ]
+        }
+      ],
+      "resolved_previous_review_locations": [
+        {
+          "previous_location": "Page 18, section 2.7 vector equation",
+          "resolved_by_source_pages": [
+            18,
+            19
+          ],
+          "detail": "The current source supplies the complete solution, including unique, inconsistent and plane-of-solutions cases. Removed the obsolete unfinished-ending TODO from the source and concept note."
+        },
+        {
+          "previous_location": "Page 14, first vector triple-product identity statement only",
+          "resolved_by_source_pages": [
+            22
+          ],
+          "detail": "The current source supplies a component proof of a cross (b cross c). The differently parenthesized identity remains without a separate supplied proof."
+        }
+      ],
+      "supplementary_explanation": {
+        "status": "processed",
+        "date": "2026-10-20",
+        "markdown_path": "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md",
+        "topics": [
+          "Kronecker delta",
+          "Levi-Civita symbol",
+          "Einstein summation convention",
+          "free and dummy indices",
+          "epsilon contractions",
+          "vector triple products"
+        ],
+        "scope": "User-requested supplementary first-year guide. Explicit sum expansions, numerical vectors, sign and contraction explanations, a case proof and practice with answers are labelled separately from the lecture. Linked from source, coordinate and cross-product notes.",
+        "validation": "All 729 fixed-index uncontracted epsilon cases, 81 one-index contraction cases, 9 two-index contraction cases and the full contraction checked. Vector triple/Lagrange identities and the vector-equation solution checked symbolically; every numerical guide result independently checked.",
+        "pending_improvements": []
       },
       "repository_review_2026_10_17": {
         "scope": "Markdown mathematical review only; historical source-processing and visual coverage unchanged",
@@ -2323,6 +2580,20 @@
           },
           "resolution_report": "Note Review - 2026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Pages 2–3, summed area-error estimate",
+            "detail": "The N O((Delta x)^2)=O(1/N) step needs an O-constant uniform over the partition. Pointwise differentiability alone does not establish it. Source argument retained with a localized TODO; no replacement proof supplied.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+            "related_markdown_paths": [
+              "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
       "repository_review_2026_10_21": {
@@ -2344,60 +2615,81 @@
       "source_file_name": "Ch.3 Partial Differentiation.pdf",
       "source_url": "https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Differential Equations",
-      "observed_source_modified_timestamp": "2026-10-16T14:53:54.975Z",
-      "processed_source_modified_timestamp": "2026-10-16T14:53:54.975Z",
+      "observed_source_modified_timestamp": "2026-10-21T11:44:52.843Z",
+      "processed_source_modified_timestamp": "2026-10-21T11:44:52.843Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
       "material_type": "handwritten lecture notes",
       "course": "Part IA Differential Equations",
       "source_date": null,
-      "total_page_count": 4,
+      "total_page_count": 11,
       "visually_inspected_pages": [
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
       ],
-      "source_sha256": "7578bc7c7338a90987ebc5f001d0291d58479c43153a79140a4fab71daaf3dfb",
-      "source_size_bytes": 1144399,
+      "source_sha256": "3d68e42cbe32fa916cf6193c38003002a4d107f5366c08b668cdd43a156dcf6f",
+      "source_size_bytes": 2401449,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-16T15:07:32.042601Z",
-      "reading_method": "Authenticated Google Drive recursive listings and paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 34 pages: Groups pages 1–23, Partial Differentiation pages 1–4 and Integration pages 1–7, with a 4x original-page crop of the Groups page-19 distance formula. Original handwritten mathematics and drawings were read visually; PDF text layers were only aids and never substitutes for visual reading. No excluded-folder contents were listed, downloaded or read.",
+      "last_successful_processing_at": "2026-10-21T12:04:11.839041Z",
+      "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
       "failure": null,
       "last_attempt": {
-        "date": "2026-10-16",
-        "completed_at": "2026-10-16T15:07:32.042601Z",
+        "date": "2026-10-21",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
         "status": "processed",
-        "source_modified_timestamp": "2026-10-16T14:53:54.975Z",
-        "total_page_count": 4,
+        "source_modified_timestamp": "2026-10-21T11:44:52.843Z",
+        "total_page_count": 11,
         "visually_inspected_pages": [
           1,
           2,
           3,
-          4
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
         ],
         "failure": null
       },
       "organized_style_review": {
         "status": "processed",
-        "completed_at": "2026-10-16T15:07:32.042601Z",
-        "description": "Complete visually read source retained in organized Markdown with explicit mathematical assumptions, semantic proof-status annotations, no proof-ending markers, faithful TikZ drawings, page traceability, preserved manual additions and unanswered exercises.",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "description": "Mathematics presented directly, with source/page traceability, explicit domains and proof status, no proof-ending markers or minor-edit narration, and preserved manual additions.",
         "pending_improvements": [],
         "proof_ending_markers_omitted": true,
         "editing_annotations_rendered_as_semantic_status": true
       },
       "markdown_paths": [
         "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
-        "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
+        "Concepts/Partial Derivatives and the Multivariate Chain Rule.md",
+        "Concepts/Implicit Differentiation.md",
+        "Concepts/Differentiation Under the Integral Sign.md"
       ],
       "unresolved_todos": [],
       "normalizations": {
         "page_1": "Preserved multivariate examples, qualitative contour geometry, direction-dependent slope and fixed-variable derivative limit. Added no numerical levels or source function to the drawing.",
         "page_2": "Preserved all first/second/mixed derivative computations and the source rightmost-first f_xy convention. Stated Schwarz continuity in a neighbourhood explicitly, preserving statement-only status. Checked every example derivative symbolically.",
         "page_3": "Normalized f_yx in the x-expansion of f_y to f_xy consistently with the page-2 source convention. Preserved all increment and remainder terms and flagged the essential regularity/uniformity gap.",
-        "page_4": "Preserved the incorrect unscaled-limit definition with an explicit error annotation. Kept differential, path chain rule, y(x) case and path-integral formula. Made differentiability and integration regularity, path evaluation and endpoint notation explicit; did not attribute a rigorous proof to the incomplete source argument."
+        "page_4": "Preserved the incorrect unscaled-limit definition with an explicit error annotation. Kept differential, path chain rule, y(x) case and path-integral formula. Made differentiability and integration regularity, path evaluation and endpoint notation explicit; did not attribute a rigorous proof to the incomplete source argument.",
+        "page_5": "Preserved the polar-coordinate drawing and both full fixed-variable chain-rule equations. Normalized the repeated x in each y-contribution to y, as the sin(theta) and r*cos(theta) annotations establish. Made the standard coordinate relations and resulting formulas explicit; checked the formulas symbolically.",
+        "pages_6_8": "Preserved the three-variable differential, level-surface setting, implicit polynomial example, all derivative steps, the two distinct fixed-variable meanings, cyclic rule and both qualitative source drawings. Made local differentiability and non-zero-denominator scope explicit. Checked the implicit example and cyclic cancellation symbolically; invented no source level-surface equation.",
+        "page_9": "Preserved the reciprocal rule and its indicated ratio proof, emphasizing the same held-fixed variable. Preserved the polar example showing that different held-fixed coordinates need not yield reciprocal derivatives. Inspected the original reciprocal formula at four-times scale.",
+        "pages_9_10": "Preserved Leibniz’s integral rule, parameter/endpoints, complete difference-quotient split, fixed-interval contribution, mean-value upper-endpoint term and the analogous negative lower-endpoint term. Normalized dummy increment h and old-endpoint notation consistently; described the intermediate point as between endpoints in either order. Added sufficient regularity for the formula, while explicitly retaining the unproved limit–integral interchange as a TODO.",
+        "page_11": "Preserved the complete moving-endpoint example I(lambda)=integral_0^lambda exp(-lambda*x^2) dx, including the endpoint exp(-lambda^3), and the factorial-integral parameter calculation. Made d(lambda)/d(lambda)=1, the lambda>0 domain and non-negative integer n explicit. Differentiation of the improper integral is flagged as unjustified rather than silently supplied with a new proof. Checked the derivative and integral identities symbolically."
       },
       "proof_scope_notes": [
         {
@@ -2408,27 +2700,40 @@
       ],
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
-        "reconstructed_diagram_count": 1,
+        "reconstructed_diagram_count": 4,
         "source_pages": [
-          1
+          1,
+          5,
+          6,
+          8
         ],
-        "new_tikz_blocks": 1,
+        "new_tikz_blocks": 0,
         "modified_tikz_blocks": 0,
-        "render_validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "render_validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
         "pending_improvements": []
       },
       "current_version_diagram_review": {
         "status": "processed",
-        "source_total_page_count": 4,
+        "source_total_page_count": 11,
         "source_pages": [
-          1
+          1,
+          5,
+          6,
+          8
         ],
-        "existing_tikz_blocks_retained": 0,
-        "new_tikz_blocks": 1,
+        "existing_tikz_blocks_retained": 4,
+        "new_tikz_blocks": 0,
         "modified_tikz_blocks": 0,
-        "completed_at": "2026-10-16T15:07:32.042601Z",
-        "validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
+        "new_source_pages": [],
         "pending_improvements": []
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": "2026-10-19T22:09:14.393Z",
+        "previous_page_count": 10,
+        "current_page_count": 11,
+        "scope": "Entire current original PDF visually read. Existing mathematics, diagrams and manual additions retained. Source continuations, definitions, proofs and examples transcribed; unresolved source gaps and statement-only results explicitly distinguished. No unfinished exercise or missing source proof solved."
       },
       "repository_review_2026_10_17": {
         "scope": "Markdown mathematical review only; historical source-processing and visual coverage unchanged",
@@ -2475,6 +2780,62 @@
           },
           "resolution_report": "Note Review - 2026-10-21.md",
           "resolution_basis": "Explicit supplementary mathematical proof/correction or independently located reference; original PDF not modified or reread"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 3, simultaneous-increment derivation",
+            "detail": "The Taylor argument uses a mixed derivative and a remainder at a moving base point without establishing sufficient regularity or uniform remainder control for the two-variable limit. Calculation retained with a localized TODO; no new proof supplied.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+            "related_markdown_paths": [
+              "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 4, definition of df as an unscaled limit",
+            "detail": "The source defines df as lim delta f as the coordinate increments tend to zero. For continuous f this limit is zero, not the differential. Incorrect definition explicitly retained and flagged; the stated linear differential and chain rule are given separately with differentiability assumptions.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+            "related_markdown_paths": [
+              "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 10, differentiation under the integral sign",
+            "detail": "The proof moves the limit through the fixed-interval integral without stating hypotheses or justifying the interchange. The complete difference-quotient decomposition and mean-value endpoint calculation are retained, with sufficient regularity stated for the theorem and a localized TODO for the missing proof step.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+            "related_markdown_paths": [
+              "Concepts/Differentiation Under the Integral Sign.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
+        },
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 11, repeated differentiation under an improper integral",
+            "detail": "The factorial-integral computation moves n derivatives through an integral on [0,infinity) without an appropriate interchange justification near lambda>0. Preserved the full computation and result, with n a non-negative integer and lambda positive; localized TODO distinguishes this missing argument from the finite-interval rule.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+            "related_markdown_paths": [
+              "Concepts/Differentiation Under the Integral Sign.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
       ],
       "repository_review_2026_10_21": {
@@ -2490,28 +2851,157 @@
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
       }
+    },
+    "1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3": {
+      "drive_file_id": "1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3",
+      "source_file_name": "Ch.4 First-order Linear Differential Equations.pdf",
+      "source_url": "https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations",
+      "status": "processed",
+      "classification": "study_material",
+      "skip_reason": null,
+      "material_type": "handwritten lecture notes",
+      "course": "Part IA Differential Equations",
+      "source_date": null,
+      "markdown_paths": [
+        "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "Concepts/First-Order Linear Differential Equations.md",
+        "Concepts/Forward Euler Method.md"
+      ],
+      "unresolved_todos": [],
+      "normalizations": {
+        "page_1": "Preserved order/linearity/ordinary terminology and the x^2*y+y_prime example, exponential series, binomial limit calculation, termwise derivative and ODE characterization. Clarified that dependent-variable derivatives also appear linearly. Kept analytic convergence/interchange and existence/uniqueness proofs as not supplied, rather than inventing them.",
+        "page_2": "Preserved the exponential addition law and external-proof reference, e limit/value, logarithm inverse, positive-real-base power derivative and differentiation eigenfunction example. Made the implicit x>0 log input, a>0 real base and nonzero eigenfunction conditions explicit; did not add a general spectral theorem.",
+        "page_3": "Corrected the first independent/dependent label to dependent because the displayed nontrivial zero combination and subsequent equivalent description unambiguously establish dependence. Recorded this minor normalization here. Preserved the independent alternative, common domain, homogeneous zero/scalar-multiple properties, constant-coefficient discussion and higher-order exponential/polynomial examples. Flagged the separate substantive solution-count scope omission.",
+        "pages_4_5": "Preserved the exponential trial and characteristic equation 5*lambda-3=0, general solution and y(0)=y0 condition; made the zero A case explicit after dividing under A nonzero. Retained suitable-condition wording rather than promising arbitrary boundary conditions give uniqueness. Distinguished exact sampled values from computed numerical approximations and wrote the derivative finite difference as approximate. Preserved all recurrence steps and y_n=(1+3h/5)^n*y0. No unprovided Euler error/convergence result added."
+      },
+      "proof_scope_notes": [
+        {
+          "location": "Pages 1–2, exponential calculations and proof references",
+          "detail": "The source presents the binomial-limit passage and termwise derivative calculation without analytic justifications, characterizes exp via an initial-value problem without existence/uniqueness proof, and refers elsewhere for the addition-law proof. These statuses are explicit.",
+          "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+          "related_markdown_paths": [
+            "Concepts/First-Order Linear Differential Equations.md"
+          ]
+        },
+        {
+          "location": "Pages 3–5, higher-order remarks and numerical analysis",
+          "detail": "Higher-order exponential/polynomial solution forms are only mentioned, not developed into a general method. The source derives the example Euler recurrence and its closed form but supplies no error or convergence analysis.",
+          "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+          "related_markdown_paths": [
+            "Concepts/First-Order Linear Differential Equations.md",
+            "Concepts/Forward Euler Method.md"
+          ]
+        }
+      ],
+      "observed_source_modified_timestamp": "2026-10-21T11:45:01.516Z",
+      "processed_source_modified_timestamp": "2026-10-21T11:45:01.516Z",
+      "total_page_count": 5,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_sha256": "2c2f059fa04356264f40f1d17f458d3a5c4171ceb843487c4545a93863a01c1c",
+      "source_size_bytes": 1112355,
+      "original_pdf_path": null,
+      "page_image_attachments": [],
+      "last_successful_processing_at": "2026-10-21T12:04:11.839041Z",
+      "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
+      "failure": null,
+      "last_attempt": {
+        "date": "2026-10-21",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "status": "processed",
+        "source_modified_timestamp": "2026-10-21T11:45:01.516Z",
+        "total_page_count": 5,
+        "visually_inspected_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "failure": null
+      },
+      "changes_from_previous_processed_version": {
+        "previous_processed_source_modified_timestamp": null,
+        "previous_page_count": null,
+        "current_page_count": 5,
+        "scope": "Entire current original PDF visually read. Existing mathematics, diagrams and manual additions retained. Source continuations, definitions, proofs and examples transcribed; unresolved source gaps and statement-only results explicitly distinguished. No unfinished exercise or missing source proof solved."
+      },
+      "organized_style_review": {
+        "status": "processed",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "description": "Mathematics presented directly, with source/page traceability, explicit domains and proof status, no proof-ending markers or minor-edit narration, and preserved manual additions.",
+        "pending_improvements": [],
+        "proof_ending_markers_omitted": true,
+        "editing_annotations_rendered_as_semantic_status": true
+      },
+      "diagrams": {
+        "representation": "TikZJax fenced tikz blocks",
+        "reconstructed_diagram_count": 1,
+        "source_pages": [
+          4
+        ],
+        "new_tikz_blocks": 1,
+        "modified_tikz_blocks": 0,
+        "render_validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
+        "pending_improvements": []
+      },
+      "current_version_diagram_review": {
+        "status": "processed",
+        "completed_at": "2026-10-21T12:04:11.839041Z",
+        "source_total_page_count": 5,
+        "source_pages": [
+          4
+        ],
+        "existing_tikz_blocks_retained": 0,
+        "new_tikz_blocks": 1,
+        "modified_tikz_blocks": 0,
+        "validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
+        "pending_improvements": []
+      },
+      "resolved_repository_reviews": [
+        {
+          "date": "2026-10-21",
+          "original_review": {
+            "location": "Page 3, solution-count statement",
+            "detail": "The source’s unqualified nth-order linear-ODE sentence omits the homogeneous, interval, coefficient-regularity and non-vanishing-leading-coefficient hypotheses for the usual n-dimensional solution-space theorem. Preserved the sentence with a localized TODO and explained the affine rather than vector-space status of general inhomogeneous solution families; no existence/uniqueness proof invented.",
+            "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+            "related_markdown_paths": [
+              "Concepts/First-Order Linear Differential Equations.md"
+            ]
+          },
+          "resolution_basis": "Supplementary mathematical correction/proof or cited reference in the merged lecture note; original source version and visual-reading records preserved.",
+          "review_report": "Note Review - 2026-10-21.md",
+          "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
+        }
+      ]
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-16",
-    "completed_at": "2026-10-16T15:07:32.042601Z",
+    "date": "2026-10-21",
+    "completed_at": "2026-10-21T12:04:11.839041Z",
     "status": "processed",
-    "scope": "All materials outside the four user-excluded example-sheet folders; exclusion applies only to this run.",
+    "scope": "All study materials outside the four user-excluded Example/Examples Sheets folders; exclusion applies only to this run.",
     "new_source_count": 1,
     "modified_source_count": 2,
     "processed_source_count": 3,
     "unchanged_current_source_count": 7,
     "classified_non_study_source_count": 0,
     "pending_source_count": 0,
-    "reading_method": "Authenticated Google Drive recursive listings and paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository; PyMuPDF page-count verification and complete 2x (144 dpi) rendering. Actual view_image/model vision reading of all 34 pages: Groups pages 1–23, Partial Differentiation pages 1–4 and Integration pages 1–7, with a 4x original-page crop of the Groups page-19 distance formula. Original handwritten mathematics and drawings were read visually; PDF text layers were only aids and never substitutes for visual reading. No excluded-folder contents were listed, downloaded or read.",
-    "visually_inspected_page_count": 34,
+    "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
+    "visually_inspected_page_count": 49,
     "coverage_by_source": [
       {
         "drive_file_id": "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
         "source_file_name": "Ch.1 Introduction.pdf",
-        "total_page_count": 23,
+        "total_page_count": 33,
         "visually_inspected_pages": [
           1,
           2,
@@ -2535,26 +3025,37 @@
           20,
           21,
           22,
-          23
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
         ],
         "scope": "complete_modified_source"
       },
       {
-        "drive_file_id": "1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E",
-        "source_file_name": "Ch.3 Partial Differentiation.pdf",
-        "total_page_count": 4,
+        "drive_file_id": "1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3",
+        "source_file_name": "Ch.4 First-order Linear Differential Equations.pdf",
+        "total_page_count": 5,
         "visually_inspected_pages": [
           1,
           2,
           3,
-          4
+          4,
+          5
         ],
         "scope": "complete_new_source"
       },
       {
-        "drive_file_id": "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N",
-        "source_file_name": "Ch.2 Integration.pdf",
-        "total_page_count": 7,
+        "drive_file_id": "1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E",
+        "source_file_name": "Ch.3 Partial Differentiation.pdf",
+        "total_page_count": 11,
         "visually_inspected_pages": [
           1,
           2,
@@ -2562,38 +3063,54 @@
           4,
           5,
           6,
-          7
+          7,
+          8,
+          9,
+          10,
+          11
         ],
         "scope": "complete_modified_source"
       }
     ],
-    "created_markdown_note_count": 3,
+    "created_markdown_note_count": 4,
     "created_markdown_paths": [
-      "Concepts/Isometries and Dihedral Groups.md",
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+      "Concepts/Cyclic Groups and Element Orders.md",
+      "Concepts/First-Order Linear Differential Equations.md",
+      "Concepts/Forward Euler Method.md"
+    ],
+    "updated_markdown_note_count": 8,
+    "updated_markdown_paths": [
+      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
       "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+      "Concepts/Homomorphisms and Isomorphisms.md",
+      "Concepts/Isometries and Dihedral Groups.md",
+      "Concepts/Subgroups and Generated Subgroups.md",
+      "Concepts/Groups.md",
+      "Concepts/Differentiation Under the Integral Sign.md",
       "Concepts/Partial Derivatives and the Multivariate Chain Rule.md"
     ],
-    "updated_markdown_note_count": 5,
-    "updated_markdown_paths": [
-      "Concepts/Groups.md",
-      "Concepts/Subgroups and Generated Subgroups.md",
-      "Concepts/Integration by Substitution and by Parts.md",
-      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
-      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md"
-    ],
-    "new_tikz_block_count": 6,
+    "new_tikz_block_count": 1,
     "modified_tikz_block_count": 0,
     "new_tikz_block_breakdown": {
-      "source_material": 6,
+      "source_material": 1,
       "user_requested_supplement": 0
     },
-    "tikz_render_validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
-    "compiled_and_visually_inspected_tikz_block_count": 6,
+    "tikz_render_validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
+    "compiled_and_visually_inspected_tikz_block_count": 1,
     "pending_diagram_count": 0,
     "unresolved_handwriting_count": 0,
     "blocker": null,
     "published_branch": "master",
     "review_locations": [
+      {
+        "location": "Page 23, corner-preservation claim in Proposition 1.25",
+        "detail": "The current source continues the reverse inclusion on page 24, but leaves the claim that isometries send polygon corners to corners as an exercise. It supplies only a distance-maximizing-diagonal idea and sketches. Preserved the remaining argument and localized this unproved step rather than inventing its proof.",
+        "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+        "related_markdown_paths": [
+          "Concepts/Isometries and Dihedral Groups.md"
+        ]
+      },
       {
         "location": "Page 19, displayed Euclidean-distance radical",
         "detail": "The source radical sqrt((z+w)^2+(z-w)^2) is not the distance for arbitrary complex z,w. Preserved the incorrect expression in a warning and explicitly supplied the real-coordinate correction, rather than silently replacing a substantive error.",
@@ -2603,8 +3120,24 @@
         ]
       },
       {
-        "location": "Page 23, Proposition 1.25 reverse inclusion",
-        "detail": "The PDF ends after the inclusion from Lemma 1.22. The proof that every polygon isometry is a listed rotation or reflection is unfinished. Retained as an incomplete proof with a localized TODO; no completion added.",
+        "location": "Pages 25–28, assigned exercises and statement-only results",
+        "detail": "Direct-product group axioms, the Cm-to-Cn power-map example and Lemma 1.31 proofs remain assigned exercises. The Zn-to-Cn example asserts well-definedness and bijectivity. The current source now proves Proposition 1.33 on page 29; its former statement-only status is resolved.",
+        "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+        "related_markdown_paths": [
+          "Concepts/Homomorphisms and Isomorphisms.md"
+        ]
+      },
+      {
+        "location": "Page 30, finite-set observation and Corollary 1.36",
+        "detail": "The equal-cardinality finite-set injective/surjective/bijective equivalence is referenced to Numbers and Sets without a proof here. The isomorphism criterion is stated without a separate proof. Lemma 1.35 itself is fully proved.",
+        "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+        "related_markdown_paths": [
+          "Concepts/Homomorphisms and Isomorphisms.md"
+        ]
+      },
+      {
+        "location": "Page 33, Lemma 1.40",
+        "detail": "The source ends after the dihedral homomorphism statement. All relations and image formulas are retained, with statement-only status; no proof supplied by the source or invented in the notes.",
         "markdown_path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
         "related_markdown_paths": [
           "Concepts/Isometries and Dihedral Groups.md"
@@ -2627,6 +3160,107 @@
         ]
       },
       {
+        "location": "Page 10, differentiation under the integral sign",
+        "detail": "The proof moves the limit through the fixed-interval integral without stating hypotheses or justifying the interchange. The complete difference-quotient decomposition and mean-value endpoint calculation are retained, with sufficient regularity stated for the theorem and a localized TODO for the missing proof step.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+        "related_markdown_paths": [
+          "Concepts/Differentiation Under the Integral Sign.md"
+        ]
+      },
+      {
+        "location": "Page 11, repeated differentiation under an improper integral",
+        "detail": "The factorial-integral computation moves n derivatives through an integral on [0,infinity) without an appropriate interchange justification near lambda>0. Preserved the full computation and result, with n a non-negative integer and lambda positive; localized TODO distinguishes this missing argument from the finite-interval rule.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+        "related_markdown_paths": [
+          "Concepts/Differentiation Under the Integral Sign.md"
+        ]
+      },
+      {
+        "location": "Page 2, Schwarz’s theorem",
+        "detail": "The source gives only the equality under continuous second derivatives; no proof is supplied.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md"
+      },
+      {
+        "location": "Page 3, solution-count statement",
+        "detail": "The source’s unqualified nth-order linear-ODE sentence omits the homogeneous, interval, coefficient-regularity and non-vanishing-leading-coefficient hypotheses for the usual n-dimensional solution-space theorem. Preserved the sentence with a localized TODO and explained the affine rather than vector-space status of general inhomogeneous solution families; no existence/uniqueness proof invented.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "related_markdown_paths": [
+          "Concepts/First-Order Linear Differential Equations.md"
+        ]
+      },
+      {
+        "location": "Pages 1–2, exponential calculations and proof references",
+        "detail": "The source presents the binomial-limit passage and termwise derivative calculation without analytic justifications, characterizes exp via an initial-value problem without existence/uniqueness proof, and refers elsewhere for the addition-law proof. These statuses are explicit.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "related_markdown_paths": [
+          "Concepts/First-Order Linear Differential Equations.md"
+        ]
+      },
+      {
+        "location": "Pages 3–5, higher-order remarks and numerical analysis",
+        "detail": "Higher-order exponential/polynomial solution forms are only mentioned, not developed into a general method. The source derives the example Euler recurrence and its closed form but supplies no error or convergence analysis.",
+        "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "related_markdown_paths": [
+          "Concepts/First-Order Linear Differential Equations.md",
+          "Concepts/Forward Euler Method.md"
+        ]
+      }
+    ],
+    "retained_existing_review_locations": [
+      {
+        "location": "Page 15, factorization in Z[sqrt(-3)]",
+        "detail": "The source calls 1+sqrt(-3) and 1-sqrt(-3) prime in its non-unique-factorization example. Under the standard prime-element definition they are not prime: each divides 2*2 without dividing 2. The intended factors are irreducibles. Preserved the example and the source terminology, with a localized TODO explaining the distinction and an explicit non-divisibility witness; the source provides no definition/proof of irreducibility.",
+        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+        "related_markdown_paths": [
+          "Concepts/Divisibility and Prime Numbers.md"
+        ]
+      },
+      {
+        "location": "Page 8, large-product comparison question",
+        "detail": "The comparison 9049*40099 != 6701*54151 remains an unanswered source question. The current expanded PDF now supplies full proofs of Euclid’s lemma on page 13 and prime-factorization uniqueness on page 14, so the previous statement-only and missing-uniqueness limitations are resolved.",
+        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+        "related_markdown_paths": [
+          "Concepts/Divisibility and Prime Numbers.md"
+        ]
+      },
+      {
+        "location": "Page 17, quantitative prime bounds and prime number theorem",
+        "detail": "The source states p_k<2^(2^k) and p_k<4^k alongside the two proofs, without separate bound derivations, and states p_k~k log k without proving the prime number theorem. Their statement-only status is explicit.",
+        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+        "related_markdown_paths": [
+          "Concepts/Divisibility and Prime Numbers.md"
+        ]
+      },
+      {
+        "location": "Page 14, vector triple-product identities",
+        "detail": "Page 14 states both vector triple-product identities. The current source proves the first on page 22 using epsilon contraction; no separate proof of the second is supplied. Both were checked symbolically.",
+        "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+        "related_markdown_paths": [
+          "Concepts/Cross Products and Scalar Triple Products.md"
+        ]
+      },
+      {
+        "location": "Page 17, shortest distance between two lines",
+        "detail": "The formula and attainment proof require non-parallel directions, as their cross product is divided by its length. This scope is explicit. The parallel-lines case is not supplied by the source.",
+        "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+        "related_markdown_paths": [
+          "Concepts/Lines, Planes and Vector Equations.md"
+        ]
+      },
+      {
+        "location": "Page 22, epsilon identities proposition",
+        "detail": "The six-term determinant identity and one-, two- and three-index contractions are stated without source proofs. The separately labelled supplementary guide proves the one-index contraction by cases and explains the other two by counting nonzero entries. No supplementary proof is attributed to the lecture.",
+        "markdown_path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+        "related_markdown_paths": [
+          "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md"
+        ]
+      },
+      {
+        "location": "Reference needed — page 3, remark 2",
+        "detail": "The lecture remark that the stated prime-gap assertion was proved in August 2026 has no citation. The precise intended result and historical reference remain unverified.",
+        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
+      },
+      {
         "location": "Pages 2–3, summed area-error estimate",
         "detail": "The N O((Delta x)^2)=O(1/N) step needs an O-constant uniform over the partition. Pointwise differentiability alone does not establish it. Source argument retained with a localized TODO; no replacement proof supplied.",
         "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
@@ -2640,22 +3274,28 @@
         "markdown_path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md"
       }
     ],
-    "retained_existing_review_locations": [
+    "resolved_review_locations": [
       {
-        "location": "Page 8, Proposition 4 and uniqueness questions",
-        "detail": "Euclid’s lemma is stated without proof. Prime-factorization uniqueness and the large-product comparison remain unanswered source questions. Their status is explicit; no proof or answer was added.",
-        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
-        "related_markdown_paths": [
-          "Concepts/Divisibility and Prime Numbers.md"
-        ]
-      },
-      {
-        "location": "Reference needed — page 3, remark 2",
-        "detail": "The lecture remark that the stated prime-gap assertion was proved in August 2026 has no citation. The precise intended result and historical reference remain unverified.",
-        "markdown_path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md"
+        "previous_location": "Page 28, Proposition 1.33 image/kernel subgroup membership stated without proof",
+        "resolved_by_source_pages": [
+          29
+        ],
+        "detail": "The current PDF fills the formerly blank page 29 with the complete image and kernel subgroup proofs. Source and homomorphism concept notes now retain those arguments."
       }
     ],
-    "notes": "One new and two modified sources fully processed. Three Markdown notes created and five existing notes updated. All 34 original pages visually read. Incorrect distance/differential definitions and incomplete arguments are explicitly marked; source exercises and the unfinished dihedral classification are not solved. All four excluded folder contents and seven known per-file records untouched; seven unchanged included source records and the historical absent record preserved. Only Markdown and matching manifest are sync output. Local preparation is tentative until this same atomic commit is verified on remote master."
+    "mathematical_validation": {
+      "mathematical_checks": "passed",
+      "checked": [
+        "moving-endpoint parameter-integral derivative",
+        "factorial integral formula",
+        "first nine parameter derivatives of reciprocal",
+        "constant-coefficient ODE and initial condition",
+        "forward Euler recurrence and closed form"
+      ],
+      "dihedral_maps_to_S3_checked": 40,
+      "scope": "Transcription QA; does not supply omitted source proofs or justify improper-integral differentiation."
+    },
+    "notes": "One new and two modified originals were completely read: Groups 33 pages, First-order Linear Differential Equations 5 pages, and Partial Differentiation 11 pages. Transcribed image/kernel proofs, injectivity criterion, cyclic classification and element orders, the final dihedral lemma statement, parameter-integral examples, and the exponential/constant-coefficient/Euler chapter. Preserved and localized all source errors, gaps and statement-only results. Four notes created and eight existing notes updated; one exact new TikZ block compiled and visually checked. The earlier delta/epsilon/Einstein guide and all unrelated, excluded, unchanged and historical/scoped absent source records and notes remain unchanged. Only Markdown and this matching manifest are sync output. Local preparation is tentative until the same atomic commit is verified on remote master."
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
@@ -2664,19 +3304,18 @@
     "crossed_out_proof": "Crossed-out proofs or proof/QED labels mark a wrong proof. Label the argument directly as Wrong proof, Incorrect attempt or Incomplete proof as appropriate, preserving its mathematics and explaining the error. Do not narrate pen marks or editing actions in the notes. Ordinary algebraic cancellations and axiom-assessment crosses retain their separate mathematical meaning."
   },
   "last_diagram_update": {
-    "date": "2026-10-16",
-    "updated_at": "2026-10-16T15:07:32.042601Z",
+    "date": "2026-10-21",
+    "updated_at": "2026-10-21T12:04:11.839041Z",
     "status": "processed",
     "updated_markdown_paths": [
-      "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
-      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md"
+      "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md"
     ],
     "representation": "TikZJax fenced tikz blocks",
-    "new_diagram_block_count": 6,
+    "new_diagram_block_count": 1,
     "modified_diagram_block_count": 0,
-    "source_diagram_block_count": 6,
+    "source_diagram_block_count": 1,
     "supplemental_diagram_block_count": 0,
-    "render_validation": "All six exact new fenced TikZ document blocks compiled with pdfLaTeX outside the repository, rendered with PyMuPDF at 3x (216 dpi), and every preview actually inspected with view_image against the original page images. The five Groups blocks preserve the distance segment, triangle/square examples, quarter-turn and four reflection axes, pentagon, and kite with both diagonals, right-angle marker, blue double ticks and red single ticks. The Partial Differentiation contour plot preserves four nested levels, coordinate axes, red point A and level-curve callout. Basic TikZ math labels were adjusted to compile without undeclared packages before final compilation and visual review. Layout coordinates are schematic and no numerical contour levels or missing reflection axes were invented. Five existing Groups blocks and two Integration blocks are unchanged and were checked against the completely read current sources. The user’s Obsidian application was not accessed; local compilation does not establish an Obsidian render.",
+    "render_validation": "The exact new embedded forward Euler TikZ block from ODE page 4 compiled with pdfLaTeX outside the repository, was rendered with PyMuPDF at 3x (216 dpi), and its final preview was actually inspected with view_image against the original page and detailed crop. It retains all four black sample points, seven grid ticks including x0, x0–x3 labels, the blue secant between x1 and x2, the unjoined x3 point, the blue derivative callout and arrow, and the blue h double arrow. Coordinates specify a qualitative layout, not invented data or an exact solution curve. Thirteen existing Groups and four existing Partial Differentiation TikZ blocks remain byte-for-byte unchanged and were checked against the completely read current sources. Those retained blocks were not newly compiled. The user’s Obsidian application was not accessed; successful local TeX compilation does not establish an Obsidian render.",
     "pending_diagram_count": 0,
     "blocker": null,
     "previous_associativity_correction": {
@@ -2695,10 +3334,10 @@
   },
   "organized_markdown_style": "Present mathematics directly. Omit QED squares and narration of handwriting/editing actions. Use concise semantic proof-status labels, retain useful rejected attempts and substantive error explanations, preserve source/page traceability and manual additions, and record minor normalization details in the manifest.",
   "current_inventory_drive_file_ids": [
-    "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-",
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
     "1eCbmGml6mnoT9KYo8YHBIBmp8iPB_l_F",
     "1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB",
+    "1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3",
     "1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E",
     "1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N",
     "1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr",
@@ -2712,9 +3351,15 @@
       "source_file_name": "Untitled Notebook.pdf",
       "observed_at": "2026-10-08T14:26:25.422519Z",
       "reason": "Not returned by the complete recursive listing of the verified GoodNotes folder. Historical source record, successful processing timestamp and corresponding notes preserved; no deletion or loss-of-access claim."
+    },
+    {
+      "drive_file_id": "1Vp2N13TFa7SxBgqgdt30Mww17EvcjzE-",
+      "source_file_name": "Groups 1 Q.pdf",
+      "observed_at": "2026-10-19T21:54:54.253241Z",
+      "reason": "Not returned by this complete inventory of the authorized non-excluded scope. Example/Examples Sheets folder contents were not examined, so no claim is made about relocation there, deletion or access loss. Historical per-file record, successful timestamp and notes preserved unchanged."
     }
   ],
-  "inventory_method": "All six included folders recursively listed with top_k=1000 and fewer items than the limit. Metadata-only document, folder and image searches over these six parent IDs corroborated ten PDFs and all descendant folder metadata with no continuation tokens. Four Example/Examples Sheets child folders were recorded as one-run exclusions and never traversed. inventory_complete means complete within this authorized scope; full_folder_inventory_complete is false.",
+  "inventory_method": "Complete fresh listings of all six included folders, corroborated by scoped paginated document/folder/image metadata searches with no remaining continuation tokens. Listing and search IDs/modified times agree on ten PDFs. Four Example/Examples Sheets folders were identified but never traversed. Inventory is complete within the authorized scope; it is not a full inventory of the excluded contents.",
   "source_folder_metadata_updates": {
     "completed_at": "2026-10-13T11:40:01.870231Z",
     "files": [
@@ -2761,7 +3406,7 @@
     "kind": "GoodNotes except user-requested example-sheet folder exclusions",
     "complete_within_authorized_scope": true,
     "one_run_only": true,
-    "request_date": "2026-10-16",
+    "request_date": "2026-10-21",
     "excluded_folders": [
       {
         "id": "1fmwhzJOIAMT1JWR5gTqWgMPO4fogNXB3",
@@ -2808,249 +3453,309 @@
       "1IwSWbNNhS66lST2EnZ3epL2xixPzYxMG"
     ],
     "excluded_records_preserved": true,
-    "absence_policy": "Excluded sources are not classified as missing, deleted, non-study, pending or newly processed. Historical previously-absent records are retained unchanged."
+    "absence_policy": "Excluded sources are not classified as missing, deleted, non-study, pending or newly processed. Historical absent records are retained unchanged, and newly absent scoped records do not imply deletion or absence from excluded folders."
   },
   "last_repository_review": {
     "date": "2026-10-21",
-    "scope": "All 44 study notes, continuing the complete prior reading with identical starting hashes; repair classroom review items and synchronize related concepts",
-    "reading_method": "Prior full Markdown reading plus current content-hash verification, rereading of affected classroom derivations, mathematical verification, static link/markup checks and primary scholarly reference lookup. No new PDF visual reading or Drive inventory.",
-    "reviewed_study_note_count": 44,
-    "reviewed_supporting_document_count": 2,
-    "explicit_classroom_flags_resolved": 6,
+    "scope": "Review of 44 original study notes, followed by conservative reconciliation with 11 additional remote study notes and the expanded lecture/concept material at 0021c46; all current classroom review callouts repaired. Exercise attempts remain explicitly incomplete where applicable.",
+    "reading_method": "Inherited full reading of the original 44 notes, rereading of affected proofs, and reading of incoming mathematical Markdown and all 11 added notes during publication reconciliation. No new Drive inventory, original-PDF visual reading or TikZ rendering in this task.",
+    "reviewed_study_note_count": 55,
+    "reviewed_supporting_document_count": 3,
+    "explicit_classroom_flags_resolved": 11,
     "source_versions_advanced": false,
     "review_report": "Note Review - 2026-10-21.md",
     "study_guide": "Study Guide.md",
     "notes": [
       {
+        "path": "Concepts/Bezout's Identity and Linear Diophantine Equations.md",
+        "sha256_after_review": "4050290544bce26de9c2615feada0def0ea9c7ae9afd2d739ecd04468e1f38d2",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
         "path": "Concepts/Bijections and Permutations.md",
         "sha256_after_review": "b71d1bacec7b47a534d460a2c4c7ba92b66c511de575389ed596258310ab2812",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Complex Exponential and Trigonometric Functions.md",
         "sha256_after_review": "4f68df9d28233cb587d8fa7d453b8ab6678dd5da74172c11f0e4c58fe661aeca",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Complex Logarithms and Powers.md",
         "sha256_after_review": "d933ef662bc90452f485b54561f97bf92add70aff6de55becea88f51084601f8",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Complex Numbers.md",
         "sha256_after_review": "0eb03305bf262c647b517de02850f853c3acd2ae1dfed7e4de743b275d1e9863",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Cross Products and Scalar Triple Products.md",
-        "sha256_after_review": "957778d1847cfe818970deedb376a0bd754e40290acb82504e80cd0f84244122",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "2c14c38f68732570afb38f77d598e3a00c7fb8156d1f8fe45e60e911dbe5c255",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Cyclic Groups and Element Orders.md",
+        "sha256_after_review": "30fdbf89259886d69b1da9c10c32b7aa57863e7d617082ab8536d2b1cfd6c02e",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/De Moivre's Theorem.md",
         "sha256_after_review": "fcf4570cc4ab67ad755720b604399e69321a1d489a85d652e0a1edb9a7fad701",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Differentiation Rules.md",
         "sha256_after_review": "41a93064ad33c2a01512c810ceaf43f578122b2e73d6c0b175066565e69404f1",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Differentiation Under the Integral Sign.md",
+        "sha256_after_review": "9fd827bfced54c28db0061906614f8ea0eedb9877b217b9fade2126b6b1c326a",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Divisibility and Prime Numbers.md",
-        "sha256_after_review": "5dbdf94c3c1104f75563865cf3e52cb0f3db24a99787b0f7bed3ec6999cfd386",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "1ef51a0b02da1cc1cb5622a887d6e8591690fd8c8d136a10f7f802ebea552d08",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Fibonacci Numbers.md",
         "sha256_after_review": "58219d4b28c0b2e7f5264ea26db893ff43d07b9f99ea12a816f13194e28f718e",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/First-Order Linear Differential Equations.md",
+        "sha256_after_review": "2a11f6086cae81d7a41040d645550b1585a382cea3b3c5cd6b3b74e64600ef43",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Forward Euler Method.md",
+        "sha256_after_review": "2c6f00b63ed118d17226a328e4135af6c64861c88c5a2fd81557d4209b7c2f8c",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Fundamental Theorem of Algebra.md",
         "sha256_after_review": "f536d082c77aa36695cae53aff7294f062937d441dda1b8013e1a3e3e559c599",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Greatest Common Divisors and Euclid's Algorithm.md",
-        "sha256_after_review": "9ec40ac87af7d65055760ddbf563a8ceb3868cc2e8e17d3ae2bd512e51d3f417",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "11bf8b00bd663d9f46438cab7e1d21f1fd32cda7ea75c25579b2defab8eb8e56",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Groups.md",
-        "sha256_after_review": "72c4bee4427fe1921c62ed4047efea6b46db6d3e71f1eb49ec53730f3bd7c99c",
-        "outcome": "Updated the classification cross-reference to completed status."
+        "sha256_after_review": "5af6e3b1f010154260b3dba77c5857d172b68202077387e0aa40d3184285f835",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Homomorphisms and Isomorphisms.md",
+        "sha256_after_review": "3c008641aa58a6fb97470a90059b6d9bd21a4b028ba25e317340c9fe6ab25f8b",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Implicit Differentiation.md",
+        "sha256_after_review": "a24012b40d0c2a782c865cb871b7f5fb0365009b6140a8d782d0eb5f77a55cfe",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Integration by Substitution and by Parts.md",
         "sha256_after_review": "eb5b3b34b60f1f266a633b77f94a35ee3e77c0ef22a0b708dc35243622f792b9",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Isometries and Dihedral Groups.md",
-        "sha256_after_review": "086dcef1c1dc2235aa7bfd7ae9f3b83ec4af38b5568019d4b36887b22a1ceddd",
-        "outcome": "Synchronized the corrected distance, vertex-set model and complete classification."
+        "sha256_after_review": "fb1c94814f6c000d4c87ad2467d47c68f4b5102b024a3ab0ed07312a03ad2af6",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md",
+        "sha256_after_review": "10c1b78da645c636e24c9a163af9506b9b6db29d325b3cc9014bb014a421bf9e",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/L'Hôpital's Rule.md",
         "sha256_after_review": "1cf0c29f9f832e157ebc436db775e48792f614433af18f7657af331d7c3cea47",
-        "outcome": "Added the proof under the stated hypotheses and synchronized the lecture reference."
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Latin Squares.md",
         "sha256_after_review": "05f339ccc49180c7f8b13bca44c8cc263369bdd385d7ba12a9f423fc17f9b6cf",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Limits, Big O and Little o - A First-Year Guide.md",
         "sha256_after_review": "5836530036df17ac24b6e8b9c41c6e33079547598193b73603ad175118554677",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Lines, Planes and Vector Equations.md",
+        "sha256_after_review": "c5472d47c8a69d4487839ab330f4105c33550662270a65dd10d778c1930f4b0b",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Logical Connectives and Quantifiers.md",
         "sha256_after_review": "64339ba8b11091394fea69b6698ae91cddca96b55460d3084f96e9ccbd84e3ca",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Concepts/Modular Arithmetic.md",
+        "sha256_after_review": "0babafd354a8558fd307a47535802394462a029d2407bf4e6bf26d66aec7a4e9",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Natural Numbers and Mathematical Induction.md",
         "sha256_after_review": "4e5f8b2fcf6df3e9782c82b8ceb5debae6fc3243525820118c25d17af066b156",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Orthonormal Bases and Vector Coordinates.md",
-        "sha256_after_review": "5543a97eaf69dd960127626576397fb52ae7dc4032a8bf48c2dc25dee054b96f",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "1730224f0d959065fb703dc0fb9d420a4dea108fecd72bdaa227ea2419f8837b",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Partial Derivatives and the Multivariate Chain Rule.md",
-        "sha256_after_review": "8d0d0223eac9f0f6597a45ed837ef3a4ff9c5c57e978f3befd5b754f0c8afcee",
-        "outcome": "Synchronized the repaired differentiability and chain-rule proof status."
+        "sha256_after_review": "d4e3bcf1328932894dcfde7294ae95be86f9ad6cd21691d29890443354cd22ca",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Proof by Contradiction and Contraposition.md",
         "sha256_after_review": "d3dd31751c0aa920eddac4f39f7663ff1c01e75808a566ec57fb83200783b603",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Real Inner Products and Cauchy-Schwarz.md",
         "sha256_after_review": "dfb256f5b3665bb63c15c3f9af80d6d2e87744ec47515d165f61f52a36ff26cc",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
         "sha256_after_review": "70858b29519dd2de41985c2fb16824b756523d6098ed9f3e150b935487356cc4",
-        "outcome": "Synchronized the uniform bound and continuity-based proofs; removed stale TODO status."
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Roots of Unity.md",
         "sha256_after_review": "2bfd7872db408b0a7e4d2ac749037c901d58170ac8c508111f7ff3c3f7ebc092",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Subgroups and Generated Subgroups.md",
-        "sha256_after_review": "8effa79aba9aad777422b408d90321da02368603293def6b0f3d4a30031cab54",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "5f61525d867d6d5475456c76ea11bf9bbc4b93e6fd98d13a904c26c7c744abf7",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Taylor Series and Taylor's Theorem.md",
         "sha256_after_review": "ea5c755ab90c9c7f0250fec4a1ddee816221347f47e06f9171917444d59f14ca",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Triangle Inequality for Complex Numbers.md",
         "sha256_after_review": "aaff7b2da741fcf236b6f9095c566bb2469f398b578c0f5282fb90c1e62c07e9",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Concepts/Vectors and Linear Span.md",
-        "sha256_after_review": "d63565ae05d8b16d0e8706ecf15937e9765e378253ea3dd87b30a19569f59b5c",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "e3f05f46a966ce3543a83e85ab77bb71f52162423c944c957d7c05945bc53cf6",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
         "sha256_after_review": "9e132ae0d832b3feedef478a944710436ff11e1a3466c588eedcdfd8daec398f",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
         "sha256_after_review": "7ba43be4c9961a1edbfe1b2b342380210560a386be8288b62c053f2140498443",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
         "sha256_after_review": "d63528c1df76706dbce04ed353148b93f66b2504535693fc1b4d17863c960360",
-        "outcome": "Added a complete proof under the stated L’Hôpital hypotheses; clarified the acceleration example."
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
         "sha256_after_review": "cfb0444eda8169114a848682d8c5aa153b91ac9a233f2325650793f07ff94a64",
-        "outcome": "Repaired uniform area estimates, proved the continuous-case fundamental theorem and derived antiderivative evaluation."
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
-        "sha256_after_review": "75a3c0b13b40cf68f71a00af773528101309f1bdfd027fafe39f5469ed88f621",
-        "outcome": "Repaired the increment derivation, differential definition and chain-rule proof."
+        "sha256_after_review": "7fce9a4c03292bb80ebbb43efcbb7eed3ee55a81e554cac396a47d857c80c4b7",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
+      },
+      {
+        "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "sha256_after_review": "0753503e595dfb34c975c8726e953b7d82ba28cf6ed61ef0ba959bd326d9d03c",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
-        "sha256_after_review": "5029f30e7b313cc652c7c40dc543ee2bdf58bc5581a0aac64d50784fd5c5cbae",
-        "outcome": "Corrected distance; completed the kite and dihedral proofs; specified the vertex-set model."
+        "sha256_after_review": "a44e4a13be298c24c06d12d82e6ab1e3562f16e36a4a021ed5bb4d0af4d5c558",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Groups/Problem Sheets/Groups - Example Sheet 1 2025.md",
         "sha256_after_review": "bf41fd8716c3036b25666498fd6b8aa64897975d7c51719abe184f1259b8db41",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Groups/Problem Sheets/Groups - Introductory Sheet 2026.md",
         "sha256_after_review": "efb5b56da74a89c06d7424f6675ed8dbb0098bf7d5813c99c55638a23b415783",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md",
         "sha256_after_review": "35e2b15801ae418a4747b82633fd47c916edb794c87c529a50de37710c3c0fd1",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md",
         "sha256_after_review": "fd2983320efdbab6579eccecf32cc1ffa2817b2deca844fd496aa602223c7432",
-        "outcome": "Resolved the dated reference and qualified the factoring discussion claim."
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
-        "sha256_after_review": "bee9a4c86e2a1b9056dd62a60767e6ed32da141181ef143467923b0148b787db",
-        "outcome": "Linked the supplementary proof chain in dependency order."
+        "sha256_after_review": "fba1546d8618b988e8748f5f5bfb23da827cacdfc8fe35918f76d0e7145e155b",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets - Introductory Sheet 2026.md",
         "sha256_after_review": "c0c98c6c835b28b8a2bff7a2605a6e4d8f920c9b608e620b6195c2db56a2b975",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md",
         "sha256_after_review": "c622728134bd4c497d4e3ef9d78c2ad0e875cf2febf67c7976f334bd71240961",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md",
         "sha256_after_review": "ea54004be2ec8a8fa58826ae2ac1aec426aa92c5d29736801d564b375351d524",
-        "outcome": "Retained; starting content matched prior full review"
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       },
       {
         "path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
-        "sha256_after_review": "a89a481e0d778d4ab4b027c2e4a0ac5c5c41a2f87769e0cacdddc663ecc19a5e",
-        "outcome": "Retained; starting content matched prior full review"
+        "sha256_after_review": "0250c1461819696354b067f748748fab1ee8538b7b2f669d2b650936e87a70e6",
+        "outcome": "Reviewed mathematical Markdown and reconciled with current remote content; preserved unfinished exercise status where applicable."
       }
     ],
+    "original_classroom_flags_resolved": 6,
+    "additional_classroom_flags_resolved_during_remote_reconciliation": 5,
+    "remote_base_commit": "0021c461439c86ab34778e2a7fcada4d2febb202",
     "validation": {
-      "markdown_files": 47,
-      "study_notes": 44,
-      "lecture_notes": 8,
-      "resolved_explicit_classroom_flags": 6,
-      "remaining_explicit_classroom_flags": 0,
-      "wikilinks": 356,
+      "result": "passed",
+      "markdown_files": 58,
+      "study_notes": 55,
+      "lecture_notes": 9,
+      "wikilinks": 454,
       "heading_links": 6,
-      "unchanged_exercise_documents": 7,
+      "remote_classroom_manifest_flags_resolved": 9,
+      "remaining_classroom_callouts": 0,
+      "preserved_remote_tikz_blocks": 52,
+      "preserved_exercise_documents_from_review": 7,
       "dihedral_exhaustive_checks": {
         "3": 6,
         "4": 8,
@@ -3060,14 +3765,17 @@
         "8": 16
       },
       "symbolic_checks": [
-        "general kite identity",
-        "coordinate-increment split",
-        "Cauchy mean-value auxiliary identity",
-        "uniform area bound"
+        "kite identity",
+        "Cauchy mean-value identity",
+        "uniform area bound",
+        "coordinate increment split",
+        "epsilon contraction",
+        "vector triple product",
+        "Lagrange identity",
+        "multiplicative ring norm"
       ],
-      "source_version_and_visual_metadata": "unchanged",
-      "tikz_blocks": "unchanged",
-      "result": "passed"
+      "latest_remote_source_and_inventory_metadata": "unchanged",
+      "source_pdfs_reread": false
     }
   },
   "repository_review_history": {
@@ -3307,6 +4015,266 @@
         "wikilinks_resolved": 295,
         "heading_links_resolved": 5,
         "checks": "YAML, control characters, fence and display-math delimiters, full navigation/report coverage, unchanged historical source/vision metadata, symbolic Taylor coefficient and kite identity, Bezout arithmetic, modulo-six identity and matrix group products",
+        "result": "passed"
+      }
+    },
+    "2026-10-21-before-remote-reconciliation": {
+      "date": "2026-10-21",
+      "scope": "All 44 study notes, continuing the complete prior reading with identical starting hashes; repair classroom review items and synchronize related concepts",
+      "reading_method": "Prior full Markdown reading plus current content-hash verification, rereading of affected classroom derivations, mathematical verification, static link/markup checks and primary scholarly reference lookup. No new PDF visual reading or Drive inventory.",
+      "reviewed_study_note_count": 44,
+      "reviewed_supporting_document_count": 2,
+      "explicit_classroom_flags_resolved": 6,
+      "source_versions_advanced": false,
+      "review_report": "Note Review - 2026-10-21.md",
+      "study_guide": "Study Guide.md",
+      "notes": [
+        {
+          "path": "Concepts/Bijections and Permutations.md",
+          "sha256_after_review": "b71d1bacec7b47a534d460a2c4c7ba92b66c511de575389ed596258310ab2812",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Complex Exponential and Trigonometric Functions.md",
+          "sha256_after_review": "4f68df9d28233cb587d8fa7d453b8ab6678dd5da74172c11f0e4c58fe661aeca",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Complex Logarithms and Powers.md",
+          "sha256_after_review": "d933ef662bc90452f485b54561f97bf92add70aff6de55becea88f51084601f8",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Complex Numbers.md",
+          "sha256_after_review": "0eb03305bf262c647b517de02850f853c3acd2ae1dfed7e4de743b275d1e9863",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Cross Products and Scalar Triple Products.md",
+          "sha256_after_review": "957778d1847cfe818970deedb376a0bd754e40290acb82504e80cd0f84244122",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/De Moivre's Theorem.md",
+          "sha256_after_review": "fcf4570cc4ab67ad755720b604399e69321a1d489a85d652e0a1edb9a7fad701",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Differentiation Rules.md",
+          "sha256_after_review": "41a93064ad33c2a01512c810ceaf43f578122b2e73d6c0b175066565e69404f1",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Divisibility and Prime Numbers.md",
+          "sha256_after_review": "5dbdf94c3c1104f75563865cf3e52cb0f3db24a99787b0f7bed3ec6999cfd386",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Fibonacci Numbers.md",
+          "sha256_after_review": "58219d4b28c0b2e7f5264ea26db893ff43d07b9f99ea12a816f13194e28f718e",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Fundamental Theorem of Algebra.md",
+          "sha256_after_review": "f536d082c77aa36695cae53aff7294f062937d441dda1b8013e1a3e3e559c599",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Greatest Common Divisors and Euclid's Algorithm.md",
+          "sha256_after_review": "9ec40ac87af7d65055760ddbf563a8ceb3868cc2e8e17d3ae2bd512e51d3f417",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Groups.md",
+          "sha256_after_review": "72c4bee4427fe1921c62ed4047efea6b46db6d3e71f1eb49ec53730f3bd7c99c",
+          "outcome": "Updated the classification cross-reference to completed status."
+        },
+        {
+          "path": "Concepts/Integration by Substitution and by Parts.md",
+          "sha256_after_review": "eb5b3b34b60f1f266a633b77f94a35ee3e77c0ef22a0b708dc35243622f792b9",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Isometries and Dihedral Groups.md",
+          "sha256_after_review": "086dcef1c1dc2235aa7bfd7ae9f3b83ec4af38b5568019d4b36887b22a1ceddd",
+          "outcome": "Synchronized the corrected distance, vertex-set model and complete classification."
+        },
+        {
+          "path": "Concepts/L'Hôpital's Rule.md",
+          "sha256_after_review": "1cf0c29f9f832e157ebc436db775e48792f614433af18f7657af331d7c3cea47",
+          "outcome": "Added the proof under the stated hypotheses and synchronized the lecture reference."
+        },
+        {
+          "path": "Concepts/Latin Squares.md",
+          "sha256_after_review": "05f339ccc49180c7f8b13bca44c8cc263369bdd385d7ba12a9f423fc17f9b6cf",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Limits, Big O and Little o - A First-Year Guide.md",
+          "sha256_after_review": "5836530036df17ac24b6e8b9c41c6e33079547598193b73603ad175118554677",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Logical Connectives and Quantifiers.md",
+          "sha256_after_review": "64339ba8b11091394fea69b6698ae91cddca96b55460d3084f96e9ccbd84e3ca",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Natural Numbers and Mathematical Induction.md",
+          "sha256_after_review": "4e5f8b2fcf6df3e9782c82b8ceb5debae6fc3243525820118c25d17af066b156",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Orthonormal Bases and Vector Coordinates.md",
+          "sha256_after_review": "5543a97eaf69dd960127626576397fb52ae7dc4032a8bf48c2dc25dee054b96f",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Partial Derivatives and the Multivariate Chain Rule.md",
+          "sha256_after_review": "8d0d0223eac9f0f6597a45ed837ef3a4ff9c5c57e978f3befd5b754f0c8afcee",
+          "outcome": "Synchronized the repaired differentiability and chain-rule proof status."
+        },
+        {
+          "path": "Concepts/Proof by Contradiction and Contraposition.md",
+          "sha256_after_review": "d3dd31751c0aa920eddac4f39f7663ff1c01e75808a566ec57fb83200783b603",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Real Inner Products and Cauchy-Schwarz.md",
+          "sha256_after_review": "dfb256f5b3665bb63c15c3f9af80d6d2e87744ec47515d165f61f52a36ff26cc",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
+          "sha256_after_review": "70858b29519dd2de41985c2fb16824b756523d6098ed9f3e150b935487356cc4",
+          "outcome": "Synchronized the uniform bound and continuity-based proofs; removed stale TODO status."
+        },
+        {
+          "path": "Concepts/Roots of Unity.md",
+          "sha256_after_review": "2bfd7872db408b0a7e4d2ac749037c901d58170ac8c508111f7ff3c3f7ebc092",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Subgroups and Generated Subgroups.md",
+          "sha256_after_review": "8effa79aba9aad777422b408d90321da02368603293def6b0f3d4a30031cab54",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Taylor Series and Taylor's Theorem.md",
+          "sha256_after_review": "ea5c755ab90c9c7f0250fec4a1ddee816221347f47e06f9171917444d59f14ca",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Triangle Inequality for Complex Numbers.md",
+          "sha256_after_review": "aaff7b2da741fcf236b6f9095c566bb2469f398b578c0f5282fb90c1e62c07e9",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Concepts/Vectors and Linear Span.md",
+          "sha256_after_review": "d63565ae05d8b16d0e8706ecf15937e9765e378253ea3dd87b30a19569f59b5c",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 2026.md",
+          "sha256_after_review": "9e132ae0d832b3feedef478a944710436ff11e1a3466c588eedcdfd8daec398f",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Differential Equations/Examples Sheets/Differential Equations - Examples Sheet 1 Handwritten Proofs.md",
+          "sha256_after_review": "7ba43be4c9961a1edbfe1b2b342380210560a386be8288b62c053f2140498443",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+          "sha256_after_review": "d63528c1df76706dbce04ed353148b93f66b2504535693fc1b4d17863c960360",
+          "outcome": "Added a complete proof under the stated L’Hôpital hypotheses; clarified the acceleration example."
+        },
+        {
+          "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+          "sha256_after_review": "cfb0444eda8169114a848682d8c5aa153b91ac9a233f2325650793f07ff94a64",
+          "outcome": "Repaired uniform area estimates, proved the continuous-case fundamental theorem and derived antiderivative evaluation."
+        },
+        {
+          "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+          "sha256_after_review": "75a3c0b13b40cf68f71a00af773528101309f1bdfd027fafe39f5469ed88f621",
+          "outcome": "Repaired the increment derivation, differential definition and chain-rule proof."
+        },
+        {
+          "path": "Part IA/Groups/Lecture Notes/Groups - Chapter 1 Examples and Definitions.md",
+          "sha256_after_review": "5029f30e7b313cc652c7c40dc543ee2bdf58bc5581a0aac64d50784fd5c5cbae",
+          "outcome": "Corrected distance; completed the kite and dihedral proofs; specified the vertex-set model."
+        },
+        {
+          "path": "Part IA/Groups/Problem Sheets/Groups - Example Sheet 1 2025.md",
+          "sha256_after_review": "bf41fd8716c3036b25666498fd6b8aa64897975d7c51719abe184f1259b8db41",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Groups/Problem Sheets/Groups - Introductory Sheet 2026.md",
+          "sha256_after_review": "efb5b56da74a89c06d7424f6675ed8dbb0098bf7d5813c99c55638a23b415783",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Groups/Problem Sheets/Groups 0 - Handwritten Attempts.md",
+          "sha256_after_review": "35e2b15801ae418a4747b82633fd47c916edb794c87c529a50de37710c3c0fd1",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 0 Proofs.md",
+          "sha256_after_review": "fd2983320efdbab6579eccecf32cc1ffa2817b2deca844fd496aa602223c7432",
+          "outcome": "Resolved the dated reference and qualified the factoring discussion claim."
+        },
+        {
+          "path": "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
+          "sha256_after_review": "bee9a4c86e2a1b9056dd62a60767e6ed32da141181ef143467923b0148b787db",
+          "outcome": "Linked the supplementary proof chain in dependency order."
+        },
+        {
+          "path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets - Introductory Sheet 2026.md",
+          "sha256_after_review": "c0c98c6c835b28b8a2bff7a2605a6e4d8f920c9b608e620b6195c2db56a2b975",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Numbers and Sets/Problem Sheets/Numbers and Sets 0 - Handwritten Attempts.md",
+          "sha256_after_review": "c622728134bd4c497d4e3ef9d78c2ad0e875cf2febf67c7976f334bd71240961",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 1 Complex Numbers.md",
+          "sha256_after_review": "ea54004be2ec8a8fa58826ae2ac1aec426aa92c5d29736801d564b375351d524",
+          "outcome": "Retained; starting content matched prior full review"
+        },
+        {
+          "path": "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 2 Vectors.md",
+          "sha256_after_review": "a89a481e0d778d4ab4b027c2e4a0ac5c5c41a2f87769e0cacdddc663ecc19a5e",
+          "outcome": "Retained; starting content matched prior full review"
+        }
+      ],
+      "validation": {
+        "markdown_files": 47,
+        "study_notes": 44,
+        "lecture_notes": 8,
+        "resolved_explicit_classroom_flags": 6,
+        "remaining_explicit_classroom_flags": 0,
+        "wikilinks": 356,
+        "heading_links": 6,
+        "unchanged_exercise_documents": 7,
+        "dihedral_exhaustive_checks": {
+          "3": 6,
+          "4": 8,
+          "5": 10,
+          "6": 12,
+          "7": 14,
+          "8": 16
+        },
+        "symbolic_checks": [
+          "general kite identity",
+          "coordinate-increment split",
+          "Cauchy mean-value auxiliary identity",
+          "uniform area bound"
+        ],
+        "source_version_and_visual_metadata": "unchanged",
+        "tikz_blocks": "unchanged",
         "result": "passed"
       }
     }

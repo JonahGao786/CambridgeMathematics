@@ -5,7 +5,7 @@ course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: [10, 11, 12, 13]
+source_pages: [10, 11, 12, 13, 14, 20, 21, 22, 23]
 ---
 
 # Cross Products and Scalar Triple Products
@@ -82,7 +82,39 @@ For non-parallel $\mathbf a,\mathbf b$, the normal to their parallelogram is $\w
 $$V=|\mathbf a\times\mathbf b|h
 =|\mathbf c\cdot(\mathbf a\times\mathbf b)|.$$
 
-Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–13, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].
+The scalar triple product is a signed volume: its sign records the component of $\mathbf c$ along $\mathbf a\times\mathbf b$. It is zero exactly when the three vectors are coplanar, equivalently one is a linear combination of the other two.
+
+## Vector triple product
+
+For vectors in $\mathbb R^3$,
+$$\mathbf a\times(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf c,$$
+whereas
+$$(\mathbf a\times\mathbf b)\times\mathbf c
+=(\mathbf a\cdot\mathbf c)\mathbf b-(\mathbf b\cdot\mathbf c)\mathbf a.$$
+Thus the cross product is not associative. These identities are stated on page 14 and applied to [[Lines, Planes and Vector Equations|line–plane intersections]] on page 16. Page 22 supplies a component proof of the first identity using epsilon contraction; no separate proof of the second is supplied.
+
+## Levi-Civita notation and contraction
+
+For the right-handed orthonormal basis, $\varepsilon_{123}=\varepsilon_{231}=\varepsilon_{312}=1$, the reversed permutations have value $-1$, and repeated index values give zero. Repeated index letters are summed over $1,2,3$:
+$$\mathbf e_i\times\mathbf e_j=\varepsilon_{ijk}\mathbf e_k,$$
+$$(\mathbf a\times\mathbf b)_i=\varepsilon_{ijk}a_jb_k,$$
+$$\mathbf a\cdot(\mathbf b\times\mathbf c)
+=\varepsilon_{ijk}a_ib_jc_k.$$
+The contraction identity
+$$\varepsilon_{ijk}\varepsilon_{pqk}
+=\delta_{ip}\delta_{jq}-\delta_{iq}\delta_{jp}$$
+gives the page-22 vector triple-product proof after cyclically rewriting $\varepsilon_{kpq}$ as $\varepsilon_{pqk}$.
+
+## Lagrange's identity
+
+Page 23 proves, using the same contraction,
+$$(\mathbf a\times\mathbf b)\cdot(\mathbf b\times\mathbf c)
+=(\mathbf a\cdot\mathbf b)(\mathbf b\cdot\mathbf c)
+-(\mathbf a\cdot\mathbf c)|\mathbf b|^2.$$
+The full source calculation is retained in the lecture note. [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] expands the notation, signs, contractions and a numerical check.
+
+Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–14 and 20–23, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].
 
 ## Zero volume and operation order — supplementary explanation
 

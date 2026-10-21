@@ -6,7 +6,7 @@ date: 2026-10-21
 
 # Study Guide
 
-This guide covers the 44 study notes reviewed on 2026-10-17 and checked again, with classroom proof repairs, on 2026-10-21. Lecture notes retain source order and page references; concept notes explain reusable ideas; printed sheets and handwritten attempts remain separate. Sections labelled **supplementary** are additional mathematical explanation, not claims about what appeared in the original PDFs.
+This guide covers 55 study notes: the 44 reviewed on 2026-10-17 and checked again on 2026-10-21, plus 11 notes incorporated from the newer GitHub commits during publication checks. The expanded mathematical content and classroom review items were checked during reconciliation. Lecture notes retain source order and page references; concept notes explain reusable ideas; printed sheets and handwritten attempts remain separate. Sections labelled **supplementary** are additional mathematical explanation, not claims about what appeared in the original PDFs.
 
 Use the concept sequence in each course for revision, then return to the linked lectures for full derivations and to the sheets for practice. **Wrong proof**, **Incomplete proof**, and **TODO** labels describe limitations of an argument; they do not by themselves determine whether the conclusion is true or false. The detailed review scope and remaining issues are in [[Note Review - 2026-10-21]]; [[Note Review - 2026-10-17]] preserves the earlier review.
 
@@ -21,7 +21,9 @@ Start with implication and quantifier order, then induction and well-ordering. P
 3. [[Natural Numbers and Mathematical Induction]]
 4. [[Divisibility and Prime Numbers]]
 5. [[Greatest Common Divisors and Euclid's Algorithm]]
-6. [[Fibonacci Numbers]]
+6. [[Bezout's Identity and Linear Diophantine Equations]]
+7. [[Modular Arithmetic]]
+8. [[Fibonacci Numbers]]
 
 ### Lectures and practice
 
@@ -47,6 +49,8 @@ First learn complex arithmetic and polar form, then exponential notation, roots 
 9. [[Real Inner Products and Cauchy-Schwarz]]
 10. [[Orthonormal Bases and Vector Coordinates]]
 11. [[Cross Products and Scalar Triple Products]]
+12. [[Lines, Planes and Vector Equations]]
+13. [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]]
 
 ### Lectures and practice
 
@@ -64,6 +68,8 @@ Start with the set, operation and axioms; then use inverses to justify cancellat
 3. [[Subgroups and Generated Subgroups]]
 4. [[Latin Squares]]
 5. [[Isometries and Dihedral Groups]]
+6. [[Homomorphisms and Isomorphisms]]
+7. [[Cyclic Groups and Element Orders]]
 
 ### Lectures and practice
 
@@ -85,12 +91,17 @@ Read limits and error notation before derivative rules. Taylor polynomials appro
 5. [[Riemann Integration and the Fundamental Theorem of Calculus]]
 6. [[Integration by Substitution and by Parts]]
 7. [[Partial Derivatives and the Multivariate Chain Rule]]
+8. [[Implicit Differentiation]]
+9. [[Differentiation Under the Integral Sign]]
+10. [[First-Order Linear Differential Equations]]
+11. [[Forward Euler Method]]
 
 ### Lectures and practice
 
 - [[Differential Equations - Chapter 1 Introduction and Basic Calculus]]
 - [[Differential Equations - Chapter 2 Integration]]
 - [[Differential Equations - Chapter 3 Partial Differentiation]]
+- [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]]
 - [[Differential Equations - Examples Sheet 1 2026]]
 - [[Differential Equations - Examples Sheet 1 Handwritten Proofs]]
 
@@ -107,4 +118,4 @@ Here $\mathbb N=\{1,2,3,\ldots\}$ and $F_1=F_2=1$; $F_0$ has not been defined in
 
 The lecture’s word “proper” for subgroups excludes both the whole group and the trivial subgroup, whereas standard usage excludes only the whole group. Its “proper factors” likewise means non-trivial factors. Inner-product axioms here are for real vector spaces; the cross product is used in $\mathbb R^3$ with a fixed orientation.
 
-This is the currently available part of the course material. Matrices/eigenvalues, later Numbers and Sets chapters, and subsequent differential-equation methods are not yet covered by lecture notes in this repository. Do not infer that all course prerequisites or all exercise solutions are present.
+This is the currently available part of the course material. The notes now include modular arithmetic, homomorphisms and cyclic groups, index notation, implicit differentiation, integral differentiation, and the opening first-order ODE material. A general matrix/eigenvalue theory and a full treatment of first-order ODE solution methods are not yet supplied. The ODE dimension proof is a labelled supplement using first-order systems, not a claim of full source coverage. Do not infer that all course prerequisites or all exercise solutions are present.
