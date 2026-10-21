@@ -1,11 +1,13 @@
 ---
 title: Differential Equations - Chapter 2 Integration
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: source-backed notes with course-level explanations
 course: Part IA Differential Equations
 date: null
 source_file: Ch.2 Integration.pdf
 drive_file_id: 1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N
 source_url: https://drive.google.com/file/d/1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N/view
+reference_handout: topic1.pdf
+reference_handout_pages: "13–19"
 source_pages: 7
 ---
 
@@ -86,26 +88,19 @@ Blue hatching indicates this area; the black horizontal edge is the left-endpoin
 \end{document}
 ```
 
-### Uniform error control — corrected proof (pages 2–3)
+### Why the rectangle sums give the area (pages 2–3)
 
-The source estimates each strip by $A_n=\Delta x\,f(x_n)+O((\Delta x)^2)$ and then sums the errors. The following supplementary argument supplies the missing uniform bound.
+Follow the strip argument in `topic1.pdf`, pages 14–15. For this error estimate, assume $f$ is continuous on $[a,b]$, differentiable inside it, and $|f'|\le M$ for one fixed constant $M$ throughout the interval.
 
-Assume $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $|f'(t)|\le M$ there, for one constant $M$ (for example, $f\in C^1([a,b])$). The mean value theorem gives
-$$|f(t)-f(x_n)|\le M|t-x_n|.$$
-Consequently, with $A_n=\int_{x_n}^{x_{n+1}}f(t)\,dt$,
-$$\begin{aligned}
-|A_n-f(x_n)\Delta x|
-&\le\int_{x_n}^{x_{n+1}}|f(t)-f(x_n)|\,dt\\
-&\le\frac M2(\Delta x)^2.
-\end{aligned}$$
-Since $A=\sum_{n=0}^{N-1}A_n$, the total error is bounded by
+Since $A_n=\Delta x\,f(c_n)$ and $|c_n-x_n|\le\Delta x$, the mean value theorem gives
+$$|A_n-f(x_n)\Delta x|
+=\Delta x\,|f(c_n)-f(x_n)|\le M(\Delta x)^2.$$
+Adding the $N$ strip errors,
 $$\left|A-\sum_{n=0}^{N-1}f(x_n)\Delta x\right|
-\le\frac{M(b-a)^2}{2N}\longrightarrow0.$$
-The same $M$ works for every strip and every $N$, so the claimed $O(1/N)$ rate is now justified. For a non-negative $f$, $A$ is ordinary area; in general the integral is signed area.
+\le NM(\Delta x)^2=\frac{M(b-a)^2}{N}\longrightarrow0.$$
+Thus the limiting rectangle sum agrees with the area. In the lecture's notation, each error is $O((\Delta x)^2)$ and their sum is $O(1/N)$; using the same bound $M$ for every strip makes this step valid.
 
-**With continuity alone.** Continuous $f$ on $[a,b]$ is uniformly continuous. Define
-$$\omega_f(\delta)=\sup_{\substack{s,t\in[a,b]\\|s-t|\le\delta}}|f(s)-f(t)|.$$
-Then $\omega_f(\delta)\to0$. Upper and lower Riemann sums for a partition of mesh at most $\delta$ differ by at most $(b-a)\omega_f(\delta)$, so $f$ is Riemann integrable. Each tagged sum differs from its integral by at most the same bound. This proves convergence for continuous functions without asserting an $O(1/N)$ rate. Pointwise differentiability alone did not justify the source's uniform error estimate.
+Continuous functions are Riemann integrable even without a bounded derivative; the general proof belongs to Analysis I. The integral represents signed area if $f$ takes negative values.
 
 ## 2.2 Fundamental theorem of calculus (page 3)
 
@@ -114,15 +109,12 @@ $$F(x)=\int_a^x f(t)\,dt.$$
 Then, at interior points,
 $$F'(x)=\frac{d}{dx}\int_a^x f(t)\,dt=f(x).$$
 
-**Corrected proof under the stated continuity hypothesis — supplementary.** For $h\ne0$ small enough that $x+h\in[a,b]$, put $I_h=[\min(x,x+h),\max(x,x+h)]$. Additivity and orientation of the integral give
-$$\frac{F(x+h)-F(x)}h-f(x)
-=\frac1h\int_x^{x+h}(f(t)-f(x))\,dt.$$
-Therefore
-$$\left|\frac{F(x+h)-F(x)}h-f(x)\right|
-\le\sup_{t\in I_h}|f(t)-f(x)|\longrightarrow0$$
-by continuity at $x$. This works for positive and negative $h$, proving $F'(x)=f(x)$.
+**Proof using the mean value theorem for integrals.** For small $h\ne0$, there is a point $c_h$ between $x$ and $x+h$ such that
+$$\frac{F(x+h)-F(x)}h
+=\frac1h\int_x^{x+h}f(t)\,dt=f(c_h).$$
+As $h\to0$, also $c_h\to x$, so continuity gives $F'(x)=f(x)$. This works for either sign of $h$.
 
-The source's estimate $\int_x^{x+h}f(t)\,dt=f(x)h+O(h^2)$ is valid if $f$ is also differentiable at $x$, but is unnecessary here. Under continuity, the correct general remainder is $o(h)$, exactly what differentiation requires.
+This is the mean-value idea used in `topic1.pdf`, pages 15–16. Its $f(x)h+O(h^2)$ estimate is also valid when $f$ is differentiable at $x$; continuity alone suffices for the argument above.
 
 ### Corollaries and indefinite-integral notation (page 4)
 
@@ -138,9 +130,9 @@ $$\begin{aligned}
 &=F'(g(x))g'(x)=f(g(x))g'(x).
 \end{aligned}$$
 
-**Evaluation by an antiderivative — supplementary consequence.** If $A$ is continuous on $[a,b]$, differentiable on $(a,b)$ and $A'=f$ there, then $(A-F)'=0$. The mean value theorem shows that $A-F$ is constant, giving
+If $A'=f$, the definite integral can be evaluated as
 $$\int_a^b f(t)\,dt=A(b)-A(a).$$
-This is the bridge from Riemann sums to the substitution and integration-by-parts calculations below.
+Here $A$ is continuous on $[a,b]$ and differentiable inside it. Indeed, $(A-F)'=0$, so $A-F$ is constant.
 
 An **indefinite integral** is written $\int f(x)\,dx$ or $\int^x f(t)\,dt$. An unspecified lower limit leaves an integration constant.
 
@@ -208,6 +200,6 @@ I=\int\log x\,dx
 \end{aligned}$$
 The source notes that integration by parts also works for inverse trigonometric and inverse hyperbolic functions; no further examples are supplied.
 
-## Supplementary learning route
+## Related notes
 
-[[Riemann Integration and the Fundamental Theorem of Calculus#Completing the learning bridge — supplementary proofs]] summarizes the corrected continuity-based proof and the antiderivative evaluation formula above. [[Integration by Substitution and by Parts#Domains and the fundamental theorem — supplementary explanation]] explains branch restrictions and improper endpoints used above.
+[[Riemann Integration and the Fundamental Theorem of Calculus]] summarizes the area and antiderivative viewpoints. [[Integration by Substitution and by Parts]] collects the techniques and examples.

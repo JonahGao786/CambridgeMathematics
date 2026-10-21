@@ -6,6 +6,9 @@ date: 2026-10-21
 
 # Note Review — 2026-10-21
 
+> [!note] Subsequent presentation update
+> At the user's request, the Differential Equations notes were simplified against the professor's uploaded `topic1.pdf` after this review was published. The review below is a historical record of the earlier, more detailed version. Current calculus proof scope and notation are described in the final section, “Restoration to the professor's course level”.
+
 ## Scope and method
 
 This review continues the complete reading of all **44 study notes** recorded in [[Note Review - 2026-10-17]]. At the start, SHA-256 comparisons confirmed that all 44 notes exactly matched that reviewed state. Their definitions, proof dependencies and course connections were checked using that full reading; the classroom review items and affected derivations were reread and repaired in place. The study guide and earlier review record were also checked. This initial stage contained 44 study notes and three navigation/review documents. Publication checks then found newer remote commits; the reconciliation below brings the current total to 55 study notes and 58 Markdown documents.
@@ -135,3 +138,16 @@ Together with the original six locations, this resolves 11 classroom review loca
 ### Final publication checks
 
 Final validation passed for all 58 Markdown documents and 55 study notes: 454 internal links including six heading targets resolve, all nine lecture notes have no TODO/warning callouts, all 52 remote TikZ blocks are byte-identical, and the seven exercise documents match the earlier reviewed versions. Exact finite dihedral checks and symbolic kite, mean-value, epsilon-contraction, vector-product and ring-norm identities passed. Latest remote source/inventory metadata is unchanged, and `git diff --check` passed. Detailed results are recorded in the manifest. Notes, guide, review history and manifest are committed together; remote publication is confirmed by checking the pushed branch and its Git tree. No new Drive sync or PDF visual-reading claim is made by this publication follow-up.
+
+## Restoration to the professor's course level
+
+The user asked to restore the Differential Equations notes to a level appropriate for a first-year student, using the professor's uploaded `topic1.pdf`. All 29 PDF pages were rendered and visually read, with extracted text used only as an aid. This was a reference-based presentation revision, not a fresh Drive inventory or a complete transcription of the handout. Existing handwritten-note metadata, examples and TikZ diagrams were preserved.
+
+- L'Hôpital's rule now follows the special-case theorem and Taylor proof in handout pages 12–13. The broader theorem and added Rolle/Cauchy proof were removed. The higher-order example is explained by cancelling the first non-zero Taylor terms.
+- Integration keeps the rectangle-area argument with one fixed derivative bound and the short mean-value proof of the fundamental theorem. Moduli of continuity, upper/lower-sum proofs and repeated technical supplements were removed.
+- Partial differentiation uses small scalar changes, first-order Taylor terms, $df=f_x\,dx+f_y\,dy$ and the path chain rule. The linear-map formalism, norm estimates and counterexample detour were removed. The Taylor derivation states its smoothness assumption, and $df$ remains distinguished from the ordinary limit of the actual change.
+- The mixed-derivative subscript convention now matches handout page 22: $f_{xy}=(f_x)_y$, first $x$, then $y$.
+- Integral differentiation retains the three-term decomposition and worked examples, with brief conditions instead of long uniform-convergence and tail estimates. Detailed improper-integral justification is explicitly omitted rather than represented as a completed proof in the current note.
+- The matrix-system existence/uniqueness proof previously added to Chapter 4 was also removed. Chapter 4 is outside this uploaded handout; its original examples remain, and the general solution-count theorem is stated with its conditions, without an advanced proof.
+
+The five related concept notes and the study guide were synchronized. Earlier full-proof claims in this report and its manifest snapshot describe the version at commit `93f24d6`, not the simplified presentation. No claim is made that all of the professor's handout examples or diagrams have been imported. The new manifest entry records the reference PDF, page coverage, changed-file hashes and validation separately, preserving the earlier review and source-processing history.

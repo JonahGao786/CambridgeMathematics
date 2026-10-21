@@ -1,11 +1,13 @@
 ---
 title: Differential Equations - Chapter 3 Partial Differentiation
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: source-backed notes with course-level explanations
 course: Part IA Differential Equations
 date: null
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
 source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
+reference_handout: topic1.pdf
+reference_handout_pages: "20–29"
 source_pages: 11
 ---
 
@@ -82,9 +84,9 @@ $$\begin{aligned}
 
 Usually the fixed-variable bars are omitted: $\partial/\partial x$ implies that **all other independent variables are held fixed**. Write
 $$f_x=\frac{\partial f}{\partial x},\qquad
-f_{xy}=\frac{\partial^2f}{\partial x\,\partial y}
-=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right).$$
-Here the displayed source convention reads $xy$ as “differentiate in $y$ first, then $x$”; the rightmost differentiation is first. The convention matters when reading the derivation below.
+f_{xy}=(f_x)_y=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right)
+=\frac{\partial^2f}{\partial y\,\partial x}.$$
+Following `topic1.pdf`, page 22, the subscript $xy$ means **first $x$, then $y$**. In the fraction notation, the differentiation on the right acts first.
 
 **Schwarz's theorem (statement only).** If the second partial derivatives are continuous in a neighbourhood, then
 $$\frac{\partial^2f}{\partial x\,\partial y}
@@ -97,53 +99,36 @@ For $f(x,y,z)$, $\partial f/\partial x$ means $\left.\partial f/\partial x\right
 
 For a path $x(t),y(t)$ and a function $f(x,y)$, the question is how to find $df/dt$ along the path.
 
-### Controlled increment derivation — corrected proof (page 3)
+### Small changes and the differential (pages 3–4)
 
-The following supplementary proof keeps the source's split into coordinate increments and supplies its missing regularity and remainder control. Assume $f$ has continuous first partial derivatives in an open neighbourhood of $p=(x,y)$; mixed second derivatives are not needed.
-
-For small $h,k$, write
+The idea is to add the change caused by $x$ to the change caused by $y$. Following `topic1.pdf`, page 23, split the actual change into two coordinate steps:
 $$\begin{aligned}
-f(x+h,y+k)-f(x,y)
-&=[f(x+h,y+k)-f(x+h,y)]\\
-&\quad+[f(x+h,y)-f(x,y)].
+\delta f
+&=f(x+\delta x,y+\delta y)-f(x,y)\\
+&=[f(x+\delta x,y+\delta y)-f(x+\delta x,y)]
++[f(x+\delta x,y)-f(x,y)].
 \end{aligned}$$
-The one-variable mean value theorem on each coordinate segment gives numbers $\theta,\eta\in(0,1)$ such that
-$$f(x+h,y+k)-f(x,y)
-=k f_y(x+h,y+\theta k)+h f_x(x+\eta h,y).$$
-If an increment is zero, its term is zero and its intermediate point can be chosen arbitrarily on the degenerate segment. Subtract $h f_x(p)+k f_y(p)$ and let $\rho=\sqrt{h^2+k^2}$. Continuity of $f_x,f_y$ at $p$ implies
-$$\begin{aligned}
-|R(h,k)|
-&\le |k|\,|f_y(x+h,y+\theta k)-f_y(p)|\\
-&\quad+|h|\,|f_x(x+\eta h,y)-f_x(p)|\\
-&=o(\rho).
-\end{aligned}$$
-Indeed, both derivative differences tend to zero regardless of the intermediate points, and $|h|+|k|\le\sqrt2\rho$. Hence
-$$f(x+h,y+k)=f(x,y)+f_x(x,y)h+f_y(x,y)k+o(\rho).$$
-This proves total differentiability under the stated $C^1$ hypothesis. The previous source expansion used a mixed derivative and an uncontrolled remainder at a moving base point; the estimate above resolves both issues.
+For this Taylor derivation, assume the second partial derivatives are continuous nearby. Applying first-order Taylor expansions to the two steps gives
+$$\delta f=f_x\,\delta x+f_y\,\delta y
++O\!\left((|\delta x|+|\delta y|)^2\right).$$
+The second derivatives are bounded in a small neighbourhood, so the omitted terms are of second order in the small changes.
 
-### Differential and chain rule — corrected definition and proof (page 4)
+The **differential** names the first-order part:
+$$df=f_x\,dx+f_y\,dy.$$
+In words, change in $f$ ≈ slope in the $x$-direction × change in $x$ + slope in the $y$-direction × change in $y$. The symbol $df$ is not the ordinary limit of $\delta f$; that limit would simply be zero.
 
-A function is **totally differentiable** at $p$ if there is a linear map $df_p$ with
-$$f(p+v)-f(p)=df_p(v)+o(\|v\|).$$
-Its differential is that linear map:
-$$df_p(h,k)=f_x(p)h+f_y(p)k,$$
-or $df=f_x\,dx+f_y\,dy$. Here $dx,dy$ are the coordinate linear maps on an increment: $dx(h,k)=h$ and $dy(h,k)=k$. The source expression $df=\lim_{h,k\to0}(f(x+h,y+k)-f(x,y))$ is not a definition of the differential: for continuous $f$ that limit is just zero.
+### Chain rule along a path (page 4)
 
-**Chain rule.** Let $p(t)=(x(t),y(t))$ be differentiable and suppose $f$ is totally differentiable at $p(t)$. For an increment $s$,
-$$v(s)=p(t+s)-p(t)=s\,p'(t)+o(s)=O(s).$$
-Write the differentiability remainder as $r(v)$, where $r(v)=o(\|v\|)$ and $r(0)=0$. Then $r(v(s))=o(s)$: for each $\varepsilon>0$, sufficiently small $v$ satisfies $|r(v)|\le\varepsilon\|v\|$, while $\|v(s)\|\le C|s|$ for some fixed $C$. Linearity gives
-$$\begin{aligned}
-f(p(t+s))-f(p(t))
-&=df_{p(t)}(v(s))+r(v(s))\\
-&=s\,df_{p(t)}(p'(t))+o(s).
-\end{aligned}$$
-Dividing by $s$ and taking the limit proves
-$$\frac d{dt}f(x(t),y(t))
-=f_x(x(t),y(t))x'(t)+f_y(x(t),y(t))y'(t).$$
-The theorem needs total differentiability at the point; continuous first partial derivatives nearby are a sufficient condition, proved above. The existence of partial derivatives alone is insufficient; see the counterexample in [[Partial Derivatives and the Multivariate Chain Rule]].
+If $x=x(t)$ and $y=y(t)$, then
+$$\delta x=x'(t)\delta t+o(\delta t),\qquad
+\delta y=y'(t)\delta t+o(\delta t).$$
+Substitute into the small-change formula, divide by $\delta t$ and let $\delta t\to0$. The first-order terms give
+$$\frac{df}{dt}=f_x\frac{dx}{dt}+f_y\frac{dy}{dt},$$
+and the remaining terms tend to zero after division. The Taylor assumptions above are enough for this derivation; continuous first partial derivatives already suffice for the chain rule itself.
 
 If the path is parametrized by $x$, with $y=y(x)$, then
 $$\frac d{dx}f(x,y(x))=f_x+f_y\frac{dy}{dx}.$$
+There are two contributions because $f$ changes both directly with $x$ and through $y(x)$.
 
 ### Integral form (page 4)
 
@@ -336,9 +321,7 @@ $$B_h=\frac{b(c+h)-b(c)}h\,f(\xi_h;c+h)
 \longrightarrow b'(c)f(b(c);c).$$
 The source says to use the same argument for the lower-endpoint term, yielding $-a'(c)f(a(c);c)$.
 
-**Uniform interchange proof — supplementary correction.** Fix $c$ and a compact rectangle containing the old integration interval and all parameters $c+h$ sufficiently near $c$. Continuity of $f_c$ makes it uniformly continuous there. The one-variable mean value theorem, applied in the parameter for each $x$, gives
-$$\frac{f(x;c+h)-f(x;c)}h=f_c(x;c+\theta_{x,h}h),\qquad0<\theta_{x,h}<1.$$
-Consequently the difference between this quotient and $f_c(x;c)$ tends to zero **uniformly in $x$**. Its integral error is bounded by $|b(c)-a(c)|$ times that uniform error, so the displayed limit of $A_h$ follows. The endpoint terms above then prove Leibniz's rule under the stated continuous-partial hypothesis. If an endpoint does not move, its corresponding interval term is zero.
+**Why the first term has this limit.** On the fixed finite interval, continuous $f_c$ makes the parameter difference quotient approach $f_c$ uniformly: its error can be made small by the same amount across the interval. The integral error is at most the interval length times that amount, so it tends to zero too. Together with the two endpoint terms, this proves the formula in the smooth setting used here. If an endpoint does not move, its term is zero.
 
 ### Example with a moving endpoint (page 11)
 
@@ -369,14 +352,8 @@ $$\frac{d^n}{d\lambda^n}\frac1\lambda
 Equating them and setting $\lambda=1$ yields
 $$(-1)^nJ_n=(-1)^nn!,\qquad J_n=n!.$$
 
-**Improper-integral justification — supplementary correction.** Fix $\lambda_0>0$ and restrict $\lambda$ to a neighbourhood where $\lambda\ge\lambda_0/2$. For every non-negative integer $m$,
-$$\left|\partial_\lambda^m e^{-\lambda x}\right|
-=x^m e^{-\lambda x}\le x^m e^{-\lambda_0x/2}\qquad(x\ge0).$$
-This bound is integrable without assuming the factorial-integral result: the exponential series gives
-$$x^m e^{-\lambda_0x/2}
-\le m!\left(\frac4{\lambda_0}\right)^m e^{-\lambda_0x/4}.$$
-To differentiate the integral of $\partial_\lambda^m e^{-\lambda x}$, its parameter difference quotient is bounded by $x^{m+1}e^{-\lambda_0x/2}$ by the mean value theorem (choose the increments inside this neighbourhood). On every finite interval the quotient converges uniformly to the next derivative. On the remaining tail, both the quotient and its limit are bounded by the same integrable exponential bound, whose tail integral tends to zero uniformly. Splitting at a large finite endpoint therefore justifies passing the limit through the improper integral. Repeat for $m=0,\ldots,n-1$ to justify all $n$ differentiations. For $n=0$, the explicit integral already gives the result.
+**Scope of this example.** For $\lambda>0$, the exponential decay controls every polynomial factor $x^n$ arising from differentiation, so the differentiated integrals converge and the interchange is valid locally in $\lambda$. This is an additional condition for the infinite interval; it does not follow from the finite-interval formula alone. The detailed convergence proof is beyond this course-level calculation.
 
-## Supplementary learning route
+## Related notes
 
-[[Partial Derivatives and the Multivariate Chain Rule#Partial derivatives versus differentiability — supplementary explanation]] defines total differentiability, shows why partial derivatives alone are insufficient, and derives the chain rule from a controlled first-order remainder. It complements the corrected proofs above; the added regularity assumptions and proofs are not attributed to the original PDF.
+[[Partial Derivatives and the Multivariate Chain Rule]] summarizes the small-change idea and formulas. [[Implicit Differentiation]] and [[Differentiation Under the Integral Sign]] collect their applications.

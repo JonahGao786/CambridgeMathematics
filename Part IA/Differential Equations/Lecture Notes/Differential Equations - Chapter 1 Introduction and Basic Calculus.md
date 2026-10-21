@@ -1,11 +1,13 @@
 ---
 title: Differential Equations - Chapter 1 Introduction and Basic Calculus
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: source-backed notes with course-level explanations
 course: Part IA Differential Equations
 date: null
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs
 source_url: https://drive.google.com/file/d/1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs/view
+reference_handout: topic1.pdf
+reference_handout_pages: "1–13"
 source_pages: 8
 additional_sources:
   - source_file: Ch.1 Differentiation.pdf
@@ -262,7 +264,7 @@ $$E_n(h)=o(h^n)\qquad(h\to0).$$
 $$E_n(h)=\frac{f^{(n+1)}(\xi_n)}{(n+1)!}h^{n+1}.$$
 For fixed $n$, continuity makes this derivative bounded locally, giving
 $$E_n(h)=O(h^{n+1})\qquad(h\to0).$$
-For $h>0$, the interval is $x_0\le\xi_n\le x_0+h$; for $h<0$, its endpoints are reversed. No proof of either version is supplied in this source.
+For $h>0$, the interval is $x_0\le\xi_n\le x_0+h$; for $h<0$, its endpoints are reversed. The handwritten notes do not supply these proofs; `topic1.pdf`, page 19, gives a non-examinable sketch using integration by parts.
 
 **Comparison of errors (page 11).** $O(h^{n+1})$ is stronger than $o(h^n)$. For example,
 $$|h|^{n+1/2}=o(h^n),\qquad |h|^{n+1/2}\ne O(h^{n+1})\qquad(h\to0).$$
@@ -283,55 +285,37 @@ See [[Taylor Series and Taylor's Theorem]] and [[Limits, Big O and Little o - A 
 
 ### 1.4 L'Hôpital's rule (pages 12–13)
 
-The rule evaluates limits of indeterminate forms.
+The form $0/0$ does not determine a quotient's limit. The following is the special case presented in the professor's `topic1.pdf`, pages 12–13.
 
-**Theorem — $0/0$ form (page 12).** Let $f,g$ be differentiable on an open interval containing $x_0$, with $g'(x)\ne0$ for $x\ne x_0$ in that interval. Suppose
-$$\lim_{x\to x_0}f(x)=0,\qquad\lim_{x\to x_0}g(x)=0.$$
-Because these functions are differentiable at $x_0$, the limits are also $f(x_0)=g(x_0)=0$. Then, provided the right-hand limit exists,
-$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=
-\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.$$
-
-**Proof under stronger hypotheses (page 12).** The supplied proof additionally assumes $g'(x_0)\ne0$ and continuity of the first derivatives near $x_0$. First-order Taylor expansions give
-$$\begin{aligned}
-f(x)&=f(x_0)+(x-x_0)f'(x_0)+o(x-x_0),\\
-g(x)&=g(x_0)+(x-x_0)g'(x_0)+o(x-x_0).
-\end{aligned}$$
-Using $f(x_0)=g(x_0)=0$ and cancelling $x-x_0$ for $x\ne x_0$,
-$$\begin{aligned}
-\lim_{x\to x_0}\frac{f(x)}{g(x)}
-&=\lim_{x\to x_0}
-\frac{f'(x_0)+o(x-x_0)/(x-x_0)}
-{g'(x_0)+o(x-x_0)/(x-x_0)}\\
-&=\frac{f'(x_0)}{g'(x_0)}
-=\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.
-\end{aligned}$$
-The last equality uses continuity of the first derivatives. This source proof establishes only the stronger special case. The following supplementary argument proves the theorem as stated without these extra assumptions.
-
-**Mean-value prerequisite — supplementary.** Rolle's theorem says that if $H$ is continuous on $[u,v]$, differentiable on $(u,v)$ and $H(u)=H(v)$, then $H'(c)=0$ for some $c\in(u,v)$. A constant function satisfies this immediately; otherwise continuity gives a maximum or minimum in the interior, where differentiability forces the derivative to vanish. The ordinary mean value theorem follows by applying Rolle's theorem to $H(t)$ minus the straight line joining its endpoint values.
-
-**Proof under the stated hypotheses — supplementary.** Fix $x\ne x_0$ sufficiently near $x_0$. Since $g(x_0)=0$, Rolle's theorem shows $g(x)\ne0$: otherwise some point strictly between $x_0$ and $x$ would have $g'=0$, contrary to the hypothesis.
-
-Apply Cauchy's mean value theorem to $f,g$ on the closed segment between $x_0$ and $x$. There exists $\xi_x$ strictly between them with
-$$\frac{f(x)-f(x_0)}{g(x)-g(x_0)}=\frac{f'(\xi_x)}{g'(\xi_x)}.$$
-For completeness, this follows from Rolle's theorem applied to
-$$H(t)=(f(x)-f(x_0))(g(t)-g(x_0))
--(g(x)-g(x_0))(f(t)-f(x_0)),$$
-which vanishes at both endpoints. The denominators are non-zero by the preceding argument and the hypothesis on $g'$.
-
-Thus $f(x)/g(x)=f'(\xi_x)/g'(\xi_x)$. Since $0<|\xi_x-x_0|<|x-x_0|$, $\xi_x\to x_0$. The assumed derivative-quotient limit therefore gives the desired quotient limit. The same argument covers a finite limit or a limit of $+\infty$ or $-\infty$, and works on each side. Continuity of $f',g'$ and $g'(x_0)\ne0$ are not required.
-
-**Repeated application (page 13).** If $f'(x_0)=g'(x_0)=0$ and the rule's hypotheses apply again to the derivative quotient, it may be applied a second time:
+**Theorem — course version.** Suppose $f,g$ are differentiable near $x_0$, their first derivatives are continuous at $x_0$, and
+$$f(x_0)=g(x_0)=0,\qquad g'(x_0)\ne0.$$
+Then
 $$\lim_{x\to x_0}\frac{f(x)}{g(x)}
-=\lim_{x\to x_0}\frac{f''(x)}{g''(x)}.$$
-Further applications also require the corresponding hypotheses.
+=\frac{f'(x_0)}{g'(x_0)}
+=\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.$$
+
+**Proof using first-order Taylor expansions.** Write $h=x-x_0$. Then
+$$f(x_0+h)=hf'(x_0)+o(h),\qquad
+ g(x_0+h)=hg'(x_0)+o(h).$$
+Cancel $h$ for $h\ne0$:
+$$\frac{f(x_0+h)}{g(x_0+h)}
+=\frac{f'(x_0)+o(h)/h}{g'(x_0)+o(h)/h}
+\longrightarrow\frac{f'(x_0)}{g'(x_0)}.$$
+The denominator tends to a non-zero number. Continuity of $f',g'$ gives the final equality in the theorem. More general versions of the rule exist; they are not needed for this proof.
+
+**When more derivatives vanish.** The same Taylor idea works if the first non-zero denominator term has order $n$. If $f,g$ have derivatives through order $n$ near $x_0$, all derivatives of orders $0,\ldots,n-1$ vanish at $x_0$, and $g^{(n)}(x_0)\ne0$, then
+$$\frac{f(x_0+h)}{g(x_0+h)}
+=\frac{f^{(n)}(x_0)h^n/n!+o(h^n)}
+{g^{(n)}(x_0)h^n/n!+o(h^n)}
+\longrightarrow\frac{f^{(n)}(x_0)}{g^{(n)}(x_0)}.$$
+This explains the repeated-differentiation example without needing a more general proof of L'Hôpital's rule.
 
 **Example (page 13).** Let
 $$f(x)=3\sin x-\sin(3x),\qquad g(x)=2x-\sin(2x).$$
-Both functions and their first two derivatives vanish at $0$. The third derivatives written are
-$$f'''(x)=-3\cos x+27\cos(3x),\qquad g'''(x)=8\cos(2x).$$
-The source evaluates
+Both functions and their first two derivatives vanish at $0$. Since
+$$f^{(3)}(x)=-3\cos x+27\cos(3x),\qquad g^{(3)}(x)=8\cos(2x),$$
+the first non-zero terms are cubic and
 $$\lim_{x\to0}\frac{3\sin x-\sin(3x)}{2x-\sin(2x)}
 =\frac{24}{8}=3.$$
-The derivative quotients satisfy the conditions for the three applications in a sufficiently small punctured neighbourhood of $0$.
 
 See [[L'Hôpital's Rule]].

@@ -1258,6 +1258,15 @@
         ],
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
+      },
+      "pedagogical_revision_2026_10_21": {
+        "reference_handout_sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+        "updated_markdown_paths": [
+          "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md"
+        ],
+        "source_version_unchanged": true,
+        "presentation_record": "last_pedagogical_revision",
+        "proof_scope": "See current notes and last_pedagogical_revision; earlier detailed-proof review records are historical."
       }
     },
     "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW": {
@@ -1788,6 +1797,16 @@
         ],
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
+      },
+      "pedagogical_revision_2026_10_21": {
+        "reference_handout_sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+        "updated_markdown_paths": [
+          "Concepts/L'Hôpital's Rule.md",
+          "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md"
+        ],
+        "source_version_unchanged": true,
+        "presentation_record": "last_pedagogical_revision",
+        "proof_scope": "See current notes and last_pedagogical_revision; earlier detailed-proof review records are historical."
       }
     },
     "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN": {
@@ -2608,6 +2627,16 @@
         ],
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
+      },
+      "pedagogical_revision_2026_10_21": {
+        "reference_handout_sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+        "updated_markdown_paths": [
+          "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
+          "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md"
+        ],
+        "source_version_unchanged": true,
+        "presentation_record": "last_pedagogical_revision",
+        "proof_scope": "See current notes and last_pedagogical_revision; earlier detailed-proof review records are historical."
       }
     },
     "1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E": {
@@ -2850,6 +2879,17 @@
         ],
         "report": "Note Review - 2026-10-21.md",
         "outstanding_classroom_review_items": []
+      },
+      "pedagogical_revision_2026_10_21": {
+        "reference_handout_sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+        "updated_markdown_paths": [
+          "Concepts/Differentiation Under the Integral Sign.md",
+          "Concepts/Partial Derivatives and the Multivariate Chain Rule.md",
+          "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md"
+        ],
+        "source_version_unchanged": true,
+        "presentation_record": "last_pedagogical_revision",
+        "proof_scope": "See current notes and last_pedagogical_revision; earlier detailed-proof review records are historical."
       }
     },
     "1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3": {
@@ -2979,7 +3019,17 @@
           "review_report": "Note Review - 2026-10-21.md",
           "remote_source_commit": "0021c461439c86ab34778e2a7fcada4d2febb202"
         }
-      ]
+      ],
+      "pedagogical_revision_2026_10_21": {
+        "reference_handout_sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+        "updated_markdown_paths": [
+          "Concepts/First-Order Linear Differential Equations.md",
+          "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md"
+        ],
+        "source_version_unchanged": true,
+        "presentation_record": "last_pedagogical_revision",
+        "proof_scope": "See current notes and last_pedagogical_revision; earlier detailed-proof review records are historical."
+      }
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
@@ -4277,6 +4327,111 @@
         "tikz_blocks": "unchanged",
         "result": "passed"
       }
+    }
+  },
+  "last_pedagogical_revision": {
+    "date": "2026-10-21",
+    "request": "Restore Differential Equations notes to first-year course level using the professor's uploaded handout.",
+    "base_commit": "93f24d6b01fe1a179dae7821f1304e03e6f7e917",
+    "reference": {
+      "kind": "user-uploaded professor handout",
+      "file_name": "topic1.pdf",
+      "sha256": "f6addda8c5c70e4c6d2b9043819ef31748f15382c9e680ee20275ced73816b84",
+      "total_page_count": 29,
+      "visually_inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "reading_method": "Rendered all 29 pages with PyMuPDF at 1.5x and inspected every page with view_image; text extraction used as a reading aid.",
+      "purpose": "Calibrate explanations and theorem scope in existing notes; not a complete new transcription."
+    },
+    "source_versions_advanced": false,
+    "drive_inventory_checked": false,
+    "existing_tikz_modified": false,
+    "chapter_4_scope": "Removed our earlier advanced proof only; uploaded handout does not cover Chapter 4.",
+    "presentation": "Short course-level derivations with necessary assumptions; no general linear-map differential, Cauchy mean-value proof, modulus-of-continuity proof or matrix-system existence proof.",
+    "current_proof_scope": "The special-case L'Hopital proof, smooth Taylor chain-rule derivation and short integral arguments are retained. General Riemann integrability, general ODE solution-count proof and detailed improper-integral interchange are explicitly deferred.",
+    "changed_study_notes": [
+      {
+        "path": "Concepts/Differentiation Under the Integral Sign.md",
+        "sha256": "22048053d4f0ceb46fb040906e89db76aabf4dffcb8def89f1afa560ee1b186a"
+      },
+      {
+        "path": "Concepts/First-Order Linear Differential Equations.md",
+        "sha256": "dff7a0ab9fadfe78467cfdde38b4ecc754db43086e28a8ac1857f248c7b4980a"
+      },
+      {
+        "path": "Concepts/L'Hôpital's Rule.md",
+        "sha256": "b8d9292c7ab8804ceb56a305b43ea7d028af475faddffe310a5a9f6d5fc5147b"
+      },
+      {
+        "path": "Concepts/Partial Derivatives and the Multivariate Chain Rule.md",
+        "sha256": "edac810a73f9881a61ff8d8ca08afa88a4118b39db49709069ef7f6316bb0139"
+      },
+      {
+        "path": "Concepts/Riemann Integration and the Fundamental Theorem of Calculus.md",
+        "sha256": "fc9fb9b00939abbf06e86c1390d25f4a1b426633a80100f8e1b399613aa42ce6"
+      },
+      {
+        "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 1 Introduction and Basic Calculus.md",
+        "sha256": "a2255dd7317ea597ca92dd09295255e18a08209becf4b09e4b317f481771ff83"
+      },
+      {
+        "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 2 Integration.md",
+        "sha256": "a31c641901e4fb09e0d61b2e88bcefc2ec70ebf85a3a659dc8c3b2985a100eda"
+      },
+      {
+        "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 3 Partial Differentiation.md",
+        "sha256": "ff6b5c4820f4454a186bb3f4538ebf2adf85d7e7c08fbd7316e87d56bff5adf3"
+      },
+      {
+        "path": "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 4 First-Order Linear Differential Equations.md",
+        "sha256": "b4479ea3beab44eb45c879c10e4dc915f8c0eba30be63914732d10488ed6d0c2"
+      }
+    ],
+    "supporting_documents": [
+      "Study Guide.md",
+      "Note Review - 2026-10-21.md"
+    ],
+    "validation": {
+      "result": "passed",
+      "markdown_files": 58,
+      "internal_links": 445,
+      "heading_links": 3,
+      "preserved_tikz_blocks": 52,
+      "changed_study_notes": 9,
+      "reference_pdf_pages_visually_read": 29,
+      "source_processing_and_review_history": "unchanged",
+      "exercise_documents": "unchanged",
+      "example_calculations": "passed",
+      "diff_check": "passed"
     }
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: First-Order Linear Differential Equations
-material_type: source-backed definitions, example and scope notes with supplementary corrected proofs
+material_type: source-backed definitions, example and brief scope notes
 course: Part IA Differential Equations
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
@@ -31,7 +31,7 @@ Functions $f_1,\ldots,f_N$ on a common domain are linearly dependent when consta
 $$\sum_{i=1}^N C_if_i(x)=0\qquad\text{for all }x.$$
 They are linearly independent when the only such constants are all zero.
 
-The lecture now states and proves the corrected dimension theorem in a labelled supplement: an $n$th-order homogeneous linear ODE with continuous coefficients and a non-vanishing leading coefficient on an interval has an $n$-dimensional solution space. The proof constructs the solution of the associated first-order system and identifies solutions with their $n$ initial values at one point. A continuous forcing term gives an affine family instead; arbitrary boundary conditions need not guarantee uniqueness.
+For an $n$th-order homogeneous linear ODE on an interval, continuous coefficients and a non-vanishing leading coefficient give $n$ independent solutions; all solutions are their linear combinations. For an inhomogeneous equation, add one particular solution. This general result is stated without proof here; the first-order example below shows how one initial value determines one constant.
 
 ## Constant-coefficient example
 

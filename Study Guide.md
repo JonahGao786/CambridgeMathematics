@@ -80,7 +80,7 @@ Start with the set, operation and axioms; then use inverses to justify cancellat
 
 ## Differential Equations
 
-Read limits and error notation before derivative rules. Taylor polynomials approximate locally; equality to an infinite Taylor series needs a separate remainder argument. Integration reverses differentiation under the fundamental theorem. For several variables, learn total differentiability before applying the chain rule: existence of partial derivatives alone is insufficient.
+Read limits and error notation before derivative rules. Taylor polynomials approximate locally; equality to an infinite Taylor series needs a separate remainder argument. Integration reverses differentiation under the fundamental theorem. For several variables, start with holding one variable fixed, then add the first-order changes to obtain the differential and chain rule. Follow the professor’s `topic1.pdf` for the level of detail: formulas, short derivations and examples, with deeper analysis deferred.
 
 ### Concept sequence
 
@@ -110,12 +110,12 @@ Read limits and error notation before derivative rules. Taylor polynomials appro
 - **Logic → limits:** the order “for every tolerance, there exists a neighbourhood” uses [[Logical Connectives and Quantifiers]].
 - **Number theory → subgroups:** well-ordering and division with remainder underpin the classification of subgroups of the integers. Bézout’s identity uses the same integer-linear-combination idea.
 - **Complex numbers → geometry and groups:** multiplication by a unit complex number rotates the plane; conjugation reflects it. These maps connect [[Roots of Unity]] to [[Isometries and Dihedral Groups]].
-- **Vectors → multivariate calculus:** the differential is a linear map on the increment vector, explaining how the one-variable derivative becomes the multivariate chain rule.
+- **Geometry → multivariate calculus:** the slopes in the coordinate directions give the two contributions $df=f_x\,dx+f_y\,dy$; along a path, both coordinates can change.
 
 ## Conventions and coverage
 
-Here $\mathbb N=\{1,2,3,\ldots\}$ and $F_1=F_2=1$; $F_0$ has not been defined in the supplied Fibonacci convention. Function composition is right to left. The complex-number notes use $\log z$ for the principal value and $\operatorname{Log}z$ for the set of logarithms, with $\arg z\in(-\pi,\pi]$. The partial-derivative source reads $f_{xy}=\partial_x(\partial_y f)$; check the convention in other texts.
+Here $\mathbb N=\{1,2,3,\ldots\}$ and $F_1=F_2=1$; $F_0$ has not been defined in the supplied Fibonacci convention. Function composition is right to left. The complex-number notes use $\log z$ for the principal value and $\operatorname{Log}z$ for the set of logarithms, with $\arg z\in(-\pi,\pi]$. Following the professor’s `topic1.pdf`, $f_{xy}=(f_x)_y=\partial_y(\partial_x f)$ means first $x$, then $y$; check the convention in other texts.
 
 The lecture’s word “proper” for subgroups excludes both the whole group and the trivial subgroup, whereas standard usage excludes only the whole group. Its “proper factors” likewise means non-trivial factors. Inner-product axioms here are for real vector spaces; the cross product is used in $\mathbb R^3$ with a fixed orientation.
 
-This is the currently available part of the course material. The notes now include modular arithmetic, homomorphisms and cyclic groups, index notation, implicit differentiation, integral differentiation, and the opening first-order ODE material. A general matrix/eigenvalue theory and a full treatment of first-order ODE solution methods are not yet supplied. The ODE dimension proof is a labelled supplement using first-order systems, not a claim of full source coverage. Do not infer that all course prerequisites or all exercise solutions are present.
+This is the currently available part of the course material. The notes now include modular arithmetic, homomorphisms and cyclic groups, index notation, implicit differentiation, integral differentiation, and the opening first-order ODE material. A general matrix/eigenvalue theory and a full treatment of first-order ODE solution methods are not yet supplied. The general ODE solution-count result is stated with its conditions; its advanced proof is omitted from these introductory notes. Do not infer that all course prerequisites or all exercise solutions are present.

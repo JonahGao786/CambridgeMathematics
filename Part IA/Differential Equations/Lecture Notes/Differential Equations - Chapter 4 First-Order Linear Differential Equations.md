@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 4 First-Order Linear Differential Equations
-material_type: handwritten lecture notes with labelled mathematical corrections and supplements
+material_type: handwritten lecture notes with brief scope clarifications
 course: Part IA Differential Equations
 date: null
 source_file: Ch.4 First-order Linear Differential Equations.pdf
@@ -74,17 +74,7 @@ so $e^{\lambda x}$ is an eigenfunction with eigenvalue $\lambda$.
 
 The source states: “An $n$th-order linear ODE has $n$ linearly independent solutions.”
 
-**Corrected statement — supplementary.** Let $I$ be an interval, $n\ge1$, and let $a_0,\ldots,a_n$ be continuous real functions on $I$ with $a_n(x)\ne0$ throughout. The solutions of the **homogeneous** equation
-$$a_n y^{(n)}+a_{n-1}y^{(n-1)}+\cdots+a_0y=0$$
-form an $n$-dimensional real vector space. Thus there are $n$ independent solutions and every solution is their linear combination. For a continuous forcing term $g$, the solutions of the equation with right-hand side $g$ form an affine family $y_p+\ker L$, where $y_p$ is one particular solution and $L$ is the displayed linear differential operator.
-
-**Proof and existence prerequisite — supplementary.** Divide by $a_n$ and write $Y=(y,y',\ldots,y^{(n-1)})^T$. The homogeneous equation becomes $Y'=A(x)Y$ for a continuous companion matrix $A$. Fix $x_0\in I$. On a compact subinterval containing $x_0$, let $\|A(x)\|\le M$ and define
-$$P_0(x)=I_n,\qquad P_{k+1}(x)=\int_{x_0}^x A(t)P_k(t)\,dt.$$
-Induction gives $\|P_k(x)\|\le M^k|x-x_0|^k/k!$, so $\Phi=\sum_{k\ge0}P_k$ converges uniformly and satisfies $\Phi=I_n+\int_{x_0}^x A(t)\Phi(t)\,dt$. Thus $Y=\Phi v$ solves $Y'=AY$, $Y(x_0)=v$, for every $v\in\mathbb R^n$.
-
-If two solutions have the same initial value, their difference $Z$ satisfies $Z(x)=\int_{x_0}^x A(t)Z(t)\,dt$. With $\|Z\|\le B$ on the compact subinterval, repeated substitution yields $\|Z(x)\|\le B M^k|x-x_0|^k/k!$ for every $k$, hence $Z=0$. Existence and uniqueness on arbitrary compact subintervals give the solution throughout $I$. The same construction for the augmented system $(Y,1)'=\begin{pmatrix}A&b\\0&0\end{pmatrix}(Y,1)$ supplies a particular solution when a continuous forcing vector $b$ is present.
-
-The map $y\mapsto(y(x_0),y'(x_0),\ldots,y^{(n-1)}(x_0))$ is therefore a linear bijection from homogeneous solutions to $\mathbb R^n$, proving the dimension statement. Subtracting a particular solution proves the affine description. The interval and non-vanishing leading coefficient ensure the argument applies on a single regular domain.
+**Scope of the statement.** For a homogeneous linear equation on an interval, with continuous coefficients and a leading coefficient that never vanishes, there are $n$ linearly independent solutions; every solution is a linear combination of them. For an inhomogeneous equation, add one particular solution to a general homogeneous solution. The general theorem is stated here without proof; the first-order example below illustrates the idea.
 
 ### Linear dependence and independence of functions (page 3)
 
@@ -116,7 +106,7 @@ Thus $\lambda=3/5$, and the source identifies the general solution as
 $$y(x)=Ae^{3x/5},\qquad A\text{ constant}.$$
 The value $A=0$ includes the zero solution.
 
-The corrected theorem guarantees uniqueness from $n$ **initial values** $y(x_0),\ldots,y^{(n-1)}(x_0)$ at one point. Merely counting $n$ boundary conditions at different points is insufficient: $y''+y=0$ with $y(0)=y(\pi)=0$ has every solution $A\sin x$, so uniqueness fails. This qualifies the source's unqualified statement that $n$ conditions are needed. In the example,
+Under the conditions above, $n$ initial values $y(x_0),\ldots,y^{(n-1)}(x_0)$ at one point determine a solution. Boundary conditions at different points need a separate check. For this first-order example, one initial value fixes the one constant:
 $$y(0)=y_0\quad\Longrightarrow\quad A=y_0.$$
 See [[First-Order Linear Differential Equations]].
 
