@@ -1,6 +1,6 @@
 ---
 title: Divisibility and Prime Numbers
-material_type: source-backed definitions, propositions and proofs
+material_type: source-backed definitions, propositions and proofs with supplementary explanation
 course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
@@ -38,6 +38,16 @@ Existence of a prime factorization does not establish uniqueness. The source ill
 
 **Proposition 4 — Euclid's lemma:** if $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$. The current source states this proposition without proof.
 
-[[Greatest Common Divisors and Euclid's Algorithm]] records the subsequent gcd definition, division theorem and algorithm, without adding an unprovided proof of Euclid's lemma.
+[[Greatest Common Divisors and Euclid's Algorithm]] records the subsequent gcd definition, division theorem and algorithm. Its final, explicitly supplementary section derives Euclid's lemma; that proof is not attributed to the source.
 
 Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 7–8, with gcd material on pages 8–11. The natural-number convention and induction principles appear in [[Natural Numbers and Mathematical Induction]]. Related factorial and Fibonacci arguments are retained in [[Numbers and Sets 0 - Handwritten Attempts]].
+
+## How uniqueness follows — supplementary proof
+
+The bridge from existence to uniqueness is [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof|Bézout's identity and Euclid's lemma]]. If
+$$p_1\cdots p_r=q_1\cdots q_s$$
+are prime factorizations of the same positive integer, repeated application of Euclid's lemma shows that $p_1$ divides some $q_j$. Since $q_j$ is prime, $p_1=q_j$. Reorder the right-hand factors and cancel this common positive factor. Repeat with the remaining products. One side cannot run out of factors first, because a non-empty product of primes is at least $2$, whereas the empty product is $1$. Thus $r=s$ and the factors agree up to order.
+
+This supplementary argument closes the logical chain: strong induction gives existence; Euclid's algorithm gives Bézout's identity; Euclid's lemma gives uniqueness. The infinitude-of-primes proof above needs only existence, not uniqueness.
+
+**Terminology:** “proper divisor” in other texts often includes $1$ and excludes only the number itself among positive divisors. The source uses it for non-trivial factors, excluding both $\pm1$ and $\pm n$.

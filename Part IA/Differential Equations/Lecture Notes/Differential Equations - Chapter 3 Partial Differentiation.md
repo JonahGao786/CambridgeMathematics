@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 3 Partial Differentiation
-material_type: handwritten lecture notes
+material_type: handwritten lecture notes with labelled mathematical corrections and supplements
 course: Part IA Differential Equations
 date: null
 source_file: Ch.3 Partial Differentiation.pdf
@@ -97,58 +97,53 @@ For $f(x,y,z)$, $\partial f/\partial x$ means $\left.\partial f/\partial x\right
 
 For a path $x(t),y(t)$ and a function $f(x,y)$, the question is how to find $df/dt$ along the path.
 
-### Source derivation (page 3)
+### Controlled increment derivation — corrected proof (page 3)
 
-Under $(x,y)\mapsto(x+\delta x,y+\delta y)$, split the increment as
+The following supplementary proof keeps the source's split into coordinate increments and supplies its missing regularity and remainder control. Assume $f$ has continuous first partial derivatives in an open neighbourhood of $p=(x,y)$; mixed second derivatives are not needed.
+
+For small $h,k$, write
 $$\begin{aligned}
-\delta f
-&=f(x+\delta x,y+\delta y)-f(x,y)\\
-&=\bigl[f(x+\delta x,y+\delta y)-f(x+\delta x,y)\bigr]
-+\bigl[f(x+\delta x,y)-f(x,y)\bigr].
+f(x+h,y+k)-f(x,y)
+&=[f(x+h,y+k)-f(x+h,y)]\\
+&\quad+[f(x+h,y)-f(x,y)].
 \end{aligned}$$
-Using one-variable Taylor/differentiability expansions, the source writes
-$$f(x+\delta x,y)-f(x,y)=f_x(x,y)\,\delta x+o(\delta x),$$
-$$f(x+\delta x,y+\delta y)-f(x+\delta x,y)
-=f_y(x+\delta x,y)\,\delta y+o(\delta y),$$
-and expands
-$$f_y(x+\delta x,y)=f_y(x,y)+f_{xy}(x,y)\,\delta x+o(\delta x).$$
-Consequently,
+The one-variable mean value theorem on each coordinate segment gives numbers $\theta,\eta\in(0,1)$ such that
+$$f(x+h,y+k)-f(x,y)
+=k f_y(x+h,y+\theta k)+h f_x(x+\eta h,y).$$
+If an increment is zero, its term is zero and its intermediate point can be chosen arbitrarily on the degenerate segment. Subtract $h f_x(p)+k f_y(p)$ and let $\rho=\sqrt{h^2+k^2}$. Continuity of $f_x,f_y$ at $p$ implies
 $$\begin{aligned}
-\delta f={}&[f_y(x,y)+f_{xy}(x,y)\,\delta x+o(\delta x)]\delta y
-+o(\delta y)+f_x(x,y)\delta x+o(\delta x)\\
-={}&f_y(x,y)\delta y+f_x(x,y)\delta x
-+f_{xy}(x,y)\delta x\delta y
-+\delta y\,o(\delta x)+o(\delta y)+o(\delta x).
+|R(h,k)|
+&\le |k|\,|f_y(x+h,y+\theta k)-f_y(p)|\\
+&\quad+|h|\,|f_x(x+\eta h,y)-f_x(p)|\\
+&=o(\rho).
 \end{aligned}$$
+Indeed, both derivative differences tend to zero regardless of the intermediate points, and $|h|+|k|\le\sqrt2\rho$. Hence
+$$f(x+h,y+k)=f(x,y)+f_x(x,y)h+f_y(x,y)k+o(\rho).$$
+This proves total differentiability under the stated $C^1$ hypothesis. The previous source expansion used a mixed derivative and an uncontrolled remainder at a moving base point; the estimate above resolves both issues.
 
-> [!todo] Incomplete two-variable derivation — page 3
-> The expansion uses a mixed derivative and treats a remainder from a base point depending on $\delta x$ as though it were controlled uniformly as both increments tend to zero. The necessary regularity and remainder control are not established in the source. The displayed calculation is retained, with its mixed derivative written consistently with the source's rightmost-first convention.
+### Differential and chain rule — corrected definition and proof (page 4)
 
-### Differential and chain rule (page 4)
+A function is **totally differentiable** at $p$ if there is a linear map $df_p$ with
+$$f(p+v)-f(p)=df_p(v)+o(\|v\|).$$
+Its differential is that linear map:
+$$df_p(h,k)=f_x(p)h+f_y(p)k,$$
+or $df=f_x\,dx+f_y\,dy$. Here $dx,dy$ are the coordinate linear maps on an increment: $dx(h,k)=h$ and $dy(h,k)=k$. The source expression $df=\lim_{h,k\to0}(f(x+h,y+k)-f(x,y))$ is not a definition of the differential: for continuous $f$ that limit is just zero.
 
-> [!warning] Incorrect definition of the differential — page 4
-> The source writes $df=\lim_{\delta x,\delta y\to0}\delta f$. For continuous $f$ that unscaled limit is zero, so it does not define the differential. The first-order differential formula stated below is retained separately from that incorrect definition.
-
-The source states the **differential form** of the chain rule:
-$$df=\frac{\partial f}{\partial x}\,dx+\frac{\partial f}{\partial y}\,dy.$$
-This is the linear first-order change when $f$ is differentiable. For a differentiable path and $f$ differentiable along it,
+**Chain rule.** Let $p(t)=(x(t),y(t))$ be differentiable and suppose $f$ is totally differentiable at $p(t)$. For an increment $s$,
+$$v(s)=p(t+s)-p(t)=s\,p'(t)+o(s)=O(s).$$
+Write the differentiability remainder as $r(v)$, where $r(v)=o(\|v\|)$ and $r(0)=0$. Then $r(v(s))=o(s)$: for each $\varepsilon>0$, sufficiently small $v$ satisfies $|r(v)|\le\varepsilon\|v\|$, while $\|v(s)\|\le C|s|$ for some fixed $C$. Linearity gives
 $$\begin{aligned}
-\frac d{dt}f(x(t),y(t))
-&=\lim_{\delta t\to0}\left(
-\frac{\partial f}{\partial x}\frac{\delta x}{\delta t}
-+\frac{\partial f}{\partial y}\frac{\delta y}{\delta t}\right)\\
-&=\frac{\partial f}{\partial x}\frac{dx}{dt}
-+\frac{\partial f}{\partial y}\frac{dy}{dt}.
+f(p(t+s))-f(p(t))
+&=df_{p(t)}(v(s))+r(v(s))\\
+&=s\,df_{p(t)}(p'(t))+o(s).
 \end{aligned}$$
-The partial derivatives are evaluated on the path. The displayed limit describes the first-order differential expression; the source does not supply a rigorous passage from the increment expansion to this limit under general hypotheses.
+Dividing by $s$ and taking the limit proves
+$$\frac d{dt}f(x(t),y(t))
+=f_x(x(t),y(t))x'(t)+f_y(x(t),y(t))y'(t).$$
+The theorem needs total differentiability at the point; continuous first partial derivatives nearby are a sufficient condition, proved above. The existence of partial derivatives alone is insufficient; see the counterexample in [[Partial Derivatives and the Multivariate Chain Rule]].
 
 If the path is parametrized by $x$, with $y=y(x)$, then
-$$\begin{aligned}
-\frac d{dx}f(x,y(x))
-&=\frac{\partial f}{\partial x}\frac{dx}{dx}
-+\frac{\partial f}{\partial y}\frac{dy}{dx}\\
-&=f_x+f_y\frac{dy}{dx}.
-\end{aligned}$$
+$$\frac d{dx}f(x,y(x))=f_x+f_y\frac{dy}{dx}.$$
 
 ### Integral form (page 4)
 
@@ -167,3 +162,7 @@ $$\begin{aligned}
 The integral is taken along the given path, with sufficient regularity to apply the one-variable fundamental theorem (for example, $f$ and the path continuously differentiable).
 
 Related: [[Partial Derivatives and the Multivariate Chain Rule]], [[Differentiation Rules]], [[Taylor Series and Taylor's Theorem]], [[Limits, Big O and Little o - A First-Year Guide]], [[Riemann Integration and the Fundamental Theorem of Calculus]].
+
+## Supplementary learning route
+
+[[Partial Derivatives and the Multivariate Chain Rule#Partial derivatives versus differentiability — supplementary explanation]] defines total differentiability, shows why partial derivatives alone are insufficient, and derives the chain rule from a controlled first-order remainder. It complements the corrected proofs above; the added regularity assumptions and proofs are not attributed to the original PDF.

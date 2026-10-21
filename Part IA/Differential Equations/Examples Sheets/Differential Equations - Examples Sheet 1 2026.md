@@ -163,3 +163,14 @@ Show that $f'(x)+g'(x)=0$. Deduce that $f(x)+g(x)=\pi/4$, and hence that
 $$\int_0^\infty e^{-t^2}\,dt=\frac{\sqrt\pi}{2}.$$
 
 Comments and corrections may be sent to the source author at c.e.thomas@damtp.cam.ac.uk.
+
+## Conditions to check while solving — supplementary review
+
+The question statements above are preserved. The following qualifications prevent using formulas outside their domains.
+
+- **Question 1:** the constant case $n=0$ has derivative zero; at $x=0$ do not interpret this by separately evaluating the undefined factor $x^{-1}$ in $0x^{-1}$.
+- **Question 5:** for a real expansion in (i), use $a>0$. Part (iii) needs $a\ne0$ as written; even then a coefficient can vanish for special $a$, so “three non-zero terms” requires checking the parameter. See the localized note in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
+- **Question 8:** indefinite integrals represent families of antiderivatives. The displayed recurrence is understood up to an additive constant, or with compatible choices of those constants.
+- **Question 9:** a finite positive mean $0<\mu<\infty$ is needed to normalize income shares. Strict increase of $F$ alone does not ensure $f(F^{-1}(p))>0$ at every point: the displayed second-derivative formula requires that positivity and enough regularity for differentiating the inverse. Endpoint values are interpreted by limits.
+- **Questions 11–12:** implicit derivatives and reciprocal derivative expressions require the relevant local solvability and non-zero denominators. See [[Partial Derivatives and the Multivariate Chain Rule]].
+- **Question 13:** begin with $\alpha>0$; taking $\alpha\to0^+$ through an improper integral needs justification, as does differentiating under the integral. A pointwise limit of integrands alone is insufficient.

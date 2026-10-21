@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 2 Integration
-material_type: handwritten lecture notes
+material_type: handwritten lecture notes with labelled mathematical corrections and supplements
 course: Part IA Differential Equations
 date: null
 source_file: Ch.2 Integration.pdf
@@ -86,26 +86,26 @@ Blue hatching indicates this area; the black horizontal edge is the left-endpoin
 \end{document}
 ```
 
-For differentiable $f$, the source uses
-$$\begin{aligned}
-f(c_n)&=f(x_n)+O(c_n-x_n)\\
-&=f(x_n)+O(\Delta x),
-\end{aligned}$$
-because $0<c_n-x_n<\Delta x$. Hence
-$$A_n=\Delta x\,f(x_n)+O((\Delta x)^2).$$
-The total area is written as
-$$A=\lim_{N\to\infty}\sum_{n=0}^{N-1}A_n.$$
+### Uniform error control — corrected proof (pages 2–3)
 
-**Area argument with a uniformity gap (page 3).** Substitution gives the displayed calculation
-$$\begin{aligned}
-A&=\lim_{N\to\infty}\sum_{n=0}^{N-1}f(x_n)\,\Delta x
-+\lim_{N\to\infty}N\,O\!\left(\left(\frac{b-a}{N}\right)^2\right)\\
-&=\int_a^b f(x)\,dx+0,
-\end{aligned}$$
-using $N\,O(((b-a)/N)^2)=O(1/N)$.
+The source estimates each strip by $A_n=\Delta x\,f(x_n)+O((\Delta x)^2)$ and then sums the errors. The following supplementary argument supplies the missing uniform bound.
 
-> [!todo] Uniform error estimate — pages 2–3
-> Summing the interval errors in this way requires an $O$-constant independent of the interval and of $N$. The source gives pointwise differentiability but does not establish that uniform bound. A bound on $f'$ throughout the interval would be a sufficient extra assumption for this estimate. The displayed argument and its conclusion are retained; this gap is not silently repaired.
+Assume $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $|f'(t)|\le M$ there, for one constant $M$ (for example, $f\in C^1([a,b])$). The mean value theorem gives
+$$|f(t)-f(x_n)|\le M|t-x_n|.$$
+Consequently, with $A_n=\int_{x_n}^{x_{n+1}}f(t)\,dt$,
+$$\begin{aligned}
+|A_n-f(x_n)\Delta x|
+&\le\int_{x_n}^{x_{n+1}}|f(t)-f(x_n)|\,dt\\
+&\le\frac M2(\Delta x)^2.
+\end{aligned}$$
+Since $A=\sum_{n=0}^{N-1}A_n$, the total error is bounded by
+$$\left|A-\sum_{n=0}^{N-1}f(x_n)\Delta x\right|
+\le\frac{M(b-a)^2}{2N}\longrightarrow0.$$
+The same $M$ works for every strip and every $N$, so the claimed $O(1/N)$ rate is now justified. For a non-negative $f$, $A$ is ordinary area; in general the integral is signed area.
+
+**With continuity alone.** Continuous $f$ on $[a,b]$ is uniformly continuous. Define
+$$\omega_f(\delta)=\sup_{\substack{s,t\in[a,b]\\|s-t|\le\delta}}|f(s)-f(t)|.$$
+Then $\omega_f(\delta)\to0$. Upper and lower Riemann sums for a partition of mesh at most $\delta$ differ by at most $(b-a)\omega_f(\delta)$, so $f$ is Riemann integrable. Each tagged sum differs from its integral by at most the same bound. This proves convergence for continuous functions without asserting an $O(1/N)$ rate. Pointwise differentiability alone did not justify the source's uniform error estimate.
 
 ## 2.2 Fundamental theorem of calculus (page 3)
 
@@ -114,17 +114,15 @@ $$F(x)=\int_a^x f(t)\,dt.$$
 Then, at interior points,
 $$F'(x)=\frac{d}{dx}\int_a^x f(t)\,dt=f(x).$$
 
-**Source proof under stronger hypotheses.** The source's mean-value/Taylor estimate uses differentiability of $f$ at $x$ to obtain the $O(h^2)$ remainder:
-$$\begin{aligned}
-F'(x)
-&=\lim_{h\to0}\frac1h\left(\int_a^{x+h}f(t)\,dt-\int_a^x f(t)\,dt\right)\\
-&=\lim_{h\to0}\frac1h\int_x^{x+h}f(t)\,dt\\
-&=\lim_{h\to0}\frac1h\bigl(f(x)h+O(h^2)\bigr)\\
-&=\lim_{h\to0}\bigl(f(x)+O(h)\bigr)=f(x).
-\end{aligned}$$
+**Corrected proof under the stated continuity hypothesis — supplementary.** For $h\ne0$ small enough that $x+h\in[a,b]$, put $I_h=[\min(x,x+h),\max(x,x+h)]$. Additivity and orientation of the integral give
+$$\frac{F(x+h)-F(x)}h-f(x)
+=\frac1h\int_x^{x+h}(f(t)-f(x))\,dt.$$
+Therefore
+$$\left|\frac{F(x+h)-F(x)}h-f(x)\right|
+\le\sup_{t\in I_h}|f(t)-f(x)|\longrightarrow0$$
+by continuity at $x$. This works for positive and negative $h$, proving $F'(x)=f(x)$.
 
-> [!note] Proof scope — page 3
-> Continuity suffices for the theorem, but the displayed $O(h^2)$ proof covers the stronger differentiable case. A proof for the general continuous case is not supplied here.
+The source's estimate $\int_x^{x+h}f(t)\,dt=f(x)h+O(h^2)$ is valid if $f$ is also differentiable at $x$, but is unnecessary here. Under continuity, the correct general remainder is $o(h)$, exactly what differentiation requires.
 
 ### Corollaries and indefinite-integral notation (page 4)
 
@@ -139,6 +137,10 @@ $$\begin{aligned}
 &=\frac{d}{dx}F(g(x))\\
 &=F'(g(x))g'(x)=f(g(x))g'(x).
 \end{aligned}$$
+
+**Evaluation by an antiderivative — supplementary consequence.** If $A$ is continuous on $[a,b]$, differentiable on $(a,b)$ and $A'=f$ there, then $(A-F)'=0$. The mean value theorem shows that $A-F$ is constant, giving
+$$\int_a^b f(t)\,dt=A(b)-A(a).$$
+This is the bridge from Riemann sums to the substitution and integration-by-parts calculations below.
 
 An **indefinite integral** is written $\int f(x)\,dx$ or $\int^x f(t)\,dt$. An unspecified lower limit leaves an integration constant.
 
@@ -205,3 +207,7 @@ I=\int\log x\,dx
 &=x(\log x-1)+C.
 \end{aligned}$$
 The source notes that integration by parts also works for inverse trigonometric and inverse hyperbolic functions; no further examples are supplied.
+
+## Supplementary learning route
+
+[[Riemann Integration and the Fundamental Theorem of Calculus#Completing the learning bridge — supplementary proofs]] summarizes the corrected continuity-based proof and the antiderivative evaluation formula above. [[Integration by Substitution and by Parts#Domains and the fundamental theorem — supplementary explanation]] explains branch restrictions and improper endpoints used above.

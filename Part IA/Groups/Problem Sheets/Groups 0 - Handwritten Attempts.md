@@ -1,5 +1,5 @@
 ---
-title: Groups 1 - Handwritten Attempts
+title: Groups 0 - Handwritten Attempts
 material_type: handwritten worked solutions and incomplete attempts
 course: Part IA Groups
 date: null
@@ -9,7 +9,7 @@ source_url: https://drive.google.com/file/d/17C8KN1XdaZj4KDVAvQ5tdxptR4KTmPHY/vi
 source_pages: 13
 ---
 
-# Groups 1 — Handwritten Attempts
+# Groups 0 — Handwritten Attempts
 
 The PDF contains handwritten answers without the question statements. Their numbering and examples match [[Groups - Introductory Sheet 2026]], a separate Drive source. Consult that sheet for the supplied questions. Obvious typos and notation are normalized, with routine algebra made explicit where helpful. Substantive errors and unfinished arguments remain marked. The date is not written in this PDF.
 
@@ -91,7 +91,7 @@ Subgroups: the non-zero scalar matrices $\{tI:t\in\mathbb R\setminus\{0\}\}$, an
 - Closure: ✗, $2\times_6 3=0$.
 
 > [!todo] Manual review — page 2, question 2(viii), identity reasoning
-> The two displayed products concern a single element and do not establish multiple identities for the whole set. The original assessment is retained.
+> The two displayed products concern a single element and do not establish multiple identities for the whole set. In fact, $1$ satisfies $a\times_6 1=1\times_6 a=a$ for every listed $a$; $4$ fails this test at $a=1$. The failure of closure still prevents this from being a group. The original assessment is retained.
 
 ### (ix) Multiplication modulo seven (page 3, top)
 
@@ -292,3 +292,7 @@ a\circ b&=b\circ a\quad\text{claimed to show commutativity}.
 ## 10–12. Unfinished
 
 Page 12 contains only the heading “10)”, and page 13 only “11)”; neither has a written answer. No attempt at question 12 is present.
+
+## Reading the matrix example — supplementary clarification
+
+In question 5 the identity of the singular-matrix group is $E=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, not the ambient matrix $I_2$. The group inverse of $\operatorname{diag}(t,0)$ is $\operatorname{diag}(1/t,0)$: their product is $E$. Thus “inverse in this group” does not mean “inverse as a linear map on $\mathbb R^2$”. This distinction explains why the example is consistent with the invertible-matrix group in question 2(vi).

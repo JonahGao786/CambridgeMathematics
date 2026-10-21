@@ -1,6 +1,6 @@
 ---
 title: Cross Products and Scalar Triple Products
-material_type: source-backed definitions, identities and geometric interpretations
+material_type: source-backed definitions, identities and geometric interpretations with supplementary explanation
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -83,3 +83,9 @@ $$V=|\mathbf a\times\mathbf b|h
 =|\mathbf c\cdot(\mathbf a\times\mathbf b)|.$$
 
 Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 10–13, which retains all four original geometric sketches as TikZ: cross-product orientation, vector area, scaling/rotation, and base with perpendicular height. Related: [[Real Inner Products and Cauchy-Schwarz]].
+
+## Zero volume and operation order — supplementary explanation
+
+The volume formula also holds when $\mathbf a,\mathbf b$ are parallel: both the cross product and the volume are zero, although dividing by $|\mathbf a\times\mathbf b|$ to define a normal is then invalid. More generally, $[\mathbf a,\mathbf b,\mathbf c]=0$ exactly when the three vectors are linearly dependent, equivalently their span has dimension at most two.
+
+The scalar triple product is a real number. It must not be confused with a vector triple product such as $\mathbf a\times(\mathbf b\times\mathbf c)$. Cross products are not associative, so parentheses in the latter are essential; see question 2(v) of [[Groups 0 - Handwritten Attempts]].

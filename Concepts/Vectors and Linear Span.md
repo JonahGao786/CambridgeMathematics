@@ -1,6 +1,6 @@
 ---
 title: Vectors and Linear Span
-material_type: source-backed definitions and operation properties
+material_type: source-backed definitions and operation properties with supplementary explanation
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -32,3 +32,11 @@ $\mathbb R^n$ with componentwise operations is a vector space. A line such as $x
 Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 1–4, including the actual geometric sketches in TikZ. [[Real Inner Products and Cauchy-Schwarz]] introduces orthogonality, length and projection.
 
 [[Orthonormal Bases and Vector Coordinates]] gives coordinate descriptions in $\mathbb R^3$. [[Cross Products and Scalar Triple Products]] treats oriented area, rotation and volume there.
+
+## From span to a basis — supplementary explanation
+
+For finitely many vectors $\mathbf v_1,\ldots,\mathbf v_m$ in a real vector space, their span contains all sums $\sum_{i=1}^m a_i\mathbf v_i$ with $a_i\in\mathbb R$. For an infinite set, span still uses only **finite** sums. It contains zero and is closed under addition and real scalar multiplication, so it is a vector subspace.
+
+The vectors are **linearly independent** if
+$$\sum_{i=1}^m a_i\mathbf v_i=\mathbf0\quad\Longrightarrow\quad a_1=\cdots=a_m=0.$$
+A **basis** is a linearly independent spanning set. Spanning gives existence of coordinates; independence gives uniqueness by subtracting two proposed expansions. This is the missing step between a span and the coordinate formulas in [[Orthonormal Bases and Vector Coordinates]]. An additive subgroup need not be a real vector subspace: $\mathbb Z\le(\mathbb R,+)$, but $\tfrac12\cdot1\notin\mathbb Z$.

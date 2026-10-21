@@ -123,3 +123,14 @@ For which $n$ is there an $\operatorname{Isom}(Q)$ of order $n$?
 **Challenging part (\*):** Which groups can arise as $\operatorname{Isom}(Q)$, up to isomorphism?
 
 Related source-backed notes: [[Groups]], [[Bijections and Permutations]], [[Subgroups and Generated Subgroups]], [[Roots of Unity]] and [[Groups - Chapter 1 Examples and Definitions]]. These links provide lecture context; the questions above remain unanswered.
+
+## Prerequisite vocabulary — supplementary reading guide
+
+The current lecture ends before several terms used in this sheet are defined. The following definitions supply reading context, without solving the exercises.
+
+- The **order of an element** $g$ is the least positive $n$ with $g^n=e$, if such an $n$ exists; otherwise its order is infinite. This differs from the **order of a group**, $|G|$.
+- A group is **cyclic** if $G=\langle\{g\}\rangle=\{g^k:k\in\mathbb Z\}$ for some $g$. The concrete roots-of-unity group $C_n$ in [[Groups]] is a model of the finite cyclic group used here.
+- A **homomorphism** $\phi:G\to H$ satisfies $\phi(ab)=\phi(a)\phi(b)$ for all $a,b\in G$, with each side using its own group's operation.
+- An **isomorphism** is a bijective homomorphism. “Up to isomorphism” means identifying groups whose elements can be bijectively relabelled while preserving multiplication.
+
+Questions 1–3 use the group axioms and subgroup definitions; questions 4–12 also use powers, element order or the vocabulary above. Questions 13–14 use [[Isometries and Dihedral Groups]] and [[Complex Numbers|complex-plane geometry]]. In this repository $D_{2n}$ denotes the symmetries of an $n$-gon; some other texts call it $D_n$.

@@ -1,6 +1,6 @@
 ---
 title: Numbers and Sets - Chapter 1 Elementary Number Theory
-material_type: handwritten lecture notes
+material_type: handwritten lecture notes with labelled mathematical corrections and supplements
 course: Part IA Numbers and Sets
 date: null
 source_file: Ch.1 Elementary Number Theory.pdf
@@ -156,7 +156,7 @@ No proof of uniqueness or answer to this comparison question is supplied.
 
 **Proposition 4 — Euclid's lemma.** If $p$ is prime and $p\mid ab$, then $p\mid a$ or $p\mid b$.
 
-**Statement only:** this version of the lecture supplies no proof of Proposition 4.
+**Proof dependency.** The original lecture states this without proof. After establishing Euclid's algorithm below, [[Greatest Common Divisors and Euclid's Algorithm#From the algorithm to Euclid's lemma — supplementary proof]] derives Bézout's identity and proves Proposition 4; [[Divisibility and Prime Numbers#How uniqueness follows — supplementary proof]] then proves uniqueness of prime factorization. These supplementary proofs complete the learning sequence without using Euclid's lemma to prove the algorithm itself.
 
 ## Highest common factors (pages 8–9)
 

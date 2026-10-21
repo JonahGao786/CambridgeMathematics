@@ -1,6 +1,6 @@
 ---
 title: Groups - Chapter 1 Examples and Definitions
-material_type: handwritten lecture notes
+material_type: handwritten lecture notes with labelled mathematical corrections and supplements
 course: Part IA Groups
 date: null
 source_file: Ch.1 Introduction.pdf
@@ -445,8 +445,9 @@ Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. T
 \end{document}
 ```
 
-> [!warning] Incorrect distance formula — page 19
-> The displayed radical in the source is $\sqrt{(z+w)^2+(z-w)^2}$, which is not the Euclidean distance between arbitrary complex $z$ and $w$. In real coordinates $z=x+iy$, $w=u+iv$, the correct expression is $|z-w|=\sqrt{(x-u)^2+(y-v)^2}$. Subsequent isometry arguments use $|z-w|$.
+**Corrected distance formula (page 19).** For $z=x+iy$ and $w=u+iv$,
+$$d(z,w)=|z-w|=\sqrt{(x-u)^2+(y-v)^2}.$$
+This follows by taking the modulus of $(x-u)+i(y-v)$. The source's radical $\sqrt{(z+w)^2+(z-w)^2}$ was incorrect; for example, it need not vanish when $z=w$. The formula above is used throughout the isometry arguments.
 
 **Definition 1.19.** For any $X\subseteq\mathbb C$, an **isometry of $X$** is a bijection $f:X\to X$ preserving distances:
 $$|f(x)-f(y)|=|x-y|\qquad\text{for all }x,y\in X.$$
@@ -473,8 +474,9 @@ Hence $f^{-1}\in\operatorname{Isom}(X)$, proving the subgroup conditions. See [[
 
 ## Dihedral groups — Definition 1.21 (pages 20–21)
 
-For $n\in\mathbb N$, $n\ge3$, let $X_n\subseteq\mathbb C$ be the regular $n$-gon with vertices
-$$\left\{e^{2\pi i k/n}:k=0,1,\ldots,n-1\right\}.$$
+For $n\in\mathbb N$, $n\ge3$, use the vertex-set model of the regular $n$-gon:
+$$X_n=\left\{e^{2\pi i k/n}:k=0,1,\ldots,n-1\right\}\subseteq\mathbb C.$$
+Here $X_n$ denotes the vertices, and the drawn edges visualize their cyclic order. This makes the domain of the following isometries explicit.
 The **$n$th dihedral group** is
 $$D_{2n}=\operatorname{Isom}(X_n).$$
 
@@ -552,7 +554,7 @@ $$r_k,s_\ell\in\operatorname{Isom}(X_n).$$
 
 **Proof.** With $\zeta=e^{2\pi i/n}$, these maps send vertices as
 $$r_k(\zeta^j)=\zeta^{j+k},\qquad s_\ell(\zeta^j)=\zeta^{\ell-j},$$
-with indices modulo $n$, so they permute the vertices and map the polygon bijectively onto itself. The source checks distance preservation:
+with indices modulo $n$, so they map $X_n$ bijectively onto itself. The source checks distance preservation:
 $$\begin{aligned}
 |r_k(z)-r_k(w)|&=|e^{2\pi ik/n}(z-w)|=|z-w|,\\
 |s_\ell(z)-s_\ell(w)|&=|e^{2\pi i\ell/n}(\overline z-\overline w)|\\
@@ -606,6 +608,12 @@ The blue double ticks mark the equal sides meeting at $z_1$; red single ticks ma
 $$\angle z_1tw_1=\angle z_1tw_2.$$
 Since $w_1,t,w_2$ lie on a straight line, these angles sum to $\pi$, so each is $\pi/2$. If either difference vector is zero, orthogonality holds immediately in the dot-product sense.
 
+**Complete algebraic proof — supplementary correction.** The hypotheses do not ensure that the diagonal segments intersect, so the depicted angle argument is not a proof for every configuration. Regard complex numbers as vectors in $\mathbb R^2$. Squaring each distance equality and cancelling $\|z_i\|^2$ gives
+$$2\langle z_i,w_1-w_2\rangle=\|w_1\|^2-\|w_2\|^2\qquad(i=1,2).$$
+Subtracting the two equations yields
+$$\langle z_1-z_2,w_1-w_2\rangle=0.$$
+This proves the lemma in all cases, including zero difference vectors. The real inner product is $\langle z,w\rangle=\operatorname{Re}(z\overline w)$.
+
 ## Lemma 1.24 — Three point lemma (page 23)
 
 Let $X\subseteq\mathbb C$ and $f\in\operatorname{Isom}(X)$. Suppose there are three non-collinear points $z_1,z_2,z_3\in X$ with
@@ -623,8 +631,24 @@ using the fixed-point hypotheses and distance preservation. Applying the kite le
 The source states
 $$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}=\operatorname{Isom}(X_n).$$
 
-**Incomplete proof.** Lemma 1.22 proves
+**Proof.** Lemma 1.22 proves
 $$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
+The following supplementary argument completes the reverse inclusion missing from the source.
 
-> [!todo] Reverse inclusion — page 23
-> The PDF ends after the inclusion supplied by Lemma 1.22. The argument that every isometry of $X_n$ is one of these rotations or reflections is unfinished; no completion is supplied here.
+Put $\zeta=e^{2\pi i/n}$. Distances between vertices satisfy
+$$|\zeta^a-\zeta^b|=2\sin\left(\frac{\pi d}{n}\right),\qquad
+d=\min\{|a-b|,n-|a-b|\},$$
+using representatives $0\le a,b<n$. Since sine is strictly increasing on $[0,\pi/2]$, the closest other vertices to $\zeta^a$ are exactly $\zeta^{a-1},\zeta^{a+1}$ (indices modulo $n$). Thus every isometry preserves adjacency.
+
+Take $f\in\operatorname{Isom}(X_n)$. Write $f(1)=\zeta^k$. Adjacency forces
+$$f(\zeta)=\zeta^{k+1}\quad\text{or}\quad f(\zeta)=\zeta^{k-1}.$$
+In the first case choose $q=r_k$; in the second choose $q=s_k$. In either case $q$ agrees with $f$ at both $1$ and $\zeta$. Then $h=q^{-1}\circ f$ is an isometry fixing these two vertices.
+
+The vertex $\zeta^2$ is a neighbour of $\zeta$. Its image under $h$ must be either $1$ or $\zeta^2$. Injectivity excludes $1$, already the image of $1$, so $h(\zeta^2)=\zeta^2$. For $n\ge3$, the distinct points $1,\zeta,\zeta^2$ are non-collinear (a line meets a circle in at most two points). The three point lemma gives $h=\operatorname{id}_{X_n}$ and hence $f=q$. This proves the reverse inclusion, including the case $n=3$.
+
+The $n$ rotations are distinct by their values at $1$, and the same is true for the $n$ reflections. A rotation and reflection with equal values at $1$ have the same index $k$, but their values at $\zeta$ are $\zeta^{k+1}$ and $\zeta^{k-1}$, which differ because $n\ge3$. Therefore the displayed list contains exactly $2n$ elements:
+$$|D_{2n}|=2n.$$
+
+## Review cross-reference — supplementary note
+
+The distance formula, the general kite lemma and the dihedral classification now have corrected or complete arguments above. [[Isometries and Dihedral Groups]] summarizes them. The original diagrams are unchanged; supplementary proof steps are labelled separately from the lecture source.

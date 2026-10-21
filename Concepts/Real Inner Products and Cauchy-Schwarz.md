@@ -1,6 +1,6 @@
 ---
 title: Real Inner Products and Cauchy-Schwarz
-material_type: source-backed definitions, theorems and proofs
+material_type: source-backed definitions, theorems and proofs with supplementary explanation
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -45,3 +45,10 @@ $$\begin{aligned}
 Taking non-negative square roots gives $|\mathbf x+\mathbf y|\le|\mathbf x|+|\mathbf y|$.
 
 Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 4–8, which also retains the dot-product projection and cosine-rule diagrams. Related: [[Vectors and Linear Span]] and [[Triangle Inequality for Complex Numbers]].
+
+## Connecting complex and vector geometry — supplementary explanation
+
+Identify $z=x+iy$ with $(x,y)\in\mathbb R^2$. Then
+$$\langle z,w\rangle_{\mathbb R}=\operatorname{Re}(z\overline w),\qquad
+\|z\|=|z|.$$
+This is a real inner product, and its triangle inequality is exactly [[Triangle Inequality for Complex Numbers]]. These bilinear, symmetric axioms are for **real** scalars. A complex inner product instead uses conjugate symmetry and conjugate linearity in one argument; simply using $\sum_i z_iw_i$ would not give a positive definite norm.

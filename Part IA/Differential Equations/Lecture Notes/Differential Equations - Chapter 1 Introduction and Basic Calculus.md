@@ -1,6 +1,6 @@
 ---
 title: Differential Equations - Chapter 1 Introduction and Basic Calculus
-material_type: handwritten lecture notes
+material_type: handwritten lecture notes with labelled mathematical corrections and supplements
 course: Part IA Differential Equations
 date: null
 source_file: Ch.1 Introduction.pdf
@@ -26,7 +26,7 @@ For an expanded introduction requested alongside this transcription, see [[Limit
 
 Differential equations appear in almost all branches of science and applied mathematics. For example,
 $$m\frac{d^2x}{dt^2}=F(x,t),$$
-where $m$ is the mass of the particle and $F$ is the force. The equation relates the rate of change of position $x$, the **dependent variable**, to time $t$, the **independent variable**.
+where $m$ is the mass of the particle and $F$ is the force. The equation relates the acceleration (the second derivative of position) to the force. Here $x$ is the **dependent variable** and time $t$ is the **independent variable**.
 
 How do we solve equations like these?
 
@@ -305,7 +305,20 @@ $$\begin{aligned}
 &=\frac{f'(x_0)}{g'(x_0)}
 =\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.
 \end{aligned}$$
-The last equality uses continuity of the first derivatives. This proves the stated stronger special case; a proof for the full theorem is not supplied.
+The last equality uses continuity of the first derivatives. This source proof establishes only the stronger special case. The following supplementary argument proves the theorem as stated without these extra assumptions.
+
+**Mean-value prerequisite — supplementary.** Rolle's theorem says that if $H$ is continuous on $[u,v]$, differentiable on $(u,v)$ and $H(u)=H(v)$, then $H'(c)=0$ for some $c\in(u,v)$. A constant function satisfies this immediately; otherwise continuity gives a maximum or minimum in the interior, where differentiability forces the derivative to vanish. The ordinary mean value theorem follows by applying Rolle's theorem to $H(t)$ minus the straight line joining its endpoint values.
+
+**Proof under the stated hypotheses — supplementary.** Fix $x\ne x_0$ sufficiently near $x_0$. Since $g(x_0)=0$, Rolle's theorem shows $g(x)\ne0$: otherwise some point strictly between $x_0$ and $x$ would have $g'=0$, contrary to the hypothesis.
+
+Apply Cauchy's mean value theorem to $f,g$ on the closed segment between $x_0$ and $x$. There exists $\xi_x$ strictly between them with
+$$\frac{f(x)-f(x_0)}{g(x)-g(x_0)}=\frac{f'(\xi_x)}{g'(\xi_x)}.$$
+For completeness, this follows from Rolle's theorem applied to
+$$H(t)=(f(x)-f(x_0))(g(t)-g(x_0))
+-(g(x)-g(x_0))(f(t)-f(x_0)),$$
+which vanishes at both endpoints. The denominators are non-zero by the preceding argument and the hypothesis on $g'$.
+
+Thus $f(x)/g(x)=f'(\xi_x)/g'(\xi_x)$. Since $0<|\xi_x-x_0|<|x-x_0|$, $\xi_x\to x_0$. The assumed derivative-quotient limit therefore gives the desired quotient limit. The same argument covers a finite limit or a limit of $+\infty$ or $-\infty$, and works on each side. Continuity of $f',g'$ and $g'(x_0)\ne0$ are not required.
 
 **Repeated application (page 13).** If $f'(x_0)=g'(x_0)=0$ and the rule's hypotheses apply again to the derivative quotient, it may be applied a second time:
 $$\lim_{x\to x_0}\frac{f(x)}{g(x)}

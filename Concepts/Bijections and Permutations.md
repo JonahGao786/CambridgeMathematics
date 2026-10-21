@@ -1,6 +1,6 @@
 ---
 title: Bijections and Permutations
-material_type: source-backed definitions, lemmas and proofs
+material_type: source-backed definitions, lemmas and proofs with supplementary explanation
 course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
@@ -34,3 +34,11 @@ Consequently, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a [[Groups|
 For $X=\{1,\ldots,n\}$, write $S_n=\operatorname{Sym}(X)$ (Definition 1.14). The lecture asks to calculate $|S_n|$; no answer is supplied.
 
 Source: [[Groups - Chapter 1 Examples and Definitions]], pages 13–15, including the map diagram and full proofs. See [[Groups]] for inverses with respect to a group operation.
+
+## Injectivity and surjectivity — supplementary explanation
+
+A function $f:X\to Y$ is **injective** if $f(x)=f(x')$ implies $x=x'$. It is **surjective** if every $y\in Y$ equals $f(x)$ for some $x\in X$. A bijection is equivalently both.
+
+Indeed, an inverse $g$ makes $f(x)=f(x')$ imply $g(f(x))=g(f(x'))$, hence $x=x'$, while $f(g(y))=y$ proves surjectivity. Conversely, if $f$ is injective and surjective, each $y$ has exactly one preimage; defining $g(y)$ to be that preimage gives the two inverse identities.
+
+Composition is read right to left: $f\circ g$ applies $g$ first. The notation $f^{-1}$ for an inverse function requires bijectivity and is not the reciprocal $1/f$. For a general function, $f^{-1}(A)$ may instead denote the **preimage set** $\{x\in X:f(x)\in A\}$, which does not require an inverse function.

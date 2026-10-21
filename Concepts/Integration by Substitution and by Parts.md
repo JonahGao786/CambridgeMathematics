@@ -1,6 +1,6 @@
 ---
 title: Integration by Substitution and by Parts
-material_type: source-backed techniques and worked examples
+material_type: source-backed techniques and worked examples with supplementary explanation
 course: Part IA Differential Equations
 source_file: Ch.2 Integration.pdf
 drive_file_id: 1nJYhFVmMI7O9dls3BfHoF7do6W0uNg9N
@@ -54,3 +54,15 @@ $$\int\log x\,dx=x\log x-\int dx=x(\log x-1)+C.$$
 The source also notes applications to inverse trigonometric and hyperbolic functions, without further examples.
 
 Source: [[Differential Equations - Chapter 2 Integration]], pages 5–7, which retains all substitution steps, the inverse-sine branch and the trigonometric/hyperbolic identities. Related: [[Riemann Integration and the Fundamental Theorem of Calculus]].
+
+## Domains and the fundamental theorem — supplementary explanation
+
+These techniques reverse [[Differentiation Rules]] using [[Riemann Integration and the Fundamental Theorem of Calculus]]. For continuous $f$ and continuously differentiable $g$,
+$$\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)}f(u)\,du.$$
+This formula does not require $g$ to be one-to-one. Solving a substitution backwards, however, requires a suitable branch and the transformed limits. Similarly,
+$$\int_a^b u(x)v'(x)\,dx=[uv]_a^b-\int_a^b u'(x)v(x)\,dx$$
+for continuously differentiable $u,v$.
+
+The substitution table gives suggestions, not formulas valid on every real domain. For $x=\sin\theta$, choose $-\pi/2\le\theta\le\pi/2$ so $\sqrt{1-x^2}=\cos\theta$. For $x=\cosh u$, choose $u\ge0$ to cover $x\ge1$ and obtain $\sqrt{x^2-1}=\sinh u$; the branch $x\le-1$ needs $x=-\cosh u$. The choice $x=\tanh u$ covers only $|x|<1$. Always use $\sqrt{v^2}=|v|$ before fixing a sign.
+
+An improper integral such as $\int_0^\infty xe^{-x}\,dx$ means $\lim_{R\to\infty}\int_0^R xe^{-x}\,dx$. Apply integration by parts on $[0,R]$ first, then check that each required limit exists.

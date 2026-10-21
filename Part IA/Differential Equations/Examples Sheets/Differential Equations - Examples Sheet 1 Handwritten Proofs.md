@@ -188,6 +188,10 @@ e^{-(x-a)^{-2}}
 +\frac1{2a^4}\left(\frac{2x}{a}+\frac{3x^2}{a^2}+\cdots\right)^2+\cdots\right]\\
 &=e^{-a^{-2}}\left(1-\frac{2x}{a^3}-\frac{3x^2}{a^4}+\frac{2x^2}{a^6}\right)+O(x^3).
 \end{aligned}$$
+
+> [!todo] Exceptional parameter — page 5, question 5(iii)
+> The displayed expansion is correct through degree two for fixed real $a\ne0$, but the question asks for three **non-zero** terms. Its quadratic coefficient $(2-3a^2)/a^6$ vanishes when $a^2=2/3$, so those parameter values need a further term. The case $a=0$ is not defined at the expansion centre in the supplied expression and is not covered by this calculation.
+
 These expansions are as $x\to0$ with the permitted $a$ fixed. See [[Taylor Series and Taylor's Theorem]].
 
 ## 6. Factorial bounds (page 6)

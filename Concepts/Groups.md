@@ -1,6 +1,6 @@
 ---
 title: Groups
-material_type: source-backed definitions, propositions and examples
+material_type: source-backed definitions, propositions and examples with supplementary explanation
 course: Part IA Groups
 ---
 
@@ -43,6 +43,12 @@ A subset $H\subseteq G$ is a subgroup if it contains $e_G$ and is closed under t
 
 ## Geometric groups
 
-For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the unfinished classification proof on page 23.
+For $X\subseteq\mathbb C$, distance-preserving bijections form a subgroup $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$. For a regular $n$-gon $X_n$, $D_{2n}=\operatorname{Isom}(X_n)$ is the dihedral group. [[Isometries and Dihedral Groups]] records the rotations and reflections, the kite and three point lemmas, and the classification proof completed with a labelled supplementary argument for the missing reverse inclusion.
 
 Source: [[Groups - Chapter 1 Examples and Definitions]], pages 5–23, with symmetry diagrams on pages 1–4. Related examples and attempts: [[Groups 0 - Handwritten Attempts]]. Finite group tables are [[Latin Squares|Latin squares]].
+
+## Cancellation and the chosen operation — supplementary explanation
+
+If $ab=ac$, multiply on the left by $a^{-1}$ to obtain $b=c$; if $ba=ca$, multiply on the right. Associativity and inverses justify cancellation. Closure or the existence of an identity alone does not. This is the step used in [[Latin Squares]] and in many subgroup arguments.
+
+Always specify the set and operation. In an additive group, $a^{-1}$ in abstract multiplicative notation corresponds to $-a$, and $a^n$ corresponds to $na$. A collection of singular matrices can be a group with its own identity matrix for that collection; see question 5 of [[Groups 0 - Handwritten Attempts]].

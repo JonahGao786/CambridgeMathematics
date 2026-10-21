@@ -1,6 +1,6 @@
 ---
 title: Orthonormal Bases and Vector Coordinates
-material_type: source-backed definitions and coordinate calculations
+material_type: source-backed definitions and coordinate calculations with supplementary explanation
 course: Part IA Vectors and Matrices
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
@@ -34,3 +34,9 @@ $$\mathbf e_1=(1,0,0),\qquad\mathbf e_2=(0,1,0),\qquad\mathbf e_3=(0,0,1),$$
 also denoted $\widehat{\mathbf i},\widehat{\mathbf j},\widehat{\mathbf k}$.
 
 Source: [[Vectors and Matrices - Chapter 2 Vectors]], pages 9–10. Related: [[Vectors and Linear Span]], [[Real Inner Products and Cauchy-Schwarz]] and [[Cross Products and Scalar Triple Products]].
+
+## Why the coordinate formula works — supplementary explanation
+
+Use the definition of a [[Vectors and Linear Span|basis]] to write $\mathbf a=\sum_j a_j\mathbf e_j$. Taking the dot product with $\mathbf e_i$ gives $\mathbf e_i\cdot\mathbf a=\sum_j a_j\delta_{ij}=a_i$. Conversely, orthonormal vectors are independent: taking these dot products in a zero linear combination forces every coefficient to vanish. Three independent vectors in $\mathbb R^3$ form a basis.
+
+For a general basis the coefficients are not simply $\mathbf e_i\cdot\mathbf a$; orthonormality is essential. The dot-product formula works in either orientation, but the standard [[Cross Products and Scalar Triple Products|cross-product coordinate formula]] also requires a right-handed orthonormal basis.

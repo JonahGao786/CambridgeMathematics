@@ -1,6 +1,6 @@
 ---
 title: Greatest Common Divisors and Euclid's Algorithm
-material_type: source-backed definition, algorithm, theorems and proofs
+material_type: source-backed definition, algorithm, theorems and proofs with supplementary explanation
 course: Part IA Numbers and Sets
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
@@ -56,3 +56,14 @@ $$\begin{aligned}
 Hence $\gcd(87,52)=1$.
 
 Source: [[Numbers and Sets - Chapter 1 Elementary Number Theory]], pages 8–11, including the full algorithm table and proofs. Related: [[Divisibility and Prime Numbers]] and [[Natural Numbers and Mathematical Induction]].
+
+## From the algorithm to Euclid's lemma — supplementary proof
+
+Each remainder in Euclid's algorithm is an integer linear combination of $a,b$: this holds for $r_1=a-q_1b$, and is preserved when subtracting an integer multiple of one remainder from another. The last non-zero remainder therefore gives **Bézout's identity**
+$$\gcd(a,b)=ua+vb\qquad\text{for some }u,v\in\mathbb Z.$$
+If the algorithm stops immediately, $b=0a+1b$ supplies the same statement. For example, back-substitution in the second worked example gives
+$$1=35-2\cdot17=3\cdot35-2\cdot52=3\cdot87-5\cdot52.$$
+
+For prime $p$ and positive $a$ with $p\nmid a$, the only positive common divisor is $1$. Choose $u,v\in\mathbb Z$ with $up+va=1$. If $p\mid ab$, multiplying by $b$ gives
+$$b=upb+vab,$$
+so $p\mid b$. If instead $p\mid a$, the other alternative already holds. For arbitrary integer $a,b$, zero cases are immediate and signs can be removed using absolute values. This proves [[Divisibility and Prime Numbers|Euclid's lemma]]. It is supplementary; the source lecture states the lemma without proving it.

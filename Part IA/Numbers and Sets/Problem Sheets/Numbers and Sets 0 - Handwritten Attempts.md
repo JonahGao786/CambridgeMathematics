@@ -141,7 +141,13 @@ Base case $k=1$: trivial. Assume true for $k=r$, $r\in\mathbb N$; consider $k=r+
 $$F_{(r+1)n}=F_{rn}F_{n+1}+F_{rn-1}F_n,$$
 which is a multiple of $F_n$. By induction, this is true for all $k\in\mathbb N$.
 
+> [!todo] Index boundary — page 7, question 5(a)
+> The displayed step uses $F_{rn-1}$, which becomes the undefined $F_0$ when $r=n=1$. Under the supplied indexing, treat $n=1$ separately or explicitly extend the sequence before using this formula.
+
 “If $F_n$ is prime, then $\gcd(F_n,F_{n-k})=1$ for all $1\le k\le n-1$. So using previous part, $n$ should be a prime. $F_4=3$, also a prime, so $n$ is prime or $n=4$.”
+
+> [!todo] Incomplete proof — page 7, prime-index claim
+> The quoted gcd assertion does not by itself force the index to be prime: $F_4=3$ is prime and coprime to all earlier Fibonacci numbers, while $4$ is composite. The values $F_1=F_2=1$ explain why a divisor of the index need not yield a non-trivial divisor of the Fibonacci number. For composite $n$, the missing argument must produce a proper Fibonacci divisor strictly between $1$ and $F_n$, or account for the exceptional index $4$. Divisibility alone does not establish the stated conclusion.
 
 ### (b) Last-digit periodicity (page 7, lower half)
 
@@ -253,6 +259,8 @@ For $\sqrt{121}$, $10<\sqrt{121}<12$. We cannot deduce the new denominator is sm
 
 ### (c) Page 12
 
+**Supplementary domain clarification.** The power expressions below are considered where they are real and defined. For an arbitrary irrational exponent, the usual real definition $a^b=e^{b\ln a}$ requires $a>0$. The examples using powers here have positive bases; they do not assign real values to every possible negative-base expression in the printed question.
+
 - $r+\alpha$ is irrational: otherwise $\alpha=(r+\alpha)-r$ would be rational, a contradiction.
 - $r\alpha$ can be rational: let $r=0$.
 - $\alpha+\beta$ can be rational: let $\alpha=-\beta$.
@@ -284,6 +292,9 @@ Counterexamples written:
 - (iv) $n$ odd numbers.
 
 “No such example where all four fails.”
+
+> [!todo] Unsupported conclusion — page 13, question 8, final sentence
+> The separate examples do not establish that simultaneous failure of all four properties is impossible. The final sentence supplies no argument; retain it as a claim to prove, not an established conclusion.
 
 ## 9. Towns and coloured edges (pages 14–16)
 
