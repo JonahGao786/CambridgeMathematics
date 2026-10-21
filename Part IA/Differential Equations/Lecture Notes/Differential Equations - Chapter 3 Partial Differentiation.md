@@ -6,7 +6,7 @@ date: null
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
 source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
-source_pages: 10
+source_pages: 11
 ---
 
 # Differential Equations — Chapter 3: Partial Differentiation
@@ -313,7 +313,7 @@ $$\left.\frac{\partial r}{\partial x}\right|_y
 =\frac{1}{\left.\dfrac{\partial x}{\partial r}\right|_y},$$
 but this need not equal $1/(\left.\partial x/\partial r\right|_\theta)$, since a different variable is being held fixed. See [[Implicit Differentiation]].
 
-## 3.5 Differentiating an integral with respect to a parameter (pages 9–10)
+## 3.5 Differentiating an integral with respect to a parameter (pages 9–11)
 
 For a family $f(x;c)$ depending on a parameter $c$, define
 $$I(c)=\int_{a(c)}^{b(c)}f(x;c)\,dx.$$
@@ -343,3 +343,35 @@ The source says to use the same argument for the lower-endpoint term, yielding $
 
 > [!todo] Limit–integral interchange — page 10
 > The source moves the limit through the fixed-interval integral without stating hypotheses or justifying the interchange. The displayed calculation is retained; the sufficient regularity stated above clarifies the formula's scope, and no missing interchange proof is supplied.
+
+### Example with a moving endpoint (page 11)
+
+Let
+$$I(\lambda)=\int_0^\lambda e^{-\lambda x^2}\,dx.$$
+Leibniz's rule gives
+$$\begin{aligned}
+I'(\lambda)
+&=\int_0^\lambda -x^2e^{-\lambda x^2}\,dx
++e^{-\lambda^3}\frac{d\lambda}{d\lambda}\\
+&=-\int_0^\lambda x^2e^{-\lambda x^2}\,dx+e^{-\lambda^3}.
+\end{aligned}$$
+The endpoint contribution evaluates the integrand at $x=\lambda$ and uses $d\lambda/d\lambda=1$.
+
+### Factorial integrals (page 11)
+
+To evaluate
+$$J_n=\int_0^\infty x^n e^{-x}\,dx,\qquad n\in\mathbb Z_{\ge0},$$
+introduce the parameter integral
+$$I(\lambda)=\int_0^\infty e^{-\lambda x}\,dx
+=\frac1\lambda,\qquad\lambda>0.$$
+The source differentiates $n$ times:
+$$\frac{d^nI}{d\lambda^n}
+=\int_0^\infty(-x)^n e^{-\lambda x}\,dx,$$
+while differentiation of the explicit expression gives
+$$\frac{d^n}{d\lambda^n}\frac1\lambda
+=(-1)^n\frac{n!}{\lambda^{n+1}}.$$
+Equating them and setting $\lambda=1$ yields
+$$(-1)^nJ_n=(-1)^nn!,\qquad J_n=n!.$$
+
+> [!todo] Repeated differentiation of an improper integral — page 11
+> Moving $n$ derivatives through an integral with infinite upper limit requires an appropriate justification near each $\lambda>0$. The source supplies none. The computation and result are retained, but the finite-interval rule alone does not justify this improper-integral step.

@@ -1,11 +1,11 @@
 ---
 title: Differentiation Under the Integral Sign
-material_type: source-backed theorem and proof-scope note
+material_type: source-backed theorem, examples and proof-scope notes
 course: Part IA Differential Equations
 source_file: Ch.3 Partial Differentiation.pdf
 drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
 source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
-source_pages: [9, 10]
+source_pages: [9, 10, 11]
 ---
 
 # Differentiation Under the Integral Sign
@@ -18,5 +18,25 @@ $$I'(c)=\int_{a(c)}^{b(c)}f_c(x;c)\,dx
 A sufficient regularity setting is continuously differentiable endpoints and continuity of $f,f_c$ on a neighbourhood of the integration intervals.
 
 The source splits the difference quotient into the change of the integrand over the old fixed interval, the upper-endpoint interval, and the negative lower-endpoint interval. The mean value theorem gives the two endpoint terms. It moves the limit inside the fixed-interval integral without justification; this remains a localized TODO on page 10 of [[Differential Equations - Chapter 3 Partial Differentiation]], which retains the complete calculation. No missing interchange proof is supplied.
+
+## Moving-endpoint example
+
+For
+$$I(\lambda)=\int_0^\lambda e^{-\lambda x^2}\,dx,$$
+page 11 calculates
+$$I'(\lambda)
+=-\int_0^\lambda x^2e^{-\lambda x^2}\,dx+e^{-\lambda^3}.$$
+The last term is the upper-endpoint contribution.
+
+## Factorial integrals
+
+For $\lambda>0$,
+$$I(\lambda)=\int_0^\infty e^{-\lambda x}\,dx=\frac1\lambda.$$
+The source differentiates $n$ times, for $n\in\mathbb Z_{\ge0}$, to obtain
+$$\int_0^\infty(-x)^ne^{-\lambda x}\,dx
+=(-1)^n\frac{n!}{\lambda^{n+1}}.$$
+Setting $\lambda=1$ gives
+$$\int_0^\infty x^ne^{-x}\,dx=n!.$$
+The repeated differentiation under the improper integral is not justified in the source. This is separately flagged on page 11 of the source note; the finite-interval rule alone does not establish that interchange.
 
 Related: [[Partial Derivatives and the Multivariate Chain Rule]], [[Riemann Integration and the Fundamental Theorem of Calculus]].

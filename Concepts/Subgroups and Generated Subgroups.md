@@ -5,7 +5,7 @@ course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: [16, 17, 18]
+source_pages: [16, 17, 18, 32]
 ---
 
 # Subgroups and Generated Subgroups
@@ -54,4 +54,10 @@ Lemma 1.18 states that every $g\in G$ is a finite product
 $$g=x_1^{\varepsilon_1}\cdots x_m^{\varepsilon_m},\qquad x_i\in X,\quad \varepsilon_i\in\{1,-1\},\quad m\ge0.$$
 The empty product is $e_G$. Its proof is assigned as question 9 of the printed sheet; the lecture supplies no proof.
 
-Source: [[Groups - Chapter 1 Examples and Definitions]], pages 16–18. Related: [[Bijections and Permutations]].
+## A single generator
+
+For $g\in G$, Definition 1.39 gives
+$$\langle g\rangle=\{g^k:k\in\mathbb Z\}\le G.$$
+It is cyclic. [[Cyclic Groups and Element Orders]] records the classification as $C_n$ or $\mathbb Z$ and the order $o(g)=|\langle g\rangle|$.
+
+Source: [[Groups - Chapter 1 Examples and Definitions]], pages 16–18 and 32. Related: [[Bijections and Permutations]].

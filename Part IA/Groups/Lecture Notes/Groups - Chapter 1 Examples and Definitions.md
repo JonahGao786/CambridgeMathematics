@@ -6,7 +6,7 @@ date: null
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: 29
+source_pages: 33
 ---
 
 # Groups — Chapter 1: Examples and Definitions
@@ -767,12 +767,138 @@ It respects the operations because $\exp(x+y)=\exp(x)\exp(y)$, and it is bijecti
 
 All three proofs are assigned as an exercise.
 
-## Image and kernel — Definition 1.32 and Proposition 1.33 (page 28)
+## Image and kernel — Definition 1.32 and Proposition 1.33 (pages 28–29)
 
 For a homomorphism $\varphi:G\to H$,
 $$\operatorname{Im}(\varphi)=\{h\in H:\text{there is a }g\in G\text{ with }\varphi(g)=h\},$$
 $$\ker(\varphi)=\{g\in G:\varphi(g)=e_H\}.$$
 
-**Proposition 1.33 (statement only).**
+**Proposition 1.33.**
 $$\operatorname{Im}(\varphi)\le H,\qquad\ker(\varphi)\le G.$$
-No proof is supplied in this PDF. Page 29 is blank.
+
+**Proof (page 29).** For the image:
+
+- $\varphi(e_G)=e_H$, so $e_H\in\operatorname{Im}(\varphi)$.
+- If $\varphi(g_1),\varphi(g_2)$ belong to the image, then
+  $$\varphi(g_1)\varphi(g_2)=\varphi(g_1g_2)\in\operatorname{Im}(\varphi).$$
+- The inverse of $\varphi(g)$ is $\varphi(g^{-1})$, which also belongs to the image.
+
+Thus $\operatorname{Im}(\varphi)\le H$. For the kernel:
+
+- $\varphi(e_G)=e_H$, so $e_G\in\ker(\varphi)$.
+- If $g_1,g_2\in\ker(\varphi)$, then
+  $$\varphi(g_1g_2)=\varphi(g_1)\varphi(g_2)=e_He_H=e_H,$$
+  so $g_1g_2\in\ker(\varphi)$.
+- If $g\in\ker(\varphi)$, then
+  $$\varphi(g^{-1})=\varphi(g)^{-1}=e_H^{-1}=e_H,$$
+  so $g^{-1}\in\ker(\varphi)$.
+
+Hence $\ker(\varphi)\le G$.
+
+## Injective and surjective functions — Definition 1.34 (pages 29–30)
+
+A function $f:X\to Y$ is:
+
+1. **Injective** if, for all $x_1,x_2\in X$,
+   $$f(x_1)=f(x_2)\Longrightarrow x_1=x_2.$$
+2. **Surjective** if, for every $y\in Y$, there is an $x\in X$ with $f(x)=y$.
+
+**Observation (page 30).** If $X,Y$ are finite and $|X|=|Y|$, then
+$$f\text{ bijective}\quad\Longleftrightarrow\quad
+f\text{ injective}\quad\Longleftrightarrow\quad
+f\text{ surjective}.$$
+The source refers to Numbers and Sets for this finite-set observation; no proof is supplied here.
+
+## Injectivity and the kernel — Lemma 1.35 (page 30)
+
+A group homomorphism $\varphi:G\to H$ is injective if and only if
+$$\ker(\varphi)=\{e_G\}=I_G.$$
+
+**Proof.** If $\varphi$ is injective, the inverse image $\varphi^{-1}(\{e_H\})$ has at most one element. Since it contains $e_G$, the kernel is $\{e_G\}$.
+
+Conversely, suppose $\ker(\varphi)=\{e_G\}$ and $\varphi(g_1)=\varphi(g_2)$. Then
+$$\varphi(g_1g_2^{-1})
+=\varphi(g_1)\varphi(g_2)^{-1}=e_H.$$
+Thus $g_1g_2^{-1}\in\ker(\varphi)=\{e_G\}$, so $g_1=g_2$. Hence $\varphi$ is injective.
+
+**Corollary 1.36.** A homomorphism $\varphi:G\to H$ is an isomorphism if and only if
+$$\operatorname{Im}(\varphi)=H,\qquad
+\ker(\varphi)=\{e_G\}.$$
+The source states the corollary without a separate proof. See [[Homomorphisms and Isomorphisms]].
+
+## Cyclic groups (pages 30–31)
+
+A group $G$ is **cyclic** if there is a $g\in G$ such that
+$$G=\{g^k:k\in\mathbb Z\}.$$
+The element $g$ is a **generator** of $G$. Different integer exponents need not give different elements.
+
+Examples (page 31):
+
+1. $C_n=\{z\in\mathbb C:z^n=1\}$ is cyclic with generator $e^{2\pi i/n}$; the additive group $\mathbb Z_n$ has generator $1$ (read modulo $n$).
+2. The trivial group is cyclic.
+3. The additive group $\mathbb Z$ is cyclic with generator $1$.
+
+See [[Cyclic Groups and Element Orders]].
+
+## Classification of cyclic groups — Theorem 1.38 (pages 31–32)
+
+If $G$ is cyclic, then either $G\cong C_n$ for some $n\in\mathbb N$, or $G\cong\mathbb Z$.
+
+**Proof.** Let $g$ generate $G$ and set
+$$S=\{k\in\mathbb N:g^k=e_G\}.$$
+If $S\ne\varnothing$, let $n=\min S$; otherwise write $n=\infty$.
+
+### Infinite case (page 31)
+
+If $S=\varnothing$, define
+$$\varphi:\mathbb Z\to G,\qquad k\mapsto g^k.$$
+It is a homomorphism because
+$$\varphi(k+\ell)=g^{k+\ell}=g^kg^\ell=\varphi(k)\varphi(\ell).$$
+It is surjective because $g$ generates $G$.
+
+If a non-zero integer $k$ belonged to $\ker(\varphi)$, closure of the kernel under additive inverses would let us replace $k$ by $-k$ if necessary and assume $k>0$. Then $g^k=e_G$, so $k\in S$, a contradiction. Therefore $\ker(\varphi)=\{0\}$. Corollary 1.36 gives $G\cong\mathbb Z$.
+
+### Finite case (page 32)
+
+If $n=\min S<\infty$, define
+$$\varphi:\mathbb Z_n\to G,\qquad k\mapsto g^k.$$
+For $k,\ell\in\{0,\ldots,n-1\}$, write
+$$k+\ell=qn+(k+_n\ell),\qquad q\in\mathbb Z.$$
+Since $g^n=e_G$,
+$$\begin{aligned}
+\varphi(k)\varphi(\ell)
+&=g^{k+\ell}
+=g^{qn+(k+_n\ell)}\\
+&=g^{k+_n\ell}
+=\varphi(k+_n\ell).
+\end{aligned}$$
+Thus $\varphi$ is a homomorphism.
+
+For surjectivity, every element of $G$ has form $g^k$ for some $k\in\mathbb Z$. Divide $k$ by $n$:
+$$k=nq+r,\qquad q\in\mathbb Z,\quad0\le r\le n-1.$$
+Then $g^k=(g^n)^qg^r=g^r=\varphi(r)$.
+
+For injectivity, if $k\in\ker(\varphi)$, then $g^k=e_G$ with $0\le k\le n-1$. The minimality of the positive exponent $n$ forces $k=0$. Lemma 1.35 gives injectivity. Thus $G\cong\mathbb Z_n$, and the earlier isomorphism $\mathbb Z_n\cong C_n$ gives the stated classification.
+
+## Order of an element — Definition 1.39 (page 32)
+
+For a group $G$ and an element $g\in G$,
+$$\langle g\rangle=\{g^k:k\in\mathbb Z\}\le G.$$
+This subgroup is cyclic. The **order of $g$**, written $o(g)$, is $n$ if $\langle g\rangle\cong C_n$, and $\infty$ if $\langle g\rangle\cong\mathbb Z$. Equivalently, it is $|\langle g\rangle|$; in the finite case the classification proof identifies it as the least positive $n$ with $g^n=e_G$.
+
+## More on dihedral groups (page 33)
+
+Recall that $D_{2n}$ is generated by $r,s$, where
+$$r(z)=e^{2\pi i/n}z,\qquad s(z)=\overline z,$$
+and Lemma 1.26 gives $sr=r^{-1}s$. Then
+$$sr^2=r^{-1}sr=r^{-2}s.$$
+The source extends this by induction to
+$$sr^k=r^{-k}s\qquad(k\in\mathbb Z).$$
+
+**Lemma 1.40 (statement only).** Suppose $G$ is a group and $a,b\in G$ satisfy
+$$a^n=e_G,\qquad b^2=e_G,\qquad ab=ba^{-1}.$$
+Then
+$$\varphi(r^k)=a^k,\qquad\varphi(r^ks)=a^kb$$
+defines a homomorphism $\varphi:D_{2n}\to G$.
+
+The PDF ends after this statement, without a proof of Lemma 1.40. No proof is supplied here. See [[Isometries and Dihedral Groups]].

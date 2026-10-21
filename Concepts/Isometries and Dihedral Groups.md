@@ -5,7 +5,7 @@ course: Part IA Groups
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
-source_pages: [19, 20, 21, 22, 23, 24]
+source_pages: [19, 20, 21, 22, 23, 24, 33]
 ---
 
 # Isometries and Dihedral Groups
@@ -30,6 +30,15 @@ $$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}.$$
 The reverse-inclusion argument on pages 23–24 assumes the corner-preservation claim, which is left as an exercise with a distance-maximizing-diagonal idea. If $f(1)=\zeta^m$, where $\zeta=e^{2\pi i/n}$, it sends the adjacent vertices $\zeta,\zeta^{-1}$ to $\zeta^{m-1},\zeta^{m+1}$ in either order. It therefore agrees with $r_m$ or $s_m$ on three non-collinear vertices; the three point lemma gives equality on $X_n$. The localized TODO now concerns the unproved corner-preservation claim, rather than the formerly missing continuation.
 
 Writing $r=r_1$, $s=s_0$, the identities $r_k=r^k$ and $s_\ell=r^\ell s$ show that $\{r,s\}$ generates $D_{2n}$. Lemma 1.26 proves $sr=r^{-1}s$ by evaluating the two composites at $z$; both give $e^{-2\pi i/n}\overline z$.
+
+Page 33 extends the relation: $sr^2=r^{-1}sr=r^{-2}s$, and by induction
+$$sr^k=r^{-k}s\qquad(k\in\mathbb Z).$$
+
+**Lemma 1.40 (statement only).** If $a,b$ in a group $G$ satisfy
+$$a^n=e_G,\qquad b^2=e_G,\qquad ab=ba^{-1},$$
+then
+$$\varphi(r^k)=a^k,\qquad\varphi(r^ks)=a^kb$$
+defines a homomorphism $D_{2n}\to G$. The source ends after this statement, without supplying its proof. See [[Homomorphisms and Isomorphisms]].
 
 ## Geometric lemmas
 

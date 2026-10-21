@@ -1,0 +1,46 @@
+---
+title: First-Order Linear Differential Equations
+material_type: source-backed definitions, example and scope notes
+course: Part IA Differential Equations
+source_file: Ch.4 First-order Linear Differential Equations.pdf
+drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
+source_url: https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view
+source_pages: [1, 2, 3, 4]
+---
+
+# First-Order Linear Differential Equations
+
+An ODE has one independent variable. Its order is the order of the highest derivative. It is linear when the dependent variable and its derivatives appear linearly; thus $x^2y+y'=0$ is a first-order linear ODE.
+
+A linear ODE is **homogeneous** when it has no independent forcing term. The zero function is a solution, and multiplying any solution by a constant gives another solution.
+
+## Exponentials and eigenfunctions
+
+The source gives the exponential series and limit
+$$e^x=\sum_{n=0}^\infty\frac{x^n}{n!}
+=\lim_{k\to\infty}\left(1+\frac{x}{k}\right)^k,$$
+and the characterization $f'=f$, $f(0)=1$. It presents the series/limit calculations without the analytic justifications, and refers elsewhere for the exponential addition-law proof.
+
+An **eigenfunction** of differentiation is a non-zero function satisfying
+$$f'=\lambda f.$$
+For example, $e^{\lambda x}$ has eigenvalue $\lambda$. This motivates trying exponential solutions for homogeneous linear equations with constant coefficients.
+
+## Linear independence of functions
+
+Functions $f_1,\ldots,f_N$ on a common domain are linearly dependent when constants $C_i$, not all zero, satisfy
+$$\sum_{i=1}^N C_if_i(x)=0\qquad\text{for all }x.$$
+They are linearly independent when the only such constants are all zero.
+
+The lecture's unqualified sentence about an $n$th-order linear ODE having $n$ independent solutions is flagged in the source note: the usual dimension theorem needs a homogeneous equation and suitable regularity/non-vanishing leading coefficient on an interval. No proof is supplied there.
+
+## Constant-coefficient example
+
+For
+$$5y'-3y=0,$$
+substituting $y=Ae^{\lambda x}$ with $A\ne0$ gives $5\lambda-3=0$. The source identifies
+$$y(x)=Ae^{3x/5}$$
+as the general solution, including $A=0$. The initial condition $y(0)=y_0$ fixes $A=y_0$.
+
+[[Forward Euler Method]] records the source's discrete approximation to this same initial-value problem.
+
+Source: [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]], pages 1–4. Related: [[Differentiation Rules]], [[Complex Exponential and Trigonometric Functions]].
