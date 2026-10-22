@@ -1,26 +1,22 @@
 ---
 title: Roots of Unity
-material_type: concept note
 course: Part IA Vectors and Matrices
+material_type: concept note
+tags: [concept, vectors-and-matrices, complex-numbers]
 ---
 
 # Roots of Unity
 
-For an integer $N\ge1$, the solutions of $z^N=1$ are
-$$z_k=e^{2\pi ik/N}=\omega^k,\qquad
-k=0,\ldots,N-1,\qquad\omega=e^{2\pi i/N}.$$
-There are $N$ distinct roots on the unit circle, equally spaced by angle $2\pi/N$. For $N\ge3$, they are the vertices of a regular $N$-gon.
+> [!abstract] In one paragraph
+> The $N$ solutions of $z^N=1$ are the powers of $\omega=e^{2\pi i/N}$: equally spaced points on the unit circle, forming a regular $N$-gon for $N\ge3$. They form the cyclic group $C_n$ in the Groups course.
 
-**Proof.** Write $z=re^{i\theta}$. The equation $r^Ne^{iN\theta}=1$ requires $r^N=1$ and $N\theta=2\pi n$ for some $n\in\mathbb Z$. Since $r>0$, $r=1$. The angles with $n=0,\ldots,N-1$ give distinct points, and increasing $n$ by $N$ repeats a point.
+## Key results
 
-## Roots of a non-zero complex number
+- **$N$th roots of unity.** $z^N=1\iff z=\omega^k=e^{2\pi ik/N}$, $k=0,\dots,N-1$. *Idea:* write $z=re^{i\theta}$; then $r=1$ and $N\theta\in2\pi\mathbb Z$.
+- **Roots of $a=Re^{i\theta}\ne0$.** $z^N=a\iff z=R^{1/N}e^{i(\theta+2\pi n)/N}$, $n=0,\dots,N-1$ — equally spaced on the circle of radius $R^{1/N}$. If $a=0$, only $z=0$ (multiplicity $N$).
 
-For $a=Re^{i\theta}\ne0$ and $N\ge1$, the solutions of $z^N=a$ are
-$$z_n=R^{1/N}e^{i(\theta+2\pi n)/N},\qquad n=0,\ldots,N-1.$$
-Here $R^{1/N}$ is the positive real root. The roots are equally spaced on a circle of radius $R^{1/N}$.
+→ [[Vectors and Matrices - Chapter 1 Complex Numbers#Roots of unity|lecture]]
 
-If $a=0$, only $z=0$ is a root, with multiplicity $N$.
+## Related
 
-Replacing the chosen argument $\theta$ by $\theta+2\pi m$ just relabels these $N$ roots. It does not change their set. The factor $e^{2\pi in/N}$ makes every root a rotation of any one chosen root.
-
-See [[Vectors and Matrices - Chapter 1 Complex Numbers]], page 15. Related: [[De Moivre's Theorem]], [[Complex Exponential and Trigonometric Functions]], [[Complex Logarithms and Powers]].
+[[Complex Exponential and Trigonometric Functions]] · [[De Moivre's Theorem]] · [[Cyclic Groups and Element Orders]] · [[Isometries and Dihedral Groups]]

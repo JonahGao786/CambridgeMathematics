@@ -1,27 +1,37 @@
 ---
 title: Differentiation Rules
-material_type: concept note
 course: Part IA Differential Equations
-source_file: Ch.1 Differentiation.pdf
-drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
-source_url: https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view
-source_pages: [8, 9]
+material_type: concept note
+tags: [concept, differential-equations]
 ---
 
 # Differentiation Rules
 
-For $f(x)=F(g(x))$, where $g$ is differentiable at $x$ and $F$ is differentiable at $g(x)$, the **chain rule** is
-$$f'(x)=F'(g(x))g'(x).$$
-For example,
-$$\frac d{dx}\sin(x^2-x+2)=\cos(x^2-x+2)(2x-1).$$
+> [!abstract] In one paragraph
+> The derivative is the limit of the difference quotient. Derivatives of composites, products and quotients follow from three rules; Leibniz's rule gives the $n$th derivative of a product with binomial coefficients.
 
-For differentiable $u,v$, the **product rule** and **quotient rule** are
-$$(uv)'=u'v+uv',\qquad
-\left(\frac uv\right)'=\frac{vu'-uv'}{v^2}\quad(v\ne0).$$
-The quotient rule follows by applying the product rule to $u(1/v)$.
+## Definition
 
-If $u,v$ are $n$ times differentiable, **Leibniz's rule** gives
-$$(uv)^{(n)}=\sum_{r=0}^{n}\binom nr u^{(n-r)}v^{(r)}.$$
-The first coefficient rows are $1,1$; $1,2,1$; and $1,3,3,1$, as in Pascal's triangle.
+$$f'(x)=\frac{df}{dx}=\lim_{h\to0}\frac{f(x+h)-f(x)}h,$$
+which requires the left- and right-hand limits to exist and agree ($|x|$ fails at $0$). Notation: $f'=\dot f$, $f''=\ddot f$, $f^{(n)}=\frac{d^nf}{dx^n}$. → [[Differential Equations - Chapter 1 Introduction and Basic Calculus#Definition — Derivative|lecture]]
 
-See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], pages 8–9. A product-rule proof appears in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]]. Repeated derivatives enter [[Taylor Series and Taylor's Theorem]].
+## Key results
+
+| Rule | Formula |
+| --- | --- |
+| Chain | $\frac d{dx}F(g(x))=F'(g(x))\,g'(x)$ |
+| Product | $(uv)'=u'v+uv'$ |
+| Quotient | $\big(\frac uv\big)'=\frac{vu'-uv'}{v^2}$ |
+| Leibniz | $(uv)^{(n)}=\sum_{r=0}^n\binom nru^{(n-r)}v^{(r)}$ |
+| Exponential base $a$ | $\frac d{dx}a^x=a^x\ln a$ |
+
+→ [[Differential Equations - Chapter 1 Introduction and Basic Calculus#Theorem — Chain rule|chain]] · [[Differential Equations - Chapter 1 Introduction and Basic Calculus#Theorem — Leibniz's rule|Leibniz]]
+
+## Examples
+
+- $\frac d{dx}\sin(x^2-x+2)=(2x-1)\cos(x^2-x+2)$.
+- $(uv)'''=u'''v+3u''v'+3u'v''+uv'''$ — coefficients from Pascal's triangle.
+
+## Related
+
+[[Taylor Series and Taylor's Theorem]] · [[Partial Derivatives and the Multivariate Chain Rule]] · [[Limits, Big O and Little o - A First-Year Guide]]

@@ -1,23 +1,64 @@
 ---
 title: Groups - Chapter 1 Examples and Definitions
-material_type: lecture notes
 course: Part IA Groups
-date: null
+material_type: lecture notes
+chapter: 1
 source_file: Ch.1 Introduction.pdf
 drive_file_id: 1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB
 source_url: https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view
 source_pages: 33
+tags: [lecture, groups]
 ---
 
 # Groups — Chapter 1: Examples and Definitions
 
-## Symmetry and algebra (pages 1–4)
+> [!abstract] Overview
+> Groups from symmetry and from algebra: the axioms and their first consequences, standard examples (numbers, roots of unity, $\mathbb Z_n$, symmetric groups), subgroups and generation, isometries and dihedral groups, products, homomorphisms and isomorphisms, image and kernel, and the classification of cyclic groups.
+> Prerequisites: [[Complex Numbers]], [[Roots of Unity]], [[Numbers and Sets - Chapter 1 Elementary Number Theory]] (division with remainder).
 
-There are two ways of thinking about groups: symmetry and algebra.
+## Results index
 
-An equilateral triangle has rotational symmetries, for example a rotation through $2\pi/3$, and reflective symmetries. Doing nothing is also a symmetry: the **identity**.
+| Result | Statement in brief | Page |
+| --- | --- | --- |
+| [[#Definitions 1.1–1.3 — Set, function, binary operation]] | $\cdot:X\times X\to X$ | 4 |
+| [[#Definition 1.4 — Group]] | (G1) associativity, (G2) right identity, (G3) right inverses | 5 |
+| [[#Proposition 1.5 — Basic properties of groups]] | left = right inverses/identity; uniqueness | 6–9 |
+| [[#Lemma 1.6 — Sock and shoe lemma]] | $(ab)^{-1}=b^{-1}a^{-1}$ | 10–11 |
+| [[#Definition 1.7 — Abelian group]] | $ab=ba$ for all $a,b$ | 11 |
+| [[#Definition 1.8 — Order of a group]] | $\lvert G\rvert$; $C_n$, $\mathbb Z_n$ | 12–13 |
+| [[#Definition 1.9 — Bijection and permutation]] | two-sided inverse function | 13 |
+| [[#Lemma 1.11 — Composition is associative]] | $(h\circ g)\circ f=h\circ(g\circ f)$ | 14 |
+| [[#Lemma 1.12 — Composites of permutations]] | $f\circ f'\in\operatorname{Sym}(X)$ | 14–15 |
+| [[#Proposition 1.13 — The symmetric group]] | $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group; $S_n$ | 15 |
+| [[#Definition 1.15 — Subgroup]] | $H\le G$ | 16 |
+| [[#Proposition 1.16 — Subgroups of the integers]] | they are $n\mathbb Z$, $n\ge0$ | 17 |
+| [[#Definition 1.17 — Generated subgroup]] | $\langle X\rangle=\bigcap_{X\subseteq H\le G}H$ | 18 |
+| [[#Lemma 1.18 — Elements of a generated group]] | words $x_1^{\pm1}\cdots x_m^{\pm1}$ | 18 |
+| [[#Definition 1.19 — Isometry]] | distance-preserving bijection | 19 |
+| [[#Proposition 1.20 — Isometries form a group]] | $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$ | 20 |
+| [[#Definition 1.21 — Dihedral group]] | $D_{2n}=\operatorname{Isom}(X_n)$ | 20–21 |
+| [[#Lemma 1.22 — Rotations and reflections are isometries]] | $r_k,s_\ell\in D_{2n}$ | 21–22 |
+| [[#Lemma 1.23 — Kite lemma]] | equal distances $\Rightarrow$ perpendicular diagonals | 22 |
+| [[#Lemma 1.24 — Three point lemma]] | fixes 3 non-collinear points $\Rightarrow$ identity | 23 |
+| [[#Proposition 1.25 — Elements of the dihedral group]] | $D_{2n}=\{r_k,s_\ell\}$, $\lvert D_{2n}\rvert=2n$ | 23 |
+| [[#Lemma 1.26 — Dihedral relation]] | $sr=r^{-1}s$ | 24 |
+| [[#Proposition 1.27 — Direct product]] | $G\times H$ componentwise | 25 |
+| [[#Definition 1.28 — Homomorphism]] | $\varphi(gg')=\varphi(g)\varphi(g')$ | 25 |
+| [[#Lemma 1.29 — Homomorphisms preserve identity and inverses]] | $\varphi(e)=e$, $\varphi(g^{-1})=\varphi(g)^{-1}$ | 26 |
+| [[#Definition 1.30 — Isomorphism]] | bijective homomorphism; $\mathbb Z_n\cong C_n$ | 26–27 |
+| [[#Lemma 1.31 — Composites and inverses of homomorphisms]] | $\cong$ is an equivalence relation | 28 |
+| [[#Proposition 1.33 — Image and kernel are subgroups]] | $\operatorname{Im}\varphi\le H$, $\ker\varphi\le G$ | 28–29 |
+| [[#Definition 1.34 — Injective and surjective]] | finite equal sizes: all equivalent | 29–30 |
+| [[#Lemma 1.35 — Injective iff trivial kernel]] | $\ker\varphi=\{e_G\}$ | 30 |
+| [[#Corollary 1.36 — Isomorphism criterion]] | onto and trivial kernel | 30 |
+| [[#Definition — Cyclic group]] | $G=\{g^k\}$ | 30–31 |
+| [[#Theorem 1.38 — Classification of cyclic groups]] | $G\cong C_n$ or $\mathbb Z$ | 31–32 |
+| [[#Definition 1.39 — Order of an element]] | $o(g)=\lvert\langle g\rangle\rvert$ | 32 |
+| [[#Lemma 1.40 — Homomorphisms out of dihedral groups]] | defined by $a^n=b^2=e$, $ab=ba^{-1}$ | 33 |
 
-The six symmetries are the identity, the two non-trivial rotations, and the three reflections below. Blue arrows indicate rotation; blue dashed lines are reflection axes. Coordinates specify schematic layouts.
+## 1.1 Symmetry and algebra
+
+There are two ways of thinking about groups: symmetry and algebra. An equilateral triangle has rotational symmetries (e.g. rotation through $2\pi/3$) and reflective symmetries; doing nothing is also a symmetry, the **identity**. Its six symmetries: identity $e$, rotations $r,r^2$, reflections $s_1,s_2,s_3$ (blue arrows: rotations; blue dashed lines: reflection axes).
 
 ```tikz
 \usepackage{tikz}
@@ -55,13 +96,9 @@ The six symmetries are the identity, the two non-trivial rotations, and the thre
 \end{document}
 ```
 
-**Exercises** (page 2): How many symmetries does a square have? A regular pentagon? A regular $n$-gon?
+**Exercises.** How many symmetries does a square have? A regular pentagon? A regular $n$-gon?
 
-### Composition and its order (pages 2 and 4)
-
-Symmetries can be composed. Label the vertices $1,2,3$, initially at the top, lower left and lower right. Let $r$ be the anticlockwise rotation and $s$ the vertical reflection used in the examples.
-
-The upper row applies $r$ then $s$ (page 2); the lower row applies $s$ then $r$ (page 4). The resulting labels differ: symmetries **do not commute**.
+**Composition.** Symmetries can be composed. Label the vertices $1,2,3$ (top, lower left, lower right); let $r$ be the anticlockwise rotation and $s$ the vertical reflection. The upper row applies $r$ then $s$, the lower row $s$ then $r$: the results differ, so symmetries **do not commute**. (Exercise: which of the six symmetries is the first composite?)
 
 ```tikz
 \usepackage{tikz}
@@ -92,15 +129,7 @@ The upper row applies $r$ then $s$ (page 2); the lower row applies $s$ then $r$ 
 \end{document}
 ```
 
-**Exercise** (page 2): Which of the six listed symmetries is the first composite?
-
-### Identity, inverses and associativity (page 3)
-
-- There is one identity; composing with it does nothing extra.
-- Every symmetry has one inverse. The two non-trivial rotations undo one another; the displayed reflection is its own inverse.
-- Composition is associative: grouping the first two transformations or the last two gives the same final transformation.
-
-The inverse examples pair the clockwise and anticlockwise rotations, and show two copies of the same vertical reflection:
+**Identity, inverses, associativity.** There is one identity; every symmetry has one inverse (the two rotations undo one another, a reflection is its own inverse); and composition is associative.
 
 ```tikz
 \usepackage{tikz}
@@ -127,8 +156,6 @@ The inverse examples pair the clockwise and anticlockwise rotations, and show tw
 \end{document}
 ```
 
-The associativity sketch is:
-
 ```tikz
 \usepackage{tikz}
 \begin{document}
@@ -154,156 +181,82 @@ The associativity sketch is:
 \end{document}
 ```
 
-**Question** (page 4): How can we encode the symmetries of a $77$-gon?
+**Question.** How can we encode the symmetries of a $77$-gon?
 
-## Definitions 1.1–1.3 (page 4)
+## 1.2 Groups
 
-**Definition 1.1 — Set.** A set $X$ is a collection of objects. Write $x\in X$ to mean that $x$ is one of the objects of $X$. Examples:
-$$3\in\mathbb N,\qquad \sqrt2\in\mathbb R,\qquad i\notin\mathbb R.$$
+### Definitions 1.1–1.3 — Set, function, binary operation
 
-**Definition 1.2 — Function.** A function from a set $X$ to a set $Y$ is a rule associating to each $x\in X$ an element $f(x)\in Y$.
+- **1.1** A **set** $X$ is a collection of objects; $x\in X$ means $x$ is one of them (e.g. $3\in\mathbb N$, $\sqrt2\in\mathbb R$, $i\notin\mathbb R$).
+- **1.2** A **function** from $X$ to $Y$ is a rule associating to each $x\in X$ an element $f(x)\in Y$. The Cartesian product is $X\times Y=\{(x,y):x\in X,\ y\in Y\}$.
+- **1.3** A **binary operation** on $X$ is a function $\cdot:X\times X\to X$.
 
-The Cartesian product is the set of ordered pairs
-$$X\times Y=\{(x,y):x\in X,\ y\in Y\}.$$
+### Definition 1.4 — Group
 
-**Definition 1.3 — Binary operation.** A binary operation on $X$ is a function
-$$\cdot:X\times X\longrightarrow X.$$
+A **group** is a triple $(G,\cdot,e)$ with $G$ a set, $\cdot$ a binary operation on $G$ and $e\in G$, such that
 
-## Definition 1.4 — Group (page 5)
+1. **(G1) associativity:** $(a\cdot b)\cdot c=a\cdot(b\cdot c)$ for all $a,b,c\in G$;
+2. **(G2) right identity:** $a\cdot e=a$ for all $a\in G$;
+3. **(G3) right inverses:** for every $a\in G$ there is $b\in G$ with $a\cdot b=e$.
 
-A [[Groups|group]] is a triple $(G,\cdot,e)$, where $G$ is a set, $\cdot$ is a binary operation on $G$, and $e\in G$, such that:
+Closure is part of "$\cdot$ is a binary operation on $G$". The symmetries of an equilateral triangle form a group under composition. **Exercise:** $(\mathbb Z,+,0)$ is a group.
 
-1. **(G1) Associativity:** for all $a,b,c\in G$,
-   $$(a\cdot b)\cdot c=a\cdot(b\cdot c).$$
-2. **(G2) Right identity:** for every $a\in G$,
-   $$a\cdot e=a.$$
-3. **(G3) Right inverses:** for every $a\in G$, there is a $b\in G$ such that
-   $$a\cdot b=e.$$
+### Proposition 1.5 — Basic properties of groups
 
-Closure is included in the requirement that $\cdot$ is a binary operation on $G$. The definition starts with right identity and right inverses; Proposition 1.5 states that they are also left identity and left inverses.
+Let $(G,\cdot,e)$ be a group.
 
-## Example, exercise and Proposition 1.5 (page 6)
+1. If $a\cdot b=e$ then $b\cdot a=e$ (right inverses are left inverses).
+2. $e\cdot a=a$ for all $a$ (the right identity is a left identity).
+3. If $a\cdot b=e=a\cdot b'$ then $b=b'$ (inverses are unique).
+4. If $a\cdot e'=a$ for all $a\in G$ then $e'=e$ (the identity is unique).
 
-The symmetries of an equilateral triangle form a group under composition, satisfying (G1), (G2) and (G3).
+**Proof.** **(i)** Suppose $a\cdot b=e$. Then $b=b\cdot e=b\cdot(a\cdot b)=(b\cdot a)\cdot b$ by (G2), assumption, (G1). By (G3) choose $c$ with $b\cdot c=e$; multiplying on the right by $c$,
+$$e=b\cdot c=((b\cdot a)\cdot b)\cdot c=(b\cdot a)\cdot(b\cdot c)=(b\cdot a)\cdot e=b\cdot a.$$
 
-**Exercise:** Show that $(\mathbb Z,+,0)$ forms a group.
+**(ii)** By (G3) and (i) choose $b$ with $a\cdot b=e=b\cdot a$. Then $e\cdot a=(a\cdot b)\cdot a=a\cdot(b\cdot a)=a\cdot e=a$.
 
-**Proposition 1.5.** Let $(G,\cdot,e)$ be a group.
+**(iii)** If $a\cdot b=e=a\cdot b'$, then by (i) $b\cdot a=e$, and
+$$b'=e\cdot b'\overset{\text{(ii)}}=(b\cdot a)\cdot b'\overset{\text{(G1)}}=b\cdot(a\cdot b')=b\cdot e\overset{\text{(G2)}}=b.$$
 
-1. If $a\cdot b=e$, then $b\cdot a=e$: right inverses are also left inverses.
-2. For every $a\in G$, $e\cdot a=a$: the right identity is also a left identity.
-3. If $a\cdot b=e=a\cdot b'$, then $b=b'$: inverses are unique.
-4. If $e'\in G$ satisfies $a\cdot e'=a$ for every $a\in G$, then $e'=e$: the identity is unique.
+**(iv)** Suppose $a\cdot e'=a$ for all $a$. Given $a$, choose $b$ with $b\cdot a=e$ (by (G3) and (i)). From $a=a\cdot e'$, multiply on the left by $b$: $e=b\cdot a=b\cdot(a\cdot e')=(b\cdot a)\cdot e'=e\cdot e'=e'$, using (ii).
 
-### Proof of Proposition 1.5 (pages 7–9)
+**Remark.** There are many logically equivalent definitions of a group; this course uses Definition 1.4.
 
-**(i) Right inverses are left inverses (page 7).** Suppose $a\cdot b=e$. Then
-$$b=b\cdot e=b\cdot(a\cdot b)=(b\cdot a)\cdot b,$$
-using (G2), the assumption and (G1). By (G3), choose $c\in G$ with $b\cdot c=e$. Multiplying the displayed equality on the right by $c$ gives
-$$\begin{aligned}
-b\cdot c&=((b\cdot a)\cdot b)\cdot c\\
-&=(b\cdot a)\cdot(b\cdot c).
-\end{aligned}$$
-Thus $e=(b\cdot a)\cdot e=b\cdot a$ by (G2).
+**Inverses and powers.** By 1.5(iii), if $a\cdot b=e$ write $b=a^{-1}$; then $a\cdot a^{-1}=e=a^{-1}\cdot a$. Define $a^0=e$, $a^n=a\cdot a^{n-1}$ ($n\in\mathbb N$), $a^n=(a^{-1})^{-n}$ ($n<0$). **Exercise:** $a^ma^n=a^{m+n}$ and $(a^m)^n=a^{mn}$ for $m,n\in\mathbb Z$. Recall $ab\ne ba$ in general (triangle symmetries); similarly $a^{-1}b^{-1}$ need not equal $(ab)^{-1}$:
 
-**(ii) The right identity is a left identity (page 8).** By (G3) and (i), choose $b\in G$ such that $a\cdot b=e=b\cdot a$. Then
-$$e\cdot a=(a\cdot b)\cdot a=a\cdot(b\cdot a)=a\cdot e=a.$$
+### Lemma 1.6 — Sock and shoe lemma
 
-**(iii) Inverses are unique (page 8).** If $a\cdot b=e=a\cdot b'$, then (i) gives $b\cdot a=e$, and
-$$\begin{aligned}
-b'&=e\cdot b'&&\text{by (ii)}\\
-&=(b\cdot a)\cdot b'&&\text{by (i)}\\
-&=b\cdot(a\cdot b')&&\text{by (G1)}\\
-&=b\cdot e&&\text{by the assumption}\\
-&=b&&\text{by (G2)}.
-\end{aligned}$$
+For all $a,b\in G$: $(a\cdot b)^{-1}=b^{-1}\cdot a^{-1}$.
 
-**(iv) The identity is unique (page 9).** Suppose $a\cdot e'=a$ for every $a\in G$. For an $a\in G$, use (G3) and (i) to choose $b$ with $b\cdot a=e$. From $a=a\cdot e'$, multiplication on the left by $b$ gives
-$$b\cdot a=b\cdot(a\cdot e')=(b\cdot a)\cdot e'=e\cdot e'=e',$$
-where the last step uses (ii). Since $b\cdot a=e$, we have $e=e'$.
+**Proof.** $(a\cdot b)\cdot(b^{-1}\cdot a^{-1})=(a\cdot(b\cdot b^{-1}))\cdot a^{-1}=(a\cdot e)\cdot a^{-1}=a\cdot a^{-1}=e$, so $b^{-1}\cdot a^{-1}$ is the inverse by uniqueness (1.5).
 
-**Remark (page 9).** There are many logically equivalent definitions of a group; this course uses Definition 1.4.
+### Definition 1.7 — Abelian group
 
-## Inverse notation and powers (page 10)
+$(G,\cdot,e)$ is **abelian** (after Niels Abel) if $a\cdot b=b\cdot a$ for all $a,b\in G$; such $a,b$ **commute**. If $G=\{e\}$, the only operation is $e\cdot e=e$: the **trivial group**.
 
-By Proposition 1.5(iii), if $a\cdot b=e$, write $b=a^{-1}$. Then
-$$a\cdot a^{-1}=e=a^{-1}\cdot a.$$
-
-For $a\in G$, define
-$$a^0=e,\qquad a^n=a\cdot a^{n-1}\quad(n\in\mathbb N),\qquad
-a^n=(a^{-1})^{-n}\quad(n<0).$$
-
-**Exercise.** For $a\in G$ and $m,n\in\mathbb Z$, show
-$$a^m\cdot a^n=a^{m+n},\qquad(a^m)^n=a^{mn}.$$
-Proof omitted.
-
-Recall that $ab=ba$ need not hold, as the triangle symmetries show. Similarly, $a^{-1}b^{-1}$ need not equal $(ab)^{-1}$.
-
-## Lemma 1.6 — Sock and shoe lemma (pages 10–11)
-
-For all $a,b\in G$,
-$$(a\cdot b)^{-1}=b^{-1}\cdot a^{-1}.$$
-
-**Proof (page 11).**
-$$\begin{aligned}
-(a\cdot b)\cdot(b^{-1}\cdot a^{-1})
-&=(a\cdot(b\cdot b^{-1}))\cdot a^{-1}\\
-&=(a\cdot e)\cdot a^{-1}\\
-&=a\cdot a^{-1}=e.
-\end{aligned}$$
-Therefore $b^{-1}\cdot a^{-1}$ is the inverse, by uniqueness in Proposition 1.5. The nickname is “sock and shoe lemma”.
-
-## Definition 1.7 — Abelian groups (page 11)
-
-A group $(G,\cdot,e)$ is **abelian** if
-$$a\cdot b=b\cdot a\qquad\text{for all }a,b\in G.$$
-The name is after Niels Abel. When $a\cdot b=b\cdot a$, the elements $a$ and $b$ **commute**.
-
-If $G=\{e\}$, the only possible binary operation is $e\cdot e=e$. This is the **trivial group**.
-
-### Examples from arithmetic (pages 11–12)
-
-1. $(\mathbb Z,+,0)$, $(\mathbb Q,+,0)$, $(\mathbb R,+,0)$ and $(\mathbb C,+,0)$ are abelian groups. The inverse of $x$ is $-x$.
+**Examples.**
+1. $(\mathbb Z,+,0)$, $(\mathbb Q,+,0)$, $(\mathbb R,+,0)$, $(\mathbb C,+,0)$ are abelian groups; the inverse of $x$ is $-x$.
 2. $(\mathbb N,+,0)$ is not a group. **Exercise:** why not?
-3. $(\mathbb R,\times,1)$ is not a group: $0$ has no inverse. However,
-   $$(\mathbb R\setminus\{0\},\times,1),\quad
-   (\mathbb C\setminus\{0\},\times,1),\quad
-   (\mathbb Q\setminus\{0\},\times,1)$$
-   are abelian groups.
+3. $(\mathbb R,\times,1)$ is not a group ($0$ has no inverse), but $(\mathbb R\setminus\{0\},\times,1)$, $(\mathbb C\setminus\{0\},\times,1)$, $(\mathbb Q\setminus\{0\},\times,1)$ are abelian groups.
 
-## Finite groups — Definition 1.8 (page 12)
+### Definition 1.8 — Order of a group
 
-The **order** of a group $(G,\cdot,e)$ is its number of elements, denoted $|G|$. The group is finite if $|G|<\infty$ and infinite otherwise.
+The **order** of $(G,\cdot,e)$ is its number of elements $|G|$; $G$ is **finite** if $|G|<\infty$, otherwise infinite. Examples: the trivial group; the triangle symmetries.
 
-Examples listed are the trivial group and the symmetries of an equilateral triangle.
+- $C_n=\{z\in\mathbb C:z^n=1\}$, the $n$th [[Roots of Unity|roots of unity]]. **Exercise:** $(C_n,\times,1)$ is an abelian group.
+- $\mathbb Z_n=\{0,1,\dots,n-1\}$ with $a+_nb$ the remainder of $a+b$ on division by $n$. **Exercise:** $(\mathbb Z_n,+_n,0)$ is an abelian group.
 
-For $n\in\mathbb N$, let
-$$C_n=\{z\in\mathbb C:z^n=1\},$$
-the set of [[Roots of Unity|$n$th roots of unity]].
+## 1.3 Symmetric groups
 
-**Exercise:** $(C_n,\times,1)$ is an abelian group.
+### Definition 1.9 — Bijection and permutation
 
-For $n\in\mathbb N$, let
-$$\mathbb Z_n=\{0,1,2,\ldots,n-1\}.$$
-For $a,b\in\mathbb Z_n$, define $a+_n b$ as the remainder when $a+b$ is divided by $n$.
+A **bijection** is a function $f:X\to Y$ for which there is $g:Y\to X$ with $f\circ g=\operatorname{id}_Y$ and $g\circ f=\operatorname{id}_X$, where $(f\circ g)(y)=f(g(y))$; $g$ is the set-theoretic inverse of $f$. A bijection $X\to X$ is a **permutation**.
 
-**Exercise (page 13):** $(\mathbb Z_n,+_n,0)$ is an abelian group.
+**Definition 1.10.** $\operatorname{Sym}(X)$ is the set of permutations of $X$.
 
-## Symmetric groups — Definition 1.9 (page 13)
+### Lemma 1.11 — Composition is associative
 
-Let $X,Y$ be sets. A **bijection** is a function $f:X\to Y$ for which there is a function $g:Y\to X$ satisfying
-$$f\circ g=\operatorname{id}_Y,\qquad g\circ f=\operatorname{id}_X.$$
-Here $\operatorname{id}_Y$ is the identity function on $Y$, and composition means
-$$(f\circ g)(y)=f(g(y)).$$
-The function $g$ is the set-theoretic inverse of $f$.
-
-A bijection $X\to X$ is a **permutation**. See [[Bijections and Permutations]].
-
-## Symmetric groups and composition (pages 14–15)
-
-**Definition 1.10 (page 14).** For a set $X$, $\operatorname{Sym}(X)$ is the set of permutations of $X$.
-
-**Lemma 1.11 — Associativity of composition (page 14).** Consider maps of sets:
+For maps of sets
 
 ```tikz
 \usepackage{tikz}
@@ -320,112 +273,59 @@ A bijection $X\to X$ is a **permutation**. See [[Bijections and Permutations]].
 \end{document}
 ```
 
-Then
-$$(h\circ g)\circ f=h\circ(g\circ f).$$
+$(h\circ g)\circ f=h\circ(g\circ f)$.
 
-**Proof.** For every $w\in W$,
-$$\begin{aligned}
-((h\circ g)\circ f)(w)
-&=(h\circ g)(f(w))\\
-&=h(g(f(w)))\\
-&=h((g\circ f)(w))\\
-&=(h\circ(g\circ f))(w).
-\end{aligned}$$
+**Proof.** For every $w\in W$: $((h\circ g)\circ f)(w)=(h\circ g)(f(w))=h(g(f(w)))=h((g\circ f)(w))=(h\circ(g\circ f))(w)$.
 
-**Lemma 1.12 (pages 14–15).** If $f,f'\in\operatorname{Sym}(X)$, then $f\circ f'\in\operatorname{Sym}(X)$.
+### Lemma 1.12 — Composites of permutations
 
-**Proof.** Let $g$ and $g'$ be the set-theoretic inverses of $f$ and $f'$, respectively. By associativity,
-$$\begin{aligned}
-(f\circ f')\circ(g'\circ g)
-&=f\circ((f'\circ g')\circ g)\\
-&=f\circ(\operatorname{id}_X\circ g)\\
-&=f\circ g=\operatorname{id}_X.
-\end{aligned}$$
-Similarly,
-$$(g'\circ g)\circ(f\circ f')=\operatorname{id}_X.$$
-Thus $f\circ f'$ is a bijection, with inverse $g'\circ g$.
+If $f,f'\in\operatorname{Sym}(X)$ then $f\circ f'\in\operatorname{Sym}(X)$.
 
-**Proposition 1.13 (page 15).** For every set $X$,
-$$(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$$
-is a group.
+**Proof.** Let $g,g'$ be the inverses of $f,f'$. By associativity, $(f\circ f')\circ(g'\circ g)=f\circ((f'\circ g')\circ g)=f\circ(\operatorname{id}_X\circ g)=f\circ g=\operatorname{id}_X$; similarly $(g'\circ g)\circ(f\circ f')=\operatorname{id}_X$. So $f\circ f'$ is a bijection with inverse $g'\circ g$.
 
-**Proof.** Composition is a binary operation on $\operatorname{Sym}(X)$ by Lemma 1.12. Associativity follows from Lemma 1.11. The identity axiom holds for $\operatorname{id}_X$, and inverses exist by the definition of a permutation.
+### Proposition 1.13 — The symmetric group
 
-**Definition 1.14 (page 15).** If $X=\{1,2,\ldots,n\}$, write
-$$S_n=\operatorname{Sym}(X).$$
+For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group.
 
-Examples:
+**Proof.** $\circ$ is a binary operation on $\operatorname{Sym}(X)$ by Lemma 1.12; associative by Lemma 1.11; $\operatorname{id}_X$ is an identity; inverses exist by definition of a permutation.
 
-- $S_3$ describes the ways of rearranging three positions in a row.
-- $S_{52}$ describes the ways of shuffling a standard deck of cards.
+**Definition 1.14.** For $X=\{1,\dots,n\}$, $S_n=\operatorname{Sym}(X)$. E.g. $S_3$: rearrangements of three positions in a row; $S_{52}$: shuffles of a deck of cards. **Exercise:** calculate $|S_n|$.
 
-**Exercise:** Calculate $|S_n|$.
+**Notation.** From now on write $G$ for $(G,\cdot,e)$; when several groups occur, write $\circ_G$ and $e_G$.
 
-**Notation convention (page 15).** From now on, the lecture usually writes $G$ instead of $(G,\cdot,e)$. Where ambiguity is possible, for example when two groups occur, write $\circ_G$ for the group operation and $e_G$ for its identity.
+## 1.4 Subgroups
 
-## Subgroups — Definition 1.15 (page 16)
+Sometimes we restrict attention to a smaller group, e.g. $\mathbb Z$ inside $\mathbb R$ under addition, or the rotations of a triangle inside all its symmetries.
 
-Sometimes we restrict attention to a smaller group, such as $\mathbb Z$ inside $\mathbb R$ under addition, or the rotations of a triangle inside all its symmetries.
+### Definition 1.15 — Subgroup
 
-Let $G$ be a group and $H\subseteq G$. The subset $H$ is a **subgroup** of $G$, written $H\le G$, if:
+$H\subseteq G$ is a **subgroup**, $H\le G$, if (1) $e_G\in H$; (2) $ab\in H$ for all $a,b\in H$; (3) $a^{-1}\in H$ for all $a\in H$. Then $H$ is a group with the same operation and identity.
 
-1. $e_G\in H$.
-2. $ab\in H$ for every $a,b\in H$.
-3. $a^{-1}\in H$ for every $a\in H$.
+**Examples.** (1) $G\le G$. (2) $I_G=\{e_G\}$, the **trivial subgroup**. (3) $\mathbb Z\le\mathbb Q\le\mathbb R\le\mathbb C$ under $+$. (4) $C_n\le C_m$ if $n\mid m$. (5) The rotations through $0,2\pi/3,4\pi/3$ form a subgroup of the triangle symmetries.
 
-Then $H$ is also a group, with the same operation and identity as $G$. See [[Subgroups and Generated Subgroups]].
+**Terminology.** In this course a **proper** subgroup is neither $G$ nor $I_G$ (other texts only require $H\ne G$).
 
-Examples (pages 16–17):
+### Proposition 1.16 — Subgroups of the integers
 
-1. Every group $G$ is a subgroup of itself.
-2. $I_G=\{e_G\}$ is a subgroup, called the **trivial subgroup**.
-3. With addition and identity $0$,
-   $$\mathbb Z\le\mathbb Q\le\mathbb R\le\mathbb C.$$
-4. If $n\mid m$, then $C_n\le C_m$, where these are the groups of roots of unity.
-5. The triangle rotations through $0$, $2\pi/3$ and $4\pi/3$ form a subgroup of its symmetry group.
+The subgroups of $(\mathbb Z,+,0)$ are precisely $n\mathbb Z=\{nk:k\in\mathbb Z\}$, $n\in\mathbb Z_{\ge0}$ (with $0\mathbb Z=\{0\}$).
 
-**Terminology (page 16).** Here “proper subgroup” excludes both $G$ and $I_G$. Standard usage excludes only $G$, so it may include the trivial subgroup.
+**Proof.** *$n\mathbb Z$ is a subgroup:* $0\in n\mathbb Z$; $nk+n\ell=n(k+\ell)$; $-(nk)=n(-k)$.
 
-## Proposition 1.16 — Subgroups of the integers (page 17)
+*No others:* let $S\le\mathbb Z$. If $S=\{0\}$, $S=0\mathbb Z$. Otherwise $S$ contains a positive integer (a non-zero element or its inverse); let $n$ be the smallest. Since $n\in S$, closure gives $n\mathbb Z\subseteq S$. If $x\in S\setminus n\mathbb Z$, divide: $x=nq+r$ with $0<r<n$; then $r=x-nq\in S$, contradicting minimality of $n$. So $S=n\mathbb Z$.
 
-The subgroups of $(\mathbb Z,+,0)$ are precisely
-$$n\mathbb Z=\{nk:k\in\mathbb Z\},\qquad n\in\mathbb Z_{\ge0}.$$
-Here $0\mathbb Z=\{0\}$.
+### Definition 1.17 — Generated subgroup
 
-**Proof that $n\mathbb Z$ is a subgroup.** We have $0\in n\mathbb Z$. If $x=nk$ and $y=n\ell$, then
-$$x+y=n(k+\ell)\in n\mathbb Z.$$
-If $x=nk$, then $-x=n(-k)\in n\mathbb Z$.
-
-**Proof that there are no other subgroups.** Let $S\le\mathbb Z$. If $S=\{0\}$, then $S=0\mathbb Z$. Otherwise $S$ contains a positive integer: a non-zero element or its additive inverse is positive. Let $n$ be the smallest positive integer in $S$.
-
-**Claim:** $S=n\mathbb Z$. Since $n\in S$, repeated addition and additive inverses give $nk\in S$ for every $k\in\mathbb Z$. Thus $n\mathbb Z\subseteq S$.
-
-If $n\mathbb Z\ne S$, choose $x\in S\setminus n\mathbb Z$. Divide by $n$:
-$$x=nq+r,\qquad q\in\mathbb Z,\qquad 0<r<n.$$
-But $r=x-nq\in S$, contradicting the minimality of $n$.
-
-## Intersections and generated subgroups (page 18)
-
-If $H,K\le G$, then $H\cap K\le G$. For a proof exercise, see question 2 of [[Groups - Example Sheet 1 2025]].
-
-More generally, for a family $H_i\le G$ indexed by $i\in I$,
-$$\bigcap_{i\in I}H_i
-=\{a\in G:a\in H_i\text{ for every }i\in I\}\le G.$$
-
-**Definition 1.17.** For a subset $X$ of a group $G$, the **subgroup generated by $X$** is
+If $H,K\le G$ then $H\cap K\le G$ (see [[Groups - Example Sheet 1 2025]], Q2); more generally $\bigcap_{i\in I}H_i\le G$ for any family $H_i\le G$. For $X\subseteq G$, the **subgroup generated by $X$** is
 $$\langle X\rangle=\bigcap_{X\subseteq H\le G}H,$$
-the intersection of all subgroups of $G$ containing $X$.
+intuitively the smallest subgroup containing $X$. If $G=\langle X\rangle$, $X$ **generates** $G$.
 
-Intuitively, $\langle X\rangle$ is the smallest subgroup of $G$ containing $X$. If $G=\langle X\rangle$, then $X$ is a **generating set** for $G$, or $X$ **generates** $G$.
+### Lemma 1.18 — Elements of a generated group
 
-**Lemma 1.18 (page 18).** If $X$ generates $G$, every $g\in G$ can be written
-$$g=x_1^{\varepsilon_1}x_2^{\varepsilon_2}\cdots x_m^{\varepsilon_m},
-\qquad x_i\in X,\quad\varepsilon_i\in\{1,-1\},\quad m\in\mathbb Z_{\ge0}.$$
-The empty product is the identity. The proof is assigned as Example Sheet 1, question 9.
+If $X$ generates $G$, every $g\in G$ can be written $g=x_1^{\varepsilon_1}x_2^{\varepsilon_2}\cdots x_m^{\varepsilon_m}$ with $x_i\in X$, $\varepsilon_i\in\{\pm1\}$, $m\ge0$ (the empty product is $e$). *Proof: Example Sheet 1, Q9.*
 
-## Geometric examples and isometries (pages 19–20)
+## 1.5 Isometries and dihedral groups
 
-Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. The sketch shows the segment joining $z$ to $w$.
+Equip $\mathbb C$ with the distance $d(z,w)=|z-w|=\sqrt{(x-u)^2+(y-v)^2}$ for $z=x+iy$, $w=u+iv$.
 
 ```tikz
 \usepackage{tikz}
@@ -442,42 +342,19 @@ Equip the complex plane $\mathbb C$ with its usual Euclidean distance $|z-w|$. T
 \end{document}
 ```
 
-**Distance formula.** For $z=x+iy$ and $w=u+iv$,
-$$d(z,w)=|z-w|=\sqrt{(x-u)^2+(y-v)^2}.$$
-This follows by taking the modulus of $(x-u)+i(y-v)$.
+### Definition 1.19 — Isometry
 
-**Definition 1.19.** For any $X\subseteq\mathbb C$, an **isometry of $X$** is a bijection $f:X\to X$ preserving distances:
-$$|f(x)-f(y)|=|x-y|\qquad\text{for all }x,y\in X.$$
+For $X\subseteq\mathbb C$, an **isometry** of $X$ is a bijection $f:X\to X$ with $|f(x)-f(y)|=|x-y|$ for all $x,y\in X$.
 
-**Proposition 1.20.** The set $\operatorname{Isom}(X)$ of isometries of $X$ is a subgroup of $\operatorname{Sym}(X)$. In particular, it is a group under composition.
+### Proposition 1.20 — Isometries form a group
 
-**Proof.** The identity is an isometry. If $f,g\in\operatorname{Isom}(X)$, their composite is a bijection and
-$$\begin{aligned}
-|(f\circ g)(x)-(f\circ g)(y)|
-&=|f(g(x))-f(g(y))|\\
-&=|g(x)-g(y)|=|x-y|.
-\end{aligned}$$
-Thus $f\circ g\in\operatorname{Isom}(X)$.
+$\operatorname{Isom}(X)\le\operatorname{Sym}(X)$; in particular it is a group under composition.
 
-For the inverse, put $x'=f^{-1}(x)$ and $y'=f^{-1}(y)$. Then
-$$\begin{aligned}
-|f^{-1}(x)-f^{-1}(y)|
-&=|x'-y'|\\
-&=|f(x')-f(y')|\\
-&=|(f\circ f^{-1})(x)-(f\circ f^{-1})(y)|\\
-&=|x-y|.
-\end{aligned}$$
-Hence $f^{-1}\in\operatorname{Isom}(X)$, proving the subgroup conditions. See [[Isometries and Dihedral Groups]].
+**Proof.** $\operatorname{id}$ is an isometry. For $f,g\in\operatorname{Isom}(X)$: $|f(g(x))-f(g(y))|=|g(x)-g(y)|=|x-y|$. For the inverse, put $x'=f^{-1}(x)$, $y'=f^{-1}(y)$: $|f^{-1}(x)-f^{-1}(y)|=|x'-y'|=|f(x')-f(y')|=|x-y|$.
 
-## Dihedral groups — Definition 1.21 (pages 20–21)
+### Definition 1.21 — Dihedral group
 
-For $n\in\mathbb N$, $n\ge3$, use the vertex-set model of the regular $n$-gon:
-$$X_n=\left\{e^{2\pi i k/n}:k=0,1,\ldots,n-1\right\}\subseteq\mathbb C.$$
-Here $X_n$ denotes the vertices, and the drawn edges visualize their cyclic order. This makes the domain of the following isometries explicit.
-The **$n$th dihedral group** is
-$$D_{2n}=\operatorname{Isom}(X_n).$$
-
-The examples show a triangle pointing right and a square with a vertex at the top:
+For $n\ge3$ let $X_n=\{e^{2\pi ik/n}:k=0,\dots,n-1\}\subseteq\mathbb C$ (the vertices of a regular $n$-gon). The **$n$th dihedral group** is $D_{2n}=\operatorname{Isom}(X_n)$.
 
 ```tikz
 \usepackage{tikz}
@@ -495,9 +372,7 @@ The examples show a triangle pointing right and a square with a vertex at the to
 \end{document}
 ```
 
-**Question:** What are the elements of $D_{2n}$?
-
-For $n=4$, the diagram illustrates a quarter-turn and four reflection axes. The blue arrow is anticlockwise; the four dashed black lines are reflection axes.
+**Question.** What are the elements of $D_{2n}$? For $n=4$: rotations by $\pi/2$ and four reflection axes; for $n=5$: rotations $2\pi/5,4\pi/5,\dots$ and five reflection axes.
 
 ```tikz
 \usepackage{tikz}
@@ -519,8 +394,6 @@ For $n=4$, the diagram illustrates a quarter-turn and four reflection axes. The 
 \end{document}
 ```
 
-For $n=5$, the rotations include angles $2\pi/5,4\pi/5,\ldots$, and there are five reflection axes. The pentagon sketch itself has no axes drawn:
-
 ```tikz
 \usepackage{tikz}
 \begin{document}
@@ -533,40 +406,19 @@ For $n=5$, the rotations include angles $2\pi/5,4\pi/5,\ldots$, and there are fi
 \end{document}
 ```
 
-### Candidate rotations and reflections (page 21)
+**Candidates.** Rotations $r_k:z\mapsto e^{2\pi ik/n}z$ ($k=0,\dots,n-1$; $r_0=\operatorname{id}$) and reflections $s_\ell:z\mapsto\overline{e^{-\ell\pi i/n}z}\,e^{\ell\pi i/n}=e^{2\pi i\ell/n}\bar z$ ($\ell=0,\dots,n-1$). **Exercise:** $s_\ell$ is reflection in the line $\{re^{\pi i\ell/n}:r\in\mathbb R\}$. The rotations $r_0,\dots,r_{n-1}$ are distinct.
 
-The proposed elements are:
+### Lemma 1.22 — Rotations and reflections are isometries
 
-- **Rotations:** $r_k:z\mapsto e^{2\pi ik/n}z$, for $k=0,\ldots,n-1$; $r_0$ is the identity.
-- **Reflections:** for $\ell=0,\ldots,n-1$,
-  $$s_\ell:z\mapsto\overline{e^{-\ell\pi i/n}z}\,e^{\ell\pi i/n}
-  =e^{2\pi i\ell/n}\overline z.$$
+$r_k,s_\ell\in\operatorname{Isom}(X_n)$ for all $k,\ell$.
 
-**Exercise:** Check that $s_\ell$ is reflection in the line
-$$\{re^{\pi i\ell/n}:r\in\mathbb R\}.$$
-Proof omitted. Note that the rotations $r_0,r_1,\ldots,r_{n-1}$ are pairwise distinct.
+**Proof.** With $\zeta=e^{2\pi i/n}$: $r_k(\zeta^j)=\zeta^{j+k}$, $s_\ell(\zeta^j)=\zeta^{\ell-j}$, so both map $X_n$ bijectively to itself. And $|r_k(z)-r_k(w)|=|e^{2\pi ik/n}(z-w)|=|z-w|$, $|s_\ell(z)-s_\ell(w)|=|\bar z-\bar w|=|z-w|$.
 
-**Lemma 1.22 (pages 21–22).** For every $k,\ell\in\{0,\ldots,n-1\}$,
-$$r_k,s_\ell\in\operatorname{Isom}(X_n).$$
+The goal is to show these are the only elements of $D_{2n}$.
 
-**Proof.** With $\zeta=e^{2\pi i/n}$, these maps send vertices as
-$$r_k(\zeta^j)=\zeta^{j+k},\qquad s_\ell(\zeta^j)=\zeta^{\ell-j},$$
-with indices modulo $n$, so they map $X_n$ bijectively onto itself. Distance preservation follows from:
-$$\begin{aligned}
-|r_k(z)-r_k(w)|&=|e^{2\pi ik/n}(z-w)|=|z-w|,\\
-|s_\ell(z)-s_\ell(w)|&=|e^{2\pi i\ell/n}(\overline z-\overline w)|\\
-&=|\overline z-\overline w|=|\overline{z-w}|=|z-w|.
-\end{aligned}$$
-The goal is to show that these are the only elements of $D_{2n}$.
+### Lemma 1.23 — Kite lemma
 
-## Lemma 1.23 — Kite lemma (page 22)
-
-Let $z_1,z_2,w_1,w_2\in\mathbb C$. If
-$$|w_1-z_1|=|w_2-z_1|,\qquad |w_1-z_2|=|w_2-z_2|,$$
-then
-$$(z_1-z_2)\perp(w_1-w_2).$$
-
-The blue double ticks mark the equal sides meeting at $z_1$; red single ticks mark those meeting at $z_2$. The diagonals meet at a right angle in this diagram.
+Let $z_1,z_2,w_1,w_2\in\mathbb C$ with $|w_1-z_1|=|w_2-z_1|$ and $|w_1-z_2|=|w_2-z_2|$. Then $(z_1-z_2)\perp(w_1-w_2)$.
 
 ```tikz
 \usepackage{tikz}
@@ -601,40 +453,26 @@ The blue double ticks mark the equal sides meeting at $z_1$; red single ticks ma
 \end{document}
 ```
 
-**Geometric proof.** In the depicted non-degenerate case, let the diagonals meet at $t$. By symmetry,
-$$\angle z_1tw_1=\angle z_1tw_2.$$
-Since $w_1,t,w_2$ lie on a straight line, these angles sum to $\pi$, so each is $\pi/2$. If either difference vector is zero, orthogonality holds immediately in the dot-product sense.
+**Proof.** Let the diagonals meet at $t$. By symmetry $\angle z_1tw_1=\angle z_1tw_2$; these sum to $\pi$ ($w_1,t,w_2$ collinear), so each is $\pi/2$.
 
-**Algebraic proof.** The hypotheses do not ensure that the diagonal segments intersect, so the depicted angle argument is not a proof for every configuration. Regard complex numbers as vectors in $\mathbb R^2$. Squaring each distance equality and cancelling $\|z_i\|^2$ gives
-$$2\langle z_i,w_1-w_2\rangle=\|w_1\|^2-\|w_2\|^2\qquad(i=1,2).$$
-Subtracting the two equations yields
-$$\langle z_1-z_2,w_1-w_2\rangle=0.$$
-This proves the lemma in all cases, including zero difference vectors. The real inner product is $\langle z,w\rangle=\operatorname{Re}(z\overline w)$.
+> [!note] Explanation
+> The picture assumes the diagonals cross. A configuration-free check: squaring the two equalities and subtracting gives $\langle z_1-z_2,\,w_1-w_2\rangle=0$, with $\langle z,w\rangle=\operatorname{Re}(z\bar w)$.
 
-## Lemma 1.24 — Three point lemma (page 23)
+### Lemma 1.24 — Three point lemma
 
-Let $X\subseteq\mathbb C$ and $f\in\operatorname{Isom}(X)$. Suppose there are three non-collinear points $z_1,z_2,z_3\in X$ with
-$$f(z_i)=z_i\qquad(i=1,2,3).$$
-Then $f=\operatorname{id}_X$.
+Let $X\subseteq\mathbb C$, $f\in\operatorname{Isom}(X)$, and suppose $f(z_i)=z_i$ for three non-collinear $z_1,z_2,z_3\in X$. Then $f=\operatorname{id}_X$.
 
-**Proof by contradiction.** Suppose $f(y)\ne y$ for some $y\in X$. For each $i=1,2,3$,
-$$|f(y)-z_i|=|f(y)-f(z_i)|=|y-z_i|,$$
-using the fixed-point hypotheses and distance preservation. Applying the kite lemma twice shows that $z_1-z_2$ and $z_2-z_3$ are both perpendicular to the non-zero vector $f(y)-y$. Hence $z_1,z_2,z_3$ are collinear, contradicting the hypothesis.
+**Proof.** Suppose $f(y)\ne y$ for some $y\in X$. For each $i$, $|f(y)-z_i|=|f(y)-f(z_i)|=|y-z_i|$. By the kite lemma (twice), $z_1-z_2$ and $z_2-z_3$ are both perpendicular to $f(y)-y\ne0$, so $z_1,z_2,z_3$ are collinear — contradiction.
 
-**Remark.** This generalizes to an “$(n+1)$-point lemma” in $\mathbb R^n$.
+**Remark.** This generalises to an "$(n+1)$-point lemma" in $\mathbb R^n$.
 
-## Proposition 1.25 — Classification of dihedral isometries (page 23)
+### Proposition 1.25 — Elements of the dihedral group
 
-For $n\ge3$,
-$$D_{2n}=\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}=\operatorname{Isom}(X_n).$$
+For $n\ge3$: $D_{2n}=\{r_k,s_\ell:\ k,\ell=0,\dots,n-1\}$, and $|D_{2n}|=2n$.
 
-**Proof.** Lemma 1.22 proves
-$$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
-For the reverse inclusion, take $f\in D_{2n}$.
+**Proof.** "$\supseteq$" is Lemma 1.22. Conversely let $f\in D_{2n}$.
 
-**Corner preservation.** An isometry sends the corners, the $n$th roots of unity, to corners.
-
-Distance-preserving maps preserve the longest diagonals. Examples for the square, pentagon and hexagon are shown below:
+*Corners go to corners,* and distance-preserving maps preserve the longest diagonals (and adjacency):
 
 ```tikz
 \usepackage{tikz}
@@ -655,49 +493,16 @@ Distance-preserving maps preserve the longest diagonals. Examples for the square
 \end{document}
 ```
 
-**Corner preservation.** In the vertex-set model $X_n=\{\zeta^j:0\le j<n\}$ used above, every point of the domain is already a vertex. When “polygon” denotes the boundary or the filled polygon, corner preservation requires a proof. The same classification holds for either interpretation, as follows.
+So $f(1)=\zeta^m$ for some $m$, and $f$ maps the two neighbours $\{\zeta,\zeta^{-1}\}$ of $1$ to the two neighbours $\{\zeta^{m-1},\zeta^{m+1}\}$ of $\zeta^m$. If the order is kept, $f$ agrees with $r_m$ on $1,\zeta,\zeta^{-1}$; if swapped, with $s_m$. These three points are non-collinear, so by the three point lemma (applied to $q^{-1}\circ f$, $q\in\{r_m,s_m\}$), $f=r_m$ or $f=s_m$.
 
-Let $X$ be that boundary or filled polygon and $f:X\to X$ an isometry. Choose three non-collinear points $u_0,u_1,u_2\in X$ and write $v_i=f(u_i)$. The two vectors $u_i-u_0$ ($i=1,2$) are a basis of $\mathbb R^2$. Define a linear map $Q$ by $Q(u_i-u_0)=v_i-v_0$. Distance preservation and
-$$2\langle a,b\rangle=\|a\|^2+\|b\|^2-\|a-b\|^2$$
-show that these two pairs have identical dot products. By bilinearity $Q$ preserves all dot products, so it is invertible and orthogonal. The affine isometry $T(x)=v_0+Q(x-u_0)$ agrees with $f$ at the three chosen points. For any $x\in X$, the points $T(x)$ and $f(x)$ have equal distances to all three $v_i$. Subtracting their squared-distance equations shows that $T(x)-f(x)$ is perpendicular to both independent differences $v_1-v_0,v_2-v_0$, hence zero. Thus $f=T|_X$.
+> [!note] Explanation
+> On the vertex set, $|\zeta^a-\zeta^b|=2\sin(\pi d/n)$ with $d$ the number of steps between them, so the nearest vertices to $\zeta^a$ are exactly $\zeta^{a\pm1}$ — this is why an isometry preserves adjacency. The $2n$ maps are distinct: rotations differ at $1$, reflections differ at $1$, and $r_k$, $s_k$ differ at $\zeta$ ($\zeta^{k+1}\ne\zeta^{k-1}$ as $n\ge3$).
 
-Since $f$ is onto, $T(X)=X$. Affine maps preserve convex combinations, so $T$ maps the convex hull of $X$ (the filled polygon) onto itself. An invertible affine map preserves extreme points: a point that is not a non-trivial convex combination of two distinct polygon points has the same property after applying $T$ or $T^{-1}$. The extreme points of this polygon are exactly its vertices. A non-vertex boundary point lies inside an edge and an interior point lies inside a segment; neither is extreme. Each vertex is extreme because the polygon lies in the unit disk and a non-trivial convex combination of distinct disk points has norm strictly less than $1$ when it could equal a unit vertex. Therefore $f$ sends vertices to vertices. It remains to classify the induced permutation of the vertices.
+### Lemma 1.26 — Dihedral relation
 
-Write $\zeta=e^{2\pi i/n}$. The claim gives $f(1)=\zeta^m$ for some $m\in\{0,\ldots,n-1\}$. Distance preservation then gives
-$$f(\{\zeta,\zeta^{-1}\})=\{\zeta^{m-1},\zeta^{m+1}\},$$
-because these are the two corners adjacent to $f(1)$. If their order is preserved, $f$ agrees with $r_m$ on $1,\zeta,\zeta^{-1}$; if their order is swapped, it agrees with $s_m$ there. These three vertices are non-collinear. Composing with the inverse of the matching isometry and applying the three point lemma gives $f=r_m$ or $f=s_m$.
+Write $r=r_1$, $s=s_0$. Then $r_k=r^k$ and $s_\ell=r^\ell s$, so $\{r,s\}$ generates $D_{2n}$, and $sr=r^{-1}s$.
 
-### Classification on the vertex set
-
-Lemma 1.22 proves
-$$\{r_k,s_\ell:k,\ell=0,\ldots,n-1\}\subseteq\operatorname{Isom}(X_n).$$
-To prove the reverse inclusion, first show that an isometry preserves adjacency.
-
-Put $\zeta=e^{2\pi i/n}$. Distances between vertices satisfy
-$$|\zeta^a-\zeta^b|=2\sin\left(\frac{\pi d}{n}\right),\qquad
-d=\min\{|a-b|,n-|a-b|\},$$
-using representatives $0\le a,b<n$. Since sine is strictly increasing on $[0,\pi/2]$, the closest other vertices to $\zeta^a$ are exactly $\zeta^{a-1},\zeta^{a+1}$ (indices modulo $n$). Thus every isometry preserves adjacency.
-
-Take $f\in\operatorname{Isom}(X_n)$. Write $f(1)=\zeta^k$. Adjacency forces
-$$f(\zeta)=\zeta^{k+1}\quad\text{or}\quad f(\zeta)=\zeta^{k-1}.$$
-In the first case choose $q=r_k$; in the second choose $q=s_k$. In either case $q$ agrees with $f$ at both $1$ and $\zeta$. Then $h=q^{-1}\circ f$ is an isometry fixing these two vertices.
-
-The vertex $\zeta^2$ is a neighbour of $\zeta$. Its image under $h$ must be either $1$ or $\zeta^2$. Injectivity excludes $1$, already the image of $1$, so $h(\zeta^2)=\zeta^2$. For $n\ge3$, the distinct points $1,\zeta,\zeta^2$ are non-collinear (a line meets a circle in at most two points). The three point lemma gives $h=\operatorname{id}_{X_n}$ and hence $f=q$. This proves the reverse inclusion, including the case $n=3$.
-
-The $n$ rotations are distinct by their values at $1$, and the same is true for the $n$ reflections. A rotation and reflection with equal values at $1$ have the same index $k$, but their values at $\zeta$ are $\zeta^{k+1}$ and $\zeta^{k-1}$, which differ because $n\ge3$. Therefore the displayed list contains exactly $2n$ elements:
-$$|D_{2n}|=2n.$$
-
-See [[Isometries and Dihedral Groups]].
-
-## Generators and a dihedral relation (page 24)
-
-Write $r=r_1$ and $s=s_0$. Since
-$$r_k=r^k,\qquad s_\ell=r^\ell s,$$
-the pair $\{r,s\}$ generates $D_{2n}$.
-
-**Lemma 1.26.** $sr=r^{-1}s$.
-
-**Proof by composition.** The two routes have the same final value:
+**Proof.** Both routes send $z$ to $e^{-2\pi i/n}\bar z$:
 
 ```tikz
 \usepackage{tikz}
@@ -717,69 +522,36 @@ the pair $\{r,s\}$ generates $D_{2n}$.
 \end{document}
 ```
 
-## Products of groups — Proposition 1.27 (page 25)
+## 1.6 Products and homomorphisms
 
-If $G,H$ are groups, their Cartesian product $G\times H$ is a group under
-$$(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2),$$
-with identity $(e_G,e_H)$. **Exercise:** verify the group axioms.
+### Proposition 1.27 — Direct product
 
-## Homomorphisms — Definition 1.28 (page 25)
+If $G,H$ are groups, $G\times H$ is a group under $(g_1,h_1)(g_2,h_2)=(g_1g_2,h_1h_2)$ with identity $(e_G,e_H)$. **Exercise:** verify the axioms.
 
-Groups may have the same structure without being literally the same objects: compare permutations of a deck of $52$ cards with permutations of a bag of $52$ apples.
+### Definition 1.28 — Homomorphism
 
-A function $\varphi:G\to H$ is a **homomorphism** if it respects the group operations:
-$$\varphi(gg')=\varphi(g)\varphi(g')\qquad(g,g'\in G).$$
-See [[Homomorphisms and Isomorphisms]].
+Groups may have the same structure without being the same objects (permuting $52$ cards vs. $52$ apples). $\varphi:G\to H$ is a **homomorphism** if $\varphi(gg')=\varphi(g)\varphi(g')$ for all $g,g'\in G$.
 
-Examples:
+**Examples.** (1) $g\mapsto e_H$, the **trivial homomorphism**. (2) For $H\le G$, the inclusion $h\mapsto h$. (3) **Exercise:** if $n\mid m$, $C_m\to C_n$, $z\mapsto z^{m/n}$.
 
-1. For any groups $G,H$, the map $g\mapsto e_H$ is the **trivial homomorphism**.
-2. If $H\le G$, the inclusion $i:H\to G$, $h\mapsto h$, is a homomorphism.
-3. **Exercise (page 26).** If $n\mid m$, the map
-   $$\varphi:C_m\to C_n,\qquad z\mapsto z^{m/n}$$
-   is a homomorphism. Proof omitted.
+### Lemma 1.29 — Homomorphisms preserve identity and inverses
 
-## Lemma 1.29 — Identities and inverses (page 26)
+If $\varphi:G\to H$ is a homomorphism, $\varphi(e_G)=e_H$ and $\varphi(g^{-1})=\varphi(g)^{-1}$.
 
-If $\varphi:G\to H$ is a homomorphism, then
-$$\varphi(e_G)=e_H,\qquad
-\varphi(g^{-1})=\varphi(g)^{-1}\quad(g\in G).$$
+**Proof.** $\varphi(e_G)\varphi(e_G)=\varphi(e_Ge_G)=\varphi(e_G)$; multiply by $\varphi(e_G)^{-1}$. And $\varphi(g)\varphi(g^{-1})=\varphi(gg^{-1})=\varphi(e_G)=e_H$.
 
-**Proof.** We have
-$$\varphi(e_G)\varphi(e_G)=\varphi(e_Ge_G)=\varphi(e_G).$$
-Multiplying by the inverse of $\varphi(e_G)$ gives $\varphi(e_G)=e_H$. Also,
-$$\varphi(g)\varphi(g^{-1})=\varphi(gg^{-1})=\varphi(e_G)=e_H,$$
-so $\varphi(g^{-1})$ is the inverse of $\varphi(g)$.
+### Definition 1.30 — Isomorphism
 
-## Isomorphisms — Definition 1.30 (pages 26–27)
+A bijective homomorphism is an **isomorphism**; then $G$ and $H$ are **isomorphic**, $G\cong H$.
 
-A bijective homomorphism $\varphi:G\to H$ is an **isomorphism**. The groups are **isomorphic**, written $G\cong H$.
+**Example: $\mathbb Z_n\cong C_n$.** $\varphi:\mathbb Z_n\to C_n$, $k\mapsto e^{2\pi ik/n}$ is a bijection. Writing $k+\ell=(k+_n\ell)+np$,
+$$\varphi(k+_n\ell)=e^{2\pi i(k+_n\ell)/n}=e^{2\pi i(k+\ell)/n}=e^{2\pi ik/n}e^{2\pi i\ell/n}=\varphi(k)\varphi(\ell).$$
 
-### Example: addition modulo $n$ and roots of unity (page 27)
+**Example: $\exp:(\mathbb R,+,0)\to(\mathbb R_{>0},\times,1)$** is an isomorphism: $\exp(x+y)=\exp(x)\exp(y)$, with inverse $\log$.
 
-Recall $C_n=\{z\in\mathbb C:z^n=1\}$ under multiplication, and $\mathbb Z_n=\{0,\ldots,n-1\}$ under $+_n$. Define
-$$\varphi:\mathbb Z_n\to C_n,\qquad k\mapsto e^{2\pi ik/n}.$$
-The map is well-defined and bijective because the residues correspond exactly to the $n$th roots of unity. To check preservation of the operation, for $k,\ell\in\mathbb Z_n$, write
-$$k+\ell=(k+_n\ell)+np,\qquad p\in\mathbb Z.$$
-Then
-$$\begin{aligned}
-\varphi(k+_n\ell)
-&=\exp\!\left(\frac{2\pi i(k+_n\ell)}n\right)\\
-&=\exp\!\left(\frac{2\pi i(k+\ell)}n\right)\\
-&=e^{2\pi ik/n}e^{2\pi i\ell/n}
-=\varphi(k)\varphi(\ell).
-\end{aligned}$$
-Thus $\mathbb Z_n\cong C_n$.
+### Lemma 1.31 — Composites and inverses of homomorphisms
 
-### Example: the real exponential (page 27)
-
-The exponential is an isomorphism
-$$\exp:(\mathbb R,+,0)\to(\mathbb R_{>0},\times,1),\qquad x\mapsto e^x.$$
-It respects the operations because $\exp(x+y)=\exp(x)\exp(y)$, and it is bijective because $\log$ is its set-theoretic inverse.
-
-## Lemma 1.31 — Composition, inverses and equivalence (page 28)
-
-1. If $\varphi:G\to H$ and $\psi:H\to K$ are homomorphisms, then $\psi\circ\varphi:G\to K$ is a homomorphism:
+1. If $\varphi:G\to H$ and $\psi:H\to K$ are homomorphisms, so is $\psi\circ\varphi$:
 
 ```tikz
 \usepackage{tikz}
@@ -794,142 +566,59 @@ It respects the operations because $\exp(x+y)=\exp(x)\exp(y)$, and it is bijecti
 \end{document}
 ```
 
-2. If $\varphi:G\to H$ is an isomorphism, its set-theoretic inverse $\varphi^{-1}:H\to G$ is also an isomorphism.
-3. Isomorphism is an equivalence relation: $G\cong G$; $G\cong H$ implies $H\cong G$; and $G\cong H$, $H\cong K$ imply $G\cong K$.
+2. If $\varphi$ is an isomorphism, so is $\varphi^{-1}$.
+3. $\cong$ is an equivalence relation.
 
-All three proofs are assigned as an exercise.
+*Proofs: exercise.*
 
-## Image and kernel — Definition 1.32 and Proposition 1.33 (pages 28–29)
+**Definition 1.32.** For a homomorphism $\varphi:G\to H$: $\operatorname{Im}(\varphi)=\{h\in H:\exists g,\ \varphi(g)=h\}$ and $\ker(\varphi)=\{g\in G:\varphi(g)=e_H\}$.
 
-For a homomorphism $\varphi:G\to H$,
-$$\operatorname{Im}(\varphi)=\{h\in H:\text{there is a }g\in G\text{ with }\varphi(g)=h\},$$
-$$\ker(\varphi)=\{g\in G:\varphi(g)=e_H\}.$$
+### Proposition 1.33 — Image and kernel are subgroups
 
-**Proposition 1.33.**
-$$\operatorname{Im}(\varphi)\le H,\qquad\ker(\varphi)\le G.$$
+$\operatorname{Im}(\varphi)\le H$ and $\ker(\varphi)\le G$.
 
-**Proof (page 29).** For the image:
+**Proof.** *Image:* $e_H=\varphi(e_G)$; $\varphi(g_1)\varphi(g_2)=\varphi(g_1g_2)$; $\varphi(g)^{-1}=\varphi(g^{-1})$. *Kernel:* $\varphi(e_G)=e_H$; $\varphi(g_1g_2)=e_He_H=e_H$; $\varphi(g^{-1})=\varphi(g)^{-1}=e_H$.
 
-- $\varphi(e_G)=e_H$, so $e_H\in\operatorname{Im}(\varphi)$.
-- If $\varphi(g_1),\varphi(g_2)$ belong to the image, then
-  $$\varphi(g_1)\varphi(g_2)=\varphi(g_1g_2)\in\operatorname{Im}(\varphi).$$
-- The inverse of $\varphi(g)$ is $\varphi(g^{-1})$, which also belongs to the image.
+### Definition 1.34 — Injective and surjective
 
-Thus $\operatorname{Im}(\varphi)\le H$. For the kernel:
+$f:X\to Y$ is **injective** if $f(x_1)=f(x_2)\Rightarrow x_1=x_2$, and **surjective** if every $y\in Y$ is some $f(x)$. If $X,Y$ are finite with $|X|=|Y|$: bijective $\iff$ injective $\iff$ surjective.
 
-- $\varphi(e_G)=e_H$, so $e_G\in\ker(\varphi)$.
-- If $g_1,g_2\in\ker(\varphi)$, then
-  $$\varphi(g_1g_2)=\varphi(g_1)\varphi(g_2)=e_He_H=e_H,$$
-  so $g_1g_2\in\ker(\varphi)$.
-- If $g\in\ker(\varphi)$, then
-  $$\varphi(g^{-1})=\varphi(g)^{-1}=e_H^{-1}=e_H,$$
-  so $g^{-1}\in\ker(\varphi)$.
+### Lemma 1.35 — Injective iff trivial kernel
 
-Hence $\ker(\varphi)\le G$.
+A homomorphism $\varphi$ is injective iff $\ker(\varphi)=\{e_G\}=I_G$.
 
-## Injective and surjective functions — Definition 1.34 (pages 29–30)
+**Proof.** ($\Rightarrow$) $\varphi^{-1}(\{e_H\})$ has at most one element and contains $e_G$. ($\Leftarrow$) If $\varphi(g_1)=\varphi(g_2)$ then $\varphi(g_1g_2^{-1})=\varphi(g_1)\varphi(g_2)^{-1}=e_H$, so $g_1g_2^{-1}=e_G$, i.e. $g_1=g_2$.
 
-A function $f:X\to Y$ is:
+### Corollary 1.36 — Isomorphism criterion
 
-1. **Injective** if, for all $x_1,x_2\in X$,
-   $$f(x_1)=f(x_2)\Longrightarrow x_1=x_2.$$
-2. **Surjective** if, for every $y\in Y$, there is an $x\in X$ with $f(x)=y$.
+A homomorphism $\varphi:G\to H$ is an isomorphism iff $\operatorname{Im}(\varphi)=H$ and $\ker(\varphi)=\{e_G\}$.
 
-**Observation (page 30).** If $X,Y$ are finite and $|X|=|Y|$, then
-$$f\text{ bijective}\quad\Longleftrightarrow\quad
-f\text{ injective}\quad\Longleftrightarrow\quad
-f\text{ surjective}.$$
+## 1.7 Cyclic groups
 
-## Injectivity and the kernel — Lemma 1.35 (page 30)
+### Definition — Cyclic group
 
-A group homomorphism $\varphi:G\to H$ is injective if and only if
-$$\ker(\varphi)=\{e_G\}=I_G.$$
+$G$ is **cyclic** if $G=\{g^k:k\in\mathbb Z\}$ for some $g\in G$, a **generator** (different exponents need not give different elements).
 
-**Proof.** If $\varphi$ is injective, the inverse image $\varphi^{-1}(\{e_H\})$ has at most one element. Since it contains $e_G$, the kernel is $\{e_G\}$.
+**Examples.** (1) $C_n$ (generator $e^{2\pi i/n}$) and $\mathbb Z_n$ (generator $1$). (2) The trivial group. (3) $\mathbb Z$ (generator $1$).
 
-Conversely, suppose $\ker(\varphi)=\{e_G\}$ and $\varphi(g_1)=\varphi(g_2)$. Then
-$$\varphi(g_1g_2^{-1})
-=\varphi(g_1)\varphi(g_2)^{-1}=e_H.$$
-Thus $g_1g_2^{-1}\in\ker(\varphi)=\{e_G\}$, so $g_1=g_2$. Hence $\varphi$ is injective.
+### Theorem 1.38 — Classification of cyclic groups
 
-**Corollary 1.36.** A homomorphism $\varphi:G\to H$ is an isomorphism if and only if
-$$\operatorname{Im}(\varphi)=H,\qquad
-\ker(\varphi)=\{e_G\}.$$
-See [[Homomorphisms and Isomorphisms]].
+If $G$ is cyclic then $G\cong C_n$ for some $n\in\mathbb N$, or $G\cong\mathbb Z$.
 
-## Cyclic groups (pages 30–31)
+**Proof.** Let $g$ generate $G$ and $S=\{k\in\mathbb N:g^k=e_G\}$.
 
-A group $G$ is **cyclic** if there is a $g\in G$ such that
-$$G=\{g^k:k\in\mathbb Z\}.$$
-The element $g$ is a **generator** of $G$. Different integer exponents need not give different elements.
+*$S=\varnothing$:* $\varphi:\mathbb Z\to G$, $k\mapsto g^k$ is a homomorphism ($g^{k+\ell}=g^kg^\ell$) and surjective. If $0\ne k\in\ker\varphi$, then (replacing $k$ by $-k$ if needed) $k>0$ and $g^k=e$, so $k\in S$ — impossible. So $\ker\varphi=\{0\}$ and $G\cong\mathbb Z$ by Corollary 1.36.
 
-Examples (page 31):
+*$S\ne\varnothing$, $n=\min S$:* $\varphi:\mathbb Z_n\to G$, $k\mapsto g^k$. Writing $k+\ell=qn+(k+_n\ell)$ and using $g^n=e$: $\varphi(k)\varphi(\ell)=g^{k+\ell}=g^{k+_n\ell}=\varphi(k+_n\ell)$. Surjective: any $g^k$ with $k=nq+r$, $0\le r<n$, equals $g^r=\varphi(r)$. Injective: $g^k=e$ with $0\le k<n$ forces $k=0$ by minimality of $n$. So $G\cong\mathbb Z_n\cong C_n$.
 
-1. $C_n=\{z\in\mathbb C:z^n=1\}$ is cyclic with generator $e^{2\pi i/n}$; the additive group $\mathbb Z_n$ has generator $1$ (read modulo $n$).
-2. The trivial group is cyclic.
-3. The additive group $\mathbb Z$ is cyclic with generator $1$.
+### Definition 1.39 — Order of an element
 
-See [[Cyclic Groups and Element Orders]].
+For $g\in G$, $\langle g\rangle=\{g^k:k\in\mathbb Z\}\le G$ is cyclic. The **order** $o(g)$ is $n$ if $\langle g\rangle\cong C_n$ and $\infty$ if $\langle g\rangle\cong\mathbb Z$; i.e. $o(g)=|\langle g\rangle|$, the least positive $n$ with $g^n=e$ when finite.
 
-## Classification of cyclic groups — Theorem 1.38 (pages 31–32)
+## 1.8 More on dihedral groups
 
-If $G$ is cyclic, then either $G\cong C_n$ for some $n\in\mathbb N$, or $G\cong\mathbb Z$.
+$D_{2n}$ is generated by $r(z)=e^{2\pi i/n}z$ and $s(z)=\bar z$ with $sr=r^{-1}s$. Then $sr^2=r^{-1}sr=r^{-2}s$, and by induction $sr^k=r^{-k}s$ for $k\in\mathbb Z$.
 
-**Proof.** Let $g$ generate $G$ and set
-$$S=\{k\in\mathbb N:g^k=e_G\}.$$
-If $S\ne\varnothing$, let $n=\min S$; otherwise write $n=\infty$.
+### Lemma 1.40 — Homomorphisms out of dihedral groups
 
-### Infinite case (page 31)
-
-If $S=\varnothing$, define
-$$\varphi:\mathbb Z\to G,\qquad k\mapsto g^k.$$
-It is a homomorphism because
-$$\varphi(k+\ell)=g^{k+\ell}=g^kg^\ell=\varphi(k)\varphi(\ell).$$
-It is surjective because $g$ generates $G$.
-
-If a non-zero integer $k$ belonged to $\ker(\varphi)$, closure of the kernel under additive inverses would let us replace $k$ by $-k$ if necessary and assume $k>0$. Then $g^k=e_G$, so $k\in S$, a contradiction. Therefore $\ker(\varphi)=\{0\}$. Corollary 1.36 gives $G\cong\mathbb Z$.
-
-### Finite case (page 32)
-
-If $n=\min S<\infty$, define
-$$\varphi:\mathbb Z_n\to G,\qquad k\mapsto g^k.$$
-For $k,\ell\in\{0,\ldots,n-1\}$, write
-$$k+\ell=qn+(k+_n\ell),\qquad q\in\mathbb Z.$$
-Since $g^n=e_G$,
-$$\begin{aligned}
-\varphi(k)\varphi(\ell)
-&=g^{k+\ell}
-=g^{qn+(k+_n\ell)}\\
-&=g^{k+_n\ell}
-=\varphi(k+_n\ell).
-\end{aligned}$$
-Thus $\varphi$ is a homomorphism.
-
-For surjectivity, every element of $G$ has form $g^k$ for some $k\in\mathbb Z$. Divide $k$ by $n$:
-$$k=nq+r,\qquad q\in\mathbb Z,\quad0\le r\le n-1.$$
-Then $g^k=(g^n)^qg^r=g^r=\varphi(r)$.
-
-For injectivity, if $k\in\ker(\varphi)$, then $g^k=e_G$ with $0\le k\le n-1$. The minimality of the positive exponent $n$ forces $k=0$. Lemma 1.35 gives injectivity. Thus $G\cong\mathbb Z_n$, and the earlier isomorphism $\mathbb Z_n\cong C_n$ gives the stated classification.
-
-## Order of an element — Definition 1.39 (page 32)
-
-For a group $G$ and an element $g\in G$,
-$$\langle g\rangle=\{g^k:k\in\mathbb Z\}\le G.$$
-This subgroup is cyclic. The **order of $g$**, written $o(g)$, is $n$ if $\langle g\rangle\cong C_n$, and $\infty$ if $\langle g\rangle\cong\mathbb Z$. Equivalently, it is $|\langle g\rangle|$; in the finite case the classification proof identifies it as the least positive $n$ with $g^n=e_G$.
-
-## More on dihedral groups (page 33)
-
-Recall that $D_{2n}$ is generated by $r,s$, where
-$$r(z)=e^{2\pi i/n}z,\qquad s(z)=\overline z,$$
-and Lemma 1.26 gives $sr=r^{-1}s$. Then
-$$sr^2=r^{-1}sr=r^{-2}s.$$
-Induction gives
-$$sr^k=r^{-k}s\qquad(k\in\mathbb Z).$$
-
-**Lemma 1.40 (statement only).** Suppose $G$ is a group and $a,b\in G$ satisfy
-$$a^n=e_G,\qquad b^2=e_G,\qquad ab=ba^{-1}.$$
-Then
-$$\varphi(r^k)=a^k,\qquad\varphi(r^ks)=a^kb$$
-defines a homomorphism $\varphi:D_{2n}\to G$.
-
-Proof omitted. See [[Isometries and Dihedral Groups]].
+If $a,b\in G$ satisfy $a^n=e_G$, $b^2=e_G$ and $ab=ba^{-1}$, then $\varphi(r^k)=a^k$, $\varphi(r^ks)=a^kb$ defines a homomorphism $\varphi:D_{2n}\to G$. *(Statement only.)*

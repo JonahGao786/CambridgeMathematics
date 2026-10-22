@@ -1,29 +1,22 @@
 ---
 title: Triangle Inequality for Complex Numbers
-material_type: concept note
 course: Part IA Vectors and Matrices
+material_type: concept note
+tags: [concept, vectors-and-matrices, complex-numbers]
 ---
 
 # Triangle Inequality for Complex Numbers
 
-For $z_1,z_2\in\mathbb C$,
-$$|z_1+z_2|\le|z_1|+|z_2|,$$
-and the reverse triangle inequality is
-$$\bigl||z_1|-|z_2|\bigr|\le|z_1-z_2|.$$
+> [!abstract] In one paragraph
+> In the Argand diagram, one side of a triangle is no longer than the other two together: $|z_1+z_2|\le|z_1|+|z_2|$. The reverse form bounds how different two moduli can be.
 
-Using conjugation and modulus from [[Complex Numbers]],
-$$
-\begin{aligned}
-|z_1+z_2|^2
-&=|z_1|^2+|z_2|^2+2\operatorname{Re}(z_1\overline{z_2})\\
-&\le|z_1|^2+|z_2|^2+2|z_1|\,|z_2|\\
-&=(|z_1|+|z_2|)^2.
-\end{aligned}
-$$
-Here $\operatorname{Re}(w)\le|w|$, $|z_1\overline{z_2}|=|z_1|\,|z_2|$, and all moduli are non-negative. Take square roots to obtain the triangle inequality.
+## Key results
 
-Next,
-$$|z_1|=|(z_1-z_2)+z_2|\le|z_1-z_2|+|z_2|.$$
-Rearrange to bound $|z_1|-|z_2|$, and interchange $z_1,z_2$ to bound its negative. This gives the absolute-value inequality.
+- **Triangle inequality.** $|z_1+z_2|\le|z_1|+|z_2|$. *Idea:* $|z_1+z_2|^2=|z_1|^2+|z_2|^2+2\operatorname{Re}(z_1\bar z_2)$ and $\operatorname{Re}w\le|w|$.
+- **Reverse triangle inequality.** $\big||z_1|-|z_2|\big|\le|z_1-z_2|$. *Idea:* $|z_1|=|(z_1-z_2)+z_2|\le|z_1-z_2|+|z_2|$, then swap $z_1,z_2$.
 
-See [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 6–7.
+→ [[Vectors and Matrices - Chapter 1 Complex Numbers#Proposition — Properties of the modulus|proofs]]
+
+## Related
+
+[[Complex Numbers]] · [[Real Inner Products and Cauchy-Schwarz]]

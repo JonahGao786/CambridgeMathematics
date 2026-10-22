@@ -1,54 +1,27 @@
 ---
 title: Real Inner Products and Cauchy-Schwarz
-material_type: concept note
 course: Part IA Vectors and Matrices
-source_file: Ch.2 Vectors.pdf
-drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
-source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: [4, 5, 6, 7, 8]
+material_type: concept note
+tags: [concept, vectors-and-matrices]
 ---
 
-# Real Inner Products and Cauchy-Schwarz
+# Real Inner Products and Cauchy–Schwarz
 
-An inner product on a real vector space $V$ is a map $\langle\cdot,\cdot\rangle:V\times V\to\mathbb R$ that is symmetric, linear in its second argument, and positive definite:
-$$\langle\mathbf x,\mathbf y\rangle=\langle\mathbf y,\mathbf x\rangle,$$
-$$\langle\mathbf x,\alpha\mathbf y+\beta\mathbf z\rangle
-=\alpha\langle\mathbf x,\mathbf y\rangle+\beta\langle\mathbf x,\mathbf z\rangle,$$
-$$\langle\mathbf x,\mathbf x\rangle\ge0,\qquad
-\langle\mathbf x,\mathbf x\rangle=0\Longleftrightarrow\mathbf x=\mathbf0.$$
-These hold for all vectors in $V$ and all real $\alpha,\beta$. Symmetry gives linearity in the first argument as well. The induced norm is
-$$\|\mathbf x\|=\sqrt{\langle\mathbf x,\mathbf x\rangle}.$$
+> [!abstract] In one paragraph
+> The dot product $\mathbf a\cdot\mathbf b=|\mathbf a||\mathbf b|\cos\theta$ measures lengths, angles and projections. Abstracting its properties gives an inner product. Cauchy–Schwarz, $|\mathbf x\cdot\mathbf y|\le|\mathbf x||\mathbf y|$, is what makes "$\cos\theta$" lie in $[-1,1]$ and gives the triangle inequality.
 
-For non-zero Euclidean vectors, $\mathbf a\cdot\mathbf b=|\mathbf a|\,|\mathbf b|\cos\theta$. Orthogonality means $\mathbf a\cdot\mathbf b=0$, including when either vector is zero.
+## Definitions
 
-For $\mathbf a\ne\mathbf0$, the orthogonal projection onto its line is
-$$\operatorname{proj}_{\mathbf a}\mathbf b
-=\frac{\mathbf a\cdot\mathbf b}{|\mathbf a|^2}\mathbf a
-=(\widehat{\mathbf a}\cdot\mathbf b)\widehat{\mathbf a}.$$
-The difference between $\mathbf b$ and this projection is orthogonal to $\mathbf a$.
+- **Dot product** $\mathbf a\cdot\mathbf b=|\mathbf a||\mathbf b|\cos\theta$; in an orthonormal basis $=a_1b_1+a_2b_2+a_3b_3$. → [[Vectors and Matrices - Chapter 2 Vectors#Definition — Dot product|lecture]]
+- **Orthogonal**: $\mathbf a\cdot\mathbf b=0$. **Projection** of $\mathbf b$ onto $\mathbf a$: $(\hat{\mathbf a}\cdot\mathbf b)\hat{\mathbf a}=\frac{\mathbf a\cdot\mathbf b}{|\mathbf a|^2}\mathbf a$; the remainder is orthogonal to $\mathbf a$.
+- **Inner product** on a real vector space: symmetric, linear in the second argument, positive definite; norm $\|\mathbf x\|=\sqrt{\langle\mathbf x,\mathbf x\rangle}$. → [[Vectors and Matrices - Chapter 2 Vectors#Definition — Inner product|lecture]]
 
-**Cauchy–Schwarz:**
-$$|\langle\mathbf x,\mathbf y\rangle|\le\|\mathbf x\|\,\|\mathbf y\|.$$
-For the Euclidean version, use the non-negativity of
-$$|\mathbf x-\lambda\mathbf y|^2
-=|\mathbf y|^2\lambda^2-2(\mathbf x\cdot\mathbf y)\lambda+|\mathbf x|^2$$
-for every real $\lambda$. With $\mathbf y\ne0$, its discriminant is non-positive, giving the squared inequality; the zero case is immediate. The same argument applies to every real inner product.
+## Key results
 
-Equality holds iff one vector is a real scalar multiple of the other, including the zero cases.
+- **Cosine rule.** $|\overrightarrow{BC}|^2=|\overrightarrow{AB}|^2+|\overrightarrow{AC}|^2-2|\overrightarrow{AB}||\overrightarrow{AC}|\cos\theta$. → [[Vectors and Matrices - Chapter 2 Vectors#Cosine rule|proof]]
+- **Cauchy–Schwarz.** $|\mathbf x\cdot\mathbf y|\le|\mathbf x||\mathbf y|$ (any inner product: $|\langle\mathbf x,\mathbf y\rangle|\le\|\mathbf x\|\|\mathbf y\|$), equality iff one is a multiple of the other. *Idea:* $|\mathbf x-\lambda\mathbf y|^2\ge0$ is a quadratic in $\lambda$ with discriminant $\le0$. → [[Vectors and Matrices - Chapter 2 Vectors#Theorem — Cauchy-Schwarz inequality|proof]]
+- **Triangle inequality.** $|\mathbf x+\mathbf y|\le|\mathbf x|+|\mathbf y|$. *Idea:* expand $|\mathbf x+\mathbf y|^2$ and apply Cauchy–Schwarz. → [[Vectors and Matrices - Chapter 2 Vectors#Theorem — Triangle inequality|proof]]
 
-The Euclidean **triangle inequality** follows by expanding the squared norm and applying Cauchy–Schwarz:
-$$\begin{aligned}
-|\mathbf x+\mathbf y|^2
-&=|\mathbf x|^2+|\mathbf y|^2+2\mathbf x\cdot\mathbf y\\
-&\le(|\mathbf x|+|\mathbf y|)^2.
-\end{aligned}$$
-Taking non-negative square roots gives $|\mathbf x+\mathbf y|\le|\mathbf x|+|\mathbf y|$.
+## Related
 
-See [[Vectors and Matrices - Chapter 2 Vectors]], pages 4–8. Related: [[Vectors and Linear Span]] and [[Triangle Inequality for Complex Numbers]].
-
-## Connecting complex and vector geometry
-
-Identify $z=x+iy$ with $(x,y)\in\mathbb R^2$. Then
-$$\langle z,w\rangle_{\mathbb R}=\operatorname{Re}(z\overline w),\qquad
-\|z\|=|z|.$$
-This is a real inner product, and its triangle inequality is exactly [[Triangle Inequality for Complex Numbers]]. These bilinear, symmetric axioms are for **real** scalars. A complex inner product instead uses conjugate symmetry and conjugate linearity in one argument; simply using $\sum_i z_iw_i$ would not give a positive definite norm.
+[[Orthonormal Bases and Vector Coordinates]] · [[Triangle Inequality for Complex Numbers]] · [[Vectors and Linear Span]]

@@ -1,44 +1,53 @@
 ---
 title: Differential Equations - Chapter 1 Introduction and Basic Calculus
-material_type: lecture notes
 course: Part IA Differential Equations
-date: null
-source_file: Ch.1 Introduction.pdf
-drive_file_id: 1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs
-source_url: https://drive.google.com/file/d/1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs/view
-reference_handout: topic1.pdf
-reference_handout_pages: "1–13"
-source_pages: 8
+material_type: lecture notes
+chapter: 1
+source_file: Ch.1 Differentiation.pdf
+drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
+source_url: https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view
+source_pages: 13
 additional_sources:
-  - source_file: Ch.1 Differentiation.pdf
-    drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
-    source_url: https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view
-    source_pages: 13
+  - source_file: Ch.1 Introduction.pdf
+    drive_file_id: 1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs
+    source_url: https://drive.google.com/file/d/1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs/view
+    source_pages: 8
+tags: [lecture, differential-equations]
 ---
 
-# Differential Equations — Introduction and Basic Calculus
+# Differential Equations — Chapter 1: Introduction and Basic Calculus
 
-For limits and error notation, see [[Limits, Big O and Little o - A First-Year Guide]].
+> [!abstract] Overview
+> Derivatives as limits; the order notation $O$ and $o$; chain, product, quotient and Leibniz rules; Taylor's theorem with its two remainder forms; L'Hôpital's rule.
+> *Ch.1 Introduction.pdf* is an earlier copy of pages 1–8 of *Ch.1 Differentiation.pdf* (pages 1–7 identical); page references are to the latter.
 
-## 0. Introduction (page 1)
+## Results index
 
-Differential equations appear in almost all branches of science and applied mathematics. For example,
-$$m\frac{d^2x}{dt^2}=F(x,t),$$
-where $m$ is the mass of the particle and $F$ is the force. The equation relates the acceleration (the second derivative of position) to the force. Here $x$ is the **dependent variable** and time $t$ is the **independent variable**.
+| Result | Statement in brief | Page |
+| --- | --- | --- |
+| [[#Definition — Derivative]] | $f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}h$ | 2 |
+| [[#Aside — Limits]] | $\varepsilon$–$\delta$ definition; algebra of limits | 2–3 |
+| [[#Definition — Big O]] | bounded ratio | 5–6 |
+| [[#Definition — Little o]] | ratio $\to0$ | 6–7 |
+| [[#Remainder of the first-order approximation]] | $f(x_0+h)=f(x_0)+hf'(x_0)+o(h)$ | 7 |
+| [[#Theorem — Chain rule]] | $\frac{df}{dx}=F'(g(x))\frac{dg}{dx}$ | 8 |
+| [[#Theorem — Product rule]] | $(uv)'=u'v+uv'$; quotient rule | 8 |
+| [[#Theorem — Leibniz's rule]] | $(uv)^{(n)}=\sum\binom nru^{(n-r)}v^{(r)}$ | 9 |
+| [[#Theorem — Taylor's theorem]] | $E_n=o(h^n)$; Lagrange form $O(h^{n+1})$ | 10–11 |
+| [[#Theorem — L'Hopital's rule]] | $\lim\frac fg=\lim\frac{f'}{g'}$ | 12–13 |
 
-How do we solve equations like these?
+## 0 Introduction
 
-## 1. Basic calculus
+Differential equations appear in almost all branches of science and applied maths. E.g.
+$$m\frac{d^2x}{dt^2}=F(x,t)$$
+($m$ the mass of the particle, $F$ the force) relates the rate of change of position $x$, the **dependent variable**, with time $t$, the **independent variable**. How do we solve equations like these?
 
-### 1.1 Differentiation (page 2)
+## 1.1 Differentiation
 
-The derivative of $f$ with respect to its argument $x$ is given, when the limit exists, by
-$$\frac{df}{dx}(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.$$
+### Definition — Derivative
 
-The secant slope between $x_0$ and $x_0+h$ is
-$$\frac{f(x_0+h)-f(x_0)}{h}.$$
-
-The curve in the secant diagram is schematic; no formula for $f$ is specified.
+The derivative of $f(x)$ with respect to its argument $x$ is the function given by the limit
+$$\frac{df}{dx}=\lim_{h\to0}\frac{f(x+h)-f(x)}h.$$
 
 ```tikz
 \usepackage{tikz}
@@ -46,11 +55,9 @@ The curve in the secant diagram is schematic; no formula for $f$ is specified.
 \begin{tikzpicture}[>=latex]
   \draw[->] (-0.15,0)--(4.3,0) node[right] {$x$};
   \draw[->] (0,-0.1)--(0,4.3) node[above] {$f(x)$};
-  \draw[thick] (0.45,0.35)
-    .. controls (0.7,0.35) and (0.95,0.42) .. (1.2,0.6)
+  \draw[thick] (0.45,0.35) .. controls (0.95,0.42) .. (1.2,0.6)
     .. controls (2.2,1.03) and (2.9,1.8) .. (3.3,2.7)
-    .. controls (3.5,3.15) and (3.7,3.65) .. (3.8,4.15)
-    node[above] {$f(x)$};
+    .. controls (3.5,3.15) and (3.7,3.65) .. (3.8,4.15) node[above] {$f(x)$};
   \draw[blue,thick] (0.7,0.1)--(3.8,3.2);
   \draw (1.2,0.06)--(1.2,-0.06) node[below,blue] {$x_0$};
   \draw (3.3,0.06)--(3.3,-0.06) node[below,blue] {$x_0+h$};
@@ -58,83 +65,56 @@ The curve in the secant diagram is schematic; no formula for $f$ is specified.
 \end{tikzpicture}
 \end{document}
 ```
+*Secant through $x_0$ and $x_0+h$; curve schematic.*
 
-### Aside: limits (pages 2–3)
+### Aside — Limits
 
-Informally, $\lim_{x\to x_0}f(x)=A$ means that $f(x)$ can be made arbitrarily close to $A$ by making $x$ sufficiently close to $x_0$. We do not require $f(x_0)=A$. The limit describes behaviour near $x_0$, excluding the point itself.
+(See more in Analysis I.) Informally, $\lim_{x\to x_0}f(x)=A$ means $f(x)$ can be made arbitrarily close to $A$ by making $x$ sufficiently close to $x_0$. We don't require $f(x_0)=A$: the limit is a statement about the behaviour of $f$ near $x_0$, not at $x_0$.
 
-For $f$ defined on an open interval containing $x_0$, except possibly at $x_0$,
-$$\lim_{x\to x_0}f(x)=A$$
-means
-$$\forall\varepsilon>0\ \exists\delta>0\ \forall x:
-\quad 0<|x-x_0|<\delta\ \Longrightarrow\ |f(x)-A|<\varepsilon.$$
-The right-hand limit uses $0<x-x_0<\delta$ instead of $0<|x-x_0|<\delta$.
+More formally, for $f$ defined on an open interval containing $x_0$ (not necessarily at $x_0$), $\lim_{x\to x_0}f(x)=A$ means
+$$\forall\varepsilon>0\ \exists\delta>0:\quad|f(x)-A|<\varepsilon\quad\forall\,0<|x-x_0|<\delta.$$
+The **right-hand limit** replaces $0<|x-x_0|<\delta$ by $0<x-x_0<\delta$. **Limits at infinity:** $\lim_{x\to\infty}f(x)=A$ means $\forall\varepsilon>0\ \exists X>0$ with $|f(x)-A|<\varepsilon$ for all $x>X$.
 
-At infinity,
-$$\lim_{x\to+\infty}f(x)=A$$
-means
-$$\forall\varepsilon>0\ \exists X>0\ \forall x>X:
-\quad |f(x)-A|<\varepsilon.$$
+Properties (proved in Analysis I):
+- If $f$ has a limit at a point, it is unique.
+- If $\lim f=A$ and $\lim g=B$ (as $x\to x_0$), then $\lim(f+g)=A+B$, $\lim fg=AB$, $\lim\frac fg=\frac AB$ for $B\ne0$.
+- If $B=0$: the limit of the quotient does not exist if $A\ne0$, but may exist in the indeterminate case $A=B=0$.
 
-The lecture states the following properties; proofs are deferred to Analysis I:
-
-- If a limit exists at a point, it is unique.
-- If $\lim_{x\to x_0}f(x)=A$ and $\lim_{x\to x_0}g(x)=B$, then
-  $$\lim_{x\to x_0}(f(x)+g(x))=A+B,$$
-  $$\lim_{x\to x_0}f(x)g(x)=AB,$$
-  $$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\frac AB\qquad(B\ne0).$$
-
-If $B=0$ and $A\ne0$, the quotient has no finite real limit (where it is defined near the limiting point). If $A=B=0$, this is an indeterminate case: a quotient limit may exist.
-
-### One-sided derivatives and notation (page 4)
-
-At an interior point, the derivative exists only when the left- and right-hand difference-quotient limits exist as finite real numbers and agree.
-
-For example, $f(x)=|x|$ is differentiable away from $0$, but not at $0$:
-$$\lim_{h\to0^-}\frac{|h|}{h}=-1,\qquad
-\lim_{h\to0^+}\frac{|h|}{h}=1.$$
+**N.B.** For the derivative to exist, the left-hand ($h\to0^-$) and right-hand ($h\to0^+$) limits must exist and be equal. E.g. $|x|$ is not differentiable at $x=0$ (but is elsewhere): $\lim_{h\to0^-}\frac{|h|}h=-1$, $\lim_{h\to0^+}\frac{|h|}h=1$.
 
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex,scale=0.8]
   \draw[->] (-2.5,0)--(2.5,0) node[right] {$x$};
   \draw[->] (0,-0.3)--(0,2.6) node[above] {$y$};
-  \draw[thick] (-2.1,2.1)--(0,0)--(2.1,2.1);
-  \node[below right] at (0,0) {$0$};
-  \node[right] at (1.5,1.5) {$y=|x|$};
+  \draw[thick] (-2.1,2.1)--(0,0)--(2.1,2.1) node[right] {$y=|x|$};
 \end{tikzpicture}
 \end{document}
 ```
 
-The notation given is
-$$\frac{df}{dx}=f'(x)=\dot f(x),$$
-and, when higher derivatives exist,
-$$\frac d{dx}\left(\frac{df}{dx}\right)=\frac{d^2f}{dx^2}=f''(x)=\ddot f(x),\qquad
-\frac{d^nf}{dx^n}=f^{(n)}(x).$$
+**Notation.** $\frac{df}{dx}=f'(x)=\dot f(x)$. Higher derivatives (for sufficiently smooth $f$): $\frac d{dx}\big(\frac{df}{dx}\big)=\frac{d^2f}{dx^2}=f''(x)=\ddot f(x)$; $n$th derivative $\frac{d^nf}{dx^n}=f^{(n)}(x)$.
 
-### Big $O$ notation (pages 5–6)
+## Big-O and little-o notation
 
-Big $O$ compares the size of functions near a limiting point: “can be bounded by”.
+These compare the behaviour of functions close to a limiting point $x_0$.
 
-For finite $x_0$, $f(x)=O(g(x))$ as $x\to x_0$ means
-$$\exists\delta>0\ \exists\mu>0\ \forall x:
-\quad 0<|x-x_0|<\delta\ \Longrightarrow\ |f(x)|\le\mu|g(x)|.$$
-Where $g(x)\ne0$, this says $|f(x)/g(x)|\le\mu$: the ratio is bounded.
+### Definition — Big O
 
-Examples as $x\to0$:
-$$x\ne O(x^2),\qquad x^2=O(x).$$
-For $x\to0^+$,
-$$x=O(\sqrt{x}).$$
+"$O$" loosely means "can be bounded by".
 
-The sketch compares $x^2$ (red), $x$ (black), and $\sqrt{x}$ (blue) on the positive side:
+**(a) $x_0$ finite.** $f(x)$ is $O(g(x))$ as $x\to x_0$ if
+$$\exists\delta>0,\ \mu>0\ \text{ s.t. }\ \forall x\text{ with }0<|x-x_0|<\delta:\quad|f(x)|\le\mu|g(x)|.$$
+Written $f(x)=O(g(x))$. It follows that $f/g$ is bounded as $x\to x_0$: $|f(x)|\le\mu|g(x)|\iff\left|\frac{f(x)}{g(x)}\right|\le\mu$.
+
+**Examples** ($x_0=0$): $x\ne O(x^2)$ and $x^2=O(x)$ as $x\to0$; $x=O(\sqrt x)$ as $x\to0^+$.
 
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex]
+\begin{tikzpicture}[>=latex,scale=1.2]
   \draw[->] (-0.1,0)--(2.7,0) node[right] {$x$};
-  \draw[->] (0,-0.1)--(0,2.9) node[above] {$y$};
+  \draw[->] (0,-0.1)--(0,2.9);
   \draw[red,thick,domain=0:1.6,samples=70] plot (\x,{\x*\x}) node[above] {$x^2$};
   \draw[thick] (0,0)--(2.4,2.4) node[right] {$x$};
   \draw[blue,thick,domain=0:2.3,samples=100] plot (\x,{sqrt(\x)}) node[right] {$\sqrt{x}$};
@@ -142,176 +122,91 @@ The sketch compares $x^2$ (red), $x$ (black), and $\sqrt{x}$ (blue) on the posit
 \end{document}
 ```
 
-Another example is
-$$\sin(2x)=O(x)\quad(x\to0),$$
-since $|\sin(2x)|\le2|x|$. The lecture's bound for sine uses
-$$\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots.$$
-For $0\le x\le1$,
-$$\frac{x^3}{3!}\ge\frac{x^5}{5!}\ge\frac{x^7}{7!}\ge\cdots,$$
-so grouping the subtracted pairs gives $\sin x\le x$, and $|\sin x|\le x$ on this interval. For $x>1$, $|\sin x|\le1<x$. Using oddness for negative $x$ gives $|\sin x|\le|x|$ for all real $x$.
+**Example.** $\sin2x=O(x)$ as $x\to0$, since $|\sin2x|\le2|x|$ for all $x$. Indeed $\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots$, and for $0\le x\le1$, $\frac{x^3}{3!}\ge\frac{x^5}{5!}\ge\frac{x^7}{7!}\ge\cdots$, so
+$$\sin x=x-\Big(\frac{x^3}{3!}-\frac{x^5}{5!}\Big)-\cdots\le x,\qquad\text{so }|\sin x|\le x\ (0\le x\le1).$$
+For $x>1$, $|\sin x|\le1<x$. Thus $|\sin x|\le|x|$ for all $x\in\mathbb R$ (using that $\sin$ is odd).
 
-At infinity, $f(x)=O(g(x))$ as $x\to+\infty$ means
-$$\exists x_1\ \exists\mu>0\ \forall x>x_1:
-\quad |f(x)|\le\mu|g(x)|.$$
-For example,
-$$2x^3+4x=O(x^3)\quad(x\to+\infty),$$
-because for $x>1$,
-$$|2x^3+4x|\le2|x^3|+4|x|\le6|x^3|.$$
+**(b) $x_0=\infty$.** $f(x)$ is $O(g(x))$ as $x\to\infty$ if $\exists x_1$ and $\mu>0$ such that $|f(x)|\le\mu|g(x)|$ for all $x>x_1$. E.g. $2x^3+4x=O(x^3)$ as $x\to\infty$, since for $x>1$, $|2x^3+4x|\le2|x^3|+4|x|\le6|x^3|$.
 
-### Little $o$ notation (page 6)
+### Definition — Little o
 
-Little $o$ means “much smaller than”.
+"$o$" loosely means "much smaller than" (often written $\underline{o}$ to distinguish it from $O$). For finite $x_0$: $f(x)$ is $o(g(x))$ as $x\to x_0$ if
+$$\forall\varepsilon>0\ \exists\delta>0\ \text{ s.t. }\ \forall\,0<|x-x_0|<\delta:\quad|f(x)|\le\varepsilon|g(x)|.$$
+If $g(x)\ne0$ near $x_0$, equivalently $\left|\frac{f(x)}{g(x)}\right|\le\varepsilon$, i.e. $\displaystyle\lim_{x\to x_0}\frac{f(x)}{g(x)}=0$.
 
-For finite $x_0$, $f(x)=o(g(x))$ as $x\to x_0$ means
-$$\forall\varepsilon>0\ \exists\delta>0\ \forall x:
-\quad 0<|x-x_0|<\delta\ \Longrightarrow\ |f(x)|\le\varepsilon|g(x)|.$$
-If $g$ is non-zero in a punctured neighbourhood of $x_0$, this is equivalent to
-$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=0.$$
+**Examples.** $x^2=o(x)$ as $x\to0$ ($\lim x^2/x=0$); $\sqrt x=o(x)$ as $x\to\infty$.
 
-Examples:
-$$x^2=o(x)\quad(x\to0),\qquad \sqrt{x}=o(x)\quad(x\to+\infty).$$
-For the first,
-$$\lim_{x\to0}\frac{x^2}{x}=0.$$
+**Notes.**
+- $f=o(g)$ is stronger than $f=O(g)$: $o(g)\Rightarrow O(g)$, but not the other way round. E.g. $f(x)=2x$ is $O(x)$ as $x\to0$ but not $o(x)$.
+- Constants don't matter: if $f=O(g)$ then $af=O(g)$ and $f=O(ag)$ for any non-zero constant $a$.
 
-### Remainders and differentiability (page 7)
+### Remainder of the first-order approximation
 
-Little $o$ is stronger than big $O$:
-$$f=o(g)\ \Longrightarrow\ f=O(g),$$
-but not conversely. For example, $2x=O(x)$ but $2x\ne o(x)$ as $x\to0$.
-
-Non-zero constant factors do not change the order: if $f=O(g)$, then for any fixed $a\ne0$,
-$$af=O(g),\qquad f=O(ag).$$
-
-Write
-$$f(x_0+h)-f(x_0)=hf'(x_0)+E(h),$$
-where $E(h)$ is the remainder. From the definition of the derivative,
-$$\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}h
-=f'(x_0)+\lim_{h\to0}\frac{E(h)}h,$$
-and the last limit is zero. Hence $E(h)=o(h)$, and
+Order symbols are useful to classify remainder terms before taking limits. Write $f(x_0+h)-f(x_0)=hf'(x_0)+E(h)$. Then
+$$\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}h=f'(x_0)+\lim_{h\to0}\frac{E(h)}h,$$
+and the last limit is zero. So $E(h)=o(h)$ as $h\to0$:
 $$f(x_0+h)=f(x_0)+hf'(x_0)+o(h)\qquad(h\to0).$$
 
-### 1.2 Rules for differentiation (pages 8–9)
+## 1.2 Rules for differentiation
 
-#### Chain rule (page 8)
+### Theorem — Chain rule
 
-For $f(x)=F(g(x))$, with $g$ differentiable at $x$ and $F$ differentiable at $g(x)$,
-$$\frac{df}{dx}=F'(g(x))\frac{dg}{dx}
-=\frac{dF}{dg}\frac{dg}{dx}.$$
-Here $F'(g(x))$ is the derivative of $F$ with respect to its own argument, evaluated at $g(x)$.
+Given $f(x)=F(g(x))$,
+$$\frac{df}{dx}=F'(g(x))\frac{dg}{dx}=\frac{dF}{dg}\cdot\frac{dg}{dx},$$
+where $F'(g(x))$ is the derivative of $F$ with respect to its argument, evaluated at $g(x)$. E.g. $\frac d{dx}\sin(x^2-x+2)=\cos(x^2-x+2)\,(2x-1)$.
 
-For example,
-$$\frac d{dx}\sin(x^2-x+2)=\cos(x^2-x+2)(2x-1).$$
+### Theorem — Product rule
 
-#### Product and quotient rules (page 8)
+Given $f(x)=u(x)v(x)$: $\dfrac{df}{dx}=u'(x)v(x)+u(x)v'(x)$.
 
-For differentiable $u,v$ and $f(x)=u(x)v(x)$,
-$$f'(x)=u'(x)v(x)+u(x)v'(x).$$
+**Quotient rule** (special case $v\to1/v$): $\dfrac d{dx}\Big(\dfrac uv\Big)=\dfrac{vu'-uv'}{v^2}$.
 
-Applying the product rule to $u(1/v)$ gives, wherever $v(x)\ne0$,
-$$\frac d{dx}\left(\frac uv\right)=\frac{vu'-uv'}{v^2}.$$
+### Theorem — Leibniz's rule
 
-#### Leibniz's rule (page 9)
+(Generalisation of the product rule.) For $f=uv$: $f'=u'v+uv'$, $f''=u''v+2u'v'+uv''$, $f'''=u'''v+3u''v'+3u'v''+uv'''$ — cf. Pascal's triangle $1;\ 1\ 1;\ 1\ 2\ 1;\ 1\ 3\ 3\ 1$. In general
+$$f^{(n)}(x)=\sum_{r=0}^n\binom nr u^{(n-r)}(x)\,v^{(r)}(x)=u^{(n)}v+nu^{(n-1)}v^{(1)}+\frac{n(n-1)}{2!}u^{(n-2)}v^{(2)}+\cdots+\frac{n!}{m!(n-m)!}u^{(n-m)}v^{(m)}+\cdots+uv^{(n)}.$$
 
-Repeated differentiation of a product gives
-$$\begin{aligned}
-(uv)'&=u'v+uv',\\
-(uv)''&=u''v+2u'v'+uv'',\\
-(uv)'''&=u'''v+3u''v'+3u'v''+uv'''.
-\end{aligned}$$
-The coefficients follow Pascal's triangle:
-$$\begin{array}{ccccccc}
-&&&1&&&\\
-&&1&&1&&\\
-&1&&2&&1&\\
-1&&3&&3&&1
-\end{array}$$
+## 1.3 Taylor series
 
-**Theorem — Leibniz's rule.** If $u,v$ are $n$ times differentiable, then
-$$f^{(n)}(x)=\sum_{r=0}^{n}\binom nr u^{(n-r)}(x)v^{(r)}(x).$$
-In expanded form,
-$$\begin{aligned}
-f^{(n)}&=u^{(n)}v+nu^{(n-1)}v'
-+\frac{n(n-1)}{2!}u^{(n-2)}v''+\cdots\\
-&\quad+\frac{n!}{m!(n-m)!}u^{(n-m)}v^{(m)}+\cdots+uv^{(n)}.
-\end{aligned}$$
-See [[Differentiation Rules]] and the product-rule proof in [[Differential Equations - Examples Sheet 1 Handwritten Proofs]].
+For $f$ infinitely differentiable at $x_0$, the **Taylor series** about $x_0$ is the infinite series
+$$T_f(x)=f(x_0)+(x-x_0)f'(x_0)+\frac1{2!}(x-x_0)^2f''(x_0)+\cdots.$$
+The **Taylor polynomial** of degree $n$ about $x_0$,
+$$P_n(x)=f(x_0)+(x-x_0)f'(x_0)+\cdots+\frac{(x-x_0)^n}{n!}f^{(n)}(x_0),$$
+matches the first $n$ derivatives at $x_0$. How good an approximation is it? Last time: $f(x_0+h)=f(x_0)+hf'(x_0)+o(h)$. This extends to:
 
-### 1.3 Taylor series (pages 10–11)
+### Theorem — Taylor's theorem
 
-For a function infinitely differentiable near $x_0$, its **Taylor series** about $x_0$ is
-$$T_f(x)=\sum_{k=0}^{\infty}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k
-=f(x_0)+(x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2!}f''(x_0)+\cdots.$$
-This defines a series; equality to $f(x)$ requires a convergence and remainder argument.
+For $f$ $n$-times differentiable at $x_0$,
+$$f(x_0+h)=f(x_0)+hf'(x_0)+\frac{h^2}2f''(x_0)+\cdots+\frac{h^n}{n!}f^{(n)}(x_0)+E_n,\qquad E_n=o(h^n)\ \text{ as }h\to0.$$
 
-The **Taylor polynomial** through degree $n$ is
-$$P_n(x)=\sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k.$$
-It matches the value of $f$ and its first $n$ derivatives at $x_0$. How good an approximation is it?
+**Stronger version.** If $f^{(n+1)}(x)$ exists for all $x\in(x_0,x_0+h)$ and is continuous there,
+$$E_n=f^{(n+1)}(x_n)\frac{h^{n+1}}{(n+1)!}=O(h^{n+1})\quad\text{as }h\to0,\qquad\text{for some }x_n\text{ with }x_0\le x_n\le x_0+h.$$
 
-The first-order result is
-$$f(x_0+h)=f(x_0)+hf'(x_0)+o(h)\qquad(h\to0).$$
+**Note.** $E_n=O(h^{n+1})$ is stronger than $o(h^n)$: e.g. $h^{n+1/2}$ is $o(h^n)$ but not $O(h^{n+1})$ as $h\to0$.
 
-**Taylor's theorem — Peano remainder (page 10).** If $f$ is $n$ times differentiable at $x_0$ (the lower derivatives being defined nearby), then
-$$f(x_0+h)=f(x_0)+hf'(x_0)+\frac{h^2}{2!}f''(x_0)+\cdots+
-\frac{h^n}{n!}f^{(n)}(x_0)+E_n(h),$$
-where
-$$E_n(h)=o(h^n)\qquad(h\to0).$$
+With $x=x_0+h$, Taylor's theorem gives $f(x)=P_n(x)+E_n$: $P_n$ is a **local approximation** to $f$ near $x_0$ with error $o(h^n)$ or $O(h^{n+1})$. If $\lim_{n\to\infty}E_n=0$, the Taylor series converges to $f(x)$.
 
-**Stronger version — Lagrange remainder (page 10).** If $f^{(n+1)}$ is continuous on a neighbourhood containing the segment between $x_0$ and $x_0+h$, then, for some $\xi_n$ on that segment,
-$$E_n(h)=\frac{f^{(n+1)}(\xi_n)}{(n+1)!}h^{n+1}.$$
-For fixed $n$, continuity makes this derivative bounded locally, giving
-$$E_n(h)=O(h^{n+1})\qquad(h\to0).$$
-For $h>0$, the interval is $x_0\le\xi_n\le x_0+h$; for $h<0$, its endpoints are reversed.
+**Example.** $f(x)=e^x$ about $x_0=0$: $E_n=\frac{h^{n+1}}{(n+1)!}e^{x_n}$ with $0\le x_n\le h$ ($h>0$). The fractional error at $x=h$ is
+$$\frac{E_n}{e^h}=\frac{h^{n+1}}{(n+1)!}\,e^{x_n-h}\le\frac{h^{n+1}}{(n+1)!}\qquad(0<e^{x_n-h}\le1).$$
+For a given target accuracy at $x=h$, this specifies how large $n$ must be.
 
-**Comparison of errors (page 11).** $O(h^{n+1})$ is stronger than $o(h^n)$. For example,
-$$|h|^{n+1/2}=o(h^n),\qquad |h|^{n+1/2}\ne O(h^{n+1})\qquad(h\to0).$$
+## 1.4 L'Hôpital's rule
 
-Writing $x=x_0+h$ gives
-$$f(x)=P_n(x)+E_n(h).$$
-Thus $P_n$ gives a local approximation near $x_0$, with either of the stated error bounds under the corresponding hypotheses. For fixed $x$, if the remainders tend to zero as $n\to\infty$, the Taylor series converges to $f(x)$. A small-$h$ estimate for fixed $n$ alone does not establish this.
+This deals with limits of indeterminate forms.
 
-**Example — $e^x$ about $0$ (page 11).** For $h>0$,
-$$E_n(h)=\frac{h^{n+1}}{(n+1)!}e^{\xi_n},\qquad0\le\xi_n\le h.$$
-The fractional error at $x=h$ satisfies
-$$\frac{E_n(h)}{e^h}
-=\frac{h^{n+1}}{(n+1)!}e^{\xi_n-h}
-\le\frac{h^{n+1}}{(n+1)!},$$
-since $0<e^{\xi_n-h}\le1$. For a chosen $h$ and target accuracy, this bound specifies how large $n$ must be.
+### Theorem — L'Hopital's rule
 
-See [[Taylor Series and Taylor's Theorem]] and [[Limits, Big O and Little o - A First-Year Guide]].
+Let $f,g$ be differentiable on an open interval containing $x_0$, with $g'(x)\ne0$ for $x\ne x_0$ in the interval, and suppose $\lim_{x\to x_0}f(x)=0=f(x_0)$ and $\lim_{x\to x_0}g(x)=0=g(x_0)$. Then
+$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f'(x)}{g'(x)},$$
+provided the limit on the right exists.
 
-### 1.4 L'Hôpital's rule (pages 12–13)
+**Proof** (under the more stringent conditions $g'(x_0)\ne0$ and $f',g'$ continuous). By Taylor's theorem, as $x\to x_0$,
+$$f(x)=\underbrace{f(x_0)}_{=0}+(x-x_0)f'(x_0)+o(x-x_0),\qquad g(x)=\underbrace{g(x_0)}_{=0}+(x-x_0)g'(x_0)+o(x-x_0).$$
+So
+$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f'(x_0)+\frac{o(x-x_0)}{x-x_0}}{g'(x_0)+\frac{o(x-x_0)}{x-x_0}}=\frac{f'(x_0)}{g'(x_0)}=\lim_{x\to x_0}\frac{f'(x)}{g'(x)}$$
+by continuity of the first derivatives.
 
-The form $0/0$ does not determine a quotient's limit. The following version follows from first-order Taylor expansion.
+**Generalisation.** E.g. if also $f'(x_0)=g'(x_0)=0$, then $\lim\frac fg=\lim\frac{f''}{g''}$.
 
-**L'Hôpital's rule.** Suppose $f,g$ are differentiable near $x_0$, their first derivatives are continuous at $x_0$, and
-$$f(x_0)=g(x_0)=0,\qquad g'(x_0)\ne0.$$
-Then
-$$\lim_{x\to x_0}\frac{f(x)}{g(x)}
-=\frac{f'(x_0)}{g'(x_0)}
-=\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.$$
-
-**Proof using first-order Taylor expansions.** Write $h=x-x_0$. Then
-$$f(x_0+h)=hf'(x_0)+o(h),\qquad
- g(x_0+h)=hg'(x_0)+o(h).$$
-Cancel $h$ for $h\ne0$:
-$$\frac{f(x_0+h)}{g(x_0+h)}
-=\frac{f'(x_0)+o(h)/h}{g'(x_0)+o(h)/h}
-\longrightarrow\frac{f'(x_0)}{g'(x_0)}.$$
-The denominator tends to a non-zero number. Continuity of $f',g'$ gives the final equality in the theorem. More general versions of the rule exist; they are not needed for this proof.
-
-**When more derivatives vanish.** The same Taylor idea works if the first non-zero denominator term has order $n$. If $f,g$ have derivatives through order $n$ near $x_0$, all derivatives of orders $0,\ldots,n-1$ vanish at $x_0$, and $g^{(n)}(x_0)\ne0$, then
-$$\frac{f(x_0+h)}{g(x_0+h)}
-=\frac{f^{(n)}(x_0)h^n/n!+o(h^n)}
-{g^{(n)}(x_0)h^n/n!+o(h^n)}
-\longrightarrow\frac{f^{(n)}(x_0)}{g^{(n)}(x_0)}.$$
-This explains the repeated-differentiation example without needing a more general proof of L'Hôpital's rule.
-
-**Example (page 13).** Let
-$$f(x)=3\sin x-\sin(3x),\qquad g(x)=2x-\sin(2x).$$
-Both functions and their first two derivatives vanish at $0$. Since
-$$f^{(3)}(x)=-3\cos x+27\cos(3x),\qquad g^{(3)}(x)=8\cos(2x),$$
-the first non-zero terms are cubic and
-$$\lim_{x\to0}\frac{3\sin x-\sin(3x)}{2x-\sin(2x)}
-=\frac{24}{8}=3.$$
-
-See [[L'Hôpital's Rule]].
+**Example.** $f(x)=3\sin x-\sin3x$, $g(x)=2x-\sin2x$. Here $f,f',f''$ and $g,g',g''$ all vanish at $0$, and $f'''(x)=-3\cos x+27\cos3x$, $g'''(x)=8\cos2x$, so
+$$\lim_{x\to0}\frac{f(x)}{g(x)}=\frac{24}8=3.$$
