@@ -1,35 +1,25 @@
 ---
 title: De Moivre's Theorem
-material_type: concept note
 course: Part IA Vectors and Matrices
+material_type: concept note
+tags: [concept, vectors-and-matrices, complex-numbers]
 ---
 
 # De Moivre's Theorem
 
-For $\theta\in\mathbb R$ and $n\in\mathbb Z$,
-$$ (\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta).$$
+> [!abstract] In one paragraph
+> Multiplying complex numbers in polar form multiplies the moduli and adds the angles. Repeating this gives integer powers: raising to the $n$th power multiplies the angle by $n$.
 
-The polar multiplication lemma from [[Complex Numbers]] is
-$$
-r_1(\cos\theta_1+i\sin\theta_1)r_2(\cos\theta_2+i\sin\theta_2)
-=r_1r_2\bigl(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)\bigr).
-$$
-It follows by expanding the product and applying the sine and cosine addition formulae.
+## Key results
 
-For $n\ge0$, induction starts at $n=0$, where both sides are $1$. Multiply the inductive expression by $\cos\theta+i\sin\theta$ and use the lemma for the step from $n$ to $n+1$.
+- **Lemma — polar multiplication.** $r_1(\cos\theta_1+i\sin\theta_1)\cdot r_2(\cos\theta_2+i\sin\theta_2)=r_1r_2(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2))$. *Idea:* expand and use the angle addition formulae. → [[Vectors and Matrices - Chapter 1 Complex Numbers#Lemma — Multiplying in polar form|proof]]
+- **Theorem — De Moivre.** For $\theta\in\mathbb R$, $n\in\mathbb Z$: $(\cos\theta+i\sin\theta)^n=\cos n\theta+i\sin n\theta$. *Idea:* induction for $n\ge0$; for $n=-m$ take the reciprocal of a unit-modulus number. → [[Vectors and Matrices - Chapter 1 Complex Numbers#Theorem — De Moivre's theorem|proof]]
+- **Consequence.** $z=r(\cos\theta+i\sin\theta)\ne0\Rightarrow z^n=r^n(\cos n\theta+i\sin n\theta)$.
 
-For $n=-m<0$, the positive-power case and unit modulus give
-$$
-\begin{aligned}
-(\cos\theta+i\sin\theta)^{-m}
-&=\frac1{\cos(m\theta)+i\sin(m\theta)}\\
-&=\cos(m\theta)-i\sin(m\theta)\\
-&=\cos(-m\theta)+i\sin(-m\theta).
-\end{aligned}
-$$
+## Example
 
-Consequently, if $z=r(\cos\theta+i\sin\theta)\ne0$, then for every $n\in\mathbb Z$,
-$$z^n=r^n\bigl(\cos(n\theta)+i\sin(n\theta)\bigr).$$
-Example: $(1+i)^4=(\sqrt2)^4(\cos\pi+i\sin\pi)=-4$.
+$(1+i)^4=(\sqrt2)^4(\cos\pi+i\sin\pi)=-4$.
 
-See [[Vectors and Matrices - Chapter 1 Complex Numbers]], pages 9–10; the angle addition formulae are written out there.
+## Related
+
+[[Complex Numbers]] · [[Complex Exponential and Trigonometric Functions]] · [[Roots of Unity]]

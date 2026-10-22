@@ -1,52 +1,43 @@
 ---
 title: Logical Connectives and Quantifiers
-material_type: concept note
 course: Part IA Numbers and Sets
+material_type: concept note
+tags: [concept, numbers-and-sets, logic]
 ---
 
 # Logical Connectives and Quantifiers
 
-For assertions $A,B$:
+> [!abstract] In one paragraph
+> Assertions are combined with "and", "or", "not" and "implies"; their truth is decided by truth tables. Quantifiers $\forall$ ("for all") and $\exists$ ("there exists") are negated by swapping them and negating what follows.
 
-- $A\land B$ means both are true.
-- $A\lor B$ means at least one is true, including the case when both are true.
-- $\neg A$ means $A$ is false.
-- $A\Rightarrow B$ fails exactly when $A$ is true and $B$ is false.
-- $A\Longleftrightarrow B$ means $(A\Rightarrow B)\land(B\Rightarrow A)$.
+## Definitions
 
-The lecture writes $A\cup B$ for logical “or”. These notes use the conventional $\lor$ to distinguish it from set union.
+| Symbol | Meaning | False exactly when |
+| --- | --- | --- |
+| $A\land B$ | $A$ and $B$ | at least one is false |
+| $A\lor B$ | $A$ or $B$ (inclusive) | both are false |
+| $\neg A$ | not $A$ | $A$ is true |
+| $A\Rightarrow B$ | if $A$ then $B$ | $A$ true and $B$ false |
+| $A\iff B$ | $(A\Rightarrow B)\land(B\Rightarrow A)$ | $A$, $B$ have different truth values |
 
-$$A\Rightarrow B\quad\Longleftrightarrow\quad(\neg A)\lor B
-\quad\Longleftrightarrow\quad\neg B\Rightarrow\neg A.$$
-See [[Proof by Contradiction and Contraposition]].
+## Key results
 
-For a fixed domain $D$,
-$$
-\begin{aligned}
-\neg\bigl(\forall x\in D,\ A(x)\bigr)
-&\Longleftrightarrow\exists x\in D,\ \neg A(x),\\
-\neg\bigl(\exists x\in D,\ B(x)\bigr)
-&\Longleftrightarrow\forall x\in D,\ \neg B(x).
-\end{aligned}
-$$
-Also, $\neg(A\land B)\Longleftrightarrow(\neg A)\lor(\neg B)$.
-
-See [[Numbers and Sets - Chapter 0 Proofs]], pages 6 and 8–9.
+- **De Morgan.** $\neg(A\land B)\iff(\neg A)\lor(\neg B)$. → [[Numbers and Sets - Chapter 0 Proofs#Truth tables|truth table]]
+- **Implication.** $A\Rightarrow B\iff(\neg A)\lor B\iff(\neg B)\Rightarrow(\neg A)$ (the **contrapositive**). → [[Numbers and Sets - Chapter 0 Proofs#Truth tables|truth table]]
+- **Negating quantifiers.** $\neg(\forall x\ A(x))\iff\exists x\ \neg A(x)$ and $\neg(\exists x\ B(x))\iff\forall x\ \neg B(x)$, over the same domain. → [[Numbers and Sets - Chapter 0 Proofs#Negating quantifiers|lecture]]
 
 ## Quantifier order
 
-In $\forall x\,\exists y\,P(x,y)$, the choice of $y$ may depend on $x$. In $\exists y\,\forall x\,P(x,y)$, one $y$ must work for every $x$.
+In $\forall x\ \exists y\ P(x,y)$ the choice of $y$ may depend on $x$; in $\exists y\ \forall x\ P(x,y)$ one $y$ must work for every $x$. Over $\mathbb R$: $\forall x\ \exists y:\ y>x$ is true (take $y=x+1$), but $\exists y\ \forall x:\ y>x$ is false.
 
-For example, over $\mathbb R$,
-$$\forall x\in\mathbb R\ \exists y\in\mathbb R:\ y>x$$
-is true: choose $y=x+1$. But
-$$\exists y\in\mathbb R\ \forall x\in\mathbb R:\ y>x$$
-is false: for any proposed $y$, take $x=y+1$.
+To negate a chain, swap every quantifier, keep the order, negate the end:
+$$\neg\big(\forall x\ \exists y\ P(x,y)\big)\iff\exists x\ \forall y\ \neg P(x,y).$$
 
-When negating a sequence of quantifiers, reverse each $\forall$ and $\exists$, keep their order and domains, and negate the final condition:
-$$
-\neg\bigl(\forall x\in D\ \exists y\in E:\ P(x,y)\bigr)
-\Longleftrightarrow
-\exists x\in D\ \forall y\in E:\ \neg P(x,y).
-$$
-This is the same rule used to negate the definition of a limit in [[Limits, Big O and Little o - A First-Year Guide]]. It also explains why a single counterexample disproves a universally quantified assertion.
+## Pitfalls
+
+- "Or" is inclusive: $A\lor B$ is true when both hold.
+- The converse $B\Rightarrow A$ is a different statement from $A\Rightarrow B$.
+
+## Related
+
+[[Proof by Contradiction and Contraposition]] · [[Numbers and Sets - Chapter 0 Proofs]]

@@ -1,44 +1,34 @@
 ---
 title: L'Hôpital's Rule
-material_type: concept note
 course: Part IA Differential Equations
-source_file: Ch.1 Differentiation.pdf
-drive_file_id: 1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr
-source_url: https://drive.google.com/file/d/1_FQhFkQDZpKx_jw272-80DE9XYHgs-yr/view
-source_pages: [12, 13]
-reference_handout: topic1.pdf
-reference_handout_pages: "12–13"
+material_type: concept note
+tags: [concept, differential-equations]
 ---
 
 # L'Hôpital's Rule
 
-The form $0/0$ does not determine a limit. The course handout explains L'Hôpital's rule through Taylor expansions.
+> [!abstract] In one paragraph
+> For a $0/0$ limit, replace $f/g$ by $f'/g'$. The lecture proves it, under extra assumptions, by first-order Taylor expansion: near $x_0$ both functions are approximately linear, so their ratio is the ratio of slopes.
 
-## Course version
+## Statement
 
-Suppose $f,g$ are differentiable near $x_0$, their first derivatives are continuous at $x_0$, and
-$$f(x_0)=g(x_0)=0,\qquad g'(x_0)\ne0.$$
-Then
-$$\lim_{x\to x_0}\frac{f(x)}{g(x)}
-=\frac{f'(x_0)}{g'(x_0)}
-=\lim_{x\to x_0}\frac{f'(x)}{g'(x)}.$$
+$f,g$ differentiable on an open interval containing $x_0$, $g'(x)\ne0$ for $x\ne x_0$, and $f(x_0)=g(x_0)=0$ (as limits). Then
+$$\lim_{x\to x_0}\frac{f(x)}{g(x)}=\lim_{x\to x_0}\frac{f'(x)}{g'(x)},$$
+provided the right-hand limit exists. → [[Differential Equations - Chapter 1 Introduction and Basic Calculus#Theorem — L'Hopital's rule|lecture]]
 
-**Why it works.** Put $h=x-x_0$. First-order Taylor expansions give
-$$\frac{f(x_0+h)}{g(x_0+h)}
-=\frac{hf'(x_0)+o(h)}{hg'(x_0)+o(h)}
-=\frac{f'(x_0)+o(h)/h}{g'(x_0)+o(h)/h}.$$
-Since $o(h)/h\to0$ and $g'(x_0)\ne0$, the result follows.
+*Proof idea (when $g'(x_0)\ne0$ and $f',g'$ continuous):* $\frac{f(x)}{g(x)}=\frac{f'(x_0)+o(x-x_0)/(x-x_0)}{g'(x_0)+o(x-x_0)/(x-x_0)}\to\frac{f'(x_0)}{g'(x_0)}$.
 
-## When several derivatives vanish
+**Generalisation.** If also $f'(x_0)=g'(x_0)=0$, use $f''/g''$, and so on.
 
-Compare the first non-zero Taylor terms. If derivatives of $f,g$ through order $n$ exist near $x_0$, the derivatives of orders $0,\ldots,n-1$ vanish at $x_0$, and $g^{(n)}(x_0)\ne0$, then
-$$\lim_{x\to x_0}\frac{f(x)}{g(x)}
-=\frac{f^{(n)}(x_0)}{g^{(n)}(x_0)}.$$
-Both Taylor expansions contain the same factor $(x-x_0)^n/n!$, which cancels. Vanishing derivatives alone are not a reason to differentiate indefinitely: the remaining denominator and required derivatives still need checking.
+## Example
 
-For
-$$f(x)=3\sin x-\sin(3x),\qquad g(x)=2x-\sin(2x),$$
-the functions and their first two derivatives vanish at $0$, while $f^{(3)}(0)=24$ and $g^{(3)}(0)=8$. Therefore
-$$\lim_{x\to0}\frac{3\sin x-\sin(3x)}{2x-\sin(2x)}=\frac{24}{8}=3.$$
+$$\lim_{x\to0}\frac{3\sin x-\sin3x}{2x-\sin2x}=\frac{f'''(0)}{g'''(0)}=\frac{-3+27}{8}=3.$$
 
-See [[Differential Equations - Chapter 1 Introduction and Basic Calculus]], section 1.4, and [[Taylor Series and Taylor's Theorem]].
+## Pitfalls
+
+- Check that the form really is $0/0$ before differentiating.
+- Differentiate numerator and denominator **separately** — not the quotient.
+
+## Related
+
+[[Taylor Series and Taylor's Theorem]] · [[Limits, Big O and Little o - A First-Year Guide]]

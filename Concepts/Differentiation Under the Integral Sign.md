@@ -1,44 +1,26 @@
 ---
 title: Differentiation Under the Integral Sign
-material_type: concept note
 course: Part IA Differential Equations
-source_file: Ch.3 Partial Differentiation.pdf
-drive_file_id: 1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E
-source_url: https://drive.google.com/file/d/1phlBx3t9Z1WBrEaiYl2z-Ly9wsGhzA4E/view
-reference_handout: topic1.pdf
-reference_handout_pages: "28–29"
-source_pages: [9, 10, 11]
+material_type: concept note
+tags: [concept, differential-equations]
 ---
 
 # Differentiation Under the Integral Sign
 
-For
-$$I(c)=\int_{a(c)}^{b(c)}f(x;c)\,dx,$$
-**Leibniz's integral rule** is
-$$I'(c)=\int_{a(c)}^{b(c)}f_c(x;c)\,dx
-+f(b(c);c)b'(c)-f(a(c);c)a'(c).$$
-A sufficient regularity setting is continuously differentiable endpoints and continuity of $f,f_c$ on a neighbourhood of the integration intervals.
+> [!abstract] In one paragraph
+> When an integral depends on a parameter $c$ — through the integrand and through the limits — its derivative has three parts: differentiate inside, plus the integrand at each moving endpoint times that endpoint's speed.
 
-Split the difference quotient into the change of the integrand over the old fixed interval, the upper-endpoint interval, and the negative lower-endpoint interval. The mean value theorem gives the two endpoint terms. For continuous $f_c$, the difference-quotient error becomes small across the fixed interval, so its integral error tends to zero. Thus the formula has three contributions: the integrand changes, the upper endpoint moves, and the lower endpoint moves. The short derivation is in [[Differential Equations - Chapter 3 Partial Differentiation]].
+## Statement
 
-## Moving-endpoint example
+For $I(c)=\int_{a(c)}^{b(c)}f(x;c)\,dx$:
+$$\frac{dI}{dc}=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx+f(b(c);c)\frac{db}{dc}-f(a(c);c)\frac{da}{dc}.$$
+*Idea:* split the difference quotient into the change of integrand on the old interval plus two thin end strips; apply the mean value theorem to each strip. → [[Differential Equations - Chapter 3 Partial Differentiation#Theorem — Differentiating an integral with respect to a parameter|proof]]
 
-For
-$$I(\lambda)=\int_0^\lambda e^{-\lambda x^2}\,dx,$$
-page 11 calculates
-$$I'(\lambda)
-=-\int_0^\lambda x^2e^{-\lambda x^2}\,dx+e^{-\lambda^3}.$$
-The last term is the upper-endpoint contribution.
+## Examples
 
-## Factorial integrals
+- $I(\lambda)=\int_0^\lambda e^{-\lambda x^2}dx$: $I'(\lambda)=-\int_0^\lambda x^2e^{-\lambda x^2}dx+e^{-\lambda^3}$.
+- $\int_0^\infty x^ne^{-x}dx=n!$: differentiate $\int_0^\infty e^{-\lambda x}dx=\frac1\lambda$ $n$ times in $\lambda$, then set $\lambda=1$.
 
-For $\lambda>0$,
-$$I(\lambda)=\int_0^\infty e^{-\lambda x}\,dx=\frac1\lambda.$$
-Differentiate $n$ times, for $n\in\mathbb Z_{\ge0}$, to obtain
-$$\int_0^\infty(-x)^ne^{-\lambda x}\,dx
-=(-1)^n\frac{n!}{\lambda^{n+1}}.$$
-Setting $\lambda=1$ gives
-$$\int_0^\infty x^ne^{-x}\,dx=n!.$$
-For $\lambda>0$, exponential decay controls the polynomial factors introduced by differentiation and justifies this calculation. The infinite-interval justification needs more than the finite-interval rule; its detailed convergence proof is omitted here.
+## Related
 
-Related: [[Partial Derivatives and the Multivariate Chain Rule]], [[Riemann Integration and the Fundamental Theorem of Calculus]].
+[[Riemann Integration and the Fundamental Theorem of Calculus]] · [[Partial Derivatives and the Multivariate Chain Rule]]
