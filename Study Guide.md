@@ -34,7 +34,7 @@ Concepts: [[Complex Numbers]] → [[De Moivre's Theorem]] → [[Triangle Inequal
 
 | Chapter | Main results |
 | --- | --- |
-| [[Groups - Chapter 1 Examples and Definitions]] | axioms (Def 1.4, Prop 1.5); $\operatorname{Sym}(X)$ (Prop 1.13); subgroups of $\mathbb Z$ (Prop 1.16); $\langle X\rangle$ (Def 1.17); isometries & $D_{2n}$ (Props 1.20, 1.25); homomorphisms, image/kernel (Prop 1.33, Lemma 1.35); cyclic groups (Thm 1.38) |
+| [[Groups - Chapter 1 Examples and Definitions]] | axioms (Def 1.4, Prop 1.5); $\operatorname{Sym}(X)$ (Prop 1.13); subgroups of $\mathbb Z$ (Prop 1.16); $\langle X\rangle$ (Def 1.17); isometries & $D_{2n}$ (Props 1.20, 1.25); homomorphisms, image/kernel (Prop 1.33, Lemma 1.35); cyclic groups (Thm 1.38); recognising $D_{2n}$ (Lemma 1.40, Cor 1.41) |
 | [[Groups - Chapter 2 Lagrange's Theorem]] | cosets (Def 2.2, Lemma 2.3, 2.4); index; Lagrange (Thm 2.1, 2.6); $\operatorname{ord}(g)\mid\lvert G\rvert$ (Cor 2.7) |
 
 Concepts: [[Groups]] → [[Bijections and Permutations]] → [[Subgroups and Generated Subgroups]] → [[Isometries and Dihedral Groups]] → [[Homomorphisms and Isomorphisms]] → [[Cyclic Groups and Element Orders]] → [[Cosets and Lagrange's Theorem]] · also [[Latin Squares]]

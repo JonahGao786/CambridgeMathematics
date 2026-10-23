@@ -23,7 +23,8 @@ tags: [concept, groups]
 - **Lemma 1.24 — three points.** An isometry fixing three non-collinear points is the identity. → [[Groups - Chapter 1 Examples and Definitions#Lemma 1.24 — Three point lemma|proof]]
 - **Proposition 1.25.** $D_{2n}=\{r_k,s_\ell\}$, $|D_{2n}|=2n$. *Idea:* $f(1)=\zeta^m$, neighbours go to neighbours, so $f$ agrees with $r_m$ or $s_m$ on three points; apply the three point lemma. → [[Groups - Chapter 1 Examples and Definitions#Proposition 1.25 — Elements of the dihedral group|proof]]
 - **Lemma 1.26.** $r=r_1$, $s=s_0$ generate, $r_k=r^k$, $s_\ell=r^\ell s$, and $sr=r^{-1}s$; hence $sr^k=r^{-k}s$.
-- **Lemma 1.40.** If $a^n=b^2=e$ and $ab=ba^{-1}$ in $G$, then $r^k\mapsto a^k$, $r^ks\mapsto a^kb$ is a homomorphism $D_{2n}\to G$.
+- **Lemma 1.40.** If $a^n=b^2=e$ and $ab=ba^{-1}$ in $G$, then $r^k\mapsto a^k$, $r^ks\mapsto a^kb$ is a homomorphism $D_{2n}\to G$ (check four cases using $a^kb=ba^{-k}$). → [[Groups - Chapter 1 Examples and Definitions#Lemma 1.40 — Homomorphisms out of dihedral groups|proof]]
+- **Corollary 1.41.** If $G=\langle a,b\rangle$ with $\operatorname{ord}(a)\mid n$, $\operatorname{ord}(b)\mid2$, $ab=ba^{-1}$, $|G|=2n$, then $G\cong D_{2n}$. → [[Groups - Chapter 1 Examples and Definitions#Corollary 1.41 — Recognising dihedral groups|proof]]
 
 ## Examples
 
