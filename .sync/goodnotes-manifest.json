@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-22T19:30:00Z",
+  "last_inventory_at": "2026-10-23T12:30:00Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
   "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
@@ -765,9 +765,9 @@
       "source_file_name": "Ch.1 Introduction.pdf",
       "source_url": "https://drive.google.com/file/d/1aDCWwXyAhzhPdQe-mhQZ6rIg1Wo5FIcB/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-21T11:45:52.041Z",
+      "observed_source_modified_timestamp": "2026-10-23T11:59:51.214Z",
       "processed_source_modified_timestamp": "2026-10-21T11:45:52.041Z",
-      "status": "processed",
+      "status": "pending",
       "classification": "study_material",
       "skip_reason": null,
       "material_type": "handwritten lecture notes",
@@ -1105,7 +1105,8 @@
       },
       "last_reorganized_at": "2026-10-22T19:30:00Z",
       "reorganization": "Restructured to note standards from the existing note (itself from a complete visual read of this same source version). Source NOT re-read this run: download_file_content failed 3 times (7.08 MB file; connector closed with \"message too large\"). Editorial proofs added by earlier runs (affine corner-preservation argument, vertex-set reclassification, algebraic kite proof) condensed into Explanation callouts; no new mathematical claims. Definition of cyclic group left unnumbered (number not verifiable without source).",
-      "pending_upgrade": "Re-read pages 1-33 visually when the file can be downloaded (e.g. via a smaller export or a split PDF) to confirm the restructured note."
+      "pending_upgrade": "Re-read pages 1-33 visually when the file can be downloaded (e.g. via a smaller export or a split PDF) to confirm the restructured note.",
+      "pending_reason": "Drive modified 2026-10-23 (7.32 MB, was 7.08 MB; probably extended). download_file_content failed again (connector closed: message too large) — 4th failure. Not re-read; existing note kept at the last fully read version (2026-10-21T11:45:52Z), which stays the processed timestamp."
     },
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs": {
       "markdown_paths": [
@@ -2879,10 +2880,10 @@
           ]
         }
       ],
-      "observed_source_modified_timestamp": "2026-10-21T11:45:01.516Z",
-      "processed_source_modified_timestamp": "2026-10-21T11:45:01.516Z",
-      "total_page_count": 5,
-      "visually_inspected_pages": "1-5",
+      "observed_source_modified_timestamp": "2026-10-23T11:59:02.175Z",
+      "processed_source_modified_timestamp": "2026-10-23T11:59:02.175Z",
+      "total_page_count": 10,
+      "visually_inspected_pages": "1-10",
       "source_sha256": "2c2f059fa04356264f40f1d17f458d3a5c4171ceb843487c4545a93863a01c1c",
       "source_size_bytes": 1112355,
       "original_pdf_path": null,
@@ -2973,37 +2974,50 @@
       "reorganization": "Rewritten to goodnotes-math-sync note standards (results index, one heading per numbered result, course-level scope, concise concept hubs).",
       "normalizations_2026_10_22": [
         "p.3: definition labelled \"linearly independent\" describes dependence -> \"linearly dependent\""
+      ],
+      "new_pages_2026_10_23": "5 (extended) and 6-10: limit of forward Euler, series solutions, forced equations, constant and eigenfunction forcing, integrating factor",
+      "normalizations_2026_10_23": [
+        "p.8: second term of b(t) written with e^{-k_b t}; corrected to e^{-k_a t} (consistent with the PI and the b(0)=0 solution)"
       ]
+    },
+    "1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv": {
+      "drive_file_id": "1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv",
+      "source_file_name": "Ch.2 Lagrange’s Theorem.pdf",
+      "source_url": "https://drive.google.com/file/d/1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv/view",
+      "drive_folder_path": "GoodNotes/Part IA/Groups",
+      "observed_source_modified_timestamp": "2026-10-23T11:59:56.583Z",
+      "processed_source_modified_timestamp": "2026-10-23T11:59:56.583Z",
+      "markdown_paths": [
+        "Part IA/Groups/Lecture Notes/Groups - Chapter 2 Lagrange's Theorem.md",
+        "Concepts/Cosets and Lagrange's Theorem.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Groups",
+      "status": "processed",
+      "classification": "study_material",
+      "total_page_count": 4,
+      "visually_inspected_pages": "1-4",
+      "normalizations": [],
+      "unresolved_todos": [],
+      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally)."
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-22",
-    "completed_at": "2026-10-22T19:30:00Z",
-    "scope": "Re-organization of all non-example-sheet notes (lecture notes, concept notes, Study Guide) to the improved goodnotes-math-sync skill. Example/Examples Sheets folders and their notes skipped at user request.",
-    "reading_method": "Drive download_file_content (base64 saved to disk) decoded outside the repo; pdftoppm at 130 dpi (300 dpi crops where needed); every page viewed as an image. DE Ch.1 duplicate pages compared pixel by pixel. TikZ compiled locally with pdflatex (texlive-pictures) and rendered previews inspected; Obsidian rendering not verified.",
-    "sources_read": {
-      "Ch.0 Proofs.pdf": 9,
-      "Ch.1 Elementary Number Theory.pdf": 23,
-      "Ch.1 Complex Numbers.pdf": 21,
-      "Ch.2 Vectors.pdf": 29,
-      "Ch.1 Introduction.pdf (DE)": 8,
-      "Ch.1 Differentiation.pdf": 13,
-      "Ch.2 Integration.pdf": 7,
-      "Ch.3 Partial Differentiation.pdf": 11,
-      "Ch.4 First-order Linear Differential Equations.pdf": 5
-    },
-    "visually_inspected_page_count": 126,
-    "modified_sources": [
-      "Ch.1 Elementary Number Theory.pdf (19->23 pages)",
-      "Ch.2 Vectors.pdf (23->29 pages)"
+    "date": "2026-10-23",
+    "completed_at": "2026-10-23T12:30:00Z",
+    "scope": "Normal sync of non-example-sheet sources; Example/Examples Sheets folders ignored at user request (Groups 1.pdf modified but skipped).",
+    "new_source_count": 1,
+    "modified_source_count": 2,
+    "processed_source_count": 2,
+    "pending_source_count": 1,
+    "reading_method": "download_file_content -> base64 JSON decoded outside the repo; pdftoppm 130 dpi; all pages of Ch.2 Lagrange (4) and Ch.4 ODE (10) viewed as images; DE Ch.4 pages 1-4 confirmed pixel-identical to the previously read version.",
+    "visually_inspected_page_count": 14,
+    "pending": [
+      "Ch.1 Introduction.pdf (Groups): download failed"
     ],
-    "sources_not_reread": [
-      "Ch.1 Introduction.pdf (Groups): connector download failure, restructured conservatively"
-    ],
-    "skill": ".claude/skills/goodnotes-math-sync (installed this run)",
-    "commit_message": "notes: reorganize lecture and concept notes with improved sync skill (2026-10-22)"
+    "commit_message": "notes: process Goodnotes files from 2026-10-23"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,

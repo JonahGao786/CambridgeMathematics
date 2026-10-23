@@ -35,8 +35,9 @@ Concepts: [[Complex Numbers]] → [[De Moivre's Theorem]] → [[Triangle Inequal
 | Chapter | Main results |
 | --- | --- |
 | [[Groups - Chapter 1 Examples and Definitions]] | axioms (Def 1.4, Prop 1.5); $\operatorname{Sym}(X)$ (Prop 1.13); subgroups of $\mathbb Z$ (Prop 1.16); $\langle X\rangle$ (Def 1.17); isometries & $D_{2n}$ (Props 1.20, 1.25); homomorphisms, image/kernel (Prop 1.33, Lemma 1.35); cyclic groups (Thm 1.38) |
+| [[Groups - Chapter 2 Lagrange's Theorem]] | cosets (Def 2.2, Lemma 2.3, 2.4); index; Lagrange (Thm 2.1, 2.6); $\operatorname{ord}(g)\mid\lvert G\rvert$ (Cor 2.7) |
 
-Concepts: [[Groups]] → [[Bijections and Permutations]] → [[Subgroups and Generated Subgroups]] → [[Isometries and Dihedral Groups]] → [[Homomorphisms and Isomorphisms]] → [[Cyclic Groups and Element Orders]] · also [[Latin Squares]]
+Concepts: [[Groups]] → [[Bijections and Permutations]] → [[Subgroups and Generated Subgroups]] → [[Isometries and Dihedral Groups]] → [[Homomorphisms and Isomorphisms]] → [[Cyclic Groups and Element Orders]] → [[Cosets and Lagrange's Theorem]] · also [[Latin Squares]]
 
 Sheets: [[Groups - Example Sheet 1 2025]] · [[Groups - Introductory Sheet 2026]] · [[Groups 0 - Handwritten Attempts]]
 
@@ -47,7 +48,7 @@ Sheets: [[Groups - Example Sheet 1 2025]] · [[Groups - Introductory Sheet 2026]
 | [[Differential Equations - Chapter 1 Introduction and Basic Calculus]] | limits; $O$ and $o$; chain/product/Leibniz rules; Taylor's theorem; L'Hôpital |
 | [[Differential Equations - Chapter 2 Integration]] | Riemann sums and area; FTC; substitution; by parts |
 | [[Differential Equations - Chapter 3 Partial Differentiation]] | partial derivatives, Schwarz; multivariate chain rule; implicit differentiation, cyclic & reciprocal rules; Leibniz integral rule |
-| [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]] | $\exp$ as eigenfunction; linear independence; constant-coefficient ODEs; forward Euler |
+| [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]] | $\exp$ as eigenfunction; linear independence; constant-coefficient ODEs; forward Euler; series solutions; forced equations; integrating factor |
 
 Concepts: [[Limits, Big O and Little o - A First-Year Guide]] → [[Differentiation Rules]] → [[Taylor Series and Taylor's Theorem]] → [[L'Hôpital's Rule]] → [[Riemann Integration and the Fundamental Theorem of Calculus]] → [[Integration by Substitution and by Parts]] → [[Partial Derivatives and the Multivariate Chain Rule]] → [[Implicit Differentiation]] → [[Differentiation Under the Integral Sign]] → [[First-Order Linear Differential Equations]] → [[Forward Euler Method]]
 

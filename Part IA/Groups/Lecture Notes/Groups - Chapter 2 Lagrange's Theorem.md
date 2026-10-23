@@ -1,0 +1,133 @@
+---
+title: Groups - Chapter 2 Lagrange's Theorem
+course: Part IA Groups
+material_type: lecture notes
+chapter: 2
+source_file: Ch.2 Lagrange’s Theorem.pdf
+drive_file_id: 1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv
+source_url: https://drive.google.com/file/d/1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv/view
+source_pages: 4
+tags: [lecture, groups]
+---
+
+# Groups — Chapter 2: Lagrange's Theorem
+
+> [!abstract] Overview
+> Cosets cut a group $G$ into disjoint "copies" of a subgroup $H$, all the same size. Counting them gives Lagrange's theorem $|G|=|G:H|\cdot|H|$, and hence that the order of every element divides $|G|$.
+> Prerequisites: [[Groups - Chapter 1 Examples and Definitions]] (subgroups, order of an element).
+
+## Results index
+
+| Result | Statement in brief | Page |
+| --- | --- | --- |
+| [[#Theorem 2.1 — Lagrange (version 1)]] | $\lvert H\rvert$ divides $\lvert G\rvert$ | 1 |
+| [[#Definition 2.2 — Left coset]] | $gH=\{gh:h\in H\}$; $G/H$ | 1 |
+| [[#Lemma 2.3 — Cosets partition the group]] | every element lies in exactly one left coset | 2 |
+| [[#Lemma 2.4 — Cosets have the size of H]] | bijection $H\to gH$ | 3 |
+| [[#Definition 2.5 — Index]] | $\lvert G:H\rvert=\lvert G/H\rvert$ | 3 |
+| [[#Theorem 2.6 — Lagrange (version 2)]] | $\lvert G\rvert=\lvert G:H\rvert\cdot\lvert H\rvert$ | 3–4 |
+| [[#Corollary 2.7 — Order of an element divides the order of the group]] | $\operatorname{ord}(g)\mid\lvert G\rvert$ | 4 |
+
+## 2.1 Statement and idea
+
+### Theorem 2.1 — Lagrange (version 1)
+
+If $H\le G$ and $|G|<\infty$, then $|H|$ divides $|G|$.
+
+A slightly stronger version is proved below (Theorem 2.6). **Slogan:** cut $G$ up into "copies" of $H$ called **cosets**.
+
+## 2.2 Cosets
+
+### Definition 2.2 — Left coset
+
+Let $H\le G$ and $g\in G$. The **left coset** of $H$ containing $g$ is the **subset**
+$$gH=\{g\cdot h:\ h\in H\}\subseteq G.$$
+The set of all left cosets is $G/H=\{gH:g\in G\}$; each element of $G/H$ is itself a set.
+
+Unless $H=\{e_G\}$, we can have $g_1H=g_2H$ with $g_1\ne g_2$. E.g. $eH=hH$ for every $h\in H$.
+
+**Remark.** There are also **right cosets** $Hg=\{h\cdot g:h\in H\}$; the set of right cosets is $H\backslash G$.
+
+### Lemma 2.3 — Cosets partition the group
+
+If $H\le G$, the left cosets partition $G$:
+
+1. $G=\bigcup_{gH\in G/H}gH$;
+2. for all $g_1H,g_2H\in G/H$: $g_1H\cap g_2H\ne\varnothing\Rightarrow g_1H=g_2H$.
+
+Every element of $G$ is in one and only one coset.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (0,0) ellipse (3.2 and 1.8);
+  \draw (-1.7,1.35) .. controls (-1.4,0.4) and (-1.1,-0.5) .. (-0.9,-1.7);
+  \draw (-1.7,1.35) .. controls (-0.7,0.9) and (0,0.5) .. (0.1,0.2);
+  \draw (0.1,1.78) .. controls (0.2,0.9) and (0.2,0.4) .. (0.1,0.2);
+  \draw (0.1,0.2) .. controls (0.4,-0.1) and (1.6,-0.7) .. (2.5,-1.1);
+  \draw (-0.9,-1.7) .. controls (-0.4,-1) and (-0.2,-0.3) .. (0.1,0.2);
+  \node at (-2.1,-0.3) {$H$};
+  \node at (-0.9,0.9) {$g_1H$};
+  \node at (1.4,1.0) {$g_2H$};
+  \node at (0.7,-0.35) {$g_3H$};
+  \node at (-0.4,-1.05) {$g_4H$};
+  \node at (3.7,1.4) {$G$};
+\end{tikzpicture}
+\end{document}
+```
+*Schematic: $G$ cut into disjoint cosets.*
+
+**Proof.** (i) For $g\in G$, $g=g\cdot e\in gH$, so $\bigcup gH=G$.
+
+(ii) Suppose $g_1H\cap g_2H\ne\varnothing$: $g_1h_1=g_2h_2$ for some $h_1,h_2\in H$, so $g_1=g_2h_2h_1^{-1}$. For any $h\in H$,
+$$g_1h=g_2\underbrace{h_2h_1^{-1}h}_{\in H}\in g_2H,$$
+so $g_1H\subseteq g_2H$. Symmetrically $g_2H\subseteq g_1H$, hence $g_1H=g_2H$.
+
+### Lemma 2.4 — Cosets have the size of H
+
+Let $H\le G$. For every $g\in G$ there is a bijection $H\to gH$.
+
+**Proof.** The function $H\to gH$, $h\mapsto g\cdot h$ has inverse $gH\to H$, $gh\mapsto g^{-1}gh=h$.
+
+Updated picture: all cosets have the same size as $H$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (0,0) ellipse (3 and 1.6);
+  \draw (0.1,0.05)--(0.1,1.6);
+  \draw (0.1,0.05)--(2.9,0.45);
+  \draw (0.1,0.05)--(-0.7,-1.5);
+  \draw (0.1,0.05)--(1.9,-1.2);
+  \node at (-1.6,-0.1) {$H$};
+  \node at (-0.9,1.0) {$g_1H$};
+  \node at (1.3,0.9) {$g_2H$};
+  \node at (1.9,-0.5) {$g_3H$};
+  \node at (0.5,-1.0) {$g_4H$};
+\end{tikzpicture}
+\end{document}
+```
+*Schematic: five cosets of equal size; the number of cosets is the index.*
+
+### Definition 2.5 — Index
+
+The **index** of a subgroup $H\le G$ is $|G:H|=|G/H|\in\mathbb N\cup\{\infty\}$.
+
+**Exercise.** Do you get the same number (or $\infty$) if you use right cosets?
+
+## 2.3 Lagrange's theorem
+
+### Theorem 2.6 — Lagrange (version 2)
+
+If $H\le G$ and $|G|<\infty$, then $|G|=|G:H|\cdot|H|$.
+
+**Proof.**
+$$|G|=\sum_{gH\in G/H}|gH|\quad\text{(Lemma 2.3: cosets partition }G)\ =\sum_{gH\in G/H}|H|\quad\text{(Lemma 2.4)}\ =|G:H|\cdot|H|.$$
+
+### Corollary 2.7 — Order of an element divides the order of the group
+
+If $|G|<\infty$ and $g\in G$, then $\operatorname{ord}(g)\mid|G|$.
+
+**Proof.** $\operatorname{ord}(g)=|\langle g\rangle|$, where $\langle g\rangle$ is the subgroup generated by $g$. By Lagrange, $\operatorname{ord}(g)\mid|G|$.
