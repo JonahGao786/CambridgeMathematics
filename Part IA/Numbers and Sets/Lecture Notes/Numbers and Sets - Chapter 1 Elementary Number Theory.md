@@ -6,14 +6,14 @@ chapter: 1
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: 23
+source_pages: 26
 tags: [lecture, numbers-and-sets]
 ---
 
 # Numbers and Sets — Chapter 1: Elementary Number Theory
 
 > [!abstract] Overview
-> Builds $\mathbb N$ from the Peano axioms, gives the induction principles, then develops divisibility: division algorithm → Euclid's algorithm → Bézout → Euclid's lemma → unique prime factorization. Finishes with modular arithmetic, units mod $n$, linear congruences and the Chinese Remainder Theorem.
+> Builds $\mathbb N$ from the Peano axioms, gives the induction principles, then develops divisibility: division algorithm → Euclid's algorithm → Bézout → Euclid's lemma → unique prime factorization. Then modular arithmetic, units mod $n$, linear congruences, the Chinese Remainder Theorem, and Euler's totient function with Fermat's little theorem and its Euler generalisation.
 > Prerequisite: [[Numbers and Sets - Chapter 0 Proofs]].
 
 ## Results index
@@ -40,6 +40,10 @@ tags: [lecture, numbers-and-sets]
 | [[#Proposition 10' — Units modulo n]] | $a$ unit mod $n\iff\operatorname{hcf}(a,n)=1$ | 20 |
 | [[#Corollary 11 — Solving linear congruences]] | $ax\equiv b\pmod n$ | 21 |
 | [[#Theorem 12 — Chinese Remainder Theorem]] | simultaneous congruences, coprime moduli | 23 |
+| [[#Definition — Euler's totient function]] | $\varphi(m)$ = number of units mod $m$ | 24 |
+| [[#Theorem 13 — Fermat's little theorem]] | $a^{p-1}\equiv1\pmod p$ for $p\nmid a$ | 25 |
+| [[#Theorem 13' — Fermat–Euler theorem]] | $a^{\varphi(m)}\equiv1\pmod m$ for $\gcd(a,m)=1$ | 25–26 |
+| [[#Lemma 14 — Square roots of 1 modulo a prime]] | $x^2\equiv1\iff x\equiv\pm1\pmod p$ | 26 |
 
 ## 1.1 The natural numbers
 
@@ -356,4 +360,54 @@ What about $x\equiv1\pmod4$ ($1,5,9,13,17,21,\dots$) and $x\equiv2\pmod6$ ($2,8,
 Let $m,n$ be coprime and $a,b\in\mathbb Z$. Then there is a unique solution modulo $mn$ to the simultaneous congruences
 $$x\equiv a\pmod m\quad\text{and}\quad x\equiv b\pmod n.$$
 
-> [!todo] p. 23 — the notebook ends after the statement; add the proof when the next lecture is synced.
+**Proof.** *Existence.* Since $\gcd(m,n)=1$, Theorem 7 gives $s,t\in\mathbb Z$ with $sm+tn=1$. Then
+$$sm\equiv1\ (n),\quad tn\equiv1\ (m),\quad sm\equiv0\ (m),\quad tn\equiv0\ (n).$$
+Hence $x=a(tn)+b(sm)$ satisfies $x\equiv a\pmod m$ and $x\equiv b\pmod n$.
+
+*Uniqueness.* Let $y$ also be a solution. Then $y\equiv x\pmod m$ and $y\equiv x\pmod n$, i.e. $m\mid y-x$ and $n\mid y-x$. Since $\gcd(m,n)=1$, $mn\mid y-x$, so $y\equiv x\pmod{mn}$.
+
+> [!note] Explanation
+> Why $m\mid y-x$ and $n\mid y-x$ give $mn\mid y-x$: write $y-x=mk$. Then $n\mid mk$ with $\gcd(m,n)=1$, so $n\mid k$ (as in the proof of Euclid's lemma: $sm+tn=1$ gives $k=smk+tnk$, both terms divisible by $n$).
+
+**Remark — more than two moduli.** By induction, if $m_1,\dots,m_k$ are **pairwise coprime**, then for all $a_1,\dots,a_k\in\mathbb Z$ there is $x\in\mathbb Z$ with
+$$x\equiv a_1\ (m_1),\quad x\equiv a_2\ (m_2),\quad\dots,\quad x\equiv a_k\ (m_k).$$
+
+## 1.9 Euler's totient function and Fermat's little theorem
+
+### Definition — Euler's totient function
+
+For $m\in\mathbb N$, $\varphi(m)$ is the number of integers $a$ with $1\le a\le m$ and $\operatorname{hcf}(a,m)=1$; equivalently the number of units modulo $m$. $\varphi$ is the **Euler totient function**; $\varphi(1)=1$.
+
+**Examples.**
+- $m=9$: $1,2,4,5,7,8$ are coprime to $9$, so $\varphi(9)=6$.
+- $p$ prime: $\varphi(p)=p-1$ and $\varphi(p^2)=p^2-p$.
+- $p\ne q$ primes: $\varphi(pq)=pq-p-q+1$ (remove the multiples of $p$ and of $q$, but $pq$ itself was removed twice, so add it back once).
+
+**Powers modulo a prime.** How do powers of an integer behave modulo $p$? Modulo $7$: $2^1\equiv2$, $2^2\equiv4$, $2^3\equiv1$, then the cycle $2,4,1$ repeats. Modulo $11$: $2^1,\dots,2^{10}\equiv2,4,8,5,10,9,7,3,6,1$, then it repeats.
+
+### Theorem 13 — Fermat's little theorem
+
+Let $p$ be prime. Then $a^p\equiv a\pmod p$ for all $a\in\mathbb Z$. Equivalently, $a^{p-1}\equiv1\pmod p$ for all $a\not\equiv0\pmod p$.
+
+**Proof.** If $a\not\equiv0\pmod p$, then $a$ is a unit modulo $p$, so $ax\equiv ay\pmod p\iff x\equiv y\pmod p$. Hence $a,2a,3a,\dots,(p-1)a$ are pairwise incongruent modulo $p$ and none is $\equiv0$, so they are $1,2,\dots,p-1$ in some order. Multiplying,
+$$a\cdot2a\cdots(p-1)a\equiv1\cdot2\cdots(p-1)\pmod p,\qquad\text{i.e.}\qquad a^{p-1}(p-1)!\equiv(p-1)!\pmod p.$$
+But $(p-1)!$ is a unit modulo $p$ (a product of units), so we can cancel it: $a^{p-1}\equiv1\pmod p$.
+
+> [!note] Explanation
+> The two forms are equivalent: multiply $a^{p-1}\equiv1$ by $a$ to get $a^p\equiv a$; if $p\mid a$ both sides of $a^p\equiv a$ are $\equiv0$.
+
+### Theorem 13' — Fermat–Euler theorem
+
+Let $\gcd(a,m)=1$. Then $a^{\varphi(m)}\equiv1\pmod m$.
+
+**Proof.** Let $U=\{x\in\mathbb Z:\ 0<x<m,\ \gcd(x,m)=1\}$, with $\varphi(m)$ elements $u_1,\dots,u_{\varphi(m)}$. Then $au_1,\dots,au_{\varphi(m)}$ are distinct (modulo $m$) and invertible modulo $m$ (as $a$ and the $u_i$ are units), so they are $u_1,\dots,u_{\varphi(m)}$ in some order. Hence
+$$au_1\cdot au_2\cdots au_{\varphi(m)}\equiv u_1u_2\cdots u_{\varphi(m)}\pmod m,\quad\text{i.e.}\quad a^{\varphi(m)}z\equiv z\pmod m,$$
+where $z=u_1\cdots u_{\varphi(m)}$ is a product of units, hence a unit. Cancelling $z$ gives $a^{\varphi(m)}\equiv1\pmod m$.
+
+**Question — $(p-1)!$ modulo $p$.** $p=5$: $4!=24\equiv-1\pmod5$. $p=7$: $6!=720\equiv-1\pmod7$.
+
+### Lemma 14 — Square roots of 1 modulo a prime
+
+Let $p$ be prime. Then $x^2\equiv1\pmod p\iff x\equiv1\pmod p$ or $x\equiv-1\pmod p$.
+
+> [!todo] p. 26 — the notebook ends after the statement; add the proof when the next lecture is synced.

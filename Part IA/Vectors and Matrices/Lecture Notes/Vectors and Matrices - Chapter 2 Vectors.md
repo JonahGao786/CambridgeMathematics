@@ -6,14 +6,14 @@ chapter: 2
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: 29
+source_pages: 36
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
 
 > [!abstract] Overview
-> Vectors in $\mathbb R^n$: addition, scalar multiplication, span; the dot product, Cauchy–Schwarz and the triangle inequality; orthonormal bases; cross and triple products; lines and planes; index notation ($\delta_{ij}$, $\varepsilon_{ijk}$, summation convention) with its applications; then general vector spaces over $\mathbb R$ or $\mathbb C$, subspaces and linear independence.
+> Vectors in $\mathbb R^n$: addition, scalar multiplication, span; the dot product, Cauchy–Schwarz and the triangle inequality; orthonormal bases; cross and triple products; lines and planes; index notation ($\delta_{ij}$, $\varepsilon_{ijk}$, summation convention) with its applications; then general vector spaces over $\mathbb R$ or $\mathbb C$: subspaces, linear independence, bases and dimension, and inner products on real and complex spaces.
 > Prerequisite: [[Vectors and Matrices - Chapter 1 Complex Numbers]].
 
 ## Results index
@@ -52,6 +52,13 @@ tags: [lecture, vectors-and-matrices]
 | [[#Definition — Vector space over a field]] | $\mathbb F=\mathbb R$ or $\mathbb C$; $\mathbb R^n$, $\mathbb C^n$ | 26–27 |
 | [[#Definition — Subspace]] | closed under linear combinations | 27–28 |
 | [[#Definition — Linear independence]] | $\sum\lambda_i\mathbf v_i=\mathbf 0\Rightarrow\lambda_i=0$ | 29 |
+| [[#Proposition — Independence and the scalar triple product]] | $[\mathbf a,\mathbf b,\mathbf c]\ne0\iff$ independent | 30 |
+| [[#Definition — Basis]] | spans and independent; unique coordinates | 30–31 |
+| [[#Theorem — All bases have the same size]] | basis size is well defined | 32 |
+| [[#Definition — Dimension]] | $\dim V$; $\dim_{\mathbb R}\mathbb C^n=2n$ | 32 |
+| [[#Proposition — Spanning and independent sets in dimension n]] | $m\ge n$, $k\le n$; extend/reduce to a basis | 33 |
+| [[#Definition — Inner product over a complex vector space]] | Hermitian symmetry, sesquilinear, $\langle\mathbf z,\mathbf w\rangle=\sum\bar z_jw_j$ | 33–34 |
+| [[#Theorem — Cauchy-Schwarz and triangle inequalities for inner products]] | $\lvert\langle\mathbf v,\mathbf w\rangle\rvert\le\lVert\mathbf v\rVert\lVert\mathbf w\rVert$ in any inner product space | 36 |
 
 ## 2.1 Vectors
 
@@ -633,3 +640,93 @@ so at least one vector is a linear combination of the others.
 **Example.** $\mathbf u=(1,0)$, $\mathbf v_2=(0,1)$, $\mathbf v_3=(0,2)$: $\mathbf v_3=2\mathbf v_2$, so the set is linearly dependent — yet $\mathbf u\ne\lambda\mathbf v_2+\mu\mathbf v_3$ for all $\lambda,\mu$. (Dependence means *some* vector is a combination of the others, not every one.)
 
 Any set containing $\mathbf 0$ is linearly dependent.
+
+### Proposition — Independence and the scalar triple product
+
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$: $\ \mathbf a\cdot(\mathbf b\times\mathbf c)\ne0$ if and only if $\mathbf a,\mathbf b,\mathbf c$ are linearly independent.
+
+**Proof.** ($\Rightarrow$) Suppose $\alpha\mathbf a+\beta\mathbf b+\gamma\mathbf c=\mathbf 0$. Dotting with $\mathbf b\times\mathbf c$,
+$$(\alpha\mathbf a+\beta\mathbf b+\gamma\mathbf c)\cdot(\mathbf b\times\mathbf c)=\alpha\,\mathbf a\cdot(\mathbf b\times\mathbf c)=0\ \Rightarrow\ \alpha=0.$$
+Dotting with $\mathbf c\times\mathbf a$ and $\mathbf a\times\mathbf b$ gives $\beta=0$ and $\gamma=0$ in the same way. So they are linearly independent.
+
+($\Leftarrow$) If they are independent, the parallelepiped they span has non-zero volume, and the volume is $|\mathbf a\cdot(\mathbf b\times\mathbf c)|$, so $\mathbf a\cdot(\mathbf b\times\mathbf c)\ne0$.
+
+### Definition — Basis
+
+A **basis** of $V$ is a set $B=\{\mathbf e_1,\dots,\mathbf e_n\}$ that spans $V$ and is linearly independent. Every $\mathbf v\in V$ then has a unique expression
+$$\mathbf v=\sum_{i=1}^nv^i\mathbf e_i,$$
+and the $v^i$ are the **coordinates** of $\mathbf v$.
+
+**Example ($\mathbb R^n$).** The **standard (canonical) basis** $\mathbf e_1=(1,0,\dots,0),\dots,\mathbf e_n=(0,\dots,0,1)$. It spans: $(x_1,\dots,x_n)=x_1\mathbf e_1+\dots+x_n\mathbf e_n$. It is independent: $\sum\alpha_i\mathbf e_i=(0,\dots,0)\Rightarrow\alpha_1=\dots=\alpha_n=0$.
+
+**Example ($\mathbb R^2$).** $\mathbf b_1=(1,1)$, $\mathbf b_2=(1,-1)$ form a basis:
+- spanning: $(x,y)=\frac{x+y}2\mathbf b_1+\frac{x-y}2\mathbf b_2$;
+- independent: $\alpha\mathbf b_1+\beta\mathbf b_2=\mathbf 0\Rightarrow\alpha+\beta=0,\ \alpha-\beta=0\Rightarrow\alpha=\beta=0$.
+
+So $\{\mathbf e_1,\mathbf e_2\}$ and $\{\mathbf b_1,\mathbf b_2\}$ are two bases of $\mathbb R^2$. In general, two non-parallel vectors $\mathbf a,\mathbf b\in\mathbb R^2$ form a basis.
+
+### Theorem — All bases have the same size
+
+Any two finite bases of a vector space contain the same number of vectors. *(No proof in the notes.)*
+
+### Definition — Dimension
+
+The **dimension** of a finite-dimensional vector space $V$ is the number of vectors in any basis of $V$.
+
+**Examples.**
+- The zero space $\{\mathbf 0\}$ has dimension $0$.
+- The standard basis gives $\dim_{\mathbb R}\mathbb R^n=n$ and $\dim_{\mathbb C}\mathbb C^n=n$.
+- Regard $\mathbb C^n$ as a **real** vector space. Write $z_j=x_j+iy_j$ and let $\mathbf e_j=(0,\dots,1,\dots,0)$, $\mathbf f_j=i\mathbf e_j=(0,\dots,i,\dots,0)$. Then $\mathbf z=\sum x_j\mathbf e_j+\sum y_j\mathbf f_j$ is the unique expression of $\mathbf z$, so $\{\mathbf e_1,\dots,\mathbf e_n,\mathbf f_1,\dots,\mathbf f_n\}$ is a basis of $\mathbb C^n$ over $\mathbb R$ and $\dim_{\mathbb R}\mathbb C^n=2n$.
+
+### Proposition — Spanning and independent sets in dimension n
+
+Let $\dim V=n$.
+
+1. If $m$ vectors span $V$ then $m\ge n$; if $m>n$ we can remove $m-n$ of them until a basis remains.
+2. If $k$ vectors are linearly independent then $k\le n$; if $k<n$ we can add vectors to obtain a basis.
+
+Consequently, if $U$ is a subspace of a finite-dimensional $V$, choose a basis $\{\mathbf u_1,\dots,\mathbf u_k\}$ of $U$ and extend it to a basis $\{\mathbf u_1,\dots,\mathbf u_k,\mathbf u_{k+1},\dots,\mathbf u_n\}$ of $V$. In particular $\dim U=k\le n=\dim V$. *(No proof in the notes.)*
+
+## 2.10 Inner products and orthogonality
+
+**Real inner product.** A real inner product satisfies symmetry, bilinearity and positive definiteness (see [[#Definition — Inner product]]). The standard one on $\mathbb R^n$ is
+$$\langle\mathbf x,\mathbf y\rangle=\mathbf x\cdot\mathbf y=\sum_{i=1}^nx_iy_i=\mathbf x^{\mathsf T}\mathbf y.$$
+
+**Complex inner products.** For $\mathbf z,\mathbf w\in\mathbb C^n$ the attempt $\langle\mathbf z,\mathbf w\rangle:=\sum_jz_jw_j$ is replaced by
+$$\langle\mathbf z,\mathbf w\rangle:=\sum_{j}\bar z_jw_j.$$
+
+> [!note] Explanation
+> The attempt fails positivity: for $\mathbf z=(i)\in\mathbb C^1$, $\sum z_j^2=-1$. With the conjugate, $\langle\mathbf z,\mathbf z\rangle=\sum|z_j|^2\ge0$.
+
+### Definition — Inner product over a complex vector space
+
+An **inner product** on a complex vector space $V$ is a map $V\times V\to\mathbb C$, $(\mathbf v,\mathbf w)\mapsto\langle\mathbf v,\mathbf w\rangle$, such that
+
+1. **Hermitian symmetry:** $\langle\mathbf w,\mathbf v\rangle=\overline{\langle\mathbf v,\mathbf w\rangle}$;
+2. **linearity in the second argument:** $\langle\mathbf u,\alpha\mathbf v+\beta\mathbf w\rangle=\alpha\langle\mathbf u,\mathbf v\rangle+\beta\langle\mathbf u,\mathbf w\rangle$;
+3. **positive definiteness:** $\langle\mathbf v,\mathbf v\rangle$ is real and non-negative, and is $0$ exactly when $\mathbf v=\mathbf 0$.
+
+From 1) and 2): **conjugate linearity (antilinearity) in the first argument**,
+$$\langle\alpha\mathbf u+\beta\mathbf v,\mathbf w\rangle=\bar\alpha\langle\mathbf u,\mathbf w\rangle+\bar\beta\langle\mathbf v,\mathbf w\rangle,$$
+so the product is **sesquilinear**. The **standard inner product** on $\mathbb C^n$ is $\langle\mathbf z,\mathbf w\rangle=\sum_j\bar z_jw_j$.
+
+**Example ($n=1$).** For $z=a_1+ia_2$, $w=b_1+ib_2$ with $\mathbf a=(a_1,a_2)$, $\mathbf b=(b_1,b_2)$:
+$$\langle z,w\rangle=\bar zw=\mathbf a\cdot\mathbf b+i[\mathbf a,\mathbf b]=(a_1b_1+a_2b_2)+i(a_1b_2-a_2b_1),$$
+the dot product plus $i$ times the signed area ([[#Signed area in two dimensions]]).
+
+**Norms and orthogonality.** The **induced norm** is $\|\mathbf v\|=\sqrt{\langle\mathbf v,\mathbf v\rangle}$, and $\mathbf v\perp\mathbf w\iff\langle\mathbf v,\mathbf w\rangle=0$. For the standard inner products, $\|\mathbf x\|=\sqrt{\sum_ix_i^2}$ on $\mathbb R^n$ and $\|\mathbf z\|=\sqrt{\sum_j|z_j|^2}$ on $\mathbb C^n$; also written $|\mathbf x|$, $|\mathbf z|$. In both cases $\langle\mathbf e_i,\mathbf e_j\rangle=\delta_{ij}$, and the coordinates are $x_i=\langle\mathbf e_i,\mathbf x\rangle$, $z_i=\langle\mathbf e_i,\mathbf z\rangle$.
+
+### Theorem — Cauchy-Schwarz and triangle inequalities for inner products
+
+In any real or complex inner product space,
+$$|\langle\mathbf v,\mathbf w\rangle|\le\|\mathbf v\|\|\mathbf w\|,\qquad\|\mathbf v+\mathbf w\|\le\|\mathbf v\|+\|\mathbf w\|.$$
+
+**Proof (Cauchy–Schwarz).** We may assume $\mathbf w\ne\mathbf 0$. Put $\lambda=\dfrac{\langle\mathbf w,\mathbf v\rangle}{\|\mathbf w\|^2}$, so that $\langle\mathbf w,\mathbf v-\lambda\mathbf w\rangle=\langle\mathbf w,\mathbf v\rangle-\lambda\|\mathbf w\|^2=0$. Then, using Hermitian symmetry ($\langle\mathbf w,\mathbf v\rangle=\overline{\langle\mathbf v,\mathbf w\rangle}$),
+$$\begin{aligned}
+0\le\|\mathbf v-\lambda\mathbf w\|^2&=\langle\mathbf v-\lambda\mathbf w,\mathbf v-\lambda\mathbf w\rangle=\|\mathbf v\|^2-\lambda\langle\mathbf v,\mathbf w\rangle-\bar\lambda\langle\mathbf w,\mathbf v\rangle+|\lambda|^2\|\mathbf w\|^2\\
+&=\|\mathbf v\|^2-2\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}+\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}=\|\mathbf v\|^2-\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}.
+\end{aligned}$$
+Multiplying by $\|\mathbf w\|^2>0$: $\|\mathbf v\|^2\|\mathbf w\|^2\ge|\langle\mathbf v,\mathbf w\rangle|^2$. Taking non-negative square roots gives Cauchy–Schwarz. The same argument applies over $\mathbb R$, where complex conjugation has no effect.
+
+> [!note] Explanation
+> The triangle inequality follows as in [[#Theorem — Triangle inequality]]: $\|\mathbf v+\mathbf w\|^2=\|\mathbf v\|^2+\|\mathbf w\|^2+2\operatorname{Re}\langle\mathbf v,\mathbf w\rangle\le(\|\mathbf v\|+\|\mathbf w\|)^2$, since $\operatorname{Re}\langle\mathbf v,\mathbf w\rangle\le|\langle\mathbf v,\mathbf w\rangle|$.
