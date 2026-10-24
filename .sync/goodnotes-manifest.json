@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-23T12:30:00Z",
+  "last_inventory_at": "2026-10-24T13:00:00Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
   "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
@@ -1228,7 +1228,7 @@
       "source_file_name": "Ch.1 Elementary Number Theory.pdf",
       "source_url": "https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-22T14:37:53.560Z",
+      "observed_source_modified_timestamp": "2026-10-24T12:21:13.894Z",
       "processed_source_modified_timestamp": "2026-10-22T14:37:53.560Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
@@ -1241,7 +1241,7 @@
       "material_type": "handwritten lecture notes",
       "course": "Part IA Numbers and Sets",
       "source_date": null,
-      "status": "processed",
+      "status": "pending",
       "classification": "study_material",
       "skip_reason": null,
       "unresolved_todos": [
@@ -1418,7 +1418,8 @@
         "p.21: \"unless a|b\" -> alpha|b",
         "p.12: x,y in R -> Z"
       ],
-      "new_pages_this_run": "20-23 (units mod n, Props 10/10', Corollary 11, congruence examples, simultaneous congruences, CRT statement)"
+      "new_pages_this_run": "20-23 (units mod n, Props 10/10', Corollary 11, congruence examples, simultaneous congruences, CRT statement)",
+      "pending_reason": "download_file_content failed twice ('message too large' closes the Drive MCP connection; PDF is ~7 MB). Not re-read; existing note left unchanged. Needs the Drive REST API with a fresh drive.readonly token."
     },
     "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo": {
       "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
@@ -1751,9 +1752,9 @@
       "source_file_name": "Ch.2 Vectors.pdf",
       "source_url": "https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-22T14:38:30.394Z",
+      "observed_source_modified_timestamp": "2026-10-24T12:31:57.463Z",
       "processed_source_modified_timestamp": "2026-10-22T14:38:30.394Z",
-      "status": "processed",
+      "status": "pending",
       "classification": "study_material",
       "skip_reason": null,
       "total_page_count": 29,
@@ -2009,7 +2010,8 @@
         "p.28: x+y+z=0 -> 2x+y+z=0 (normal v3=(2,1,1))",
         "p.29: example vectors shown with two components; written in R^2"
       ],
-      "new_pages_this_run": "24-29 (signed-area remark, spherical trigonometry, spheres, vector spaces over R and C, subspaces, linear independence)"
+      "new_pages_this_run": "24-29 (signed-area remark, spherical trigonometry, spheres, vector spaces over R and C, subspaces, linear independence)",
+      "pending_reason": "download_file_content failed twice ('message too large' closes the Drive MCP connection; PDF is ~7 MB). Not re-read; existing note left unchanged. Needs the Drive REST API with a fresh drive.readonly token."
     },
     "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv": {
       "drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
@@ -2977,17 +2979,28 @@
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-23",
-    "completed_at": "2026-10-23T12:30:00Z",
-    "scope": "Normal sync of non-example-sheet sources; Example/Examples Sheets folders ignored at user request (Groups 1.pdf modified but skipped).",
-    "new_source_count": 1,
+    "date": "2026-10-24",
+    "completed_at": "2026-10-24T13:00:00Z",
+    "scope": "Normal sync; Example/Examples Sheets folders ignored at user request.",
+    "new_source_count": 0,
     "modified_source_count": 2,
-    "processed_source_count": 3,
-    "pending_source_count": 0,
-    "reading_method": "download_file_content -> base64 JSON decoded outside the repo; pdftoppm 130 dpi; all pages of Ch.2 Lagrange (4) and Ch.4 ODE (10) viewed as images; DE Ch.4 pages 1-4 confirmed pixel-identical to the previously read version. Groups Ch.1 (34 pp) downloaded with the Drive REST API and a user-supplied read-only access token (not stored), then all pages viewed.",
-    "visually_inspected_page_count": 48,
-    "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-10-23"
+    "processed_source_count": 0,
+    "pending_source_count": 2,
+    "reading_method": "Drive folder listed recursively (non-example folders, all pages). Two modified lecture PDFs could not be downloaded via the MCP connector.",
+    "visually_inspected_page_count": 0,
+    "pending": [
+      {
+        "drive_file_id": "1UTg7i2PPaEujlaMuByJELly5mOqiUrxW",
+        "source_modified": "2026-10-24T12:21:13.894Z",
+        "reason": "download_file_content failed twice ('message too large' closes the Drive MCP connection; PDF is ~7 MB). Not re-read; existing note left unchanged. Needs the Drive REST API with a fresh drive.readonly token."
+      },
+      {
+        "drive_file_id": "1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN",
+        "source_modified": "2026-10-24T12:31:57.463Z",
+        "reason": "download_file_content failed twice ('message too large' closes the Drive MCP connection; PDF is ~7 MB). Not re-read; existing note left unchanged. Needs the Drive REST API with a fresh drive.readonly token."
+      }
+    ],
+    "commit_message": "notes: record pending Goodnotes updates from 2026-10-24"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
