@@ -37,7 +37,16 @@ Read these references before writing any note; they are part of the workflow:
 
 ## 2. Get page images
 
-Practical path that works in Claude Code cloud sessions:
+**Preferred: service account.** If the user has provided a service-account key (JSON, kept outside the repo, e.g. under `~/.claude/uploads/`), use `scripts/drive_sa.py` — it lists the folder recursively and downloads files of any size, so the connector's size crash is avoided:
+
+```
+python3 scripts/drive_sa.py KEY.json list 1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX     # id, modifiedTime, size, path
+python3 scripts/drive_sa.py KEY.json get FILE_ID <scratchpad>/name.pdf
+```
+
+Requirements: the Google Drive API must be enabled in the key's Cloud project, and the Goodnotes folder must be shared (Viewer) with the key's `client_email`. A 403 "API has not been used … or is disabled" or 404 on the folder means one of these is missing: tell the user, and fall back to the connector below. Treat the key as a secret: never copy it into the repo, a commit, the manifest or a report, and never print it. `rclone` with `--drive-service-account-file` is an equivalent alternative.
+
+Fallback — the Drive connector, which works in Claude Code cloud sessions for files up to a few MB:
 
 1. `download_file_content(fileId)` — large results are saved to a JSON file on disk (`{content: base64, id, title, mimeType}`). Decode it with a small Python script (`python3 -I`) into the scratchpad, never into the repo.
 2. Render with Poppler: `pdftoppm -r 130 -png file.pdf out/prefix` (PyMuPDF if available). `pdfinfo` gives the page count.
