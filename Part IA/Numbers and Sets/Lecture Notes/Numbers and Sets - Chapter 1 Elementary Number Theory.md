@@ -410,4 +410,4 @@ where $z=u_1\cdots u_{\varphi(m)}$ is a product of units, hence a unit. Cancelli
 
 Let $p$ be prime. Then $x^2\equiv1\pmod p\iff x\equiv1\pmod p$ or $x\equiv-1\pmod p$.
 
-> [!todo] p. 26 — the notebook ends after the statement; add the proof when the next lecture is synced.
+> [!todo] Proof of Lemma 14 missing (p. 26).

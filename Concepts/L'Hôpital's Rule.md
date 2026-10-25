@@ -8,7 +8,7 @@ tags: [concept, differential-equations]
 # L'Hôpital's Rule
 
 > [!abstract] In one paragraph
-> For a $0/0$ limit, replace $f/g$ by $f'/g'$. The lecture proves it, under extra assumptions, by first-order Taylor expansion: near $x_0$ both functions are approximately linear, so their ratio is the ratio of slopes.
+> For a $0/0$ limit, replace $f/g$ by $f'/g'$. Proof idea (under extra assumptions), by first-order Taylor expansion: near $x_0$ both functions are approximately linear, so their ratio is the ratio of slopes.
 
 ## Statement
 
