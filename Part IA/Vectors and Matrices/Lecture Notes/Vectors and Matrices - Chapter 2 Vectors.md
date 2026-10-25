@@ -680,7 +680,7 @@ The **dimension** of a finite-dimensional vector space $V$ is the number of vect
 
 
 > [!note] Explanation — dimension as "free coordinates"
-> Your intuition is right: $\dim V$ is the number of coordinates you can choose **freely** to specify a vector of $V$. Once a basis is fixed, a vector is exactly its list of $n=\dim V$ coordinates $(v^1,\dots,v^n)$, and any such list occurs, so there are no constraints between them. The number of components written down can be larger than this: the vectors in the plane $2x+y+z=0$ have three components $(x,y,z)$, but only two are free (choose $x,y$; then $z=-2x-y$), so that plane has dimension $2$. Likewise $\mathbb C^n$ has $n$ complex $=2n$ real free numbers, so $\dim_{\mathbb R}\mathbb C^n=2n$ while $\dim_{\mathbb C}\mathbb C^n=n$. (Added explanation, not from the lecture.)
+> $\dim V$ is the number of coordinates you can choose **freely** to specify a vector of $V$. Once a basis is fixed, a vector is exactly its list of $n=\dim V$ coordinates $(v^1,\dots,v^n)$, and any such list occurs, so there are no constraints between them. The number of components written down can be larger than this: the vectors in the plane $2x+y+z=0$ have three components $(x,y,z)$, but only two are free (choose $x,y$; then $z=-2x-y$), so that plane has dimension $2$. Likewise $\mathbb C^n$ has $n$ complex $=2n$ real free numbers, so $\dim_{\mathbb R}\mathbb C^n=2n$ while $\dim_{\mathbb C}\mathbb C^n=n$. 
 
 ### Proposition — Spanning and independent sets in dimension n
 
