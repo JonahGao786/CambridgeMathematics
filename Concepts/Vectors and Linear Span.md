@@ -8,7 +8,7 @@ tags: [concept, vectors-and-matrices]
 # Vectors and Linear Span
 
 > [!abstract] In one paragraph
-> Vectors can be added (parallelogram rule) and scaled. The span of some vectors is everything you can build from them by linear combinations; it is always a subspace. Vectors are linearly independent when no non-trivial combination gives $\mathbf 0$.
+> Vectors can be added (parallelogram rule) and scaled. The span of some vectors is everything you can build from them by linear combinations; it is always a subspace. Vectors are linearly independent when no non-trivial combination gives $\mathbf 0$. A basis is an independent spanning set; the number of vectors in it is the dimension.
 
 ## Definitions
 
@@ -24,6 +24,9 @@ tags: [concept, vectors-and-matrices]
 - For $\mathbf a\ne\mathbf 0$, $\operatorname{span}\{\mathbf a\}$ is the line through $O$ along $\mathbf a$; for non-parallel non-zero $\mathbf a,\mathbf b$, $\operatorname{span}\{\mathbf a,\mathbf b\}$ is the plane through $O$ containing them.
 - Every span is a subspace; a line or plane missing the origin is not.
 - Dependent $\iff$ some $\mathbf v_j$ is a combination of the others. Any set containing $\mathbf 0$ is dependent.
+- **Independence and the triple product.** In $\mathbb R^3$, $\mathbf a\cdot(\mathbf b\times\mathbf c)\ne0$ iff $\mathbf a,\mathbf b,\mathbf c$ are independent. *Idea:* dot a vanishing combination with $\mathbf b\times\mathbf c$, $\mathbf c\times\mathbf a$, $\mathbf a\times\mathbf b$. → [[Vectors and Matrices - Chapter 2 Vectors#Proposition — Independence and the scalar triple product|proof]]
+- **Basis and coordinates.** A basis spans and is independent, so each vector has unique coordinates; e.g. $\{\mathbf e_i\}$ or $\{(1,1),(1,-1)\}$ in $\mathbb R^2$. → [[Vectors and Matrices - Chapter 2 Vectors#Definition — Basis|lecture]]
+- **Dimension.** All bases of $V$ have the same size $\dim V$; $\dim_{\mathbb R}\mathbb R^n=\dim_{\mathbb C}\mathbb C^n=n$, but $\dim_{\mathbb R}\mathbb C^n=2n$. A spanning set has at least $\dim V$ vectors, an independent set at most $\dim V$, and either can be cut down or extended to a basis; so $\dim U\le\dim V$ for a subspace $U$. → [[Vectors and Matrices - Chapter 2 Vectors#Definition — Dimension|lecture]] · [[Vectors and Matrices - Chapter 2 Vectors#Proposition — Spanning and independent sets in dimension n|proposition]]
 
 ## Pitfalls
 

@@ -21,6 +21,7 @@ Per-file record:
   "markdown_paths": ["…"],
   "total_page_count": 29,
   "visually_inspected_pages": "1-29",
+  "page_hashes": ["<20-hex per page, from scripts/pagediff.py hash>", "..."],
   "normalizations": ["p. 6: (x-2)(x-5) → (x-3)"],
   "unresolved_todos": ["p. 12: …"],
   "pending_reason": null
@@ -46,3 +47,6 @@ Existing extra fields may stay; update the ones that change.
 5. Push without force to the target branch (default branch unless the session names one). If the branch moved, fetch, reconcile conservatively, retry.
 6. Confirm the remote contains the commit before reporting success.
 7. If nothing needs changing, make no commit and say why.
+
+
+`page_hashes` (one entry per page of the processed PDF) lets the next run view only new or changed pages (`scripts/pagediff.py diff`). Update it on every processed run; `visually_inspected_pages` then lists the pages actually viewed, with a note that the rest matched the baseline.
