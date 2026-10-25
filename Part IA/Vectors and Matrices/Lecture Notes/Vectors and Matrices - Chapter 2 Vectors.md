@@ -678,6 +678,10 @@ The **dimension** of a finite-dimensional vector space $V$ is the number of vect
 - The standard basis gives $\dim_{\mathbb R}\mathbb R^n=n$ and $\dim_{\mathbb C}\mathbb C^n=n$.
 - Regard $\mathbb C^n$ as a **real** vector space. Write $z_j=x_j+iy_j$ and let $\mathbf e_j=(0,\dots,1,\dots,0)$, $\mathbf f_j=i\mathbf e_j=(0,\dots,i,\dots,0)$. Then $\mathbf z=\sum x_j\mathbf e_j+\sum y_j\mathbf f_j$ is the unique expression of $\mathbf z$, so $\{\mathbf e_1,\dots,\mathbf e_n,\mathbf f_1,\dots,\mathbf f_n\}$ is a basis of $\mathbb C^n$ over $\mathbb R$ and $\dim_{\mathbb R}\mathbb C^n=2n$.
 
+
+> [!note] Explanation — dimension as "free coordinates"
+> Your intuition is right: $\dim V$ is the number of coordinates you can choose **freely** to specify a vector of $V$. Once a basis is fixed, a vector is exactly its list of $n=\dim V$ coordinates $(v^1,\dots,v^n)$, and any such list occurs, so there are no constraints between them. The number of components written down can be larger than this: the vectors in the plane $2x+y+z=0$ have three components $(x,y,z)$, but only two are free (choose $x,y$; then $z=-2x-y$), so that plane has dimension $2$. Likewise $\mathbb C^n$ has $n$ complex $=2n$ real free numbers, so $\dim_{\mathbb R}\mathbb C^n=2n$ while $\dim_{\mathbb C}\mathbb C^n=n$. (Added explanation, not from the lecture.)
+
 ### Proposition — Spanning and independent sets in dimension n
 
 Let $\dim V=n$.
