@@ -49,7 +49,7 @@ Requirements: the Google Drive API must be enabled in the key's Cloud project, a
 Fallback — the Drive connector, which works in Claude Code cloud sessions for files up to a few MB:
 
 1. `download_file_content(fileId)` — large results are saved to a JSON file on disk (`{content: base64, id, title, mimeType}`). Decode it with a small Python script (`python3 -I`) into the scratchpad, never into the repo.
-2. Render with Poppler: `pdftoppm -r 130 -png file.pdf out/prefix` (PyMuPDF if available). `pdfinfo` gives the page count.
+2. (Before viewing, run `pagediff.py` as in §3 to learn which pages matter.) Render with Poppler: `pdftoppm -r 130 -png file.pdf out/prefix` (PyMuPDF if available). `pdfinfo` gives the page count.
 3. View each PNG with the image-capable Read tool. Crop/zoom (`pdftoppm -r 250 -x … -y … -W … -H …`) when exponents, subscripts, signs, Greek letters or diagram labels are unclear.
 4. Very large PDFs (≈7 MB+) can crash the Drive connector. Retry once; if it fails again, mark that source `pending` with the exact failed operation. For a re-organization run you may restructure its existing note conservatively (no new mathematical claims), and must say so in the report and manifest.
 5. Extracted text/OCR is an aid only. Never claim visual reading you did not do.
@@ -58,11 +58,12 @@ Fallback — the Drive connector, which works in Claude Code cloud sessions for 
 
 For each source:
 
-1. Read **every page**; record the page count and pages inspected.
-2. While reading, build a **results list**: every numbered item (Definition 1.4, Lemma 1.6, Proposition 1.5, Theorem 1.20, Corollary …) with its number, name and page, plus important unnumbered named results. This becomes the note's headings and results index.
-3. Identify the lecturer's section structure (chapter → numbered sections). Notes follow that structure, **not** page boundaries.
-4. Note crossed-out proofs (→ wrong/incomplete proof), unfinished work, highlighted terms (→ bold defined terms), and diagrams.
-5. Classify the material (lecture notes, problem sheet, worked attempts, handout, non-study) by content.
+1. **Find which pages need viewing.** Run `python3 scripts/pagediff.py diff NEW.pdf .sync/goodnotes-manifest.json FILE_ID --render <scratchpad>/pages`. It compares per-page pixel hashes with `files[FILE_ID].page_hashes`, matching by content so inserted/moved pages are handled, and prints the pages to VIEW (rendered into the output dir). Pages whose hash is already in the baseline are visually identical to what was processed and are **not** re-viewed; "removed/edited old pages" means content that disappeared — check the note for it. No baseline (new source, or record without `page_hashes`) → view **every** page. After processing, store the full list: `python3 scripts/pagediff.py hash NEW.pdf` → `page_hashes` in the record. A hash baseline may be taken from a PDF whose Drive `modifiedTime` equals `processed_source_modified_timestamp` without viewing it (it is what the note was built from).
+2. Read every page that is flagged (or all pages without a baseline); record the page count, the pages actually viewed, and that the rest matched the baseline hashes.
+3. While reading, build a **results list**: every numbered item (Definition 1.4, Lemma 1.6, Proposition 1.5, Theorem 1.20, Corollary …) with its number, name and page, plus important unnumbered named results. This becomes the note's headings and results index.
+4. Identify the lecturer's section structure (chapter → numbered sections). Notes follow that structure, **not** page boundaries.
+5. Note crossed-out proofs (→ wrong/incomplete proof), unfinished work, highlighted terms (→ bold defined terms), and diagrams.
+6. Classify the material (lecture notes, problem sheet, worked attempts, handout, non-study) by content.
 
 ## 4. Write the notes
 

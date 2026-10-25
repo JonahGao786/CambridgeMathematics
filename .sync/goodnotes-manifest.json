@@ -1078,6 +1078,42 @@
         "Prop 1.25: source leaves \"corners go to corners\" as an exercise (idea: longest diagonals); earlier notes' affine/extreme-point argument removed",
         "Kite lemma: geometric proof as in source; algebraic check kept only as an Explanation callout (added, not source)",
         "Cyclic group definition is unnumbered in the source (between Cor 1.36 and Thm 1.38)"
+      ],
+      "page_hashes": [
+        "b11e70af8ce4b7c1385a",
+        "7fbce565bbc4325ab1d0",
+        "7e35286926b170361381",
+        "5d39f61307e86049187e",
+        "8d59c06230a34ec7b800",
+        "f1534a2a115183b3fd51",
+        "dc90a96fae5ef22fe9cc",
+        "3e84ae362bb37ffe0834",
+        "8d385440651691300f14",
+        "99dfe6803ed20af2ecb0",
+        "b03be4a2ec7de0e4d17e",
+        "f60119195fe5aab527d9",
+        "f1a277a8cac9f963a6fb",
+        "25c4474002cff806cf74",
+        "993e12fb26a95eb6df4d",
+        "f6a09d30c1d49a442de3",
+        "7a7a7938f48e421c3c1b",
+        "61da35fa6bab3c7c2ac1",
+        "84944520acc96b691372",
+        "5fe0afb16284d55a3811",
+        "244fa411b55f025a253a",
+        "4347b48b0f9de6e409d9",
+        "6eac1ec577991ce23ae0",
+        "d2db97b578c9a897767e",
+        "dca0e139d0115a6e0a07",
+        "70a1d3e8cb1b992beaf7",
+        "ee9e7e8cd2798b8ff80b",
+        "1207196f1790454626b1",
+        "6d5c08bda39ecca0915c",
+        "ce17f4b73ef746b53f35",
+        "abc1baba9c82b20c5f9e",
+        "9e9628a66a4419797f8e",
+        "b56f512f8e3de1f2c8ed",
+        "26b6e6cd2de961e142f9"
       ]
     },
     "1hu9l9bS2XJpa1IA9AN4ddMDLBggMxSVs": {
@@ -1401,7 +1437,35 @@
         "p.21: \"unless a|b\" -> alpha|b",
         "p.12: x,y in R -> Z"
       ],
-      "new_pages_this_run": "20-23 (units mod n, Props 10/10', Corollary 11, congruence examples, simultaneous congruences, CRT statement)"
+      "new_pages_this_run": "20-23 (units mod n, Props 10/10', Corollary 11, congruence examples, simultaneous congruences, CRT statement)",
+      "page_hashes": [
+        "c3d55b5b262586bdc32a",
+        "f7d0024b3306bbe1f17b",
+        "68634562838efede1b59",
+        "fd7b30e78b6cb1259560",
+        "bae9a2bdfa28dd58fd7a",
+        "4963f7aec477794fa2ae",
+        "c5feda844cc0199fa472",
+        "d10638373be82a0a77f5",
+        "0d6f3708b4fb955d5dd6",
+        "f6dbad7f8eb3cd59a728",
+        "71803914b7dde35ccd4c",
+        "56a67e9b4317c52e5c7c",
+        "0f8cae446d082d7a9aab",
+        "a2a07ae8235f48dd4fe8",
+        "51defb0d8c483efabd11",
+        "e104ac0fe2610d3acb31",
+        "e66919819fea53db6d76",
+        "3539fad865d2d61d6286",
+        "ae03059baf08ec4396db",
+        "45aafebdd57af68d5853",
+        "67c16971cb60b1461318",
+        "8b0e985add5b982c0813",
+        "9c6d2d255432c9899429",
+        "2a197b7462b8af751304",
+        "c4dd809213423727cf76",
+        "063629c8191e2b804f4d"
+      ]
     },
     "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo": {
       "drive_file_id": "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo",
@@ -1974,7 +2038,45 @@
         "p.28: x+y+z=0 -> 2x+y+z=0 (normal v3=(2,1,1))",
         "p.29: example vectors shown with two components; written in R^2"
       ],
-      "new_pages_this_run": "24-29 (signed-area remark, spherical trigonometry, spheres, vector spaces over R and C, subspaces, linear independence)"
+      "new_pages_this_run": "24-29 (signed-area remark, spherical trigonometry, spheres, vector spaces over R and C, subspaces, linear independence)",
+      "page_hashes": [
+        "c1f2076f8e4e521fbd29",
+        "600cc63086a3b1b9e7c4",
+        "c208f5c31df47bfae3f4",
+        "1501f96153f207664770",
+        "681d07cd54c836e27b92",
+        "a05b72f7f1a9461115df",
+        "17bdd998c64e7abb5a85",
+        "1f5cd6321765a473c5b7",
+        "914aebd321382aef7eea",
+        "c4ce0bfa989fe63d53c4",
+        "222d45a710d387fb7208",
+        "feb9a8510dc557019073",
+        "2d413624b1a652eef7b6",
+        "080498ed850f70f93dae",
+        "953481dd3619c887abbc",
+        "c22709cae372cc7ad4b3",
+        "4ae4867d915cc9c0d4b3",
+        "8bf0b942a9e7e66a0ebb",
+        "4497358c5de93e1a5671",
+        "e198612520e2dd4282b8",
+        "78dded47449093326147",
+        "3c868afaa8da7640b172",
+        "505e2607d5dc13c7adc7",
+        "1abddeae83a6fab1bbb4",
+        "f40d253a72dc718e7fba",
+        "635a8c384d854e9f87fb",
+        "67981288215778521afe",
+        "f239848cc4d425a6e483",
+        "6ed8e3748644e713c8d6",
+        "60ddcd85bddd950f782c",
+        "bb223c16812d4e2f9e78",
+        "38a310d5b957bdee510c",
+        "346dda809913d687bed5",
+        "9ae6786fd10ed11788bc",
+        "d96aa025c10afc31afe0",
+        "4bfeef2e8305fe63a8d4"
+      ]
     },
     "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv": {
       "drive_file_id": "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv",
@@ -2915,6 +3017,18 @@
       "new_pages_2026_10_23": "5 (extended) and 6-10: limit of forward Euler, series solutions, forced equations, constant and eigenfunction forcing, integrating factor",
       "normalizations_2026_10_23": [
         "p.8: second term of b(t) written with e^{-k_b t}; corrected to e^{-k_a t} (consistent with the PI and the b(0)=0 solution)"
+      ],
+      "page_hashes": [
+        "4635fc79880c8a9e0287",
+        "ab4dcb4d3150f8281e3c",
+        "255340c125be251d4aa1",
+        "f9124706489ca67177bf",
+        "a3a9904f7986544fc5e8",
+        "1b8accdd3df70de81ca4",
+        "210914158638a84c73b3",
+        "d8fd5fac818141b0a198",
+        "60a593a36c5817ecd29c",
+        "7009db4c749e0f266f3f"
       ]
     },
     "1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv": {
@@ -2936,7 +3050,13 @@
       "visually_inspected_pages": "1-4",
       "normalizations": [],
       "unresolved_todos": [],
-      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally)."
+      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
+      "page_hashes": [
+        "7eb6989873a41fe15e09",
+        "8e85296eaadca69dd224",
+        "4a5b9d0e314ebbc541b1",
+        "57a207344a2357740c6a"
+      ]
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
