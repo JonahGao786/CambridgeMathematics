@@ -667,7 +667,7 @@ So $\{\mathbf e_1,\mathbf e_2\}$ and $\{\mathbf b_1,\mathbf b_2\}$ are two bases
 
 ### Theorem — All bases have the same size
 
-Any two finite bases of a vector space contain the same number of vectors. *(No proof in the notes.)*
+Any two finite bases of a vector space contain the same number of vectors.
 
 ### Definition — Dimension
 
@@ -679,7 +679,7 @@ The **dimension** of a finite-dimensional vector space $V$ is the number of vect
 - Regard $\mathbb C^n$ as a **real** vector space. Write $z_j=x_j+iy_j$ and let $\mathbf e_j=(0,\dots,1,\dots,0)$, $\mathbf f_j=i\mathbf e_j=(0,\dots,i,\dots,0)$. Then $\mathbf z=\sum x_j\mathbf e_j+\sum y_j\mathbf f_j$ is the unique expression of $\mathbf z$, so $\{\mathbf e_1,\dots,\mathbf e_n,\mathbf f_1,\dots,\mathbf f_n\}$ is a basis of $\mathbb C^n$ over $\mathbb R$ and $\dim_{\mathbb R}\mathbb C^n=2n$.
 
 
-> [!note] Explanation — dimension as "free coordinates"
+> [!note] Dimension as free coordinates
 > $\dim V$ is the number of coordinates you can choose **freely** to specify a vector of $V$. Once a basis is fixed, a vector is exactly its list of $n=\dim V$ coordinates $(v^1,\dots,v^n)$, and any such list occurs, so there are no constraints between them. The number of components written down can be larger than this: the vectors in the plane $2x+y+z=0$ have three components $(x,y,z)$, but only two are free (choose $x,y$; then $z=-2x-y$), so that plane has dimension $2$. Likewise $\mathbb C^n$ has $n$ complex $=2n$ real free numbers, so $\dim_{\mathbb R}\mathbb C^n=2n$ while $\dim_{\mathbb C}\mathbb C^n=n$. 
 
 ### Proposition — Spanning and independent sets in dimension n
@@ -689,7 +689,7 @@ Let $\dim V=n$.
 1. If $m$ vectors span $V$ then $m\ge n$; if $m>n$ we can remove $m-n$ of them until a basis remains.
 2. If $k$ vectors are linearly independent then $k\le n$; if $k<n$ we can add vectors to obtain a basis.
 
-Consequently, if $U$ is a subspace of a finite-dimensional $V$, choose a basis $\{\mathbf u_1,\dots,\mathbf u_k\}$ of $U$ and extend it to a basis $\{\mathbf u_1,\dots,\mathbf u_k,\mathbf u_{k+1},\dots,\mathbf u_n\}$ of $V$. In particular $\dim U=k\le n=\dim V$. *(No proof in the notes.)*
+Consequently, if $U$ is a subspace of a finite-dimensional $V$, choose a basis $\{\mathbf u_1,\dots,\mathbf u_k\}$ of $U$ and extend it to a basis $\{\mathbf u_1,\dots,\mathbf u_k,\mathbf u_{k+1},\dots,\mathbf u_n\}$ of $V$. In particular $\dim U=k\le n=\dim V$.
 
 ## 2.10 Inner products and orthogonality
 

@@ -135,6 +135,7 @@ Rules:
   > Why the step holds, in plain words.
   ```
   Use these sparingly — roughly one per page of source at most — and never to restate what the line above already says.
+- Notes must read as standalone study material. Never write meta-commentary about where content came from or what the notes lack: no "added explanation", "not from the lecture", "the notebook ends", "no proof in the notes", "your intuition is right", or similar. An explanation either belongs in the note or does not; do not label its origin. Unproved statements are simply stated; a missing proof gets a terse `> [!todo] Proof of X missing (p. N).`
 - When the lecture defers something ("proved in Analysis I"), say so in one line; do not prove it.
 - Prefer concrete language: name the axiom or earlier result used at each step (`by (G1)`, `by Lemma 1.6`).
 - Standard notation: ℕ convention as the lecturer defines it; write logical or as $\lor$, and as $\land$.

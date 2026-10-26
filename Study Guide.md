@@ -8,7 +8,7 @@ tags: [index]
 # Study Guide
 
 > [!abstract] How to use these notes
-> Each **lecture note** follows the lecturer's sections and opens with a **Results index**: every definition, lemma, proposition, theorem and corollary has its own heading, so you can jump to it from the index, the Obsidian outline, or a link like `[[Groups - Chapter 1 Examples and Definitions#Lemma 1.6 — Sock and shoe lemma]]`. **Concept notes** are short summaries that link back to the full proofs. `> [!note] Explanation` boxes are added explanations (not from the lecture); `> [!todo]` marks something to check against the source.
+> Each **lecture note** follows the lecturer's sections and opens with a **Results index**: every definition, lemma, proposition, theorem and corollary has its own heading, so you can jump to it from the index, the Obsidian outline, or a link like `[[Groups - Chapter 1 Examples and Definitions#Lemma 1.6 — Sock and shoe lemma]]`. **Concept notes** are short summaries that link back to the full proofs. `> [!todo]` marks something still to fill in or check.
 
 ## Numbers and Sets
 
