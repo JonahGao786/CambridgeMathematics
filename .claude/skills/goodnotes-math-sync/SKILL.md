@@ -24,7 +24,7 @@ Read these references before writing any note; they are part of the workflow:
 - Source: Goodnotes Google Drive folder `1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX` (<https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX>).
 - Destination: `JonahGao786/CambridgeMathematics`, an Obsidian vault. Manifest: `.sync/goodnotes-manifest.json`.
 - Publication branch: the repository's default branch, unless the session or user names a different branch — then use that one.
-- The user's current request sets the scope. Common scopes: a normal sync (new/modified sources), a **re-organization** run (rewrite existing generated notes to the current standards, re-reading sources), or a targeted repair. If the user says to skip a material type (e.g. example sheets), leave those notes and manifest records untouched.
+- The user's current request sets the scope. Common scopes: a normal sync (new/modified sources), a **re-organization** run (rewrite existing generated notes to the current standards, re-reading sources), or a targeted repair. **Example sheets (`Example Sheets` / `Examples Sheets` folders) are skipped by default**: do not read, rewrite or update them unless the user explicitly asks. Likewise, if the user says to skip another material type, leave those notes and manifest records untouched.
 - Creating, installing or editing this skill does not by itself start a sync.
 
 ## 1. Inventory

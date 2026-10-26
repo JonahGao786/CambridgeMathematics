@@ -25,6 +25,7 @@ tags: [concept, numbers-and-sets]
 - **Euler's totient** $\varphi(m)$ = number of units mod $m$; $\varphi(p)=p-1$, $\varphi(p^2)=p^2-p$, $\varphi(pq)=(p-1)(q-1)$. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Definition — Euler's totient function|lecture]]
 - **Theorem 13 — Fermat's little theorem.** $a^{p-1}\equiv1\pmod p$ for $p\nmid a$ (equivalently $a^p\equiv a$). *Idea:* $a,2a,\dots,(p-1)a$ is a rearrangement of $1,\dots,p-1$; cancel the unit $(p-1)!$. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 13 — Fermat's little theorem|proof]]
 - **Theorem 13′ — Fermat–Euler.** $a^{\varphi(m)}\equiv1\pmod m$ for $\gcd(a,m)=1$; same idea with the $\varphi(m)$ units. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 13' — Fermat–Euler theorem|proof]]
+- **As a group (Groups).** The units $\mathbb Z_n^\times$ form a group of order $\varphi(n)$, which gives Fermat–Euler from Lagrange. → [[Groups - Chapter 2 Lagrange's Theorem#Theorem 2.11 — Fermat–Euler|lecture]]
 - **Lemma 14.** For prime $p$: $x^2\equiv1\iff x\equiv\pm1\pmod p$ (statement only in the notes so far). → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Lemma 14 — Square roots of 1 modulo a prime|lecture]]
 
 ## Examples
