@@ -226,11 +226,17 @@ $$\frac{dI}{dc}=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx+f(b(c);
 
 **Proof.**
 $$\frac{dI}{dc}=\lim_{\delta c\to0}\frac1{\delta c}\Big[\int_{a(c+\delta c)}^{b(c+\delta c)}f(x;c+\delta c)\,dx-\underbrace{\int_{a(c)}^{b(c)}f(x;c)\,dx}_{④}\Big].$$
-Split the first integral as $\underbrace{\int_{a(c)}^{b(c)}}_{①}+\underbrace{\int_{b(c)}^{b(c+\delta c)}}_{②}-\underbrace{\int_{a(c)}^{a(c+\delta c)}}_{③}$. Then
+Split the first integral as
+$$\underbrace{\int_{a(c)}^{b(c)}}_{①}+\underbrace{\int_{b(c)}^{b(c+\delta c)}}_{②}-\underbrace{\int_{a(c)}^{a(c+\delta c)}}_{③}.$$
+Then:
 
-- ① + ④ $=\displaystyle\lim_{\delta c\to0}\frac1{\delta c}\int_{a(c)}^{b(c)}\big(f(x;c+\delta c)-f(x;c)\big)dx=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx$.
-- ② $=\displaystyle\lim_{\delta c\to0}\frac1{\delta c}\int_{b(c)}^{b(c+\delta c)}f(x;c+\delta c)\,dx$. By the mean value theorem the integral is $[b(c+\delta c)-b(c)]\,f(\bar x;c+\delta c)$ with $b(c)<\bar x<b(c+\delta c)$, so ② $=\frac{db}{dc}f(b(c);c)$.
-- ③: the same trick gives $-\frac{da}{dc}f(a(c);c)$.
+- ① + ④:
+$$\lim_{\delta c\to0}\frac1{\delta c}\int_{a(c)}^{b(c)}\big(f(x;c+\delta c)-f(x;c)\big)dx=\int_{a(c)}^{b(c)}\frac{\partial f}{\partial c}(x;c)\,dx.$$
+- ②:
+$$\lim_{\delta c\to0}\frac1{\delta c}\int_{b(c)}^{b(c+\delta c)}f(x;c+\delta c)\,dx.$$
+By the mean value theorem the integral is $[b(c+\delta c)-b(c)]\,f(\bar x;c+\delta c)$ with $b(c)<\bar x<b(c+\delta c)$, so
+$$②=\frac{db}{dc}\,f(b(c);c).$$
+- ③: the same trick gives $-\dfrac{da}{dc}\,f(a(c);c)$.
 
 **Examples.**
 1. $I(\lambda)=\displaystyle\int_0^\lambda e^{-\lambda x^2}dx$:

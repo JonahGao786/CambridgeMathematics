@@ -21,6 +21,9 @@ tags: [concept, groups]
 - **Lemma 2.4.** $h\mapsto gh$ is a bijection $H\to gH$. → [[Groups - Chapter 2 Lagrange's Theorem#Lemma 2.4 — Cosets have the size of H|proof]]
 - **Theorem 2.6 (Lagrange).** $|G|=|G:H|\cdot|H|$ for finite $G$; in particular $|H|$ divides $|G|$. → [[Groups - Chapter 2 Lagrange's Theorem#Theorem 2.6 — Lagrange (version 2)|proof]]
 - **Corollary 2.7.** $\operatorname{ord}(g)\mid|G|$, since $\operatorname{ord}(g)=|\langle g\rangle|$.
+- **Corollary 2.8.** $g^{|G|}=e$ (write $|G|=\operatorname{ord}(g)k$). → [[Groups - Chapter 2 Lagrange's Theorem#Corollary 2.8 — g to the order of G is e|proof]]
+- **Corollary 2.9.** If $|G|$ is prime, $G$ is cyclic and every $g\ne e$ generates it. *Idea:* $\operatorname{ord}(g)\mid|G|$ forces $\operatorname{ord}(g)=|G|$. → [[Groups - Chapter 2 Lagrange's Theorem#Corollary 2.9 — Groups of prime order|proof]]
+- **Theorem 2.11 (Fermat–Euler).** $\mathbb Z_n^\times=\{x:\gcd(x,n)=1\}$ is a group under multiplication of order $\varphi(n)$, so $x^{\varphi(n)}\equiv1\pmod n$ by Corollary 2.8. → [[Groups - Chapter 2 Lagrange's Theorem#Theorem 2.11 — Fermat–Euler|proof]]
 
 ## Pitfalls
 

@@ -6,14 +6,14 @@ chapter: 4
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
 source_url: https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view
-source_pages: 10
+source_pages: 15
 tags: [lecture, differential-equations]
 ---
 
 # Differential Equations — Chapter 4: First-Order Linear Differential Equations
 
 > [!abstract] Overview
-> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor.
+> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor; then nonlinear first-order ODEs: separable and exact equations, and solution curves.
 > Prerequisite: [[Differential Equations - Chapter 1 Introduction and Basic Calculus]].
 
 ## Results index
@@ -31,6 +31,13 @@ tags: [lecture, differential-equations]
 | [[#2.2 Forced equations]] | $y=y_p+y_c$ | 6 |
 | [[#Constant forcing]] / [[#Eigenfunction forcing]] | try $y_p$ of the same form | 7–8 |
 | [[#Non-constant coefficients — integrating factor]] | $\mu=\exp\int p$, $(\mu y)'=\mu f$ | 9–10 |
+| [[#Radioactive decay revisited]] | integrating factor; resonance $k_a=k_b$ gives $te^{-k_bt}$ | 10–11 |
+| [[#Separable equations]] | $q(y)\,dy=p(x)\,dx$ | 11–12 |
+| [[#Definition — Exact equation]] | $P\,dx+Q\,dy=df$; solution $f=\text{const}$ | 12–13 |
+| [[#Necessary condition for exactness]] | $\partial P/\partial y=\partial Q/\partial x$ | 13 |
+| [[#Theorem — Exactness on simply connected domains]] | the condition is sufficient there | 13 |
+| [[#Definition — Simply connected domain]] | path connected, loops shrink to a point | 13–14 |
+| [[#Solution curves]] | trajectories of $y'=f(t,y)$; example $y'=t(1-y^2)$ | 15 |
 
 ### Terminology
 
@@ -123,10 +130,16 @@ which agrees with the continuous case. See [[Forward Euler Method]].
 
 This illustrates a powerful way to solve ODEs (more later): look for a power series $y(x)=\sum_{n=0}^\infty a_nx^n$, with the $a_n$ determined by substitution into the ODE.
 
-**Example.** $5\frac{dy}{dx}-3y=0$. We have $\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^{n-1}=\sum_{n=1}^\infty na_nx^{n-1}$, so $x\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^n$ and $xy=\sum_{n=0}^\infty a_nx^{n+1}=\sum_{n=1}^\infty a_{n-1}x^n$ (relabel $m=n+1\to n$). Multiplying the ODE by $x$ and substituting,
+**Example.** $5\dfrac{dy}{dx}-3y=0$. We have
+$$\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^{n-1}=\sum_{n=1}^\infty na_nx^{n-1},\qquad\text{so}\qquad x\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^n,$$
+and, relabelling $n+1\to n$,
+$$xy=\sum_{n=0}^\infty a_nx^{n+1}=\sum_{n=1}^\infty a_{n-1}x^n.$$
+Multiplying the ODE by $x$ and substituting,
 $$\sum_{n=1}^\infty(5na_n-3a_{n-1})x^n=0.$$
 The bracket must vanish for $n\ge1$ (since true $\forall x$), giving the recurrence
-$$a_n=\frac3{5n}a_{n-1}\ (n\ge1)\quad\Longrightarrow\quad a_n=\Big(\frac35\Big)^n\frac1{n!}a_0,\qquad y=a_0\sum_{n=0}^\infty\frac1{n!}\Big(\frac35\Big)^nx^n=a_0\exp\Big(\frac{3x}5\Big).$$
+$$a_n=\frac3{5n}a_{n-1}\quad(n\ge1)\qquad\Longrightarrow\qquad a_n=\Big(\frac35\Big)^n\frac1{n!}\,a_0.$$
+Hence
+$$y=a_0\sum_{n=0}^\infty\frac1{n!}\Big(\frac35\Big)^nx^n=a_0\exp\Big(\frac{3x}5\Big).$$
 
 ## 2.2 Forced equations
 
@@ -170,7 +183,7 @@ $$\frac{db}{dt}=k_aa-k_bb\quad\Longrightarrow\quad\frac{db}{dt}+k_bb=k_aa_0e^{-k
 $$b(t)=De^{-k_bt}+\frac{k_aa_0}{k_b-k_a}e^{-k_at}.$$
 If $b=0$ at $t=0$:
 $$b(t)=\frac{k_aa_0}{k_b-k_a}\big(e^{-k_at}-e^{-k_bt}\big).$$
-For $k_b>k_a$, $a(t)$ decays from $a_0$ while $b(t)$ rises from $0$ to a maximum then decays. (Think about $k_b<k_a$ as an exercise.) If $k_a=k_b$, a different PI is needed (see later).
+For $k_b>k_a$, $a(t)$ decays from $a_0$ while $b(t)$ rises from $0$ to a maximum then decays. (Think about $k_b<k_a$ as an exercise.) If $k_a=k_b$, a different PI is needed (see [[#Radioactive decay revisited]]).
 
 ```tikz
 \usepackage{tikz}
@@ -199,5 +212,99 @@ $$\mu(x)=\exp\Big[\int^xp(u)\,du\Big],$$
 unique up to an irrelevant multiplicative constant factor. Then $(\dagger)\Rightarrow\frac d{dx}(\mu y)=\mu f$, so
 $$\mu y=\int^x\mu(u)f(u)\,du.$$
 
-**Example.** $xy'+(1-x)y=1$. In standard form $y'+\frac{1-x}xy=\frac1x$, so $p=\frac{1-x}x$, $f=\frac1x$. I.F.: $\ln\mu=\int^x\big(\frac1u-1\big)du=\ln x-x=\ln(xe^{-x})$ (dropping the irrelevant constant), so $\mu=xe^{-x}$. Then
+**Example.** $xy'+(1-x)y=1$. In standard form $y'+\dfrac{1-x}xy=\dfrac1x$, so $p=\dfrac{1-x}x$, $f=\dfrac1x$. The integrating factor satisfies
+$$\ln\mu=\int^x\Big(\frac1u-1\Big)du=\ln x-x=\ln(xe^{-x})$$
+(dropping the irrelevant constant), so $\mu=xe^{-x}$. Then
 $$\frac d{dx}\big(xe^{-x}y\big)=\frac xxe^{-x}=e^{-x}\ \Rightarrow\ xe^{-x}y=-e^{-x}+C\ \Rightarrow\ y=-\frac1x+\frac Cxe^x.$$
+
+### Radioactive decay revisited
+
+The equation $\dfrac{db}{dt}+k_bb=k_aa_0e^{-k_at}$ has $p(t)=k_b$, $f(t)=k_aa_0e^{-k_at}$. Integrating factor $\mu(t)=e^{k_bt}$, so
+$$\frac d{dt}\big(e^{k_bt}b\big)=k_aa_0e^{(k_b-k_a)t}.\qquad(*)$$
+
+- $k_b\ne k_a$: the right side of $(*)$ depends on $t$, so $e^{k_bt}b=\dfrac{k_aa_0}{k_b-k_a}e^{(k_b-k_a)t}+C$, i.e. $b(t)=\dfrac{k_aa_0}{k_b-k_a}e^{-k_at}+Ce^{-k_bt}$, as before.
+- $k_b=k_a$: the right side of $(*)$ is independent of $t$, so $e^{k_bt}b=k_aa_0t+C$, i.e.
+$$b(t)=k_aa_0\,t\,e^{-k_bt}+Ce^{-k_bt}.$$
+
+Note the particular integral is $\alpha te^{-k_bt}$, not just $e^{-k_bt}$ — the **resonance case**: the forcing has the same exponent as a complementary-function solution.
+
+## 3 Nonlinear first-order ODEs
+
+General form
+$$Q(x,y)\frac{dy}{dx}+P(x,y)=0.\qquad(*)$$
+It could be nonlinear in $\frac{dy}{dx}$, but that is not considered here. First, two special cases.
+
+### Separable equations
+
+A first-order ODE is **separable** if it can be written $q(y)\,dy=p(x)\,dx$. Solve by direct integration: $\int q(y)\,dy=\int p(x)\,dx$.
+
+**Example.** $(x^2y-3y)\dfrac{dy}{dx}-2xy^2=4x$. Rearrange: $y(x^2-3)\dfrac{dy}{dx}=2x(2+y^2)$, so
+$$\int\frac y{2+y^2}\,dy=\int\frac{2x}{x^2-3}\,dx\ \Rightarrow\ \tfrac12\ln(2+y^2)=\ln|x^2-3|+C\ \Rightarrow\ 2+y^2=A(x^2-3)^2,$$
+with $A=e^{2C}$.
+
+### Definition — Exact equation
+
+The ODE $(*)$ is **exact** if $P(x,y)\,dx+Q(x,y)\,dy$ is an **exact differential**, i.e. there is a single-valued function $f(x,y)$ with
+$$df=P\,dx+Q\,dy.$$
+Then $(*)$ says $df=0$, so $f(x,y)=\text{const}$ is a solution. By the multivariate chain rule $df=\frac{\partial f}{\partial x}\big|_ydx+\frac{\partial f}{\partial y}\big|_xdy$, so we solve
+$$\frac{\partial f}{\partial x}=P,\qquad\frac{\partial f}{\partial y}=Q.$$
+
+### Necessary condition for exactness
+
+Partial derivatives commute, so if $f_x=P$ and $f_y=Q$ then
+$$\frac{\partial P}{\partial y}=\frac{\partial^2f}{\partial y\,\partial x}=\frac{\partial^2f}{\partial x\,\partial y}=\frac{\partial Q}{\partial x}.$$
+So $\dfrac{\partial P}{\partial y}=\dfrac{\partial Q}{\partial x}$ is **necessary** (not sufficient) for exactness.
+
+### Theorem — Exactness on simply connected domains
+
+If $\dfrac{\partial P}{\partial y}=\dfrac{\partial Q}{\partial x}$ throughout a simply connected domain $\Omega$, then $P\,dx+Q\,dy$ is an exact differential of a single-valued function $f(x,y)$ in $\Omega$.
+
+### Definition — Simply connected domain
+
+A domain $\Omega$ is **path connected** if every pair of points of $\Omega$ can be joined by a path in $\Omega$. It is **simply connected** if it is path connected and every closed curve in $\Omega$ can be continuously shrunk to a point of $\Omega$ without leaving $\Omega$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+  \begin{scope}
+    \draw[blue,thick] (0,0) ellipse (1.2 and 0.9);
+    \node at (0,-1.5) {path connected};
+  \end{scope}
+  \begin{scope}[shift={(4,0)}]
+    \draw[blue,thick] (-0.8,0) ellipse (0.6 and 0.7);
+    \draw[blue,thick] (0.9,0) ellipse (0.6 and 0.7);
+    \node at (0,-1.5) {not path connected};
+  \end{scope}
+  \begin{scope}[shift={(8,0)}]
+    \draw[blue,thick] (0,0) ellipse (1.2 and 0.9);
+    \node at (0,-1.5) {simply connected};
+  \end{scope}
+  \begin{scope}[shift={(12,0)}]
+    \draw[blue,thick] (0,0) ellipse (1.2 and 0.9);
+    \draw[blue,thick] (0,0) ellipse (0.35 and 0.25);
+    \draw[red,thick] (0,0) ellipse (0.8 and 0.58);
+    \node at (0,-1.5) {not simply connected};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
+*Schematic. Right: the red loop around the hole cannot be shrunk to a point inside the domain.*
+
+**Example.** $6y(y-x)\dfrac{dy}{dx}+2x-3y^2=0$, i.e.
+$$(2x-3y^2)\,dx+(6y^2-6xy)\,dy=0,\qquad P=2x-3y^2,\quad Q=6y^2-6xy.$$
+Then
+$$\frac{\partial P}{\partial y}=-6y=\frac{\partial Q}{\partial x},$$
+so the equation is exact in any simply connected domain. Integrating $\dfrac{\partial f}{\partial x}=P=2x-3y^2$ gives
+$$f(x,y)=x^2-3y^2x+h(y).$$
+Then
+$$\frac{\partial f}{\partial y}=-6xy+\frac{dh}{dy}=Q=6y^2-6xy\ \Longrightarrow\ \frac{dh}{dy}=6y^2\ \Longrightarrow\ h=2y^3+C.$$
+The solution is
+$$f(x,y)=x^2-3xy^2+2y^3=\text{const}.$$
+
+### Solution curves
+
+Nonlinear ODEs can often not be solved in simple closed form; their solutions can be analysed with graphical methods. Consider $\dfrac{dy}{dt}=f(t,y)$. Each initial condition (e.g. $y(0)=y_0$) generates a distinct **solution curve** (trajectory). Can we sketch solution curves without actually solving the ODE?
+
+**Example (solved, to illustrate).** $\dfrac{dy}{dt}=t(1-y^2)$ is separable:
+$$\frac{dy}{1-y^2}=t\,dt\ \Rightarrow\ \tfrac12\Big(\frac1{1+y}+\frac1{1-y}\Big)dy=t\,dt\ \Rightarrow\ \tfrac12\ln\Big|\frac{1+y}{1-y}\Big|=\tfrac12t^2+C\ \Rightarrow\ y=\frac{A-e^{-t^2}}{A+e^{-t^2}}.$$

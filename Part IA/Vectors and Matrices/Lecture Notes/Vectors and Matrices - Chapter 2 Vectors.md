@@ -281,7 +281,9 @@ where $\hat{\mathbf n}$ is the unit vector perpendicular to both $\mathbf a$ and
 4. $\mathbf a\times(\mathbf b+\mathbf c)=\mathbf a\times\mathbf b+\mathbf a\times\mathbf c$;
 5. $\mathbf a\cdot(\mathbf a\times\mathbf b)=\mathbf b\cdot(\mathbf a\times\mathbf b)=0$.
 
-**Vector area.** $\mathbf a\times\mathbf b$ is the vector area of the parallelogram spanned by $\mathbf a,\mathbf b$; its magnitude is the usual area. Base $|\mathbf a|$, height $h=|\mathbf b|\sin\theta$ ($0\le\theta\le\pi$), so area $=|\mathbf a||\mathbf b|\sin\theta=|\mathbf a\times\mathbf b|$. For non-parallel vectors the normal direction records the orientation of the parallelogram; interchanging $\mathbf a,\mathbf b$ reverses it without changing the area. For the triangle $OBA$: $S_{OBA}=\frac12|\overrightarrow{OA}\times\overrightarrow{OB}|$.
+**Vector area.** $\mathbf a\times\mathbf b$ is the vector area of the parallelogram spanned by $\mathbf a,\mathbf b$; its magnitude is the usual area. Base $|\mathbf a|$, height $h=|\mathbf b|\sin\theta$ ($0\le\theta\le\pi$), so
+$$\text{area}=|\mathbf a||\mathbf b|\sin\theta=|\mathbf a\times\mathbf b|.$$
+For non-parallel vectors the normal direction records the orientation of the parallelogram; interchanging $\mathbf a,\mathbf b$ reverses it without changing the area. For the triangle $OBA$: $S_{OBA}=\frac12|\overrightarrow{OA}\times\overrightarrow{OB}|$.
 
 ```tikz
 \usepackage{tikz}
@@ -392,7 +394,8 @@ $$\mathbf u\times(\mathbf r-\mathbf a)=\mathbf 0,\qquad\text{or}\qquad\mathbf u\
 
 A plane through $\mathbf a$ with non-parallel directions $\mathbf u,\mathbf v$: $\mathbf r=\mathbf a+\lambda\mathbf u+\mu\mathbf v$, $\lambda,\mu\in\mathbb R$. A **normal** is $\mathbf n=\mathbf u\times\mathbf v$, and equivalently
 $$(\mathbf r-\mathbf a)\cdot\mathbf n=0,\qquad\text{i.e.}\qquad\mathbf n\cdot\mathbf r=k\ \text{ with }k=\mathbf n\cdot\mathbf a.$$
-The perpendicular distance from the origin is $|k|/|\mathbf n|$, since $\hat{\mathbf n}\cdot\mathbf r=\frac{\mathbf n\cdot\mathbf r}{|\mathbf n|}=\frac k{|\mathbf n|}$.
+The perpendicular distance from the origin is $|k|/|\mathbf n|$, since
+$$\hat{\mathbf n}\cdot\mathbf r=\frac{\mathbf n\cdot\mathbf r}{|\mathbf n|}=\frac k{|\mathbf n|}.$$
 
 ```tikz
 \usepackage{tikz}
@@ -467,17 +470,25 @@ $$s=\left|(\mathbf a_1-\mathbf a_2)\cdot\frac{\mathbf u_1\times\mathbf u_2}{|\ma
 
 **Proof.** Let $\hat{\mathbf n}$ be the unit vector along $\mathbf u_1\times\mathbf u_2$, and $\mathbf p=\mathbf a_1+\lambda\mathbf u_1\in\ell_1$, $\mathbf q=\mathbf a_2+\mu\mathbf u_2\in\ell_2$. Since $\hat{\mathbf n}\perp\mathbf u_1,\mathbf u_2$: $(\mathbf p-\mathbf q)\cdot\hat{\mathbf n}=(\mathbf a_1-\mathbf a_2)\cdot\hat{\mathbf n}$. By Cauchy–Schwarz,
 $$|(\mathbf a_1-\mathbf a_2)\cdot\hat{\mathbf n}|\le|\mathbf p-\mathbf q|\qquad\forall\,\mathbf p\in\ell_1,\ \mathbf q\in\ell_2.$$
-The lower bound is attained: write $\mathbf a_1-\mathbf a_2=\alpha\mathbf u_1+\beta\mathbf u_2+\gamma\hat{\mathbf n}$ with $\gamma=(\mathbf a_1-\mathbf a_2)\cdot\hat{\mathbf n}$. Then $\mathbf p-\mathbf q=(\alpha+\lambda)\mathbf u_1+(\beta-\mu)\mathbf u_2+\gamma\hat{\mathbf n}$; choosing $\lambda=-\alpha$, $\mu=\beta$ gives $\mathbf p-\mathbf q=\gamma\hat{\mathbf n}$ and $|\mathbf p-\mathbf q|=|\gamma|=s$.
+The lower bound is attained: write
+$$\mathbf a_1-\mathbf a_2=\alpha\mathbf u_1+\beta\mathbf u_2+\gamma\hat{\mathbf n},\qquad\gamma=(\mathbf a_1-\mathbf a_2)\cdot\hat{\mathbf n}.$$
+Then
+$$\mathbf p-\mathbf q=(\alpha+\lambda)\mathbf u_1+(\beta-\mu)\mathbf u_2+\gamma\hat{\mathbf n},$$
+and choosing $\lambda=-\alpha$, $\mu=\beta$ gives $\mathbf p-\mathbf q=\gamma\hat{\mathbf n}$, so $|\mathbf p-\mathbf q|=|\gamma|=s$.
 
 ### Vector equations
 
 **Solve $\mathbf r+\mathbf a\times(\mathbf b\times\mathbf r)=\mathbf c$.** Expand the triple product:
 $$\mathbf r+(\mathbf a\cdot\mathbf r)\mathbf b-(\mathbf a\cdot\mathbf b)\mathbf r=\mathbf c.\tag{$*$}$$
-Dot with $\mathbf a$: $\mathbf a\cdot\mathbf r+(\mathbf a\cdot\mathbf r)(\mathbf a\cdot\mathbf b)-(\mathbf a\cdot\mathbf b)(\mathbf a\cdot\mathbf r)=\mathbf a\cdot\mathbf c$, so $\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c$. Substituting into $(*)$:
+Dot with $\mathbf a$:
+$$\mathbf a\cdot\mathbf r+(\mathbf a\cdot\mathbf r)(\mathbf a\cdot\mathbf b)-(\mathbf a\cdot\mathbf b)(\mathbf a\cdot\mathbf r)=\mathbf a\cdot\mathbf c\quad\Longrightarrow\quad\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c.\qquad(**)$$
+Substituting $(**)$ into $(*)$:
 $$(1-\mathbf a\cdot\mathbf b)\,\mathbf r=\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b.$$
 
 - If $\mathbf a\cdot\mathbf b\ne1$: $\mathbf r=\dfrac{\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b}{1-\mathbf a\cdot\mathbf b}$, a unique solution.
-- If $\mathbf a\cdot\mathbf b=1$ and $\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b\ne\mathbf 0$: then $\mathbf 0=(1-\mathbf a\cdot\mathbf b)\mathbf r=\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b\ne\mathbf 0$, a contradiction — no solution.
+- If $\mathbf a\cdot\mathbf b=1$ and $\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b\ne\mathbf 0$: the equation above would give
+$$\mathbf 0=(1-\mathbf a\cdot\mathbf b)\mathbf r=\mathbf c-(\mathbf a\cdot\mathbf c)\mathbf b\ne\mathbf 0,$$
+a contradiction — no solution.
 - If $\mathbf a\cdot\mathbf b=1$ and $\mathbf c=(\mathbf a\cdot\mathbf c)\mathbf b$: $(*)$ reduces to $(\mathbf a\cdot\mathbf r-\mathbf a\cdot\mathbf c)\mathbf b=\mathbf 0$, so the solutions are the plane $\mathbf a\cdot\mathbf r=\mathbf a\cdot\mathbf c$.
 
 ## 2.7 Index notation and summation convention
@@ -591,7 +602,12 @@ Fix the unit sphere and points $A,B,C$ on it (position vectors $\mathbf a,\mathb
 
 The angle $\alpha$ at $A$ is the angle between the planes $OAB$ and $OAC$, so
 $$\cos\alpha=\frac{(\mathbf a\times\mathbf b)\cdot(\mathbf a\times\mathbf c)}{|\mathbf a\times\mathbf b||\mathbf a\times\mathbf c|}.$$
-By Lagrange's identity, $(\mathbf a\times\mathbf b)\cdot(\mathbf a\times\mathbf c)=|\mathbf a|^2(\mathbf b\cdot\mathbf c)-(\mathbf a\cdot\mathbf b)(\mathbf a\cdot\mathbf c)=\cos\delta(B,C)-\cos\delta(A,B)\cos\delta(A,C)$. Hence the **spherical cosine rule**
+By Lagrange's identity,
+$$\begin{aligned}
+(\mathbf a\times\mathbf b)\cdot(\mathbf a\times\mathbf c)&=|\mathbf a|^2(\mathbf b\cdot\mathbf c)-(\mathbf a\cdot\mathbf b)(\mathbf a\cdot\mathbf c)\\
+&=\cos\delta(B,C)-\cos\delta(A,B)\cos\delta(A,C).
+\end{aligned}$$
+Hence the **spherical cosine rule**
 $$\cos\alpha=\frac{\cos\delta(B,C)-\cos\delta(A,B)\cos\delta(A,C)}{\sin\delta(A,B)\sin\delta(A,C)}.$$
 
 > [!note] Explanation
@@ -629,7 +645,9 @@ A non-empty subset $U\subseteq V$ is a **subspace** if $\lambda\mathbf u+\mu\mat
 - For $\mathbf 0\ne\mathbf u\in\mathbb R^3$, $\operatorname{span}\{\mathbf u\}=\{\lambda\mathbf u\}$ is a subspace of $\mathbb R^3$.
 - For $\mathbf u,\mathbf v\in\mathbb R^3$ with $\mathbf u\nparallel\mathbf v$, $\operatorname{span}\{\mathbf u,\mathbf v\}$ is a plane and a subspace of $\mathbb R^3$.
 - A line or plane not through the origin is not a subspace.
-- $\mathbf v_1=(1,0,-2)$, $\mathbf v_2=(1,1,-3)$, $\mathbf v_3=(2,1,1)$: $\mathbf v_1,\mathbf v_2\perp\mathbf v_3$. Their combinations $\lambda\mathbf v_1+\mu\mathbf v_2=(\lambda+\mu,\ \mu,\ -2\lambda-3\mu)=(x,y,z)$ satisfy $2x+y+z=0$ (i.e. $\mathbf v_3\cdot\mathbf r=0$). But $P=\{\mathbf r\in\mathbb R^3:\mathbf v_3\cdot\mathbf r=4\}$ is not a subspace (it does not contain $\mathbf 0$).
+- $\mathbf v_1=(1,0,-2)$, $\mathbf v_2=(1,1,-3)$, $\mathbf v_3=(2,1,1)$, with $\mathbf v_1,\mathbf v_2\perp\mathbf v_3$. Their combinations are
+$$\lambda\mathbf v_1+\mu\mathbf v_2=(\lambda+\mu,\ \mu,\ -2\lambda-3\mu)=(x,y,z),$$
+which satisfy $2x+y+z=0$ (i.e. $\mathbf v_3\cdot\mathbf r=0$). But $P=\{\mathbf r\in\mathbb R^3:\mathbf v_3\cdot\mathbf r=4\}$ is not a subspace (it does not contain $\mathbf 0$).
 
 ### Definition — Linear independence
 
@@ -657,11 +675,13 @@ A **basis** of $V$ is a set $B=\{\mathbf e_1,\dots,\mathbf e_n\}$ that spans $V$
 $$\mathbf v=\sum_{i=1}^nv^i\mathbf e_i,$$
 and the $v^i$ are the **coordinates** of $\mathbf v$.
 
-**Example ($\mathbb R^n$).** The **standard (canonical) basis** $\mathbf e_1=(1,0,\dots,0),\dots,\mathbf e_n=(0,\dots,0,1)$. It spans: $(x_1,\dots,x_n)=x_1\mathbf e_1+\dots+x_n\mathbf e_n$. It is independent: $\sum\alpha_i\mathbf e_i=(0,\dots,0)\Rightarrow\alpha_1=\dots=\alpha_n=0$.
+**Example ($\mathbb R^n$).** The **standard (canonical) basis** $\mathbf e_1=(1,0,\dots,0),\dots,\mathbf e_n=(0,\dots,0,1)$.
+- It spans: $(x_1,\dots,x_n)=x_1\mathbf e_1+\dots+x_n\mathbf e_n$.
+- It is independent: $\sum\alpha_i\mathbf e_i=(0,\dots,0)$ forces $\alpha_1=\dots=\alpha_n=0$.
 
 **Example ($\mathbb R^2$).** $\mathbf b_1=(1,1)$, $\mathbf b_2=(1,-1)$ form a basis:
 - spanning: $(x,y)=\frac{x+y}2\mathbf b_1+\frac{x-y}2\mathbf b_2$;
-- independent: $\alpha\mathbf b_1+\beta\mathbf b_2=\mathbf 0\Rightarrow\alpha+\beta=0,\ \alpha-\beta=0\Rightarrow\alpha=\beta=0$.
+- independent: $\alpha\mathbf b_1+\beta\mathbf b_2=\mathbf 0$ gives $\alpha+\beta=0$ and $\alpha-\beta=0$, so $\alpha=\beta=0$.
 
 So $\{\mathbf e_1,\mathbf e_2\}$ and $\{\mathbf b_1,\mathbf b_2\}$ are two bases of $\mathbb R^2$. In general, two non-parallel vectors $\mathbf a,\mathbf b\in\mathbb R^2$ form a basis.
 
@@ -725,10 +745,14 @@ the dot product plus $i$ times the signed area ([[#Signed area in two dimensions
 In any real or complex inner product space,
 $$|\langle\mathbf v,\mathbf w\rangle|\le\|\mathbf v\|\|\mathbf w\|,\qquad\|\mathbf v+\mathbf w\|\le\|\mathbf v\|+\|\mathbf w\|.$$
 
-**Proof (Cauchy–Schwarz).** We may assume $\mathbf w\ne\mathbf 0$. Put $\lambda=\dfrac{\langle\mathbf w,\mathbf v\rangle}{\|\mathbf w\|^2}$, so that $\langle\mathbf w,\mathbf v-\lambda\mathbf w\rangle=\langle\mathbf w,\mathbf v\rangle-\lambda\|\mathbf w\|^2=0$. Then, using Hermitian symmetry ($\langle\mathbf w,\mathbf v\rangle=\overline{\langle\mathbf v,\mathbf w\rangle}$),
+**Proof (Cauchy–Schwarz).** We may assume $\mathbf w\ne\mathbf 0$. Put
+$$\lambda=\frac{\langle\mathbf w,\mathbf v\rangle}{\|\mathbf w\|^2},$$
+so that $\langle\mathbf w,\mathbf v-\lambda\mathbf w\rangle=\langle\mathbf w,\mathbf v\rangle-\lambda\|\mathbf w\|^2=0$. Using Hermitian symmetry, $\langle\mathbf w,\mathbf v\rangle=\overline{\langle\mathbf v,\mathbf w\rangle}$,
 $$\begin{aligned}
-0\le\|\mathbf v-\lambda\mathbf w\|^2&=\langle\mathbf v-\lambda\mathbf w,\mathbf v-\lambda\mathbf w\rangle=\|\mathbf v\|^2-\lambda\langle\mathbf v,\mathbf w\rangle-\bar\lambda\langle\mathbf w,\mathbf v\rangle+|\lambda|^2\|\mathbf w\|^2\\
-&=\|\mathbf v\|^2-2\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}+\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}=\|\mathbf v\|^2-\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}.
+0\le\|\mathbf v-\lambda\mathbf w\|^2&=\langle\mathbf v-\lambda\mathbf w,\ \mathbf v-\lambda\mathbf w\rangle\\
+&=\|\mathbf v\|^2-\lambda\langle\mathbf v,\mathbf w\rangle-\bar\lambda\langle\mathbf w,\mathbf v\rangle+|\lambda|^2\|\mathbf w\|^2\\
+&=\|\mathbf v\|^2-2\,\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}+\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}\\
+&=\|\mathbf v\|^2-\frac{|\langle\mathbf v,\mathbf w\rangle|^2}{\|\mathbf w\|^2}.
 \end{aligned}$$
 Multiplying by $\|\mathbf w\|^2>0$: $\|\mathbf v\|^2\|\mathbf w\|^2\ge|\langle\mathbf v,\mathbf w\rangle|^2$. Taking non-negative square roots gives Cauchy–Schwarz. The same argument applies over $\mathbb R$, where complex conjugation has no effect.
 
