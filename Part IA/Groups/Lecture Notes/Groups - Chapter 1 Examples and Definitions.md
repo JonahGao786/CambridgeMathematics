@@ -211,15 +211,40 @@ Let $(G,\cdot,e)$ be a group.
 3. If $a\cdot b=e=a\cdot b'$ then $b=b'$ (inverses are unique).
 4. If $a\cdot e'=a$ for all $a\in G$ then $e'=e$ (the identity is unique).
 
-**Proof.** **(i)** Suppose $a\cdot b=e$. Then $b=b\cdot e=b\cdot(a\cdot b)=(b\cdot a)\cdot b$ by (G2), assumption, (G1). By (G3) choose $c$ with $b\cdot c=e$; multiplying on the right by $c$,
-$$e=b\cdot c=((b\cdot a)\cdot b)\cdot c=(b\cdot a)\cdot(b\cdot c)=(b\cdot a)\cdot e=b\cdot a.$$
+**Proof.** **(i)** Suppose $a\cdot b=e$. Then
+$$\begin{aligned}
+b&=b\cdot e&&\text{(G2)}\\
+&=b\cdot(a\cdot b)&&\text{assumption}\\
+&=(b\cdot a)\cdot b&&\text{(G1)}.
+\end{aligned}$$
+By (G3) choose $c$ with $b\cdot c=e$, and multiply on the right by $c$:
+$$\begin{aligned}
+e&=b\cdot c\\
+&=((b\cdot a)\cdot b)\cdot c\\
+&=(b\cdot a)\cdot(b\cdot c)&&\text{(G1)}\\
+&=(b\cdot a)\cdot e\\
+&=b\cdot a&&\text{(G2)}.
+\end{aligned}$$
 
-**(ii)** By (G3) and (i) choose $b$ with $a\cdot b=e=b\cdot a$. Then $e\cdot a=(a\cdot b)\cdot a=a\cdot(b\cdot a)=a\cdot e=a$.
+**(ii)** By (G3) and (i) choose $b$ with $a\cdot b=e=b\cdot a$. Then
+$$\begin{aligned}
+e\cdot a&=(a\cdot b)\cdot a\\
+&=a\cdot(b\cdot a)&&\text{(G1)}\\
+&=a\cdot e\\
+&=a&&\text{(G2)}.
+\end{aligned}$$
 
 **(iii)** If $a\cdot b=e=a\cdot b'$, then by (i) $b\cdot a=e$, and
 $$b'=e\cdot b'\overset{\text{(ii)}}=(b\cdot a)\cdot b'\overset{\text{(G1)}}=b\cdot(a\cdot b')=b\cdot e\overset{\text{(G2)}}=b.$$
 
-**(iv)** Suppose $a\cdot e'=a$ for all $a$. Given $a$, choose $b$ with $b\cdot a=e$ (by (G3) and (i)). From $a=a\cdot e'$, multiply on the left by $b$: $e=b\cdot a=b\cdot(a\cdot e')=(b\cdot a)\cdot e'=e\cdot e'=e'$, using (ii).
+**(iv)** Suppose $a\cdot e'=a$ for all $a$. Given $a$, choose $b$ with $b\cdot a=e$ (by (G3) and (i)). Multiplying $a=a\cdot e'$ on the left by $b$:
+$$\begin{aligned}
+e&=b\cdot a\\
+&=b\cdot(a\cdot e')\\
+&=(b\cdot a)\cdot e'&&\text{(G1)}\\
+&=e\cdot e'\\
+&=e'&&\text{(ii)}.
+\end{aligned}$$
 
 **Remark.** There are many logically equivalent definitions of a group; this course uses Definition 1.4.
 
@@ -229,7 +254,14 @@ $$b'=e\cdot b'\overset{\text{(ii)}}=(b\cdot a)\cdot b'\overset{\text{(G1)}}=b\cd
 
 For all $a,b\in G$: $(a\cdot b)^{-1}=b^{-1}\cdot a^{-1}$.
 
-**Proof.** $(a\cdot b)\cdot(b^{-1}\cdot a^{-1})=(a\cdot(b\cdot b^{-1}))\cdot a^{-1}=(a\cdot e)\cdot a^{-1}=a\cdot a^{-1}=e$, so $b^{-1}\cdot a^{-1}$ is the inverse by uniqueness (1.5).
+**Proof.**
+$$\begin{aligned}
+(a\cdot b)\cdot(b^{-1}\cdot a^{-1})&=(a\cdot(b\cdot b^{-1}))\cdot a^{-1}\\
+&=(a\cdot e)\cdot a^{-1}\\
+&=a\cdot a^{-1}\\
+&=e,
+\end{aligned}$$
+so $b^{-1}\cdot a^{-1}$ is the inverse of $a\cdot b$ by uniqueness (Proposition 1.5).
 
 ### Definition 1.7 — Abelian group
 
@@ -276,13 +308,26 @@ For maps of sets
 
 $(h\circ g)\circ f=h\circ(g\circ f)$.
 
-**Proof.** For every $w\in W$: $((h\circ g)\circ f)(w)=(h\circ g)(f(w))=h(g(f(w)))=h((g\circ f)(w))=(h\circ(g\circ f))(w)$.
+**Proof.** For every $w\in W$:
+$$\begin{aligned}
+((h\circ g)\circ f)(w)&=(h\circ g)(f(w))\\
+&=h(g(f(w)))\\
+&=h((g\circ f)(w))\\
+&=(h\circ(g\circ f))(w).
+\end{aligned}$$
 
 ### Lemma 1.12 — Composites of permutations
 
 If $f,f'\in\operatorname{Sym}(X)$ then $f\circ f'\in\operatorname{Sym}(X)$.
 
-**Proof.** Let $g,g'$ be the inverses of $f,f'$. By associativity, $(f\circ f')\circ(g'\circ g)=f\circ((f'\circ g')\circ g)=f\circ(\operatorname{id}_X\circ g)=f\circ g=\operatorname{id}_X$; similarly $(g'\circ g)\circ(f\circ f')=\operatorname{id}_X$. So $f\circ f'$ is a bijection with inverse $g'\circ g$.
+**Proof.** Let $g,g'$ be the inverses of $f,f'$. By associativity,
+$$\begin{aligned}
+(f\circ f')\circ(g'\circ g)&=f\circ((f'\circ g')\circ g)\\
+&=f\circ(\operatorname{id}_X\circ g)\\
+&=f\circ g\\
+&=\operatorname{id}_X,
+\end{aligned}$$
+and similarly $(g'\circ g)\circ(f\circ f')=\operatorname{id}_X$. So $f\circ f'$ is a bijection with inverse $g'\circ g$.
 
 ### Proposition 1.13 — The symmetric group
 
@@ -351,7 +396,10 @@ For $X\subseteq\mathbb C$, an **isometry** of $X$ is a bijection $f:X\to X$ with
 
 $\operatorname{Isom}(X)\le\operatorname{Sym}(X)$; in particular it is a group under composition.
 
-**Proof.** $\operatorname{id}$ is an isometry. For $f,g\in\operatorname{Isom}(X)$: $|f(g(x))-f(g(y))|=|g(x)-g(y)|=|x-y|$. For the inverse, put $x'=f^{-1}(x)$, $y'=f^{-1}(y)$: $|f^{-1}(x)-f^{-1}(y)|=|x'-y'|=|f(x')-f(y')|=|x-y|$.
+**Proof.** $\operatorname{id}$ is an isometry. For $f,g\in\operatorname{Isom}(X)$:
+$$|f(g(x))-f(g(y))|=|g(x)-g(y)|=|x-y|.$$
+For the inverse, put $x'=f^{-1}(x)$, $y'=f^{-1}(y)$:
+$$|f^{-1}(x)-f^{-1}(y)|=|x'-y'|=|f(x')-f(y')|=|x-y|.$$
 
 ### Definition 1.21 — Dihedral group
 
@@ -413,7 +461,8 @@ For $n\ge3$ let $X_n=\{e^{2\pi ik/n}:k=0,\dots,n-1\}\subseteq\mathbb C$ (the ver
 
 $r_k,s_\ell\in\operatorname{Isom}(X_n)$ for all $k,\ell$.
 
-**Proof.** With $\zeta=e^{2\pi i/n}$: $r_k(\zeta^j)=\zeta^{j+k}$, $s_\ell(\zeta^j)=\zeta^{\ell-j}$, so both map $X_n$ bijectively to itself. And $|r_k(z)-r_k(w)|=|e^{2\pi ik/n}(z-w)|=|z-w|$, $|s_\ell(z)-s_\ell(w)|=|\bar z-\bar w|=|z-w|$.
+**Proof.** With $\zeta=e^{2\pi i/n}$: $r_k(\zeta^j)=\zeta^{j+k}$, $s_\ell(\zeta^j)=\zeta^{\ell-j}$, so both map $X_n$ bijectively to itself. And
+$$|r_k(z)-r_k(w)|=|e^{2\pi ik/n}(z-w)|=|z-w|,\qquad|s_\ell(z)-s_\ell(w)|=|\bar z-\bar w|=|z-w|.$$
 
 The goal is to show these are the only elements of $D_{2n}$.
 
@@ -539,7 +588,10 @@ Groups may have the same structure without being the same objects (permuting $52
 
 If $\varphi:G\to H$ is a homomorphism, $\varphi(e_G)=e_H$ and $\varphi(g^{-1})=\varphi(g)^{-1}$.
 
-**Proof.** $\varphi(e_G)\varphi(e_G)=\varphi(e_Ge_G)=\varphi(e_G)$; multiply by $\varphi(e_G)^{-1}$. And $\varphi(g)\varphi(g^{-1})=\varphi(gg^{-1})=\varphi(e_G)=e_H$.
+**Proof.** First,
+$$\varphi(e_G)\varphi(e_G)=\varphi(e_Ge_G)=\varphi(e_G),$$
+and multiplying by $\varphi(e_G)^{-1}$ gives $\varphi(e_G)=e_H$. Then
+$$\varphi(g)\varphi(g^{-1})=\varphi(gg^{-1})=\varphi(e_G)=e_H.$$
 
 ### Definition 1.30 — Isomorphism
 
@@ -578,7 +630,13 @@ $$\varphi(k+_n\ell)=e^{2\pi i(k+_n\ell)/n}=e^{2\pi i(k+\ell)/n}=e^{2\pi ik/n}e^{
 
 $\operatorname{Im}(\varphi)\le H$ and $\ker(\varphi)\le G$.
 
-**Proof.** *Image:* $e_H=\varphi(e_G)$; $\varphi(g_1)\varphi(g_2)=\varphi(g_1g_2)$; $\varphi(g)^{-1}=\varphi(g^{-1})$. *Kernel:* $\varphi(e_G)=e_H$; $\varphi(g_1g_2)=e_He_H=e_H$; $\varphi(g^{-1})=\varphi(g)^{-1}=e_H$.
+**Proof.**
+
+*Image.* It contains $e_H=\varphi(e_G)$; it is closed under products, $\varphi(g_1)\varphi(g_2)=\varphi(g_1g_2)$; and under inverses, $\varphi(g)^{-1}=\varphi(g^{-1})$.
+
+*Kernel.* It contains $e_G$ since $\varphi(e_G)=e_H$. If $g_1,g_2\in\ker\varphi$ then
+$$\varphi(g_1g_2)=e_He_H=e_H,\qquad\varphi(g_1^{-1})=\varphi(g_1)^{-1}=e_H^{-1}=e_H,$$
+so $g_1g_2$ and $g_1^{-1}$ lie in $\ker\varphi$.
 
 ### Definition 1.34 — Injective and surjective
 
@@ -588,7 +646,11 @@ $f:X\to Y$ is **injective** if $f(x_1)=f(x_2)\Rightarrow x_1=x_2$, and **surject
 
 A homomorphism $\varphi$ is injective iff $\ker(\varphi)=\{e_G\}=I_G$.
 
-**Proof.** ($\Rightarrow$) $\varphi^{-1}(\{e_H\})$ has at most one element and contains $e_G$. ($\Leftarrow$) If $\varphi(g_1)=\varphi(g_2)$ then $\varphi(g_1g_2^{-1})=\varphi(g_1)\varphi(g_2)^{-1}=e_H$, so $g_1g_2^{-1}=e_G$, i.e. $g_1=g_2$.
+**Proof.** ($\Rightarrow$) $\varphi^{-1}(\{e_H\})$ has at most one element and contains $e_G$.
+
+($\Leftarrow$) If $\varphi(g_1)=\varphi(g_2)$ then
+$$\varphi(g_1g_2^{-1})=\varphi(g_1)\varphi(g_2)^{-1}=e_H,$$
+so $g_1g_2^{-1}=e_G$, i.e. $g_1=g_2$.
 
 ### Corollary 1.36 — Isomorphism criterion
 
@@ -610,7 +672,14 @@ If $G$ is cyclic then $G\cong C_n$ for some $n\in\mathbb N$, or $G\cong\mathbb Z
 
 *$S=\varnothing$:* $\varphi:\mathbb Z\to G$, $k\mapsto g^k$ is a homomorphism ($g^{k+\ell}=g^kg^\ell$) and surjective. If $0\ne k\in\ker\varphi$, then (replacing $k$ by $-k$ if needed) $k>0$ and $g^k=e$, so $k\in S$ — impossible. So $\ker\varphi=\{0\}$ and $G\cong\mathbb Z$ by Corollary 1.36.
 
-*$S\ne\varnothing$, $n=\min S$:* $\varphi:\mathbb Z_n\to G$, $k\mapsto g^k$. Writing $k+\ell=qn+(k+_n\ell)$ and using $g^n=e$: $\varphi(k)\varphi(\ell)=g^{k+\ell}=g^{k+_n\ell}=\varphi(k+_n\ell)$. Surjective: any $g^k$ with $k=nq+r$, $0\le r<n$, equals $g^r=\varphi(r)$. Injective: $g^k=e$ with $0\le k<n$ forces $k=0$ by minimality of $n$. So $G\cong\mathbb Z_n\cong C_n$.
+*$S\ne\varnothing$, $n=\min S$:* $\varphi:\mathbb Z_n\to G$, $k\mapsto g^k$.
+
+- Homomorphism: write $k+\ell=qn+(k+_n\ell)$ and use $g^n=e$:
+$$\varphi(k)\varphi(\ell)=g^{k+\ell}=g^{k+_n\ell}=\varphi(k+_n\ell).$$
+- Surjective: any $g^k$ with $k=nq+r$, $0\le r<n$, equals $g^r=\varphi(r)$.
+- Injective: $g^k=e$ with $0\le k<n$ forces $k=0$ by minimality of $n$.
+
+So $G\cong\mathbb Z_n\cong C_n$.
 
 ### Definition 1.39 — Order of an element
 
@@ -626,10 +695,26 @@ Suppose $G$ is a group and $a,b\in G$ satisfy (i) $a^n=e$, (ii) $b^2=e$, (iii) $
 
 **Proof.** By induction, $a^kb=ba^{-k}$ for all $k\in\mathbb Z$. There are four cases to check ($k,\ell\in\mathbb Z$); in each, the relation $sr^k=r^{-k}s$ ($\dagger$) in $D_{2n}$ and $ba^k=a^{-k}b$ ($\ddagger$) in $G$ correspond:
 
-1. $\varphi(r^k)\varphi(r^\ell)=a^ka^\ell=a^{k+\ell}=\varphi(r^{k+\ell})$.
-2. $\varphi(r^k)\varphi(r^\ell s)=a^ka^\ell b=a^{k+\ell}b=\varphi(r^{k+\ell}s)$.
-3. $\varphi(r^ks)\varphi(r^\ell)=a^kba^\ell\overset{(\ddagger)}=a^{k-\ell}b=\varphi(r^{k-\ell}s)\overset{(\dagger)}=\varphi(r^ksr^\ell)$.
-4. $\varphi(r^ks)\varphi(r^\ell s)=a^kba^\ell b\overset{(\ddagger)}=a^{k-\ell}bb=a^{k-\ell}=\varphi(r^{k-\ell})=\varphi(r^{k-\ell}ss)\overset{(\dagger)}=\varphi(r^ksr^\ell s)$.
+1.
+   $$\varphi(r^k)\varphi(r^\ell)=a^ka^\ell=a^{k+\ell}=\varphi(r^{k+\ell}).$$
+2.
+   $$\varphi(r^k)\varphi(r^\ell s)=a^ka^\ell b=a^{k+\ell}b=\varphi(r^{k+\ell}s).$$
+3.
+   $$\begin{aligned}
+   \varphi(r^ks)\varphi(r^\ell)&=a^kba^\ell\\
+   &=a^{k-\ell}b&&(\ddagger)\\
+   &=\varphi(r^{k-\ell}s)\\
+   &=\varphi(r^ksr^\ell)&&(\dagger).
+   \end{aligned}$$
+4.
+   $$\begin{aligned}
+   \varphi(r^ks)\varphi(r^\ell s)&=a^kba^\ell b\\
+   &=a^{k-\ell}bb&&(\ddagger)\\
+   &=a^{k-\ell}\\
+   &=\varphi(r^{k-\ell})\\
+   &=\varphi(r^{k-\ell}ss)\\
+   &=\varphi(r^ksr^\ell s)&&(\dagger).
+   \end{aligned}$$
 
 So $\varphi$ is a homomorphism.
 

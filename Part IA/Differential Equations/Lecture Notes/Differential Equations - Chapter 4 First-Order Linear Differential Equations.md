@@ -130,10 +130,16 @@ which agrees with the continuous case. See [[Forward Euler Method]].
 
 This illustrates a powerful way to solve ODEs (more later): look for a power series $y(x)=\sum_{n=0}^\infty a_nx^n$, with the $a_n$ determined by substitution into the ODE.
 
-**Example.** $5\frac{dy}{dx}-3y=0$. We have $\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^{n-1}=\sum_{n=1}^\infty na_nx^{n-1}$, so $x\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^n$ and $xy=\sum_{n=0}^\infty a_nx^{n+1}=\sum_{n=1}^\infty a_{n-1}x^n$ (relabel $m=n+1\to n$). Multiplying the ODE by $x$ and substituting,
+**Example.** $5\dfrac{dy}{dx}-3y=0$. We have
+$$\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^{n-1}=\sum_{n=1}^\infty na_nx^{n-1},\qquad\text{so}\qquad x\frac{dy}{dx}=\sum_{n=0}^\infty na_nx^n,$$
+and, relabelling $n+1\to n$,
+$$xy=\sum_{n=0}^\infty a_nx^{n+1}=\sum_{n=1}^\infty a_{n-1}x^n.$$
+Multiplying the ODE by $x$ and substituting,
 $$\sum_{n=1}^\infty(5na_n-3a_{n-1})x^n=0.$$
 The bracket must vanish for $n\ge1$ (since true $\forall x$), giving the recurrence
-$$a_n=\frac3{5n}a_{n-1}\ (n\ge1)\quad\Longrightarrow\quad a_n=\Big(\frac35\Big)^n\frac1{n!}a_0,\qquad y=a_0\sum_{n=0}^\infty\frac1{n!}\Big(\frac35\Big)^nx^n=a_0\exp\Big(\frac{3x}5\Big).$$
+$$a_n=\frac3{5n}a_{n-1}\quad(n\ge1)\qquad\Longrightarrow\qquad a_n=\Big(\frac35\Big)^n\frac1{n!}\,a_0.$$
+Hence
+$$y=a_0\sum_{n=0}^\infty\frac1{n!}\Big(\frac35\Big)^nx^n=a_0\exp\Big(\frac{3x}5\Big).$$
 
 ## 2.2 Forced equations
 
@@ -206,7 +212,9 @@ $$\mu(x)=\exp\Big[\int^xp(u)\,du\Big],$$
 unique up to an irrelevant multiplicative constant factor. Then $(\dagger)\Rightarrow\frac d{dx}(\mu y)=\mu f$, so
 $$\mu y=\int^x\mu(u)f(u)\,du.$$
 
-**Example.** $xy'+(1-x)y=1$. In standard form $y'+\frac{1-x}xy=\frac1x$, so $p=\frac{1-x}x$, $f=\frac1x$. I.F.: $\ln\mu=\int^x\big(\frac1u-1\big)du=\ln x-x=\ln(xe^{-x})$ (dropping the irrelevant constant), so $\mu=xe^{-x}$. Then
+**Example.** $xy'+(1-x)y=1$. In standard form $y'+\dfrac{1-x}xy=\dfrac1x$, so $p=\dfrac{1-x}x$, $f=\dfrac1x$. The integrating factor satisfies
+$$\ln\mu=\int^x\Big(\frac1u-1\Big)du=\ln x-x=\ln(xe^{-x})$$
+(dropping the irrelevant constant), so $\mu=xe^{-x}$. Then
 $$\frac d{dx}\big(xe^{-x}y\big)=\frac xxe^{-x}=e^{-x}\ \Rightarrow\ xe^{-x}y=-e^{-x}+C\ \Rightarrow\ y=-\frac1x+\frac Cxe^x.$$
 
 ### Radioactive decay revisited
@@ -283,9 +291,15 @@ A domain $\Omega$ is **path connected** if every pair of points of $\Omega$ can 
 ```
 *Schematic. Right: the red loop around the hole cannot be shrunk to a point inside the domain.*
 
-**Example.** $6y(y-x)\dfrac{dy}{dx}+2x-3y^2=0$, i.e. $(2x-3y^2)\,dx+(6y^2-6xy)\,dy=0$ with $P=2x-3y^2$, $Q=6y^2-6xy$. Then $\frac{\partial P}{\partial y}=-6y=\frac{\partial Q}{\partial x}$, so the equation is exact in any simply connected domain. From $\frac{\partial f}{\partial x}=P=2x-3y^2$:
+**Example.** $6y(y-x)\dfrac{dy}{dx}+2x-3y^2=0$, i.e.
+$$(2x-3y^2)\,dx+(6y^2-6xy)\,dy=0,\qquad P=2x-3y^2,\quad Q=6y^2-6xy.$$
+Then
+$$\frac{\partial P}{\partial y}=-6y=\frac{\partial Q}{\partial x},$$
+so the equation is exact in any simply connected domain. Integrating $\dfrac{\partial f}{\partial x}=P=2x-3y^2$ gives
 $$f(x,y)=x^2-3y^2x+h(y).$$
-Then $Q=\frac{\partial f}{\partial y}=-6xy+\frac{dh}{dy}$, and $Q=6y^2-6xy$ gives $\frac{dh}{dy}=6y^2$, so $h=2y^3+C$. The solution is
+Then
+$$\frac{\partial f}{\partial y}=-6xy+\frac{dh}{dy}=Q=6y^2-6xy\ \Longrightarrow\ \frac{dh}{dy}=6y^2\ \Longrightarrow\ h=2y^3+C.$$
+The solution is
 $$f(x,y)=x^2-3xy^2+2y^3=\text{const}.$$
 
 ### Solution curves

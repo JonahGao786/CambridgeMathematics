@@ -273,7 +273,7 @@ Proof 1 gives $k$th prime $<2^{2^k}$; proof 2 gives $k$th prime $<4^k$. In fact 
 
 ### Definition — Integers modulo n
 
-Let $n\ge2$. The **integers modulo $n$**, written $\mathbb Z_n$ or $\mathbb Z/n\mathbb Z$, are the integers with two regarded as the same if they differ by a multiple of $n$ (e.g. in $\mathbb Z_7$, $2$ is the same as $16$). Write $x\equiv y\pmod n$, $x\equiv y\ (n)$, or $x=y$ in $\mathbb Z_n$:
+Let $n\ge2$. The **integers modulo $n$**, written $\mathbb Z_n$ or $\mathbb Z/n\mathbb Z$, are the integers with two regarded as the same if they differ by a multiple of $n$ (e.g. in $\mathbb Z_7$, $2$ is the same as $16$). Write $x\equiv y\pmod n$ or $x=y$ in $\mathbb Z_n$:
 $$x\equiv y\pmod n\iff n\mid x-y\iff x=y+kn\text{ for some }k\in\mathbb Z.$$
 
 ```tikz
@@ -334,16 +334,16 @@ If $\operatorname{hcf}(a,n)=1$, the congruence $ax\equiv b\pmod n$ has a unique 
 > By Proposition 10′, $a^{-1}$ exists; $x\equiv a^{-1}b$ is a solution, and any solution satisfies $x\equiv a^{-1}ax\equiv a^{-1}b$.
 
 **The case $\operatorname{hcf}(a,n)=\alpha>1$.** If there is a solution, then $n\mid ax-b$, so $\alpha\mid ax-b$; also $\alpha\mid a$, hence $\alpha\mid b$. Conversely, if $\alpha\mid b$, write $n=\alpha n'$, $a=\alpha a'$, $b=\alpha b'$. Then
-$$ax\equiv b\ (n)\iff ax-b=kn\iff\alpha a'x-\alpha b'=k\alpha n'\iff a'x-b'=kn'\iff a'x\equiv b'\ (n'),$$
+$$ax\equiv b\pmod{n}\iff ax-b=kn\iff\alpha a'x-\alpha b'=k\alpha n'\iff a'x-b'=kn'\iff a'x\equiv b'\pmod{n'},$$
 and $\operatorname{hcf}(a',n')=1$, so this has a unique solution mod $n'$.
 
 **Summary.** If $\operatorname{hcf}(a,n)=\alpha>1$, then $ax\equiv b\pmod n$ has no solution unless $\alpha\mid b$, in which case its solutions are exactly those of $\frac a\alpha x\equiv\frac b\alpha\pmod{\frac n\alpha}$.
 
 **Examples.**
 1. $7x\equiv4\pmod{30}$. $\operatorname{hcf}(7,30)=1$ and Euclid gives $13\cdot7-3\cdot30=1$, so $13\cdot7\equiv1\pmod{30}$ and $x\equiv13\cdot4\equiv22\pmod{30}$. If $x'$ is another solution, $7x\equiv7x'$, so $x\equiv x'\pmod{30}$ since $7$ is a unit. Short form:
-   $$7x\equiv4\ (30)\iff13\cdot7x\equiv13\cdot4\ (30)\iff x\equiv22\ (30).$$
+   $$7x\equiv4\pmod{30}\iff13\cdot7x\equiv13\cdot4\pmod{30}\iff x\equiv22\pmod{30}.$$
 2. $10x\equiv12\pmod{34}$:
-   $$10x=12+34y\iff5x=6+17y\iff5x\equiv6\ (17)\iff x\equiv6\cdot7\ (17)\iff x\equiv8\ (17),$$
+   $$10x=12+34y\iff5x=6+17y\iff5x\equiv6\pmod{17}\iff x\equiv6\cdot7\pmod{17}\iff x\equiv8\pmod{17},$$
    using $5\cdot7=35\equiv1\pmod{17}$.
 
 ## 1.8 Simultaneous congruences
@@ -361,7 +361,7 @@ Let $m,n$ be coprime and $a,b\in\mathbb Z$. Then there is a unique solution modu
 $$x\equiv a\pmod m\quad\text{and}\quad x\equiv b\pmod n.$$
 
 **Proof.** *Existence.* Since $\gcd(m,n)=1$, Theorem 7 gives $s,t\in\mathbb Z$ with $sm+tn=1$. Then
-$$sm\equiv1\ (n),\quad tn\equiv1\ (m),\quad sm\equiv0\ (m),\quad tn\equiv0\ (n).$$
+$$sm\equiv1\pmod{n},\quad tn\equiv1\pmod{m},\quad sm\equiv0\pmod{m},\quad tn\equiv0\pmod{n}.$$
 Hence $x=a(tn)+b(sm)$ satisfies $x\equiv a\pmod m$ and $x\equiv b\pmod n$.
 
 *Uniqueness.* Let $y$ also be a solution. Then $y\equiv x\pmod m$ and $y\equiv x\pmod n$, i.e. $m\mid y-x$ and $n\mid y-x$. Since $\gcd(m,n)=1$, $mn\mid y-x$, so $y\equiv x\pmod{mn}$.
@@ -401,7 +401,9 @@ But $(p-1)!$ is a unit modulo $p$ (a product of units), so we can cancel it: $a^
 Let $\gcd(a,m)=1$. Then $a^{\varphi(m)}\equiv1\pmod m$.
 
 **Proof.** Let $U=\{x\in\mathbb Z:\ 0<x<m,\ \gcd(x,m)=1\}$, with $\varphi(m)$ elements $u_1,\dots,u_{\varphi(m)}$. Then $au_1,\dots,au_{\varphi(m)}$ are distinct (modulo $m$) and invertible modulo $m$ (as $a$ and the $u_i$ are units), so they are $u_1,\dots,u_{\varphi(m)}$ in some order. Hence
-$$au_1\cdot au_2\cdots au_{\varphi(m)}\equiv u_1u_2\cdots u_{\varphi(m)}\pmod m,\quad\text{i.e.}\quad a^{\varphi(m)}z\equiv z\pmod m,$$
+$$au_1\cdot au_2\cdots au_{\varphi(m)}\equiv u_1u_2\cdots u_{\varphi(m)}\pmod m,$$
+that is,
+$$a^{\varphi(m)}z\equiv z\pmod m,$$
 where $z=u_1\cdots u_{\varphi(m)}$ is a product of units, hence a unit. Cancelling $z$ gives $a^{\varphi(m)}\equiv1\pmod m$.
 
 **Question — $(p-1)!$ modulo $p$.** $p=5$: $4!=24\equiv-1\pmod5$. $p=7$: $6!=720\equiv-1\pmod7$.

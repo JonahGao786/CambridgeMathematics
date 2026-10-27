@@ -140,7 +140,8 @@ If $|G|<\infty$ and $g\in G$, then $\operatorname{ord}(g)\mid|G|$.
 
 If $|G|<\infty$ and $g\in G$, then $g^{|G|}=e$.
 
-**Proof.** By Corollary 2.7, $|G|=\operatorname{ord}(g)\cdot k$ for some $k\in\mathbb N$, so $g^{|G|}=g^{\operatorname{ord}(g)\cdot k}=e^k=e$.
+**Proof.** By Corollary 2.7, $|G|=\operatorname{ord}(g)\cdot k$ for some $k\in\mathbb N$, so
+$$g^{|G|}=g^{\operatorname{ord}(g)\cdot k}=e^k=e.$$
 
 ### Corollary 2.9 — Groups of prime order
 

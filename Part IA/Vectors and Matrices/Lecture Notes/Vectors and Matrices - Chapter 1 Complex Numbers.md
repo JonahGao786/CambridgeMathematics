@@ -101,9 +101,11 @@ For $z_1,z_2\in\mathbb C$:
 3. $|z_1+z_2|\le|z_1|+|z_2|$ (**triangle inequality**);
 4. $\big||z_1|-|z_2|\big|\le|z_1-z_2|$ (**reverse triangle inequality**).
 
-**Proof.** (1) Multiplicativity follows by squaring: $|z_1z_2|^2=z_1z_2\bar z_1\bar z_2=|z_1|^2|z_2|^2$.
+**Proof.** (1) Multiplicativity follows by squaring:
+$$|z_1z_2|^2=z_1z_2\bar z_1\bar z_2=|z_1|^2|z_2|^2.$$
 
-(2) Apply (1) to $\frac{z_1}{z_2}$ and $z_2$: $\left|\frac{z_1}{z_2}z_2\right|^2=\left|\frac{z_1}{z_2}\right|^2|z_2|^2=|z_1|^2$, so $\left|\frac{z_1}{z_2}\right|^2=\frac{|z_1|^2}{|z_2|^2}$.
+(2) Apply (1) to $\dfrac{z_1}{z_2}$ and $z_2$:
+$$\left|\frac{z_1}{z_2}z_2\right|^2=\left|\frac{z_1}{z_2}\right|^2|z_2|^2=|z_1|^2,\qquad\text{so}\qquad\left|\frac{z_1}{z_2}\right|^2=\frac{|z_1|^2}{|z_2|^2}.$$
 
 (3) Use $\operatorname{Re}(z)\le|z|$. With $z_j=x_j+iy_j$,
 $$\begin{aligned}
@@ -222,7 +224,10 @@ $$\Big(\sum_{j=0}^\infty\frac{z^j}{j!}\Big)\Big(\sum_{k=0}^\infty\frac{w^k}{k!}\
 
 (3) By the product rule, $e^ze^{-z}=e^0=1$, so $e^{-z}=1/e^z$.
 
-(4) Induction for $n\ge0$: trivial at $n=0$; if $(e^z)^n=e^{nz}$ then $(e^z)^{n+1}=(e^z)^ne^z=e^{nz}e^z=e^{(n+1)z}$. For $n=-m<0$: $(e^z)^{-m}=\dfrac1{(e^z)^m}=\dfrac1{e^{mz}}=e^{-mz}=e^{nz}$.
+(4) Induction for $n\ge0$: trivial at $n=0$; if $(e^z)^n=e^{nz}$ then
+$$(e^z)^{n+1}=(e^z)^ne^z=e^{nz}e^z=e^{(n+1)z}.$$
+For $n=-m<0$:
+$$(e^z)^{-m}=\frac1{(e^z)^m}=\frac1{e^{mz}}=e^{-mz}=e^{nz}.$$
 
 ### Definition — Complex sine and cosine
 
@@ -263,7 +268,9 @@ where $R^{1/N}$ is the positive real root. The roots are equally spaced on the c
 
 For $z\in\mathbb C$, $z\ne0$, a **logarithm** of $z$ is $w\in\mathbb C$ with $e^w=z$.
 
-The exponential is many-to-one, so a non-zero $z$ has many logarithms: by the previous lemma $e^{w+2\pi ni}=e^w$ for all $n\in\mathbb Z$. With $z=re^{i\theta}$, $z=e^{\log r}e^{i\theta}=e^{\log r+i\theta}$, so the logarithms of $z$ are
+The exponential is many-to-one, so a non-zero $z$ has many logarithms: by the previous lemma $e^{w+2\pi ni}=e^w$ for all $n\in\mathbb Z$. With $z=re^{i\theta}$,
+$$z=e^{\log r}e^{i\theta}=e^{\log r+i\theta},$$
+so the logarithms of $z$ are
 $$w=\log r+i\theta,\qquad\theta\in\operatorname{Arg}(z),$$
 and $\theta\mapsto\theta+2\pi n$ gives $w\mapsto w+2\pi ni$. To make them unique take $\theta\in(-\pi,\pi]$ and define
 $$\log z=\log|z|+i\arg(z)\quad\text{(principal logarithm)},\qquad\operatorname{Log}z=\{\log z+2\pi ni:\ n\in\mathbb Z\}\quad\text{(all logarithms)}.$$
@@ -277,8 +284,10 @@ For $z\ne0$ and $\alpha\in\mathbb C$, choose $L\in\operatorname{Log}z$ and defin
 3. Otherwise there are infinitely many values.
 
 **Power laws** (for compatible choices of values): $z^\alpha z^\beta=z^{\alpha+\beta}$ and $(z^\alpha)^\beta=z^{\alpha\beta}$.
-1. Fix $L\in\operatorname{Log}z$: $z^\alpha z^\beta=e^{\alpha L}e^{\beta L}=e^{(\alpha+\beta)L}$.
-2. Choose the value $u=e^{\alpha L}$ of $z^\alpha$, and the logarithm $\mu=\alpha L$ of $u$: $(z^\alpha)^\beta=u^\beta=e^{\beta\mu}=e^{\alpha\beta L}=z^{\alpha\beta}$.
+1. Fix $L\in\operatorname{Log}z$:
+$$z^\alpha z^\beta=e^{\alpha L}e^{\beta L}=e^{(\alpha+\beta)L}.$$
+2. Choose the value $u=e^{\alpha L}$ of $z^\alpha$, and the logarithm $\mu=\alpha L$ of $u$:
+$$(z^\alpha)^\beta=u^\beta=e^{\beta\mu}=e^{\alpha\beta L}=z^{\alpha\beta}.$$
 
 **Examples.**
 

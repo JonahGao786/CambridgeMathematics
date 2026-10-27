@@ -135,6 +135,18 @@ Rules:
   > Why the step holds, in plain words.
   ```
   Use these sparingly — roughly one per page of source at most — and never to restate what the line above already says.
+- **Readability of mathematics.**
+  - Any derivation of two or more steps (chain of `=`, `\iff`, `\Rightarrow`, or a calculation with reasons) goes in a display block, one step per line, with the justification on the right:
+    ```
+    $$\begin{aligned}
+    e&=b\cdot c\\
+    &=(b\cdot a)\cdot(b\cdot c)&&\text{(G1)}\\
+    &=b\cdot a&&\text{(G2)}.
+    \end{aligned}$$
+    ```
+    Inline `$…$` is for short facts and symbols, never for multi-step chains; a proof is not a paragraph of crammed inline equations. Put display math on its own lines (inside a list item, indent it and start it on a new line).
+  - Congruences are written `x\equiv y\pmod{n}`, never `x\equiv y\ (n)` or `(mod n)` as plain text; likewise `\gcd`, `\operatorname{ord}`, `\varphi` for operators and functions.
+  - One idea per sentence; state the result before the proof; do not repeat a formula in prose and display.
 - Notes must read as standalone study material. Never write meta-commentary about where content came from or what the notes lack: no "added explanation", "not from the lecture", "the notebook ends", "no proof in the notes", "your intuition is right", or similar. An explanation either belongs in the note or does not; do not label its origin. Unproved statements are simply stated; a missing proof gets a terse `> [!todo] Proof of X missing (p. N).`
 - When the lecture defers something ("proved in Analysis I"), say so in one line; do not prove it.
 - Prefer concrete language: name the axiom or earlier result used at each step (`by (G1)`, `by Lemma 1.6`).
