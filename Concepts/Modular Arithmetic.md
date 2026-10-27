@@ -26,7 +26,19 @@ tags: [concept, numbers-and-sets]
 - **Theorem 13 — Fermat's little theorem.** $a^{p-1}\equiv1\pmod p$ for $p\nmid a$ (equivalently $a^p\equiv a$). *Idea:* $a,2a,\dots,(p-1)a$ is a rearrangement of $1,\dots,p-1$; cancel the unit $(p-1)!$. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 13 — Fermat's little theorem|proof]]
 - **Theorem 13′ — Fermat–Euler.** $a^{\varphi(m)}\equiv1\pmod m$ for $\gcd(a,m)=1$; same idea with the $\varphi(m)$ units. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 13' — Fermat–Euler theorem|proof]]
 - **As a group (Groups).** The units $\mathbb Z_n^\times$ form a group of order $\varphi(n)$, which gives Fermat–Euler from Lagrange. → [[Groups - Chapter 2 Lagrange's Theorem#Theorem 2.11 — Fermat–Euler|lecture]]
-- **Lemma 14.** For prime $p$: $x^2\equiv1\iff x\equiv\pm1\pmod p$. *Idea:* $(x+1)(x-1)\equiv0$ and Euclid's lemma. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Lemma 14 — Square roots of 1 modulo a prime- **Theorem 15 — Wilson.** $(p-1)!\equiv-1\pmod p$. *Idea:* units pair off with their inverses; only $\pm1$ are self-inverse (Lemma 14). → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 15 — Wilson's theorem|proof]]
-- **Proposition 16.** For odd prime $p$, $-1$ is a square mod $p$ iff $p\equiv1\pmod4$; then $x=\big(\frac{p-1}2\big)!$ solves $x^2\equiv-1$. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Proposition 16 — When is -1 a square modulo p|proof]]
-- **RSA.** Publish $(n,e)=(pq,e)$ with $\gcd(e,\varphi(n))=1$; encrypt $M\mapsto M^e$, decrypt with $d$, $ed\equiv1\pmod{\varphi(n)}$, since $M^{k\varphi(n)+1}\equiv M$. → [[Numbers and Sets - Chapter 1 Elementary Number Theory#RSA scheme|lecture]]
-|proof]]
+- **Lemma 14.** For prime $p$: $x^2\equiv1\iff x\equiv\pm1\pmod p$ (statement only in the notes so far). → [[Numbers and Sets - Chapter 1 Elementary Number Theory#Lemma 14 — Square roots of 1 modulo a prime|lecture]]
+
+## Examples
+
+- $2a^2+3b^2=1$ has no integer solution: mod $3$, $2a^2\in\{0,2\}$.
+- $7x\equiv4\pmod{30}$: $13\cdot7\equiv1$, so $x\equiv52\equiv22\pmod{30}$.
+- $10x\equiv12\pmod{34}\iff5x\equiv6\pmod{17}\iff x\equiv8\pmod{17}$.
+- Powers of $2$ mod $7$ cycle $2,4,1$; mod $11$ they run through all of $2,4,8,5,10,9,7,3,6,1$.
+
+## Pitfalls
+
+- Cancel only units: $4\cdot3\equiv4\cdot8\pmod{10}$ but $3\not\equiv8$.
+
+## Related
+
+[[Bezout's Identity and Linear Diophantine Equations]] · [[Divisibility and Prime Numbers]] · [[Groups]]

@@ -6,14 +6,14 @@ chapter: 1
 source_file: Ch.1 Elementary Number Theory.pdf
 drive_file_id: 1UTg7i2PPaEujlaMuByJELly5mOqiUrxW
 source_url: https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view
-source_pages: 28
+source_pages: 26
 tags: [lecture, numbers-and-sets]
 ---
 
 # Numbers and Sets — Chapter 1: Elementary Number Theory
 
 > [!abstract] Overview
-> Builds $\mathbb N$ from the Peano axioms, gives the induction principles, then develops divisibility: division algorithm → Euclid's algorithm → Bézout → Euclid's lemma → unique prime factorization. Then modular arithmetic, units mod $n$, linear congruences, the Chinese Remainder Theorem, Euler's totient function with Fermat's little theorem and its Euler generalisation, Wilson's theorem, when $-1$ is a square modulo $p$, and the RSA scheme.
+> Builds $\mathbb N$ from the Peano axioms, gives the induction principles, then develops divisibility: division algorithm → Euclid's algorithm → Bézout → Euclid's lemma → unique prime factorization. Then modular arithmetic, units mod $n$, linear congruences, the Chinese Remainder Theorem, and Euler's totient function with Fermat's little theorem and its Euler generalisation.
 > Prerequisite: [[Numbers and Sets - Chapter 0 Proofs]].
 
 ## Results index
@@ -44,9 +44,6 @@ tags: [lecture, numbers-and-sets]
 | [[#Theorem 13 — Fermat's little theorem]] | $a^{p-1}\equiv1\pmod p$ for $p\nmid a$ | 25 |
 | [[#Theorem 13' — Fermat–Euler theorem]] | $a^{\varphi(m)}\equiv1\pmod m$ for $\gcd(a,m)=1$ | 25–26 |
 | [[#Lemma 14 — Square roots of 1 modulo a prime]] | $x^2\equiv1\iff x\equiv\pm1\pmod p$ | 26 |
-| [[#Theorem 15 — Wilson's theorem]] | $(p-1)!\equiv-1\pmod p$ | 26 |
-| [[#Proposition 16 — When is -1 a square modulo p]] | $-1$ is a square mod an odd prime $p\iff p\equiv1\pmod4$ | 27 |
-| [[#RSA scheme]] | public key $(n,e)$, decryption exponent $d$ with $ed\equiv1\pmod{\varphi(n)}$ | 28 |
 
 ## 1.1 The natural numbers
 
@@ -415,62 +412,4 @@ where $z=u_1\cdots u_{\varphi(m)}$ is a product of units, hence a unit. Cancelli
 
 Let $p$ be prime. Then $x^2\equiv1\pmod p\iff x\equiv1\pmod p$ or $x\equiv-1\pmod p$.
 
-**Proof.** Modulo $p$,
-$$x^2\equiv1\iff(x+1)(x-1)\equiv0.$$
-Recall Proposition 4 (Euclid's lemma): if $p$ is prime and $p\mid ab$ then $p\mid a$ or $p\mid b$. So for $p$ prime,
-$$ab\equiv0\pmod p\iff a\equiv0\pmod p\ \text{ or }\ b\equiv0\pmod p.$$
-Hence $x^2\equiv1\pmod p$ iff $x+1\equiv0$ or $x-1\equiv0\pmod p$, i.e. iff $x\equiv\pm1\pmod p$.
-
-**Remark.** More generally, a non-zero polynomial of degree $k$ over $\mathbb Z_p$ has at most $k$ roots in $\mathbb Z_p$.
-
-## 1.10 Wilson's theorem and squares of $-1$
-
-### Theorem 15 — Wilson's theorem
-
-Let $p$ be prime. Then $(p-1)!\equiv-1\pmod p$.
-
-**Proof.** True for $p=2$, so assume $p>2$. The units modulo $p$ come in pairs whose product is $1$, together with the self-inverse elements, i.e. those $x$ with $x^2\equiv1\pmod p$. By Lemma 14 the self-inverse elements are $\pm1$, so the remaining $p-3$ units of $\mathbb Z_p$ come in inverse pairs.
-
-For example $p=11$: the units $2,\dots,9$ pair up as $2\cdot6,\ 3\cdot4,\ 5\cdot9,\ 7\cdot8$, each product $\equiv1$.
-
-Hence $(p-1)!$ is the product of $\frac{p-3}2$ pairs of inverses together with $+1$ and $-1$, so $(p-1)!\equiv-1\pmod p$.
-
-### Proposition 16 — When is -1 a square modulo p
-
-Let $p$ be an odd prime. Then $-1$ is a square modulo $p$ if and only if $p\equiv1\pmod4$.
-
-**Examples.** $p=5$: $2^2\equiv-1$. $p=13$: $5^2\equiv-1$. $p=7$: there is no such number.
-
-**Proof.** ($\Leftarrow$) Suppose $p\equiv1\pmod4$. By Wilson's theorem,
-$$\begin{aligned}
--1\equiv(p-1)!&=1\cdot2\cdot3\cdots\frac{p-1}2\cdot\frac{p+1}2\cdots(p-1)\\
-&\equiv1\cdot2\cdot3\cdots\frac{p-1}2\cdot\Big(\frac{p+1}2-p\Big)\cdots(p-1-p)\\
-&\equiv(-1)^{\frac{p-1}2}\Big(\Big(\frac{p-1}2\Big)!\Big)^2\pmod p.
-\end{aligned}$$
-If $p=4k+1$ with $k\in\mathbb Z$, then $\frac{p-1}2=2k$ and
-$$-1\equiv(-1)^{2k}\Big(\Big(\frac{p-1}2\Big)!\Big)^2=\Big(\Big(\frac{p-1}2\Big)!\Big)^2\pmod p,$$
-so $-1$ is a square modulo $p$.
-
-($\Rightarrow$) Suppose instead that $p\equiv-1\pmod4$, i.e. $p=4k+3$. If $-1\equiv z^2$ were a square modulo $p$, then by Fermat's little theorem
-$$1\equiv z^{p-1}=z^{4k+2}=(z^2)^{2k+1}\equiv(-1)^{2k+1}=-1\pmod p,$$
-a contradiction.
-
-**Remark.** When $p\equiv1\pmod4$, Wilson's theorem gives a solution of $x^2\equiv-1\pmod p$, namely $x=\big(\frac{p-1}2\big)!$. E.g. $p=29=4\cdot7+1$, so $x=14!$ works.
-
-## 1.11 Public key cryptography
-
-Messages are written as sequences of numbers, e.g. $A\to00$, $B\to01$, $\dots$ The aim: anyone can send an encrypted message to the receiver, who can decrypt it easily, but no third party can.
-
-### RSA scheme
-
-**Set-up.** The receiver
-- chooses two large primes $p,q$;
-- puts $n=pq$ and picks an encoding exponent $e$ coprime to $\varphi(pq)=(p-1)(q-1)$;
-- publishes the pair $(n,e)$ as the encryption scheme.
-
-**Encrypting.** Chop the message into numbers $M<n$ and send $M^e\bmod n$.
-
-**Decrypting.** Find $d$ with $ed\equiv1\pmod{\varphi(n)}$, and compute
-$$(M^e)^d=M^{k\varphi(n)+1}\equiv M\pmod n.$$
-
-To decrypt this way, the receiver needs $n$ and $d$, or $n$, $e$ and $\varphi(n)$. Finding $\varphi(n)$ is as difficult as finding the prime factors of $n$, which is believed to be computationally difficult. It is not known whether RSA can be broken without factorisation.
+> [!todo] Proof of Lemma 14 missing (p. 26).
