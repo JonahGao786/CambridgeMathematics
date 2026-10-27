@@ -15,7 +15,8 @@ tags: [index]
 | Chapter | Main results |
 | --- | --- |
 | [[Numbers and Sets - Chapter 0 Proofs]] | proofs vs non-proofs; contrapositive; truth tables; negating quantifiers |
-| [[Numbers and Sets - Chapter 1 Elementary Number Theory]] | induction & WOP (Thm 1); primes (Prop 2, Thm 3); Euclid (Prop 5, Thm 6); Bézout (Thm 7, Cor 8); Euclid's lemma (Prop 4); FTA (Thm 9); units mod $n$ (Props 10, 10′, Cor 11); CRT (Thm 12); Euler's $\varphi$, Fermat's little theorem (Thm 13, 13′), Lemma 14 |
+| [[Numbers and Sets - Chapter 1 Elementary Number Theory]] | induction & WOP (Thm 1); primes (Prop 2, Thm 3); Euclid (Prop 5, Thm 6); Bézout (Thm 7, Cor 8); Euclid's lemma (Prop 4); FTA (Thm 9); units mod $n$ (Props 10, 10′, Cor 11); CRT (Thm 12); Euler's $\varphi$, Fermat's little theorem (Thm 13, 13′), Lemma 14, Wilson (Thm 15), $-1$ as a square (Prop 16), RSA |
+| [[Numbers and Sets - Chapter 2 The Reals]] | $\sqrt2$ is irrational (Prop 1) |
 
 Concepts, in order: [[Logical Connectives and Quantifiers]] → [[Proof by Contradiction and Contraposition]] → [[Natural Numbers and Mathematical Induction]] → [[Divisibility and Prime Numbers]] → [[Greatest Common Divisors and Euclid's Algorithm]] → [[Bezout's Identity and Linear Diophantine Equations]] → [[Modular Arithmetic]] · also [[Fibonacci Numbers]]
 
@@ -26,9 +27,10 @@ Sheets: [[Numbers and Sets - Introductory Sheet 2026]] · [[Numbers and Sets 0 -
 | Chapter | Main results |
 | --- | --- |
 | [[Vectors and Matrices - Chapter 1 Complex Numbers]] | modulus & triangle inequality; De Moivre; $e^z$ and Euler's formula; roots of unity; logs and powers; lines, circles, transformations |
-| [[Vectors and Matrices - Chapter 2 Vectors]] | dot product, Cauchy–Schwarz; orthonormal bases; cross & triple products; lines & planes; index notation, $\varepsilon$ identities; spherical cosine rule; vector spaces, subspaces, linear independence, bases and dimension; complex inner products |
+| [[Vectors and Matrices - Chapter 2 Vectors]] | dot product, Cauchy–Schwarz; orthonormal bases; cross & triple products; lines & planes; index notation, $\varepsilon$ identities; spherical cosine rule; vector spaces, subspaces, linear independence, bases and dimension; complex inner products, orthogonality, function-space inner product |
+| [[Vectors and Matrices - Chapter 3 Matrices]] | linear maps; image, kernel; rank–nullity; matrix of a linear map |
 
-Concepts: [[Complex Numbers]] → [[De Moivre's Theorem]] → [[Triangle Inequality for Complex Numbers]] → [[Fundamental Theorem of Algebra]] → [[Complex Exponential and Trigonometric Functions]] → [[Roots of Unity]] → [[Complex Logarithms and Powers]] → [[Vectors and Linear Span]] → [[Real Inner Products and Cauchy-Schwarz]] → [[Orthonormal Bases and Vector Coordinates]] → [[Cross Products and Scalar Triple Products]] → [[Lines, Planes and Vector Equations]] → [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]]
+Concepts: [[Complex Numbers]] → [[De Moivre's Theorem]] → [[Triangle Inequality for Complex Numbers]] → [[Fundamental Theorem of Algebra]] → [[Complex Exponential and Trigonometric Functions]] → [[Roots of Unity]] → [[Complex Logarithms and Powers]] → [[Vectors and Linear Span]] → [[Real Inner Products and Cauchy-Schwarz]] → [[Orthonormal Bases and Vector Coordinates]] → [[Cross Products and Scalar Triple Products]] → [[Lines, Planes and Vector Equations]] → [[Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide]] → [[Linear Maps and Matrices]]
 
 ## Groups
 

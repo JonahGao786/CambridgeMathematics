@@ -6,14 +6,14 @@ chapter: 2
 source_file: Ch.2 Vectors.pdf
 drive_file_id: 1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN
 source_url: https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view
-source_pages: 36
+source_pages: 38
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 2: Vectors
 
 > [!abstract] Overview
-> Vectors in $\mathbb R^n$: addition, scalar multiplication, span; the dot product, Cauchy–Schwarz and the triangle inequality; orthonormal bases; cross and triple products; lines and planes; index notation ($\delta_{ij}$, $\varepsilon_{ijk}$, summation convention) with its applications; then general vector spaces over $\mathbb R$ or $\mathbb C$: subspaces, linear independence, bases and dimension, and inner products on real and complex spaces.
+> Vectors in $\mathbb R^n$: addition, scalar multiplication, span; the dot product, Cauchy–Schwarz and the triangle inequality; orthonormal bases; cross and triple products; lines and planes; index notation ($\delta_{ij}$, $\varepsilon_{ijk}$, summation convention) with its applications; then general vector spaces over $\mathbb R$ or $\mathbb C$: subspaces, linear independence, bases and dimension, inner products on real and complex spaces, and an integral inner product on a function space.
 > Prerequisite: [[Vectors and Matrices - Chapter 1 Complex Numbers]].
 
 ## Results index
@@ -58,7 +58,10 @@ tags: [lecture, vectors-and-matrices]
 | [[#Definition — Dimension]] | $\dim V$; $\dim_{\mathbb R}\mathbb C^n=2n$ | 32 |
 | [[#Proposition — Spanning and independent sets in dimension n]] | $m\ge n$, $k\le n$; extend/reduce to a basis | 33 |
 | [[#Definition — Inner product over a complex vector space]] | Hermitian symmetry, sesquilinear, $\langle\mathbf z,\mathbf w\rangle=\sum\bar z_jw_j$ | 33–34 |
-| [[#Theorem — Cauchy-Schwarz and triangle inequalities for inner products]] | $\lvert\langle\mathbf v,\mathbf w\rangle\rvert\le\lVert\mathbf v\rVert\lVert\mathbf w\rVert$ in any inner product space | 36 |
+| [[#Theorem — Cauchy-Schwarz and triangle inequalities for inner products]] | $\lvert\langle\mathbf v,\mathbf w\rangle\rvert\le\lVert\mathbf v\rVert\lVert\mathbf w\rVert$ in any inner product space | 36–37 |
+| [[#Proposition — Orthogonality and linear independence]] | non-zero mutually orthogonal vectors are independent | 37 |
+| [[#Example — Integral inner product]] | $\langle f,g\rangle=\int_0^1fg\,dx$ | 38 |
+| [[#Example — Orthogonal sine functions]] | $\sin(n\pi x)$ orthogonal; $V$ is infinite-dimensional | 38 |
 
 ## 2.1 Vectors
 
@@ -756,5 +759,44 @@ $$\begin{aligned}
 \end{aligned}$$
 Multiplying by $\|\mathbf w\|^2>0$: $\|\mathbf v\|^2\|\mathbf w\|^2\ge|\langle\mathbf v,\mathbf w\rangle|^2$. Taking non-negative square roots gives Cauchy–Schwarz. The same argument applies over $\mathbb R$, where complex conjugation has no effect.
 
-> [!note] Explanation
-> The triangle inequality follows as in [[#Theorem — Triangle inequality]]: $\|\mathbf v+\mathbf w\|^2=\|\mathbf v\|^2+\|\mathbf w\|^2+2\operatorname{Re}\langle\mathbf v,\mathbf w\rangle\le(\|\mathbf v\|+\|\mathbf w\|)^2$, since $\operatorname{Re}\langle\mathbf v,\mathbf w\rangle\le|\langle\mathbf v,\mathbf w\rangle|$.
+**Proof (triangle inequality).** Expand the squared norm using the inner product properties:
+$$\begin{aligned}
+\|\mathbf v+\mathbf w\|^2&=\langle\mathbf v+\mathbf w,\ \mathbf v+\mathbf w\rangle\\
+&=\langle\mathbf v+\mathbf w,\mathbf v\rangle+\langle\mathbf v+\mathbf w,\mathbf w\rangle\\
+&=\langle\mathbf v,\mathbf v\rangle+\langle\mathbf w,\mathbf v\rangle+\langle\mathbf v,\mathbf w\rangle+\langle\mathbf w,\mathbf w\rangle\\
+&=\|\mathbf v\|^2+\|\mathbf w\|^2+\langle\mathbf v,\mathbf w\rangle+\overline{\langle\mathbf v,\mathbf w\rangle}&&\text{Hermitian symmetry}\\
+&=\|\mathbf v\|^2+\|\mathbf w\|^2+2\operatorname{Re}\langle\mathbf v,\mathbf w\rangle\\
+&\le\|\mathbf v\|^2+2|\langle\mathbf v,\mathbf w\rangle|+\|\mathbf w\|^2\\
+&\le\|\mathbf v\|^2+2\|\mathbf v\|\|\mathbf w\|+\|\mathbf w\|^2&&\text{Cauchy–Schwarz}\\
+&=(\|\mathbf v\|+\|\mathbf w\|)^2.
+\end{aligned}$$
+Both sides are non-negative, so taking square roots gives $\|\mathbf v+\mathbf w\|\le\|\mathbf v\|+\|\mathbf w\|$.
+
+### Proposition — Orthogonality and linear independence
+
+In a real or complex inner product space, non-zero mutually orthogonal vectors are linearly independent.
+
+**Proof.** Let $\mathbf v_1,\dots,\mathbf v_m$ be non-zero and mutually orthogonal, and suppose
+$$\sum_{i=1}^m\alpha_i\mathbf v_i=\mathbf 0.$$
+We must show every coefficient is zero. Fix $j\in\{1,\dots,m\}$ and take the inner product with $\mathbf v_j$ in the first argument. Linearity in the second argument gives
+$$0=\langle\mathbf v_j,\mathbf 0\rangle=\Big\langle\mathbf v_j,\sum_{i=1}^m\alpha_i\mathbf v_i\Big\rangle=\sum_{i=1}^m\alpha_i\langle\mathbf v_j,\mathbf v_i\rangle.$$
+Mutual orthogonality makes every term with $i\ne j$ vanish, leaving
+$$0=\alpha_j\langle\mathbf v_j,\mathbf v_j\rangle=\alpha_j\|\mathbf v_j\|^2.$$
+Since $\mathbf v_j\ne\mathbf 0$, positive definiteness gives $\|\mathbf v_j\|^2>0$, so $\alpha_j=0$. This holds for every $j$, so the vectors are linearly independent.
+
+**An inner product on a function space.** The following two examples use the space $V$ from Section 2.8.
+
+### Example — Integral inner product
+
+Return to the space $V$ of smooth real functions vanishing at $0$ and $1$ (Section 2.8). Define
+$$\langle f,g\rangle:=\int_0^1f(x)g(x)\,dx.$$
+This is symmetric, and linearity of integration makes it bilinear. Moreover $\langle f,f\rangle=\int_0^1f(x)^2dx\ge0$. If $f$ is not identically zero, continuity gives an interval on which $f(x)^2$ is bounded below by a positive number, so the integral is strictly positive. Thus this is an inner product, with induced norm
+$$\|f\|=\Big(\int_0^1f(x)^2dx\Big)^{1/2}.$$
+Cauchy–Schwarz becomes the integral inequality
+$$\Big|\int_0^1f(x)g(x)\,dx\Big|\le\Big(\int_0^1f(x)^2dx\Big)^{1/2}\Big(\int_0^1g(x)^2dx\Big)^{1/2}.$$
+
+### Example — Orthogonal sine functions
+
+For each positive integer $n$, $f_n(x)=\sin(n\pi x)$ belongs to $V$. The product-to-sum identity gives
+$$\langle f_n,f_m\rangle=\int_0^1\sin(n\pi x)\sin(m\pi x)\,dx=\frac12\int_0^1\big(\cos((n-m)\pi x)-\cos((n+m)\pi x)\big)dx=\begin{cases}\frac12,&n=m,\\0,&n\ne m.\end{cases}$$
+Consequently the functions are non-zero and mutually orthogonal, so every finite collection $f_1,\dots,f_N$ is linearly independent. Since $N$ can be arbitrarily large, $V$ is **infinite-dimensional**: it cannot have a finite basis. The functions $\sqrt2\sin(n\pi x)$ form an orthonormal family.

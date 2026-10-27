@@ -24,6 +24,9 @@ tags: [concept, vectors-and-matrices]
 - **Triangle inequality.** $|\mathbf x+\mathbf y|\le|\mathbf x|+|\mathbf y|$. *Idea:* expand $|\mathbf x+\mathbf y|^2$ and apply Cauchy–Schwarz. → [[Vectors and Matrices - Chapter 2 Vectors#Theorem — Triangle inequality|proof]]
 - **Over any inner product (real or complex).** $|\langle\mathbf v,\mathbf w\rangle|\le\|\mathbf v\|\|\mathbf w\|$ and $\|\mathbf v+\mathbf w\|\le\|\mathbf v\|+\|\mathbf w\|$. *Idea:* take $\lambda=\langle\mathbf w,\mathbf v\rangle/\|\mathbf w\|^2$ in $\|\mathbf v-\lambda\mathbf w\|^2\ge0$. → [[Vectors and Matrices - Chapter 2 Vectors#Theorem — Cauchy-Schwarz and triangle inequalities for inner products|proof]]
 
+- **Orthogonality and independence.** Non-zero mutually orthogonal vectors are linearly independent (take the inner product with each $\mathbf v_j$). → [[Vectors and Matrices - Chapter 2 Vectors#Proposition — Orthogonality and linear independence|proof]]
+- **Function space example.** $\langle f,g\rangle=\int_0^1fg\,dx$ is an inner product on smooth functions vanishing at $0,1$; the $\sin(n\pi x)$ are orthogonal, so this space is infinite-dimensional. → [[Vectors and Matrices - Chapter 2 Vectors#Example — Orthogonal sine functions|lecture]]
+
 ## Pitfalls
 
 - Over $\mathbb C$ use $\sum\bar z_jw_j$, not $\sum z_jw_j$: the latter is not positive (for $z=i$ it gives $-1$).
