@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-26T14:30:00Z",
+  "last_inventory_at": "2026-10-28T00:00:00Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
   "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
@@ -1264,8 +1264,8 @@
       "source_file_name": "Ch.1 Elementary Number Theory.pdf",
       "source_url": "https://drive.google.com/file/d/1UTg7i2PPaEujlaMuByJELly5mOqiUrxW/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-24T12:21:13.894Z",
-      "processed_source_modified_timestamp": "2026-10-24T12:21:13.894Z",
+      "observed_source_modified_timestamp": "2026-10-27T22:27:10.265Z",
+      "processed_source_modified_timestamp": "2026-10-27T22:27:10.265Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 1 Elementary Number Theory.md",
         "Concepts/Natural Numbers and Mathematical Induction.md",
@@ -1283,15 +1283,18 @@
       "unresolved_todos": [
         "p.23: Theorem 12 (CRT) stated; proof not yet in the notebook"
       ],
-      "total_page_count": 26,
-      "visually_inspected_pages": "1-26",
-      "source_sha256": "54c5ba6f98ec762ec41c0cc509f88540ae74880fb75c2e45f71d44e5114ba39d",
-      "source_size_bytes": 6682032,
+      "total_page_count": 28,
+      "visually_inspected_pages": "26-28 (1-25 matched baseline hashes)",
+      "source_sha256": "349c6a4b98851246f2c9b00fb52d7d569cc76f180804ff1e3bfa595fd25aa487",
+      "source_size_bytes": 7436923,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-24T13:30:00Z",
+      "last_successful_processing_at": "2026-10-28T00:30:00Z",
       "reading_method": "Fresh authenticated recursive Google Drive listings and scoped, paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository. PyMuPDF verified page counts and rendered every original page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 42 original pages: Elementary Number Theory pages 1–19 and Vectors pages 1–23. Four-times crops of Number Theory pages 15, 17 and 18 and Vectors pages 21 and 22 clarified exponents, residue ticks and indices; a further page-17 crop confirmed the double-exponential bound. Handwriting, mathematics and source drawings were read from original images. Extracted text was only an aid and never a substitute. No excluded folder contents were listed, downloaded or read.",
-      "normalizations": "{'pages_1_2': 'Preserved positive-integer convention, successor axioms, induction quantifiers and recursive addition. Explained the base operation and successor recursion without claiming associativity or commutativity proved. Separate concept note labels supplementary explanation.', 'pages_2_3': 'Preserved all arithmetic and order rules with natural-number domains and their check-without-proof status. Made the indicated induction on Q(n) immediate base and step explicit without inventing a converse well-ordering theorem.', 'page_4': 'Normalized the dummy index Q(k) in the strong-induction proof and made its non-empty premise and final contradiction explicit. Omitted the proof-ending square.', 'pages_5_7': 'Preserved integer identity/inverses, positive multiplier for order, rational denominator restrictions and equivalence relation, addition formula, inclusions, and divisibility/prime/composite definitions. No unprovided multiplication formula or theorem proof attributed to the source.', 'page_7_prime_factorization': 'Added Proposition 2 and its complete strong-induction proof, preserving the smaller-factor inequalities and concatenated prime products.', 'page_8': 'Preserved the finite-prime-list contradiction, all example integers and factorization questions, and the statement-only status of Euclid’s lemma. Did not claim N is prime or add a uniqueness proof or answer to the comparison exercise. Checked the numerical source factorization for QA. Current version: the source now proves Euclid’s lemma on page 13 and uniqueness on page 14; the earlier limitation is superseded, and the notes link forward to those proofs.', 'page_9': 'Preserved both defining gcd properties and all divisor lists for 12 and 18. Made the immediate n=1 division-theorem base cases explicit. Kept the two induction cases and the strict remainder difference bound in the uniqueness proof.', 'page_10': 'Normalized the final quotient index to q_(n+1) to match its division stage. Made immediate termination when b divides a explicit. Distinguished n<b positive remainders from the final zero-remainder division. Retained both divisibility directions in the correctness proof.', 'page_11': 'Recorded gcd(87,52)=1 from the last non-zero remainder in the complete displayed sequence. Normalized the final value consistently with that sequence and omitted terminal proof marks. Both worked gcd examples were independently checked. Current addition: preserved coprimality, the complete reverse substitutions 1=-5*52+3*87, Theorem 7 and its constructive proof. Made the immediate one-remainder and zero-remainder termination cases explicit.', 'page_12': 'Preserved the least-positive-combination proof and both divisibility directions, the remainder contradiction, and the existence-versus-algorithm remark. Normalized the coefficient-domain R slip to Z, as required by the theorem and the subsequent universally quantified integer combinations. Made non-emptiness and well-ordering explicit.', 'page_13': 'Preserved both integer-equation examples, Corollary 8 with both directions, and the complete Euclid-lemma proof. Normalized the obvious gcd(a,b) slip in that proof to gcd(p,a), as established by p prime, p not dividing a and xp+ya=1. Made the parity obstruction, target c integer and scaling coefficients explicit. Checked the numerical identities.', 'page_14': 'Preserved the iterated-prime-divisor remark, necessary primality assumption and complete uniqueness proof of the fundamental theorem of arithmetic. Made the immediate quotient-1/empty-product boundary explicit without adding an answer to the earlier comparison exercise. Omitted proof-ending markers.', 'page_15': 'Preserved the Z[sqrt(-3)] example, its addition/product calculations and factorization terminology. Flagged the substantive prime-versus-irreducible distinction rather than silently changing its meaning. Preserved all bounded-exponent divisor formulas and example exponents; positive-divisor scope is explicit.', 'page_16': 'Preserved both factorizations, complete common-divisor and common-multiple exponent ranges, gcd/min and lcm/max formulas and gcd*lcm=xy. Made the common integer multiple parameter explicit without excluding zero or negative multiples. Checked numerical prime-exponent examples.', 'page_17': 'Preserved the source attribution, full square-times-squarefree counting argument and N>4^k contradiction. Made integer exponent parity and the floor(sqrt(N)) count explicit. Preserved the asserted p_k<2^(2^k), p_k<4^k and prime-number-theorem statements without inventing their derivations. A detailed crop confirmed the double exponent.', 'pages_18_19': 'Preserved the n>=2 scope, all congruence equivalences, notation and 2=16 mod 7 example, both representative-independence divisibility calculations, inherited arithmetic rules and the complete modular obstruction for 2a^2+3b^2=1. Made the integer multiplier explicit. The cyclic diagram retains all nine ticks and both unlabelled ticks, with no inferred n.'} | p.24: source writes the cycle of 2 mod 7 after 2^4 as '4,2,1,...'; actual cycle is 2,4,1, written that way. p.21 heading 'Corollary 2' kept as Corollary 11 (sequence), as before. New content: CRT proof and remark (p.23), Euler totient, Fermat's little theorem, Fermat-Euler theorem, (p-1)! examples, Lemma 14 statement only (pp.24-26). TODO: Lemma 14 proof absent in source.",
+      "normalizations": [
+        "{'pages_1_2': 'Preserved positive-integer convention, successor axioms, induction quantifiers and recursive addition. Explained the base operation and successor recursion without claiming associativity or commutativity proved. Separate concept note labels supplementary explanation.', 'pages_2_3': 'Preserved all arithmetic and order rules with natural-number domains and their check-without-proof status. Made the indicated induction on Q(n) immediate base and step explicit without inventing a converse well-ordering theorem.', 'page_4': 'Normalized the dummy index Q(k) in the strong-induction proof and made its non-empty premise and final contradiction explicit. Omitted the proof-ending square.', 'pages_5_7': 'Preserved integer identity/inverses, positive multiplier for order, rational denominator restrictions and equivalence relation, addition formula, inclusions, and divisibility/prime/composite definitions. No unprovided multiplication formula or theorem proof attributed to the source.', 'page_7_prime_factorization': 'Added Proposition 2 and its complete strong-induction proof, preserving the smaller-factor inequalities and concatenated prime products.', 'page_8': 'Preserved the finite-prime-list contradiction, all example integers and factorization questions, and the statement-only status of Euclid’s lemma. Did not claim N is prime or add a uniqueness proof or answer to the comparison exercise. Checked the numerical source factorization for QA. Current version: the source now proves Euclid’s lemma on page 13 and uniqueness on page 14; the earlier limitation is superseded, and the notes link forward to those proofs.', 'page_9': 'Preserved both defining gcd properties and all divisor lists for 12 and 18. Made the immediate n=1 division-theorem base cases explicit. Kept the two induction cases and the strict remainder difference bound in the uniqueness proof.', 'page_10': 'Normalized the final quotient index to q_(n+1) to match its division stage. Made immediate termination when b divides a explicit. Distinguished n<b positive remainders from the final zero-remainder division. Retained both divisibility directions in the correctness proof.', 'page_11': 'Recorded gcd(87,52)=1 from the last non-zero remainder in the complete displayed sequence. Normalized the final value consistently with that sequence and omitted terminal proof marks. Both worked gcd examples were independently checked. Current addition: preserved coprimality, the complete reverse substitutions 1=-5*52+3*87, Theorem 7 and its constructive proof. Made the immediate one-remainder and zero-remainder termination cases explicit.', 'page_12': 'Preserved the least-positive-combination proof and both divisibility directions, the remainder contradiction, and the existence-versus-algorithm remark. Normalized the coefficient-domain R slip to Z, as required by the theorem and the subsequent universally quantified integer combinations. Made non-emptiness and well-ordering explicit.', 'page_13': 'Preserved both integer-equation examples, Corollary 8 with both directions, and the complete Euclid-lemma proof. Normalized the obvious gcd(a,b) slip in that proof to gcd(p,a), as established by p prime, p not dividing a and xp+ya=1. Made the parity obstruction, target c integer and scaling coefficients explicit. Checked the numerical identities.', 'page_14': 'Preserved the iterated-prime-divisor remark, necessary primality assumption and complete uniqueness proof of the fundamental theorem of arithmetic. Made the immediate quotient-1/empty-product boundary explicit without adding an answer to the earlier comparison exercise. Omitted proof-ending markers.', 'page_15': 'Preserved the Z[sqrt(-3)] example, its addition/product calculations and factorization terminology. Flagged the substantive prime-versus-irreducible distinction rather than silently changing its meaning. Preserved all bounded-exponent divisor formulas and example exponents; positive-divisor scope is explicit.', 'page_16': 'Preserved both factorizations, complete common-divisor and common-multiple exponent ranges, gcd/min and lcm/max formulas and gcd*lcm=xy. Made the common integer multiple parameter explicit without excluding zero or negative multiples. Checked numerical prime-exponent examples.', 'page_17': 'Preserved the source attribution, full square-times-squarefree counting argument and N>4^k contradiction. Made integer exponent parity and the floor(sqrt(N)) count explicit. Preserved the asserted p_k<2^(2^k), p_k<4^k and prime-number-theorem statements without inventing their derivations. A detailed crop confirmed the double exponent.', 'pages_18_19': 'Preserved the n>=2 scope, all congruence equivalences, notation and 2=16 mod 7 example, both representative-independence divisibility calculations, inherited arithmetic rules and the complete modular obstruction for 2a^2+3b^2=1. Made the integer multiplier explicit. The cyclic diagram retains all nine ticks and both unlabelled ticks, with no inferred n.'} | p.24: source writes the cycle of 2 mod 7 after 2^4 as '4,2,1,...'; actual cycle is 2,4,1, written that way. p.21 heading 'Corollary 2' kept as Corollary 11 (sequence), as before. New content: CRT proof and remark (p.23), Euler totient, Fermat's little theorem, Fermat-Euler theorem, (p-1)! examples, Lemma 14 statement only (pp.24-26). TODO: Lemma 14 proof absent in source.",
+        "p.28 RSA: source writes M^(k phi(n)+1) = 1 mod n; correct M^(k phi(n)+1) = M mod n used. Lemma 14 proof, Wilson, Prop 16, RSA added (pp.26-28)."
+      ],
       "last_attempt": {
         "date": "2026-10-20",
         "completed_at": "2026-10-20T14:59:54.529738Z",
@@ -1464,7 +1467,9 @@
         "9c6d2d255432c9899429",
         "2a197b7462b8af751304",
         "c4dd809213423727cf76",
-        "063629c8191e2b804f4d"
+        "477282ecdce2b47ee894",
+        "243683a7171be3314ed2",
+        "fe55db66d49cce59b1a3"
       ]
     },
     "13RHsCyXVE8qyIQtepFN5CYrkA5ObHNSo": {
@@ -1798,18 +1803,18 @@
       "source_file_name": "Ch.2 Vectors.pdf",
       "source_url": "https://drive.google.com/file/d/1xCtvnNzKKZxIqkqMOLAWlC1qHbq_9TFN/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-24T20:24:27.379Z",
-      "processed_source_modified_timestamp": "2026-10-24T20:24:27.379Z",
+      "observed_source_modified_timestamp": "2026-10-27T16:33:13.906Z",
+      "processed_source_modified_timestamp": "2026-10-27T16:33:13.906Z",
       "status": "processed",
       "classification": "study_material",
       "skip_reason": null,
-      "total_page_count": 36,
-      "visually_inspected_pages": "33 (others matched baseline hashes)",
-      "source_sha256": "24278bcb504e4c7617fe220c959c34a68dec2d9ebe599393c58f4a37751a2d71",
-      "source_size_bytes": 7327127,
+      "total_page_count": 38,
+      "visually_inspected_pages": "36-38 (1-35 matched baseline hashes)",
+      "source_sha256": "d78da54d5253b7fa471d5b48f6dbe818c4732cbcd504dec9a4702ba1ccdd7b25",
+      "source_size_bytes": 8038469,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-26T15:00:00Z",
+      "last_successful_processing_at": "2026-10-28T00:30:00Z",
       "reading_method": "Fresh authenticated recursive Google Drive listings and scoped, paginated metadata-only document/folder/image searches over the six included parent IDs; original stored-PDF raw fetch with include_base64=false and supported sediment download_file materialization outside the repository. PyMuPDF verified page counts and rendered every original page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 42 original pages: Elementary Number Theory pages 1–19 and Vectors pages 1–23. Four-times crops of Number Theory pages 15, 17 and 18 and Vectors pages 21 and 22 clarified exponents, residue ticks and indices; a further page-17 crop confirmed the double-exponential bound. Handwriting, mathematics and source drawings were read from original images. Extracted text was only an aid and never a substitute. No excluded folder contents were listed, downloaded or read.",
       "failure": null,
       "last_attempt": {
@@ -1872,7 +1877,10 @@
         "Concepts/Kronecker Delta, Levi-Civita Symbol and Einstein Summation - A First-Year Guide.md"
       ],
       "unresolved_todos": [],
-      "normalizations": "{'pages_1_4': 'Used bold vector notation consistently. Qualified geometric direction and angle statements for non-zero vectors, retaining the source’s zero vector and operation laws. Normalized the positive-scalar direction case to lambda>0, consistent with the opposite-direction negative case and sketch.', 'page_5': 'Restored the missing hat in b-(a_hat dot b)a_hat from the immediately preceding projection formula and orthogonality claim. Preserved projection denominator, signed component, cosine-rule vector identity and proof.', 'pages_6_8': 'Used the abstract inner-product notation for the general induced norm. Restored the minus in both factors of the squared-norm expansion and missing norm squares in the intermediate Cauchy-Schwarz inequality, justified by the preceding discriminant and final square-root line. Made the immediate zero-vector case explicit. Kept the real-space scope and source equality statement; no additional equality proof invented.', 'pages_9_10': 'Preserved the R3 orthonormal-basis scope, Kronecker delta, unique expansion, component projections, row/column coordinates, six vanishing mixed dot-product terms, norm squares and the standard i/j/k notation.', 'pages_10_11': 'Made the hatted normal explicitly unit length and the non-zero/non-parallel geometric case explicit. Preserved the right-hand rule, opposite oriented angle, all six properties, vector-area orientation and triangle area.', 'page_12': 'Preserved the perpendicular-plane scaling/quarter-turn interpretation. Corrected the obvious reverse-index slips in the first two signed standard-basis identities using the preceding antisymmetry property and the source coordinate formula. Kept the determinant notation as a mnemonic; the coefficients and orthogonality identities were checked symbolically.', 'page_13': 'Preserved all cyclic and sign-reversing scalar-triple-product identities, repeated-vector zero case, right-handed determinant and absolute height/volume derivation. Kept the non-parallel base hypothesis. Reconstructed only the source base, c, normal and height geometry.', 'page_14': 'Preserved signed volume, coplanarity equivalence, both vector triple-product identities and non-associativity, and the line equations with non-zero direction. These identities are stated on page 14; the current source now proves the first on page 22, while no separate proof of the second is supplied. Reconstructed both the isolated position-vector sketch and affine-line geometry in one fenced block.', 'page_15': 'Preserved all plane equations, the origin-distance calculation and the three-point equation. Normalized the duplicate u label on the second red displacement to v=c-a, consistent with u=b-a and the source normal (b-a) cross (c-a). Retained the open right side of the plane sketch, all vector incidence and meaningful colours.', 'page_16': 'Preserved every triple-product step and the three intersection cases. Made the equivalent sign reversal from u cross r = u cross a to r cross u = a cross u explicit before crossing with n. Checked the formula symbolically against both the line and plane equations and its parametric equivalent.', 'page_17': 'Made the source formula’s required non-parallel, non-zero-direction scope explicit. Preserved the fixed normal projection, Cauchy-Schwarz lower bound, full attainment decomposition and chosen parameters. Made the immediate basis fact explicit; no parallel-case formula or undrawn common perpendicular added.', 'page_18': 'The current version now supplies the vector-equation solution on pages 18–19, superseding the earlier unfinished ending. Preserved the full expansion, dot-product cancellation, substitution and three solution cases; no external solution substituted.', 'pages_18_19': 'Preserved all three vector-equation cases, the consistency condition and the plane of solutions. Made b nonzero in the dot-product-1 case explicit. Corrected the prior automated heading from 2.7 to source section 2.6.5, reserving 2.7 for index notation.', 'pages_19_20': 'Preserved Kronecker delta symmetry, the double-sum dot product, all six nonzero Levi-Civita permutations, antisymmetry, repeated-index zeros and the explicit basis/vector cross-product sums.', 'page_21': 'Preserved all summation examples, the scalar triple product, delta trace and free/contracted-index rules. Renamed dummy indices in the intermediate whole-vector expression to avoid collision with the free component index i. This unambiguous normalization is established by the source’s final component formula.', 'page_22': 'Preserved the full six-term epsilon product and determinant, all three contraction identities with statement-only status, and every vector triple-product proof step. Made the cyclic epsilon rotation and equality-of-components conclusion explicit. Exhaustively checked all fixed-index epsilon identities and symbolically checked the vector identity.', 'page_23': 'Preserved the complete Lagrange-identity contraction proof. Made the cyclic rotations aligning the contracted first positions explicit. Checked the identity symbolically and with the supplementary numerical example.'} | New pp.30-36: independence vs scalar triple product, bases, dimension, complex inner products, Cauchy-Schwarz for any inner product. p.33 source says 'if k=n vectors can be added' - read as k<n. Proof line 'W,V-lambda W = <v,w> - ...' normalised to <w,v> - lambda||w||^2. Basis-size theorem and dimension proposition have no proof in source.",
+      "normalizations": [
+        "{'pages_1_4': 'Used bold vector notation consistently. Qualified geometric direction and angle statements for non-zero vectors, retaining the source’s zero vector and operation laws. Normalized the positive-scalar direction case to lambda>0, consistent with the opposite-direction negative case and sketch.', 'page_5': 'Restored the missing hat in b-(a_hat dot b)a_hat from the immediately preceding projection formula and orthogonality claim. Preserved projection denominator, signed component, cosine-rule vector identity and proof.', 'pages_6_8': 'Used the abstract inner-product notation for the general induced norm. Restored the minus in both factors of the squared-norm expansion and missing norm squares in the intermediate Cauchy-Schwarz inequality, justified by the preceding discriminant and final square-root line. Made the immediate zero-vector case explicit. Kept the real-space scope and source equality statement; no additional equality proof invented.', 'pages_9_10': 'Preserved the R3 orthonormal-basis scope, Kronecker delta, unique expansion, component projections, row/column coordinates, six vanishing mixed dot-product terms, norm squares and the standard i/j/k notation.', 'pages_10_11': 'Made the hatted normal explicitly unit length and the non-zero/non-parallel geometric case explicit. Preserved the right-hand rule, opposite oriented angle, all six properties, vector-area orientation and triangle area.', 'page_12': 'Preserved the perpendicular-plane scaling/quarter-turn interpretation. Corrected the obvious reverse-index slips in the first two signed standard-basis identities using the preceding antisymmetry property and the source coordinate formula. Kept the determinant notation as a mnemonic; the coefficients and orthogonality identities were checked symbolically.', 'page_13': 'Preserved all cyclic and sign-reversing scalar-triple-product identities, repeated-vector zero case, right-handed determinant and absolute height/volume derivation. Kept the non-parallel base hypothesis. Reconstructed only the source base, c, normal and height geometry.', 'page_14': 'Preserved signed volume, coplanarity equivalence, both vector triple-product identities and non-associativity, and the line equations with non-zero direction. These identities are stated on page 14; the current source now proves the first on page 22, while no separate proof of the second is supplied. Reconstructed both the isolated position-vector sketch and affine-line geometry in one fenced block.', 'page_15': 'Preserved all plane equations, the origin-distance calculation and the three-point equation. Normalized the duplicate u label on the second red displacement to v=c-a, consistent with u=b-a and the source normal (b-a) cross (c-a). Retained the open right side of the plane sketch, all vector incidence and meaningful colours.', 'page_16': 'Preserved every triple-product step and the three intersection cases. Made the equivalent sign reversal from u cross r = u cross a to r cross u = a cross u explicit before crossing with n. Checked the formula symbolically against both the line and plane equations and its parametric equivalent.', 'page_17': 'Made the source formula’s required non-parallel, non-zero-direction scope explicit. Preserved the fixed normal projection, Cauchy-Schwarz lower bound, full attainment decomposition and chosen parameters. Made the immediate basis fact explicit; no parallel-case formula or undrawn common perpendicular added.', 'page_18': 'The current version now supplies the vector-equation solution on pages 18–19, superseding the earlier unfinished ending. Preserved the full expansion, dot-product cancellation, substitution and three solution cases; no external solution substituted.', 'pages_18_19': 'Preserved all three vector-equation cases, the consistency condition and the plane of solutions. Made b nonzero in the dot-product-1 case explicit. Corrected the prior automated heading from 2.7 to source section 2.6.5, reserving 2.7 for index notation.', 'pages_19_20': 'Preserved Kronecker delta symmetry, the double-sum dot product, all six nonzero Levi-Civita permutations, antisymmetry, repeated-index zeros and the explicit basis/vector cross-product sums.', 'page_21': 'Preserved all summation examples, the scalar triple product, delta trace and free/contracted-index rules. Renamed dummy indices in the intermediate whole-vector expression to avoid collision with the free component index i. This unambiguous normalization is established by the source’s final component formula.', 'page_22': 'Preserved the full six-term epsilon product and determinant, all three contraction identities with statement-only status, and every vector triple-product proof step. Made the cyclic epsilon rotation and equality-of-components conclusion explicit. Exhaustively checked all fixed-index epsilon identities and symbolically checked the vector identity.', 'page_23': 'Preserved the complete Lagrange-identity contraction proof. Made the cyclic rotations aligning the contracted first positions explicit. Checked the identity symbolically and with the supplementary numerical example.'} | New pp.30-36: independence vs scalar triple product, bases, dimension, complex inner products, Cauchy-Schwarz for any inner product. p.33 source says 'if k=n vectors can be added' - read as k<n. Proof line 'W,V-lambda W = <v,w> - ...' normalised to <w,v> - lambda||w||^2. Basis-size theorem and dimension proposition have no proof in source.",
+        "New pp.36-38: triangle inequality proof, orthogonality and independence, integral inner product, orthogonal sine functions."
+      ],
       "diagrams": {
         "representation": "TikZJax fenced tikz blocks",
         "reconstructed_diagram_count": 14,
@@ -2075,7 +2083,9 @@
         "f1581e562266721a30f0",
         "9ae6786fd10ed11788bc",
         "d96aa025c10afc31afe0",
-        "4bfeef2e8305fe63a8d4"
+        "83deaca0d6a980a142b5",
+        "86263144361628605198",
+        "12fbb91f9361197bd5d4"
       ]
     },
     "1op-x1O8r0hY-y1C9QzaadcH6PGKOP6Zv": {
@@ -3100,22 +3110,82 @@
       "source_sha256": "1b4c65cd50e02d1e05bde5927d77bd5eaf98a3e8b8f7b2acc536573cdf17f930",
       "source_size_bytes": 558474,
       "last_successful_processing_at": "2026-10-26T15:00:00Z"
+    },
+    "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC": {
+      "drive_file_id": "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC",
+      "source_file_name": "Ch.2 The Reals.pdf",
+      "source_url": "https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
+      "observed_source_modified_timestamp": "2026-10-27T22:27:18.023Z",
+      "processed_source_modified_timestamp": "2026-10-27T22:27:18.023Z",
+      "markdown_paths": [
+        "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 2 The Reals.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Numbers and Sets",
+      "status": "processed",
+      "classification": "study_material",
+      "total_page_count": 1,
+      "visually_inspected_pages": "all pages",
+      "normalizations": [
+        "Prop 1 proof missing in source (todo in note)."
+      ],
+      "unresolved_todos": [],
+      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
+      "page_hashes": [
+        "ad928782d4334ad1afaa"
+      ],
+      "source_sha256": "f140f207f36bd734aaa7a776dbcf26e4a08716d38493fdc40b057208aa8b951d",
+      "source_size_bytes": 87942,
+      "last_successful_processing_at": "2026-10-28T00:30:00Z"
+    },
+    "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA": {
+      "drive_file_id": "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA",
+      "source_file_name": "Ch.3 Matrices.pdf",
+      "source_url": "https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
+      "observed_source_modified_timestamp": "2026-10-27T22:27:25.512Z",
+      "processed_source_modified_timestamp": "2026-10-27T22:27:25.512Z",
+      "markdown_paths": [
+        "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 3 Matrices.md",
+        "Concepts/Linear Maps and Matrices.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Vectors and Matrices",
+      "status": "processed",
+      "classification": "study_material",
+      "total_page_count": 4,
+      "visually_inspected_pages": "all pages",
+      "normalizations": [
+        "Rank-nullity proof reordered into spanning then independence."
+      ],
+      "unresolved_todos": [],
+      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
+      "page_hashes": [
+        "178f355385e5b0f8c2b8",
+        "e4ab6ba52f3c7c18ed1c",
+        "19e40d57772530fb3a44",
+        "79f61c8e0db19079b133"
+      ],
+      "source_sha256": "516995d797a7d6776fd7eda4f802f14ec98d4873fc0f0df6199b537174a7bae4",
+      "source_size_bytes": 1023045,
+      "last_successful_processing_at": "2026-10-28T00:30:00Z"
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-26",
-    "completed_at": "2026-10-26T15:00:00Z",
-    "scope": "Normal sync; Example/Examples Sheets folders ignored (default).",
-    "new_source_count": 1,
-    "modified_source_count": 3,
+    "date": "2026-10-28",
+    "completed_at": "2026-10-28T00:30:00Z",
+    "scope": "Normal sync; Example sheets skipped by default.",
+    "new_source_count": 2,
+    "modified_source_count": 2,
     "processed_source_count": 4,
     "pending_source_count": 0,
-    "reading_method": "Drive listed and downloaded with the service account (scripts/drive_sa.py). Per-page hash diff (scripts/pagediff.py) selected pages to view: Groups Ch.3 pp.1-3 (new), Groups Ch.2 pp.4-6, DE Ch.4 pp.10-15, V&M Ch.2 p.33; all other pages matched baseline hashes.",
-    "visually_inspected_page_count": 13,
+    "reading_method": "Service-account download (drive_sa.py); pagediff.py selected pages: N&S Ch.1 pp.26-28, V&M Ch.2 pp.36-38, N&S Ch.2 (1 p, new), V&M Ch.3 (4 pp, new); other pages matched baseline hashes.",
+    "visually_inspected_page_count": 11,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-10-26"
+    "commit_message": "notes: process Goodnotes files from 2026-10-28"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
