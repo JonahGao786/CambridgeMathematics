@@ -352,23 +352,33 @@ which parametrises the isoclines by $D$.
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex,xscale=1.1,yscale=1.4]
-  \draw[->] (0,-1.7) -- (0,1.8);
-  \draw[->] (-0.1,0) -- (6.3,0) node[right] {$t$};
-  \draw[dashed] (0,1) -- (6.2,1); \draw[dashed] (0,-1) -- (6.2,-1);
-  \node[left] at (0,1) {$1$}; \node[left] at (0,-1) {$-1$};
+\begin{tikzpicture}[>=latex]
+  \foreach \t in {0.3,0.8,...,6.1} {
+    \foreach \y in {-1.6,-1.3,...,1.65} {
+      \pgfmathsetmacro{\s}{\t*(1-\y*\y)}
+      \pgfmathsetmacro{\ny}{1.4*\s}
+      \pgfmathsetmacro{\nrm}{sqrt(1.21+\ny*\ny)}
+      \pgfmathsetmacro{\dx}{0.17*1.1/\nrm}
+      \pgfmathsetmacro{\dy}{0.17*\ny/\nrm}
+      \draw[gray,thick] ({1.1*\t-\dx},{1.4*\y-\dy}) -- ({1.1*\t+\dx},{1.4*\y+\dy});
+    }
+  }
+  \draw[->] (0,-2.4) -- (0,2.5);
+  \draw[->] (-0.1,0) -- (6.9,0) node[right] {$t$};
+  \draw[dashed] (0,1.4) -- (6.8,1.4); \draw[dashed] (0,-1.4) -- (6.8,-1.4);
+  \node[left] at (0,1.4) {$1$}; \node[left] at (0,-1.4) {$-1$};
   \foreach \D in {1,3} {
-    \draw[blue,thick,domain=\D:6.2,samples=60] plot (\x,{sqrt(1-\D/\x)});
-    \draw[blue,thick,domain=\D:6.2,samples=60] plot (\x,{-sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=\D:6.2,samples=60] plot ({1.1*\x},{1.4*sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=\D:6.2,samples=60] plot ({1.1*\x},{-1.4*sqrt(1-\D/\x)});
   }
   \foreach \D in {-1,-3} {
-    \draw[blue,thick,domain=0.65:6.2,samples=60] plot (\x,{sqrt(1-\D/\x)});
-    \draw[blue,thick,domain=0.65:6.2,samples=60] plot (\x,{-sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=0.65:6.2,samples=60] plot ({1.1*\x},{1.4*sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=0.65:6.2,samples=60] plot ({1.1*\x},{-1.4*sqrt(1-\D/\x)});
   }
 \end{tikzpicture}
 \end{document}
 ```
-*Schematic: isoclines $y^2=1-D/t$ (blue) for $D>0$ (open curves with vertex at $t=D$, approaching $y=\pm1$) and $D<0$ (curves outside the strip $|y|<1$).*
+*Schematic: slope field of $y'=t(1-y^2)$ (grey sticks) with the isoclines $y^2=1-D/t$ (blue) for $D>0$ (open curves with vertex at $t=D$, approaching $y=\pm1$) and $D<0$ (curves outside the strip $|y|<1$). Along each isocline the sticks have the same slope $D$.
 
 ## 4 Fixed points and stability
 
