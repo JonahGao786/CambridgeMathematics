@@ -18,11 +18,17 @@ tags: [concept, groups]
 
 - **Theorem 3.2.** An action of $G$ on $X$ is the same as a homomorphism $\varphi:G\to\operatorname{Sym}(X)$, $\varphi(g)=t_g:x\mapsto gx$. *Idea:* $t_{g^{-1}}$ is inverse to $t_g$, and $t_g\circ t_h=t_{gh}$ by axiom (ii). → [[Groups - Chapter 3 Group Actions#Theorem 3.2 — Actions are homomorphisms to Sym(X)|proof]]
 
+- **Cayley's theorem.** Every group is isomorphic to a subgroup of some $\operatorname{Sym}(X)$ (take $X=G$ with the regular action; the kernel is trivial). → [[Groups - Chapter 3 Group Actions#Theorem 3.3 — Cayley's theorem|proof]]
+- **Orbits and stabilisers.** $Gx=\{gx\}$, $\operatorname{Stab}_G(x)=\{g:gx=x\}$; transitive if $Gx=X$, faithful if only $e$ fixes every point. → [[Groups - Chapter 3 Group Actions#Definition 3.4 — Orbits and stabilisers|lecture]]
+- **Proposition 3.5.** $\operatorname{Stab}_G(x)\le G$, and the orbits partition $X$ (same argument as for cosets). → [[Groups - Chapter 3 Group Actions#Proposition 3.5 — Stabilisers are subgroups, orbits partition X|proof]]
+- **Orbit–stabiliser (Theorem 3.6).** $G/\operatorname{Stab}_G(x)\to Gx$, $g\operatorname{Stab}_G(x)\mapsto gx$ is a bijection. → [[Groups - Chapter 3 Group Actions#Theorem 3.6 — Orbit-stabiliser theorem|lecture]]
+
 ## Examples
 
 - Trivial action; $\operatorname{Sym}(X)$ and its subgroups act on $X$; $\operatorname{Isom}(X)$ acts on $X\subseteq\mathbb C$; $D_{2n}$ acts on the regular $n$-gon and on its vertices $\{z:z^n=1\}$.
 - **Regular action:** $G$ acts on itself by $g\gamma=g\cdot\gamma$.
+- $D_{2n}$ acting on the vertex $1$ of $X_n$: stabiliser $\{e,s\}$, orbit of size $n$.
 
 ## Related
 
-[[Homomorphisms and Isomorphisms]] · [[Bijections and Permutations]] · [[Isometries and Dihedral Groups]] · [[Groups]]
+[[Cosets and Lagrange's Theorem]] · [[Homomorphisms and Isomorphisms]] · [[Bijections and Permutations]] · [[Isometries and Dihedral Groups]] · [[Groups]]

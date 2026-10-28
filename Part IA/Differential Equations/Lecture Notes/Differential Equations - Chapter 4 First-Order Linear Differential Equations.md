@@ -6,14 +6,14 @@ chapter: 4
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
 source_url: https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view
-source_pages: 15
+source_pages: 20
 tags: [lecture, differential-equations]
 ---
 
 # Differential Equations — Chapter 4: First-Order Linear Differential Equations
 
 > [!abstract] Overview
-> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor; then nonlinear first-order ODEs: separable and exact equations, and solution curves.
+> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor; then nonlinear first-order ODEs: separable and exact equations, solution curves, slope fields and isoclines; then fixed points, their stability by perturbation analysis, and autonomous equations.
 > Prerequisite: [[Differential Equations - Chapter 1 Introduction and Basic Calculus]].
 
 ## Results index
@@ -37,7 +37,12 @@ tags: [lecture, differential-equations]
 | [[#Necessary condition for exactness]] | $\partial P/\partial y=\partial Q/\partial x$ | 13 |
 | [[#Theorem — Exactness on simply connected domains]] | the condition is sufficient there | 13 |
 | [[#Definition — Simply connected domain]] | path connected, loops shrink to a point | 13–14 |
-| [[#Solution curves]] | trajectories of $y'=f(t,y)$; example $y'=t(1-y^2)$ | 15 |
+| [[#Solution curves]] | trajectories of $y'=f(t,y)$; example $y'=t(1-y^2)$ | 15–16 |
+| [[#Slope field and isoclines]] | tangent "sticks"; curves along which $y'$ is constant | 16–17 |
+| [[#Definition — Fixed point]] | constant solution $y=c$ | 17 |
+| [[#Definition — Stable and unstable fixed points]] | nearby solutions converge to / diverge from $c$ | 18 |
+| [[#Perturbation analysis and stability]] | $\varepsilon'=\varepsilon\,\partial f/\partial y(t,c)$ | 18–19 |
+| [[#Autonomous equations]] | $y'=f(y)$; stable iff $f'(c)<0$ | 19–20 |
 
 ### Terminology
 
@@ -307,4 +312,111 @@ $$f(x,y)=x^2-3xy^2+2y^3=\text{const}.$$
 Nonlinear ODEs can often not be solved in simple closed form; their solutions can be analysed with graphical methods. Consider $\dfrac{dy}{dt}=f(t,y)$. Each initial condition (e.g. $y(0)=y_0$) generates a distinct **solution curve** (trajectory). Can we sketch solution curves without actually solving the ODE?
 
 **Example (solved, to illustrate).** $\dfrac{dy}{dt}=t(1-y^2)$ is separable:
-$$\frac{dy}{1-y^2}=t\,dt\ \Rightarrow\ \tfrac12\Big(\frac1{1+y}+\frac1{1-y}\Big)dy=t\,dt\ \Rightarrow\ \tfrac12\ln\Big|\frac{1+y}{1-y}\Big|=\tfrac12t^2+C\ \Rightarrow\ y=\frac{A-e^{-t^2}}{A+e^{-t^2}}.$$
+$$\frac{dy}{1-y^2}=t\,dt\ \Rightarrow\ \tfrac12\Big(\frac1{1+y}+\frac1{1-y}\Big)dy=t\,dt\ \Rightarrow\ \tfrac12\ln\Big|\frac{1+y}{1-y}\Big|=\tfrac12t^2+C\ \Rightarrow\ y=\frac{A-e^{-t^2}}{A+e^{-t^2}}.,\qquad A=\begin{cases}e^{2C}&|y|<1,\\-e^{2C}&|y|>1.\end{cases}$$
+
+This is a family of solution curves parametrised by $A$. If $y(0)=y_0$ then
+$$A=\frac{1+y_0}{1-y_0}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,xscale=2.4,yscale=0.9]
+  \clip (-0.25,-4.2) rectangle (2.9,3.9);
+  \draw[->] (0,-4) -- (0,3.4) node[above] {$y$};
+  \draw[->] (-0.1,0) -- (2.35,0) node[right] {$t$};
+  \draw[dashed] (0,1) -- (2.3,1);
+  \node[left] at (0,1) {$1$};
+  \node[left] at (0,-1) {$-1$};
+  \draw[red,thick] (0,-1) -- (2.3,-1);
+  \foreach \A in {0.3,1,4} \draw[red,thick,domain=0:2.3,samples=60] plot (\x,{(\A-exp(-\x*\x))/(\A+exp(-\x*\x))});
+  \foreach \A in {-1.6,-3} \draw[red,thick,domain=0:2.3,samples=60] plot (\x,{(\A-exp(-\x*\x))/(\A+exp(-\x*\x))});
+  \draw[red,thick,domain=0:0.80,samples=60] plot (\x,{(-0.5-exp(-\x*\x))/(-0.5+exp(-\x*\x))});
+  \draw[red,thick,domain=0.87:2.3,samples=60] plot (\x,{(-0.5-exp(-\x*\x))/(-0.5+exp(-\x*\x))});
+\end{tikzpicture}
+\end{document}
+```
+*Schematic: solution curves of $y'=t(1-y^2)$ for several values of $A$. $A=0$ gives $y=-1$ for all $t$; for $A\ne0$ the curves tend to $y=1$ as $t\to\infty$, except $-1\le A<0$, which have a vertical asymptote.*
+
+### Slope field and isoclines
+
+$\dfrac{dy}{dt}=f(t,y)$ gives the gradient of the solution curve through $(t,y)$. Solution curves never cross if $f(t,y)$ is single valued.
+
+The **slope field** represents this gradient field by short "sticks" centred on each point; each is tangent to the solution curve through that point.
+
+**Example.** For $\dfrac{dy}{dt}=t(1-y^2)$ and $t>0$: $y'>0$ for $|y|<1$, and $y'<0$ for $|y|>1$.
+
+**Isoclines** are curves along which $y'$ is constant, and are sometimes useful. Here $t(1-y^2)=D$ with $D$ constant, i.e.
+$$y^2=1-\frac Dt,$$
+which parametrises the isoclines by $D$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,xscale=1.1,yscale=1.4]
+  \draw[->] (0,-1.7) -- (0,1.8);
+  \draw[->] (-0.1,0) -- (6.3,0) node[right] {$t$};
+  \draw[dashed] (0,1) -- (6.2,1); \draw[dashed] (0,-1) -- (6.2,-1);
+  \node[left] at (0,1) {$1$}; \node[left] at (0,-1) {$-1$};
+  \foreach \D in {1,3} {
+    \draw[blue,thick,domain=\D:6.2,samples=60] plot (\x,{sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=\D:6.2,samples=60] plot (\x,{-sqrt(1-\D/\x)});
+  }
+  \foreach \D in {-1,-3} {
+    \draw[blue,thick,domain=0.65:6.2,samples=60] plot (\x,{sqrt(1-\D/\x)});
+    \draw[blue,thick,domain=0.65:6.2,samples=60] plot (\x,{-sqrt(1-\D/\x)});
+  }
+\end{tikzpicture}
+\end{document}
+```
+*Schematic: isoclines $y^2=1-D/t$ (blue) for $D>0$ (open curves with vertex at $t=D$, approaching $y=\pm1$) and $D<0$ (curves outside the strip $|y|<1$).*
+
+## 4 Fixed points and stability
+
+Fixed points often reveal important features of ODEs.
+
+### Definition — Fixed point
+
+A **fixed point** (f.p.) or **equilibrium point** of the ODE $\dfrac{dy}{dt}=f(t,y)$ is a constant solution $y=c$, i.e. $\dfrac{dy}{dt}=0$ for all $t$.
+
+**Example.** $\dfrac{dy}{dt}=t(1-y^2)$ has fixed points $y=\pm1$. They have very different character: solution curves approach $y=1$ as $t\to\infty$ (a **stable** fixed point), but diverge from $y=-1$ (an **unstable** fixed point).
+
+### Definition — Stable and unstable fixed points
+
+A fixed point $y=c$ is **stable** if whenever $y$ deviates slightly from $c$, $y$ converges to $y=c$ as $t\to\infty$. It is **unstable** if $y$ diverges from $y=c$ as $t\to\infty$.
+
+### Perturbation analysis and stability
+
+Let $y=c$ be a fixed point of $\dfrac{dy}{dt}=f(t,y)$, i.e. $f(t,c)=0$ for all $t$. Perturb about the fixed point:
+$$y(t)=c+\varepsilon(t)\qquad(\varepsilon\text{ small}).$$
+Then
+$$\begin{aligned}
+\frac{d\varepsilon}{dt}&=f(t,c+\varepsilon)\\
+&=f(t,c)+\varepsilon\,\frac{\partial f}{\partial y}(t,c)+O(\varepsilon^2),
+\end{aligned}$$
+and $f(t,c)=0$ since $c$ is a fixed point. Linearising for small $\varepsilon$:
+$$\frac{d\varepsilon}{dt}=\varepsilon\,\frac{\partial f}{\partial y}(t,c).$$
+This is a linear ODE, so simpler to solve. (If $\frac{\partial f}{\partial y}(t,c)=0$, higher-order terms in the Taylor series are needed to determine stability.)
+
+**Example.** $\dfrac{dy}{dt}=t(1-y^2)=f(t,y)$, with fixed points $y=\pm1$ and
+$$\frac{\partial f}{\partial y}=-2ty=\begin{cases}-2t&y=1,\\2t&y=-1.\end{cases}$$
+- Near $y=1$: $\dfrac{d\varepsilon}{dt}=-2t\varepsilon$, so $\varepsilon(t)=\varepsilon_0e^{-t^2}$. As $t\to\infty$, $\varepsilon\to0$: **stable** fixed point.
+- Near $y=-1$: $\dfrac{d\varepsilon}{dt}\approx2t\varepsilon$, so $\varepsilon(t)=\varepsilon_0e^{t^2}$. As $t\to\infty$, $|\varepsilon|\to\infty$: **unstable** fixed point (solution curves diverge from it).
+
+### Autonomous equations
+
+An **autonomous system** is the special case
+$$\frac{dy}{dt}=f(y),$$
+with no explicit $t$ dependence. It is separable:
+$$\int^y\frac{du}{f(u)}=t-t_0,$$
+where $t_0$ is the integration constant. If $y(t)$ is a solution, so is $y(t-t_0)$ for every $t_0$ (the general solution, before applying initial or boundary conditions).
+
+Near a fixed point $y=c$ (so $f(c)=0$), with $y=c+\varepsilon$,
+$$\frac{d\varepsilon}{dt}\approx\frac{df}{dy}(c)\,\varepsilon=k\varepsilon\quad(k\text{ constant})\ \Rightarrow\ \varepsilon(t)=\varepsilon_0e^{kt}.$$
+- $f'(c)<0$ $\Rightarrow$ **stable** fixed point;
+- $f'(c)>0$ $\Rightarrow$ **unstable** fixed point.
+
+**Example (chemical kinetics).** $A+B\to C+D$. Let the numbers of molecules be $a(t),b(t),c(t),d(t)$, with initial numbers $a_0,b_0,0,0$. Then
+$$a(t)=a_0-c(t),\qquad b(t)=b_0-c(t),\qquad d(t)=c(t).$$
+Assume the rate of reaction is proportional to $a(t)b(t)$ (e.g. a dilute gas):
+$$\frac{dc}{dt}=\lambda\,a(t)b(t)=\lambda\,[a_0-c(t)][b_0-c(t)]=f(c),$$
+with $\lambda$ constant.
