@@ -27,9 +27,12 @@ tags: [lecture, groups]
 | [[#Definition 1.7 — Abelian group]] | $ab=ba$ for all $a,b$ | 11 |
 | [[#Definition 1.8 — Order of a group]] | $\lvert G\rvert$; $C_n$, $\mathbb Z_n$ | 12–13 |
 | [[#Definition 1.9 — Bijection and permutation]] | two-sided inverse function | 13 |
+| [[#Definition 1.10 — The set Sym(X)]] | the set of permutations of $X$ | 14 |
 | [[#Lemma 1.11 — Composition is associative]] | $(h\circ g)\circ f=h\circ(g\circ f)$ | 14 |
 | [[#Lemma 1.12 — Composites of permutations]] | $f\circ f'\in\operatorname{Sym}(X)$ | 14–15 |
 | [[#Proposition 1.13 — The symmetric group]] | $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group; $S_n$ | 15 |
+| [[#Definition 1.14 — The groups S_n]] | $S_n=\operatorname{Sym}\{1,\dots,n\}$; $S_3$, $S_{52}$ | 15 |
+| [[#Notation convention]] | write $G$ for $(G,\cdot,e)$; $\circ_G$, $e_G$ if needed | 15 |
 | [[#Definition 1.15 — Subgroup]] | $H\le G$ | 16 |
 | [[#Proposition 1.16 — Subgroups of the integers]] | they are $n\mathbb Z$, $n\ge0$ | 17 |
 | [[#Definition 1.17 — Generated subgroup]] | $\langle X\rangle=\bigcap_{X\subseteq H\le G}H$ | 18 |
@@ -47,6 +50,7 @@ tags: [lecture, groups]
 | [[#Lemma 1.29 — Homomorphisms preserve identity and inverses]] | $\varphi(e)=e$, $\varphi(g^{-1})=\varphi(g)^{-1}$ | 26 |
 | [[#Definition 1.30 — Isomorphism]] | bijective homomorphism; $\mathbb Z_n\cong C_n$ | 26–27 |
 | [[#Lemma 1.31 — Composites and inverses of homomorphisms]] | $\cong$ is an equivalence relation | 28 |
+| [[#Definition 1.32 — Image and kernel]] | $\operatorname{Im}\varphi=\{\varphi(g)\}$, $\ker\varphi=\{g:\varphi(g)=e_H\}$ | 28 |
 | [[#Proposition 1.33 — Image and kernel are subgroups]] | $\operatorname{Im}\varphi\le H$, $\ker\varphi\le G$ | 28–29 |
 | [[#Definition 1.34 — Injective and surjective]] | finite equal sizes: all equivalent | 29–30 |
 | [[#Lemma 1.35 — Injective iff trivial kernel]] | $\ker\varphi=\{e_G\}$ | 30 |
@@ -285,7 +289,9 @@ The **order** of $(G,\cdot,e)$ is its number of elements $|G|$; $G$ is **finite*
 
 A **bijection** is a function $f:X\to Y$ for which there is $g:Y\to X$ with $f\circ g=\operatorname{id}_Y$ and $g\circ f=\operatorname{id}_X$, where $(f\circ g)(y)=f(g(y))$; $g$ is the set-theoretic inverse of $f$. A bijection $X\to X$ is a **permutation**.
 
-**Definition 1.10.** $\operatorname{Sym}(X)$ is the set of permutations of $X$.
+### Definition 1.10 — The set Sym(X)
+
+For a set $X$, $\operatorname{Sym}(X)$ is the set of permutations of $X$.
 
 ### Lemma 1.11 — Composition is associative
 
@@ -335,9 +341,13 @@ For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a grou
 
 **Proof.** $\circ$ is a binary operation on $\operatorname{Sym}(X)$ by Lemma 1.12; associative by Lemma 1.11; $\operatorname{id}_X$ is an identity; inverses exist by definition of a permutation.
 
-**Definition 1.14.** For $X=\{1,\dots,n\}$, $S_n=\operatorname{Sym}(X)$. E.g. $S_3$: rearrangements of three positions in a row; $S_{52}$: shuffles of a deck of cards. **Exercise:** calculate $|S_n|$.
+### Definition 1.14 — The groups S_n
 
-**Notation.** From now on write $G$ for $(G,\cdot,e)$; when several groups occur, write $\circ_G$ and $e_G$.
+For $X=\{1,\dots,n\}$, $S_n=\operatorname{Sym}(X)$. E.g. $S_3$: rearrangements of three positions in a row; $S_{52}$: shuffles of a deck of cards. **Exercise:** calculate $|S_n|$.
+
+### Notation convention
+
+From now on write $G$ for $(G,\cdot,e)$; when several groups occur, write $\circ_G$ and $e_G$.
 
 ## 1.4 Subgroups
 
@@ -624,7 +634,12 @@ $$\varphi(k+_n\ell)=e^{2\pi i(k+_n\ell)/n}=e^{2\pi i(k+\ell)/n}=e^{2\pi ik/n}e^{
 
 *Proofs: exercise.*
 
-**Definition 1.32.** For a homomorphism $\varphi:G\to H$: $\operatorname{Im}(\varphi)=\{h\in H:\exists g,\ \varphi(g)=h\}$ and $\ker(\varphi)=\{g\in G:\varphi(g)=e_H\}$.
+### Definition 1.32 — Image and kernel
+
+Let $\varphi:G\to H$ be a homomorphism.
+
+1. The **image** of $\varphi$ is $\operatorname{Im}(\varphi)=\{h\in H:\ \text{there exists }g\in G\text{ with }\varphi(g)=h\}$.
+2. The **kernel** of $\varphi$ is $\ker(\varphi)=\{g\in G:\ \varphi(g)=e_H\}$.
 
 ### Proposition 1.33 — Image and kernel are subgroups
 
