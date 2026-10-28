@@ -13,7 +13,7 @@ tags: [concept, groups]
 ## Definitions
 
 - **Homomorphism** $\varphi:G\to H$: $\varphi(gg')=\varphi(g)\varphi(g')$. **Isomorphism**: bijective homomorphism; $G\cong H$. → [[Groups - Chapter 1 Examples and Definitions#Definition 1.28 — Homomorphism|lecture]]
-- $\operatorname{Im}\varphi=\{\varphi(g)\}$, $\ker\varphi=\{g:\varphi(g)=e_H\}$.
+- $\operatorname{Im}\varphi=\{\varphi(g)\}$, $\ker\varphi=\{g:\varphi(g)=e_H\}$. → [[Groups - Chapter 1 Examples and Definitions#Definition 1.32 — Image and kernel|lecture]]
 - **Direct product** $G\times H$ with componentwise operation.
 
 ## Key results
