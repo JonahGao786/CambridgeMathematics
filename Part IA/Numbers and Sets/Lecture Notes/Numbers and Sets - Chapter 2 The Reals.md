@@ -46,6 +46,20 @@ Yet for every $n\in\mathbb N$, $(x-1)^n$ has the form $cx+d$ for some $c,d\in\ma
 
 So "$\mathbb Q$ has a gap". How do we express this fact making reference only to $\mathbb Q$? $2$ is an upper bound for the set of $x$ with $x^2<2$, but so is $1.5$, and $1.42,\dots$ The crucial point: **in $\mathbb Q$ there is no least upper bound** (the "gap").
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.2]
+  \draw[->] (-2.8,0) -- (2.9,0) node[right] {$Q$};
+  \foreach \x in {-2,-1,0,1,2} {\draw (\x,0.07) -- (\x,-0.07) node[below] {$\x$};}
+  \draw[red,thick] (-1.414,0.25) -- (-1.414,0.12) -- (1.414,0.12) -- (1.414,0.25);
+  \node[red,above] at (0,0.25) {all $x$ with $x^2<2$};
+\end{tikzpicture}
+\end{document}
+```
+*The set of $x$ with $x^2<2$; $2$, $1.5$, $1.42,\dots$ are all upper bounds in $\mathbb Q$, but there is no least one.*
+
+
 ## 2.2 The real numbers
 
 ### Definition — The real numbers
@@ -75,6 +89,39 @@ A set $S\subseteq\mathbb R$ is **bounded above** if there is $x\in\mathbb R$ wit
    - $2$ is an upper bound, since $x\le2$ for all $x\in S$.
    - $\frac34$ is not: $\frac78>\frac34$ and $\frac78\in S$.
    - $\sup S=1$: $1$ is an upper bound (all $x\in S$ satisfy $x\le1$), and every other upper bound $y$ satisfies $y\ge1$ because $1\in S$.
+
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.2]
+  \draw[->] (-2.8,0) -- (2.9,0) node[right] {$R$};
+  \foreach \x in {-2,-1,0,1,2} {\draw (\x,0.07) -- (\x,-0.07) node[below] {$\x$};}
+  \draw[very thick,blue] (0,0) -- (1,0);
+  \fill[blue] (0,0) circle (1.8pt); \fill[blue] (1,0) circle (1.8pt);
+  \node[blue,above] at (0.5,0.1) {$S$};
+\end{tikzpicture}
+\end{document}
+```
+*$S=[0,1]$.*
+
 2. $S=(0,1)=\{x\in\mathbb R:0<x<1\}$ is non-empty and bounded above. $\sup S=1$ because:
    - $1$ is an upper bound;
    - no upper bound $c$ satisfies $c<1$. Indeed $c>0$ (in fact $c\ge\frac12$ since $\frac12\in S$), so if $c<1$ then $0<c<1$, and so $\frac{c+1}2\in S$ with $\frac{c+1}2>c$, a contradiction.
+
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (-0.3,0) -- (4.6,0);
+  \draw (0,0.07) -- (0,-0.07) node[below] {$0$};
+  \draw (4,0.07) -- (4,-0.07) node[below] {$1$};
+  \draw (2.2,0.07) -- (2.2,-0.07) node[below] {$c$};
+  \draw[red,->] (3.1,0.6) node[above] {$\frac{c+1}2$} -- (3.1,0.1);
+  \draw[very thick,blue] (0,0) -- (4,0);
+  \draw[blue,fill=white] (0,0) circle (1.8pt); \draw[blue,fill=white] (4,0) circle (1.8pt);
+\end{tikzpicture}
+\end{document}
+```
+*$S=(0,1)$: for $c<1$ the midpoint $\frac{c+1}2$ of $c$ and $1$ lies in $S$ and exceeds $c$.*

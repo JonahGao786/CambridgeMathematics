@@ -118,6 +118,22 @@ so $Gx_1\subseteq Gx_2$. By symmetry (swapping $x_1,x_2$), $Gx_2\subseteq Gx_1$.
 
 **Example.** $D_{2n}\curvearrowright X_n$ with $x=1$: $\operatorname{Stab}_{D_{2n}}(x)=\{e,s\}$ (by symmetry, of size $2$), and $Gx=\{e^{2\pi ik/n}:k=0,\dots,n-1\}$, of size $n$.
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \foreach \k in {0,...,5} {
+    \coordinate (v\k) at ({60*\k+90}:1.4);
+  }
+  \draw[thick] (v0) -- (v1) -- (v2) -- (v3) -- (v4) -- (v5) -- cycle;
+  \draw[red,dashed] (0,1.8) -- (0,-1.8);
+  \fill[red] (v0) circle (2.5pt) node[above right] {$x=1$};
+  \node[red,below] at (0,-1.8) {axis of $s$};
+\end{tikzpicture}
+\end{document}
+```
+*$D_{12}$ acting on the vertices of the hexagon $X_6$: the vertex $x=1$ is fixed by $e$ and the reflection $s$ in the dashed axis (stabiliser of size $2$), and moved to every vertex by the rotations (orbit of size $6$). The picture is rotated so that $x$ is at the top.*
+
 ### Theorem 3.6 — Orbit-stabiliser theorem
 
 Suppose $G\curvearrowright X$ and let $x\in X$. The assignment
