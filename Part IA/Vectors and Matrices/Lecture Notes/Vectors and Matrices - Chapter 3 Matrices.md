@@ -267,16 +267,26 @@ $$\begin{pmatrix}x_1'\\x_2'\\x_3'\end{pmatrix}=\begin{pmatrix}\lambda&0&0\\0&1&0
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex]
-  \draw[->] (-0.2,0) -- (4.6,0) node[right] {$x_1$};
-  \draw[->] (0,-0.2) -- (0,2.2) node[above] {$x_2$};
-  \draw[gray,thick] (0.3,0.3) rectangle (1.3,1.3);
-  \draw[red,thick] (0.3,0.3) rectangle (3.1,1.3);
-  \draw[red,->] (1.4,0.8) -- (3.0,0.8) node[midway,above] {$\lambda>1$};
+\begin{tikzpicture}[>=latex,x={(1.5cm,0cm)},y={(0.7cm,0.5cm)},z={(0cm,1.5cm)}]
+  \draw[->] (0,0,0) -- (4.6,0,0) node[right] {$x_1$};
+  \draw[->] (0,0,0) -- (0,3.4,0) node[below right] {$x_2$};
+  \draw[->] (0,0,0) -- (0,0,2.2) node[above] {$x_3$};
+
+  % original unit cube (grey)
+  \draw[gray] (0,0,0) -- (1,0,0) -- (1,0,1) -- (0,0,1) -- cycle;
+  \draw[gray] (0,1,1) -- (1,1,1) -- (1,1,0);
+  \draw[gray] (0,0,1) -- (0,1,1); \draw[gray] (1,0,1) -- (1,1,1); \draw[gray] (1,0,0) -- (1,1,0);
+  \draw[gray,dashed] (0,1,0) -- (1,1,0); \draw[gray,dashed] (0,1,0) -- (0,1,1); \draw[gray,dashed] (0,0,0) -- (0,1,0);
+  % dilated box, factor 2 along x_1 (red)
+  \draw[red,thick] (0,0,0) -- (2.2,0,0) -- (2.2,0,1) -- (0,0,1) -- cycle;
+  \draw[red,thick] (0,1,1) -- (2.2,1,1) -- (2.2,1,0);
+  \draw[red,thick] (0,0,1) -- (0,1,1); \draw[red,thick] (2.2,0,1) -- (2.2,1,1); \draw[red,thick] (2.2,0,0) -- (2.2,1,0);
+  \draw[red,dashed] (0,1,0) -- (2.2,1,0); \draw[red,dashed] (0,1,0) -- (0,1,1); \draw[red,dashed] (0,0,0) -- (0,1,0);
+  \draw[red,->] (1.1,0,1.55) -- (2.2,0,1.55) node[midway,above] {$\lambda>1$};
 \end{tikzpicture}
 \end{document}
 ```
-*Dilation along the $x_1$-axis by a factor $\lambda$ (grey: original, red: image).*
+*Dilation along the $x_1$-axis by a factor $\lambda$: the unit cube (grey) becomes a box stretched along $x_1$ (red), unchanged in $x_2,x_3$.*
 
 **Shears.** Shear parallel to the $x_1$-axis:
 $$x_1'=x_1+\alpha x_2,\qquad x_2'=x_2,\qquad x_3'=x_3,$$
@@ -286,13 +296,24 @@ $$S=\begin{pmatrix}1&\alpha&0\\0&1&0\\0&0&1\end{pmatrix},\qquad\alpha\in\mathbb 
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex]
-  \draw[->] (-0.2,0) -- (3.8,0) node[right] {$x_1$};
-  \draw[->] (0,-0.2) -- (0,2.2) node[above] {$x_2$};
-  \draw[gray,thick] (0.3,0) rectangle (1.3,1.2);
-  \draw[red,thick] (0.3,0) -- (1.3,0) -- (2.5,1.2) -- (1.5,1.2) -- cycle;
-  \draw[red,->] (1.3,1.2) -- (2.5,1.2) node[midway,above] {$\alpha x_2$};
+\begin{tikzpicture}[>=latex,x={(1.5cm,0cm)},y={(0.7cm,0.5cm)},z={(0cm,1.5cm)}]
+  \draw[->] (0,0,0) -- (4.6,0,0) node[right] {$x_1$};
+  \draw[->] (0,0,0) -- (0,3.4,0) node[below right] {$x_2$};
+  \draw[->] (0,0,0) -- (0,0,2.2) node[above] {$x_3$};
+
+  % original unit cube (grey)
+  \draw[gray] (0,0,0) -- (1,0,0) -- (1,0,1) -- (0,0,1) -- cycle;
+  \draw[gray] (0,1,1) -- (1,1,1) -- (1,1,0);
+  \draw[gray] (0,0,1) -- (0,1,1); \draw[gray] (1,0,1) -- (1,1,1); \draw[gray] (1,0,0) -- (1,1,0);
+  \draw[gray,dashed] (0,1,0) -- (1,1,0); \draw[gray,dashed] (0,1,0) -- (0,1,1); \draw[gray,dashed] (0,0,0) -- (0,1,0);
+  % sheared cube (red): x_1' = x_1 + alpha x_2, alpha = 1
+  \draw[red,thick] (0,0,0) -- (1,0,0) -- (1,0,1) -- (0,0,1) -- cycle;
+  \draw[red,thick] (1,1,1) -- (2,1,1) -- (2,1,0);
+  \draw[red,thick] (1,1,1) -- (1,1,0);
+  \draw[red,thick] (0,0,1) -- (1,1,1); \draw[red,thick] (1,0,1) -- (2,1,1); \draw[red,thick] (1,0,0) -- (2,1,0);
+  \draw[red,dashed] (1,1,0) -- (2,1,0); \draw[red,dashed] (0,0,0) -- (1,1,0);
+  \draw[red,->] (1,1,1.55) -- (2,1,1.55) node[midway,above] {$\alpha x_2$};
 \end{tikzpicture}
 \end{document}
 ```
-*Shear parallel to the $x_1$-axis: points are moved along $x_1$ by an amount proportional to $x_2$ (grey: original, red: image).*
+*Shear parallel to the $x_1$-axis, $x_1'=x_1+\alpha x_2$ (here $\alpha=1$): the face $x_2=0$ stays fixed while the face $x_2=1$ slides by $\alpha$ along $x_1$; the unit cube (grey) becomes a slanted box (red).*
