@@ -105,19 +105,24 @@ Thus every linear map is represented by a matrix once bases are chosen, and ever
 A counterclockwise rotation about the origin through angle $\theta$ is given by
 $$R(\theta):=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}.$$
 
+
 ```tikz
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}[>=latex,scale=1.1]
-  \draw[->] (0,0) -- (3,0) node[right] {$x_1$};
-  \draw[->] (0,0) -- (0,2.7) node[above] {$x_2$};
-  \draw[blue,thick,->] (0,0) -- (2.4,1.0) node[right] {$\mathbf x$};
-  \draw[red,thick,->] (0,0) -- (0.9,2.4) node[above] {$R(\theta)\mathbf x$};
-  \draw[green!50!black] (0.8,0.33) arc (22.6:69.4:0.87);
-  \node[green!50!black] at (0.95,0.95) {$\theta$};
+  \draw[->] (-0.2,0) -- (3.2,0) node[right] {$x_1$};
+  \draw[->] (0,-0.2) -- (0,3) node[above] {$x_2$};
+  \draw[blue,thick,->] (0,0) -- (22:2.4) node[right] {$\mathbf x$};
+  \draw[red,thick,->] (0,0) -- (22+40:2.4) node[above] {$R(\theta)\mathbf x$};
+  \draw[black,->] (0,0) -- (1,0); \draw[black,->] (0,0) -- (0,1);
+  \draw[black,dashed,->] (0,0) -- (40:1) node[right] {$R(\theta)\mathbf e_1$};
+  \draw[black,dashed,->] (0,0) -- (130:1) node[left] {$R(\theta)\mathbf e_2$};
+  \draw[green!50!black] (22:1.5) arc (22:62:1.5);
+  \node[green!50!black] at (42:1.8) {$\theta$};
 \end{tikzpicture}
 \end{document}
 ```
+*Rotation $R(	heta)$ turns $\mathbf x$ and the basis vectors $\mathbf e_1,\mathbf e_2$ counterclockwise through $\theta$ without changing lengths.*
 
 Take $\mathbf e_1=(1,0)^{\mathsf T}$, $\mathbf e_2=(0,1)^{\mathsf T}$. After $R(\theta)$ their lengths are still $1$:
 $$R(\theta)\mathbf e_1=\begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix},\qquad R(\theta)\mathbf e_2=\begin{pmatrix}\cos(\theta+\frac\pi2)\\\sin(\theta+\frac\pi2)\end{pmatrix}=\begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix},$$
@@ -136,11 +141,64 @@ Indeed
 $$H(\theta)\mathbf e_1=\begin{pmatrix}\cos2\theta\\\sin2\theta\end{pmatrix},\qquad H(\theta)\mathbf e_2=\begin{pmatrix}\cos(2\theta-\frac\pi2)\\\sin(2\theta-\frac\pi2)\end{pmatrix}=\begin{pmatrix}\sin2\theta\\-\cos2\theta\end{pmatrix},$$
 which are the columns of $H(\theta)$.
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.1]
+  \draw[->] (-0.3,0) -- (3.4,0) node[right] {$x_1$};
+  \draw[->] (0,-1.6) -- (0,3.2) node[above] {$x_2$};
+  \draw[green!50!black,thick] (-30:0.0) -- (30:3.3) node[right] {$\ell$};
+  \draw[green!50!black] (0.9,0) arc (0:30:0.9); \node[green!50!black] at (15:1.2) {$\theta$};
+  \draw[blue,thick,->] (0,0) -- (70:2.4) node[above] {$\mathbf x$};
+  \draw[red,thick,->] (0,0) -- (-10:2.4) node[right] {$H(\theta)\mathbf x$};
+  \draw[dashed,gray] (70:2.4) -- (-10:2.4);
+  \draw[black,->] (0,0) -- (1.1,0) node[below] {$\mathbf e_1$};
+  \draw[black,->] (0,0) -- (0,1.1) node[left] {$\mathbf e_2$};
+  \draw[black,dashed,->] (0,0) -- (60:1.1) node[above right] {$H(\theta)\mathbf e_1$};
+  \draw[black,dashed,->] (0,0) -- (-30:1.1) node[below] {$H(\theta)\mathbf e_2$};
+\end{tikzpicture}
+\end{document}
+```
+*Reflection $H(\theta)$ in the line $\ell$ at angle $\theta$ to the $x_1$-axis; $H(\theta)\mathbf e_1$ is at angle $2\theta$.*
+
 1. $H(\theta)^2=I$.
 2. For $R(\varphi)$: $R(\varphi)H(\theta)=H\big(\theta+\frac\varphi2\big)$.
 3. For $\theta_1,\theta_2$: $H(\theta_1)H(\theta_2)=R\big(2(\theta_1-\theta_2)\big)$.
 
 For (2): reflecting $\mathbf x$ in the line $\ell$ at angle $\theta$ and then rotating through $\varphi$ is the same as reflecting in the line $\ell'$ at angle $\theta+\frac\varphi2$. For (3): the composite of reflections in two lines at angles $\theta_1,\theta_2$ is a rotation through twice the angle between them.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.05]
+  \draw[->] (-0.3,0) -- (3.4,0) node[right] {$x_1$};
+  \draw[->] (0,-1.4) -- (0,3.2) node[above] {$x_2$};
+  \draw[green!50!black,thick] (0,0) -- (25:3.2) node[right] {$\ell$};
+  \draw[orange,thick] (0,0) -- (45:3.2) node[right] {$\ell'$};
+  \draw[blue,thick,->] (0,0) -- (75:2.4) node[above] {$\mathbf x$};
+  \draw[blue,thick,->] (0,0) -- (-25:2.4) node[right] {$H(\theta)\mathbf x$};
+  \draw[red,thick,->] (0,0) -- (15:2.4) node[right] {$R(\varphi)H(\theta)\mathbf x$};
+  \draw[red] (-25:1.0) arc (-25:15:1.0); \node[red] at (-5:1.3) {$\varphi$};
+\end{tikzpicture}
+\end{document}
+```
+*(2) Reflect in $\ell$ (angle $\theta$), then rotate through $\varphi$: the result is the reflection in $\ell'$ at angle $\theta+\varphi/2$.*
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \draw[->] (-0.3,0) -- (3.4,0) node[right] {$x_1$};
+  \draw[->] (0,-2) -- (0,3.2) node[above] {$x_2$};
+  \draw[green!50!black,thick] (0,0) -- (20:3.2) node[right] {$\ell_1$};
+  \draw[orange,thick] (0,0) -- (60:3.2) node[right] {$\ell_2$};
+  \draw[blue,thick,->] (0,0) -- (40:2.4) node[right] {$\mathbf x$};
+  \draw[blue,dashed,->] (0,0) -- (80:2.4) node[above] {$H(\theta_2)\mathbf x$};
+  \draw[red,thick,->] (0,0) -- (-40:2.4) node[right] {$H(\theta_1)H(\theta_2)\mathbf x$};
+\end{tikzpicture}
+\end{document}
+```
+*(3) $H(\theta_1)H(\theta_2)\mathbf x$ is $\mathbf x$ rotated through $2(\theta_1-\theta_2)$ (here $\theta_1=20^\circ$, $\theta_2=60^\circ$, a rotation through $-80^\circ$).*
 
 ### Rotations in space and Rodrigues' formula
 
@@ -188,10 +246,53 @@ R(\theta,\mathbf n)\mathbf x&=R(\theta,\mathbf n)(\mathbf x_\parallel+\mathbf x_
 **Reflections.** Reflection in the plane through the origin with unit normal $\mathbf n$ sends
 $$\mathbf x'=\mathbf x-2(\mathbf n\cdot\mathbf x)\mathbf n,\qquad\text{i.e.}\qquad H:=I-2\mathbf n\mathbf n^{\mathsf T}.$$
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.1]
+  \draw[gray] (-2.4,-0.5) -- (0.2,0.7) -- (2.6,0.7) -- (0.0,-0.5) -- cycle;
+  \draw[black,thick,->] (0,0.1) -- (0,2.2) node[above] {$\mathbf n$};
+  \draw[blue,thick,->] (0,0.1) -- (-0.8,1.5) node[left] {$\mathbf x$};
+  \draw[red,thick,->] (0,0.1) -- (0,1.5) node[right] {$(\mathbf n\cdot\mathbf x)\mathbf n$};
+  \draw[blue,dashed,->] (0,0.1) -- (-0.8,-1.3) node[below left] {$H\mathbf x$};
+  \draw[dotted] (0,-1.5) -- (0,0.1);
+\end{tikzpicture}
+\end{document}
+```
+*Reflection in a plane with unit normal $\mathbf n$: the component of $\mathbf x$ along $\mathbf n$ is reversed.*
+
 **Dilations.** Dilation along the $x_1$-axis by a factor $\lambda>0$:
 $$\begin{pmatrix}x_1'\\x_2'\\x_3'\end{pmatrix}=\begin{pmatrix}\lambda&0&0\\0&1&0\\0&0&1\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (-0.2,0) -- (4.6,0) node[right] {$x_1$};
+  \draw[->] (0,-0.2) -- (0,2.2) node[above] {$x_2$};
+  \draw[gray,thick] (0.3,0.3) rectangle (1.3,1.3);
+  \draw[red,thick] (0.3,0.3) rectangle (3.1,1.3);
+  \draw[red,->] (1.4,0.8) -- (3.0,0.8) node[midway,above] {$\lambda>1$};
+\end{tikzpicture}
+\end{document}
+```
+*Dilation along the $x_1$-axis by a factor $\lambda$ (grey: original, red: image).*
 
 **Shears.** Shear parallel to the $x_1$-axis:
 $$x_1'=x_1+\alpha x_2,\qquad x_2'=x_2,\qquad x_3'=x_3,$$
 with matrix
 $$S=\begin{pmatrix}1&\alpha&0\\0&1&0\\0&0&1\end{pmatrix},\qquad\alpha\in\mathbb R.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (-0.2,0) -- (3.8,0) node[right] {$x_1$};
+  \draw[->] (0,-0.2) -- (0,2.2) node[above] {$x_2$};
+  \draw[gray,thick] (0.3,0) rectangle (1.3,1.2);
+  \draw[red,thick] (0.3,0) -- (1.3,0) -- (2.5,1.2) -- (1.5,1.2) -- cycle;
+  \draw[red,->] (1.3,1.2) -- (2.5,1.2) node[midway,above] {$\alpha x_2$};
+\end{tikzpicture}
+\end{document}
+```
+*Shear parallel to the $x_1$-axis: points are moved along $x_1$ by an amount proportional to $x_2$ (grey: original, red: image).*
