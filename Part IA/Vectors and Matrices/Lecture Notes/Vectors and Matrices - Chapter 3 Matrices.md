@@ -6,14 +6,14 @@ chapter: 3
 source_file: Ch.3 Matrices.pdf
 drive_file_id: 1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA
 source_url: https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view
-source_pages: 4
+source_pages: 8
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 3: Matrices
 
 > [!abstract] Overview
-> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, and how a choice of bases represents a linear map by a matrix. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
+> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, and the standard geometric maps (rotations, reflections, dilations, shears) as matrices. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
 > Prerequisite: [[Vectors and Matrices - Chapter 2 Vectors]] (bases, dimension).
 
 ## Results index
@@ -25,7 +25,11 @@ tags: [lecture, vectors-and-matrices]
 | [[#Theorem — Rank-nullity theorem]] | $\operatorname{rank}T+\operatorname{null}T=\dim V$ | 2 |
 | [[#Basic examples]] | zero map, identity, $(x_1,x_2)\mapsto x_1\mathbf v_1+x_2\mathbf v_2$ | 3 |
 | [[#Linear combinations and composition]] | $\alpha T+\beta S$, $S\circ T$ linear; $\dim\mathcal L(V,W)=\dim V\dim W$ | 3 |
-| [[#Definition — Matrix of a linear map]] | $T(\mathbf e_j)=\sum_iM_{ij}\mathbf f_i$; $[T\mathbf x]_C=M[\mathbf x]_B$ | 4 |
+| [[#Definition — Matrix of a linear map]] | $T(\mathbf e_j)=\sum_iM_{ij}\mathbf f_i$; $[T\mathbf x]_C=M[\mathbf x]_B$ | 4–5 |
+| [[#Rotations in the plane]] | $R(\theta)$; $R(\theta_1)R(\theta_2)=R(\theta_1+\theta_2)$ | 5 |
+| [[#Reflections in the plane]] | $H(\theta)$; $H(\theta)^2=I$, $R(\varphi)H(\theta)=H(\theta+\varphi/2)$, $H(\theta_1)H(\theta_2)=R(2(\theta_1-\theta_2))$ | 6 |
+| [[#Rotations in space and Rodrigues' formula]] | $R_z(\theta)$; $R(\theta,\mathbf n)\mathbf x=\cos\theta\,\mathbf x+(1-\cos\theta)(\mathbf n\cdot\mathbf x)\mathbf n+\sin\theta\,\mathbf n\times\mathbf x$ | 7 |
+| [[#Reflections, dilations and shears in space]] | $H=I-2\mathbf n\mathbf n^{\mathsf T}$; dilation; shear | 8 |
 
 ## 3.1 Linear maps
 
@@ -95,3 +99,99 @@ T(\mathbf x)&=T\Big(\sum_jx_j\mathbf e_j\Big)\\
 &=\sum_i\Big(\sum_jM_{ij}x_j\Big)\mathbf f_i,
 \end{aligned}\qquad\text{i.e.}\qquad[T(\mathbf x)]_C=M[\mathbf x]_B.$$
 Thus every linear map is represented by a matrix once bases are chosen, and every matrix defines a linear map between coordinate spaces. When working in $\mathbb F^n$ and $\mathbb F^m$ with their standard bases, we identify vectors with their coordinate columns and write $T(\mathbf x)=M\mathbf x$. The image, kernel and rank of a matrix refer to those of its associated linear map.
+
+### Rotations in the plane
+
+A counterclockwise rotation about the origin through angle $\theta$ is given by
+$$R(\theta):=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.1]
+  \draw[->] (0,0) -- (3,0) node[right] {$x_1$};
+  \draw[->] (0,0) -- (0,2.7) node[above] {$x_2$};
+  \draw[blue,thick,->] (0,0) -- (2.4,1.0) node[right] {$\mathbf x$};
+  \draw[red,thick,->] (0,0) -- (0.9,2.4) node[above] {$R(\theta)\mathbf x$};
+  \draw[green!50!black] (0.8,0.33) arc (22.6:69.4:0.87);
+  \node[green!50!black] at (0.95,0.95) {$\theta$};
+\end{tikzpicture}
+\end{document}
+```
+
+Take $\mathbf e_1=(1,0)^{\mathsf T}$, $\mathbf e_2=(0,1)^{\mathsf T}$. After $R(\theta)$ their lengths are still $1$:
+$$R(\theta)\mathbf e_1=\begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix},\qquad R(\theta)\mathbf e_2=\begin{pmatrix}\cos(\theta+\frac\pi2)\\\sin(\theta+\frac\pi2)\end{pmatrix}=\begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix},$$
+and these are the columns of $R(\theta)$.
+
+For angles $\theta_1,\theta_2$:
+1. $R(\theta_1)R(\theta_2)=R(\theta_1+\theta_2)$;
+2. $R(\theta)^{-1}=R(-\theta)$;
+3. $R(\theta)R(\theta)=R(2\theta)=\begin{pmatrix}\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta\end{pmatrix}$.
+
+### Reflections in the plane
+
+A reflection in the line through the origin making angle $\theta$ with the positive $x_1$-axis is
+$$H(\theta)=\begin{pmatrix}\cos2\theta&\sin2\theta\\\sin2\theta&-\cos2\theta\end{pmatrix}.$$
+Indeed
+$$H(\theta)\mathbf e_1=\begin{pmatrix}\cos2\theta\\\sin2\theta\end{pmatrix},\qquad H(\theta)\mathbf e_2=\begin{pmatrix}\cos(2\theta-\frac\pi2)\\\sin(2\theta-\frac\pi2)\end{pmatrix}=\begin{pmatrix}\sin2\theta\\-\cos2\theta\end{pmatrix},$$
+which are the columns of $H(\theta)$.
+
+1. $H(\theta)^2=I$.
+2. For $R(\varphi)$: $R(\varphi)H(\theta)=H\big(\theta+\frac\varphi2\big)$.
+3. For $\theta_1,\theta_2$: $H(\theta_1)H(\theta_2)=R\big(2(\theta_1-\theta_2)\big)$.
+
+For (2): reflecting $\mathbf x$ in the line $\ell$ at angle $\theta$ and then rotating through $\varphi$ is the same as reflecting in the line $\ell'$ at angle $\theta+\frac\varphi2$. For (3): the composite of reflections in two lines at angles $\theta_1,\theta_2$ is a rotation through twice the angle between them.
+
+### Rotations in space and Rodrigues' formula
+
+Rotation through angle $\theta$ about the $x_3$-axis:
+$$R_z(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta&0\\\sin\theta&\cos\theta&0\\0&0&1\end{pmatrix}.$$
+More generally, rotation about the line in the direction of the unit vector $\mathbf n$ is given by **Rodrigues' formula**
+$$R(\theta,\mathbf n)\mathbf x:=\cos\theta\,\mathbf x+(1-\cos\theta)(\mathbf n\cdot\mathbf x)\mathbf n+\sin\theta\,\mathbf n\times\mathbf x.$$
+
+**Derivation.** Split $\mathbf x=\mathbf x_\perp+\mathbf x_\parallel$ with
+$$\mathbf x_\parallel=(\mathbf n\cdot\mathbf x)\mathbf n,\qquad\mathbf x_\perp=\mathbf x-\mathbf x_\parallel=\mathbf x-(\mathbf n\cdot\mathbf x)\mathbf n.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.2]
+  \draw[gray] (0,0) ellipse (2.1 and 0.8);
+  \draw[green!50!black,thick,->] (0,0) -- (0,2.3) node[above] {$\mathbf n$};
+  \draw[red,thick,->] (0,0) -- (1.5,-0.45) node[below right] {$\mathbf x_\perp$};
+  \draw[blue,thick,->] (0,0) -- (0.9,0.25) node[right] {$\mathbf n\times\mathbf x_\perp$};
+  \draw[orange,thick,->] (0,0) -- (0,1.2) node[left] {$\mathbf x_\parallel$};
+  \draw[black,thick,->] (0,0) -- (1.5,0.95) node[above right] {$\mathbf x$};
+  \draw[dashed] (1.5,-0.45) -- (1.5,0.95) -- (0,1.2);
+\end{tikzpicture}
+\end{document}
+```
+*Schematic: $\mathbf x=\mathbf x_\parallel+\mathbf x_\perp$, with $\mathbf x_\parallel$ along $\mathbf n$; $\mathbf x_\perp$ and $\mathbf n\times\mathbf x_\perp$ span the plane (ellipse) perpendicular to $\mathbf n$.*
+
+- $\mathbf n\cdot\mathbf x_\perp=\mathbf n\cdot\mathbf x-(\mathbf n\cdot\mathbf x)|\mathbf n|^2=0$.
+- If $\mathbf x_\perp\ne\mathbf 0$, then $\mathbf n\times\mathbf x_\perp$ is perpendicular to both $\mathbf n$ and $\mathbf x_\perp$.
+- The rotation acts in the plane spanned by $\mathbf x_\perp$ and $\mathbf n\times\mathbf x_\perp$:
+$$R(\theta,\mathbf n)\mathbf x_\perp=\cos\theta\,\mathbf x_\perp+\sin\theta\,(\mathbf n\times\mathbf x_\perp).$$
+- $\mathbf n\times\mathbf x_\parallel=\mathbf 0$, so $\mathbf n\times\mathbf x=\mathbf n\times\mathbf x_\perp$.
+
+Therefore
+$$\begin{aligned}
+R(\theta,\mathbf n)\mathbf x&=R(\theta,\mathbf n)(\mathbf x_\parallel+\mathbf x_\perp)\\
+&=\mathbf x_\parallel+R(\theta,\mathbf n)\mathbf x_\perp\\
+&=\mathbf x_\parallel+\cos\theta\,\mathbf x_\perp+\sin\theta\,(\mathbf n\times\mathbf x_\perp)\\
+&=(\mathbf n\cdot\mathbf x)\mathbf n+\cos\theta\,\big(\mathbf x-(\mathbf n\cdot\mathbf x)\mathbf n\big)+\sin\theta\,(\mathbf n\times\mathbf x)\\
+&=\cos\theta\,\mathbf x+(1-\cos\theta)(\mathbf n\cdot\mathbf x)\mathbf n+\sin\theta\,(\mathbf n\times\mathbf x).
+\end{aligned}$$
+
+### Reflections, dilations and shears in space
+
+**Reflections.** Reflection in the plane through the origin with unit normal $\mathbf n$ sends
+$$\mathbf x'=\mathbf x-2(\mathbf n\cdot\mathbf x)\mathbf n,\qquad\text{i.e.}\qquad H:=I-2\mathbf n\mathbf n^{\mathsf T}.$$
+
+**Dilations.** Dilation along the $x_1$-axis by a factor $\lambda>0$:
+$$\begin{pmatrix}x_1'\\x_2'\\x_3'\end{pmatrix}=\begin{pmatrix}\lambda&0&0\\0&1&0\\0&0&1\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}.$$
+
+**Shears.** Shear parallel to the $x_1$-axis:
+$$x_1'=x_1+\alpha x_2,\qquad x_2'=x_2,\qquad x_3'=x_3,$$
+with matrix
+$$S=\begin{pmatrix}1&\alpha&0\\0&1&0\\0&0&1\end{pmatrix},\qquad\alpha\in\mathbb R.$$
