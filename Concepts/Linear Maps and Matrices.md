@@ -22,6 +22,13 @@ tags: [concept, vectors-and-matrices]
 - **Matrix action.** $[T\mathbf x]_C=M[\mathbf x]_B$. → [[Vectors and Matrices - Chapter 3 Matrices#Definition — Matrix of a linear map|proof]]
 - Sums and compositions of linear maps are linear; $\dim\mathcal L(V,W)=\dim V\dim W$. → [[Vectors and Matrices - Chapter 3 Matrices#Linear combinations and composition|lecture]]
 
+## Geometric examples
+
+- Rotation in the plane $R(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}$, with $R(\theta_1)R(\theta_2)=R(\theta_1+\theta_2)$. → [[Vectors and Matrices - Chapter 3 Matrices#Rotations in the plane|lecture]]
+- Reflection in the line at angle $\theta$: $H(\theta)=\begin{pmatrix}\cos2\theta&\sin2\theta\\\sin2\theta&-\cos2\theta\end{pmatrix}$; $H(\theta_1)H(\theta_2)=R(2(\theta_1-\theta_2))$. → [[Vectors and Matrices - Chapter 3 Matrices#Reflections in the plane|lecture]]
+- Rodrigues' formula: $R(\theta,\mathbf n)\mathbf x=\cos\theta\,\mathbf x+(1-\cos\theta)(\mathbf n\cdot\mathbf x)\mathbf n+\sin\theta\,\mathbf n\times\mathbf x$ (split $\mathbf x$ into parts along and perpendicular to $\mathbf n$). → [[Vectors and Matrices - Chapter 3 Matrices#Rotations in space and Rodrigues' formula|derivation]]
+- Reflection in a plane with unit normal $\mathbf n$: $I-2\mathbf n\mathbf n^{\mathsf T}$; dilations and shears. → [[Vectors and Matrices - Chapter 3 Matrices#Reflections, dilations and shears in space|lecture]]
+
 ## Related
 
 [[Vectors and Linear Span]] · [[Real Inner Products and Cauchy-Schwarz]] · [[Orthonormal Bases and Vector Coordinates]]

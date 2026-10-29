@@ -123,6 +123,7 @@ so $Gx_1\subseteq Gx_2$. By symmetry (swapping $x_1,x_2$), $Gx_2\subseteq Gx_1$.
 Suppose $G\curvearrowright X$ and let $x\in X$. The assignment
 $$g\operatorname{Stab}_G(x)\longmapsto gx$$
 (where $g\operatorname{Stab}_G(x)$ is a coset of $\operatorname{Stab}_G(x)\le G$) gives a well-defined bijection
-$$G/\operatorname{Stab}_G(x)\longrightarrow Gx.$$
+$$G/\operatorname{Stab}_G(x)\longrightarrow Gx,$$
+where $G/\operatorname{Stab}_G(x)$ is the set of all cosets. *Well-defined* means that the rule assigns a unique image to each element: the value $gx$ must not depend on the choice of representative $g$ of the coset.
 
 > [!todo] Proof of Theorem 3.6 missing (p. 8).

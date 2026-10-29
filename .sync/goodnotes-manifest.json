@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-28T19:00:00Z",
+  "last_inventory_at": "2026-10-29T15:00:00Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
   "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
@@ -3096,8 +3096,8 @@
       "source_file_name": "Ch.3 Group Actions.pdf",
       "source_url": "https://drive.google.com/file/d/1werwvz7lKsMJXjP5zBK0gBdekRf8jCdb/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-28T12:59:35.062Z",
-      "processed_source_modified_timestamp": "2026-10-28T12:59:35.062Z",
+      "observed_source_modified_timestamp": "2026-10-29T01:28:06.405Z",
+      "processed_source_modified_timestamp": "2026-10-29T01:28:06.405Z",
       "markdown_paths": [
         "Part IA/Groups/Lecture Notes/Groups - Chapter 3 Group Actions.md",
         "Concepts/Group Actions.md"
@@ -3107,10 +3107,11 @@
       "status": "processed",
       "classification": "study_material",
       "total_page_count": 8,
-      "visually_inspected_pages": "3-8 (1-2 matched baseline hashes)",
+      "visually_inspected_pages": "8 (1-7 matched baseline hashes)",
       "normalizations": [
         "Group Actions p.3: converse of Theorem 3.2 not in source (todo in note).",
-        "Pages 3-8 added: converse of Thm 3.2, Cayley (3.3), orbits and stabilisers (3.4, 3.5), orbit-stabiliser statement (3.6). TODO: proof of Thm 3.6 absent in source."
+        "Pages 3-8 added: converse of Thm 3.2, Cayley (3.3), orbits and stabilisers (3.4, 3.5), orbit-stabiliser statement (3.6). TODO: proof of Thm 3.6 absent in source.",
+        "p.8: Thm 3.6 gains explanatory annotations only (cosets; well-defined). Proof still absent in source (todo kept)."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
@@ -3122,47 +3123,52 @@
         "184b74e2bf63cd38a15a",
         "7787897cebe6afeff742",
         "217e48c278589d47ddb5",
-        "fb844b67160dcc0e914c"
+        "fd53e4126893170611cd"
       ],
-      "source_sha256": "d850d39634f60d05c75d94bc5f11ff54033f1cd940b03a1896282a79468d3bd8",
-      "source_size_bytes": 1441083,
-      "last_successful_processing_at": "2026-10-28T20:00:00Z"
+      "source_sha256": "59492fa9bf1c143877da0dd05e03337eef1bb7c2fdde9bda80bfc33f14655b9f",
+      "source_size_bytes": 1471300,
+      "last_successful_processing_at": "2026-10-29T16:00:00Z"
     },
     "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC": {
       "drive_file_id": "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC",
       "source_file_name": "Ch.2 The Reals.pdf",
       "source_url": "https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-27T22:27:18.023Z",
-      "processed_source_modified_timestamp": "2026-10-27T22:27:18.023Z",
+      "observed_source_modified_timestamp": "2026-10-29T14:20:00.732Z",
+      "processed_source_modified_timestamp": "2026-10-29T14:20:00.732Z",
       "markdown_paths": [
-        "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 2 The Reals.md"
+        "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 2 The Reals.md",
+        "Concepts/Real Numbers and the Least Upper Bound Axiom.md"
       ],
       "material_type": "lecture notes",
       "course": "Part IA Numbers and Sets",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 1,
-      "visually_inspected_pages": "all pages",
+      "total_page_count": 4,
+      "visually_inspected_pages": "1-4 (all)",
       "normalizations": [
-        "Prop 1 proof missing in source (todo in note)."
+        "Prop 1 proof missing in source (todo in note).",
+        "Pages 1-4: Prop 1 proofs, axioms of R, sup, remarks, examples. Source Remark (i) steps rendered as in source."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
       "page_hashes": [
-        "ad928782d4334ad1afaa"
+        "357df7cde2e7d2bda4e9",
+        "2cc02f873fdd20bc3d25",
+        "17d2b598b417fb5ced79",
+        "9a74341084825ff19f61"
       ],
-      "source_sha256": "f140f207f36bd734aaa7a776dbcf26e4a08716d38493fdc40b057208aa8b951d",
-      "source_size_bytes": 87942,
-      "last_successful_processing_at": "2026-10-28T00:30:00Z"
+      "source_sha256": "bb61f2a11d837af4c290763e1bd47d5bfdcfcf539757143bf6da363937de1ef7",
+      "source_size_bytes": 1057410,
+      "last_successful_processing_at": "2026-10-29T16:00:00Z"
     },
     "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA": {
       "drive_file_id": "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA",
       "source_file_name": "Ch.3 Matrices.pdf",
       "source_url": "https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-27T22:27:25.512Z",
-      "processed_source_modified_timestamp": "2026-10-27T22:27:25.512Z",
+      "observed_source_modified_timestamp": "2026-10-29T14:20:13.430Z",
+      "processed_source_modified_timestamp": "2026-10-29T14:20:13.430Z",
       "markdown_paths": [
         "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 3 Matrices.md",
         "Concepts/Linear Maps and Matrices.md"
@@ -3171,10 +3177,11 @@
       "course": "Part IA Vectors and Matrices",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 4,
-      "visually_inspected_pages": "all pages",
+      "total_page_count": 8,
+      "visually_inspected_pages": "5-8 (1-4 matched baseline hashes)",
       "normalizations": [
-        "Rank-nullity proof reordered into spanning then independence."
+        "Rank-nullity proof reordered into spanning then independence.",
+        "Pages 5-8 added: rotations/reflections in R^2, Rodrigues formula, reflection/dilation/shear in R^3. Figures redrawn schematically."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
@@ -3182,27 +3189,31 @@
         "178f355385e5b0f8c2b8",
         "e4ab6ba52f3c7c18ed1c",
         "19e40d57772530fb3a44",
-        "79f61c8e0db19079b133"
+        "79f61c8e0db19079b133",
+        "21cce9472b940cb574f1",
+        "6801691e524388284a5d",
+        "051da455b711e6e1183a",
+        "421baba896ab37a883bf"
       ],
-      "source_sha256": "516995d797a7d6776fd7eda4f802f14ec98d4873fc0f0df6199b537174a7bae4",
-      "source_size_bytes": 1023045,
-      "last_successful_processing_at": "2026-10-28T00:30:00Z"
+      "source_sha256": "f4949fb6a3a92f59abb4d0a2e84214fa3408e19bf47117b7f5974540e7676b8d",
+      "source_size_bytes": 1756789,
+      "last_successful_processing_at": "2026-10-29T16:00:00Z"
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-28",
-    "completed_at": "2026-10-28T20:00:00Z",
+    "date": "2026-10-29",
+    "completed_at": "2026-10-29T16:00:00Z",
     "scope": "Normal sync; Example sheets skipped by default.",
     "new_source_count": 0,
     "modified_source_count": 3,
     "processed_source_count": 3,
     "pending_source_count": 0,
-    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.1 p.28, Groups Ch.3 pp.3-8, DE Ch.4 pp.15-20; others matched baseline hashes.",
-    "visually_inspected_page_count": 13,
+    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.2 pp.1-4, Groups Ch.3 p.8, V&M Ch.3 pp.5-8; others matched baseline hashes.",
+    "visually_inspected_page_count": 9,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files (Groups Ch.3, DE Ch.4, N&S Ch.1)"
+    "commit_message": "notes: process Goodnotes files from 2026-10-29"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
