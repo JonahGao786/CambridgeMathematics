@@ -186,27 +186,39 @@ By orbit–stabiliser, $|G|=6\cdot8=48$.
 ```tikz
 \usepackage{tikz}
 \begin{document}
-\begin{tikzpicture}[>=latex,x={(1cm,0cm)},y={(0.55cm,0.4cm)},z={(0cm,1cm)}]
+\begin{tikzpicture}[>=latex,x={(1.1cm,0cm)},y={(0.6cm,0.5cm)},z={(0cm,1.1cm)}]
+  \def\a{2.2}
+  % left cube: top face with its symmetries
   \begin{scope}
-    \draw (0,0,0) -- (1.6,0,0) -- (1.6,0,1.6) -- (0,0,1.6) -- cycle;
-    \draw (0,1.6,1.6) -- (1.6,1.6,1.6) -- (1.6,1.6,0);
-    \draw (0,0,1.6) -- (0,1.6,1.6); \draw (1.6,0,1.6) -- (1.6,1.6,1.6); \draw (1.6,0,0) -- (1.6,1.6,0);
-    \draw[dashed] (0,1.6,0) -- (1.6,1.6,0); \draw[dashed] (0,1.6,0) -- (0,1.6,1.6); \draw[dashed] (0,0,0) -- (0,1.6,0);
-    \fill[red] (0.8,0.8,1.6) circle (1.8pt) node[above right=1pt] {$z$};
-    \draw[red,thick] (0.35,0.35,1.6) -- (1.25,0.35,1.6) -- (1.25,1.25,1.6) -- (0.35,1.25,1.6) -- cycle;
+    \fill[red!12] (0,0,\a) -- (\a,0,\a) -- (\a,\a,\a) -- (0,\a,\a) -- cycle;
+    \draw (0,0,0) -- (\a,0,0) -- (\a,0,\a) -- (0,0,\a) -- cycle;
+    \draw (\a,0,0) -- (\a,\a,0) -- (\a,\a,\a) -- (\a,0,\a);
+    \draw (0,0,\a) -- (0,\a,\a) -- (\a,\a,\a);
+    \draw[dashed] (0,\a,0) -- (\a,\a,0); \draw[dashed] (0,\a,0) -- (0,\a,\a); \draw[dashed] (0,0,0) -- (0,\a,0);
+    % reflection axes of the top face
+    \draw[red,dashed] (0,{\a/2},\a) -- (\a,{\a/2},\a);
+    \draw[red,dashed] ({\a/2},0,\a) -- ({\a/2},\a,\a);
+    \draw[red,dashed] (0,0,\a) -- (\a,\a,\a);
+    \draw[red,dashed] (\a,0,\a) -- (0,\a,\a);
+    % rotation about z
+    \draw[red,thick,->,domain=30:320,samples=40,variable=\t] plot ({\a/2+0.55*cos(\t)},{\a/2+0.55*sin(\t)},\a);
+    \fill[red] ({\a/2},{\a/2},\a) circle (1.8pt);
+    \node[red,fill=red!12,inner sep=1pt,above right=1pt] at ({\a/2},{\a/2},\a) {$z$};
   \end{scope}
-  \begin{scope}[xshift=4.8cm]
-    \draw (0,0,0) -- (1.6,0,0) -- (1.6,0,1.6) -- (0,0,1.6) -- cycle;
-    \draw (0,1.6,1.6) -- (1.6,1.6,1.6) -- (1.6,1.6,0);
-    \draw (0,0,1.6) -- (0,1.6,1.6); \draw (1.6,0,1.6) -- (1.6,1.6,1.6); \draw (1.6,0,0) -- (1.6,1.6,0);
-    \draw[dashed] (0,1.6,0) -- (1.6,1.6,0); \draw[dashed] (0,1.6,0) -- (0,1.6,1.6); \draw[dashed] (0,0,0) -- (0,1.6,0);
-    \draw[blue,thick] (0.8,0.8,-0.4) -- (0.8,0.8,2.1);
-    \node[blue,above] at (0.8,0.8,2.1) {axis through $z$};
+  % right cube: axis through the face centres
+  \begin{scope}[xshift=5.6cm]
+    \draw (0,0,0) -- (\a,0,0) -- (\a,0,\a) -- (0,0,\a) -- cycle;
+    \draw (\a,0,0) -- (\a,\a,0) -- (\a,\a,\a) -- (\a,0,\a);
+    \draw (0,0,\a) -- (0,\a,\a) -- (\a,\a,\a);
+    \draw[dashed] (0,\a,0) -- (\a,\a,0); \draw[dashed] (0,\a,0) -- (0,\a,\a); \draw[dashed] (0,0,0) -- (0,\a,0);
+    \draw[blue,thick] ({\a/2},{\a/2},-0.5) -- ({\a/2},{\a/2},{\a+0.6});
+    \fill[blue] ({\a/2},{\a/2},\a) circle (1.8pt);
+    \node[blue,right] at ({\a/2},{\a/2},{\a+0.6}) {axis through $z$};
   \end{scope}
 \end{tikzpicture}
 \end{document}
 ```
-*Left: the face with centre $z$ and the symmetries of this square (red). Right: the vertical axis through $z$ about which the top face is rotated; every symmetry of the top face extends to a symmetry of the cube.*
+*Left: the top face, with centre $z$, its four reflection axes (dashed) and a rotation about $z$. Right: the axis through the centres of the top and bottom faces; every rotation and reflection of the top face extends to a symmetry of the whole cube.*
 
 ### Theorem 3.8 — Cauchy's theorem
 
