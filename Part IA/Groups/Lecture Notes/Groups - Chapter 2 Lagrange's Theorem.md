@@ -66,17 +66,17 @@ Every element of $G$ is in one and only one coset.
 \begin{document}
 \begin{tikzpicture}
   \draw[thick] (0,0) ellipse (3.2 and 1.8);
-  \draw (-1.7,1.35) .. controls (-1.4,0.4) and (-1.1,-0.5) .. (-0.9,-1.7);
-  \draw (-1.7,1.35) .. controls (-0.7,0.9) and (0,0.5) .. (0.1,0.2);
-  \draw (0.1,1.78) .. controls (0.2,0.9) and (0.2,0.4) .. (0.1,0.2);
-  \draw (0.1,0.2) .. controls (0.4,-0.1) and (1.6,-0.7) .. (2.5,-1.1);
-  \draw (-0.9,-1.7) .. controls (-0.4,-1) and (-0.2,-0.3) .. (0.1,0.2);
-  \node at (-2.1,-0.3) {$H$};
-  \node at (-0.9,0.9) {$g_1H$};
-  \node at (1.4,1.0) {$g_2H$};
-  \node at (0.7,-0.35) {$g_3H$};
-  \node at (-0.4,-1.05) {$g_4H$};
-  \node at (3.7,1.4) {$G$};
+  % boundaries between the cosets
+  \draw (-1.9,1.448) .. controls (-1.2,0.6) and (-1.3,-0.8) .. (-0.8,-1.743);
+  \draw (-1.31,0.06) .. controls (-1.0,0.9) and (-0.3,1.2) .. (0.2,1.796);
+  \draw (0.2,1.796) .. controls (0.5,0.8) and (1.7,0.0) .. (2.2,-1.307);
+  \draw (-0.94,0.69) .. controls (-0.5,0.2) and (0.1,-0.9) .. (0.7,-1.756);
+  \node at (-2.4,-0.1) {$H$};
+  \node at (-0.9,1.25) {$g_1H$};
+  \node at (1.95,0.55) {$g_2H$};
+  \node at (0.65,-0.15) {$g_3H$};
+  \node at (-0.7,-0.6) {$g_4H$};
+  \node at (3.7,1.3) {$G$};
 \end{tikzpicture}
 \end{document}
 ```
@@ -100,16 +100,15 @@ Updated picture: all cosets have the same size as $H$.
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}
-  \draw[thick] (0,0) ellipse (3 and 1.6);
-  \draw (0.1,0.05)--(0.1,1.6);
-  \draw (0.1,0.05)--(2.9,0.45);
-  \draw (0.1,0.05)--(-0.7,-1.5);
-  \draw (0.1,0.05)--(1.9,-1.2);
-  \node at (-1.6,-0.1) {$H$};
-  \node at (-0.9,1.0) {$g_1H$};
-  \node at (1.3,0.9) {$g_2H$};
-  \node at (1.9,-0.5) {$g_3H$};
-  \node at (0.5,-1.0) {$g_4H$};
+  \draw[thick] (0,0) ellipse (3.2 and 1.7);
+  \foreach \p in {95,25,-40,-110,170} {
+    \draw ({3.2*cos(\p)},{1.7*sin(\p)}) -- (0,0);
+  }
+  \node at (-1.6,0.55) {$g_1H$};
+  \node at (0.55,1.0) {$g_2H$};
+  \node at (1.55,-0.1) {$g_3H$};
+  \node at (-0.1,-1.0) {$g_4H$};
+  \node at (-1.7,-0.5) {$H$};
 \end{tikzpicture}
 \end{document}
 ```
