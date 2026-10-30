@@ -50,6 +50,9 @@ The set of all left cosets is $G/H=\{gH:g\in G\}$; each element of $G/H$ is itse
 
 Unless $H=\{e_G\}$, we can have $g_1H=g_2H$ with $g_1\ne g_2$. E.g. $eH=hH$ for every $h\in H$.
 
+> [!note] Explanation
+> Take $G=\mathbb Z_6$ (under $+_6$) and $H=\{0,2,4\}$. The left cosets are $0+H=H=\{0,2,4\}$ and $1+H=\{1,3,5\}$; also $2+H=H$ and $3+H=1+H$, so different $g$ can give the same coset. The two cosets cut $\mathbb Z_6$ into two pieces of size $3=|H|$, which is why $|H|$ divides $|G|=6$.
+
 **Remark.** There are also **right cosets** $Hg=\{h\cdot g:h\in H\}$; the set of right cosets is $H\backslash G$.
 
 ### Lemma 2.3 — Cosets partition the group
@@ -143,11 +146,17 @@ If $|G|<\infty$ and $g\in G$, then $g^{|G|}=e$.
 **Proof.** By Corollary 2.7, $|G|=\operatorname{ord}(g)\cdot k$ for some $k\in\mathbb N$, so
 $$g^{|G|}=g^{\operatorname{ord}(g)\cdot k}=e^k=e.$$
 
+> [!note] Explanation
+> Powers of $g$ return to $e$ every $\operatorname{ord}(g)$ steps, and Lagrange says $|G|$ is a whole number of such steps. In $S_3$ ($|G|=6$): a transposition has order $2$ and $2\cdot3=6$; a $3$-cycle has order $3$ and $3\cdot2=6$; both satisfy $g^6=e$.
+
 ### Corollary 2.9 — Groups of prime order
 
 If $|G|$ is prime, then $G$ is cyclic, and every element $g\ne e$ is a generator.
 
 **Proof.** Pick $g\ne e$. By Corollary 2.7, $\operatorname{ord}(g)\mid|G|$, and $|G|$ is prime, so $\operatorname{ord}(g)=1$ or $\operatorname{ord}(g)=|G|$. If $\operatorname{ord}(g)=1$ then $g=e$, a contradiction. So $\operatorname{ord}(g)=|G|$. Since $\langle g\rangle\le G$ and $|\langle g\rangle|=|G|$, we get $\langle g\rangle=G$, so $g$ generates $G$.
+
+> [!note] Explanation
+> A prime $p$ has only the divisors $1$ and $p$, so every non-identity element, whose order divides $|G|=p$, must have order exactly $p$ and therefore already produces the whole group. For example every group with $5$ elements is cyclic, hence isomorphic to $C_5$ (Theorem 1.38).
 
 ## 2.4 Applications to number theory
 
@@ -159,8 +168,14 @@ To interpret this, use multiplication on $\mathbb Z_n$, $\times_n:\mathbb Z_n\ti
 $$\iff\ \exists y,m\in\mathbb Z:\ xy+nm=1\ \iff\ \gcd(x,n)=1.$$
 Upshot: $\mathbb Z_n^\times:=\{x\in\mathbb Z_n:\gcd(x,n)=1\}$ is a group with binary operation $\times_n$ and identity $1$, and $|\mathbb Z_n^\times|=\varphi(n)$.
 
+> [!note] Explanation
+> $\mathbb Z_n$ is not a group under multiplication, because some elements have no inverse; $\mathbb Z_n^\times$ keeps exactly the invertible ones, those sharing no factor with $n$. For $n=10$: $\mathbb Z_{10}^\times=\{1,3,7,9\}$, so $\varphi(10)=4$. Here $3\cdot7=21\equiv1$, so $3$ and $7$ are inverse to each other, while $2,4,5,6,8$ have no inverse (each shares a factor with $10$) and $0$ is never invertible.
+
 ### Theorem 2.11 — Fermat–Euler
 
 Let $x,n\in\mathbb N$. If $\gcd(x,n)=1$ then $x^{\varphi(n)}\equiv1\pmod n$.
 
 **Proof.** By Corollary 2.8 in $\mathbb Z_n^\times$, $x^{|\mathbb Z_n^\times|}=1$. Since $|\mathbb Z_n^\times|=\varphi(n)$ (Definition 2.10), the result follows.
+
+> [!note] Explanation
+> Apply "$g^{|G|}=e$" to the group $G=\mathbb Z_n^\times$, which has $\varphi(n)$ elements, and $g=x$. Example: $n=10$, $x=3$: $\varphi(10)=4$ and $3^4=81\equiv1\pmod{10}$. For $n=p$ prime, $\varphi(p)=p-1$ and this is Fermat's little theorem ([[Numbers and Sets - Chapter 1 Elementary Number Theory#Theorem 13 — Fermat's little theorem|Theorem 13]]); the number-theoretic proof there is the same argument written without group language.
