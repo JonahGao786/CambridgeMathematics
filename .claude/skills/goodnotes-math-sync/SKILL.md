@@ -88,6 +88,8 @@ Follow [note standards](references/note-standards.md) exactly. In summary:
 
 Follow [manifest rules](references/sync-manifest.md): update per-file records (status, timestamps, page coverage, normalizations, TODOs), keep manifest prose short, review the full diff, and commit notes + manifest together with a message such as `notes: process Goodnotes files from YYYY-MM-DD` (or `notes: reorganize … ` for a re-organization run). Push without force; verify the remote contains the commit.
 
+**Open a pull request automatically after every push** (standing instruction from the user): once the branch is pushed, create a PR to the default branch with a short summary body, unless an open PR for that branch already exists (then just report its link). If the previous PR for the branch was already merged, start the branch again from the latest default branch (keep the name) before committing.
+
 ## 7. Report
 
 Report concisely: folder checked and counts, sources read (page counts, pages inspected, method), notes created/rewritten, TODOs needing the user's review (with page), sources left pending and why, and the commit hash/branch.
