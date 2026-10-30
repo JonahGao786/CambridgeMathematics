@@ -6,14 +6,14 @@ chapter: 4
 source_file: Ch.4 First-order Linear Differential Equations.pdf
 drive_file_id: 1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3
 source_url: https://drive.google.com/file/d/1WQLRtXlMNVEC8xnZlwGULErVVqAa5qL3/view
-source_pages: 20
+source_pages: 25
 tags: [lecture, differential-equations]
 ---
 
 # Differential Equations — Chapter 4: First-Order Linear Differential Equations
 
 > [!abstract] Overview
-> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor; then nonlinear first-order ODEs: separable and exact equations, solution curves, slope fields and isoclines; then fixed points, their stability by perturbation analysis, and autonomous equations.
+> Terminology for ODEs; the exponential function as the eigenfunction of $\frac d{dx}$; linear independence of functions; homogeneous linear ODEs with constant coefficients solved by $e^{\lambda x}$; forward Euler and its limit; series solutions; forced equations (particular integral + complementary function), with constant and eigenfunction forcing; non-constant coefficients via the integrating factor; then nonlinear first-order ODEs: separable and exact equations, solution curves, slope fields and isoclines; then fixed points, their stability by perturbation analysis, autonomous equations (chemical kinetics, the logistic equation), one-dimensional phase portraits, and fixed points of discrete equations including the logistic map.
 > Prerequisite: [[Differential Equations - Chapter 1 Introduction and Basic Calculus]].
 
 ## Results index
@@ -42,7 +42,12 @@ tags: [lecture, differential-equations]
 | [[#Definition — Fixed point]] | constant solution $y=c$ | 17 |
 | [[#Definition — Stable and unstable fixed points]] | nearby solutions converge to / diverge from $c$ | 18 |
 | [[#Perturbation analysis and stability]] | $\varepsilon'=\varepsilon\,\partial f/\partial y(t,c)$ | 18–19 |
-| [[#Autonomous equations]] | $y'=f(y)$; stable iff $f'(c)<0$ | 19–20 |
+| [[#Autonomous equations]] | $y'=f(y)$; stable iff $f'(c)<0$ | 19–21 |
+| [[#One-dimensional phase portrait]] | arrows on the line showing the direction of flow | 21 |
+| [[#Logistic equation]] | $y'=\lambda y(1-y/Y)$; $y=0$ unstable, $y=Y$ stable | 22–24 |
+| [[#Definition — Fixed point of a discrete equation]] | $x_{n+1}=f(x_n)$, $f(x_n)=x_n$ | 24 |
+| [[#Stability of a discrete fixed point]] | stable iff $\lvert f'(x_f)\rvert<1$ | 24 |
+| [[#Logistic map]] | $x_{n+1}=rx_n(1-x_n)$; cobweb diagram | 25 |
 
 ### Terminology
 
@@ -430,3 +435,149 @@ $$a(t)=a_0-c(t),\qquad b(t)=b_0-c(t),\qquad d(t)=c(t).$$
 Assume the rate of reaction is proportional to $a(t)b(t)$ (e.g. a dilute gas):
 $$\frac{dc}{dt}=\lambda\,a(t)b(t)=\lambda\,[a_0-c(t)][b_0-c(t)]=f(c),$$
 with $\lambda$ constant.
+
+The fixed points ($f(c)=0$) are $c=a_0$ (all of $A$ consumed) and $c=b_0$ (all of $B$ consumed). Assume $a_0<b_0$, so $c=b_0$ is unphysical ($c$ cannot exceed the amount of $A$ available). Perturbation analysis:
+$$\frac{df}{dc}=\lambda(2c-a_0-b_0)=\begin{cases}\lambda(a_0-b_0)&\text{at }c=a_0,\\\lambda(b_0-a_0)&\text{at }c=b_0.\end{cases}$$
+For $a_0<b_0$, $c=a_0$ is a **stable** fixed point (and $c=b_0$ is unstable).
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,xscale=1.6,yscale=0.9]
+  % graph of f(c) = (a0 - c)(b0 - c), a0 = 1, b0 = 3
+  \draw[->] (-0.1,0) -- (4.0,0) node[right] {$c$};
+  \draw[->] (0,-0.5) -- (0,2.6) node[above] {$\frac{dc}{dt}=f$};
+  \draw[blue,thick,domain=0:3.6,samples=60] plot (\x,{0.5*(1-\x)*(3-\x)});
+  \draw (1,0.07) -- (1,-0.07) node[below] {$a_0$};
+  \draw (3,0.07) -- (3,-0.07) node[below] {$b_0$};
+  % phase portrait
+  \draw[->] (-0.1,-2.2) -- (4.0,-2.2) node[right] {$c(t)$};
+  \draw[blue,->] (0.3,-2.2) -- (0.8,-2.2);
+  \draw[blue,<-] (1.2,-2.2) -- (1.8,-2.2);
+  \draw[blue,<-] (2.1,-2.2) -- (2.8,-2.2);
+  \draw[blue,->] (3.2,-2.2) -- (3.8,-2.2);
+  \fill[red] (1,-2.2) circle (2.2pt) node[below=3pt] {$a_0$ stable};
+  \draw[red,fill=white] (3,-2.2) circle (2.2pt) node[below=3pt] {$b_0$ unstable};
+\end{tikzpicture}
+\end{document}
+```
+*Graph of $f(c)=\lambda(a_0-c)(b_0-c)$ with roots $a_0<b_0$ (top), and the one-dimensional phase portrait (bottom): arrows show the direction in which $c(t)$ moves.*
+
+### One-dimensional phase portrait
+
+For an autonomous equation $\dfrac{dy}{dt}=f(y)$, the **phase portrait** draws the $y$-axis with the fixed points marked and arrows showing the direction in which solutions "flow" in time: to the right where $f(y)>0$ and to the left where $f(y)<0$. Stable fixed points are those the arrows point towards.
+
+> [!note] Explanation
+> The sign of $f$ tells you which way $y$ moves: if $f>0$ then $y'>0$ and $y$ increases. So between consecutive roots of $f$ the arrows all point the same way. In the example above $f>0$ for $c<a_0$ (arrow right, towards $a_0$), $f<0$ for $a_0<c<b_0$ (arrow left, again towards $a_0$), and $f>0$ for $c>b_0$ (arrow right, away from $b_0$). Arrows converge on $a_0$ (stable) and leave $b_0$ (unstable).
+
+### Logistic equation
+
+**Example (population dynamics).** A population of size $y(t)$ has birth rate $\alpha y$ ($\alpha>0$) and death rate $\beta y+\gamma y^2$, where $\beta y$ accounts for isolated deaths and $\gamma y^2$ for deaths due to competition (individuals must consume some scarce resource to survive). Then
+$$\frac{dy}{dt}=(\alpha-\beta)y-\gamma y^2=\lambda y\Big(1-\frac yY\Big)=f(y),\qquad\lambda=\alpha-\beta,\quad Y=\frac\lambda\gamma.$$
+This is the (differential) **logistic equation**, an autonomous ODE. Its fixed points are $y=0$ and $y=Y$, and
+$$\frac{df}{dy}=\lambda\Big(1-\frac{2y}Y\Big)=\begin{cases}\lambda&\text{at }y=0,\\-\lambda&\text{at }y=Y.\end{cases}$$
+For $\lambda>0$ (birth rate greater than the isolated death rate), $y=0$ is **unstable** and $y=Y$ is **stable**.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,xscale=1.5,yscale=1.0]
+  \draw[->] (-0.1,0) -- (4.4,0) node[right] {$y$};
+  \draw[->] (0,-0.2) -- (0,1.9) node[above] {$f(y)$};
+  \draw[blue,thick,domain=0:3.9,samples=60] plot (\x,{1.2*\x*(1-\x/3)});
+  \draw (3,0.07) -- (3,-0.07) node[below] {$Y$};
+  \node[below left] at (0,0) {$0$};
+  \draw[->] (-0.1,-1.5) -- (4.4,-1.5) node[right] {$y$};
+  \draw[blue,->] (0.3,-1.5) -- (1.3,-1.5);
+  \draw[blue,->] (1.8,-1.5) -- (2.6,-1.5);
+  \draw[blue,<-] (3.3,-1.5) -- (4.1,-1.5);
+  \draw[red,fill=white] (0,-1.5) circle (2.2pt) node[below=3pt] {$0$ unstable};
+  \fill[red] (3,-1.5) circle (2.2pt) node[below=3pt] {$Y$ stable};
+\end{tikzpicture}
+\end{document}
+```
+*Graph of $f(y)=\lambda y(1-y/Y)$ and its phase portrait: solutions flow away from $0$ and towards $Y$.*
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.0]
+  \draw[->] (0,0) -- (6.6,0) node[right] {$t$};
+  \draw[->] (0,0) -- (0,4.4) node[above] {$y(t)$};
+  \node[left] at (0,3) {$Y$};
+  \draw[red,thick] (0,3) -- (6.2,3);
+  \node[red,right] at (6.2,3) {stable f.p.};
+  \foreach \y in {0.05,0.5,1.5,3.7,4.3} {
+    \draw[blue,thick,domain=0:6.0,samples=60] plot (\x,{3/(1+((3-\y)/\y)*exp(-1.1*\x))});
+  }
+  \draw[red,thick] (0,0) -- (6.2,0);
+  \node[red,above right] at (5.0,0) {unstable f.p.};
+\end{tikzpicture}
+\end{document}
+```
+*Solutions of the logistic equation: all positive solutions tend to $Y$; the solution $y=0$ is unstable.*
+
+## 4.3 Fixed points in discrete equations
+
+A **first-order discrete equation** links $x_n$ and $x_{n+1}$:
+$$x_{n+1}=f(x_n),$$
+where $f$ is independent of $n$ (like an autonomous system).
+
+### Definition — Fixed point of a discrete equation
+
+A **fixed point** of the discrete equation is a value $x_n$ with $x_{n+1}=x_n$, i.e. $f(x_n)=x_n$.
+
+### Stability of a discrete fixed point
+
+Let $x_f$ be a fixed point and write $x_n=x_f+\varepsilon_n$ with $\varepsilon_n$ a small perturbation. Then
+$$\begin{aligned}
+x_{n+1}=x_f+\varepsilon_{n+1}&=f(x_f+\varepsilon_n)\\
+&=f(x_f)+\varepsilon_nf'(x_f)+O(\varepsilon_n^2),
+\end{aligned}$$
+and $f(x_f)=x_f$, so
+$$\varepsilon_{n+1}\approx\varepsilon_n\,f'(x_f).$$
+Hence $x_f$ is
+- **stable** if $|f'(x_f)|<1$,
+- **unstable** if $|f'(x_f)|>1$.
+
+> [!note] Explanation
+> Each step multiplies the small error by about $f'(x_f)$. If $|f'(x_f)|<1$ the error shrinks at every step, so the iterates are drawn back to $x_f$; if $|f'(x_f)|>1$ it grows. Compare with the continuous case $y'=f(y)$, where the error grows or decays like $e^{kt}$ and the sign of $f'(c)$ decides: here it is the size of $f'(x_f)$ compared with $1$.
+
+### Logistic map
+
+**Example.** $x_{n+1}=rx_n(1-x_n)=f(x_n)$, the **discrete logistic equation** or **logistic map** (compare the differential logistic equation $\frac{dx}{dt}=\lambda x(1-x/X)$). We are interested in $x_n\ge0$. The graph of $f$ is a parabola with maximum $f(\tfrac12)=\tfrac r4$ and zeros at $x=0,1$; if $0\le r\le4$, the iterates $x_n$ stay in the range $0\le x_n\le1$.
+
+*Fixed points.* $x_n=f(x_n)=rx_n(1-x_n)$ gives
+$$x_n=0\qquad\text{or}\qquad x_n=1-\frac1r,$$
+and the second is positive only if $r>1$.
+
+*Stability.* $f'(x)=r(1-2x)$, so
+$$f'(x)=\begin{cases}r&\text{at }x=0,\\2-r&\text{at }x=1-\frac1r.\end{cases}$$
+- $x_n=0$: stable for $0<r<1$, unstable for $r>1$.
+- $x_n=1-\frac1r$: stable for $1<r<3$, unstable for $r>3$.
+
+Illustrate with **cobweb diagrams**. Case $0<r<1$:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=0.85]
+  \draw[->] (0,0) -- (5.4,0) node[right] {$x_n$};
+  \draw[->] (0,0) -- (0,5.4) node[above] {$x_{n+1}$};
+  \draw[blue,thick] (0,0) -- (5.2,5.2) node[right] {$x_{n+1}=x_n$};
+  \draw[red,thick,domain=0:5,samples=60] plot (\x,{0.95*\x*(1-\x/5)}) node[above] {$f(x_n)$};
+  \draw (5,0.07) -- (5,-0.07) node[below] {$1$};
+  \def\xn{4.0}
+  \pgfmathsetmacro{\yn}{0.95*\xn*(1-\xn/5)}
+  \draw[thick] (\xn,0) -- (\xn,\yn);
+  \foreach \i in {1,...,12} {
+    \pgfmathsetmacro{\yn}{0.95*\xn*(1-\xn/5)}
+    \pgfmathsetmacro{\zn}{0.95*\yn*(1-\yn/5)}
+    \draw[thick] (\xn,\yn) -- (\yn,\yn) -- (\yn,\zn);
+    \xdef\xn{\yn}
+  }
+  \node[below] at (4.0,0) {$x_0$};
+\end{tikzpicture}
+\end{document}
+```
+*Cobweb diagram of the logistic map with $0<r<1$ (here $r=0.95$): the iterates step down towards the stable fixed point $x=0$.*

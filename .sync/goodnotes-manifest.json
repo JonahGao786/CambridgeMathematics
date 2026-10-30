@@ -4,7 +4,7 @@
   "source_folder_url": "https://drive.google.com/drive/folders/1jjUv2Kmh0iaqFYd2Rsq0RXKeBFJ0QCfX",
   "repository": "JonahGao786/CambridgeMathematics",
   "branch": "master",
-  "last_inventory_at": "2026-10-29T15:00:00Z",
+  "last_inventory_at": "2026-10-30T19:00:00Z",
   "inventory_complete": true,
   "inventory_folder_count": 6,
   "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
@@ -2915,7 +2915,8 @@
         "pages_4_5": "Preserved the exponential trial and characteristic equation 5*lambda-3=0, general solution and y(0)=y0 condition; made the zero A case explicit after dividing under A nonzero. Retained suitable-condition wording rather than promising arbitrary boundary conditions give uniqueness. Distinguished exact sampled values from computed numerical approximations and wrote the derivative finite difference as approximate. Preserved all recurrence steps and y_n=(1+3h/5)^n*y0. No unprovided Euler error/convergence result added.",
         "notes_2026_10_28": [
           "Pages 15-20 added: slope fields, isoclines, fixed points, perturbation analysis, autonomous equations, chemical kinetics setup (page 20 ends after dc/dt=f(c)). Figures redrawn schematically."
-        ]
+        ],
+        "sync_2026_10_30": "Pages 21-25: chemical kinetics stability, 1D phase portrait, logistic equation, discrete fixed points, logistic map (cobweb for 0<r<1 only; page 25 ends there). Figures redrawn schematically."
       },
       "proof_scope_notes": [
         {
@@ -2936,15 +2937,15 @@
           ]
         }
       ],
-      "observed_source_modified_timestamp": "2026-10-28T12:59:15.351Z",
-      "processed_source_modified_timestamp": "2026-10-28T12:59:15.351Z",
-      "total_page_count": 20,
-      "visually_inspected_pages": "15-20 (1-14 matched baseline hashes)",
-      "source_sha256": "bfa1787d14da0c1e302d557d7f815a5d112b8a87cfb88d15f89781deee739b94",
-      "source_size_bytes": 4305683,
+      "observed_source_modified_timestamp": "2026-10-30T12:39:36.637Z",
+      "processed_source_modified_timestamp": "2026-10-30T12:39:36.637Z",
+      "total_page_count": 25,
+      "visually_inspected_pages": "21-25 (1-20 matched baseline hashes)",
+      "source_sha256": "887ed5c72cd94f06b88906fdd694fc44882d217a9b33076419abd33c719b2f86",
+      "source_size_bytes": 5096785,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-28T20:00:00Z",
+      "last_successful_processing_at": "2026-10-30T20:00:00Z",
       "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
       "failure": null,
       "last_attempt": {
@@ -3055,7 +3056,12 @@
         "d01777f87118764484fb",
         "15872ef62bb08eb9c9ee",
         "dbd5c022897ba72818e4",
-        "0fe3c74b0d999e17e788"
+        "0fe3c74b0d999e17e788",
+        "40ce2c0c8b394f091249",
+        "04287dfed5252af6aa9c",
+        "98e407f6cae5b207c20c",
+        "05f503695c4cbf6e1450",
+        "e906bf1e40f5d9cd8cbb"
       ]
     },
     "1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv": {
@@ -3096,8 +3102,8 @@
       "source_file_name": "Ch.3 Group Actions.pdf",
       "source_url": "https://drive.google.com/file/d/1werwvz7lKsMJXjP5zBK0gBdekRf8jCdb/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-29T01:28:06.405Z",
-      "processed_source_modified_timestamp": "2026-10-29T01:28:06.405Z",
+      "observed_source_modified_timestamp": "2026-10-30T12:40:01.661Z",
+      "processed_source_modified_timestamp": "2026-10-30T12:40:01.661Z",
       "markdown_paths": [
         "Part IA/Groups/Lecture Notes/Groups - Chapter 3 Group Actions.md",
         "Concepts/Group Actions.md"
@@ -3106,12 +3112,13 @@
       "course": "Part IA Groups",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 8,
-      "visually_inspected_pages": "8 (1-7 matched baseline hashes)",
+      "total_page_count": 12,
+      "visually_inspected_pages": "8-12 (1-7 matched baseline hashes)",
       "normalizations": [
         "Group Actions p.3: converse of Theorem 3.2 not in source (todo in note).",
         "Pages 3-8 added: converse of Thm 3.2, Cayley (3.3), orbits and stabilisers (3.4, 3.5), orbit-stabiliser statement (3.6). TODO: proof of Thm 3.6 absent in source.",
-        "p.8: Thm 3.6 gains explanatory annotations only (cosets; well-defined). Proof still absent in source (todo kept)."
+        "p.8: Thm 3.6 gains explanatory annotations only (cosets; well-defined). Proof still absent in source (todo kept).",
+        "Pages 8-12: proof of Thm 3.6, Cor 3.7, cube symmetries, Cauchy's theorem (page 12 ends after 'at least two orbits of size 1'; closing step given in an explanation callout). Cube figure redrawn schematically."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
@@ -3123,11 +3130,15 @@
         "184b74e2bf63cd38a15a",
         "7787897cebe6afeff742",
         "217e48c278589d47ddb5",
-        "fd53e4126893170611cd"
+        "4ece041ef20ca6c9fa29",
+        "1f4dc002b5b959943963",
+        "e6ca2447c9502cbc4175",
+        "7dd51aca6c9e25b265e4",
+        "9fcfc665e826d29ec9fc"
       ],
-      "source_sha256": "59492fa9bf1c143877da0dd05e03337eef1bb7c2fdde9bda80bfc33f14655b9f",
-      "source_size_bytes": 1471300,
-      "last_successful_processing_at": "2026-10-29T16:00:00Z"
+      "source_sha256": "9f5212885a2c4270ff30788394ee06d8fafa3514cba33c0a505e9d47a7c81941",
+      "source_size_bytes": 2347361,
+      "last_successful_processing_at": "2026-10-30T20:00:00Z"
     },
     "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC": {
       "drive_file_id": "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC",
@@ -3203,17 +3214,17 @@
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-29",
-    "completed_at": "2026-10-29T16:00:00Z",
-    "scope": "Normal sync; Example sheets skipped by default.",
+    "date": "2026-10-30",
+    "completed_at": "2026-10-30T20:00:00Z",
+    "scope": "Normal sync; Example sheets skipped by default. Previous commit f6598aa (explanations on Ch.2/older Ch.3 content) reverted at user request.",
     "new_source_count": 0,
-    "modified_source_count": 3,
-    "processed_source_count": 3,
+    "modified_source_count": 2,
+    "processed_source_count": 2,
     "pending_source_count": 0,
-    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.2 pp.1-4, Groups Ch.3 p.8, V&M Ch.3 pp.5-8; others matched baseline hashes.",
-    "visually_inspected_page_count": 9,
+    "reading_method": "Service-account download; pagediff.py selected pages: Groups Ch.3 pp.8-12, DE Ch.4 pp.21-25; others matched baseline hashes.",
+    "visually_inspected_page_count": 10,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-10-29"
+    "commit_message": "notes: process Goodnotes files from 2026-10-30"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
