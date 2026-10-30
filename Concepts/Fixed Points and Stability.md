@@ -21,6 +21,10 @@ tags: [concept, differential-equations]
 - **Perturbation analysis.** Put $y=c+\varepsilon$; then $\varepsilon'\approx\varepsilon\,\frac{\partial f}{\partial y}(t,c)$. → [[Differential Equations - Chapter 4 First-Order Linear Differential Equations#Perturbation analysis and stability|lecture]]
 - **Autonomous case.** $\varepsilon'\approx f'(c)\varepsilon$, so $\varepsilon=\varepsilon_0e^{kt}$ with $k=f'(c)$: stable if $f'(c)<0$, unstable if $f'(c)>0$. If $f'(c)=0$, higher-order terms decide.
 - **Example.** $y'=t(1-y^2)$: $y=1$ is stable ($\varepsilon=\varepsilon_0e^{-t^2}$), $y=-1$ is unstable ($\varepsilon=\varepsilon_0e^{t^2}$).
+- **Phase portrait (1D).** For $y'=f(y)$, draw arrows on the $y$-axis: right where $f>0$, left where $f<0$; stable fixed points attract the arrows. → [[Differential Equations - Chapter 4 First-Order Linear Differential Equations#One-dimensional phase portrait|lecture]]
+- **Logistic equation.** $y'=\lambda y(1-y/Y)$ with $\lambda>0$: $y=0$ unstable, $y=Y$ stable. → [[Differential Equations - Chapter 4 First-Order Linear Differential Equations#Logistic equation|lecture]]
+- **Discrete equations** $x_{n+1}=f(x_n)$: fixed point $f(x_f)=x_f$, with error $\varepsilon_{n+1}\approx f'(x_f)\varepsilon_n$, so stable iff $|f'(x_f)|<1$. → [[Differential Equations - Chapter 4 First-Order Linear Differential Equations#Stability of a discrete fixed point|lecture]]
+- **Logistic map** $x_{n+1}=rx_n(1-x_n)$: $x=0$ stable for $r<1$; $x=1-\frac1r$ stable for $1<r<3$. → [[Differential Equations - Chapter 4 First-Order Linear Differential Equations#Logistic map|lecture]]
 
 ## Slope fields and isoclines
 

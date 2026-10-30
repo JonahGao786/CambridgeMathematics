@@ -22,6 +22,8 @@ tags: [concept, groups]
 - **Orbits and stabilisers.** $Gx=\{gx\}$, $\operatorname{Stab}_G(x)=\{g:gx=x\}$; transitive if $Gx=X$, faithful if only $e$ fixes every point. → [[Groups - Chapter 3 Group Actions#Definition 3.4 — Orbits and stabilisers|lecture]]
 - **Proposition 3.5.** $\operatorname{Stab}_G(x)\le G$, and the orbits partition $X$ (same argument as for cosets). → [[Groups - Chapter 3 Group Actions#Proposition 3.5 — Stabilisers are subgroups, orbits partition X|proof]]
 - **Orbit–stabiliser (Theorem 3.6).** $G/\operatorname{Stab}_G(x)\to Gx$, $g\operatorname{Stab}_G(x)\mapsto gx$ is a bijection. → [[Groups - Chapter 3 Group Actions#Theorem 3.6 — Orbit-stabiliser theorem|lecture]]
+- **Counting.** For finite $G$: $|G|=|\operatorname{Stab}_G(x)|\cdot|Gx|$. Example: the cube has $6$ face centres and the stabiliser of one is $D_8$, so $|G|=48$. → [[Groups - Chapter 3 Group Actions#Corollary 3.7 — Counting with orbits and stabilisers|lecture]] · [[Groups - Chapter 3 Group Actions#Example — Symmetries of the cube|cube]]
+- **Cauchy's theorem.** If a prime $p$ divides $|G|$, some $g$ has order $p$. *Idea:* let $C_p$ cycle the $p$-tuples $(g_1,\dots,g_p)$ with product $e$; orbit sizes are $1$ or $p$, so a counting argument forces a non-trivial fixed tuple $(g,\dots,g)$, i.e. $g^p=e$. → [[Groups - Chapter 3 Group Actions#Theorem 3.8 — Cauchy's theorem|proof]]
 
 ## Examples
 
