@@ -3224,7 +3224,19 @@
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
-  "last_run": "2026-10-31",
+  "last_run": {
+    "date": "2026-10-31",
+    "completed_at": "2026-10-31T18:00:00Z",
+    "scope": "Normal sync; Example sheets skipped by default (13 new/modified example-sheet files left untouched).",
+    "new_source_count": 0,
+    "modified_source_count": 3,
+    "processed_source_count": 3,
+    "pending_source_count": 0,
+    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.2 pp.5-8, V&M Ch.3 pp.9-14, Groups Ch.3 p.13 (blank); others matched baseline hashes.",
+    "visually_inspected_page_count": 11,
+    "pending": [],
+    "commit_message": "notes: process Goodnotes files from 2026-10-31"
+  },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
   "source_annotation_conventions": {
