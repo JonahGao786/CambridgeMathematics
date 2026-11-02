@@ -6,14 +6,14 @@ chapter: 2
 source_file: Ch.2 The Reals.pdf
 drive_file_id: 1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC
 source_url: https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view
-source_pages: 4
+source_pages: 8
 tags: [lecture, numbers-and-sets]
 ---
 
 # Numbers and Sets — Chapter 2: The Reals
 
 > [!abstract] Overview
-> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom.
+> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom. Consequences: $\mathbb N$ is unbounded (Archimedes), infima exist, $\sqrt2$ exists in $\mathbb R$, and both the rationals and the irrationals are dense.
 > Prerequisite: [[Numbers and Sets - Chapter 1 Elementary Number Theory]] (unique factorization).
 
 ## Results index
@@ -23,6 +23,13 @@ tags: [lecture, numbers-and-sets]
 | [[#Proposition 1 — No rational square root of 2]] | there is no $x\in\mathbb Q$ with $x^2=2$ (two proofs) | 1 |
 | [[#Definition — The real numbers]] | axioms (1)–(6), including the least upper bound axiom | 2 |
 | [[#Definition — Upper bound and least upper bound]] | $\sup S$ | 2 |
+| [[#Proposition 2 — Axiom of Archimedes]] | $\mathbb N$ is not bounded above in $\mathbb R$ | 5 |
+| [[#Corollary 3 — Arbitrarily small 1 over n]] | $t>0\Rightarrow\exists n\in\mathbb N,\ \frac1n<t$ | 5 |
+| [[#Definition — Lower bound and greatest lower bound]] | $\inf S=-\sup(-S)$ | 5–6 |
+| [[#Theorem 4 — Existence of square root of 2]] | there is $x\in\mathbb R$ with $x^2=2$; likewise $\sqrt[n]x$ | 6–7 |
+| [[#Definition — Irrational numbers]] | reals that are not rational; e.g. $2+3\sqrt5$ | 7 |
+| [[#Density of the rationals]] | $a<b\Rightarrow\exists c\in\mathbb Q,\ a<c<b$ | 7–8 |
+| [[#Density of the irrationals]] | $a<b\Rightarrow\exists c\in\mathbb R\setminus\mathbb Q,\ a<c<b$ | 8 |
 
 ## 2.1 Why not stop at the rationals?
 
@@ -125,3 +132,107 @@ A set $S\subseteq\mathbb R$ is **bounded above** if there is $x\in\mathbb R$ wit
 \end{document}
 ```
 *$S=(0,1)$: for $c<1$ the midpoint $\frac{c+1}2$ of $c$ and $1$ lies in $S$ and exceeds $c$.*
+
+## 2.3 Consequences of the least upper bound axiom
+
+**Recap.** $x\in\mathbb R$ is the least upper bound of $S$ if $x$ is an upper bound for $S$ and every other upper bound $y$ satisfies $y\ge x$. If $S$ has a greatest element, then $\sup S=\max S\in S$. But $\sup S$ can exist when $\max S$ doesn't, in which case $\sup S\notin S$.
+
+**Example 3.** Let
+$$S=\left\{0,\tfrac12,\tfrac23,\tfrac34,\dots\right\}=\left\{1-\tfrac1n:n\in\mathbb N\right\}.$$
+Clearly $1$ is an upper bound. Is there an upper bound $<1$? (Answered after Corollary 3.)
+
+### Proposition 2 — Axiom of Archimedes
+
+$\mathbb N$ is not bounded above in $\mathbb R$.
+
+**Proof.** Suppose on the contrary that $\mathbb N$ is bounded above, and let $c=\sup\mathbb N$. By definition $c-1$ is not an upper bound for $\mathbb N$, so there is $n\in\mathbb N$ with $n>c-1$. But then $n+1\in\mathbb N$ with $n+1>c$, contradicting the fact that $c$ is an upper bound for $\mathbb N$. $\square$
+
+### Corollary 3 — Arbitrarily small 1 over n
+
+For any real $t>0$ there is $n\in\mathbb N$ with $\frac1n<t$.
+
+**Proof.** Given $t>0$, by Proposition 2 there is $n\in\mathbb N$ with $n>\frac1t$. Hence $\frac1n<t$. $\square$
+
+### Definition — Lower bound and greatest lower bound
+
+A set $S$ is **bounded below** if there is $x$ with $x\le y$ for all $y\in S$; such an $x$ is a **lower bound** for $S$.
+
+If $S$ is non-empty and bounded below, then $-S=\{-y:y\in S\}$ is non-empty and bounded above, so it has a least upper bound, $c$ say. Hence $-c$ is the **greatest lower bound** for $S$, written $\operatorname{GLB}(S)$, "infimum$(S)$" or $\inf(S)$.
+
+- Corollary 3 immediately gives $\inf\left\{\frac1n:n\in\mathbb N\right\}=0$.
+- Proposition 2 and Corollary 3 show that there are no "infinitely large" or "infinitely small" numbers in $\mathbb R$.
+
+**Back to Example 3.** $\sup S=1$. Suppose $c<1$ is an upper bound for $S$. Then $1-\frac1n\le c$ for all $n\in\mathbb N$, so
+$$0<1-c\le\frac1n\qquad\text{for all }n\in\mathbb N,$$
+contradicting Corollary 3 (take $t=1-c$). Note $\sup S=1\notin S$: $S$ has no greatest element.
+
+### Theorem 4 — Existence of square root of 2
+
+There exists $x\in\mathbb R$ with $x^2=2$.
+
+**Proof.** Let $S=\{x\in\mathbb R:x^2<2\}$. $S$ is non-empty, since e.g. $1\in S$, and bounded above, e.g. by $2$. Hence $S$ has a supremum, $c$ say. Observe that $1<c<2$. We claim $c^2=2$.
+
+*Suppose $c^2<2$.* For $0<t<1$,
+$$\begin{aligned}
+(c+t)^2&=c^2+2ct+t^2\\
+&<c^2+4t+t &&(c<2,\ t^2<t)\\
+&=c^2+5t\\
+&<2 &&\text{for sufficiently small }t\text{, e.g. }t<\tfrac{2-c^2}5.
+\end{aligned}$$
+So $c+t\in S$ with $c+t>c$, contradicting that $c$ is an upper bound for $S$.
+
+*Suppose $c^2>2$.* For $0<t<1$,
+$$\begin{aligned}
+(c-t)^2&=c^2-2ct+t^2\\
+&>c^2-4t+0 &&(c<2)\\
+&>2 &&\text{for sufficiently small }t\text{, e.g. }t<\tfrac{c^2-2}4.
+\end{aligned}$$
+Then $c-t$ is an upper bound for $S$ with $c-t<c$, contradicting that $c$ is the *least* upper bound.
+
+Hence $c^2=2$. $\square$
+
+> [!note] Explanation
+> Why is $c-t$ an upper bound in the second case? Take $t$ also below $1$, so $c-t>0$. If some $x\in S$ had $x>c-t>0$, then $x^2>(c-t)^2>2$, contradicting $x^2<2$. So every $x\in S$ satisfies $x\le c-t$.
+
+**Remark.** The same proof shows that $\sqrt[n]x$ exists for all $n\in\mathbb N$ and all $x\in\mathbb R$ with $x>0$, i.e. for all such $n,x$ there is $y\in\mathbb R$ with $y^n=x$.
+
+### Definition — Irrational numbers
+
+A real that is not rational is called **irrational**. E.g. $\sqrt2,\sqrt3,\sqrt5,\dots$ are irrational.
+
+**Example.** $2+3\sqrt5$ is irrational. Indeed, if $2+3\sqrt5=\frac ab$ with $a,b\in\mathbb N$, then
+$$\sqrt5=\frac{a-2b}{3b}\in\mathbb Q,$$
+a contradiction.
+
+### Density of the rationals
+
+The rationals are **dense** in $\mathbb R$: for all $a<b$ in $\mathbb R$ there is $c\in\mathbb Q$ with $a<c<b$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.2]
+  \draw[->] (-0.6,0) -- (5.2,0) node[right] {$R$};
+  \draw (0,0.08) -- (0,-0.08) node[below] {$0$};
+  \draw (1.2,0.08) -- (1.2,-0.08) node[below] {$a$};
+  \draw (3.8,0.08) -- (3.8,-0.08) node[below] {$b$};
+  \draw[red] (2.6,0.08) -- (2.6,-0.08) node[below] {$c$};
+  \draw[red,<->] (2.6,0.35) -- (3.15,0.35) node[midway,above] {$\frac1n$};
+\end{tikzpicture}
+\end{document}
+```
+*$0\le a<b$; the rational $c=\frac{m-1}n$ is the last multiple of $\frac1n$ below $b$, and steps of length $\frac1n<b-a$ cannot jump over $(a,b)$.*
+
+**Proof.** We may assume $a\ge0$. By Corollary 3 there is $n\in\mathbb N$ with $\frac1n<b-a$. Let
+$$T=\left\{k\in\mathbb N:\tfrac kn\ge b\right\}.$$
+By the Axiom of Archimedes there is $N\in\mathbb N$ with $N>b$; hence $Nn\in T$, so $T\ne\varnothing$. By the well-ordering principle $T$ has a least element $m$. Set $c=\frac{m-1}n$. Since $m-1\notin T$, $c<b$. If $c\le a$, then
+$$\frac mn=c+\frac1n<a+(b-a)=b,$$
+contradicting $m\in T$. So $a<c<b$. $\square$
+
+### Density of the irrationals
+
+The irrationals are also dense in $\mathbb R$: for all $a<b$ in $\mathbb R$ there is $c\in\mathbb R\setminus\mathbb Q$ with $a<c<b$.
+
+**Proof.** Take a rational $c$ with $a\sqrt2<c<b\sqrt2$. Then
+$$a<\frac c{\sqrt2}<b,$$
+and $\frac c{\sqrt2}$ is irrational (choosing $c\ne0$, e.g. by applying density of $\mathbb Q$ to a subinterval avoiding $0$). $\square$

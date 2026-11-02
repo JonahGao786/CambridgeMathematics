@@ -6,14 +6,14 @@ chapter: 3
 source_file: Ch.3 Matrices.pdf
 drive_file_id: 1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA
 source_url: https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view
-source_pages: 8
+source_pages: 14
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 3: Matrices
 
 > [!abstract] Overview
-> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, and the standard geometric maps (rotations, reflections, dilations, shears) as matrices. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
+> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, the standard geometric maps (rotations, reflections, dilations, shears) as matrices, and matrix algebra: products, inverses, transpose and adjoint. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
 > Prerequisite: [[Vectors and Matrices - Chapter 2 Vectors]] (bases, dimension).
 
 ## Results index
@@ -30,6 +30,14 @@ tags: [lecture, vectors-and-matrices]
 | [[#Reflections in the plane]] | $H(\theta)$; $H(\theta)^2=I$, $R(\varphi)H(\theta)=H(\theta+\varphi/2)$, $H(\theta_1)H(\theta_2)=R(2(\theta_1-\theta_2))$ | 6 |
 | [[#Rotations in space and Rodrigues' formula]] | $R_z(\theta)$; $R(\theta,\mathbf n)\mathbf x=\cos\theta\,\mathbf x+(1-\cos\theta)(\mathbf n\cdot\mathbf x)\mathbf n+\sin\theta\,\mathbf n\times\mathbf x$ | 7 |
 | [[#Reflections, dilations and shears in space]] | $H=I-2\mathbf n\mathbf n^{\mathsf T}$; dilation; shear | 8 |
+| [[#Definition — Matrix addition and scalar multiplication]] | $\operatorname{Mat}_{m\times n}(\mathbb F)$ is a vector space | 9–10 |
+| [[#Definition — Matrix product]] | $(MN)_{ij}=\sum_kM_{ik}N_{kj}=R_i(M)\cdot C_j(N)$; associative, distributive | 10–11 |
+| [[#Definition — Identity matrix]] | $I_n=(\delta_{ij})$; $MI_n=I_mM=M$ | 11 |
+| [[#Definition — Left, right and two-sided inverses]] | $NM=I_n$, $ML=I_m$; $(MN)^{-1}=N^{-1}M^{-1}$ | 12–13 |
+| [[#Definition — Transpose]] | $(M^{\mathsf T})_{ij}=M_{ji}$; $(MN)^{\mathsf T}=N^{\mathsf T}M^{\mathsf T}$ | 13 |
+| [[#Definition — Complex conjugate and adjoint]] | $M^\dagger=\overline M^{\mathsf T}$; $(MN)^\dagger=N^\dagger M^\dagger$ | 14 |
+| [[#Definition — Symmetric and antisymmetric matrices]] | $M=\frac12(M+M^{\mathsf T})+\frac12(M-M^{\mathsf T})$ | 14 |
+| [[#Definition — Hermitian and anti-Hermitian matrices]] | $M=\frac12(M+M^\dagger)+\frac12(M-M^\dagger)$ | 14 |
 
 ## 3.1 Linear maps
 
@@ -317,3 +325,166 @@ $$S=\begin{pmatrix}1&\alpha&0\\0&1&0\\0&0&1\end{pmatrix},\qquad\alpha\in\mathbb 
 \end{document}
 ```
 *Shear parallel to the $x_1$-axis, $x_1'=x_1+\alpha x_2$ (here $\alpha=1$): the face $x_2=0$ stays fixed while the face $x_2=1$ slides by $\alpha$ along $x_1$; the unit cube (grey) becomes a slanted box (red).*
+
+## 3.3 Matrices in general
+
+**Recap.** Let $V,W$ be vector spaces over $\mathbb F$ with bases $\{\mathbf e_i\}$ and $\{\mathbf f_j\}$ respectively. Then
+- $V$ is identified with $\mathbb F^n$ ($\mathbb R^n$ or $\mathbb C^n$);
+- $W$ is identified with $\mathbb F^m$;
+- a linear map $T:V\to W$ is identified with an $m\times n$ matrix $M$.
+
+### 3.3.1 Definitions and operations
+
+An $m\times n$ **matrix** over $\mathbb F$ is a rectangular array
+$$M=(M_{ij})=\begin{pmatrix}M_{11}&\cdots&M_{1n}\\\vdots&&\vdots\\M_{m1}&\cdots&M_{mn}\end{pmatrix}$$
+with all entries in $\mathbb F$, $m$ rows and $n$ columns. $\operatorname{Mat}_{m\times n}(\mathbb F)$ denotes the vector space of $m\times n$ matrices with entries in $\mathbb F$.
+
+### Definition — Matrix addition and scalar multiplication
+
+- **Addition:** for $M,N\in\operatorname{Mat}_{m\times n}(\mathbb F)$, $M+N\in\operatorname{Mat}_{m\times n}(\mathbb F)$ with
+$$(M+N)_{ij}=M_{ij}+N_{ij}.$$
+- **Multiplication by scalars:** for $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$ and $\lambda\in\mathbb F$, $\lambda M\in\operatorname{Mat}_{m\times n}(\mathbb F)$ with
+$$(\lambda M)_{ij}:=\lambda M_{ij}.$$
+
+### Definition — Matrix product
+
+For $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$ and $N\in\operatorname{Mat}_{n\times p}(\mathbb F)$, the **matrix product** $MN\in\operatorname{Mat}_{m\times p}(\mathbb F)$ is
+$$(MN)_{ij}:=\sum_{k=1}^nM_{ik}N_{kj}=M_{i1}N_{1j}+M_{i2}N_{2j}+\dots+M_{in}N_{nj}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  % MN
+  \draw (0,1.2) .. controls (-0.25,0.6) and (-0.25,-0.6) .. (0,-1.2);
+  \draw (2.4,1.2) .. controls (2.65,0.6) and (2.65,-0.6) .. (2.4,-1.2);
+  \node[red] at (-0.35,0) {$i$};
+  \draw[red,->] (0.2,0) -- (1.0,0);
+  \draw (1.1,-0.15) rectangle (1.7,0.15);
+  \draw[->] (1.4,1.0) -- (1.4,0.2);
+  \node[red] at (1.4,1.25) {$j$};
+  \node[below] at (1.4,-0.2) {\small$(MN)_{ij}$};
+  \node[red] at (1.2,1.7) {$MN$};
+  \node at (3.0,0) {$=$};
+  % M
+  \draw (4.1,1.2) .. controls (3.85,0.6) and (3.85,-0.6) .. (4.1,-1.2);
+  \draw (6.5,1.2) .. controls (6.75,0.6) and (6.75,-0.6) .. (6.5,-1.2);
+  \node[red] at (3.75,0) {$i$};
+  \draw[->] (4.2,0) -- (6.4,0);
+  \node[red] at (5.3,1.7) {$M$};
+  % N
+  \draw (7.1,1.2) .. controls (6.85,0.6) and (6.85,-0.6) .. (7.1,-1.2);
+  \draw (8.7,1.2) .. controls (8.95,0.6) and (8.95,-0.6) .. (8.7,-1.2);
+  \draw[->] (7.9,1.1) -- (7.9,-1.1);
+  \node[red] at (7.9,1.45) {$j$};
+  \node[red] at (7.9,1.85) {$N$};
+\end{tikzpicture}
+\end{document}
+```
+*Entry $(i,j)$ of $MN$ comes from row $i$ of $M$ and column $j$ of $N$.*
+
+Writing $R_i(M)$ for the $i$-th row of $M$ and $C_j(N)$ for the $j$-th column of $N$,
+$$(MN)_{ij}=R_i(M)\cdot C_j(N),$$
+the dot product of a row and a column in $\mathbb F^n$.
+
+**Properties.**
+- Associativity: $(MN)P=M(NP)$ for $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$, $N\in\operatorname{Mat}_{n\times p}(\mathbb F)$, $P\in\operatorname{Mat}_{p\times q}(\mathbb F)$.
+- Distributivity: $M(N+P)=MN+MP$ for $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$, $N,P\in\operatorname{Mat}_{n\times p}(\mathbb F)$; and $(M+N)P=MP+NP$ for $M,N\in\operatorname{Mat}_{m\times n}(\mathbb F)$, $P\in\operatorname{Mat}_{n\times p}(\mathbb F)$.
+
+**Recap — composition.** If $S:U\to V$ and $T:V\to W$ have matrices $N$ and $M$ respectively, where
+
+| | $U$ | $V$ | $W$ |
+| --- | --- | --- | --- |
+| dimension | $p$ | $n$ | $m$ |
+| basis | $\{\mathbf u_r\}$ | $\{\mathbf e_i\}$ | $\{\mathbf f_j\}$ |
+
+then $T\circ S$ has matrix $MN$.
+
+### Definition — Identity matrix
+
+The **identity matrix** is
+$$I_n:=(\delta_{ij})_{1\le i,j\le n}=\underbrace{\begin{pmatrix}1&0&\cdots&0\\0&1&&\vdots\\\vdots&&\ddots&\\0&\cdots&&1\end{pmatrix}}_{n\text{ columns}}\quad(n\text{ rows}).$$
+For $M\in\operatorname{Mat}_{n\times n}(\mathbb F)$, $MI_n=I_nM=M$; for $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$, $MI_n=I_mM=M$.
+
+### 3.3.2 Matrix inverses
+
+### Definition — Left, right and two-sided inverses
+
+Consider $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$ and $N,L\in\operatorname{Mat}_{n\times m}(\mathbb F)$.
+- $N$ is a **left inverse** for $M$ if $NM=I_n$.
+- $L$ is a **right inverse** for $M$ if $ML=I_m$.
+
+If $m=n$ and both exist, then $N=L=M^{-1}$, with
+$$MM^{-1}=M^{-1}M=I_n.$$
+
+> [!note] Explanation
+> $N=NI_n=N(ML)=(NM)L=I_nL=L$. The same argument shows the inverse is unique: any two inverses of $M$ are equal.
+
+**Remark.** Not every matrix has an inverse. If $M$ has an inverse, it is called **invertible** or **non-singular**.
+- The inverse is unique.
+- For $M,N$ invertible of the same size:
+$$(MN)^{-1}=N^{-1}M^{-1},\qquad(M^{-1})^{-1}=M,\qquad(M^k)^{-1}=(M^{-1})^k\ \ (k\in\mathbb N).$$
+- An invertible matrix represents an isomorphism: trivial kernel (injective) and full rank (surjective).
+
+**Examples.**
+1. Rotation $R(\theta)$ about $\mathbf n$: $R(\theta)^{-1}=R(-\theta)$.
+2. Shear $S(\lambda)$: $S(\lambda)^{-1}=S(-\lambda)$.
+3. Reflection $H$: $H^{-1}=H$.
+
+### 3.3.3 Transpose, conjugate and adjoint
+
+### Definition — Transpose
+
+For $M\in\operatorname{Mat}_{m\times n}(\mathbb F)$, the **transpose** $M^{\mathsf T}\in\operatorname{Mat}_{n\times m}(\mathbb F)$ is
+$$(M^{\mathsf T})_{ij}:=M_{ji}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  % M^T
+  \draw (0,1) .. controls (-0.2,0.5) and (-0.2,-0.5) .. (0,-1);
+  \draw (2.2,1) .. controls (2.4,0.5) and (2.4,-0.5) .. (2.2,-1);
+  \node at (1.1,0) {$\cdots\,M^{\mathsf T}_{ij}\,\cdots$};
+  \draw[dotted] (1.1,0.25) -- (1.1,0.85); \draw[dotted] (1.1,-0.25) -- (1.1,-0.85);
+  \draw[->] (-0.75,0) node[left] {$i$} -- (-0.25,0);
+  \draw[->] (1.1,1.55) node[above] {$j$} -- (1.1,1.05);
+  \node[red] at (1.6,1.4) {$M^{\mathsf T}$};
+  \node at (2.9,0) {$=$};
+  % M
+  \draw (3.6,1) .. controls (3.4,0.5) and (3.4,-0.5) .. (3.6,-1);
+  \draw (5.8,1) .. controls (6.0,0.5) and (6.0,-0.5) .. (5.8,-1);
+  \node at (4.7,0) {$\cdots\,M_{ji}\,\cdots$};
+  \draw[dotted] (4.7,0.25) -- (4.7,0.85); \draw[dotted] (4.7,-0.25) -- (4.7,-0.85);
+  \draw[->] (6.55,0) node[right] {$j$} -- (6.05,0);
+  \draw[->] (4.7,1.55) node[above] {$i$} -- (4.7,1.05);
+  \node[red] at (5.2,1.4) {$M$};
+\end{tikzpicture}
+\end{document}
+```
+*Row $i$, column $j$ of $M^{\mathsf T}$ is row $j$, column $i$ of $M$.*
+
+**Properties.**
+$$(M^{\mathsf T})^{\mathsf T}=M,\qquad(MN)^{\mathsf T}=N^{\mathsf T}M^{\mathsf T},\qquad(\alpha M+\beta N)^{\mathsf T}=\alpha M^{\mathsf T}+\beta N^{\mathsf T}.$$
+
+### Definition — Complex conjugate and adjoint
+
+For complex matrices, **entrywise conjugation** is $(\overline M)_{ij}:=\overline{M_{ij}}$.
+
+The **adjoint**, or **conjugate transpose**, is
+$$M^\dagger:=\overline M^{\mathsf T}\qquad(\text{also written }M^*).$$
+**Properties.** $(MN)^\dagger=N^\dagger M^\dagger$ and $(M^\dagger)^\dagger=M$.
+
+### Definition — Symmetric and antisymmetric matrices
+
+A real square matrix $M$ is **symmetric** if $M^{\mathsf T}=M$, and **antisymmetric** if $M^{\mathsf T}=-M$.
+
+Every real square matrix has a unique decomposition
+$$M=S+A,\qquad S=\tfrac12(M+M^{\mathsf T})\ \text{(symmetric)},\qquad A=\tfrac12(M-M^{\mathsf T})\ \text{(antisymmetric)}.$$
+
+### Definition — Hermitian and anti-Hermitian matrices
+
+A complex square matrix $M$ is **Hermitian** if $M^\dagger=M$, and **anti-Hermitian** if $M^\dagger=-M$.
+
+$M$ has a unique decomposition
+$$M=H+K,\qquad H=\tfrac12(M+M^\dagger)\ \text{(Hermitian)},\qquad K=\tfrac12(M-M^\dagger)\ \text{(anti-Hermitian)}.$$

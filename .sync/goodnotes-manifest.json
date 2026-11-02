@@ -2916,7 +2916,8 @@
         "notes_2026_10_28": [
           "Pages 15-20 added: slope fields, isoclines, fixed points, perturbation analysis, autonomous equations, chemical kinetics setup (page 20 ends after dc/dt=f(c)). Figures redrawn schematically."
         ],
-        "sync_2026_10_30": "Pages 21-25: chemical kinetics stability, 1D phase portrait, logistic equation, discrete fixed points, logistic map (cobweb for 0<r<1 only; page 25 ends there). Figures redrawn schematically."
+        "sync_2026_10_30": "Pages 21-25: chemical kinetics stability, 1D phase portrait, logistic equation, discrete fixed points, logistic map (cobweb for 0<r<1 only; page 25 ends there). Figures redrawn schematically.",
+        "2026-11-02": "p.25: added cobweb diagrams for 1<r<2 (r=1.8) and 2<r<3 (r=2.8) and the convergence statements."
       },
       "proof_scope_notes": [
         {
@@ -2937,15 +2938,15 @@
           ]
         }
       ],
-      "observed_source_modified_timestamp": "2026-10-30T12:39:36.637Z",
-      "processed_source_modified_timestamp": "2026-10-30T12:39:36.637Z",
+      "observed_source_modified_timestamp": "2026-11-02T15:36:11.555Z",
+      "processed_source_modified_timestamp": "2026-11-02T15:36:11.555Z",
       "total_page_count": 25,
-      "visually_inspected_pages": "21-25 (1-20 matched baseline hashes)",
-      "source_sha256": "887ed5c72cd94f06b88906fdd694fc44882d217a9b33076419abd33c719b2f86",
-      "source_size_bytes": 5096785,
+      "visually_inspected_pages": "1-25 (25 viewed 2026-11-02; 1-24 matched baseline hashes)",
+      "source_sha256": "ec97e09e2e0b09794e4f44d4fd5af47749abd6db41262b710bbfd8d696dd3ec3",
+      "source_size_bytes": 5134518,
       "original_pdf_path": null,
       "page_image_attachments": [],
-      "last_successful_processing_at": "2026-10-30T20:00:00Z",
+      "last_successful_processing_at": "2026-11-02",
       "reading_method": "Fresh authenticated direct listings of all six included Google Drive folders, corroborated by complete paginated metadata-only document/folder/image searches over the included parent IDs. Original stored PDFs were fetched with include_base64=false and materialized through the supported sediment download_file tool outside the repository. PyMuPDF verified total page counts and rendered every page at 1.6x (115.2 dpi). Actual view_image/model vision reading covered all 49 pages: Groups 1–33, First-order Linear Differential Equations 1–5, and Partial Differentiation 1–11. Four-times crops of ODE pages 1, 3 and 4, Partial Differentiation page 11, and Groups pages 30 and 33 were also actually inspected. Original handwriting, mathematics, annotations and drawings grounded the transcription; extracted text was available only as an aid. No excluded folder contents were listed, downloaded or read.",
       "failure": null,
       "last_attempt": {
@@ -3061,7 +3062,7 @@
         "04287dfed5252af6aa9c",
         "98e407f6cae5b207c20c",
         "05f503695c4cbf6e1450",
-        "e906bf1e40f5d9cd8cbb"
+        "c341e28edc419483f326"
       ]
     },
     "1VUBm08n3ryqByd9GOlYwR6emoDA8Y0uv": {
@@ -3102,8 +3103,8 @@
       "source_file_name": "Ch.3 Group Actions.pdf",
       "source_url": "https://drive.google.com/file/d/1werwvz7lKsMJXjP5zBK0gBdekRf8jCdb/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Groups",
-      "observed_source_modified_timestamp": "2026-10-30T12:40:01.661Z",
-      "processed_source_modified_timestamp": "2026-10-30T12:40:01.661Z",
+      "observed_source_modified_timestamp": "2026-11-02T15:36:40.737Z",
+      "processed_source_modified_timestamp": "2026-11-02T15:36:40.737Z",
       "markdown_paths": [
         "Part IA/Groups/Lecture Notes/Groups - Chapter 3 Group Actions.md",
         "Concepts/Group Actions.md"
@@ -3112,16 +3113,17 @@
       "course": "Part IA Groups",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 12,
-      "visually_inspected_pages": "8-12 (1-7 matched baseline hashes)",
+      "total_page_count": 15,
+      "visually_inspected_pages": "1-15 (12-15 viewed 2026-11-02; 1-11 matched baseline hashes)",
       "normalizations": [
         "Group Actions p.3: converse of Theorem 3.2 not in source (todo in note).",
         "Pages 3-8 added: converse of Thm 3.2, Cayley (3.3), orbits and stabilisers (3.4, 3.5), orbit-stabiliser statement (3.6). TODO: proof of Thm 3.6 absent in source.",
         "p.8: Thm 3.6 gains explanatory annotations only (cosets; well-defined). Proof still absent in source (todo kept).",
-        "Pages 8-12: proof of Thm 3.6, Cor 3.7, cube symmetries, Cauchy's theorem (page 12 ends after 'at least two orbits of size 1'; closing step given in an explanation callout). Cube figure redrawn schematically."
+        "Pages 8-12: proof of Thm 3.6, Cor 3.7, cube symmetries, Cauchy's theorem (page 12 ends after 'at least two orbits of size 1'; closing step given in an explanation callout). Cube figure redrawn schematically.",
+        "Pages 12-15: end of Cauchy proof from source (explanation callout trimmed), section 3.3 conjugation (Defs 3.9-3.12), D_2n reflection-class and rsr^-1 figures. p.14 'centraliser of g in the stabiliser' read as 'is'."
       ],
       "unresolved_todos": [],
-      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
+      "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally). p.14: D_2n reflection axes and rsr^-1 diamond figures in TikZ.",
       "page_hashes": [
         "6836741dc41be84c468a",
         "95d61f3cb5286c7a3f3f",
@@ -3134,19 +3136,22 @@
         "1f4dc002b5b959943963",
         "e6ca2447c9502cbc4175",
         "7dd51aca6c9e25b265e4",
-        "9fcfc665e826d29ec9fc"
+        "a3f1d0c805387d32b0a8",
+        "8fe772a7ace59098670c",
+        "5e4c3a78e6466c1b0e54",
+        "5e6244a0128ca9bfef4b"
       ],
-      "source_sha256": "9f5212885a2c4270ff30788394ee06d8fafa3514cba33c0a505e9d47a7c81941",
-      "source_size_bytes": 2347361,
-      "last_successful_processing_at": "2026-10-30T20:00:00Z"
+      "source_sha256": "9fe4bcd6d5d0dd6c889bb0a6060ca04ed90a2fa8baa5f6e8a325624cf25ff48e",
+      "source_size_bytes": 2918248,
+      "last_successful_processing_at": "2026-11-02"
     },
     "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC": {
       "drive_file_id": "1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC",
       "source_file_name": "Ch.2 The Reals.pdf",
       "source_url": "https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-29T14:20:00.732Z",
-      "processed_source_modified_timestamp": "2026-10-29T14:20:00.732Z",
+      "observed_source_modified_timestamp": "2026-10-31T16:49:49.593Z",
+      "processed_source_modified_timestamp": "2026-10-31T16:49:49.593Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 2 The Reals.md",
         "Concepts/Real Numbers and the Least Upper Bound Axiom.md"
@@ -3155,8 +3160,8 @@
       "course": "Part IA Numbers and Sets",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 4,
-      "visually_inspected_pages": "1-4 (all)",
+      "total_page_count": 8,
+      "visually_inspected_pages": "1-8 (5-8 viewed 2026-10-31; 1-4 matched baseline hashes)",
       "normalizations": [
         "Prop 1 proof missing in source (todo in note).",
         "Pages 1-4: Prop 1 proofs, axioms of R, sup, remarks, examples. Source Remark (i) steps rendered as in source."
@@ -3167,19 +3172,23 @@
         "357df7cde2e7d2bda4e9",
         "2cc02f873fdd20bc3d25",
         "17d2b598b417fb5ced79",
-        "9a74341084825ff19f61"
+        "9a74341084825ff19f61",
+        "799296ce02443b9ede77",
+        "97671db0f2f701095094",
+        "0e884041934f9170d5be",
+        "bc28fb7ac18ac73d6106"
       ],
-      "source_sha256": "bb61f2a11d837af4c290763e1bd47d5bfdcfcf539757143bf6da363937de1ef7",
-      "source_size_bytes": 1057410,
-      "last_successful_processing_at": "2026-10-29T16:00:00Z"
+      "source_sha256": "87246ddde43e8b8b14c1577406ed8570c4c9d5e4317df8775283cf8a06cf4cc7",
+      "source_size_bytes": 1995037,
+      "last_successful_processing_at": "2026-10-31"
     },
     "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA": {
       "drive_file_id": "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA",
       "source_file_name": "Ch.3 Matrices.pdf",
       "source_url": "https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-29T14:20:13.430Z",
-      "processed_source_modified_timestamp": "2026-10-29T14:20:13.430Z",
+      "observed_source_modified_timestamp": "2026-10-31T16:50:08.164Z",
+      "processed_source_modified_timestamp": "2026-10-31T16:50:08.164Z",
       "markdown_paths": [
         "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 3 Matrices.md",
         "Concepts/Linear Maps and Matrices.md"
@@ -3188,8 +3197,8 @@
       "course": "Part IA Vectors and Matrices",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 8,
-      "visually_inspected_pages": "5-8 (1-4 matched baseline hashes)",
+      "total_page_count": 14,
+      "visually_inspected_pages": "1-14 (9-14 viewed 2026-10-31; 1-8 matched baseline hashes)",
       "normalizations": [
         "Rank-nullity proof reordered into spanning then independence.",
         "Pages 5-8 added: rotations/reflections in R^2, Rodrigues formula, reflection/dilation/shear in R^3. Figures redrawn schematically."
@@ -3204,27 +3213,98 @@
         "21cce9472b940cb574f1",
         "6801691e524388284a5d",
         "051da455b711e6e1183a",
-        "421baba896ab37a883bf"
+        "421baba896ab37a883bf",
+        "f4b241f854934c06de02",
+        "6ea1f0518243c1b06479",
+        "3bce2d7726bd97ec1bc3",
+        "b30b4e54cbe3a808ec59",
+        "740abf8834c00996d2ae",
+        "d15456f55d058afdb6b5"
       ],
-      "source_sha256": "f4949fb6a3a92f59abb4d0a2e84214fa3408e19bf47117b7f5974540e7676b8d",
-      "source_size_bytes": 1756789,
-      "last_successful_processing_at": "2026-10-29T16:00:00Z"
+      "source_sha256": "7aac9cfb4c77f7072caf8f695545c5d7b11496153b8ec72d9347453f283f2ea1",
+      "source_size_bytes": 2826056,
+      "last_successful_processing_at": "2026-10-31"
+    },
+    "1cD6n9aI-_mW-bAMZOGvUBNHr3V2QzJue": {
+      "drive_file_id": "1cD6n9aI-_mW-bAMZOGvUBNHr3V2QzJue",
+      "source_file_name": "Ch.4 The Möbius Group.pdf",
+      "source_url": "https://drive.google.com/file/d/1cD6n9aI-_mW-bAMZOGvUBNHr3V2QzJue/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Groups",
+      "markdown_paths": [
+        "Part IA/Groups/Lecture Notes/Groups - Chapter 4 The Möbius Group.md",
+        "Concepts/Möbius Transformations.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Groups",
+      "classification": "study_material",
+      "normalizations": [
+        "p.1: codomain of mu written as C, normalized to C-hat.",
+        "p.2: 'Compare' matrix line written with '=' between the matrices and no result; written as the product with its entries."
+      ],
+      "unresolved_todos": [],
+      "diagram_note": "Stereographic projection figure in TikZ.",
+      "observed_source_modified_timestamp": "2026-11-02T15:36:45.595Z",
+      "processed_source_modified_timestamp": "2026-11-02T15:36:45.595Z",
+      "total_page_count": 3,
+      "visually_inspected_pages": "1-3 (all, 2026-11-02)",
+      "page_hashes": [
+        "28d4c777165207d7f31f",
+        "3b131f31c5bb7904d67a",
+        "9171d300a5dd12dc9d44"
+      ],
+      "source_sha256": "40300217c236d7e28f0c119ad13f334e09afba5b0069cd4b7982c7710afb5da9",
+      "source_size_bytes": 528995,
+      "last_successful_processing_at": "2026-11-02",
+      "status": "processed"
+    },
+    "1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB": {
+      "drive_file_id": "1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB",
+      "source_file_name": "Ch.5 Higher Order Linear ODEs.pdf",
+      "source_url": "https://drive.google.com/file/d/1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Differential Equations",
+      "markdown_paths": [
+        "Part IA/Differential Equations/Lecture Notes/Differential Equations - Chapter 5 Higher Order Linear ODEs.md",
+        "Concepts/Second-Order Linear ODEs with Constant Coefficients.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Differential Equations",
+      "classification": "study_material",
+      "normalizations": [
+        "p.5: O(A eps^2 x^2) = O(eps x^2) (A is O(1/eps))."
+      ],
+      "unresolved_todos": [],
+      "diagram_note": "No diagrams in source.",
+      "observed_source_modified_timestamp": "2026-11-02T15:36:20.416Z",
+      "processed_source_modified_timestamp": "2026-11-02T15:36:20.416Z",
+      "total_page_count": 5,
+      "visually_inspected_pages": "1-5 (all, 2026-11-02)",
+      "page_hashes": [
+        "016dda0da4bc868b5152",
+        "a81b04bbdd354879b1a9",
+        "727f10c539077cb10045",
+        "0984d3fb3782c4ff4236",
+        "261af2ea2db5040fc82b"
+      ],
+      "source_sha256": "78a9a54ff67d1d111893b927b2355b182833ef208aba5ac5e8f132ccf5be2a3a",
+      "source_size_bytes": 1010313,
+      "last_successful_processing_at": "2026-11-02",
+      "status": "processed"
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-10-30",
-    "completed_at": "2026-10-30T20:00:00Z",
-    "scope": "Normal sync; Example sheets skipped by default. Previous commit f6598aa (explanations on Ch.2/older Ch.3 content) reverted at user request.",
-    "new_source_count": 0,
+    "date": "2026-11-02",
+    "completed_at": "2026-11-02T17:00:00Z",
+    "scope": "Normal sync; Example sheets skipped by default.",
+    "new_source_count": 2,
     "modified_source_count": 2,
-    "processed_source_count": 2,
+    "processed_source_count": 4,
     "pending_source_count": 0,
-    "reading_method": "Service-account download; pagediff.py selected pages: Groups Ch.3 pp.8-12, DE Ch.4 pp.21-25; others matched baseline hashes.",
-    "visually_inspected_page_count": 10,
+    "reading_method": "Service-account download; pagediff.py selected pages: Groups Ch.3 pp.12-15, DE Ch.4 p.25; new sources Groups Ch.4 (3 pp) and DE Ch.5 (5 pp) viewed in full.",
+    "visually_inspected_page_count": 13,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-10-30"
+    "commit_message": "notes: process Goodnotes files from 2026-11-02"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,

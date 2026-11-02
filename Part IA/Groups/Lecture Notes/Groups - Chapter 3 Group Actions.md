@@ -6,14 +6,14 @@ chapter: 3
 source_file: Ch.3 Group Actions.pdf
 drive_file_id: 1werwvz7lKsMJXjP5zBK0gBdekRf8jCdb
 source_url: https://drive.google.com/file/d/1werwvz7lKsMJXjP5zBK0gBdekRf8jCdb/view
-source_pages: 12
+source_pages: 15
 tags: [lecture, groups]
 ---
 
 # Groups — Chapter 3: Group Actions
 
 > [!abstract] Overview
-> A group acts on a set by permuting it. An action is the same thing as a homomorphism $G\to\operatorname{Sym}(X)$; this gives Cayley's theorem. Orbits partition $X$, stabilisers are subgroups, and the orbit–stabiliser theorem relates the two. It is used to compute $|G|$ (the symmetry group of the cube) and to prove Cauchy's theorem.
+> A group acts on a set by permuting it. An action is the same thing as a homomorphism $G\to\operatorname{Sym}(X)$; this gives Cayley's theorem. Orbits partition $X$, stabilisers are subgroups, and the orbit–stabiliser theorem relates the two. It is used to compute $|G|$ (the symmetry group of the cube) and to prove Cauchy's theorem. Finally, $G$ acting on itself by conjugation gives conjugacy classes, centralisers and the centre.
 > Prerequisites: [[Groups - Chapter 1 Examples and Definitions]] (homomorphisms, $\operatorname{Sym}(X)$, dihedral groups).
 
 ## Results index
@@ -28,7 +28,11 @@ tags: [lecture, groups]
 | [[#Theorem 3.6 — Orbit-stabiliser theorem]] | $G/\operatorname{Stab}_G(x)\to Gx$ is a bijection | 8 |
 | [[#Corollary 3.7 — Counting with orbits and stabilisers]] | $\lvert G\rvert=\lvert\operatorname{Stab}_G(x)\rvert\cdot\lvert Gx\rvert$ | 9 |
 | [[#Example — Symmetries of the cube]] | $\lvert G\rvert=6\cdot8=48$ | 9–10 |
-| [[#Theorem 3.8 — Cauchy's theorem]] | prime $p\mid\lvert G\rvert\Rightarrow$ an element of order $p$ | 10–12 |
+| [[#Theorem 3.8 — Cauchy's theorem]] | prime $p\mid\lvert G\rvert\Rightarrow$ an element of order $p$ | 10–13 |
+| [[#Definition 3.9 — Conjugate]] | $hgh^{-1}$; conjugation action $(g,\gamma)\mapsto g\gamma g^{-1}$ | 13 |
+| [[#Definition 3.10 — Conjugacy classes]] | orbits of conjugation, $\operatorname{ccl}(g)$; reflections in $D_{2n}$ | 14 |
+| [[#Definition 3.11 — Centraliser]] | $C_G(g)=\{h:hgh^{-1}=g\}$, the elements commuting with $g$ | 14 |
+| [[#Definition 3.12 — Centre]] | $Z(G)=\bigcap_gC_G(g)$ | 15 |
 
 ## 3.1 Actions
 
@@ -242,7 +246,111 @@ The action $C_p\curvearrowright X$ partitions $X$ into orbits
 $$X=C_px_1\sqcup C_px_2\sqcup\cdots\sqcup C_px_n\qquad(\text{disjoint union, some }n\in\mathbb N).$$
 By orbit–stabiliser, for all $i$, $|C_px_i|$ divides $|C_p|=p$, so $|C_px_i|=1$ or $p$. Say there are $\ell$ orbits of size $1$, which after reordering are $C_px_1,\dots,C_px_\ell$, and $n-\ell$ orbits of size $p$. Then
 $$|G|^{p-1}=|X|=\sum_{i=1}^n|C_px_i|=\sum_{i=1}^\ell|C_px_i|+\sum_{i=\ell+1}^n|C_px_i|=\ell+(n-\ell)p.$$
-As $p\mid|G|$, we must have $p\mid\ell$, so $\ell\ge p\ge2$, i.e. there are at least two orbits of size $1$.
+As $p\mid|G|$, we must have $p\mid\ell$, so $\ell\ge p\ge2$, i.e. there are at least two orbits of size $1$, provided $\ell\ne0$.
+
+*Step 3: orbits of size $1$.* Observe that $x=(g_1,\dots,g_p)$ has $C_px=\{x\}$ (an orbit of size $1$) if and only if $g_1=g_2=\dots=g_p$.
+- $(e,e,\dots,e)\in X$ has an orbit of size $1$, so $\ell\ne0$.
+- So $\ell\ge2$, and hence there is at least one other, say $(g,g,\dots,g)\in X$ with $g\ne e$.
+
+By definition of $X$, $g^p=e$, so $\operatorname{ord}(g)\mid p$. Then $\operatorname{ord}(g)=1$ or $p$. As $g\ne e$, we must have $\operatorname{ord}(g)=p$. $\square$
 
 > [!note] Explanation
-> *Goal:* find an element of order $p$. *Trick:* look at all $p$-tuples of elements of $G$ whose product is $e$, and cycle the entries (move the first entry to the end). The product stays $e$ because $g_1(g_2\cdots g_p)=e$ forces $g_2\cdots g_p=g_1^{-1}$, so $(g_2\cdots g_p)g_1=e$. *Counting:* choosing $g_1,\dots,g_{p-1}$ freely fixes $g_p$, so $X$ has $|G|^{p-1}$ elements, a multiple of $p$. Every orbit of the cycling action has size $1$ or $p$. The orbits of size $p$ contribute a multiple of $p$ to $|X|$, so the number $\ell$ of size-$1$ orbits is also a multiple of $p$. Now $\ell\ge1$ because $(e,\dots,e)$ is unchanged by cycling, so $\ell\ge p\ge2$: besides $(e,\dots,e)$ there is another tuple fixed by cycling. A tuple fixed by cycling has all entries equal, $(g,\dots,g)$, and being in $X$ means $g^p=e$. With $g\ne e$ this gives an element of order $p$ (its order divides the prime $p$ and is not $1$).
+> *Goal:* find an element of order $p$. *Trick:* look at all $p$-tuples of elements of $G$ whose product is $e$, and cycle the entries (move the first entry to the end). The product stays $e$ because $g_1(g_2\cdots g_p)=e$ forces $g_2\cdots g_p=g_1^{-1}$, so $(g_2\cdots g_p)g_1=e$. *Counting:* choosing $g_1,\dots,g_{p-1}$ freely fixes $g_p$, so $X$ has $|G|^{p-1}$ elements, a multiple of $p$. Every orbit of the cycling action has size $1$ or $p$. The orbits of size $p$ contribute a multiple of $p$ to $|X|$, so the number $\ell$ of size-$1$ orbits is also a multiple of $p$. Since $(e,\dots,e)$ is one such orbit, there must be at least $p-1\ge1$ more, and a tuple fixed by cycling is just $(g,\dots,g)$ with $g^p=e$.
+
+## 3.3 Conjugation
+
+### Definition 3.9 — Conjugate
+
+Let $G$ be a group and $g\in G$. For any $h\in G$, the element
+$$h\cdot g\cdot h^{-1}\in G$$
+is called the **conjugate** of $g$ by $h$.
+
+**Example.** Suppose $G$ is an abelian group. Then for any $g,h\in G$,
+$$h\cdot g\cdot h^{-1}=h\cdot h^{-1}\cdot g=g,$$
+so the only conjugate of $g$ is $g$ itself.
+
+**Exercise.** $G$ acts on itself by **conjugation**:
+$$G\times G\to G,\qquad(g,\gamma)\mapsto g\gamma g^{-1}.$$
+This action is different from the regular action $(g,\gamma)\mapsto g\gamma$.
+
+### Definition 3.10 — Conjugacy classes
+
+The **conjugacy classes** of $G$ are the orbits under the conjugation action, with
+$$\operatorname{ccl}(g)=\{h\cdot g\cdot h^{-1}:h\in G\}$$
+for the orbit of $g$.
+
+**Example (Example Sheet 2, Q7).** $D_{2n}$ has
+- one conjugacy class of reflections if $n$ is odd;
+- two conjugacy classes of reflections if $n$ is even.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.1]
+  % triangle, n = 3
+  \coordinate (A) at (90:1); \coordinate (B) at (210:1); \coordinate (C) at (330:1);
+  \draw[thick] (A) -- (B) -- (C) -- cycle;
+  \draw[blue] (A) -- (0,-0.5); \draw[blue] (B) -- (0.433,0.25); \draw[blue] (C) -- (-0.433,0.25);
+  \node at (0,-1.0) {\small$n=3$: one class};
+  % square, edge-midpoint axes
+  \begin{scope}[xshift=3cm]
+    \draw[thick] (-0.8,-0.8) rectangle (0.8,0.8);
+    \draw[blue] (0,-0.8) -- (0,0.8); \draw[blue] (-0.8,0) -- (0.8,0);
+    \draw[blue,<->] (-0.25,0.5) -- (0.25,0.5); \draw[blue,<->] (0.5,-0.25) -- (0.5,0.25);
+  \end{scope}
+  % square, diagonal axes
+  \begin{scope}[xshift=5.4cm]
+    \draw[thick] (-0.8,-0.8) rectangle (0.8,0.8);
+    \draw[red] (-0.8,-0.8) -- (0.8,0.8); \draw[red] (-0.8,0.8) -- (0.8,-0.8);
+    \draw[red,<->] (-0.55,0.2) -- (-0.2,0.55); \draw[red,<->] (0.2,0.55) -- (0.55,0.2);
+  \end{scope}
+  \node at (4.2,-1.0) {\small$n=4$: two classes};
+\end{tikzpicture}
+\end{document}
+```
+*For $n$ odd every reflection axis joins a vertex to the midpoint of the opposite edge, and all such reflections are conjugate. For $n$ even there are two kinds of axis: through midpoints of opposite edges (blue) and through opposite vertices (red), giving two classes.*
+
+**Slogan #1.** Two group elements are conjugate if and only if they have the same "shape".
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.2]
+  % left: s, reflection in the real axis
+  \draw[thick] (0,1) -- (-1,0) -- (0,-1) -- (1,0) -- cycle;
+  \node[above] at (0,1) {$i$}; \node[left] at (-1,0) {$-1$};
+  \node[right] at (1,0) {$1$}; \node[below] at (0,-1) {$-i$};
+  \draw[blue,thick] (-1,0) -- (1,0);
+  \draw[blue,<->] (0,0.3) -- (0,-0.3);
+  \node[blue] at (-0.2,0.35) {$s$};
+  % right: rsr^{-1}
+  \begin{scope}[xshift=4cm]
+    \draw[thick] (0,1) -- (-1,0) -- (0,-1) -- (1,0) -- cycle;
+    \node[above] at (0,1) {$r(1)$}; \node[left] at (-1,0) {$r(i)$};
+    \node[right] at (1,0) {$r(-i)$}; \node[below] at (0,-1) {$r(-1)$};
+    \draw[blue,thick] (0,1) -- (0,-1);
+    \draw[blue,<->] (-0.3,0) -- (0.3,0);
+    \node at (1.3,0.8) {$rsr^{-1}$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
+*Left: $s$ is the reflection in the axis through $1$ and $-1$. Right: the same square with its vertices relabelled by the rotation $r$; $rsr^{-1}$ is the reflection in the axis through $r(1)$ and $r(-1)$.*
+
+**Slogan #2.** $g\cdot f\cdot g^{-1}$ acts as "$f$ with the space relabelled by $g$".
+
+> [!note] Explanation
+> To apply $rsr^{-1}$ to the point $r(x)$: first $r^{-1}$ takes it back to $x$, then $s$ moves $x$ to $s(x)$, then $r$ takes this to $r(s(x))$. So $rsr^{-1}$ sends $r(x)\mapsto r(s(x))$: it does what $s$ does, but to the points renamed by $r$. Since $s$ fixes $1$ and $-1$, $rsr^{-1}$ fixes $r(1)$ and $r(-1)$, so it is the reflection in the axis through them. This is why conjugate elements have the same "shape".
+
+### Definition 3.11 — Centraliser
+
+The **centraliser** of $g$ is the stabiliser of $g$ under the conjugation action:
+$$C_G(g)=\{h\in G:h\cdot g\cdot h^{-1}=g\}.$$
+
+**Remark.** $h\cdot g\cdot h^{-1}=g\iff h\cdot g=g\cdot h$. So the centraliser of $g$ is exactly the set of elements that commute with $g$.
+
+### Definition 3.12 — Centre
+
+The **centre** of $G$ is
+$$Z(G)=\{h\in G:hg=gh\text{ for all }g\in G\}=\bigcap_{g\in G}C_G(g),$$
+i.e. the set of elements of $G$ which commute with everything.
