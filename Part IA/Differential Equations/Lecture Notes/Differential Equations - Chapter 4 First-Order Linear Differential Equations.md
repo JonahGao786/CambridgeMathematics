@@ -581,3 +581,59 @@ Illustrate with **cobweb diagrams**. Case $0<r<1$:
 \end{document}
 ```
 *Cobweb diagram of the logistic map with $0<r<1$ (here $r=0.95$): the iterates step down towards the stable fixed point $x=0$.*
+
+**Stable fixed point** ($0<r<1$): $x_n$ converges to $x_n=0$ for any starting point $0\le x_0\le1$.
+
+Case $1<r<2$: $x_n$ converges to $x_n=1-\frac1r$, approaching it monotonically.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=0.85]
+  \draw[->] (0,0) -- (5.4,0) node[right] {$x_n$};
+  \draw[->] (0,0) -- (0,5.4) node[above] {$x_{n+1}$};
+  \draw[blue,thick] (0,0) -- (5.2,5.2) node[right] {$x_{n+1}=x_n$};
+  \draw[red,thick,domain=0:5,samples=80] plot (\x,{1.8*\x*(1-\x/5)}) node[above] {$f(x_n)$};
+  \draw (5,0.07) -- (5,-0.07) node[below] {$1$};
+  \draw[dotted] (2.222,0) -- (2.222,2.222);
+  \node[below] at (2.222,-0.05) {$1-\frac1r$};
+  \def\xn{0.4}
+  \pgfmathsetmacro{\yn}{1.8*\xn*(1-\xn/5)}
+  \draw[thick] (\xn,0) node[below] {$x_0$} -- (\xn,\yn);
+  \foreach \i in {1,...,10} {
+    \pgfmathsetmacro{\yn}{1.8*\xn*(1-\xn/5)}
+    \pgfmathsetmacro{\zn}{1.8*\yn*(1-\yn/5)}
+    \draw[thick] (\xn,\yn) -- (\yn,\yn) -- (\yn,\zn);
+    \xdef\xn{\yn}
+  }
+\end{tikzpicture}
+\end{document}
+```
+*Cobweb diagram with $1<r<2$ (here $r=1.8$): the iterates climb steadily to the stable fixed point $1-\frac1r$.*
+
+Case $2<r<3$: $x_n$ again converges to $x_n=1-\frac1r$, now oscillating about it.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=0.85]
+  \draw[->] (0,0) -- (5.4,0) node[right] {$x_n$};
+  \draw[->] (0,0) -- (0,5.4) node[above] {$x_{n+1}$};
+  \draw[blue,thick] (0,0) -- (5.2,5.2) node[right] {$x_{n+1}=x_n$};
+  \draw[red,thick,domain=0:5,samples=80] plot (\x,{2.8*\x*(1-\x/5)}) node[above] {$f(x_n)$};
+  \draw (5,0.07) -- (5,-0.07) node[below] {$1$};
+  \draw[dotted] (3.214,0) -- (3.214,3.214);
+  \node[below] at (3.214,-0.05) {$1-\frac1r$};
+  \def\xn{0.6}
+  \pgfmathsetmacro{\yn}{2.8*\xn*(1-\xn/5)}
+  \draw[thick] (\xn,0) node[below] {$x_0$} -- (\xn,\yn);
+  \foreach \i in {1,...,25} {
+    \pgfmathsetmacro{\yn}{2.8*\xn*(1-\xn/5)}
+    \pgfmathsetmacro{\zn}{2.8*\yn*(1-\yn/5)}
+    \draw[thick] (\xn,\yn) -- (\yn,\yn) -- (\yn,\zn);
+    \xdef\xn{\yn}
+  }
+\end{tikzpicture}
+\end{document}
+```
+*Cobweb diagram with $2<r<3$ (here $r=2.8$): the iterates spiral in to the stable fixed point $1-\frac1r$, alternately above and below it.*

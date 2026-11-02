@@ -25,6 +25,12 @@ tags: [concept, groups]
 - **Counting.** For finite $G$: $|G|=|\operatorname{Stab}_G(x)|\cdot|Gx|$. Example: the cube has $6$ face centres and the stabiliser of one is $D_8$, so $|G|=48$. → [[Groups - Chapter 3 Group Actions#Corollary 3.7 — Counting with orbits and stabilisers|lecture]] · [[Groups - Chapter 3 Group Actions#Example — Symmetries of the cube|cube]]
 - **Cauchy's theorem.** If a prime $p$ divides $|G|$, some $g$ has order $p$. *Idea:* let $C_p$ cycle the $p$-tuples $(g_1,\dots,g_p)$ with product $e$; orbit sizes are $1$ or $p$, so a counting argument forces a non-trivial fixed tuple $(g,\dots,g)$, i.e. $g^p=e$. → [[Groups - Chapter 3 Group Actions#Theorem 3.8 — Cauchy's theorem|proof]]
 
+## Conjugation
+
+- **Conjugate** of $g$ by $h$: $hgh^{-1}$; $G$ acts on itself by conjugation $(g,\gamma)\mapsto g\gamma g^{-1}$ (not the regular action). → [[Groups - Chapter 3 Group Actions#Definition 3.9 — Conjugate|lecture]]
+- **Conjugacy class** $\operatorname{ccl}(g)=\{hgh^{-1}\}$, the orbit under conjugation. Conjugate elements have the same "shape": $gfg^{-1}$ is $f$ with the space relabelled by $g$. In $D_{2n}$ the reflections form one class ($n$ odd) or two ($n$ even). → [[Groups - Chapter 3 Group Actions#Definition 3.10 — Conjugacy classes|lecture]]
+- **Centraliser** $C_G(g)=\{h:hg=gh\}$, the stabiliser under conjugation; **centre** $Z(G)=\bigcap_gC_G(g)$. → [[Groups - Chapter 3 Group Actions#Definition 3.11 — Centraliser|lecture]] · [[Groups - Chapter 3 Group Actions#Definition 3.12 — Centre|lecture]]
+
 ## Examples
 
 - Trivial action; $\operatorname{Sym}(X)$ and its subgroups act on $X$; $\operatorname{Isom}(X)$ acts on $X\subseteq\mathbb C$; $D_{2n}$ acts on the regular $n$-gon and on its vertices $\{z:z^n=1\}$.
