@@ -6,14 +6,14 @@ chapter: 2
 source_file: Ch.2 The Reals.pdf
 drive_file_id: 1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC
 source_url: https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view
-source_pages: 8
+source_pages: 11
 tags: [lecture, numbers-and-sets]
 ---
 
 # Numbers and Sets — Chapter 2: The Reals
 
 > [!abstract] Overview
-> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom. Consequences: $\mathbb N$ is unbounded (Archimedes), infima exist, $\sqrt2$ exists in $\mathbb R$, and both the rationals and the irrationals are dense.
+> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom. Consequences: $\mathbb N$ is unbounded (Archimedes), infima exist, $\sqrt2$ exists in $\mathbb R$, and both the rationals and the irrationals are dense. Finally, sequences and their limits: the $\varepsilon$–$N$ definition, examples, divergence and uniqueness of limits.
 > Prerequisite: [[Numbers and Sets - Chapter 1 Elementary Number Theory]] (unique factorization).
 
 ## Results index
@@ -30,6 +30,12 @@ tags: [lecture, numbers-and-sets]
 | [[#Definition — Irrational numbers]] | reals that are not rational; e.g. $2+3\sqrt5$ | 7 |
 | [[#Density of the rationals]] | $a<b\Rightarrow\exists c\in\mathbb Q,\ a<c<b$ | 7–8 |
 | [[#Density of the irrationals]] | $a<b\Rightarrow\exists c\in\mathbb R\setminus\mathbb Q,\ a<c<b$ | 8 |
+| [[#Definition — Sequence]] | $(a_n)_{n=1}^\infty$ | 8 |
+| [[#Definition — Limit of a sequence]] | $\forall\varepsilon>0\ \exists N\ \forall n\ge N,\ \lvert a_n-\ell\rvert<\varepsilon$ | 8–9 |
+| [[#Definition — Absolute value]] | $\lvert x\rvert$; triangle inequality $\lvert a-c\rvert\le\lvert a-b\rvert+\lvert b-c\rvert$ | 9 |
+| [[#Definition — Convergence and divergence]] | $a_n\to\ell$, $\lim a_n=\ell$; $a_n\not\to\ell$ | 9–10 |
+| [[#Examples of limits]] | $1-\frac1n\to1$; $0,\frac12,0,\frac14,\dots\to0$; $1-\frac1{2^n}\to1$; $(-1)^n$ diverges | 9–11 |
+| [[#Proposition — Uniqueness of limits]] | a sequence has at most one limit | 11 |
 
 ## 2.1 Why not stop at the rationals?
 
@@ -236,3 +242,123 @@ The irrationals are also dense in $\mathbb R$: for all $a<b$ in $\mathbb R$ ther
 **Proof.** Take a rational $c$ with $a\sqrt2<c<b\sqrt2$. Then
 $$a<\frac c{\sqrt2}<b,$$
 and $\frac c{\sqrt2}$ is irrational (choosing $c\ne0$, e.g. by applying density of $\mathbb Q$ to a subinterval avoiding $0$). $\square$
+
+## 2.4 Sequences
+
+### Definition — Sequence
+
+A **sequence** is an enumerated collection of objects in which repetition is allowed and order matters. Write
+$$a_1,a_2,a_3,\dots\qquad\text{or}\qquad(a_n)_{n=1}^\infty.$$
+
+What does it mean for a sequence $a_1,a_2,a_3,\dots$ to tend to a limit $\ell$?
+- It is **not** enough that the terms get closer to $\ell$: e.g. we would not want $0,\frac12,\frac23,\frac34,\dots$ to tend to $35$.
+- And it is not enough that the terms get "arbitrarily close" to $\ell$, in the sense that for all $\varepsilon>0$ there is $n\in\mathbb N$ with $\ell-\varepsilon<a_n<\ell+\varepsilon$: e.g. we would not want $0,10,\frac12,10,\frac23,10,\dots$ to tend to $1$.
+
+We want the sequence to **get and stay** within $\varepsilon$ of $\ell$.
+
+### Definition — Limit of a sequence
+
+The sequence $a_1,a_2,a_3,\dots$ **tends to the limit** $\ell\in\mathbb R$ as $n$ tends to infinity if
+$$\forall\varepsilon>0,\ \exists N\in\mathbb N\ \text{s.t.}\ \forall n\ge N,\quad\ell-\varepsilon<a_n<\ell+\varepsilon,$$
+i.e.
+$$\forall\varepsilon>0,\ \exists N\in\mathbb N\ \text{s.t.}\ \forall n\ge N,\quad|a_n-\ell|<\varepsilon.$$
+
+### Definition — Absolute value
+
+The **absolute value** $|x|$ of $x\in\mathbb R$ is
+$$|x|=\begin{cases}x&\text{if }x\ge0,\\-x&\text{if }x<0.\end{cases}$$
+We think of $|a-b|$ as the "distance between $a$ and $b$ on our number line". It is easy to check that the **triangle inequality** holds: for all $a,b,c$,
+$$|a-c|\le|a-b|+|b-c|.$$
+
+### Definition — Convergence and divergence
+
+When $(a_n)_{n=1}^\infty$ tends to $\ell$ as $n$ tends to infinity, we write "$a_n\to\ell$ as $n\to\infty$", or "$\lim_{n\to\infty}a_n=\ell$", or "$(a_n)_{n=1}^\infty$ **converges** to $\ell$". If there is a limit $\ell$ but it is not specified, we simply say "$(a_n)_{n=1}^\infty$ converges". If $(a_n)_{n=1}^\infty$ does not converge, we say it **diverges**.
+
+If $a_n$ does not tend to $\ell$, we write $a_n\not\to\ell$. This means
+$$\exists\varepsilon>0\ \ \forall N\in\mathbb N\ \ \exists n\ge N\ \text{s.t.}\ |a_n-\ell|\ge\varepsilon.$$
+
+### Examples of limits
+
+**(1)** $0,\frac12,\frac23,\frac34,\dots$ The $n$th term is $a_n=1-\frac1n$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  % number line
+  \draw[->] (-0.3,3.6) -- (5.4,3.6) node[right] {$R$};
+  \foreach \x/\l in {0/0,2.6/1-\varepsilon,3.6/1,4.6/1+\varepsilon} {\draw (\x,3.68) -- (\x,3.52) node[below] {$\l$};}
+  % graph of a_n
+  \draw[->] (0,0) -- (5.6,0) node[right] {$n$};
+  \draw[->] (0,0) -- (0,2.9);
+  \draw (0,2.0) -- (5.4,2.0); \node[left] at (0,2.0) {$1$};
+  \draw (0,2.5) -- (5.4,2.5); \node[left] at (0,2.5) {$1+\varepsilon$};
+  \draw[red] (0,1.5) -- (5.4,1.5); \node[left,red] at (0,1.5) {$1-\varepsilon$};
+  \foreach \n in {1,...,14} {\fill[blue] (0.36*\n,{2*(1-1/\n)}) circle (1.2pt); \draw (0.36*\n,0.06) -- (0.36*\n,-0.06);}
+\end{tikzpicture}
+\end{document}
+```
+*Top: the band $(1-\varepsilon,1+\varepsilon)$. Bottom: $a_n=1-\frac1n$; from some $N$ on, every term stays inside the band.*
+
+Given $\varepsilon>0$, choose $N>\frac1\varepsilon$ (by the Axiom of Archimedes). If $n\ge N$, then
+$$|a_n-1|=\left|1-\frac1n-1\right|=\frac1n\le\frac1N<\varepsilon.$$
+Hence $a_n\to1$ as $n\to\infty$.
+
+**(2)** $0,\frac12,0,\frac14,0,\frac16,\dots$, i.e.
+$$a_n=\begin{cases}\frac1n,&n\text{ even},\\0,&n\text{ odd}.\end{cases}$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (0,0) -- (5.2,0) node[right] {$n$};
+  \draw[->] (0,-0.3) -- (0,2.2) node[above] {$a_n$};
+  \foreach \n in {1,...,12} {
+    \pgfmathsetmacro{\y}{mod(\n,2)==0 ? 3/\n : 0}
+    \fill[red] (0.4*\n,\y) circle (1.3pt);
+  }
+\end{tikzpicture}
+\end{document}
+```
+*$a_n$ is $0$ for odd $n$ and $\frac1n$ for even $n$ (vertical scale enlarged).*
+
+Given $\varepsilon>0$, pick $N>\frac1\varepsilon$. If $n\ge N$, then $|a_n-0|\le\frac1n\le\frac1N<\varepsilon$. Hence $a_n\to0$ as $n\to\infty$.
+
+**(3)** $\frac12,\ \frac12+\frac14,\ \frac12+\frac14+\frac18,\dots$, i.e. $a_n=1-\frac1{2^n}$. Given $\varepsilon>0$, choose $N>\frac1\varepsilon$. If $n\ge N$, then
+$$|a_n-1|=\frac1{2^n}<\frac1n\le\frac1N<\varepsilon.$$
+Hence $a_n\to1$ as $n\to\infty$.
+
+**(4)** $-1,1,-1,1,\dots$, i.e. $a_n=(-1)^n$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex]
+  \draw[->] (0,0) -- (5.2,0) node[right] {$n$};
+  \draw[->] (0,-1.3) -- (0,1.4) node[above] {$a_n$};
+  \node[left] at (0,1) {$1$}; \node[left] at (0,-1) {$-1$};
+  \foreach \n in {1,...,12} {\fill[red] (0.4*\n,{(-1)^\n}) circle (1.3pt);}
+\end{tikzpicture}
+\end{document}
+```
+*$a_n=(-1)^n$ jumps between $-1$ and $1$.*
+
+Let us show that $a_n\not\to0$. Let $\varepsilon=1$, and observe $|a_N-0|=1$ for all $N\in\mathbb N$.
+
+In fact, $a_n$ does not converge to any limit $\ell\in\mathbb R$. For suppose $a_n\to\ell$ as $n\to\infty$, for some $\ell\in\mathbb R$. Let $\varepsilon=1$; so there is $N\in\mathbb N$ such that $|a_n-\ell|<1$ for all $n\ge N$. In particular (taking one even and one odd $n\ge N$) $|1-\ell|<1$ and $|-1-\ell|<1$. But then
+$$\begin{aligned}
+2=|1-(-1)|&\le|1-\ell|+|\ell-(-1)| &&(\text{triangle inequality})\\
+&<1+1=2,
+\end{aligned}$$
+a contradiction. Hence $(a_n)_{n=1}^\infty$ is divergent (note that it does not "go off to infinity").
+
+### Proposition — Uniqueness of limits
+
+If a limit exists, then it is unique.
+
+**Proof.** We implicitly assumed this above. Suppose $a_n\to\ell$ and $a_n\to k$ as $n\to\infty$, with $k\ne\ell$. Choose $\varepsilon=\frac12|\ell-k|>0$. Then there is $N\in\mathbb N$ with $|a_n-\ell|<\varepsilon$ for all $n\ge N$, and there is $M\in\mathbb N$ with $|a_n-k|<\varepsilon$ for all $n\ge M$. But then for every $n\ge\max(N,M)$,
+$$\begin{aligned}
+2\varepsilon=|\ell-k|&\le|\ell-a_n|+|a_n-k| &&(\text{triangle inequality})\\
+&<\varepsilon+\varepsilon=2\varepsilon,
+\end{aligned}$$
+a contradiction. $\square$

@@ -6,14 +6,14 @@ chapter: 3
 source_file: Ch.3 Matrices.pdf
 drive_file_id: 1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA
 source_url: https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view
-source_pages: 14
+source_pages: 20
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 3: Matrices
 
 > [!abstract] Overview
-> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, the standard geometric maps (rotations, reflections, dilations, shears) as matrices, and matrix algebra: products, inverses, transpose and adjoint. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
+> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, the standard geometric maps (rotations, reflections, dilations, shears) as matrices, matrix algebra (products, inverses, transpose, adjoint, trace), orthogonal and unitary matrices, and determinants in 2D and 3D, with permutations to prepare the general case. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
 > Prerequisite: [[Vectors and Matrices - Chapter 2 Vectors]] (bases, dimension).
 
 ## Results index
@@ -38,6 +38,15 @@ tags: [lecture, vectors-and-matrices]
 | [[#Definition — Complex conjugate and adjoint]] | $M^\dagger=\overline M^{\mathsf T}$; $(MN)^\dagger=N^\dagger M^\dagger$ | 14 |
 | [[#Definition — Symmetric and antisymmetric matrices]] | $M=\frac12(M+M^{\mathsf T})+\frac12(M-M^{\mathsf T})$ | 14 |
 | [[#Definition — Hermitian and anti-Hermitian matrices]] | $M=\frac12(M+M^\dagger)+\frac12(M-M^\dagger)$ | 14 |
+| [[#Antisymmetric matrices in 3D]] | $A_{ij}=\varepsilon_{ijk}a_k$, $A\mathbf x=\mathbf x\times\mathbf a$ | 15 |
+| [[#Definition — Trace]] | $\operatorname{tr}M=\sum_iM_{ii}$; linear, cyclic | 15–16 |
+| [[#Separating the trace]] | $M=S_0+\frac{\operatorname{tr}M}nI_n+A$ | 16 |
+| [[#Definition — Orthogonal and unitary matrices]] | $Q^{\mathsf T}Q=I$, $U^\dagger U=I$; preserve inner products | 16–17 |
+| [[#Proposition — Orthogonal matrices in 2D]] | every real $2\times2$ orthogonal matrix is $R(\theta)$ or $H(\theta/2)$ | 17–18 |
+| [[#Definition — Determinant in 2D]] | $\det M=ad-bc$; $M^{-1}=\frac1{\det M}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$ | 19 |
+| [[#Definition — Determinant in 3D]] | $\det(\mathbf a,\mathbf b,\mathbf c)=\mathbf a\cdot(\mathbf b\times\mathbf c)$; Sarrus' rule | 19 |
+| [[#Definition — Permutation and sign]] | $S_n$, $\operatorname{sgn}(p)=(-1)^{N(p)}$ | 20 |
+| [[#Disjoint cycle decomposition]] | cycles; a $k$-cycle is a product of $k-1$ transpositions | 20 |
 
 ## 3.1 Linear maps
 
@@ -488,3 +497,159 @@ A complex square matrix $M$ is **Hermitian** if $M^\dagger=M$, and **anti-Hermit
 
 $M$ has a unique decomposition
 $$M=H+K,\qquad H=\tfrac12(M+M^\dagger)\ \text{(Hermitian)},\qquad K=\tfrac12(M-M^\dagger)\ \text{(anti-Hermitian)}.$$
+
+### Antisymmetric matrices in 3D
+
+**Examples.** For $\mathbf a=(a_1,a_2,a_3)^{\mathsf T}$, let
+$$A=\begin{pmatrix}0&a_3&-a_2\\-a_3&0&a_1\\a_2&-a_1&0\end{pmatrix}.$$
+Equivalently,
+$$A_{ij}=\sum_{k=1}^3\varepsilon_{ijk}a_k,\qquad a_i=\frac12\sum_{j,k=1}^3\varepsilon_{ijk}A_{jk},$$
+and
+$$A\mathbf x=\mathbf x\times\mathbf a.$$
+
+> [!note] Explanation
+> $(A\mathbf x)_i=\sum_jA_{ij}x_j=\sum_{j,k}\varepsilon_{ijk}x_ja_k=(\mathbf x\times\mathbf a)_i$. For the inverse formula, $\sum_{j,k}\varepsilon_{ijk}A_{jk}=\sum_{j,k,l}\varepsilon_{ijk}\varepsilon_{jkl}a_l=2a_i$, since $\sum_{j,k}\varepsilon_{ijk}\varepsilon_{ljk}=2\delta_{il}$. So every antisymmetric $3\times3$ matrix is "cross product with a fixed vector".
+
+### 3.3.4 Trace
+
+### Definition — Trace
+
+For a square matrix $M$, the **trace** is
+$$\operatorname{tr}M:=\sum_iM_{ii}\qquad(\text{also written }\operatorname{tr}[M]),$$
+the sum of the diagonal entries $M_{11},\dots,M_{nn}$.
+
+**Properties.**
+- Trace is linear: $\operatorname{tr}(\alpha M+\beta N)=\alpha\operatorname{tr}(M)+\beta\operatorname{tr}(N)$.
+- $\operatorname{tr}I_n=n$.
+- Cyclic: $\operatorname{tr}(MN)=\operatorname{tr}(NM)$; this holds for $M$ of size $m\times n$ and $N$ of size $n\times m$. More generally
+$$\operatorname{tr}(M_1M_2\cdots M_k)=\operatorname{tr}(M_2\cdots M_kM_1)=\operatorname{tr}(M_3\cdots M_kM_1M_2)=\cdots.$$
+- $\operatorname{tr}(M^{\mathsf T})=\operatorname{tr}(M)$.
+
+### Separating the trace
+
+An antisymmetric $A$ has zero diagonal, so $\operatorname{tr}A=0$. For a real $n\times n$ matrix $M=S+A$ (symmetric plus antisymmetric),
+$$\operatorname{tr}M=\operatorname{tr}(S+A)=\operatorname{tr}S+\operatorname{tr}A=\operatorname{tr}S.$$
+Write
+$$S_0=S-\frac{\operatorname{tr}M}nI_n.$$
+- $S_0$ is symmetric.
+- $S_0$ is **traceless**:
+$$\operatorname{tr}S_0=\operatorname{tr}\Big(S-\frac{\operatorname{tr}M}nI_n\Big)=\operatorname{tr}S-\frac{\operatorname{tr}M}n\operatorname{tr}I_n=\operatorname{tr}M-\operatorname{tr}M=0.$$
+
+So $S=S_0+\frac{\operatorname{tr}M}nI_n$, and
+$$M=\underbrace{S_0}_{\text{symmetric, traceless}}+\underbrace{\frac{\operatorname{tr}M}nI_n}_{\text{multiple of }I_n}+\underbrace{A}_{\text{antisymmetric (traceless)}}.$$
+
+### 3.3.5 Orthogonal and unitary matrices
+
+### Definition — Orthogonal and unitary matrices
+
+A real square matrix $Q$ is **orthogonal** if
+$$Q^{\mathsf T}Q=QQ^{\mathsf T}=I,\qquad\text{so}\qquad Q^{\mathsf T}=Q^{-1}.$$
+A complex square matrix $U$ is **unitary** if
+$$U^\dagger U=UU^\dagger=I,\qquad\text{so}\qquad U^\dagger=U^{-1}.$$
+
+**Properties.**
+- They preserve the standard inner product (and the induced norm): for all $\mathbf x,\mathbf y\in\mathbb C^n$,
+$$\langle U\mathbf x,U\mathbf y\rangle=\langle\mathbf x,\mathbf y\rangle,\qquad\|U\mathbf x\|=\|\mathbf x\|.$$
+- Equivalently, their columns (and rows) form an orthonormal basis.
+- **Example:** rotations and reflections are orthogonal transformations.
+- **Converse.** Suppose $\langle U\mathbf x,U\mathbf y\rangle=\langle\mathbf x,\mathbf y\rangle$ for all $\mathbf x,\mathbf y\in\mathbb C^n$. Since $\langle U\mathbf x,U\mathbf y\rangle=\mathbf x^\dagger U^\dagger U\mathbf y$ and $\langle\mathbf x,\mathbf y\rangle=\mathbf x^\dagger\mathbf y$,
+$$\begin{aligned}
+&\mathbf x^\dagger U^\dagger U\mathbf y=\mathbf x^\dagger\mathbf y\ \text{ for all }\mathbf x,\mathbf y\\
+\iff\ &U^\dagger U=I &&(\text{choose }\mathbf x=\mathbf e_i,\ \mathbf y=\mathbf e_j\text{ for all }i,j)\\
+\iff\ &UU^\dagger=I.
+\end{aligned}$$
+
+### Proposition — Orthogonal matrices in 2D
+
+Every real $2\times2$ orthogonal matrix is either a **rotation** about the origin or a **reflection** in a line through the origin.
+
+**Proof.** Let $Q=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ be orthogonal. Then
+$$Q^{\mathsf T}Q=I\iff\begin{pmatrix}a&c\\b&d\end{pmatrix}\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}a^2+c^2&ab+cd\\ab+cd&b^2+d^2\end{pmatrix}=\begin{pmatrix}1&0\\0&1\end{pmatrix}.$$
+Write $\mathbf C_1=(a,c)^{\mathsf T}$ and $\mathbf C_2=(b,d)^{\mathsf T}$ for the columns, so $\|\mathbf C_1\|=\|\mathbf C_2\|=1$ and $\mathbf C_1\cdot\mathbf C_2=0$.
+- $a^2+c^2=1$: $\mathbf C_1$ lies on the unit circle, so $a=\cos\theta$, $c=\sin\theta$, i.e. $\mathbf C_1=\begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}$.
+- $\mathbf C_2=\begin{pmatrix}b\\d\end{pmatrix}$ with $b^2+d^2=1$ and $ab+cd=0$, so
+$$\mathbf C_2=(-\sin\theta,\cos\theta)^{\mathsf T}\qquad\text{or}\qquad\mathbf C_2=(\sin\theta,-\cos\theta)^{\mathsf T}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.6]
+  \draw[thick] (0,0) circle (1);
+  \draw[dotted] (0,0) -- (1.15,0);
+  \draw[blue,thick,->] (0,0) -- (35:1) node[above right] {$(\cos\theta,\sin\theta)$};
+  \node[blue] at (35:0.55) [above left] {$\mathbf C_1$};
+  \draw[red,thick,->] (0,0) -- (125:1) node[above left] {$(-\sin\theta,\cos\theta)$};
+  \draw[red,thick,->] (0,0) -- (-55:1) node[below right] {$(\sin\theta,-\cos\theta)$};
+  \node[red] at (125:0.5) [left] {$\mathbf C_2$};
+  \draw (0.3,0) arc (0:35:0.3); \node at (17:0.42) {$\theta$};
+\end{tikzpicture}
+\end{document}
+```
+*$\mathbf C_1$ is a unit vector at angle $\theta$; $\mathbf C_2$ is a unit vector perpendicular to it, and there are exactly two choices.*
+
+Hence
+$$Q=R(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}\qquad\text{or}\qquad Q=H\Big(\frac\theta2\Big)=\begin{pmatrix}\cos\theta&\sin\theta\\\sin\theta&-\cos\theta\end{pmatrix}.\qquad\square$$
+
+## 3.4 Determinants
+
+### 3.4.1 2D
+
+### Definition — Determinant in 2D
+
+For $M=\begin{pmatrix}a&b\\c&d\end{pmatrix}$, the **determinant** is
+$$\det M=ad-bc.$$
+For real entries it is the signed area (of the parallelogram spanned by the columns).
+- $M$ is invertible if and only if $\det M\ne0$, and then
+$$M^{-1}=\frac1{\det M}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}.$$
+(Check: $MM^{-1}=M^{-1}M=I$.)
+
+### 3.4.2 3D
+
+### Definition — Determinant in 3D
+
+For $\mathbf a,\mathbf b,\mathbf c\in\mathbb R^3$,
+$$\det(\mathbf a,\mathbf b,\mathbf c)=\mathbf a\cdot(\mathbf b\times\mathbf c)=\varepsilon_{ijk}a_ib_jc_k.$$
+For $M=(M_{ij})_{1\le i,j\le3}$,
+$$\begin{aligned}
+\det M={}&M_{11}M_{22}M_{33}+M_{12}M_{23}M_{31}+M_{13}M_{21}M_{32}\\
+&-M_{13}M_{22}M_{31}-M_{12}M_{21}M_{33}-M_{11}M_{23}M_{32}.
+\end{aligned}$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1]
+  \foreach \r in {1,2,3} {
+    \foreach \c in {1,2,3} {\node (m\r\c) at (1.2*\c,-0.75*\r) {$M_{\r\c}$};}
+    \node[gray] (m\r4) at (4.8,-0.75*\r) {$M_{\r1}$};
+    \node[gray] (m\r5) at (6.0,-0.75*\r) {$M_{\r2}$};
+  }
+  \draw[thick] (0.75,-0.35) -- (0.6,-0.35) -- (0.6,-2.6) -- (0.75,-2.6);
+  \draw[thick] (4.15,-0.35) -- (4.3,-0.35) -- (4.3,-2.6) -- (4.15,-2.6);
+  \foreach \c in {1,2,3} {
+    \pgfmathtruncatemacro{\b}{\c+1}\pgfmathtruncatemacro{\d}{\c+2}
+    \draw[green!60!black,thick,opacity=0.7,shorten <=9pt,shorten >=9pt] (m1\c.center) -- (m3\d.center);
+    \draw[red,thick,opacity=0.7,shorten <=9pt,shorten >=9pt] (m3\c.center) -- (m1\d.center);
+  }
+\end{tikzpicture}
+\end{document}
+```
+*Sarrus' rule: repeat the first two columns (grey). The three green down-right diagonals give the $+$ terms, the three red up-right diagonals the $-$ terms.*
+
+### 3.4.3 Permutations and alternating forms
+
+### Definition — Permutation and sign
+
+- A **permutation** $p$ of $\{1,\dots,n\}$ is a bijection of the set to itself.
+- The **symmetric group** $S_n$ is the group of all permutations of $n$ elements (under composition). There are $n!$ permutations of $n$ elements.
+- The **sign** of $p$ is
+$$\operatorname{sgn}(p)=(-1)^{N(p)},$$
+with $N(p)$ the number of **inversions**: pairs $i<j$ such that $p(i)>p(j)$.
+- **Even** permutations have sign $+1$; **odd** permutations have sign $-1$.
+
+### Disjoint cycle decomposition
+
+The **cycle** $(a_1,\dots,a_n)$ sends $a_1$ to $a_2$, $a_2$ to $a_3$, and so on, with $a_n$ sent to $a_1$.
+- Denote by $c$ the number of disjoint cycles of $p$ (if $k$ is mapped to itself, a fixed point, it is a cycle of length $1$). Let $\ell_1,\ell_2,\dots,\ell_c$ be the lengths of all the cycles; then $\ell_1+\ell_2+\dots+\ell_c=n$.
+- A cycle of length $k$ is a product of $k-1$ transpositions:
+$$(a_1,\dots,a_k)=(a_1,a_k)(a_1,a_{k-1})\cdots(a_1,a_2).$$
