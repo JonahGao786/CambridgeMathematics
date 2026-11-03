@@ -3150,21 +3150,23 @@
       "source_file_name": "Ch.2 The Reals.pdf",
       "source_url": "https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Numbers and Sets",
-      "observed_source_modified_timestamp": "2026-10-31T16:49:49.593Z",
-      "processed_source_modified_timestamp": "2026-10-31T16:49:49.593Z",
+      "observed_source_modified_timestamp": "2026-11-03T11:05:55.196Z",
+      "processed_source_modified_timestamp": "2026-11-03T11:05:55.196Z",
       "markdown_paths": [
         "Part IA/Numbers and Sets/Lecture Notes/Numbers and Sets - Chapter 2 The Reals.md",
-        "Concepts/Real Numbers and the Least Upper Bound Axiom.md"
+        "Concepts/Real Numbers and the Least Upper Bound Axiom.md",
+        "Concepts/Sequences and Limits.md"
       ],
       "material_type": "lecture notes",
       "course": "Part IA Numbers and Sets",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 8,
-      "visually_inspected_pages": "1-8 (5-8 viewed 2026-10-31; 1-4 matched baseline hashes)",
+      "total_page_count": 11,
+      "visually_inspected_pages": "1-11 (8-11 viewed 2026-11-03; 1-7 matched baseline hashes)",
       "normalizations": [
         "Prop 1 proof missing in source (todo in note).",
-        "Pages 1-4: Prop 1 proofs, axioms of R, sup, remarks, examples. Source Remark (i) steps rendered as in source."
+        "Pages 1-4: Prop 1 proofs, axioms of R, sup, remarks, examples. Source Remark (i) steps rendered as in source.",
+        "Pages 8-11: sequences and limits (absolute value, triangle inequality, examples 1-4, divergence, uniqueness of limits) with three figures. p.11: 'one even and one odd n >= N' made explicit."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
@@ -3176,19 +3178,22 @@
         "799296ce02443b9ede77",
         "97671db0f2f701095094",
         "0e884041934f9170d5be",
-        "bc28fb7ac18ac73d6106"
+        "5baf3fd1c0bed426c056",
+        "2b997d0a1c5f8cc69120",
+        "beffdf94571e13ec1b2f",
+        "67466d16296e2a327aa3"
       ],
-      "source_sha256": "87246ddde43e8b8b14c1577406ed8570c4c9d5e4317df8775283cf8a06cf4cc7",
-      "source_size_bytes": 1995037,
-      "last_successful_processing_at": "2026-10-31"
+      "source_sha256": "13a2f6492398ecd1b986e6eb2f899e5e69d2bd38ddbe8866d08a938d4a588cbf",
+      "source_size_bytes": 2754299,
+      "last_successful_processing_at": "2026-11-03"
     },
     "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA": {
       "drive_file_id": "1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA",
       "source_file_name": "Ch.3 Matrices.pdf",
       "source_url": "https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view?usp=drivesdk",
       "drive_folder_path": "GoodNotes/Part IA/Vectors and Matrices",
-      "observed_source_modified_timestamp": "2026-10-31T16:50:08.164Z",
-      "processed_source_modified_timestamp": "2026-10-31T16:50:08.164Z",
+      "observed_source_modified_timestamp": "2026-11-03T13:24:12.478Z",
+      "processed_source_modified_timestamp": "2026-11-03T13:24:12.478Z",
       "markdown_paths": [
         "Part IA/Vectors and Matrices/Lecture Notes/Vectors and Matrices - Chapter 3 Matrices.md",
         "Concepts/Linear Maps and Matrices.md"
@@ -3197,11 +3202,12 @@
       "course": "Part IA Vectors and Matrices",
       "status": "processed",
       "classification": "study_material",
-      "total_page_count": 14,
-      "visually_inspected_pages": "1-14 (9-14 viewed 2026-10-31; 1-8 matched baseline hashes)",
+      "total_page_count": 20,
+      "visually_inspected_pages": "1-20 (15-20 viewed 2026-11-03; 1-14 matched baseline hashes)",
       "normalizations": [
         "Rank-nullity proof reordered into spanning then independence.",
-        "Pages 5-8 added: rotations/reflections in R^2, Rodrigues formula, reflection/dilation/shear in R^3. Figures redrawn schematically."
+        "Pages 5-8 added: rotations/reflections in R^2, Rodrigues formula, reflection/dilation/shear in R^3. Figures redrawn schematically.",
+        "Pages 15-20: antisymmetric 3D, trace, orthogonal/unitary, 2D orthogonal proposition, determinants 2D/3D (Sarrus), permutations. p.15: 'a_j = 1/2 sum_{j,k} eps_ijk A_jk' normalized to a_i."
       ],
       "unresolved_todos": [],
       "diagram_note": "Two schematic coset-partition pictures redrawn in TikZ (compiled locally).",
@@ -3219,11 +3225,17 @@
         "3bce2d7726bd97ec1bc3",
         "b30b4e54cbe3a808ec59",
         "740abf8834c00996d2ae",
-        "d15456f55d058afdb6b5"
+        "d15456f55d058afdb6b5",
+        "9ad9cf49771be1e28591",
+        "48722f1038c932410496",
+        "a3c470999a53948dd848",
+        "7430ff373b0c34f6ad40",
+        "f22efc8989e20513ad89",
+        "13e1d4f061cdbc64193c"
       ],
-      "source_sha256": "7aac9cfb4c77f7072caf8f695545c5d7b11496153b8ec72d9347453f283f2ea1",
-      "source_size_bytes": 2826056,
-      "last_successful_processing_at": "2026-10-31"
+      "source_sha256": "98e9ee22bb04c42ae4cbd1ad9a0709b9a350107a95ce02cdc3f2de3b16f117ed",
+      "source_size_bytes": 3901700,
+      "last_successful_processing_at": "2026-11-03"
     },
     "1cD6n9aI-_mW-bAMZOGvUBNHr3V2QzJue": {
       "drive_file_id": "1cD6n9aI-_mW-bAMZOGvUBNHr3V2QzJue",
@@ -3294,17 +3306,17 @@
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-11-02",
-    "completed_at": "2026-11-02T17:00:00Z",
+    "date": "2026-11-03",
+    "completed_at": "2026-11-03T15:00:00Z",
     "scope": "Normal sync; Example sheets skipped by default.",
-    "new_source_count": 2,
+    "new_source_count": 0,
     "modified_source_count": 2,
-    "processed_source_count": 4,
+    "processed_source_count": 2,
     "pending_source_count": 0,
-    "reading_method": "Service-account download; pagediff.py selected pages: Groups Ch.3 pp.12-15, DE Ch.4 p.25; new sources Groups Ch.4 (3 pp) and DE Ch.5 (5 pp) viewed in full.",
-    "visually_inspected_page_count": 13,
+    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.2 pp.8-11, V&M Ch.3 pp.15-20; others matched baseline hashes.",
+    "visually_inspected_page_count": 10,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-11-02"
+    "commit_message": "notes: process Goodnotes files from 2026-11-03"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,
