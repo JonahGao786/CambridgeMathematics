@@ -341,7 +341,7 @@ For every set $X$, $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a grou
 
 **Proof.** $\circ$ is a binary operation on $\operatorname{Sym}(X)$ by Lemma 1.12; associative by Lemma 1.11; $\operatorname{id}_X$ is an identity; inverses exist by definition of a permutation.
 
-### Definition 1.14 — The groups S_n
+### Definition 1.14 — The groups $S_n$
 
 For $X=\{1,\dots,n\}$, $S_n=\operatorname{Sym}(X)$. E.g. $S_3$: rearrangements of three positions in a row; $S_{52}$: shuffles of a deck of cards. **Exercise:** calculate $|S_n|$.
 
@@ -673,7 +673,7 @@ A homomorphism $\varphi:G\to H$ is an isomorphism iff $\operatorname{Im}(\varphi
 
 ## 1.7 Cyclic groups
 
-### Definition — Cyclic group
+### Definition 1.37 — Cyclic group
 
 $G$ is **cyclic** if $G=\{g^k:k\in\mathbb Z\}$ for some $g\in G$, a **generator** (different exponents need not give different elements).
 

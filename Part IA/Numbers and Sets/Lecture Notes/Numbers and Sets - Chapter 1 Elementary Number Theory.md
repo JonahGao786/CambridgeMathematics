@@ -379,7 +379,7 @@ $$x\equiv a_1\ (m_1),\quad x\equiv a_2\ (m_2),\quad\dots,\quad x\equiv a_k\ (m_k
 
 ### Definition — Euler's totient function
 
-For $m\in\mathbb N$, $\varphi(m)$ is the number of integers $a$ with $1\le a\le m$ and $\operatorname{hcf}(a,m)=1$; equivalently the number of units modulo $m$. $\varphi$ is the **Euler totient function**; $\varphi(1)=1$.
+For $m\in\mathbb N$, $\varphi(m)$ is the number of integers $a$ with $1\le a\le m$ and $\operatorname{gcd}(a,m)=1$; equivalently the number of units modulo $m$. $\varphi$ is the **Euler totient function**; $\varphi(1)=1$.
 
 **Examples.**
 - $m=9$: $1,2,4,5,7,8$ are coprime to $9$, so $\varphi(9)=6$.

@@ -383,7 +383,7 @@ which parametrises the isoclines by $D$.
 \end{tikzpicture}
 \end{document}
 ```
-*Schematic: slope field of $y'=t(1-y^2)$ (grey sticks) with the isoclines $y^2=1-D/t$ (blue) for $D>0$ (open curves with vertex at $t=D$, approaching $y=\pm1$) and $D<0$ (curves outside the strip $|y|<1$). Along each isocline the sticks have the same slope $D$.
+*Schematic: slope field of $y'=t(1-y^2)$ (grey sticks) with the isoclines $y^2=1-D/t$ (blue) for $D>0$ (open curves with vertex at $t=D$, approaching $y=\pm1$) and $D<0$ (curves outside the strip $|y|<1$). Along each isocline the sticks have the same slope $D$.*
 
 ## 4 Fixed points and stability
 
