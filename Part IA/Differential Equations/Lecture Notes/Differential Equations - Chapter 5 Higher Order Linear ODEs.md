@@ -6,14 +6,14 @@ chapter: 5
 source_file: Ch.5 Higher Order Linear ODEs.pdf
 drive_file_id: 1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB
 source_url: https://drive.google.com/file/d/1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB/view
-source_pages: 5
+source_pages: 10
 tags: [lecture, differential-equations]
 ---
 
 # Differential Equations — Chapter 5: Higher Order Linear ODEs
 
 > [!abstract] Overview
-> Second-order linear ODEs with constant coefficients. Linearity of the differential operator gives the general solution as complementary function plus particular integral. Complementary functions come from $e^{\lambda x}$ and the characteristic equation; complex roots give oscillations, and repeated roots are handled by detuning, which produces $xe^{\lambda x}$.
+> Second-order linear ODEs with constant coefficients. Linearity of the differential operator gives the general solution as complementary function plus particular integral. Complementary functions come from $e^{\lambda x}$ and the characteristic equation; complex roots give oscillations, and repeated roots are handled by detuning, which produces $xe^{\lambda x}$. For non-constant coefficients: reduction of order finds a second solution from a first; phase space and solution vectors; the Wronskian tests linear independence.
 > Prerequisite: [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]] ($e^{\lambda x}$ as eigenfunction, CF + PI).
 
 ## Results index
@@ -24,6 +24,11 @@ tags: [lecture, differential-equations]
 | [[#General solution — complementary function plus particular integral]] | $y=C_1y_{c_1}+C_2y_{c_2}+y_p$ | 1–2 |
 | [[#Characteristic equation]] | $y_c=Ae^{\lambda x}$ with $a\lambda^2+b\lambda+c=0$; distinct vs repeated roots | 2–3 |
 | [[#Detuning — repeated roots]] | repeated root $\lambda$: $y_c=\alpha e^{\lambda x}+\beta xe^{\lambda x}$ | 4–5 |
+| [[#General rule — degenerate complementary functions]] | $y_{c_2}=xy_{c_1}$ | 5 |
+| [[#Reduction of order]] | $y_2=vy_1$, $v'=\frac A{y_1^2}\exp\left(-\int^xp\right)$ | 6–7 |
+| [[#Definition — Solution vector and phase space]] | $\mathbf Y=(y,y',\dots,y^{(n-1)})^{\mathsf T}$; trajectories | 7–8 |
+| [[#Definition — Fundamental matrix and Wronskian]] | $W=\det(\mathbf Y_1\cdots\mathbf Y_n)$ | 9 |
+| [[#Wronskian test for linear independence]] | dependent $\Rightarrow W\equiv0$; $W(x)\ne0$ somewhere $\Rightarrow$ independent | 9–10 |
 
 Notes on scope:
 - We focus on second order, but many methods apply to higher order.
@@ -123,3 +128,105 @@ $$y=\alpha e^{2x}+\beta xe^{2x}.$$
 
 > [!note] Explanation
 > $A$ and $B$ each blow up like $\frac1\varepsilon$ as $\varepsilon\to0$, but in opposite directions, so their sum $A+B=C$ and the combination $\varepsilon(A-B)=D-2C$ stay fixed by the initial conditions. Those two finite numbers are the coefficients of $e^{2x}$ and $xe^{2x}$; every remaining term carries at least one extra factor of $\varepsilon$ and vanishes in the limit. The second, "missing" solution of the degenerate equation is therefore $xe^{2x}$.
+
+### General rule — degenerate complementary functions
+
+If $y_{c_1}(x)$ is a degenerate C.F. of a linear ODE with constant coefficients, then
+$$y_{c_2}(x)=xy_{c_1}(x)$$
+is a second linearly independent C.F. For the example above, the equation factorises as
+$$\Big(\frac d{dx}-2\Big)\Big(\frac d{dx}-2\Big)y=0,\qquad\text{i.e.}\qquad\Big(\frac d{dx}-2\Big)u=0\quad\text{with}\quad u=\Big(\frac d{dx}-2\Big)y.$$
+
+> [!note] Explanation
+> The factorised form gives the general rule directly. First $u'-2u=0$ gives $u=Ce^{2x}$. Then $y'-2y=Ce^{2x}$; with the integrating factor $e^{-2x}$, $(e^{-2x}y)'=C$, so $y=(Cx+D)e^{2x}$. The repeated factor is what produces the extra $x$.
+
+## 2. Homogeneous second-order ODEs with non-constant coefficients
+
+The general form is
+$$y''+p(x)y'+q(x)y=0.\tag{$*$}$$
+
+## 2.1 Second C.F. — reduction of order
+
+### Reduction of order
+
+Find a second solution $y_2(x)$ given one solution $y_1(x)$. Try the form
+$$y_2(x)=v(x)y_1(x),$$
+with $v$ to be determined. Then
+$$y_2'=v'y_1+vy_1',\qquad y_2''=v''y_1+2v'y_1'+vy_1''.$$
+If $y_2$ satisfies $(*)$,
+$$v''y_1+v'(2y_1'+py_1)+v\underbrace{(y_1''+py_1'+qy_1)}_{=0\text{ since }y_1\text{ solves }(*)}=0,$$
+so
+$$v''y_1+v'(2y_1'+py_1)=0,\qquad\text{i.e.}\qquad u'y_1+u(2y_1'+py_1)=0\quad\text{where }u=v',$$
+a separable first-order ODE for $u$. Hence (assuming the right-hand side is non-zero)
+$$\begin{aligned}
+\frac{u'}u&=-\frac{2y_1'}{y_1}-p\\
+\Rightarrow\quad\ln u&=-2\ln y_1-\int_0^xp(t)\,dt+\ln A\\
+\Rightarrow\quad u(x)&=\frac A{y_1^2}\exp\Big(-\int_0^xp(t)\,dt\Big).
+\end{aligned}$$
+Integrate to get $v(x)$.
+
+**Example.** $y''-4y'+4y=0$, so $p(x)=-4$, $q(x)=4$. One solution is $y_1=e^{2x}$. Then
+$$\frac{u'}u=-\frac{2\cdot2e^{2x}}{e^{2x}}+4=0,$$
+so $v'=u$ is constant, and $v(x)=Ax+B$. Thus
+$$y_2(x)=(Ax+B)e^{2x},$$
+where the $Be^{2x}$ part reproduces $y_1$. Therefore $xe^{2x}$ is a second linearly independent solution.
+
+## 2.2 Phase space
+
+### Definition — Solution vector and phase space
+
+For an $n$th-order linear ODE
+$$y^{(n)}+p(x)y^{(n-1)}+\dots+q(x)y=f(x),$$
+$y^{(n)}(x)$ is determined by $y(x),y'(x),\dots,y^{(n-1)}(x)$, and higher derivatives of $y$ can be determined by differentiating the ODE. So we can construct the Taylor series about $x_0$ if $y(x_0),y'(x_0),\dots,y^{(n-1)}(x_0)$ are specified.
+
+The **state of the system** is fully specified at any $x$ by the $n$-dimensional **solution vector**
+$$\mathbf Y(x)=\begin{pmatrix}y(x)\\y'(x)\\\vdots\\y^{(n-1)}(x)\end{pmatrix}$$
+(i.e. knowing this at one $x$ gives the solution at any $x$).
+- At any $x$, $\mathbf Y(x)$ defines a point in $n$-dimensional **phase space**.
+- As $x$ varies, $\mathbf Y(x)$ traces out a **trajectory** in phase space.
+
+**Example.** $y''+4y=0$ with $y_1(x)=\cos2x$, $y_2(x)=\sin2x$:
+$$\mathbf Y_1(x)=\begin{pmatrix}y_1\\y_1'\end{pmatrix}=\begin{pmatrix}\cos2x\\-2\sin2x\end{pmatrix},\qquad\mathbf Y_2(x)=\begin{pmatrix}y_2\\y_2'\end{pmatrix}=\begin{pmatrix}\sin2x\\2\cos2x\end{pmatrix}.$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=latex,scale=1.1]
+  \draw[->] (-2.2,0) -- (2.4,0) node[right] {$y$};
+  \draw[->] (0,-2.5) -- (0,2.6) node[above] {$y'$};
+  \draw[red,thick] (0,0) ellipse (1 and 2);
+  \draw[blue,thick,->] (0,0) -- (0.878,-0.959) node[right] {$\mathbf Y_1(x)$};
+  \draw[blue,thick,->] (0,0) -- (0.479,1.755) node[right] {$\mathbf Y_2(x)$};
+\end{tikzpicture}
+\end{document}
+```
+*2D phase space for $y''+4y=0$: both trajectories run round the ellipse $y^2+\frac{y'^2}4=1$; shown at the same $x$ (here $2x=0.5$).*
+
+$\mathbf Y_1$ and $\mathbf Y_2$ are linearly independent vectors (in the linear-algebra sense), so we can use them as basis vectors for the 2D phase space.
+
+## 2.3 Wronskian and linear dependence
+
+**Recall.** $\{y_i(x)\}$ is linearly dependent if
+$$\sum_{i=1}^nc_iy_i(x)=0\quad\text{for all }x,\qquad c_i\text{ not all zero}.$$
+This must hold for all $x$, so we can differentiate $1,2,\dots,n-1$ times:
+$$\sum_{i=1}^nc_i\mathbf Y_i(x)=\mathbf 0\quad\text{for all }x.$$
+
+### Definition — Fundamental matrix and Wronskian
+
+The **fundamental matrix** of solution vectors is $\mathsf M=\big(\mathbf Y_1\ \cdots\ \mathbf Y_n\big)$, with the $\mathbf Y_i$ as columns. The **Wronskian** $W(x)$ of $n$ functions $y_i(x)$ ($i=1,\dots,n$) is
+$$W(x)=\det\big(\mathbf Y_1\ \cdots\ \mathbf Y_n\big)=\begin{vmatrix}y_1&\cdots&y_n\\y_1'&\cdots&y_n'\\\vdots&&\vdots\\y_1^{(n-1)}&\cdots&y_n^{(n-1)}\end{vmatrix}.$$
+
+### Wronskian test for linear independence
+
+The equation above for linear dependence reads $\mathsf M\mathbf c=\mathbf 0$. It has non-trivial solutions only if $\mathsf M$ is not invertible, i.e. $W=0$. Therefore
+$$\{y_i(x)\}\text{ linearly dependent}\ \Rightarrow\ W(x)=0\ \text{ for all }x.$$
+It follows that if **$W(x)\ne0$ for some $x$, then $\{y_i(x)\}$ is linearly independent.**
+
+**N.B.** $W(x)=0$ for all $x$ does **not** necessarily imply that $\{y_i(x)\}$ are linearly dependent.
+
+**Example.** $y''+4y=0$ gives $y_1=\cos2x$, $y_2=\sin2x$, and
+$$\begin{aligned}
+W(x)=\begin{vmatrix}y_1&y_2\\y_1'&y_2'\end{vmatrix}&=\begin{vmatrix}\cos2x&\sin2x\\-2\sin2x&2\cos2x\end{vmatrix}\\
+&=2\cos^22x+2\sin^22x\\
+&=2.
+\end{aligned}$$
+$W\ne0$, so $y_1,y_2$ are linearly independent.
