@@ -6,14 +6,14 @@ chapter: 3
 source_file: Ch.3 Matrices.pdf
 drive_file_id: 1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA
 source_url: https://drive.google.com/file/d/1iIWxXJono_3nn6eHinzhBzxxu_rR9iYA/view
-source_pages: 20
+source_pages: 25
 tags: [lecture, vectors-and-matrices]
 ---
 
 # Vectors and Matrices — Chapter 3: Matrices
 
 > [!abstract] Overview
-> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, the standard geometric maps (rotations, reflections, dilations, shears) as matrices, matrix algebra (products, inverses, transpose, adjoint, trace), orthogonal and unitary matrices, and determinants in 2D and 3D, with permutations to prepare the general case. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
+> Linear maps between vector spaces, their image and kernel, the rank–nullity theorem, how a choice of bases represents a linear map by a matrix, the standard geometric maps (rotations, reflections, dilations, shears) as matrices, matrix algebra (products, inverses, transpose, adjoint, trace), orthogonal and unitary matrices, and determinants: 2D and 3D, permutations and their sign, alternating forms, and the general (Leibniz) formula with its properties. Throughout, the scalar field $\mathbb F$ is $\mathbb R$ or $\mathbb C$.
 > Prerequisite: [[Vectors and Matrices - Chapter 2 Vectors]] (bases, dimension).
 
 ## Results index
@@ -46,7 +46,12 @@ tags: [lecture, vectors-and-matrices]
 | [[#Definition — Determinant in 2D]] | $\det M=ad-bc$; $M^{-1}=\frac1{\det M}\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$ | 19 |
 | [[#Definition — Determinant in 3D]] | $\det(\mathbf a,\mathbf b,\mathbf c)=\mathbf a\cdot(\mathbf b\times\mathbf c)$; Sarrus' rule | 19 |
 | [[#Definition — Permutation and sign]] | $S_n$, $\operatorname{sgn}(p)=(-1)^{N(p)}$ | 20 |
-| [[#Disjoint cycle decomposition]] | cycles; a $k$-cycle is a product of $k-1$ transpositions | 20 |
+| [[#Disjoint cycle decomposition]] | cycles; $\operatorname{sgn}(p)=(-1)^{n-c}$; $\operatorname{sgn}(p\sigma)=\operatorname{sgn}p\operatorname{sgn}\sigma$ | 20–21 |
+| [[#Definition — Alternating symbol]] | $\varepsilon_{i_1\cdots i_n}$ generalises $\varepsilon_{ijk}$ | 21 |
+| [[#Definition — Alternating n-linear form]] | unique $w$ with $w(\mathbf e_1,\dots,\mathbf e_n)=1$; $[\mathbf v_1,\dots,\mathbf v_n]=\det(\mathbf v_1\cdots\mathbf v_n)$ | 21–22 |
+| [[#Proposition — Alternating forms and linear independence]] | $[\mathbf v_1,\dots,\mathbf v_n]\ne0\iff$ independent | 22–24 |
+| [[#Leibniz's formula]] | $\det M=\sum_{p\in S_n}\operatorname{sgn}(p)\prod_iM_{ip(i)}$ | 24 |
+| [[#Properties of the determinant]] | multilinear, alternating, $\det(\lambda M)=\lambda^n\det M$, $\det M^{\mathsf T}=\det M$, $\det(MN)=\det M\det N$ | 24–25 |
 
 ## 3.1 Linear maps
 
@@ -653,3 +658,82 @@ The **cycle** $(a_1,\dots,a_n)$ sends $a_1$ to $a_2$, $a_2$ to $a_3$, and so on,
 - Denote by $c$ the number of disjoint cycles of $p$ (if $k$ is mapped to itself, a fixed point, it is a cycle of length $1$). Let $\ell_1,\ell_2,\dots,\ell_c$ be the lengths of all the cycles; then $\ell_1+\ell_2+\dots+\ell_c=n$.
 - A cycle of length $k$ is a product of $k-1$ transpositions:
 $$(a_1,\dots,a_k)=(a_1,a_k)(a_1,a_{k-1})\cdots(a_1,a_2).$$
+- Each transposition reverses the sign, so
+$$\operatorname{sgn}(p)=\prod_{r=1}^c(-1)^{\ell_r-1}=(-1)^{n-c}.$$
+- The cycle lengths determine the parity of the inversion count:
+$$N(p)\equiv\sum_{r=1}^c(\ell_r-1)=n-c\pmod2.$$
+
+**Example.** $p=(1\,3)(2)$, i.e. $(1,2,3)\mapsto(3,2,1)$. Then $N(p)=3$, while $n=3$, $c=2$, $n-c=1$; both are odd.
+
+- $\operatorname{sgn}(p\sigma)=\operatorname{sgn}(p)\operatorname{sgn}(\sigma)$.
+- $\operatorname{sgn}(p^{-1})=\operatorname{sgn}(p)$.
+
+### Definition — Alternating symbol
+
+In dimension $n$, the **alternating symbol** generalises $\varepsilon_{ijk}$ ($n=3$):
+$$\varepsilon_{i_1\cdots i_n}=\begin{cases}\operatorname{sgn}(p)&\text{if }(i_1,\dots,i_n)=(p(1),\dots,p(n))\text{ for some }p\in S_n,\\0&\text{if two indices coincide.}\end{cases}$$
+**Example.** $\varepsilon_{123}=1$, $\varepsilon_{213}=-1$. Interchanging any two indices changes the sign.
+
+### Definition — Alternating n-linear form
+
+- An **$n$-linear form** is a scalar-valued map $w:V^n\to\mathbb F$ that is linear in each argument separately.
+- It is **alternating** if it changes sign when two arguments are interchanged.
+- In an $n$-dimensional space with basis $\{\mathbf e_1,\dots,\mathbf e_n\}$, there is a **unique** alternating $n$-linear form $w$ with $w(\mathbf e_1,\dots,\mathbf e_n)=1$.
+
+For vectors $\mathbf v_1,\dots,\mathbf v_n$ write
+$$[\mathbf v_1,\dots,\mathbf v_n]:=w(\mathbf v_1,\dots,\mathbf v_n)=\sum_{i_1,\dots,i_n=1}^n\varepsilon_{i_1\cdots i_n}(\mathbf v_1)_{i_1}\cdots(\mathbf v_n)_{i_n}=\det\big(\mathbf v_1\ \cdots\ \mathbf v_n\big).$$
+- Linear in each argument: $[\dots,\alpha\mathbf u+\beta\mathbf w,\dots]=\alpha[\dots,\mathbf u,\dots]+\beta[\dots,\mathbf w,\dots]$.
+- $[\mathbf v_{p(1)},\dots,\mathbf v_{p(n)}]=\operatorname{sgn}(p)[\mathbf v_1,\dots,\mathbf v_n]$.
+- $[\mathbf e_1,\dots,\mathbf e_n]=1$ determines the form.
+
+More generally, if $\mathbf v_j=\sum_{i=1}^nV_{ij}\mathbf e_i$ and $M:=(V_{ij})$ is the matrix with the $\mathbf v_j$ as columns, then
+$$w(\mathbf v_1,\dots,\mathbf v_n)=(\det M)\,w(\mathbf e_1,\dots,\mathbf e_n).$$
+
+### Proposition — Alternating forms and linear independence
+
+$$[\mathbf v_1,\dots,\mathbf v_n]\ne0\iff\mathbf v_1,\dots,\mathbf v_n\text{ are linearly independent.}$$
+
+**Proof.** *Dependent $\Rightarrow$ zero.* Suppose $\mathbf v_1,\dots,\mathbf v_n$ are linearly dependent: there are scalars $\alpha_1,\dots,\alpha_n$, not all zero, with $\sum_{j=1}^n\alpha_j\mathbf v_j=\mathbf 0$. Choose $p$ with $\alpha_p\ne0$; then
+$$\mathbf v_p=-\sum_{j\ne p}\frac{\alpha_j}{\alpha_p}\mathbf v_j.$$
+By linearity,
+$$[\mathbf v_1,\dots,\mathbf v_p,\dots,\mathbf v_n]=-\sum_{j\ne p}\frac{\alpha_j}{\alpha_p}[\mathbf v_1,\dots,\underbrace{\mathbf v_j}_{p\text{th position}},\dots,\mathbf v_n]=0,$$
+since each bracket on the right contains $\mathbf v_j$ twice.
+
+*Independent $\Rightarrow$ non-zero.* If $\{\mathbf v_1,\dots,\mathbf v_n\}$ is linearly independent in dimension $n$, it is a basis, so $\mathbf e_i=\sum_{j=1}^n\alpha_{ji}\mathbf v_j$ for $i=1,\dots,n$. Then
+$$\begin{aligned}
+1=[\mathbf e_1,\dots,\mathbf e_n]&=\Big[\sum_{j=1}^n\alpha_{j1}\mathbf v_j,\ \dots,\ \sum_{j=1}^n\alpha_{jn}\mathbf v_j\Big]\\
+&=\sum_{j_1,\dots,j_n=1}^n\alpha_{j_11}\cdots\alpha_{j_nn}[\mathbf v_{j_1},\dots,\mathbf v_{j_n}].
+\end{aligned}$$
+Terms with repeated indices vanish, so $(j_1,\dots,j_n)$ is a permutation of $(1,\dots,n)$ and each remaining bracket is $\pm[\mathbf v_1,\dots,\mathbf v_n]$. Hence $[\mathbf v_1,\dots,\mathbf v_n]\ne0$. $\square$
+
+> [!note] Explanation
+> An alternating form vanishes whenever two arguments are equal: swapping them changes nothing but must flip the sign, so the value $x$ satisfies $x=-x$, i.e. $x=0$. That is why every bracket with a repeated vector drops out in both halves of the proof. In the second half, if $[\mathbf v_1,\dots,\mathbf v_n]$ were $0$, every surviving term would be $0$ and the sum could not equal $1$.
+
+### 3.4.4 General formula and properties
+
+### Leibniz's formula
+
+For $M=(M_{ij})\in\operatorname{Mat}_{n\times n}(\mathbb F)$,
+$$\det M=\sum_{p\in S_n}\operatorname{sgn}(p)\prod_{i=1}^nM_{ip(i)}.$$
+Writing $M=\big(\mathbf C_1\ \mathbf C_2\ \cdots\ \mathbf C_n\big)$ with columns $\mathbf C_i=\mathbf C_i(M)$,
+$$\det M=[\mathbf C_1,\dots,\mathbf C_n]=\varepsilon_{i_1\cdots i_n}M_{i_11}\cdots M_{i_nn}.$$
+
+### Properties of the determinant
+
+Fix $n\times n$ matrices $M,N$ over $\mathbb F$ and $\alpha,\beta,\lambda\in\mathbb F$; $M'$ denotes the output matrix of each operation.
+
+*Rows and columns.*
+1. **Multilinearity:** $\det(\dots,\alpha\mathbf u+\beta\mathbf v,\dots)=\alpha\det(\dots,\mathbf u,\dots)+\beta\det(\dots,\mathbf v,\dots)$.
+2. **Interchanging columns:** $\mathbf C_i\leftrightarrow\mathbf C_j\ \Rightarrow\ \det M'=-\det M$.
+3. **Linear dependence:** if the columns are linearly dependent, the determinant vanishes: $\mathbf C_1,\dots,\mathbf C_n$ linearly dependent $\Rightarrow\det M=0$.
+4. **Adding a multiple of another column:** $\mathbf C_i\mapsto\mathbf C_i+\lambda\mathbf C_j$ ($i\ne j$) $\Rightarrow\det M'=\det M$.
+5. **Scaling:** $\mathbf C_i\mapsto\lambda\mathbf C_i\ \Rightarrow\ \det M'=\lambda\det M$. Multiplying the whole matrix by $\lambda$: $\det(\lambda M)=\lambda^n\det M$.
+
+Everything holds as well for rows.
+
+*Matrix operations.*
+
+6. **Identity:** $\det I_n=1$.
+7. **Transpose:** $\det(M^{\mathsf T})=\det M$.
+8. **Conjugation and adjoint:** $\det(\overline M)=\overline{\det M}$, $\det(M^\dagger)=\overline{\det M}$.
+9. **Products:** $\det(MN)=\det M\det N$.

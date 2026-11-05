@@ -12,7 +12,7 @@ tags: [concept, groups]
 
 ## Definitions
 
-- $G$ is **cyclic** if $G=\{g^k:k\in\mathbb Z\}$ for a **generator** $g$. → [[Groups - Chapter 1 Examples and Definitions#Definition — Cyclic group|lecture]]
+- $G$ is **cyclic** if $G=\{g^k:k\in\mathbb Z\}$ for a **generator** $g$. → [[Groups - Chapter 1 Examples and Definitions#Definition 1.37 — Cyclic group|lecture]]
 - **Order** $o(g)=|\langle g\rangle|$ ($\infty$ if $\langle g\rangle\cong\mathbb Z$). → [[Groups - Chapter 1 Examples and Definitions#Definition 1.39 — Order of an element|lecture]]
 
 ## Key results
