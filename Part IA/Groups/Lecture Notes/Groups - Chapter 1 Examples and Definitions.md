@@ -31,7 +31,7 @@ tags: [lecture, groups]
 | [[#Lemma 1.11 — Composition is associative]] | $(h\circ g)\circ f=h\circ(g\circ f)$ | 14 |
 | [[#Lemma 1.12 — Composites of permutations]] | $f\circ f'\in\operatorname{Sym}(X)$ | 14–15 |
 | [[#Proposition 1.13 — The symmetric group]] | $(\operatorname{Sym}(X),\circ,\operatorname{id}_X)$ is a group; $S_n$ | 15 |
-| [[#Definition 1.14 — The groups S_n]] | $S_n=\operatorname{Sym}\{1,\dots,n\}$; $S_3$, $S_{52}$ | 15 |
+| [[#Definition 1.14 — The groups $S_n$]] | $S_n=\operatorname{Sym}\{1,\dots,n\}$; $S_3$, $S_{52}$ | 15 |
 | [[#Notation convention]] | write $G$ for $(G,\cdot,e)$; $\circ_G$, $e_G$ if needed | 15 |
 | [[#Definition 1.15 — Subgroup]] | $H\le G$ | 16 |
 | [[#Proposition 1.16 — Subgroups of the integers]] | they are $n\mathbb Z$, $n\ge0$ | 17 |
@@ -55,7 +55,7 @@ tags: [lecture, groups]
 | [[#Definition 1.34 — Injective and surjective]] | finite equal sizes: all equivalent | 29–30 |
 | [[#Lemma 1.35 — Injective iff trivial kernel]] | $\ker\varphi=\{e_G\}$ | 30 |
 | [[#Corollary 1.36 — Isomorphism criterion]] | onto and trivial kernel | 30 |
-| [[#Definition — Cyclic group]] | $G=\{g^k\}$ | 30–31 |
+| [[#Definition 1.37 — Cyclic group]] | $G=\{g^k\}$ | 30–31 |
 | [[#Theorem 1.38 — Classification of cyclic groups]] | $G\cong C_n$ or $\mathbb Z$ | 31–32 |
 | [[#Definition 1.39 — Order of an element]] | $o(g)=\lvert\langle g\rangle\rvert$ | 32 |
 | [[#Lemma 1.40 — Homomorphisms out of dihedral groups]] | defined by $a^n=b^2=e$, $ab=ba^{-1}$ | 33–34 |

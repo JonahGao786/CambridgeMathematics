@@ -6,14 +6,14 @@ chapter: 2
 source_file: Ch.2 The Reals.pdf
 drive_file_id: 1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC
 source_url: https://drive.google.com/file/d/1NXO09JT735Tr2NnPTWDvsrkXBMYgGyrC/view
-source_pages: 11
+source_pages: 14
 tags: [lecture, numbers-and-sets]
 ---
 
 # Numbers and Sets — Chapter 2: The Reals
 
 > [!abstract] Overview
-> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom. Consequences: $\mathbb N$ is unbounded (Archimedes), infima exist, $\sqrt2$ exists in $\mathbb R$, and both the rationals and the irrationals are dense. Finally, sequences and their limits: the $\varepsilon$–$N$ definition, examples, divergence and uniqueness of limits.
+> The rationals have a "gap": $\sqrt2$ is not rational, and the set $\{x:x^2<2\}$ has no least upper bound in $\mathbb Q$. The real numbers are defined by field and order axioms together with the least upper bound axiom. Consequences: $\mathbb N$ is unbounded (Archimedes), infima exist, $\sqrt2$ exists in $\mathbb R$, and both the rationals and the irrationals are dense. Finally, sequences and their limits: the $\varepsilon$–$N$ definition, examples, divergence and uniqueness of limits; bounded and monotonic sequences and the monotone convergence theorem; limits of sums and inequalities; series (geometric and harmonic).
 > Prerequisite: [[Numbers and Sets - Chapter 1 Elementary Number Theory]] (unique factorization).
 
 ## Results index
@@ -36,6 +36,13 @@ tags: [lecture, numbers-and-sets]
 | [[#Definition — Convergence and divergence]] | $a_n\to\ell$, $\lim a_n=\ell$; $a_n\not\to\ell$ | 9–10 |
 | [[#Examples of limits]] | $1-\frac1n\to1$; $0,\frac12,0,\frac14,\dots\to0$; $1-\frac1{2^n}\to1$; $(-1)^n$ diverges | 9–11 |
 | [[#Proposition — Uniqueness of limits]] | a sequence has at most one limit | 11 |
+| [[#Definition — Bounded sequence]] | $\lvert a_n\rvert\le B$; convergent $\Rightarrow$ bounded | 11 |
+| [[#Definition — Monotonic sequence]] | increasing or decreasing | 11 |
+| [[#Theorem 5 — Monotone convergence theorem]] | bounded monotonic $\Rightarrow$ convergent | 12 |
+| [[#Proposition 6 — Limits preserve weak inequalities]] | $a_n\le d$, $a_n\to c\Rightarrow c\le d$ | 12 |
+| [[#Proposition 7 — Limit of a sum]] | $a_n+b_n\to c+d$ | 13 |
+| [[#Definition — Partial sums and series]] | $S_k=\sum_{n=1}^ka_n$, $\sum a_n=\lim S_k$ | 13 |
+| [[#Examples of series]] | geometric $\sum r^n=\frac r{1-r}$; harmonic $\sum\frac1n$ diverges | 13–14 |
 
 ## 2.1 Why not stop at the rationals?
 
@@ -362,3 +369,89 @@ $$\begin{aligned}
 &<\varepsilon+\varepsilon=2\varepsilon,
 \end{aligned}$$
 a contradiction. $\square$
+
+### Definition — Bounded sequence
+
+A sequence $(a_n)_{n=1}^\infty$ is **bounded** if there exists a real number $B$ such that $|a_n|\le B$ for all $n\in\mathbb N$.
+
+Note that a convergent sequence is bounded: if $a_n\to\ell$ as $n\to\infty$, then there is $N\in\mathbb N$ such that $|a_n-\ell|<1$ for all $n\ge N$. Hence
+$$|a_n|\le\max\{|a_1|,\dots,|a_{N-1}|,\ |\ell|+1\}\qquad\text{for all }n\in\mathbb N.$$
+
+### Definition — Monotonic sequence
+
+A sequence $(a_n)_{n=1}^\infty$ is **monotonic** if it is either increasing or decreasing. It is **increasing** if $a_{n+1}\ge a_n$ for all $n\in\mathbb N$, and **decreasing** if $a_{n+1}\le a_n$ for all $n\in\mathbb N$.
+
+### Theorem 5 — Monotone convergence theorem
+
+Every bounded monotonic sequence converges.
+
+**Proof.** Suppose $(a_n)$ is increasing. The set $\{a_n:n\ge1\}$ is non-empty, and bounded above because $(a_n)$ is bounded. So it has a supremum, $\ell$ say. Given $\varepsilon>0$, $\ell-\varepsilon$ is **not** an upper bound for $\{a_n:n\ge1\}$, so there is $N\in\mathbb N$ with $a_N>\ell-\varepsilon$. Since $(a_n)$ is increasing and $\ell$ is an upper bound,
+$$\ell-\varepsilon<a_N\le a_n\le\ell\qquad\text{for all }n\ge N.$$
+Hence $|a_n-\ell|<\varepsilon$ for all $n\ge N$, so $a_n\to\ell$. The decreasing case is similar. $\square$
+
+**Remarks.**
+1. For an increasing sequence to converge, we only need to know that it is bounded above.
+2. The sequence $(a_n)_{n=1}^\infty$ with $a_n=n$ is increasing but not bounded (and in fact it diverges).
+3. Theorem 5 is in fact equivalent to the least upper bound axiom.
+4. One can show that every sequence has a monotonic subsequence.
+
+### Proposition 6 — Limits preserve weak inequalities
+
+If $a_n\le d$ for all $n$ and $a_n\to c$ as $n\to\infty$, then $c\le d$.
+
+**Proof.** Suppose $c>d$. Let $\varepsilon=|c-d|=c-d>0$. Then there is $N\in\mathbb N$ such that $|a_n-c|<\varepsilon$ for all $n\ge N$. But
+$$|a_n-c|<\varepsilon\ \Rightarrow\ a_n>c-\varepsilon=d,$$
+a contradiction. $\square$
+
+**Warning.** If $a_n<d$ for all $n$ and $a_n\to c$ as $n\to\infty$, we need **not** have $c<d$. E.g. $\frac12,\ \frac12+\frac14,\ \frac12+\frac14+\frac18,\dots$: each term is $<1$, but $\lim_{n\to\infty}a_n=1$.
+
+### Proposition 7 — Limit of a sum
+
+If $a_n\to c$ and $b_n\to d$ as $n\to\infty$, then $a_n+b_n\to c+d$ as $n\to\infty$.
+
+**Proof.** Given $\varepsilon>0$, there is $N\in\mathbb N$ with $|a_n-c|<\varepsilon$ for all $n\ge N$, and there is $M\in\mathbb N$ with $|b_n-d|<\varepsilon$ for all $n\ge M$. Choose $N^*=\max\{N,M\}$. Then for all $n\ge N^*$,
+$$\begin{aligned}
+|a_n+b_n-(c+d)|&\le|a_n-c|+|b_n-d| &&(\text{triangle inequality})\\
+&<\varepsilon+\varepsilon=2\varepsilon.
+\end{aligned}$$
+$\square$
+
+> [!note] Explanation
+> Ending with $2\varepsilon$ instead of $\varepsilon$ is fine: $\varepsilon>0$ was arbitrary, so $2\varepsilon$ is also an arbitrary positive number. (Equivalently, run the argument with $\frac\varepsilon2$ in place of $\varepsilon$ to finish with exactly $\varepsilon$.)
+
+## 2.5 Series
+
+In the reals, the sum of two numbers is defined, so by induction finite sums are defined. But infinite sums are not! Nevertheless, e.g.
+$$1-\frac12+\frac13-\frac14+\frac15-\dots=\log2.$$
+
+### Definition — Partial sums and series
+
+Let $(a_n)$ be a sequence. Then
+$$S_k=\sum_{n=1}^ka_n$$
+is the **$k$-th partial sum** of the series whose $n$th term is $a_n$. We write
+$$\sum_{n=1}^\infty a_n=\lim_{k\to\infty}S_k\qquad\text{if the limit exists.}$$
+
+### Examples of series
+
+**1) Geometric series.** The series whose $n$th term is $a_n=r^n$ for some $|r|<1$ is the **geometric series**:
+$$\begin{aligned}
+S_k&=r+r^2+\dots+r^k\\
+&=r\cdot\frac{1-r^k}{1-r}\\
+&\to r\cdot\frac1{1-r}\qquad\text{as }k\to\infty,\ \text{since }r^k\to0.
+\end{aligned}$$
+Hence
+$$\sum_{n=1}^\infty r^n=\frac r{1-r}.$$
+
+**2) Harmonic series.** The series whose $n$th term is $a_n=\frac1n$ is the **harmonic series**. Group the terms in blocks ending at powers of $2$:
+$$\begin{aligned}
+S_{2^k}&=1+\frac12+\underbrace{\frac13+\frac14}_{\text{each}\ \ge\frac14}+\underbrace{\frac15+\frac16+\frac17+\frac18}_{\text{each}\ \ge\frac18}+\frac19+\dots+\frac1{2^k}\\
+&\ge1+\frac12+2\cdot\frac14+4\cdot\frac18+\dots+\frac1{2^k}\cdot2^{k-1}.
+\end{aligned}$$
+In general,
+$$\frac1{2^m+1}+\frac1{2^m+2}+\dots+\frac1{2^{m+1}}\ \ge\ \frac{2^m}{2^{m+1}}=\frac12.$$
+Hence $S_{2^k}\ge1+\frac k2$. So the partial sums are increasing and unbounded, and $\sum_{n=1}^\infty\frac1n$ diverges.
+
+**3)** $a_n=\frac1{n^2}$:
+$$S_{2^k-1}=1+\frac1{2^2}+\frac1{3^2}+\frac1{4^2}+\frac1{5^2}+\frac1{6^2}+\frac1{7^2}+\dots+\frac1{(2^k-1)^2}.$$
+
+> [!todo] p.14: the source stops here; the argument for $\sum\frac1{n^2}$ continues in a later lecture.
