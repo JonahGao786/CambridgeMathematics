@@ -27,6 +27,8 @@ tags: [concept, differential-equations]
 - **Reduction of order.** Given $y_1$ for $y''+py'+qy=0$, put $y_2=vy_1$; then $u=v'$ solves a separable equation, $u=\frac A{y_1^2}e^{-\int^xp}$. → [[Differential Equations - Chapter 5 Higher Order Linear ODEs#Reduction of order|derivation]]
 - **Phase space.** The state is the solution vector $\mathbf Y=(y,y',\dots,y^{(n-1)})^{\mathsf T}$; as $x$ varies it traces a trajectory. → [[Differential Equations - Chapter 5 Higher Order Linear ODEs#Definition — Solution vector and phase space|lecture]]
 - **Wronskian** $W=\det(\mathbf Y_1\cdots\mathbf Y_n)$: dependent $\Rightarrow W\equiv0$, so $W(x)\ne0$ somewhere $\Rightarrow$ independent (the converse fails). → [[Differential Equations - Chapter 5 Higher Order Linear ODEs#Wronskian test for linear independence|lecture]]
+- **Abel's theorem.** $W'=-pW$, so $W(x)=W(x_0)e^{-\int_{x_0}^xp}$ (Abel's identity): $W$ is identically $0$ or never $0$; also gives a second solution via $\frac d{dx}(y_2/y_1)=W/y_1^2$. → [[Differential Equations - Chapter 5 Higher Order Linear ODEs#Abel's theorem|proof]]
+- **Equidimensional** $ax^2y''+bxy'+cy=f$: try $x^k$ with $ak^2+(b-a)k+c=0$, or substitute $z=\ln x$ to get constant coefficients; a repeated root gives $x^k$ and $x^k\ln x$. → [[Differential Equations - Chapter 5 Higher Order Linear ODEs#Solving equidimensional ODEs|lecture]]
 
 ## Examples
 
