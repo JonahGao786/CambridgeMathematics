@@ -3264,14 +3264,15 @@
       "normalizations": [
         "p.1: codomain of mu written as C, normalized to C-hat.",
         "p.2: 'Compare' matrix line written with '=' between the matrices and no result; written as the product with its entries.",
-        "Pages 3-8: Def 4.4, Lemmas 4.5-4.6, Cor 4.7, Prop 4.8. p.3: c != 0 case '1 or 2 or infinity solutions' written as 1 or 2 (genuine quadratic); 'Fix(f)' read as Fix(mu)."
+        "Pages 3-8: Def 4.4, Lemmas 4.5-4.6, Cor 4.7, Prop 4.8. p.3: c != 0 case '1 or 2 or infinity solutions' written as 1 or 2 (genuine quadratic); 'Fix(f)' read as Fix(mu).",
+        "Pages 9-11: circles (Def 4.9, Thm 4.10), cross-ratio (Def 4.11, Prop 4.12, Cor 4.13). p.10 case 2 radius written with |.| around |c|^2 - r^2; 'explain the name' annotation answered in an explanation callout."
       ],
       "unresolved_todos": [],
       "diagram_note": "Stereographic projection figure in TikZ.",
-      "observed_source_modified_timestamp": "2026-11-04T16:35:17.068Z",
-      "processed_source_modified_timestamp": "2026-11-04T16:35:17.068Z",
-      "total_page_count": 8,
-      "visually_inspected_pages": "1-8 (3-8 viewed 2026-11-04; 1-2 matched baseline hashes)",
+      "observed_source_modified_timestamp": "2026-11-06T11:57:14.755Z",
+      "processed_source_modified_timestamp": "2026-11-06T11:57:14.755Z",
+      "total_page_count": 12,
+      "visually_inspected_pages": "1-12 (9-12 viewed 2026-11-06, p.12 blank; 1-8 matched baseline hashes)",
       "page_hashes": [
         "28d4c777165207d7f31f",
         "3b131f31c5bb7904d67a",
@@ -3280,11 +3281,15 @@
         "f1ed17731ab73feb50fc",
         "493d9b165b816dab2c8c",
         "940e9963caa95ce1de42",
-        "8a401afeeb1568be7d11"
+        "8a401afeeb1568be7d11",
+        "9c59b016c3f9d781777a",
+        "ff8360ed81b538bf2c70",
+        "234d74c7bd5585c910ab",
+        "e1790d51a0500cccca8c"
       ],
-      "source_sha256": "e9fc72ee91c8832ff782e00c232807dbd51d0f1980b0b515043aff8c0d31eaa6",
-      "source_size_bytes": 1482932,
-      "last_successful_processing_at": "2026-11-04",
+      "source_sha256": "35ce926692e782a9ba6d26d3e2b41338f750f85755799913bdee65ac25639582",
+      "source_size_bytes": 2072824,
+      "last_successful_processing_at": "2026-11-06",
       "status": "processed"
     },
     "1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB": {
@@ -3301,14 +3306,15 @@
       "classification": "study_material",
       "normalizations": [
         "p.5: O(A eps^2 x^2) = O(eps x^2) (A is O(1/eps)).",
-        "Pages 5-10: general rule x*y_c1, section 2 (reduction of order, phase space with figure, Wronskian). p.5 operator factorisation left unfinished in source; completed in an explanation callout."
+        "Pages 5-10: general rule x*y_c1, section 2 (reduction of order, phase space with figure, Wronskian). p.5 operator factorisation left unfinished in source; completed in an explanation callout.",
+        "Pages 10-15: Abel's theorem and identity (Bessel example, application), equidimensional ODEs (scaling, eigenfunctions, z = ln x). p.15 section 3 heading only."
       ],
       "unresolved_todos": [],
       "diagram_note": "No diagrams in source.",
-      "observed_source_modified_timestamp": "2026-11-04T16:35:06.522Z",
-      "processed_source_modified_timestamp": "2026-11-04T16:35:06.522Z",
-      "total_page_count": 10,
-      "visually_inspected_pages": "1-10 (5-10 viewed 2026-11-04; 1-4 matched baseline hashes)",
+      "observed_source_modified_timestamp": "2026-11-06T11:56:58.339Z",
+      "processed_source_modified_timestamp": "2026-11-06T11:56:58.339Z",
+      "total_page_count": 15,
+      "visually_inspected_pages": "1-15 (10-15 viewed 2026-11-06; 1-9 matched baseline hashes)",
       "page_hashes": [
         "016dda0da4bc868b5152",
         "a81b04bbdd354879b1a9",
@@ -3319,28 +3325,62 @@
         "6195e082a5fcc8a7fc4a",
         "2c13e82ed2e0d7602ce2",
         "47daaeacb4653e6fb53a",
-        "d342d2b634b8610aee5a"
+        "3d6d0a54671b0fbb9782",
+        "aac08d5501c364c05737",
+        "9b30bcaefb75aaba5fb1",
+        "cddb11d1d9704ea9ee87",
+        "6eeb5be9311d9e446957",
+        "58a6e23ec0777a45f3a7"
       ],
-      "source_sha256": "79450f030486d9cc0bdd46c78ad67f8379913a2891a0f7e3daabf9c18f4e705e",
-      "source_size_bytes": 1965119,
-      "last_successful_processing_at": "2026-11-04",
+      "source_sha256": "43ca57d4b9dd862dd532e68acd7166f40315444e4cb4a06aa6c414020bd17cb7",
+      "source_size_bytes": 2912102,
+      "last_successful_processing_at": "2026-11-06",
+      "status": "processed"
+    },
+    "1ELnkPWzlB1-HPs9ERuMIKGAXEJi70axO": {
+      "drive_file_id": "1ELnkPWzlB1-HPs9ERuMIKGAXEJi70axO",
+      "source_file_name": "Ch.5 Finite Groups.pdf",
+      "source_url": "https://drive.google.com/file/d/1ELnkPWzlB1-HPs9ERuMIKGAXEJi70axO/view?usp=drivesdk",
+      "drive_folder_path": "GoodNotes/Part IA/Groups",
+      "markdown_paths": [
+        "Part IA/Groups/Lecture Notes/Groups - Chapter 5 Finite Groups.md",
+        "Concepts/Direct Products of Groups.md"
+      ],
+      "material_type": "lecture notes",
+      "course": "Part IA Groups",
+      "classification": "study_material",
+      "normalizations": [],
+      "unresolved_todos": [],
+      "diagram_note": "No diagrams in source.",
+      "observed_source_modified_timestamp": "2026-11-06T11:57:19.796Z",
+      "processed_source_modified_timestamp": "2026-11-06T11:57:19.796Z",
+      "total_page_count": 3,
+      "visually_inspected_pages": "1-3 (all, 2026-11-06)",
+      "page_hashes": [
+        "c9e04f1ef8e7e1bea17a",
+        "e5515b09f6b3a6ca51d3",
+        "1c05633e69a19a2c8a61"
+      ],
+      "source_sha256": "326a2ebf635494533d8d63834cfcab4734a35c03cf52b69ef05ff33a7267d186",
+      "source_size_bytes": 418042,
+      "last_successful_processing_at": "2026-11-06",
       "status": "processed"
     }
   },
   "attachment_policy": "Commit Markdown notes and required sync metadata only. Embed TikZ source as text in the notes; PDF/image rendering, compiled diagrams and preview assets remain outside the repository. Drive links supplement the actual drawings.",
   "transcription_policy": "Produce clean mathematical notes. Correct obvious typos, variable-name inconsistencies, missing brackets or exponents, and harmless shorthand when the intended meaning is clear from the visually inspected source and mathematical context. Make routine algebra or immediate implicit steps explicit where helpful. Reserve TODOs for substantive mathematical errors, essential logical gaps, genuinely unresolved meaning, or truly unfinished work. Do not invent a new proof or solve an unfinished problem. Keep source traceability and record normalization summaries in the manifest rather than cluttering notes with minor correction flags.",
   "last_run": {
-    "date": "2026-11-05",
-    "completed_at": "2026-11-05T15:00:00Z",
-    "scope": "Normal sync; Example sheets skipped by default. Also updated three links to headings the user renamed in Groups Ch.1.",
-    "new_source_count": 0,
+    "date": "2026-11-06",
+    "completed_at": "2026-11-06T14:00:00Z",
+    "scope": "Normal sync; Example sheets skipped by default.",
+    "new_source_count": 1,
     "modified_source_count": 2,
-    "processed_source_count": 2,
+    "processed_source_count": 3,
     "pending_source_count": 0,
-    "reading_method": "Service-account download; pagediff.py selected pages: N&S Ch.2 pp.11-14, V&M Ch.3 pp.21-25; others matched baseline hashes.",
-    "visually_inspected_page_count": 9,
+    "reading_method": "Service-account download; pagediff.py selected pages: Groups Ch.4 pp.9-12, DE Ch.5 pp.10-15; new Groups Ch.5 (3 pp) viewed in full.",
+    "visually_inspected_page_count": 13,
     "pending": [],
-    "commit_message": "notes: process Goodnotes files from 2026-11-05"
+    "commit_message": "notes: process Goodnotes files from 2026-11-06"
   },
   "diagram_policy": "Use actual TikZ drawings in fenced tikz Markdown blocks for the user’s installed Obsidian TikZJax plugin. Preserve source layout, connected paths, geometry, labels, directions and colours; do not substitute MathJax arrow arrays or automatic Mermaid layouts for mathematical drawings. Compile and visually check temporary output where supported. Commit no binary attachments; preserve incomplete work and record genuine unresolved content.",
   "inventory_file_count": 10,

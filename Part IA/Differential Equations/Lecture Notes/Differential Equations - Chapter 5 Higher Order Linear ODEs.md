@@ -6,14 +6,14 @@ chapter: 5
 source_file: Ch.5 Higher Order Linear ODEs.pdf
 drive_file_id: 1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB
 source_url: https://drive.google.com/file/d/1zZMeu0U4PjDGE0fJuLsDnVFj5p1KfLcB/view
-source_pages: 10
+source_pages: 15
 tags: [lecture, differential-equations]
 ---
 
 # Differential Equations — Chapter 5: Higher Order Linear ODEs
 
 > [!abstract] Overview
-> Second-order linear ODEs with constant coefficients. Linearity of the differential operator gives the general solution as complementary function plus particular integral. Complementary functions come from $e^{\lambda x}$ and the characteristic equation; complex roots give oscillations, and repeated roots are handled by detuning, which produces $xe^{\lambda x}$. For non-constant coefficients: reduction of order finds a second solution from a first; phase space and solution vectors; the Wronskian tests linear independence.
+> Second-order linear ODEs with constant coefficients. Linearity of the differential operator gives the general solution as complementary function plus particular integral. Complementary functions come from $e^{\lambda x}$ and the characteristic equation; complex roots give oscillations, and repeated roots are handled by detuning, which produces $xe^{\lambda x}$. For non-constant coefficients: reduction of order finds a second solution from a first; phase space and solution vectors; the Wronskian tests linear independence, and Abel's identity gives it without solving the ODE. Equidimensional equations reduce to constant coefficients.
 > Prerequisite: [[Differential Equations - Chapter 4 First-Order Linear Differential Equations]] ($e^{\lambda x}$ as eigenfunction, CF + PI).
 
 ## Results index
@@ -29,6 +29,9 @@ tags: [lecture, differential-equations]
 | [[#Definition — Solution vector and phase space]] | $\mathbf Y=(y,y',\dots,y^{(n-1)})^{\mathsf T}$; trajectories | 7–8 |
 | [[#Definition — Fundamental matrix and Wronskian]] | $W=\det(\mathbf Y_1\cdots\mathbf Y_n)$ | 9 |
 | [[#Wronskian test for linear independence]] | dependent $\Rightarrow W\equiv0$; $W(x)\ne0$ somewhere $\Rightarrow$ independent | 9–10 |
+| [[#Abel's theorem]] | $W\equiv0$ on $I$ or $W$ never $0$ on $I$; $W(x)=W(x_0)e^{-\int_{x_0}^xp}$ | 10–12 |
+| [[#Definition — Equidimensional ODE]] | $ax^2y''+bxy'+cy=f(x)$; scaling property | 12–13 |
+| [[#Solving equidimensional ODEs]] | $y_c=x^k$, $ak^2+(b-a)k+c=0$; $z=\ln x$; repeated root gives $x^k\ln x$ | 13–14 |
 
 Notes on scope:
 - We focus on second order, but many methods apply to higher order.
@@ -230,3 +233,88 @@ W(x)=\begin{vmatrix}y_1&y_2\\y_1'&y_2'\end{vmatrix}&=\begin{vmatrix}\cos2x&\sin2
 &=2.
 \end{aligned}$$
 $W\ne0$, so $y_1,y_2$ are linearly independent.
+
+## 2.4 Abel's theorem
+
+### Abel's theorem
+
+Given any two solutions of
+$$y''+p(x)y'+q(x)y=0,$$
+if $p(x)$ and $q(x)$ are continuous on an interval $I$, then either $W(x)=0$ for all $x\in I$, or $W(x)\ne0$ for all $x\in I$.
+
+**Proof.** $W=y_1y_2'-y_2y_1'$, so
+$$\begin{aligned}
+W'&=y_1y_2''+y_1'y_2'-y_2'y_1'-y_2y_1''\\
+&=-y_1(py_2'+qy_2)+y_2(py_1'+qy_1) &&(y_1,y_2\text{ solve the ODE})\\
+&=-p(x)W(x).
+\end{aligned}$$
+This is a separable ODE for $W(x)$:
+$$W(x)=W(x_0)\underbrace{\exp\Big(-\int_{x_0}^xp(u)\,du\Big)}_{\text{never zero}},$$
+**Abel's identity**. Therefore $W(x_0)=0\Rightarrow W(x)=0$ for all $x$, and $W(x_0)\ne0\Rightarrow W(x)\ne0$ for all $x$. $\square$
+
+**Geometric interpretation.** The solution vectors are always collinear or never collinear as $x$ varies.
+
+**Corollary.** If $p(x)=0$, then $W(x)$ is constant.
+
+So we can find $W(x)$ without knowing the solutions of the ODE.
+
+**Example (Bessel's equation).**
+$$x^2y''+xy'+(x^2-n^2)y=0,\qquad\text{i.e.}\qquad y''+\underbrace{\frac1x}_{p(x)}y'+\Big(1-\frac{n^2}{x^2}\Big)y=0.$$
+Abel's identity gives
+$$\begin{aligned}
+W(x)&=W(x_0)\exp\Big(-\int_{x_0}^x\frac{du}u\Big)\\
+&=W(x_0)\exp\Big(-\ln\frac x{x_0}\Big)\\
+&=W(x_0)\frac{x_0}x.
+\end{aligned}$$
+
+**Application.** Abel's identity can be used to find a second solution $y_2$ given a known solution $y_1$:
+$$y_1y_2'-y_2y_1'=W(x_0)\exp\Big(-\int_{x_0}^xp(u)\,du\Big).$$
+Dividing by $y_1^2$,
+$$\frac{y_2'}{y_1}-\frac{y_2y_1'}{y_1^2}=\frac d{dx}\Big(\frac{y_2}{y_1}\Big)=\frac{W(x_0)}{y_1^2}\exp\Big(-\int_{x_0}^xp(u)\,du\Big),$$
+the same as we had using the [[#Reduction of order|reduction of order]] method.
+
+**Generalisation.** Abel's theorem holds for solutions of $n$th-order linear homogeneous ODEs, with a generalisation of Abel's identity (see Example Sheet 3, Q7).
+
+## 2.5 Linear equidimensional ODEs
+
+These are related to ODEs with constant coefficients.
+
+### Definition — Equidimensional ODE
+
+A linear second-order ODE is **equidimensional** if it has the form
+$$ax^2y''+bxy'+cy=f(x).\tag{$*$}$$
+
+**Scaling property** of solutions of the homogeneous equation: if $g(x)$ is a solution of $(*)$ with $f(x)=0$, then so is $y=g(\alpha x)$. Indeed,
+$$\frac{dy}{dx}=\frac{dg(\alpha x)}{dx}=\frac{dg(\alpha x)}{d(\alpha x)}\cdot\frac{d(\alpha x)}{dx}=\alpha g'(\alpha x),$$
+so $x\frac{dy}{dx}=(\alpha x)g'(\alpha x)$ and $x^2\frac{d^2y}{dx^2}=(\alpha x)^2g''(\alpha x)$. Therefore, with $u=\alpha x$,
+$$\begin{aligned}
+ax^2\frac{d^2y}{dx^2}+bx\frac{dy}{dx}+cy&=a(\alpha x)^2g''(\alpha x)+b(\alpha x)g'(\alpha x)+cg(\alpha x)\\
+&=au^2g''(u)+bug'(u)+cg(u)=0 &&(g\text{ satisfies }(*)).
+\end{aligned}$$
+
+### Solving equidimensional ODEs
+
+**By eigenfunctions.** $x\frac d{dx}x^k=kx^k$, so $x^k$ is an eigenfunction of $x\frac d{dx}$ with eigenvalue $k$. Look for a C.F. of $(*)$ of the form $y_c=x^k$:
+$$x^k\big[ak(k-1)+bk+c\big]=0\iff ak^2+k(b-a)+c=0,$$
+with roots $k_1,k_2$. If $k_1\ne k_2$, the general C.F. is
+$$y_c=Ax^{k_1}+Bx^{k_2}.$$
+What if $k_1=k_2$?
+
+**By substitution.** Substitute $z=\ln x$ ($x=e^z$). Then
+$$\frac{dy}{dz}=\frac{dy}{dx}\cdot\underbrace{\frac{dx}{dz}}_{e^z=x}=x\frac{dy}{dx},\qquad\frac{d^2y}{dz^2}=\underbrace{e^z\frac{dy}{dx}}_{x\frac{dy}{dx}}+\underbrace{e^{2z}\frac{d^2y}{dx^2}}_{x^2\frac{d^2y}{dx^2}}.$$
+So $(*)$ becomes
+$$\begin{aligned}
+a\Big(\frac{d^2y}{dz^2}-\frac{dy}{dz}\Big)+b\frac{dy}{dz}+cy&=f(e^z)\\
+\iff\quad a\frac{d^2y}{dz^2}+(b-a)\frac{dy}{dz}+cy&=f(e^z),
+\end{aligned}$$
+which has constant coefficients. Then $y_c\propto e^{\lambda z}$ with
+$$a\lambda^2+(b-a)\lambda+c=0$$
+(the same equation as for $k_1,k_2$), so
+$$y_c=Ae^{k_1z}+Be^{k_2z}=Ax^{k_1}+Bx^{k_2},\qquad A,B\text{ constants}.$$
+**Degenerate case** ($k_1=k_2=k$):
+$$y_c=Ae^{kz}+Bze^{kz}=Ax^k+B(\ln x)x^k,$$
+so $(\ln x)x^k$ is the other C.F.
+
+## 3. Inhomogeneous (forced) second-order ODEs
+
+Methods to find a P.I.
